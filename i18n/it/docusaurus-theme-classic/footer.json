@@ -1,0 +1,58 @@
+{
+  "link.title.Open Source": {
+    "message": "Open Source",
+    "description": "Il titolo della colonna dei link del footer con titolo=Open Source nel footer"
+  },
+  "link.title.Community": {
+    "message": "Comunità",
+    "description": "Il titolo della colonna dei link del footer con titolo=Comunità nel footer"
+  },
+  "link.title.More": {
+    "message": "Altro",
+    "description": "Il titolo della colonna dei link del footer con titolo=Altro nel footer"
+  },
+  "link.item.label.Installation": {
+    "message": "Installazione",
+    "description": "L'etichetta del link del footer con etichetta=Installazione che punta a /docs/get-started/installation"
+  },
+  "link.item.label.Releases": {
+    "message": "Versioni",
+    "description": "L'etichetta del link del footer con etichetta=Versioni che punta a https://github.com/netuno-org/platform/releases"
+  },
+  "link.item.label.Documentation": {
+    "message": "Documentazione",
+    "description": "L'etichetta del link del footer con etichetta=Documentazione che punta a https://github.com/netuno-org/doc"
+  },
+  "link.item.label.YouTube": {
+    "message": "YouTube",
+    "description": "L'etichetta del link del footer con etichetta=YouTube che punta a https://www.youtube.com/channel/UCYY1Nz6T2NJtP29vba2fqkg"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "L'etichetta del link del footer con etichetta=Discord che punta a https://discord.gg/4sfXG6YWFu"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "L'etichetta del link del footer con etichetta=LinkedIn che punta a https://www.linkedin.com/company/netuno-org/"
+  },
+  "link.item.label.Instagram": {
+    "message": "Instagram",
+    "description": "L'etichetta del link del footer con etichetta=Instagram che punta a https://www.instagram.com/netuno_org/"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "L'etichetta del link del footer con etichetta=GitHub che punta a https://github.com/netuno-org/"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "L'etichetta del link del footer con etichetta=Twitter che punta a https://twitter.com/netuno_org"
+  },
+  "link.item.label.Facebook": {
+    "message": "Facebook",
+    "description": "L'etichetta del link del footer con etichetta=Facebook che punta a https://www.facebook.com/netuno.org/"
+  },
+  "copyright": {
+    "message": "Copyright © 2025 <a target=\"_blank\" href=\"https://www.sitana.pt/pt\">Sitana</a>",
+    "description": "Il copyright del footer"
+  }
+}

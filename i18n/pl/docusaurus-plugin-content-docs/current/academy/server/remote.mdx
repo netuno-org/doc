@@ -1,0 +1,542 @@
+---
+id: remote
+title: Remote - Klient HTTP
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+## Wprowadzenie
+
+Często w naszych aplikacjach musimy wykonywać żądania HTTP do zewnętrznych usług. Można to zrobić za pomocą zasobu `_remote`.
+
+Do wykonywania wywołań HTTP wewnętrznie do innych usług lub serwerów lokalnych na komputerze albo do wywoływania dowolnej usługi w internecie użycie zasobu Remote jest niezbędne.
+
+> Zobacz dokumentację zasobu [Remote](/docs/library/resources/remote).
+
+Możemy również wysyłać i odbierać dane w JSON oraz wysyłać i pobierać pliki.
+
+## Inicjalizacja
+
+Aby móc wykonać wywołanie HTTP, musimy najpierw je zainicjować; w tym celu użyjemy metody init obiektu _remote, a wynik tej operacji zapiszemy w zmiennej o nazwie zdalny, dzięki czemu będziemy mogli odwoływać się do żądania:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Obsługuje wysyłanie parametrów HTTP
+                const prostyZdalny = _remote.init();
+                // Obsługuje wysyłanie JSON:
+                const zdalnyJSON = _remote.init().asJSON();
+            `
+        },
+    ]}
+/>
+
+## Konfiguracja
+
+Możemy również zdefiniować globalne ustawienia w aplikacji; zwróć uwagę na ten pełny przykład:
+
+```json
+  ...
+  "remote": { 
+    "przyklad-basic-auth": {
+      "url": "https://przyklad.com/api/rest/przyklad",
+      "form": true,
+      "authorization": {
+        "username": "admin",
+        "password": "haslo"
+      },
+      "data": {
+        "parametr1": "wartość 1...",
+        "parametr2": "wartość 2..."
+      }
+    },
+    "przyklad-auth-token": {
+      "urlPrefix": "https://przyklad.com/api",
+      "json": true,
+      "authorization": "Bearer AUTH-TOKEN-TUTAJ",
+      "connectTimeout": 5000,
+      "readTimeout": 60000
+    }
+  },
+  ...
+```
+
+Możemy skonfigurować prefiks URL (`urlPrefix`) lub pełny URL (`url`).
+
+Możemy określić, czy żądanie domyślnie ma wysyłać dane jako formularz lub JSON.
+
+Obsługuje wysyłanie podstawowej autoryzacji z loginem i hasłem lub tokenem.
+
+Można także zdefiniować domyślne dane wysyłane (`data`) oraz limity czasu połączenia (`connectTimeout`) i odczytu (`readTimeout`).
+
+### Jak używać
+
+Aby użyć zasobu Remote z ustawieniami zdefiniowanymi w aplikacji, wystarczy zainicjować zasób kluczem konfiguracji, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const odpowiedz = _remote.init("przyklad-basic-auth").post();
+            `
+        },
+    ]}
+/>
+
+A jeśli zdefiniowano URL prefiksu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const zdalny = _remote.init("przyklad-auth-token");
+                const odpowiedz = zdalny.post(
+                  "/services/wczytaj-dane",
+                  _val.map()
+                    .set("parametr1", "wartość 1")
+                    .set("parametr2", "wartość 2")
+                );
+            `
+        },
+    ]}
+/>
+
+## Żądanie HTTP
+
+Zobacz, jak możemy zainicjować żądanie HTTP za pomocą zasobu [Remote](/docs/library/resources/remote).
+
+### Wysyłanie JSON
+
+Aby wysłać dane w formacie JSON, musimy oznaczyć typ zawartości jako JSON:
+
+Najprostszym sposobem jest użycie metody `asJSON()`, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const zdalny = _remote.init().asJSON();
+                zdalny.setURL("http://przyklad.com/zapisz");
+                const odpowiedz = zdalny.post(
+                  _val.map()
+                    .set("dane", "przyklad")
+                    .set("json", true)
+                );
+            `
+        },
+    ]}
+/>
+
+W ten sposób dane będą wysyłane jako JSON dla metod HTTP POST i PUT, natomiast dla GET i DELETE dane są zawsze wysyłane w querystring, ponieważ dla tych metod protokół HTTP nie obsługuje treści z danymi.
+
+### Metody HTTP
+
+Nie musimy jawnie wskazywać metody HTTP w nagłówku wywołania; nasza referencja wywołania ma osobną funkcję dla każdego typu metody HTTP:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const zdalny = _remote.init();
+
+                zdalny.setURL("http://przyklad.com");
+
+                zdalny.get(); // dla wywołań GET
+                zdalny.post(); // dla wywołań POST
+                zdalny.put(); // dla wywołań PUT
+                zdalny.delete(); // dla wywołań DELETE
+            `
+        },
+    ]}
+/>
+
+#### Nagłówek HTTP
+
+Aby skonfigurować parametry nagłówka HTTP, możemy zdefiniować klucze metodą `getHeader()`, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const zdalny = _remote.init();
+
+                zdalny.getHeader().set("KLUCZ", "WARTOSC");
+            `
+        },
+    ]}
+/>
+
+#### URL żądania
+
+Aby wskazać URL żądania, wystarczy podać go jako pierwszy parametr funkcji odpowiednich metod HTTP:
+
+```js
+const zdalny = _remote.init().asJSON()
+
+zdalny.get("http://przyklad.com") // dla wywołań GET
+zdalny.post("http://przyklad.com") // dla wywołań POST
+zdalny.put("http://przyklad.com") // dla wywołań PUT
+zdalny.delete("http://przyklad.com") // dla wywołań DELETE
+```
+
+#### Dodawanie danych do żądania
+
+Jeśli trzeba dodać dane do treści żądania, wystarczy przekazać je jako drugi parametr funkcji odpowiedniej metody:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const zdalny = _remote.init().asJSON();
+
+                zdalny.get("http://przyklad.com", _val.map().set("id_uzytkownika", 1)); // dla wywołań GET
+                zdalny.post("http://przyklad.com", _val.map().set("id_uzytkownika", 1)); // dla wywołań POST
+                zdalny.put("http://przyklad.com", _val.map().set("id_uzytkownika", 1)); // dla wywołań PUT
+                zdalny.delete("http://przyklad.com", _val.map().set("id_uzytkownika", 1)); // dla wywołań DELETE
+            `
+        },
+    ]}
+/>
+
+## Odpowiedź
+
+Po otrzymaniu odpowiedzi z żądania możemy odczytać jej dane za pomocą metody `json` lub `content`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const zdalny = _remote.init().asJSON();
+
+                const odpowiedz = zdalny.post(
+                  "http://przyklad.com",
+                  _val.map().set("id_uzytkownika", 1)
+                );
+
+                if (odpowiedz.ok()) {
+                  _log.info("Odpowiedź w JSON", odpowiedz.json());
+                } else {
+                  _log.info("Niepowodzenie ze statusem: " + odpowiedz.statusCode(), odpowiedz.content());
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                zdalny = _remote.init().asJSON()
+
+                odpowiedz = zdalny.post(
+                    "http://przyklad.com",
+                    _val.map().set("id_uzytkownika", 1)
+                )
+
+                if odpowiedz.ok():
+                    _log.info("Odpowiedź w JSON", odpowiedz.json())
+                else:
+                    _log.info(
+                        f"Niepowodzenie ze statusem: {odpowiedz.statusCode()}",
+                        odpowiedz.content()
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                zdalny = _remote.init().asJSON()
+
+                odpowiedz = zdalny.post(
+                    "http://przyklad.com",
+                    _val.map().set("id_uzytkownika", 1)
+                )
+
+                if odpowiedz.ok()
+                    _log.info("Odpowiedź w JSON", odpowiedz.json())
+                else
+                    _log.info(
+                        "Niepowodzenie ze statusem: #{odpowiedz.statusCode()}",
+                        odpowiedz.content()
+                    )
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val zdalny = _remote.init().asJSON()
+
+                val odpowiedz = zdalny.post(
+                    "http://przyklad.com",
+                    _val.map().set("id_uzytkownika", 1)
+                )
+
+                if (odpowiedz.ok()) {
+                    _log.info("Odpowiedź w JSON", odpowiedz.json())
+                } else {
+                    _log.info(
+                        "Niepowodzenie ze statusem: \${odpowiedz.statusCode()}",
+                        odpowiedz.content()
+                    )
+                }
+            `
+        },
+    ]}
+/>
+
+W odpowiedzi za pomocą funkcji `json()` otrzymujemy tablicę lub obiekt dostarczony jako Values, a za pomocą funkcji `content()` otrzymujemy surową treść tekstową lub HTML; numer otrzymanego kodu statusu jest dostępny w `statusCode()`, przy czym `ok()` zwraca wartość logiczną prawdziwą, jeśli kod statusu mieści się w przedziale od 200 do 299.
+
+## Pobieranie
+
+Aby pobierać pliki, używamy remote z `asBinary()`, aby wskazać, że transfer ma być binarny.
+
+Zobacz ten pełny przykład usługi:
+
+<PolyglotCode
+    file="server/services/file-download"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pobranie = _remote.asBinary()
+                  .get('https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png');
+
+                if (!pobranie.ok()) {
+                  _log.error(\`Status pobierania pliku: \${pobranie.statusCode()}\\n\${pobranie.toString()}\`);
+                  _header.status(500);
+                  _out.json({wynik: false, blad: 'pobranie-pliku-niepowiodlo-sie'});
+                  _exec.stop();
+                }
+
+                const plik = pobranie.file();
+                _log.info(\`Nazwa pobranego pliku: \${plik.name()}\`);
+
+                plik.save(_app.file(\`storage/filesystem/server/\${plik.name()}\`));
+                plik.save(_storage.filesystem("server", "inny.png").file());
+                plik.save(_os.file("/tmp/pobrany.png"));
+                _out.json({wynik: true});
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pobranie = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                if not pobranie.ok():
+                    _log.error(f"Status pobierania pliku: {pobranie.statusCode()}\\n{pobranie.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("wynik", False).set("blad", "pobranie-pliku-niepowiodlo-sie"))
+                    _exec.stop()
+
+                plik = pobranie.file()
+                _log.info(f"Nazwa pobranego pliku: {plik.name()}")
+
+                plik.save(_app.file(f"storage/filesystem/server/{plik.name()}"))
+                plik.save(_storage.filesystem("server", "inny.png").file())
+                plik.save(_os.file("/tmp/pobrany.png"))
+                _out.json(_val.map().set("wynik", True))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pobranie = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                unless pobranie.ok()
+                    _log.error("Status pobierania pliku: #{pobranie.statusCode()}\\n#{pobranie.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("wynik", false).set("blad", "pobranie-pliku-niepowiodlo-sie"))
+                    _exec.stop()
+                end
+
+                plik = pobranie.file()
+                _log.info("Nazwa pobranego pliku: #{plik.name()}")
+
+                plik.save(_app.file("storage/filesystem/server/#{plik.name()}"))
+                plik.save(_storage.filesystem("server", "inny.png").file())
+                plik.save(_os.file("/tmp/pobrany.png"))
+                _out.json(_val.map().set("wynik", true))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pobranie = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                if (!pobranie.ok()) {
+                    _log.error("Status pobierania pliku: \${pobranie.statusCode()}\\n\${pobranie.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("wynik", false).set("blad", "pobranie-pliku-niepowiodlo-sie"))
+                    _exec.stop()
+                }
+
+                plik = pobranie.file()
+                _log.info("Nazwa pobranego pliku: \${plik.name()}")
+
+                plik.save(_app.file("storage/filesystem/server/\${plik.name()}"))
+                plik.save(_storage.filesystem("server", "inny.png").file())
+                plik.save(_os.file("/tmp/pobrany.png"))
+                _out.json(_val.map().set("wynik", true))
+            `
+        },
+    ]}
+/>
+
+> Wywołanie `plik.save` jest użyte celowo 3 razy; aby dowiedzieć się więcej o `_app.file`, `_storage` i `_os.file`,
+> zobacz samouczek [Manipulacja plikami i folderami](/docs/academy/server/files-manipulation).
+
+## Wysyłanie
+
+Aby wysłać plik w formie formularza w formacie multipart, używamy `asMultipartFormData()`.
+
+Zobacz pełny przykład usługi:
+
+<PolyglotCode
+    file="server/services/file-upload"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const plik = _app.file("public/images/logo.png");
+
+                const wysylka = _remote.asMultipartFormData()
+                  .post(
+                    'http://localhost:9000/services/file-receiver',
+                    _val.map()
+                      .set("plik", plik)
+                  );
+
+                if (wysylka.ok()) {
+                  _log.info(\`Pomyślnie wysłano: \${plik.name()}\`);
+                  _out.json({wynik: true});
+                } else {
+                  _log.error(\`Status wysyłania pliku: \${wysylka.statusCode()}\\n\${wysylka.toString()}\`);
+                  _header.status(500);
+                  _out.json({wynik: false, blad: 'wysylka-pliku-niepowiodla-sie'});
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                plik = _app.file("public/images/logo.png")
+
+                wysylka = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("plik", plik)
+                );
+
+                if wysylka.ok():
+                    _log.info(f"Pomyślnie wysłano: {plik.name()}")
+                    _out.json(_val.map().set("wynik", True))
+                else:
+                    _log.error(f"Status wysyłania pliku: {wysylka.statusCode()}\\n{wysylka.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("wynik", False).set("blad", "wysylka-pliku-niepowiodla-sie"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                plik = _app.file("public/images/logo.png")
+
+                wysylka = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("plik", plik)
+                );
+
+                if wysylka.ok()
+                    _log.info("Pomyślnie wysłano: #{plik.name()}")
+                    _out.json(_val.map().set("wynik", true))
+                else
+                    _log.error("Status wysyłania pliku: #{wysylka.statusCode()}\\n#{wysylka.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("wynik", false).set("blad", "wysylka-pliku-niepowiodla-sie"))
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val plik = _app.file("public/images/logo.png")
+
+                val wysylka = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("plik", plik)
+                );
+
+                if (wysylka.ok()) {
+                    _log.info("Pomyślnie wysłano: \${plik.name()}")
+                    _out.json(_val.map().set("wynik", true))
+                } else {
+                    _log.error("Status wysyłania pliku: \${wysylka.statusCode()}\\n\${wysylka.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("wynik", false).set("blad", "wysylka-pliku-niepowiodla-sie"))
+                }
+            `
+        }
+    ]}
+/>
+
+Zauważ, że w powyższym przykładzie plik jest wysyłany do innej usługi; zobacz, jak tę drugą usługę odbierającą plik można zaimplementować w Netuno:
+
+<PolyglotCode
+    file="server/services/file-receiver"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const plik = _req.getFile("plik");
+                _log.info(\`Nazwa odebranego pliku: \${plik.name()}\`);
+                plik.save(_storage.filesystem("server", "odebrany.png").file());
+                _out.json({wynik: true});
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                plik = _req.getFile("plik")
+                _log.info(f"Nazwa odebranego pliku: {plik.name()}")
+                plik.save(_storage.filesystem("server", "odebrany.png").file())
+                _out.json(_val.map().set("wynik", True))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                plik = _req.getFile("plik")
+                _log.info("Nazwa odebranego pliku: #{plik.name()}")
+                plik.save(_storage.filesystem("server", "odebrany.png").file())
+                _out.json(_val.map().set("wynik", true))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val plik = _req.getFile("plik")
+                _log.info("Nazwa odebranego pliku: \${plik.name()}")
+                plik.save(_storage.filesystem("server", "odebrany.png").file())
+                _out.json(_val.map().set("wynik", true))
+            `
+        }
+    ]}
+/>
+
+## Podsumowanie
+
+Dzięki zasobowi [Remote](/docs/library/resources/remote) możemy integrować zewnętrzne API, eksportować, importować lub synchronizować dane.
+
+Możemy nawet integrować usługi zaimplementowane w innych technologiach, co pozwala wykonywać określone operacje udostępniane przez inne języki.

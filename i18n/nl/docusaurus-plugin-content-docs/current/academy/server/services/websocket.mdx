@@ -1,0 +1,628 @@
+---
+id: websocket
+title: WebSocket
+sidebar_label: WebSocket
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Directe berichten tussen de server en de client.
+
+## Inleiding
+
+Met WebSocket is het mogelijk een permanente verbinding tot stand te brengen tussen de server en de browser van de client.
+
+Dit betekent dat de browser op elk moment de via WebSocket tot stand gebrachte verbinding kan gebruiken om gegevens naar de server te sturen, zonder dat een antwoord verplicht is. Hetzelfde geldt voor de server, die de browser van de client kan contacteren door onmiddellijk gegevens te sturen.
+
+> De communicatie gebeurt onmiddellijk en op elk moment is het mogelijk gegevens van de ene kant naar de andere te laten gaan, onafhankelijk en direct.
+
+Het is zeer nuttig voor realtimebewerkingen met onmiddellijke communicatie; het is alsof het een chat is, een gesprek tussen de browser en de server, waarbij op elk moment elk van beide een bericht kan sturen en de andere het ontvangt.
+
+Het wordt bijvoorbeeld veel gebruikt, van algemene chatoplossingen tot games, en we gebruiken het ook om gegevenswijzigingen live weer te geven, dus wanneer er behoefte is aan zo onmiddellijk mogelijke communicatie.
+
+Vereenvoudigd weergegeven het verschil tussen klassieke HTTP-communicatie en WebSocket:
+
+![klassieke-http-vs-websocket](/docs/assets/academy/server/services/websocket/comparison-pt.png)
+
+Aan de serverzijde wordt een `endpoint` aangemaakt, een adres waarmee WebSocket-verbindingen tot stand kunnen worden gebracht.
+
+De server kan gegevens naar slechts één specifieke verbinding sturen, dat wil zeggen dat het mogelijk is nieuwe berichten naar een specifieke chatdeelnemer te sturen.
+
+Ook kan de server een `broadcast` doen, dat is het verzenden van gegevens naar alle actieve verbindingen op een bepaald adres, dus wanneer een bericht wordt gestuurd naar alle chatdeelnemers die zich in een kamer of een groep bevinden.
+
+## Activering en configuratie
+
+Om WebSocket in je Netuno-applicatie te activeren en configureren, moet je het configuratiebestand van de applicatie voor de gebruikte omgeving bewerken, zoals:
+
+- `📂 config/_development.json`
+- `📂 config/_production.json`
+
+Voeg de volgende parameters in en pas ze aan:
+
+```json
+    ...
+    "ws": {
+        "hosts": [...], "<-- OPTIONEEL": "meer hierover in de documentatie hieronder.",
+        "endpoints": [
+            {
+                "name": "pool",
+                "enabled": true,
+                "sendTimeout": 10000,
+                "idleTimeout": 0,
+                "maxText": 15000,
+                "public": "/ws/pool",
+                "path": "/",
+                "service": "/services/ws/pool"
+            },
+            {
+                "name": "kamer",
+                "enabled": true,
+                "sendTimeout": 10000,
+                "idleTimeout": 0,
+                "maxText": 15000,
+                "public": "/ws/kamer",
+                "path": "/{uid}",
+                "service": "/services/ws/kamer"
+            }
+        ]
+    },
+    ...
+```
+
+#### endpoints
+
+Het is een array waarmee kan worden gedefinieerd dat de server WebSocket ondersteunt via de meerdere opgegeven openbare adressen (_endpoints_); elke endpoint is dus een openbaar adres dat verbindingen via WebSockets vanuit browsers kan ontvangen.
+
+#### name
+
+Naam ter identificatie van het endpoint.
+
+#### enabled
+
+Maakt het mogelijk het endpoint in en uit te schakelen; de standaardwaarde is `true` (actief).
+
+#### sendTimeout
+
+Maximale tijdslimiet om een bericht naar clients te sturen; de standaardwaarde is `60000` milliseconden, wat overeenkomt met 1 minuut.
+
+#### idleTimeout
+
+Maximale tijdslimiet voor inactiviteit op de verbinding; de standaardwaarde is `300000` milliseconden, wat overeenkomt met 5 minuten.
+
+#### maxText
+
+Limiet in bytes voor de maximale lengte van het bericht; de standaardwaarde is `1048576`, gelijk aan 1 megabyte.
+
+#### public
+
+Definieert de basis van het openbare adres waarmee verbindingen via WebSocket vanuit browsers kunnen worden ontvangen.
+
+Het uiteindelijke adres bestaat uit de waarde van de configuratie `public` gevolgd door wat in `path` is gedefinieerd.
+
+#### path
+
+Definieert het laatste deel van het pad van het openbare adres; dit kan dynamisch zijn, wat het bijvoorbeeld mogelijk maakt meerdere afzonderlijke kanalen te creëren, bijvoorbeeld nuttig om meerdere kamers te maken.
+
+> Let op: `path` moet altijd met `/` beginnen, en in de verbindingsconfiguratie aan de front-end is het zeer belangrijk de schuine streep precies zoals gedefinieerd in `path` op te nemen.
+
+In de front-end is het uiteindelijke adres `public` + `path`, zie het voorbeeld:
+
+```json
+    ...
+    "public": "/ws/pool",
+    "path": "/",
+    ...
+```
+
+Dan is het uiteindelijke adres in de front-end `/ws/pool/`, met de schuine streep aan het einde.
+
+##### service
+
+Adres van de back-end-servicebasis van de applicatie die de verbindingen en de communicatie via WebSocket verwerkt.
+
+#### hosts
+
+Optioneel kunnen we de hosts definiëren waarop onze endpoints beschikbaar zijn; bij de verbinding komt het hostadres in de HTTP-header mee, waarbij alleen de domein- of IP-informatie wordt beschouwd en de poortaanduiding wordt genegeerd; dit wordt gebruikt om het overeenkomstige endpoint te associëren en te vinden.
+
+> Daarom moet het endpoint om correct te werken `host` en `public` + `path` combineren, als volgt:
+>
+> `ws://[host]:9000[public][path]`
+>
+> Bij productie met NGINX, reverse proxy en SSL moet het er zo uitzien:
+>
+> `wss://[host][public][path]`
+
+Netuno definieert enkele lokale domeinen met het prefix van de appnaam, die automatisch als standaardwaarde aan de hosts van de endpoints worden gekoppeld; bovendien voegt Netuno bij de app in ontwikkeling ook `localhost` en `127.0.0.1` aan de standaardhosts toe. Daarom is het definiëren van hosts optioneel, omdat deze automatische configuratie bestaat.
+
+De volgende hosts worden automatisch voor de endpoints gedefinieerd als de appnaam `mijnapp` is:
+
+- Deze verwijst direct naar het lokale IP 127.0.0.1:
+  - `mijnapp.local.netu.no`
+- Deze werken alleen als je ze registreert in het hosts-bestand van het besturingssysteem:
+  - `mijnapp.localhost`
+  - `mijnapp.local`
+
+Als de appnaam `mijn_app` is, dan worden dit de automatische hosts:
+
+- Deze verwijst direct naar het lokale IP 127.0.0.1:
+  - `mijn-app.local.netu.no`
+- Deze werken alleen als je ze registreert in het hosts-bestand van het besturingssysteem:
+  - `mijn-app.localhost`
+  - `mijn-app.local`
+
+> In het domein is `_` (underscore) niet toegestaan en in appnamen is `-` (koppelteken) niet toegestaan; daarom gebruiken we extern `-` (koppelteken) in het adres, maar Netuno zet automatisch `-` (koppelteken) om in `_` (underscore) om de juiste applicatie te vinden.
+
+De standaardapplicatie of de applicatie die bij het opstarten van de Netuno-server is gedefinieerd, heeft daarnaast de volgende hosts:
+
+- `localhost`
+- `127.0.0.1`
+
+Om aangepaste hosts te definiëren gebruiken we de volgende configuraties:
+
+```json
+    ...
+    "ws": {
+        "endpoints": [
+            {
+                "hosts": ["mijn-domein1.com", "www.mijn-domein1.com"],
+                ...
+            },
+            {
+                "hosts": ["mijn-domein2.com", "www.mijn-domein2.com"],
+                ...
+            }
+        ]
+    },
+    ...
+```
+
+Als alle endpoints voor dezelfde hosts werken, kunnen we dit globaal als volgt definiëren:
+
+```json
+    ...
+    "ws": {
+        "hosts": ["mijn-domein.com", "www.mijn-domein1.com"],
+        "endpoints": [
+            ...
+        ]
+    },
+    ...
+```
+
+Zorg ervoor dat je in het uiteindelijke WebSocket-adres altijd een domein of IP gebruikt dat een geldige host is; anders werkt het niet, omdat het endpoint intern niet gevonden kan worden.
+
+## Service voor de endpoints
+
+### POST = nieuwe verbinding
+
+De geconfigureerde service met de methode `POST` wordt uitgevoerd wanneer een nieuwe verbinding tot stand wordt gebracht, bijvoorbeeld:
+
+<PolyglotCode
+    file="server/services/ws/kamer/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const uidKamer = _ws.path().getString("uid")
+                const dbKamer = _db.get("kamer", uidKamer)
+
+                if (dbKamer == null) {
+                    _log.warn(\`Ongeldige kamer \${uidKamer}.\`)
+                    _ws.close()
+                } else {
+                    _log.info(\`Nieuwe WebSocket-sessie: \${_ws.sessionId()}\`)
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                uidKamer = _ws.path().getString("uid")
+                dbKamer = _db.get("kamer", uidKamer)
+
+                if dbKamer == null:
+                    _log.warn(f"Ongeldige kamer {uidKamer}.")
+                    _ws.close()
+                else:
+                    _log.info(f"Nieuwe WebSocket-sessie: {_ws.sessionId()}")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                uidKamer = _ws.path().getString("uid")
+                dbKamer = _db.get("kamer", uidKamer)
+
+                if dbKamer == null
+                    _log.warn("Ongeldige kamer #{uidKamer}.")
+                    _ws.close()
+                else
+                    _log.info("Nieuwe WebSocket-sessie: #{_ws.sessionId()}")
+                end
+`
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val uidKamer = _ws.path().getString("uid")
+                val dbKamer = _db.get("kamer", uidKamer)
+
+                if (dbKamer == null) {
+                    _log.warn("Ongeldige kamer \${uidKamer}.")
+                    _ws.close()
+                } else {
+                    _log.info("Nieuwe WebSocket-sessie: \${_ws.sessionId()}")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def uidKamer = _ws.path().getString("uid")
+                def dbKamer = _db.get("kamer", uidKamer)
+
+                if (dbKamer == null) {
+                    _log.warn("Ongeldige kamer \${uidKamer}.")
+                    _ws.close()
+                } else {
+                    _log.info("Nieuwe WebSocket-sessie: \${_ws.sessionId()}")
+                }
+            `
+        },
+    ]}
+/>
+
+> Normaal gesproken wordt `_ws.sessionId()` in de database opgeslagen om in toekomstige communicatie te worden gebruikt.
+
+### PUT = nieuw bericht
+
+Als het ontvangen bericht niet in JSON-formaat is, of als het een JSON is die niet het ondersteunde formaat heeft voor uitvoering van een specifieke service (`service`), dan wordt deze generieke service uitgevoerd:
+
+<PolyglotCode
+    file="server/services/ws/kamer/put"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(\`De sessie \${_ws.sessionId()} heeft dit bericht verzonden: \${_ws.message()}\`)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _log.info(f"De sessie {_ws.sessionId()} heeft dit bericht verzonden: {_ws.message()}")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _log.info("De sessie #{_ws.sessionId()} heeft dit bericht verzonden: #{_ws.message()}")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _log.info("De sessie \${_ws.sessionId()} heeft dit bericht verzonden: \${_ws.message()}")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _log.info("De sessie \${_ws.sessionId()} heeft dit bericht verzonden: \${_ws.message()}")
+            `
+        },
+    ]}
+/>
+
+### DELETE = verbinding gesloten
+
+Wordt uitgevoerd wanneer de browser van de client de verbinding verbreekt.
+
+<PolyglotCode
+    file="server/services/ws/kamer/delete"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(\`Sessie \${_ws.sessionId()} heeft de verbinding verbroken.\`)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _log.info(f"Sessie {_ws.sessionId()} heeft de verbinding verbroken.")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _log.info("Sessie #{_ws.sessionId()} heeft de verbinding verbroken.")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _log.info("Sessie \${_ws.sessionId()} heeft de verbinding verbroken.")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _log.info("Sessie \${_ws.sessionId()} heeft de verbinding verbroken.")
+            `
+        },
+    ]}
+/>
+
+
+### GET = continue berichtenstroom
+
+Start de uitvoering wanneer een nieuwe verbinding van de browser van de client tot stand komt, en de uitvoering blijft actief tot de verbinding eindigt.
+
+Met andere woorden, de service voor de HTTP-methode `GET` blijft continu berichten ontvangen die van de client komen in een `stream`; het is dus een open en continue berichtenstroom die zowel kan ontvangen als verzenden.
+
+<PolyglotCode
+    file="server/services/ws/kamer/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_ws.isStream()) {
+                    while (_ws.awaitStream()) {
+                        if (_ws.isBinaryStreamed()) {
+                            _log.info("Nieuw binair bericht ontvangen: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        } else if (_ws.isTextStreamed()) {
+                            _log.info("Nieuw tekstbericht ontvangen: "+ _ws.textStreamed())
+                        }
+                        _ws.sendText("Oké! Het bericht is met succes ontvangen.")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _ws.isStream():
+                    while _ws.awaitStream():
+                        if _ws.isBinaryStreamed():
+                            _log.info("Nieuw binair bericht ontvangen: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        elif _ws.isTextStreamed():
+                            _log.info("Nieuw tekstbericht ontvangen: "+ _ws.textStreamed())
+                        _ws.sendText("Oké! Het bericht is met succes ontvangen.")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _ws.isStream()
+                    while _ws.awaitStream()
+                        if _ws.isBinaryStreamed()
+                            _log.info("Nieuw binair bericht ontvangen: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        elsif _ws.isTextStreamed()
+                            _log.info("Nieuw tekstbericht ontvangen: "+ _ws.textStreamed())
+                        end
+                        _ws.sendText("Oké! Het bericht is met succes ontvangen.")
+                    end
+                end
+            `
+        },
+    ]}
+/>
+
+De `if` met `_ws.isStream()` zorgt ervoor dat wordt gecontroleerd of het echt een intern verzoek is dat door WebSocket wordt beheerd om de stream uit te voeren.
+
+In de `while` met `_ws.awaitStream()` wordt gewacht tot een nieuwe berichtenstroom arriveert, dat wil zeggen tot een nieuw bericht binnenkomt. Zodra er een nieuw bericht is, wordt de interne code van de `while` uitgevoerd.
+
+> `_ws.awaitStream()` werkt als een oneindige lus die op een nieuw bericht wacht.
+
+Vervolgens wordt in de interne `if`s van de `while` het berichttype gecontroleerd: of het bericht binair of tekst is; in beide gevallen wordt de inhoud van deze berichten in de logs weergegeven. Merk op dat elk berichtformaat kan worden gebruikt en op elke gewenste manier kan worden verwerkt.
+
+Ten slotte wordt in `_ws.sendText` een antwoordbericht naar de client gestuurd, dat de ontvangst bevestigt.
+
+> Elke uitvoering van de `GET`-service is één actieve verbinding.
+
+Wanneer de verbinding met het WebSocket-endpoint wordt beëindigd, wordt de uitvoering van deze service intern beëindigd.
+
+## Communicatie
+
+### sendService
+
+Voert de service uit en stuurt de gegenereerde output naar een specifieke client die via WebSocket is verbonden; gebruikt de verbindings-ID van de client (`sessionId`).
+
+#### Voorbeeld van de serviceaanroep
+
+De onderstaande code kan worden gebruikt in de PUT-service van het endpoint (`service`); merk op dat `_ws.sessionId()` wordt gebruikt, dat de sessie-ID van de clientverbinding ophaalt. Als de sessie-identificatie in de database is opgeslagen, zou `sendService` op elk moment in elke andere service kunnen worden uitgevoerd.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const uid = _ws.path().getString("uid")
+                _ws.sendService(
+                    _ws.sessionId(), // Identificatie van de huidige WebSocket-verbinding.
+                    _val.map() // Parametrisering van de service die wordt uitgevoerd.
+                        .set("method", "POST")
+                        .set("service", "/services/kamer/deelnemer/nieuw")
+                        .set(
+                            "data", // Parameters die aan de service worden doorgegeven en via _req worden ontvangen.
+                            _val.map()
+                                .set("uid", uid)
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+Met andere woorden, in de configuratie heeft de `path` die in het `endpoint` is geconfigureerd de waarde `/{uid}`, waardoor de client via het openbare adres kan verbinden:
+
+- `/ws/kamer/d641f095-30eb-4025-a39c-b2e3e497eab7`
+
+Dan is de waarde van `uid` `d641f095-30eb-4025-a39c-b2e3e497eab7`.
+
+Daarna wordt de service uitgevoerd die op de URL `/services/kamer/deelnemer/nieuw` staat en wordt de waarde van `uid` doorgegeven.
+
+De `uid` kan in de code van de uitgevoerde service worden opgehaald, als parameter van het HTTP-verzoek; zie een voorbeeld:
+
+<PolyglotCode
+    file="/server/services/kamer/deelnemer/nieuw"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // De verzonden UID wordt rechtstreeks uit het request gehaald.
+                const uid = _req.getString('uid')
+            `
+        },
+    ]}
+/>
+
+### broadcastService
+
+Om de broadcast uit te voeren is de naam van het WebSocket-endpoint nodig, moet het pad (`path`) worden gedefinieerd indien van toepassing, en de service die wordt uitgevoerd.
+
+> De output van de service wordt naar alle actieve verbindingen op het opgegeven `endpoint` gestuurd.
+
+#### Broadcastvoorbeeld
+
+<PolyglotCode
+    file="/server/services/kamer/deelnemer/nieuw"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _ws.broadcastService(
+                    "beheerder", // Naam van het WebSocket-endpoint.
+                    "/", // Pad geconfigureerd in het endpoint (path).
+                    _val.map() // Parametrisering van de service die wordt uitgevoerd.
+                        .set("service", "/services/kamer/deelnemer/lijst")
+                )
+            `
+        },
+    ]}
+/>
+
+In dit voorbeeld wordt de output die door de service `kamer/deelnemer/lijst` wordt gegenereerd, naar iedereen gestuurd die met het endpoint `beheerder` is verbonden.
+
+## WS Client - NPM
+
+Om de integratie met de frontend gemakkelijk te maken, is de NPM-module beschikbaar:
+
+- https://www.npmjs.com/package/@netuno/ws-client
+
+Installatiecommando:
+
+- `bun install @netuno/ws-client`
+
+```js
+import _ws from '@netuno/ws-client';
+
+_ws.config({
+    url: 'ws://localhost:9000/ws/voorbeeld/',
+    servicesPrefix: '/services',
+    autoReconnect: true,
+    connect: (event) => {
+        console.info('WebSocket verbonden', event);
+    },
+    close: (event) => {
+        console.warn('WebSocket gesloten', event);
+    },
+    error: (error) => {
+        console.error('WebSocket-fout', error);
+    },
+    message: (data, event) => {
+        console.debug('WebSocket-bericht', data);
+    }
+});
+```
+
+> Zorg ervoor dat de URL de geconfigureerde waarden voor `host` en `public` + `path` in het endpoint correct combineert, als volgt:
+>
+> `ws://[host]:9000[public][path]`
+>
+> De productie-URL met NGINX-integratie, reverse proxy en SSL zal waarschijnlijk als volgt zijn:
+>
+> `wss://[host][public][path]`
+
+Vervolgens kun je de verbinding starten:
+
+```js
+_ws.connect();
+```
+
+### Service uitvoeren via WebSocket
+
+We kunnen REST-API-services uitvoeren via de WebSocket-verbinding; dat betekent dat er geen HTTP-verzoek wordt gedaan, dus de verzoekgegevens worden als bericht verzonden en het antwoord van de service wordt als ontvangen bericht teruggekregen.
+
+Voordat we beginnen, moeten we een observer voor het antwoord van de service maken, bijvoorbeeld:
+
+```js
+const listenerRef = _ws.addListener({
+    method: 'GET', // Optioneel; laat weg om alle methoden te beluisteren.
+    service: 'pad/van/mijn/service/hier',
+    success: (data) => {
+        console.log('Antwoord van de via WebSocket uitgevoerde service:', data);
+    },
+    fail: (error)=> {
+        console.log('De via WebSocket uitgevoerde service is mislukt:', error);
+    }
+});
+```
+
+Nu kunnen we een verzoek sturen om de service uit te voeren; het antwoord van de service wordt opgevangen in de hierboven gemaakte observer. We voeren de service als volgt uit:
+
+```js
+_ws.sendService({
+    method: 'GET', // Optioneel; verzoeken gebruiken GET wanneer weggelaten.
+    service: 'pad/van/mijn/service/hier',
+    data: {
+        message: 'Hallo...'
+    }
+});
+```
+
+Om de toegevoegde observer te verwijderen, gebruik:
+
+```js
+_ws.removeListener(listenerRef);
+```
+
+En om de WebSocket-verbinding te sluiten:
+
+```js
+_ws.close();
+```
+
+## NGINX reverse proxy
+
+In NGINX kan de reverse proxy als volgt worden geconfigureerd:
+
+```
+    location /ws {
+        proxy_pass http://localhost:9000;
+        proxy_set_header Host mijn-app.local.netu.no;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        add_header X-Frame-Options "";
+    }
+```
+
+> Op regel 3, waar de `Host` wordt gedefinieerd, moet het deel `mijn-app` worden aangepast aan de overeenkomstige naam van de Netuno-applicatie. Als er `_` in de applicatienaam voorkomt, wordt dit in het adres van de `Host` vervangen door `-`; bijvoorbeeld de applicatie `mijn_app` krijgt dan als waarde voor de `Host` `mijn-app.local.netu.no`.
+
+Herstart NGINX zodat de configuratie van kracht wordt.
+
+De domeinen die in NGINX zijn geconfigureerd, dat wil zeggen de parametrisering van `server_name`, hoeven niet in de hosts van het endpoint in de Netuno-applicatie te staan, omdat in de bovenstaande proxyconfiguratie de Host in de HTTP-header wordt gewijzigd naar een standaardadres dat altijd al automatisch door Netuno wordt geconfigureerd, zolang het prefix met de applicatienaam correct is.
+
+Als de NGINX-server poort 80 gebruikt, dan is de uiteindelijke URL:
+
+- `ws://[host][public][path]`
+
+En met SSL/HTTPS, als de NGINX-server poort 443 gebruikt, dan is de uiteindelijke URL:
+
+- `wss://[host][public][path]`

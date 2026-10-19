@@ -1,0 +1,209 @@
+---
+id: csv 
+title: CSV 
+sidebar_label: CSV 
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Aangepaste PDF-bestanden verwerken.
+
+## Introductie
+
+Netuno genereert CSV-bestanden via de [CSV](/docs/library/resources/csv)-functie, die een low-code-abstractie van [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/) mogelijk maakt voor de verschillende programmeertalen die door Netuno worden ondersteund.
+
+De applicatie die met Netuno wordt meegeleverd en **demo** heet (demonstratieapplicatie) bevat veel voorbeelden van de mogelijke code-implementaties in verschillende talen, waaronder de demonstratie van het exporteren naar CSV via de service `csv`, die zich bevindt in:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/csv`
+]} />
+
+## Een CSV-bestand maken
+
+Om een CSV-bestand te maken, moet eerst een `CSVPrinter` van `Apache Commons CSV` worden geïnitialiseerd.
+Daarvoor moeten we de mapnaam en de bestandsnaam doorgeven, evenals de CSV-indeling.
+In het voorbeeld genereren we het bestand in de `storage` van de applicatie:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const csvPrinter = _csv.printer(
+                  _storage.filesystem("server", "gegevens.csv"),
+                  _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                csv_printer = _csv.printer(
+                    _storage.filesystem("server", "gegevens.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                csv_printer = _csv.printer(
+                    _storage.filesystem("server", "gegevens.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val csvPrinter = _csv.printer(
+                    _storage.filesystem("server", "gegevens.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def csvPrinter = _csv.printer(
+                    _storage.filesystem("server", "gegevens.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        }
+    ]}
+/>
+
+De ondersteunde indelingen worden [hier](https://doc.netuno.org/pt/docs/library/resources/csv/#format) beschreven.
+
+### Schrijven
+
+Om regels naar het CSV-bestand te schrijven:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvPrinter.printRecord("id", "gebruikersnaam", "voornaam", "achternaam", "geboortedatum")
+                csvPrinter.printRecord(1, "jan73", "Jan", "Jansen", 123)
+            `
+        }
+    ]}
+/>
+
+### Sluiten
+
+Ten slotte moet de `CSVPrinter` worden gesloten:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvPrinter.close()
+            `
+        }
+    ]}
+/>
+
+
+## Een CSV-bestand lezen
+
+Om een CSV-bestand te lezen, moet eerst een `CSVParser` van `Apache Commons CSV` worden geïnitialiseerd.
+Daarvoor moeten we de mapnaam en de bestandsnaam doorgeven.
+In het voorbeeld lezen we het bestand in de `storage` van de applicatie:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const csvParser = _csv.parser(_storage.filesystem("server", "gegevens.csv"))
+            `
+        }
+    ]}
+/>
+
+### Regels 
+
+Nu is het mogelijk om over de `CSVRecord`-objecten van `Apache Commons CSV` te itereren, die elke regel van het CSV-bestand vertegenwoordigen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const regel of csvParser) {
+                    const kolomEen = regel.get(0)
+                    const kolomTwee = regel.get(1)
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for regel in csvParser:
+                    kolomEen = regel.get(0)
+                    kolomTwee = regel.get(1)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                csvParser.each do |regel|
+                    kolomEen = regel.get(0)
+                    kolomTwee = regel.get(1)
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                for (regel in csvParser) {
+                    val kolomEen = regel.get(0)
+                    val kolomTwee = regel.get(1)
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (regel in csvParser) {
+                    def kolomEen = regel.get(0)
+                    def kolomTwee = regel.get(1)
+                }
+            `
+        },
+    ]}
+/>
+
+Of haal elke regel op met de methode `getRecord` van `Apache Commons CSV`.
+In dit voorbeeld haalt de eerste `get` de eerste regel op. De tweede `get` haalt het eerste veld/de eerste waarde van die regel op:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvParser.getRecords().get(0).get(0)
+            `
+        }
+    ]}
+/>
+
+### Sluiten
+
+Ten slotte moet de `CSVParser` worden gesloten:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvParser.close()
+            `
+        }
+    ]}
+/>

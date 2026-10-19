@@ -1,0 +1,372 @@
+---
+id: actions
+title: 操作（Actions）
+sidebar_label: Actions
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+数据库操作的自定义。
+
+## 简介
+
+在系统中始终会进行某种数据处理，而且经常会存在一些规则，例如：
+
+- 删除客户时，必须同时删除其历史记录。
+- 取消产品时，需要将其从订单中移除并调整总额。
+- 完成购买时，需要将数据发送到另一个负责配送的系统。
+
+操作（_actions_）正是为此而生，用于注入在发生数据处理时、在特定情形下执行的代码。
+
+当**插入**或**修改**某些信息时，会执行保存（_save_）和已保存（_saved_）操作：
+
+- `save`：在执行数据库命令之前。
+- `saved`：在执行数据库命令之后。
+
+而当**移除**、**删除**或**清除**某些信息时，会执行移除（_remove_）和已移除（_removed_）操作：
+
+- `remove`：在执行数据库命令之前。
+- `removed`：在执行数据库命令之后。
+
+因此，当我们在表单中修改某些内容，并通过创建、修改或移除信息的操作进行处理时，会在数据库中执行不同的操作，并执行相应的操作（_actions_）。
+
+> 听说过数据库的 _triggers_ 吗？数据库的 _trigger_ 会在数据发生修改时执行，因此操作（_actions_）与 _triggers_ 类似，只不过是在代码层面。
+
+请记住，每种操作类型都会在数据库中执行不同的命令，分别是：
+
+- 创建：`insert into ...`
+- 修改：`update ...`
+- 移除：`delete from ...`
+
+当我们通过 `_db.execute(...)` 执行这些数据库命令之一时，不会执行任何操作，因为该命令是直接在数据库中执行的，无法与操作进行交互。
+
+> 在操作的代码中可以使用多语言低代码框架的任何资源。
+
+当 Netuno 自动生成的后台表单中发生数据处理时，或者当我们在代码中使用以下方式进行数据库操作时，操作会被执行：
+
+- `_db.insert(...)`、`_db.form(...).insert()`、`_db.insertIfNotExits(...)`、`_db.insertMany(...)` 等。
+- `_db.update(...)`、`_db.form(...).update()`、`_db.updateMany(...)` 等。
+- `_db.delete(...)`、`_db.form(...).delete()`、`_db.deleteMany(...)` 等。
+
+也就是说，当我们在代码中使用多语言低代码框架的某种机制来执行数据处理操作时，如果存在相应的操作，就会执行它。
+
+不过，如果直接在数据库中执行命令，则无法执行操作。
+
+> 建议避免直接在数据库中执行命令，以免绕过 Netuno 提供的数据处理机制。
+
+在操作的代码中，可以执行任何与数据处理相关的操作。
+
+## 数据项（Data Item）
+
+数据项（`_dataItem`）是多语言低代码框架的一个资源，包含正在被创建、修改或移除的全部数据关系。
+
+通过 `_dataItem` 资源，我们可以访问所有信息，并检查正在进行的操作流程的细节。
+
+> 请参阅 [DataItem](/docs/library/resources/dataItem) 资源的文档，以了解更多关于
+> `_dataItem` 资源支持的细节。
+
+**注意：** `_dataItem` 资源仅在操作（_actions_）代码中可用。
+
+## 保存、存储、修改或创建新记录（_Save_）
+
+要创建一个在创建新记录或修改某些内容时执行的操作，该操作的脚本将被称为 `save`，表示某些内容正在被保存到数据库中，例如：
+
+<PolyglotPath files={[
+    'wo_de_app/server/actions/wo_de_biaodan/save'
+]} />
+
+> 该操作在执行数据库命令之前执行。
+
+当需要在数据保存到数据库之后执行代码时，则使用 `saved` 操作，例如：
+
+<PolyglotPath files={[
+    'wo_de_app/server/actions/wo_de_biaodan/saved'
+]} />
+
+> 该操作在执行数据库命令之后执行。
+
+也就是说，在应用的 `server/actions` 文件夹中，我们创建一个以表单（表）名称命名的子文件夹，并在其中放置一个名为 `save` 或 `saved` 的脚本，其中包含在数据库命令之前或之后执行的相应代码。
+
+要区分是否为创建数据，可以通过 `if` 检查 `_dataItem.isInsert()` 方法的结果，例如：
+
+<PolyglotCode
+    file="wo_de_app/server/actions/wo_de_biaodan/save"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isInsert()) {
+                    // 正在创建新数据...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isInsert():
+                    # 正在创建新数据...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isInsert()
+                    # 正在创建新数据...
+                end
+            `
+        },
+    ]}
+/>
+
+要区分是否为修改数据，可以通过 `if` 检查 `_dataItem.isUpdate()` 方法的结果，例如：
+
+<PolyglotCode
+    file="wo_de_app/server/actions/wo_de_biaodan/saved"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isUpdate()) {
+                    // 正在修改数据...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isUpdate():
+                    # 正在修改数据...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isUpdate()
+                    # 正在修改数据...
+                end
+            `
+        },
+    ]}
+/>
+
+### 获取 ID
+
+要获取正在被修改的项的 ID（标识符）：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _dataItem.getId()
+            `
+        },
+    ]}
+/>
+
+### 检查修改内容
+
+要检查正在被修改的内容，我们可以使用 `getOldRecord()` 获取数据库中的旧数据，并与新数据 `getRecord()` 进行比较，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email")) {
+                    // 注意：电子邮件正在被修改！
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email"):
+                    # 注意：电子邮件正在被修改！
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email")
+                    # 注意：电子邮件正在被修改！
+                end
+            `
+        },
+    ]}
+/>
+
+### 生成错误
+
+可以生成一个错误以阻止操作继续执行，生成错误通常在执行数据库命令之前进行，因此在 `save` 操作中，例如：
+
+<PolyglotCode
+    file="wo_de_app/server/actions/wo_de_biaodan/save"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _dataItem.setStatusWithError()
+                    .setErrorTitle("Email")
+                    .setErrorMessage("不允许修改电子邮件。")
+            `
+        },
+    ]}
+/>
+
+### 检查是否发生错误
+
+可以检查执行数据库命令时是否发生了错误，可能会发生多种错误，例如：
+
+- 不允许有重复的电子邮件。
+- 必填字段未正确填写。
+- 以及许多其他情况。
+
+错误检查通常在执行数据库命令之后进行，因此在 `saved` 操作中，例如：
+
+<PolyglotCode
+    file="wo_de_app/server/actions/wo_de_biaodan/saved"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isError()) {
+                    // 发生了某种错误，无法保存数据...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isError():
+                    # 发生了某种错误，无法保存数据...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isError()
+                    # 发生了某种错误，无法保存数据...
+                end
+            `
+        },
+    ]}
+/>
+
+### 初始化
+
+可以拥有一个特定的 `action`，仅在数据库配置（_setup_）期间执行数据修改时才会执行。
+
+例如：
+
+<PolyglotPath files={[
+    'wo_de_app/server/actions/wo_de_biaodan/setup_save',
+    'wo_de_app/server/actions/wo_de_biaodan/setup_saved',
+]} />
+
+## 移除、删除或清除（_Remove_）
+
+要创建一个在移除某条记录时执行的操作，该操作的脚本将被称为 `remove`，表示某些内容正在从数据库中被清除，例如：
+
+<PolyglotPath files={[
+    'wo_de_app/server/actions/wo_de_biaodan/setup_remove',
+]} />
+
+> 该操作在执行数据库命令之前执行。
+
+当需要在数据保存到数据库之后执行代码时，则使用 `removed` 操作，例如：
+
+<PolyglotPath files={[
+    'wo_de_app/server/actions/wo_de_biaodan/setup_removed',
+]} />
+
+> 该操作在执行数据库命令之后执行。
+
+也就是说，在应用的 `server/actions` 文件夹中，我们创建一个以表单（表）名称命名的子文件夹，并在其中放置一个名为 `remove` 或 `removed` 的脚本，其中包含在数据库命令之前或之后执行的相应代码。
+
+### 与关联的冲突
+
+根据数据模型的不同，可能会出现这样的情况：移除一条正在被其他表（也是另一个表单）的关联所使用的记录时，无法移除该记录，以避免关联被破坏。
+
+因此，在执行数据库删除命令之后的 `removed` 操作中，我们可以按以下方式检查是否发生此错误：
+
+<PolyglotCode
+    file="wo_de_app/server/actions/wo_de_biaodan/removed"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations()) {
+                    _log.error(
+                        "无法移除，因为与表存在关联 "
+                        + _dataItem.getRelationTable() +"，使用的 ID 为 " + _dataItem.getRelationItem().getInt("id")
+                    )
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isStatusAsError() and _dataItem.isStatusAsRelations():
+                    _log.error(
+                        "无法移除，因为与表存在关联 "
+                        + _dataItem.getRelationTable() +"，使用的 ID 为 " + _dataItem.getRelationItem().getInt("id")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations())
+                    _log.error(
+                        "无法移除，因为与表存在关联 "
+                        + _dataItem.getRelationTable() +"，使用的 ID 为 " + _dataItem.getRelationItem().getInt("id")
+                    )
+                end
+            `
+        },
+    ]}
+/>
+
+另一种选择是，在删除记录的数据库命令执行之前运行的 `remove` 操作中，实现对可能有关联的其他记录进行“清理”，例如：
+
+<PolyglotCode
+    file="wo_de_app/server/actions/wo_de_biaodan/remove"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _db.form("qita_biaodan")
+                    .where(
+                        _db.where("wo_de_biaodan_id")
+                            .equals(_dataItem.getRecord().getInt("id"))
+                    )
+                    .delete()
+            `
+        },
+    ]}
+/>
+
+### 初始化
+
+可以拥有一个特定的 `action`，仅在数据库配置（_setup_）期间执行数据移除时才会执行。
+
+例如：
+
+<PolyglotPath files={[
+    'wo_de_app/server/actions/wo_de_biaodan/setup_remove',
+    'wo_de_app/server/actions/wo_de_biaodan/setup_removed',
+]} />
+
+## 结论
+
+通过操作（`actions`），我们可以集中处理与特定数据处理相关的特定操作。
+
+它允许用代码进行装配，提供有用的机制来保证完整性、简化任务、执行集成、进行并行操作、进行额外校验等等。
+
+编写操作简单且极其有用，还可以扩展使用多语言低代码框架的任何其他资源。
+
+> 在操作的代码中可以使用多语言低代码框架的任何资源。
+
+考虑使用操作，很快就能验证所获得的便利如何能够增强许多有用的策略。

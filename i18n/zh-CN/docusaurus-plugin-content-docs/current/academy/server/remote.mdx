@@ -1,0 +1,542 @@
+---
+id: remote
+title: Remote - HTTP 客户端
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+## 介绍
+
+在我们的应用中，经常需要向外部服务发起 HTTP 请求。这可以通过 `_remote` 资源来完成。
+
+无论是在内部调用其他服务或本机上的内部服务器，还是调用互联网上的某个服务，使用 Remote 资源都是必不可少的。
+
+> 请参阅 [Remote](/docs/library/resources/remote) 资源文档。
+
+我们甚至可以发送和接收 JSON 数据，以及上传或下载文件。
+
+## 初始化
+
+要发起 HTTP 调用，首先必须初始化它，为此我们将使用 _remote 的 init 方法，然后将此操作的结果保存在名为 remote 的变量中，这样就能引用该请求：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 支持发送 HTTP 参数
+                const simpleRemote = _remote.init();
+                // 支持发送 JSON：
+                const jsonRemote = _remote.init().asJSON();
+            `
+        },
+    ]}
+/>
+
+## 配置
+
+我们还可以在应用中定义全局配置，请看这个完整示例：
+
+```json
+  ...
+  "remote": { 
+    "example-basic-auth": {
+      "url": "https://exemplo.com/api/rest/exemplo",
+      "form": true,
+      "authorization": {
+        "username": "admin",
+        "password": "pass"
+      },
+      "data": {
+        "param1": "值 1...",
+        "param2": "值 2..."
+      }
+    },
+    "example-auth-token": {
+      "urlPrefix": "https://exemplo.com/api",
+      "json": true,
+      "authorization": "Bearer AUTH-TOKEN-HERE",
+      "connectTimeout": 5000,
+      "readTimeout": 60000,
+    }
+  },
+  ...
+```
+
+我们可以配置 URL 前缀（`urlPrefix`）或完整 URL（`url`）。
+
+我们可以定义请求默认以 Form 或 JSON 形式发送数据。
+
+支持使用用户名和密码或令牌发送基本授权。
+
+还可以定义默认发送的数据（`data`），以及连接超时（`connectTimeout`）和读取超时（`readTimeout`）。
+
+### 如何使用
+
+要使用应用中定义的配置来使用 Remote 资源，只需使用配置键来初始化该资源，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const response = _remote.init("example-basic-auth").post();
+            `
+        },
+    ]}
+/>
+
+如果定义了前缀 URL：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init("example-auth-token");
+                const response = remote.post(
+                  "/services/load-data",
+                  _val.map()
+                    .set("param1", "值 1")
+                    .set("param2", "值 2")
+                );
+            `
+        },
+    ]}
+/>
+
+## HTTP 请求
+
+看看如何使用 [Remote](/docs/library/resources/remote) 资源发起 HTTP 请求。
+
+### 发送 JSON
+
+要发送 JSON 格式的数据，我们需要将内容类型标记为 JSON：
+
+最简单的方法是使用 `asJSON()` 方法，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init().asJSON();
+                remote.setURL("http://exemplo.com/save");
+                const response = remote.post(
+                  _val.map()
+                    .set("data", "example")
+                    .set("json", true)
+                );
+            `
+        },
+    ]}
+/>
+
+这样，数据会以 JSON 形式发送给 HTTP 的 POST 和 PUT 方法，但对于 GET 和 DELETE，数据始终通过查询字符串发送，因为 HTTP 协议不支持这些方法携带包含数据的请求体。
+
+### HTTP 方法
+
+我们不需要在调用的请求头中显式指明 HTTP 方法，因为我们的调用引用为每种 HTTP 方法都提供了对应的函数：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init();
+
+                remote.setURL("http://exemplo.com");
+
+                remote.get(); // 用于 GET 调用
+                remote.post(); // 用于 POST 调用
+                remote.put(); // 用于 PUT 调用
+                remote.delete(); // 用于 DELETE 调用
+            `
+        },
+    ]}
+/>
+
+#### HTTP 头
+
+要配置 HTTP 头参数，我们可以使用 `getHeader()` 方法设置键，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init();
+
+                remote.getHeader().set("KEY", "VALUE");
+            `
+        },
+    ]}
+/>
+
+#### 请求 URL
+
+要指定请求的 URL，只需将其作为相应 HTTP 方法函数的第一个参数传入：
+
+```js
+const remote = _remote.init().asJSON()
+
+remote.get("http://exemplo.com") // 用于 GET 调用
+remote.post("http://exemplo.com") // 用于 POST 调用
+remote.put("http://exemplo.com") // 用于 PUT 调用
+remote.delete("http://exemplo.com") // 用于 DELETE 调用
+```
+
+#### 向请求添加数据
+
+如果需要向请求体添加数据，只需将其作为相应方法函数的第二个参数传入：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init().asJSON();
+
+                remote.get("http://exemplo.com", _val.map().set("user_id", 1)); // 用于 GET 调用
+                remote.post("http://exemplo.com", _val.map().set("user_id", 1)); // 用于 POST 调用
+                remote.put("http://exemplo.com", _val.map().set("user_id", 1)); // 用于 PUT 调用
+                remote.delete("http://exemplo.com", _val.map().set("user_id", 1)); // 用于 DELETE 调用
+            `
+        },
+    ]}
+/>
+
+## 响应
+
+收到请求响应后，我们可以使用 `json` 或 `content` 方法读取其数据：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init().asJSON();
+
+                const response = remote.post(
+                  "http://exemplo.com",
+                  _val.map().set("user_id", 1)
+                );
+
+                if (response.ok()) {
+                  _log.info("JSON 响应", response.json());
+                } else {
+                  _log.info("失败，状态码：" + response.statusCode(), response.content());
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                remote = _remote.init().asJSON()
+
+                response = remote.post(
+                    "http://exemplo.com",
+                    _val.map().set("user_id", 1)
+                )
+
+                if response.ok():
+                    _log.info("JSON 响应", response.json())
+                else:
+                    _log.info(
+                        f"失败，状态码：{response.statusCode()}",
+                        response.content()
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                remote = _remote.init().asJSON()
+
+                response = remote.post(
+                    "http://exemplo.com",
+                    _val.map().set("user_id", 1)
+                )
+
+                if response.ok()
+                    _log.info("JSON 响应", response.json())
+                else
+                    _log.info(
+                        "失败，状态码：#{response.statusCode()}",
+                        response.content()
+                    )
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val remote = _remote.init().asJSON()
+
+                val response = remote.post(
+                    "http://exemplo.com",
+                    _val.map().set("user_id", 1)
+                )
+
+                if (response.ok()) {
+                    _log.info("JSON 响应", response.json())
+                } else {
+                    _log.info(
+                        "失败，状态码：\${response.statusCode()}",
+                        response.content()
+                    )
+                }
+            `
+        },
+    ]}
+/>
+
+在响应中，使用 `json()` 函数可以获得作为 Values 提供的数组或对象，使用 `content()` 函数可以获得原始文本内容或 HTML，接收到的状态码数字通过 `statusCode()` 获取，而 `ok()` 返回一个布尔值，当状态码在 200 到 299 范围内时为 true。
+
+## 下载
+
+要下载文件，即获取文件，我们使用 remote 的 `asBinary()` 来表示应进行二进制传输。
+
+请看这个完整的服务示例：
+
+<PolyglotCode
+    file="server/services/file-download"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const download = _remote.asBinary()
+                  .get('https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png');
+
+                if (!download.ok()) {
+                  _log.error(\`文件下载状态：\${download.statusCode()}\\n\${download.toString()}\`);
+                  _header.status(500);
+                  _out.json({result: false, error: '文件下载失败'});
+                  _exec.stop();
+                }
+
+                const file = download.file();
+                _log.info(\`下载的文件名：\${file.name()}\`);
+
+                file.save(_app.file(\`storage/filesystem/server/\${file.name()}\`));
+                file.save(_storage.filesystem("server", "other.png").file());
+                file.save(_os.file("/tmp/download.png"));
+                _out.json({result: true});
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                download = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                if not download.ok():
+                    _log.error(f"文件下载状态：{download.statusCode()}\\n{download.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("result", False).set("error", "文件下载失败"))
+                    _exec.stop()
+
+                file = download.file()
+                _log.info(f"下载的文件名：{file.name()}")
+
+                file.save(_app.file(f"storage/filesystem/server/{file.name()}"))
+                file.save(_storage.filesystem("server", "other.png").file())
+                file.save(_os.file("/tmp/download.png"))
+                _out.json(_val.map().set("result", True))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                download = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                unless download.ok()
+                    _log.error("文件下载状态：#{download.statusCode()}\\n#{download.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("result", false).set("error", "文件下载失败"))
+                    _exec.stop()
+                end
+
+                file = download.file()
+                _log.info("下载的文件名：#{file.name()}")
+
+                file.save(_app.file("storage/filesystem/server/#{file.name()}"))
+                file.save(_storage.filesystem("server", "other.png").file())
+                file.save(_os.file("/tmp/download.png"))
+                _out.json(_val.map().set("result", true))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val download = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                if (!download.ok()) {
+                    _log.error("文件下载状态：\${download.statusCode()}\\n\${download.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("result", false).set("error", "文件下载失败"))
+                    _exec.stop()
+                }
+
+                file = download.file()
+                _log.info("下载的文件名：\${file.name()}")
+
+                file.save(_app.file("storage/filesystem/server/\${file.name()}"))
+                file.save(_storage.filesystem("server", "other.png").file())
+                file.save(_os.file("/tmp/download.png"))
+                _out.json(_val.map().set("result", true))
+            `
+        },
+    ]}
+/>
+
+> 这里故意使用了 3 次 `file.save`，要了解更多关于 `_app.file`、`_storage` 和 `_os.file` 的内容，
+> 请参阅 [文件和文件夹操作](/docs/academy/server/files-manipulation) 教程。
+
+## 上传
+
+要以 multipart 格式将文件作为表单发送，我们使用 `asMultipartFormData()`。
+
+请看一个完整服务示例：
+
+<PolyglotCode
+    file="server/services/file-upload"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const file = _app.file("public/images/logo.png");
+
+                const upload = _remote.asMultipartFormData()
+                  .post(
+                    'http://localhost:9000/services/file-receiver',
+                    _val.map()
+                      .set("file", file)
+                  );
+
+                if (upload.ok()) {
+                  _log.info(\`上传成功：\${file.name()}\`);
+                  _out.json({result: true});
+                } else {
+                  _log.error(\`文件上传状态：\${upload.statusCode()}\\n\${upload.toString()}\`);
+                  _header.status(500);
+                  _out.json({result: false, error: '文件上传失败'});
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                file = _app.file("public/images/logo.png")
+
+                upload = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("file", file)
+                );
+
+                if upload.ok():
+                    _log.info(f"上传成功：{file.name()}")
+                    _out.json(_val.map().set("result", True))
+                else:
+                    _log.error(f"文件上传状态：{upload.statusCode()}\\n{upload.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("result", False).set("error", "文件上传失败"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                file = _app.file("public/images/logo.png")
+
+                upload = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("file", file)
+                );
+
+                if upload.ok()
+                    _log.info("上传成功：#{file.name()}")
+                    _out.json(_val.map().set("result", true))
+                else
+                    _log.error("文件上传状态：#{upload.statusCode()}\\n#{upload.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("result", false).set("error", "文件上传失败"))
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val file = _app.file("public/images/logo.png")
+
+                val upload = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("file", file)
+                );
+
+                if (upload.ok()) {
+                    _log.info("上传成功：\${file.name()}")
+                    _out.json(_val.map().set("result", true))
+                } else {
+                    _log.error("文件上传状态：\${upload.statusCode()}\\n\${upload.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("result", false).set("error", "文件上传失败"))
+                }
+            `
+        }
+    ]}
+/>
+
+请注意，在上面的示例中，文件被发送到另一个服务，看看这个接收文件的另一个服务在 Netuno 中如何实现：
+
+<PolyglotCode
+    file="server/services/file-receiver"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const file = _req.getFile("file");
+                _log.info(\`接收到的文件名：\${file.name()}\`);
+                file.save(_storage.filesystem("server", "received.png").file());
+                _out.json({result: true});
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                file = _req.getFile("file")
+                _log.info(f"接收到的文件名：{file.name()}")
+                file.save(_storage.filesystem("server", "received.png").file())
+                _out.json(_val.map().set("result", True))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                file = _req.getFile("file")
+                _log.info("接收到的文件名：#{file.name()}")
+                file.save(_storage.filesystem("server", "received.png").file())
+                _out.json(_val.map().set("result", true))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val file = _req.getFile("file")
+                _log.info("接收到的文件名：\${file.name()}")
+                file.save(_storage.filesystem("server", "received.png").file())
+                _out.json(_val.map().set("result", true))
+            `
+        }
+    ]}
+/>
+
+## 结论
+
+借助 [Remote](/docs/library/resources/remote) 资源，我们可以集成外部 API，可以导出、导入或同步数据。
+
+我们甚至可以集成用其他技术实现的服务，从而执行其他语言提供的特定操作。

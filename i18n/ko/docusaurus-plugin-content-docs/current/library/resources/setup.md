@@ -1,0 +1,106 @@
+---
+id: setup
+title: Setup
+sidebar_label: Setup
+---
+
+Configuration management and definition of the database structure.
+
+---
+
+## autoCreateSchema
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_setup</span>.<span style={{color: '#008000'}}>autoCreateSchema</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## createSchema
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_setup</span>.<span style={{color: '#008000'}}>createSchema</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## getSecret
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_setup</span>.<span style={{color: '#008000'}}>getSecret</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Return
+
+( _string_ )
+
+
+---
+
+## isAutoCreateSchema
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_setup</span>.<span style={{color: '#008000'}}>isAutoCreateSchema</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## isRunning
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_setup</span>.<span style={{color: '#008000'}}>isRunning</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## run
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_setup</span>.<span style={{color: '#008000'}}>run</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>org.netuno.tritao.resource.Setup$RunResult</span>
+##### Return
+
+( _org.netuno.tritao.resource.Setup$RunResult_ )
+
+
+---
+
+## running
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_setup</span>.<span style={{color: '#008000'}}>running</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>boolean</span>
+##### Return
+
+( _boolean_ )
+
+
+---
+
+## secret
+
+---
+
+#### <span style={{fontWeight: 'normal'}}>_setup</span>.<span style={{color: '#008000'}}>secret</span>() : <span style={{fontWeight: 'normal', fontStyle: 'italic'}}>string</span>
+##### Return
+
+( _string_ )
+
+
+---
+

@@ -8,6 +8,7 @@ import { hashContent, loadHashes, saveHashes } from "./hashes";
 import { copyLibrary, LIBRARY_FOLDERS } from "./library";
 import { selectLanguage } from "./menu";
 import translate from "./llm";
+import { separateBareUrls } from "./urls";
 
 const CONCURRENCY = 30;
 
@@ -115,14 +116,20 @@ function queueSave() {
   saving = saving.then(() => saveHashes(hashesFilePath, hashes));
 }
 
-// The category URL comes from link.slug, so it must never be translated
+// The category URL comes from link.slug and the sidebar translations in
+// current.json from key, so they must never be translated
 function restoreCategoryLink(source: string, translated: string) {
-  const sourceLink = JSON.parse(source).link;
-  if (!sourceLink?.slug) {
-    return translated;
-  }
+  const { key, position, link } = JSON.parse(source);
   const result = JSON.parse(translated);
-  result.link = { ...result.link, type: sourceLink.type, slug: sourceLink.slug };
+
+  if (key !== undefined) result.key = key;
+  if (position !== undefined) result.position = position;
+
+  if (link) {
+    result.link = { ...result.link, type: link.type };
+    if (link.slug) result.link.slug = link.slug;
+  }
+
   return JSON.stringify(result, null, 2) + "\n";
 }
 
@@ -183,6 +190,24 @@ const workers = Array.from(
 
 await Promise.all(workers);
 await saving;
+
+// Every page is checked, so translations made before this fix are corrected too
+for (const sourceFilePath of files.filter((file) => /\.mdx?$/.test(file))) {
+  const relativePath = path.relative(sourceBasePath, sourceFilePath);
+  const destination = Bun.file(path.join(destinationBasePath, relativePath));
+
+  if (!(await destination.exists())) {
+    continue;
+  }
+
+  const content = await destination.text();
+  const separated = separateBareUrls(content);
+
+  if (separated !== content) {
+    await Bun.write(destination, separated);
+    console.log(`URL separado em ${relativePath.split(path.sep).join("/")}`);
+  }
+}
 
 // Every page is checked, a renamed heading breaks links in pages that didn't change
 const fixedAnchors = await fixAnchors({

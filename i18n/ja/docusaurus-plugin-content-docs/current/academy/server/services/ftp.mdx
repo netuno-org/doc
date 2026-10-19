@@ -1,0 +1,379 @@
+---
+id: ftp
+title: FTPクライアント
+sidebar_label: FTPクライアント
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+ファイルのアップロードとダウンロード、リモートフォルダの管理。
+
+## はじめに
+
+Netuno はローコードフレームワークに FTP クライアントを統合しており、サーバーへの接続、ファイルの送受信、フォルダの変更など、さまざまなリモート操作が可能です。
+
+複数の同時接続をサポートし、FTPS にも対応しています。
+
+これは、オープンソースの Java 実装 [Apache Commons Net](https://github.com/apache/commons-net) のおかげであり、Netuno が `_ftp` リソースを通じてすべての _スクリプト_ 言語でこれらの機能を提供できるようにしています。
+
+> Netuno の [FTP](/docs/library/resources/ftp) リソースの詳細についてはこちらをご覧ください。
+
+## 設定
+
+最初のステップは、Netuno が接続に使用する FTP アクセス情報を設定することです。
+
+開発中のアプリケーション内で、環境設定ファイルに移動します。この例では、次の場所にある開発環境ファイルを使用します:
+
+- `config/_development.json`
+
+FTP の設定がまだ含まれていないことを確認し、存在しない場合は設定ファイル (JSON 形式) の末尾に FTP 設定パラメータを追加します:
+
+```json title="config/_development.json"
+{
+  ...
+  "ftp": {
+    "default": {
+      "enabled": true,
+      "host": "my.server.net",
+      "port": 21,
+      "username": "temp",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+変更を保存した後、Netuno を再起動すると設定変更が反映されます。これは、`default` という名前が示すように、接続のデフォルト設定です。
+
+FTP 接続設定はさらに追加できますが、デフォルトとして定義できるのは 1 つだけです。
+
+FTP 接続設定を追加するには、デフォルト設定ブロックを繰り返し、`default` という名前を任意の名前に置き換えるだけです。例を参照してください:
+
+```json title="config/_development.json"
+{
+  ...
+  "ftp": {
+    "default": {
+      "enabled": true,
+      "host": "my.server.net",
+      "port": 22,
+      "username": "temp",
+      "password": "$eCr37"
+    },
+    "other": {
+      "enabled": true,
+      "host": "my.other-server.net",
+      "port": 22,
+      "username": "temp",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+上記の例のような設定では、コード内で次のように呼び出すとデフォルトアカウントを使用できます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ftp = _ftp.init()
+            `
+        },
+    ]}
+/>
+
+設定 `other` を使用するには、次のように設定名を `_ftp.init()` 関数のパラメータとして追加するだけです:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ftpOther = _ftp.init("other")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ftpOther = _ftp.init("other")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftpOther = _ftp.init("other")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ftpOther = _ftp.init("other")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ftpOther = _ftp.init("other")
+            `
+        },
+    ]}
+/>
+
+> パラメータとして設定名を追加しない場合は、常にデフォルトアカウントが使用されます。
+
+## 接続
+
+何か操作を行う前に、FTP 接続を開始する必要があります:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.connect()
+            `
+        },
+    ]}
+/>
+
+## 作業ディレクトリ
+
+FTP で操作を行う際は、使用するフォルダを定義する必要があります。
+
+作業ディレクトリを定義することで、このベースフォルダからさまざまな操作を実行できます。
+
+作業ディレクトリを変更するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.changeWorkingDirectory("my/base/folder")
+            `
+        },
+    ]}
+/>
+
+これ以降、すべての操作はこのフォルダ内、またはこのフォルダを起点に実行されます。
+
+## フォルダの作成と削除
+
+フォルダを作成するには、そのフォルダのパスを指定するだけです:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.createDirectory("temp-folder")
+                ftp.createDirectory("temp-folder/sub-folder")
+            `
+        },
+    ]}
+/>
+
+フォルダを削除または除去するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.deleteDirectory("temp-folder/sub-folder")
+                ftp.deleteDirectory("temp-folder")
+            `
+        },
+    ]}
+/>
+
+## 名前の変更
+
+ファイルやフォルダの名前を変更できます。古いパスを渡し、続いて新しいパスを渡します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.rename("old-name", "new-name")
+            `
+        },
+    ]}
+/>
+
+## ファイルのアップロード
+
+テキストファイルをアップロードするには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.uploadText("my-file.txt", "こんにちは FTP! これが私のコンテンツです...")
+            `
+        },
+    ]}
+/>
+
+## ファイルのダウンロード
+
+テキストファイルを取得するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fileContent = ftp.downloadText("my-file.txt")
+                _out.println(fileContent)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                fileContent = ftp.downloadText("my-file.txt")
+                _out.println(fileContent)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fileContent = ftp.downloadText("my-file.txt")
+                _out.println(fileContent)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val fileContent = ftp.downloadText("my-file.txt")
+                _out.println(fileContent)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def fileContent = ftp.downloadText("my-file.txt")
+                _out.println(fileContent)
+            `
+        },
+    ]}
+/>
+
+## フォルダ内の項目一覧
+
+フォルダのすべての内容を一覧表示します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const i of ftp.list("path/folder")) {
+                    if (i.isDirectory()) {
+                        _out.print("フォルダ: ")
+                    } else if (i.isFile()) {
+                        _out.print("ファイル: ")
+                    } else {
+                        _out.print("その他: ")
+                    }
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for i in ftp.list("path/folder"):
+                    if i.isDirectory():
+                        _out.print("フォルダ: ")
+                    elif i.isFile():
+                        _out.print("ファイル: ")
+                    else:
+                        _out.print("その他: ")
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftp.list("path/folder").each do |i|
+                    if i.isDirectory()
+                        _out.print("フォルダ: ")
+                    elsif i.isFile()
+                        _out.print("ファイル: ")
+                    else
+                        _out.print("その他: ")
+                    end
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                ftp.list("path/folder").forEach {
+                    if (it.isDirectory()) {
+                        _out.print("フォルダ: ")
+                    } else if (it.isFile()) {
+                        _out.print("ファイル: ")
+                    } else {
+                        _out.print("その他: ")
+                    }
+                    _out.println(it.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (i in ftp.list("path/folder")) {
+                    if (i.isDirectory()) {
+                        _out.print("フォルダ: ")
+                    } else if (i.isFile()) {
+                        _out.print("ファイル: ")
+                    } else {
+                        _out.print("その他: ")
+                    }
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+    ]}
+/>
+
+> [FTPFile](/docs/library/objects/FTPFile) 型のオブジェクトのリストを返します。

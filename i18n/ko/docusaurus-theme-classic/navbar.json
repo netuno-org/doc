@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Netuno",
+    "description": "내비게이션 바의 제목"
+  },
+  "logo.alt": {
+    "message": "Netuno 문서",
+    "description": "내비게이션 바 로고의 대체 텍스트"
+  },
+  "item.label.Get Started": {
+    "message": "시작하기",
+    "description": "시작하기 레이블이 있는 내비게이션 항목"
+  },
+  "item.label.Academy": {
+    "message": "아카데미",
+    "description": "아카데미 레이블이 있는 내비게이션 항목"
+  },
+  "item.label.Library": {
+    "message": "라이브러리",
+    "description": "라이브러리 레이블이 있는 내비게이션 항목"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "GitHub 레이블이 있는 내비게이션 항목"
+  }
+}

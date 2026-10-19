@@ -1,0 +1,81 @@
+---
+sidebar_position: 1
+id: installation
+title: Snelle installatie
+sidebar_label: Snelle installatie
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Introductie
+
+Welkom bij de installatiehandleiding van **Netuno**, het *low-code*, polyglot en *open source* platform dat is ontwikkeld om het creëren van uw projecten te versnellen en de configuratie van de ontwikkelomgeving te vereenvoudigen.
+
+Hier bouwt u op een agile manier robuuste full-stackapplicaties, door de snelheid van low-code te combineren met de kracht van traditioneel coderen.
+
+## Snelle installatie
+
+De gemakkelijkste manier om Netuno te installeren is via het installatiescript dat door het platform beschikbaar wordt gesteld. Voer eenvoudig de opdrachten in de terminal uit, afhankelijk van uw besturingssysteem.
+
+<Tabs groupId="os">
+    <TabItem value="linux-mac" label="Linux of macOS" default>
+
+```bash
+bash <(curl -fsSL https://netu.no/install.sh)
+```
+
+    </TabItem>
+    <TabItem value="windows" label="Windows">
+
+```powershell
+powershell -c "irm https://netu.no/install.ps1|iex"
+```
+
+    </TabItem>
+</Tabs>
+
+## De DEMO-app starten
+
+Voer na voltooiing van de installatie de onderstaande opdracht uit in de map `netuno` om de server met de demonstratieapplicatie te starten:
+
+```bash
+./netuno server
+```
+
+### De applicatie in de browser openen
+
+Na de initialisatie wordt de browser automatisch geopend met het adres van de lokale server. Als dit niet gebeurt, open dan handmatig een van de onderstaande adressen:
+
+- [http://demo.local.netu.no:9000](http://demo.local.netu.no:9000)
+- [http://localhost:9000](http://localhost:9000)
+
+## De server stoppen
+
+Om de server te stoppen, drukt u in de terminal op de toetsen:
+
+**CTRL + C**
+
+Om hem opnieuw te starten, gebruikt u dezelfde opdracht `./netuno server`.
+
+## Volgende stappen
+
+Enkele ideeën voor wat u nu kunt doen.
+
+### Beginner
+
+Als u nieuw bent met Netuno, begin dan met het maken van uw eerste formulier:
+
+[Mijn eerste formulier maken](/docs/academy/demonstration/config)
+
+### Tutorials
+
+Verken praktische ontwikkelingstutorials met Netuno:
+
+[Bekijk ontwikkelingstutorials](/docs/get-started/tutorials)
+
+### Projecten
+
+Ontdek hoe u Netuno kunt toepassen in echte bedrijfsprojecten:
+
+[Projecten en use cases verkennen](/docs/academy/understand/backoffice)

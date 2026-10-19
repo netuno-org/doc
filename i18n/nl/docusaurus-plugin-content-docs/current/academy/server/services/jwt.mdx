@@ -1,0 +1,462 @@
+---
+id: jwt
+title: JWT-authenticatie (JSON Web Token)
+sidebar_label: JWT-authenticatie
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Configuratie en gebruik van authenticatie met een token.
+
+## Inleiding
+
+JWT (JSON Web Token) is een standaard om de veiligheid en context van authenticatie in webapplicaties te garanderen, waarbij de
+frontend losgekoppeld is van de backend.
+
+Het wordt vaak gebruikt wanneer de frontend van een webapplicatie ontwikkeld is in ReactJS, AngularJS, VueJS, enz. en de
+backend een REST API biedt om dynamische gegevens van de applicatie te leveren en te ontvangen.
+
+> Het token (JWT) is een beveiligde code die de gebruiker identificeert.
+
+Met JWT (JSON Web Token) stelt de REST API van de backend privédiensten in staat om de authenticatiecontext te verkrijgen,
+om te weten wie de geauthenticeerde gebruiker is, dat wil zeggen, op basis van het token kunnen we weten wie de gebruiker is, waarbij het
+token in dit geval een JWT (JSON Web Token) is.
+
+![jwt-flow](/docs/assets/academy/server/services/jwt/flow-pt.png)
+
+## CORS
+
+De REST API kan zich in een ander subdomein dan de website bevinden, wat configuraties van
+[CORS (Cross-Origin Resource Sharing)](/docs/academy/server/services/cors) vereist zodat de diensten toegankelijk zijn.
+
+Daarom, als de REST API zich in een ander domein/subdomein dan de frontend bevindt, is het, zelfs met JWT, noodzakelijk
+dat CORS correct is geconfigureerd.
+
+> CORS is een beveiligingsbeleid voor het consumeren van bronnen in verschillende domeinen, subdomeinen of poorten.
+> Om te garanderen dat een adres echt kan integreren met een ander adres.
+
+Dit gebeurt omdat browsers het gebruik van diensten, of andere soorten bronnen, op externe adressen blokkeren,
+om aanvallen gericht op het verkrijgen van vertrouwelijke gegevens te voorkomen.
+
+## Activering en configuratie
+
+Om JWT in te schakelen en te configureren in uw applicatie in Netuno, is het nodig om het configuratiebestand van de
+applicatie te bewerken dat betrekking heeft op de omgeving die u gebruikt, zoals:
+
+- `config/_development.json`
+- `config/_production.json`
+
+> Dit hangt af van de omgeving die in Netuno is geconfigureerd; zie in het bestand `netuno/config.js` de parametrisering van `config.env`.
+
+Voer de volgende parameters in en pas ze aan:
+
+```json
+    ...
+    "auth": {
+        "jwt": {
+            "enabled": true,
+            "secret": "GeheimMoet32KaraktersHebben!!!",
+            "expires": {
+                "access": 1440,
+                "refresh": 1440
+            }
+        }
+    },
+    ...
+```
+
+Plaats in de parameter `secret` een complexe en willekeurige reeks tekens; dit is de sleutel die de
+veiligheid van de encryptie van de JWT garandeert.
+
+De parameters van `expires` worden gedefinieerd in minuten, bijvoorbeeld: `60` wat overeenkomt met 1 uur en `1440` met een dag.
+
+### Beperkte toegang tot groepen
+
+Daarnaast kan de parameter `groups` worden doorgegeven, die de code van de groepen van gebruikers definieert die kunnen
+authenticeren met JWT, bijvoorbeeld:
+
+```json
+    ...
+    "auth": {
+        "jwt": {
+            ...
+            "groups": ["klant", "leverancier"],
+            ...
+        }
+    },
+    ...
+```
+
+In het bovenstaande voorbeeld kunnen alleen de gebruikers die behoren tot de groepen:
+
+- Klanten, met de groepscode `klant`.
+- Leveranciers, met de groepscode `leverancier`
+
+Alleen gebruikers in deze groepen kunnen authenticeren met JWT.
+
+## Hoe het Access Token te verkrijgen
+
+Om het _Access Token_ van de JWT te verkrijgen, biedt Netuno de dienst `_auth` die de authenticatie valideert en, bij succes,
+het _Access Token_ en het _Refresh Token_ retourneert.
+
+Het _Access Token_ wordt als volgt verkregen:
+
+<script dangerouslySetInnerHTML={{ __html: `window.addEventListener("message", function(e) {var i = e.data.split(":")[1];var h = e.data.split(":")[2];if (e.data.split(":")[0] == "swimlanes-io" && i && h) {document.getElementById("__sw-io-" + i).setAttribute("style","height:" + h + "px");}}, false);`}}></script>
+<div id="__sw-io-hVPQ">
+    <iframe style={{border:'none', width:'100%', height:'100%'}} scrolling="no" src="https://cdn.swimlanes.io/dist/embeded.html#hVPLjtNAELzPV7RyjrMIEAeLhwLLos0BhMgKaS9x42nwBHvGmUf2gfYD+IwVhxUHvsI/Ro8fiUkOzMGyZ7rKVdU9Z9Zon5CWkLyE9+SDNjCv6xTmwZP2KsfmofllYPF5CdL0FUIbTym8KbBCMODIblXzYEAS4L+wHSQVIjtpC3NyJysuK16tr/wLbwNlQrzVW8VUDiTK+CQILjT3Vhkg5tcFRoIsWzujxQ8BvCaB6TRWNElhImk7mXbbNTp3ZawctsVdBApxtnP6PEnGVns3zU+w5A1TytbuFHJTRUnefCfdakLW7qIifrf01ZIrjmVhHqtWLSpqoJtF8eVdrj6oxfnF7cVsNhuUMj6UnmtiCLu9lnYPX24eX56eP9XfPvrL5WKEbitW/qZuA3hNaMkOZ3RdK6ZZqUjx5NmjuI5zOOx45w7Z8qe+o7EffFgO/RwaH4OBzmgXDzS/oTbONX+2VAJdUx48WtgELDeB7GhEEHDP1/+/jdowgY3Qqi4PxqWikHQfhg2ckuP8mRZiq+lQCduJ02WsukWvjIaCUJKdHtJnWeF9Lebj2hS6HOG4af8boiEa5AhNL8XRGmHb3JdKske+F9Hy6L5waH1UPHLttO3HfneRpJn9BQ==#hVPQ"></iframe>
+</div>
+
+## Fetch - Puur JavaScript
+
+JavaScript in browsers biedt `fetch` om te integreren met de diensten van de REST API van de backend.
+
+Volgen enkele voorbeelden van hoe de authenticatie met JWT en de vernieuwing van het token uit te voeren.
+
+### Authenticatie
+
+Voorbeeld van hoe het _Access Token_ te verkrijgen met [fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API):
+
+```javascript
+fetch("http://localhost:9000/services/_auth", {
+    method: 'post',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+        username: payload.username,
+        password: payload.password,
+        jwt: true
+    })
+}).then((response) => {
+	if (response.status != 200) {
+        if (response.status != 403) {
+            console.log('Authenticatie mislukt met onverwachte status:', response.status);
+        }
+        alert('Ongeldige login.');
+        return null;
+    }
+    return response.json();
+}).then((res) => {
+    if (res && res.result === true) {
+        console.log(`Mijn Access Token: ${res.access_token}`);
+        console.log(`Mijn Refresh Token: ${res.refresh_token}`);
+        console.log(`Verloopt over: ${res.expires_in} minuten`);
+        sessionStorage.setItem('token', JSON.stringify(res));
+    }
+}).catch((error)=> {
+    console.log(error);
+    alert('Er is een technisch probleem opgetreden, probeer het later opnieuw.');
+});
+```
+
+Merk op dat het `token` als sessie bewaard moet worden; daarom heeft het de voorkeur om [sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage)
+in plaats van [localStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) te gebruiken voor meer veiligheid.
+
+Met het `refresh_token` is het mogelijk een nieuw `token` te genereren vóór de vervaltijd (`expires_in` in minuten).
+
+### Het _Access Token_ gebruiken in andere diensten
+
+Om op maat gemaakte diensten uit te voeren die voorafgaande authenticatie in Netuno-applicaties vereisen, moet u het
+_Access Token_ doorgeven in de Header van het HTTP-protocol, als waarde van de sleutel _Authorization_, bijvoorbeeld:
+
+`Authorization: Bearer eyJhbGciOiJIUzU...`
+
+Voorbeeld van hoe een op maat gemaakte dienst via de frontend uit te voeren met [fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API), waarbij de
+`Authorization` wordt doorgegeven in de `headers`:
+
+```javascript
+const token = JSON.parse(sessionStorage.getItem("token"));
+
+fetch("http://localhost:9000/services/mijn-dienst", {
+    method: 'post',
+    credentials: 'include',
+    headers: {
+        'Authorization': `${token.token_type} ${token.access_token}`,
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        mijnParameter1: '...',
+        mijnParameter2: '...'
+    })
+}).then((response) => {
+    if (response.status != 200) {
+    	console.log(`Dienst mislukt met status ${response.status}.`);
+        if (response.status == 403) {
+            alert('Niet geauthenticeerd.');
+        } else {
+            alert('Er is een fout opgetreden bij de dienst.');
+        }
+        return null;
+    }
+    return response.json();
+}).then((res) => {
+    if (res) {
+        console.log(`Responsgegevens van mijn dienst:`, res);
+        alert('Dienst succesvol uitgevoerd.');
+    }
+}).catch((error)=> {
+    console.log(error);
+    alert('Er is een technisch probleem opgetreden, probeer het later opnieuw.');
+});
+```
+
+Merk op dat in de HTTP Headers, in de parameter `Authorization`, gebruik wordt gemaakt van het `token_type` en het `access_token`
+die zijn verkregen uit het JWT-object dat eerder bij de authenticatie is opgeslagen in de
+[sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage).
+
+### Vernieuwen met het _Refresh Token_
+
+Om het token te vernieuwen en de authenticatie te verlengen, moet u de dienst `_auth` opnieuw aanroepen, maar naast de parameter
+`jwt: true` moet u ook de parameter `refresh_token` doorgeven met de waarde die eerder bij de succesvolle
+authenticatie is ontvangen.
+
+De vernieuwing van het token moet worden uitgevoerd vóór de vervaltijd (`expires_in` in minuten).
+
+Om de authenticatie te verlengen en het token te vernieuwen, zie het voorbeeld:
+
+```javascript
+const token = JSON.parse(sessionStorage.getItem("token"));
+
+fetch("http://localhost:9000/services/_auth", {
+    method: 'post',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+        refresh_token: token.refresh_token,
+        jwt: true
+    })
+}).then((response) => {
+    if (response.status != 200) {
+        if (response.status != 403) {
+            console.log('De vernieuwing van het token mislukte met onverwachte status:', response.status);
+        }
+        alert('Vernieuwing van de toegang met ongeldig token.');
+        return null;
+    }
+    return response.json();
+}).then((res) => {
+    if (res && res.result === true) {
+        console.log(`Mijn Nieuwe Access Token: ${res.access_token}`);
+        console.log(`Mijn Nieuwe Refresh Token: ${res.refresh_token}`);
+        console.log(`Verloopt over: ${res.expires_in} minuten`);
+        sessionStorage.setItem("token", JSON.stringify(res));
+    }
+}).catch((error)=> {
+    console.log(error);
+    alert('Er is een technisch probleem opgetreden, probeer het later opnieuw.');
+});
+```
+
+Bij het verkrijgen van het nieuwe token moet u dit gaan gebruiken in plaats van het vorige (oude) bij de volgende aanroepen naar de diensten.
+
+Op deze manier wordt de authenticatie verlengd met opeenvolgende vernieuwingen van het token; het is een manier om te garanderen dat de gebruiker
+geauthenticeerd blijft.
+
+## Auth Client - NPM
+
+Om de integratie met de frontend gemakkelijk uit te voeren, is de NPM-module beschikbaar:
+
+- [@netuno/auth-client](https://www.npmjs.com/package/@netuno/auth-client)
+
+In de frontend kunt u de installatie uitvoeren met [Bun](https://bun.sh):
+
+- `bun install @netuno/auth-client`
+
+> Er kan ook een andere frontend-afhankelijkheidsbeheerder zoals PNPM, NPM, YARN of een andere worden gebruikt.
+
+### Configuratie
+
+Deze module is afhankelijk van [@netuno/service-client](https://www.npmjs.com/package/@netuno/service-client) bij het definiëren van
+het adres van de diensten, bijvoorbeeld:
+
+```javascript
+import _service from '@netuno/service-client';
+...
+_service.config({
+    prefix: 'http://localhost:9000/services/'
+});
+```
+
+De `auth-client` gebruikt het prefix van de `service-client` om intern het adres van de dienst `_auth` op te bouwen,
+in dit geval, volgens het voorbeeld, zal dat zijn:
+
+- `http://localhost:9000/services/_auth`
+
+Dit adres wordt dus automatisch opgebouwd met behulp van het adresprefix van de diensten van de REST API
+van de Netuno-applicatie.
+
+Zie hoe u de configuraties van de `auth-client` kunt aanpassen:
+
+In de ES module-versie is `config()` asynchroon. Wacht op de voltooiing ervan voordat u de geconfigureerde client gebruikt:
+
+```javascript
+import _auth from '@netuno/auth-client';
+
+await _auth.config({
+    storage: 'local', // session is de standaardwaarde.
+    onLogin: () => { alert("Ingelogd!"); },
+    onLogout: () => { alert("Uitgelogd!"); }
+});
+```
+
+Als u wilt dat het token wordt opgeslagen in `localStorage`, dan is het nodig om in de configuratie
+`storage: 'local'` te definiëren, omdat het standaard `storage: 'session'` is, gebruikmakend van `sessionStorage`.
+
+### Authenticatie
+
+Om in te loggen met de `_auth`:
+
+```javascript
+import _auth from '@netuno/auth-client';
+...
+_auth.login({
+    username: "admin",
+    password: "secret",
+    success: ()=> {
+        alert("Succes.");
+    },
+    fail: ()=> {
+        alert("Mislukt.");
+    }
+});
+```
+
+Het token wordt automatisch opgeslagen, in `session` (`sessionStorage`) of `local` (`localStorage`), afhankelijk van de
+configuratie; standaard is het `session`.
+
+### Het token vernieuwen
+
+Voorbeeld van hoe het token te vernieuwen:
+
+```javascript
+import _auth from '@netuno/auth-client';
+...
+_auth.refreshToken({
+    success: ()=> {
+        alert("Succes.");
+    },
+    fail: ()=> {
+        alert("Mislukt.");
+    }
+});
+```
+
+Het token wordt automatisch opgeslagen, in `session` (`sessionStorage`) of `local` (`localStorage`), afhankelijk van de
+configuratie; standaard is het `session`.
+
+### Het token verwijderen
+
+Voorbeeld van hoe de sessie te beëindigen, dat wil zeggen het proces van uitloggen en het token verwijderen:
+
+```javascript
+import _auth from '@netuno/auth-client';
+...
+_auth.logout();
+```
+
+Het token wordt verwijderd uit `sessionStorage` of uit `localStorage`, afhankelijk van de configuratie; standaard is het
+`sessionStorage`.
+
+## Backend - Diensten van de REST API
+
+Als de header `Authorization` wordt doorgegeven bij de integratie met de diensten met een geldig token, dan is het mogelijk
+te identificeren wie de gebruiker en de groep is.
+
+In de backend kunnen we de bron `_user` en `_group` gebruiken, die respectievelijk identificeert wie de gebruiker en de groep is.
+
+Om de gegevens van de geauthenticeerde gebruiker te bekijken, gebruiken we de bron [User](/docs/library/resources/user), bijvoorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(
+                    "Geauthenticeerde gebruiker:",
+                    _val.map()
+                        .set("id", _user.id())
+                        .set("naam", _user.name())
+                        .set("code", _user.code())
+                        .set("alles", _user.data())
+                )
+            `
+        },
+    ]}
+/>
+
+Om de groep van de geauthenticeerde gebruiker te bekijken, gebruiken we de bron [Group](/docs/library/resources/group), bijvoorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(
+                    "Geauthenticeerde groep:",
+                    _val.map()
+                        .set("id", _group.id())
+                        .set("naam", _group.name())
+                        .set("code", _group.code())
+                        .set("alles", _group.data())
+                )
+            `
+        },
+    ]}
+/>
+
+### Beveiliging
+
+Als het token ongeldig is, of als de `Authorization` niet wordt doorgegeven, dan garandeert Netuno dat de dienst niet
+wordt uitgevoerd, tenzij de dienst is geconfigureerd als publieke toegang; standaard zijn diensten privé.
+
+> Om te beheren of de dienst publiek of privé is, configureert u in uw applicatie in: `server/core/_service_config.js`
+
+Bovendien staat Netuno in ontwikkeling toe om privédiensten direct zonder authenticatie uit te voeren, om
+praktische redenen, omdat de meeste op maat gemaakte diensten normaal gesproken geen authenticatiecontext nodig hebben,
+waardoor de ontwikkeling en het testen over het algemeen eenvoudiger worden.
+
+In niet-ontwikkelomgevingen, bijvoorbeeld in productie, kunnen de diensten uiteraard alleen worden uitgevoerd met
+authenticatie.
+
+### Authenticatiebron
+
+Normaal gesproken zijn de bronnen `_user` en `_group` voldoende, maar er zijn situaties waarin we geavanceerdere
+bewerkingen willen uitvoeren, en in dat geval hebben we de bron `_auth`.
+
+De bron `_auth` is de belangrijkste authenticatiebron, beheert de configuraties en heeft alle bewerkingen
+die verband houden met het authenticatieproces.
+
+> Raadpleeg voor meer informatie de documentatie van de bron [Auth](/docs/library/resources/auth).
+
+## ReAuthKit
+
+Netuno biedt een basisproject om platforms met online-authenticatie te maken, met accountaanmaak,
+login, profiel, avatar, wachtwoordherstel en nog veel meer.
+
+Bekijk het op GitHub:
+
+- [ReAuthKit](https://github.com/netuno-org/reauthkit)
+
+> ReAuthKit is een Netuno-applicatie met de frontend gebouwd in React, Ant.Design en React Router, en de database
+> in PostgreSQL.
+
+Met ReAuthKit versnelt u de creatie van nieuwe projecten met authenticatie aanzienlijk, omdat het al alle
+benodigde mechanismen heeft voor elk project dat authenticatie vereist.
+
+## Conclusie
+
+Op een eenvoudige manier is het mogelijk om authenticatie met JWT (JSON Web Token) in applicaties te configureren en in te schakelen.
+
+> Gebruik authenticatie met JWT om veilige diensten te ontwikkelen in de REST API.
+
+De integratie van JWT in de frontend kan direct met `fetch` worden gebruikt.
+
+Om de implementatie te versnellen en te standaardiseren, is de NPM-module [@netuno/auth-client](https://www.npmjs.com/package/@netuno/auth-client) beschikbaar, die kan worden
+gebruikt met elke frontend-technologie.
+
+Gebruik, wanneer u de gebruiker moet identificeren bij de uitvoering van diensten van de REST API, altijd authenticatie met JWT.
+
+In de backend is de configuratie en het verkrijgen van de geauthenticeerde gebruiker heel eenvoudig.

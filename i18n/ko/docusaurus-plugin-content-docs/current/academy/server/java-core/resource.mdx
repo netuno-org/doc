@@ -1,0 +1,184 @@
+---
+id: resource 
+title: 폴리글롯 로우코드 리소스 
+sidebar_label: 리소스 
+sidebar_position: 5
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+이 튜토리얼에서는 Netuno용 네이티브 리소스를 만들겠습니다. 즉, Netuno 기본 디렉터리에 위치하며 `apps` 폴더 안의 모든 애플리케이션에서 `_foo.methodName(ars)` 구문을 사용해 이용할 수 있는 Java 클래스를 만들겠습니다.
+
+이전 튜토리얼을 따라 만들 예제는 간단한 산술 연산을 수행하는 예제 리소스인 `_계산`입니다.
+
+시작하려면 먼저 프로젝트의 폴더 구조를 만들어야 합니다. 이 예제에서는 프로젝트가 `계산`이라는 폴더 안에 생성된다고 가정하겠습니다. 그런 다음 패키지 이름(이 예제에서는 `org.netuno.addon.계산`)을 반영하는 폴더 구조를 만들어야 합니다. 따라서 폴더 구조는 다음과 같습니다:
+
+- `계산/src/main/java/org/netuno/addon/계산/리소스/`
+
+이 구조 안에 우리의 사용자 정의 네이티브 리소스를 정의할 `계산리소스`라는 Java 클래스를 만들겠습니다.
+
+- ` 계산/src/main/java/org/netuno/addon/계산/리소스/계산리소스.java`
+
+그러면 클래스 안에 정의되는 패키지는 다음과 같습니다:
+
+```java
+package org.netuno.addon.계산.리소스;
+```
+
+클래스가 사용자 정의 네이티브 리소스를 정의하려면 `org.netuno.tritao.ResourceBase` 애노테이션으로 이 클래스에 애노테이션을 추가해야 합니다. `name` 매개변수는 리소스 이름이 되며, 이름 앞에 밑줄(`_`)을 붙여 접근할 수 있습니다(이 예제에서는 `_계산`). 리소스를 만드는 가장 쉬운 방법은 `org.netuno.tritao.resource.ResourceBase` 클래스를 확장하는 것입니다:
+
+```java
+package org.netuno.addon.계산.리소스;
+
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "계산")
+public class 계산리소스 extends ResourceBase {
+    // ...
+}
+```
+
+`ResourceBase` 클래스를 확장하면 리소스를 직접 초기화할 필요가 없으며, 올바른 인수로 `super`를 호출하기만 하면 됩니다:
+
+```java
+package org.netuno.addon.계산.리소스;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "계산")
+public class 계산리소스 extends ResourceBase {
+    // ...
+    public 계산리소스(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+}
+```
+
+`init` 함수는 필수이며, 그 안에서 부모 클래스의 getter로 우리 클래스의 생성자를 호출해 리소스를 초기화합니다:
+
+```java
+package org.netuno.addon.계산.리소스;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "계산")
+public class 계산리소스 extends ResourceBase {
+    // ...
+    public 계산리소스(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public 계산리소스 init() {
+        return new 계산리소스(getProteu(), getHili());
+    }
+}
+```
+
+그 다음에는 우리만의 필드와 함수를 정의하겠습니다:
+
+```java
+package org.netuno.addon.계산.리소스;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "계산")
+public class 계산리소스 extends ResourceBase {
+    public double 값 = 0;
+
+    public 계산리소스(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public 계산리소스 init() {
+        return new 계산리소스(getProteu(), getHili());
+    }
+
+    public 계산리소스 설정(double 숫자) {
+        값 = 숫자;
+        return this;
+    }
+
+    public 계산리소스 더하기(double 숫자) {
+        값 += 숫자;
+        return this;
+    }
+
+    public 계산리소스 빼기(double 숫자) {
+        값 -= 숫자;
+        return this;
+    }
+
+    public double 가져오기() {
+        return 값;
+    }
+}
+```
+
+이제 클래스를 컴파일하고 `계산리소스.class` 파일이 다음 폴더에 있는지 확인하면 됩니다:
+
+- `netuno/core/web/WEB-INF/classes/org/netuno/addon/계산/리소스/`
+
+또는 JAR 파일을 만들어 다음 폴더에 있는지 확인합니다:
+
+- `netuno/lib/`
+
+이 리소스를 사용할 테스트 애플리케이션을 만들어 보겠습니다:
+
+```bash
+./netuno app name=계산
+```
+
+이 애플리케이션에서 리소스를 사용할 서비스도 만들어 보겠습니다.
+예제에서는 `netuno/apps/계산/server/services/계산-테스트.js` 파일을 만들겠습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _계산.설정(10);
+
+                _계산.더하기(120);
+
+                _out.println(_계산.가져오기());
+            `
+        },
+    ]}
+/>
+
+애플리케이션을 시작해 보겠습니다:
+
+```bash
+./netuno server app=계산
+```
+
+이제 이 서비스를 호출하면:
+
+- `http://localhost:9000/services/계산-테스트`
+
+값 `130`을 반환합니다.
+
+Java 코드에서 리소스를 사용하려면 `org.netuno.tritao.Web` 및 `org.netuno.tritao.event.EventBase` 같은 일부 클래스가 이 리소스를 초기화하는 `resource` 함수를 제공합니다. `계산` 리소스를 사용하려는 클래스에서는 다음과 같이 하세요:
+
+```java
+import org.netuno.addon.계산.리소스.계산리소스;
+
+// ...
+    계산리소스 계산 = resource(계산리소스.class);
+    계산.설정(10);
+    계산.더하기(120);
+    System.out.println(계산.가져오기());
+// ...
+```
+
+프로젝트의 전체 파일은 [링크](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/resource)에서 확인할 수 있습니다.

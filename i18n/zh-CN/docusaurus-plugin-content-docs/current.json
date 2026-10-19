@@ -1,0 +1,126 @@
+{
+  "version.label": {
+    "message": "下一版",
+    "description": "当前版本的标签"
+  },
+  "sidebar.academySidebar.category.Demonstration": {
+    "message": "演示",
+    "description": "侧边栏 academySidebar 中“应用演示”分类的标签"
+  },
+  "sidebar.academySidebar.category.Demonstration.link.generated-index.description": {
+    "message": "进行一次开发之旅，修改默认演示应用。",
+    "description": "侧边栏 academySidebar 中“应用演示”分类的生成索引页描述。"
+  },
+  "sidebar.academySidebar.category.User Interface": {
+    "message": "用户界面",
+    "description": "侧边栏 academySidebar 中“用户界面”分类的标签"
+  },
+  "sidebar.academySidebar.category.User Interface.link.generated-index.description": {
+    "message": "用户界面的工作方式、表单构建和数据管理。",
+    "description": "侧边栏 academySidebar 中“用户界面”分类的生成索引页描述。"
+  },
+  "sidebar.academySidebar.category.Explore": {
+    "message": "探索",
+    "description": "侧边栏 academySidebar 中“探索”分类的标签"
+  },
+  "sidebar.academySidebar.category.Explore.link.generated-index.description": {
+    "message": "了解一些功能和总体概念。",
+    "description": "侧边栏 academySidebar 中“探索”分类的生成索引页描述。"
+  },
+  "sidebar.academySidebar.category.Understand": {
+    "message": "理解",
+    "description": "侧边栏 academySidebar 中“探索”分类的标签"
+  },
+  "sidebar.academySidebar.category.Understand.link.generated-index.description": {
+    "message": "平台的整体适用性、战略潜力。",
+    "description": "侧边栏 academySidebar 中“探索”分类的生成索引页描述。"
+  },
+  "sidebar.academySidebar.category.Server Backend": {
+    "message": "服务端后端",
+    "description": "侧边栏 academySidebar 中“服务器”分类的标签"
+  },
+  "sidebar.academySidebar.category.Server Backend.link.generated-index.description": {
+    "message": "关于集成到多语言低代码开发中的后端的教程。",
+    "description": "侧边栏 academySidebar 中“服务器”分类的生成索引页描述。"
+  },
+  "sidebar.academySidebar.category.Database": {
+    "message": "数据库",
+    "description": "侧边栏 academySidebar 中“数据库”分类的标签"
+  },
+  "sidebar.academySidebar.category.Database.link.generated-index.description": {
+    "message": "数据库管理教程。",
+    "description": "侧边栏 academySidebar 中“数据库”分类的生成索引页描述。"
+  },
+  "sidebar.academySidebar.category.Service": {
+    "message": "服务",
+    "description": "侧边栏 academySidebar 中“服务”分类的标签"
+  },
+  "sidebar.academySidebar.category.Service.link.generated-index.description": {
+    "message": "服务中使用的资源教程。",
+    "description": "侧边栏 academySidebar 中“服务”分类的生成索引页描述。"
+  },
+  "sidebar.academySidebar.category.Java Core": {
+    "message": "Java Core",
+    "description": "The label for category Java Core in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Java Core.link.generated-index.description": {
+    "message": "关于集成到多语言低代码开发中的后端的教程。",
+    "description": "The generated-index page description for category Java Core in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Website Frontend": {
+    "message": "网站前端",
+    "description": "侧边栏 academySidebar 中“网站”分类的标签"
+  },
+  "sidebar.academySidebar.category.Website Frontend.link.generated-index.description": {
+    "message": "高级前端开发和集成。",
+    "description": "侧边栏 academySidebar 中“网站”分类的生成索引页描述。"
+  },
+  "sidebar.librarySidebar.category.App Structure": {
+    "message": "应用结构",
+    "description": "侧边栏 librarySidebar 中“应用文件夹”分类的标签"
+  },
+  "sidebar.librarySidebar.category.App Structure.link.generated-index.description": {
+    "message": "应用程序的文件夹和文件结构详解。",
+    "description": "侧边栏 librarySidebar 中“应用文件夹”分类的生成索引页描述。"
+  },
+  "sidebar.librarySidebar.category.Resources": {
+    "message": "资源",
+    "description": "侧边栏 librarySidebar 中“资源”分类的标签"
+  },
+  "sidebar.librarySidebar.category.Resources.link.generated-index.description": {
+    "message": "所有可用的低代码资源。",
+    "description": "侧边栏 librarySidebar 中“资源”分类的生成索引页描述。"
+  },
+  "sidebar.librarySidebar.category.Objects": {
+    "message": "对象",
+    "description": "侧边栏 librarySidebar 中“对象”分类的标签"
+  },
+  "sidebar.librarySidebar.category.Objects.link.generated-index.description": {
+    "message": "主要可用的低代码对象。",
+    "description": "侧边栏 librarySidebar 中“对象”分类的生成索引页描述。"
+  },
+  "sidebar.academySidebar.category.CLUAR": {
+    "message": "CLUAR",
+    "description": "侧边栏 academySidebar 中 CLUAR 分类的标签"
+  },
+  "sidebar.academySidebar.category.CLUAR.link.generated-index.description": {
+    "message": "用于管理内容和多语言网站的即用型解决方案。",
+    "description": "侧边栏 academySidebar 中 CLUAR 分类的生成索引页描述。"
+  },
+  "sidebar.academySidebar.category.Components": {
+    "message": "组件",
+    "description": "侧边栏 academySidebar 中“组件”分类的标签"
+  },
+  "sidebar.academySidebar.category.Components.link.generated-index.description": {
+    "message": "关于 CLUAR 内容组件的教程——Banner、内容、列表、滑块和功能。",
+    "description": "侧边栏 academySidebar 中“组件”分类的生成索引页描述。"
+  },
+  "sidebar.academySidebar.category.Pages": {
+    "message": "页面",
+    "description": "侧边栏 academySidebar 中“页面”分类的标签"
+  },
+  "sidebar.academySidebar.category.Pages.link.generated-index.description": {
+    "message": "关于 CLUAR 中页面实体的教程——字段、版本控制、发布和克隆。",
+    "description": "侧边栏 academySidebar 中“页面”分类的生成索引页描述。"
+  }
+}

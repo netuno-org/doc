@@ -59,11 +59,19 @@
     "message": "Tutoriale despre resursele utilizate în servicii.",
     "description": "Descrierea paginii de index generată pentru categoria Serviciu din bara laterală academySidebar"
   },
+  "sidebar.academySidebar.category.Java Core": {
+    "message": "Java Core",
+    "description": "The label for category Java Core in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Java Core.link.generated-index.description": {
+    "message": "Tutoriale despre backend-ul integrat în dezvoltarea low-code poliglotă.",
+    "description": "The generated-index page description for category Java Core in sidebar academySidebar"
+  },
   "sidebar.academySidebar.category.Website Frontend": {
     "message": "Frontend Website",
     "description": "Eticheta pentru categoria Frontend Website din bara laterală academySidebar"
   },
-  "sidebar.academySidebar.category.Website - Frontend.link.generated-index.description": {
+  "sidebar.academySidebar.category.Website Frontend.link.generated-index.description": {
     "message": "Dezvoltare frontend avansată și integrări.",
     "description": "Descrierea paginii de index generată pentru categoria Frontend Website din bara laterală academySidebar"
   },

@@ -1,0 +1,468 @@
+---
+id: ssh
+title: SSH 클라이언트
+sidebar_label: SSH 클라이언트
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+서버에서 명령을 실행하고 파일을 전송합니다.
+
+## 소개
+
+Netuno는 로우코드 프레임워크에 SSH 클라이언트를 통합하여 서버 연결, 명령 실행, 파일 송수신, 폴더 수정 및 기타 원격 작업을 수행할 수 있습니다.
+
+여러 동시 연결과 SCP, SFTP를 지원합니다.
+
+이는 Java 및 오픈 소스
+<a target="_blank" href="https://github.com/hierynomus/sshj/tree/master">SSHJ</a> 구현 덕분이며, Netuno가 `_ssh` 리소스를 통해 모든 스크립트 언어에 이러한 기능을 제공할 수 있게 해줍니다.
+
+> Netuno의 [SSH](/docs/library/resources/ssh) 리소스에 대해 더 알아보세요.
+
+## 구성
+
+첫 번째 단계는 Netuno가 연결에 사용할 SSH 액세스 데이터를 구성하는 것입니다.
+
+개발 중인 애플리케이션 내에서 환경 구성 파일로 이동하세요. 이 예제에서는 다음 위치에 있는 개발용 파일을 사용합니다:
+
+- `config/_development.json`
+
+SSH 구성이 있는지 확인하고, 없으면 구성 파일(JSON 형식) 끝에 SSH 구성 매개변수를 추가하세요. 예:
+
+```json
+{
+  ...
+  "ssh": {
+    "default": {
+      "enabled": true,
+      "host": "my.server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+변경 사항을 저장한 후 Netuno를 다시 시작하면 구성 변경이 적용됩니다. 키 이름 `default`가 나타내듯이 이 구성은 연결의 기본 구성입니다.
+
+JSON에서 다른 키로 SSH 연결 구성을 더 추가할 수 있습니다.
+
+SSH 연결 구성을 더 추가하려면 기본 구성 블록을 반복하고 `default` 키를 원하는 다른 키로 바꾸면 됩니다. 예:
+
+```json
+{
+  ...
+  "ssh": {
+    "default": {
+      "enabled": true,
+      "host": "my.server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    },
+    "other": {
+      "enabled": true,
+      "host": "my.other-server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+위 구성은 다음과 같이 코딩할 때 `default` 계정을 사용할 수 있게 합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ssh = _ssh.init()
+            `
+        },
+    ]}
+/>
+
+`other` 구성을 사용하려면 다음과 같이 구성 키를 `_ssh.init()` 함수의 매개변수로 추가하면 됩니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshOther = _ssh.init("other")
+            `
+        },
+    ]}
+/>
+
+> 구성 이름을 매개변수로 추가하지 않으면 `default` 계정의 구성이 사용됩니다.
+
+## 연결
+
+무엇이든 하기 전에 SSH 연결을 시작해야 합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ssh.connect()
+            `
+        },
+    ]}
+/>
+
+## 명령
+
+명령을 실행하려면 명령 세션을 시작해야 합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSession = ssh.initSession()
+            `
+        },
+    ]}
+/>
+
+명령을 실행하면 실행 상태와 해당 데이터 출력(output)을 포함하는 객체가 제공됩니다. 예:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshCommandResult = sshSession.exec("ls -rato")
+                if (sshCommandResult.ok) {
+                    _out.println("성공적으로 실행했습니다:")
+                    _out.println(sshCommandResult.output())
+                } else {
+                    _out.println("명령이 실패했습니다:")
+                    _out.println(sshCommandResult.error())
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                sshCommandResult = sshSession.exec("ls -rato")
+                if sshCommandResult.ok:
+                    _out.println("성공적으로 실행했습니다:")
+                    _out.println(sshCommandResult.output())
+                else:
+                    _out.println("명령이 실패했습니다:")
+                    _out.println(sshCommandResult.error())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                sshCommandResult = sshSession.exec("ls -rato")
+                if sshCommandResult.ok
+                    _out.println("성공적으로 실행했습니다:")
+                    _out.println(sshCommandResult.output())
+                else
+                    _out.println("명령이 실패했습니다:")
+                    _out.println(sshCommandResult.error())
+                end
+            `
+        },
+    ]}
+/>
+
+> 명령에서 반환되는 객체는 [SSHExecResult](/docs/library/objects/SSHExecResult)입니다.
+
+세션은 항상 닫아야 합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sshSession.close()
+            `
+        },
+    ]}
+/>
+
+## SCP
+
+SCP를 사용하면 파일을 보내고 받을 수 있습니다.
+
+문자열로 텍스트 파일을 생성하고 생성된 파일의 내용을 다운로드하려면 다음 예제를 참고하세요:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // 텍스트 파일을 생성합니다.
+                sshSCP.uploadText("hello.txt", "안녕하세요! 제 내용입니다...")
+                // 파일 내용을 다운로드하여 출력합니다.
+                _out.println(sshSCP.downloadText("hello.txt"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+애플리케이션에 있는 파일을 업로드하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // storage/filesystem에 있는 파일을 업로드합니다.
+                sshSCP.upload("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // 애플리케이션 루트에 있는 파일을 업로드합니다.
+                sshSCP.upload("document.pdf", _app.file("document.pdf"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+서버에서 애플리케이션으로 파일을 다운로드하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // 파일을 storage/filesystem으로 다운로드합니다.
+                sshSCP.download("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // 파일을 애플리케이션 루트로 다운로드합니다.
+                sshSCP.download("document.pdf", _app.file("document.pdf"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+## SFTP
+
+SFTP는 FTP와 동일한 기능을 지원하지만 SSH를 사용하는 파일 및 폴더 전송·조작 방식입니다.
+
+새 SFTP 세션을 시작하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sftp = ssh.initSFTP()
+            `
+        },
+    ]}
+/>
+
+> 세션 클라이언트인 [SSHSFTP](/docs/library/objects/SSHSFTP) 객체를 시작합니다.
+
+원격으로 새 폴더 만들기:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.createDirectory("path/new-folder")
+            `
+        },
+    ]}
+/>
+
+전달된 텍스트 내용으로 원격 파일을 생성하거나 덮어씁니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.uploadText("folder/file.txt", "내용입니다!")
+            `
+        },
+    ]}
+/>
+
+원격 파일의 텍스트 내용을 가져옵니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remoteFileContent = sftp.downloadText("folder/file.txt")
+                _out.println(remoteFileContent)
+            `
+        },
+    ]}
+/>
+
+원격 파일을 영구적으로 삭제합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.deleteFile("folder/file.txt")
+            `
+        },
+    ]}
+/>
+
+원격 폴더를 영구적으로 삭제합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.deleteDirectory("folder")
+            `
+        },
+    ]}
+/>
+
+폴더의 모든 내용을 나열합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const i of sftp.list("path/folder")) {
+                    if (i.directory) {
+                        _out.print("폴더: ")
+                    } else if (i.regularFile) {
+                        _out.print("파일: ")
+                    } else {
+                        _out.print("기타: ")
+                    }
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for i in sftp.list("path/folder"):
+                    if i.directory:
+                        _out.print("폴더: ")
+                    elif i.regularFile:
+                        _out.print("파일: ")
+                    else:
+                        _out.print("기타: ")
+                    _out.println(i.name)
+                    _out.println("<br/>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                sftp.list("path/folder").each do |i|
+                    if i.directory
+                        _out.print("폴더: ")
+                    elsif i.regularFile
+                        _out.print("파일: ")
+                    else
+                        _out.print("기타: ")
+                    end
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                sftp.list("path/folder").forEach {
+                    if (it.directory) {
+                        _out.print("폴더: ")
+                    } else if (it.regularFile) {
+                        _out.print("파일: ")
+                    } else {
+                        _out.print("기타: ")
+                    }
+                    _out.println(it.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (i in sftp.list("path/folder")) {
+                    if (i.directory) {
+                        _out.print("폴더: ")
+                    } else if (i.regularFile) {
+                        _out.print("파일: ")
+                    } else {
+                        _out.print("기타: ")
+                    }
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+    ]}
+/>
+
+> [SSHFile](/docs/library/objects/SSHFile) 유형의 객체 목록을 반환합니다.
+
+애플리케이션에 있는 파일을 업로드하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // storage/filesystem에 있는 파일을 업로드합니다.
+                sftp.upload("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // 애플리케이션 루트에 있는 파일을 업로드합니다.
+                sftp.upload("document.pdf", _app.file("document.pdf"))
+            `
+        },
+    ]}
+/>
+
+서버에서 애플리케이션으로 파일을 다운로드하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 파일을 storage/filesystem으로 다운로드합니다.
+                sftp.download("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // 파일을 애플리케이션 루트로 다운로드합니다.
+                sftp.download("document.pdf", _app.file("document.pdf"))
+            `
+        },
+    ]}
+/>
+
+SFTP 세션은 항상 닫아야 합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.close()
+            `
+        },
+    ]}
+/>

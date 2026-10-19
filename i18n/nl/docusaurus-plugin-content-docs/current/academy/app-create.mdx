@@ -1,0 +1,657 @@
+---
+sidebar_position: 3
+id: app-create
+title: Applicatie aanmaken
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Deze gids biedt een overzicht van de initiële configuratie, met aandacht voor de frontend, de database en de API-service.
+We maken snel en praktisch een nieuwe fullstackapplicatie.
+
+## Inleiding
+
+Hoewel het platform polyglot is en meerdere programmeertalen ondersteunt, richten we ons in deze tutorial uitsluitend op het gebruik van JavaScript. Daarom maken we een praktische applicatie die bestaat uit een formulier dat wordt weergegeven in een modaal venster (pop-up) met de functionaliteit om gegevens naar PDF te exporteren.
+
+#### Vereisten
+
+Voordat u begint, zorg ervoor dat u beschikt over:
+
+- Het Netuno-platform is vooraf op uw machine geïnstalleerd. Raadpleeg bij twijfel de gids [Installatie van het platform](/docs/get-started/installation).
+
+- Toegang tot de terminal of opdrachtprompt van de ontwikkelomgeving.
+
+## Een nieuwe applicatie aanmaken
+
+Volg de onderstaande instructies om uw nieuwe applicatie te initialiseren:
+
+Open de terminal en navigeer naar de hoofdmap waarin Netuno is geïnstalleerd.
+
+Voer de opdracht voor het aanmaken van de applicatie uit:
+
+```shell
+./netuno app
+```
+
+### Aanmaken met parameter
+
+U kunt de naam van de applicatie rechtstreeks bij de uitvoering van de opdracht opgeven, bijvoorbeeld:
+
+```shell
+./netuno app name=mijn_applicatie
+```
+
+:::info Goede naamgevingspraktijken
+Vermijd bij het definiëren van de naam van uw applicatie spaties, accenten of speciale tekens. Gebruik bij voorkeur kleine letters gescheiden door koppeltekens of underscores (voorbeeld: **app-verkoop** of **hr_beheer**) om compatibiliteit met URL's en systeemmappen te behouden.
+:::
+
+## Initiële configuratie
+
+De opdrachtregelwizard stelt enkele vragen om uw project te configureren. Geef het volgende op:
+
+- **Naam van de applicatie**: De identificatie van uw project.
+- **Databasetype**: Het databasebeheersysteem dat wordt gebruikt.
+- **Taal**: De standaardtaal van de interface van uw applicatie.
+
+:::tip Tips en goede praktijken
+
+**Databaseaanbeveling voor beginners**
+
+Tijdens de stappen, wanneer naar het databasetype wordt gevraagd, raden we aan de optie **H2 Database** te kiezen.
+
+H2 Database is een ingebouwde database die al is geïntegreerd in de Netuno-server. Het grote voordeel is dat er geen installatie of configuratie van externe servers (zoals PostgreSQL of MySQL) nodig is, waardoor de eerste ontwikkelingen en tests veel praktischer en sneller verlopen.
+:::
+
+### Opdracht om de server te starten
+
+Nadat u uw nieuwe applicatie hebt aangemaakt, start u de server van het Netuno-platform. Hierdoor wordt uw project toegankelijk in de browser en klaar voor continue ontwikkeling.
+
+Voer de onderstaande opdracht uit in uw terminal en wacht op de initialisatie.
+
+```shell
+./netuno server app=mijn_applicatie
+```
+
+Wanneer u de parameter **app=mijn_applicatie** doorgeeft, begrijpt de server dat dit de standaardapplicatie is die op deze instantie wordt uitgevoerd. Nu de server draait, kunt u uw project gaan bewerken.
+
+Alle bestanden en broncodes van uw applicatie worden opgeslagen en georganiseerd in de map `📂 apps/mijnapp`.
+
+:::info Toegangsgegevens (Backoffice)
+Wanneer u voor het eerst de beheerinterface **Backoffice** van uw applicatie opent, vraagt het systeem om authenticatie. Gebruik voor lokale ontwikkelomgevingen de volgende standaardgegevens:
+
+**Gebruiker:** dev
+
+**Wachtwoord:** dev
+
+*We raden aan deze inloggegevens te wijzigen wanneer u uw applicatie naar een productieomgeving verplaatst.*
+:::
+
+### Code-editor
+
+Voor de beste ontwikkelervaring raden we moderne, lichte code-editors aan met een goed ecosysteem voor extensies.
+
+Als u nog geen favoriete editor hebt, raden we de volgende gratis en veelgebruikte opties aan:
+
+- VS Codium: <a href="https://vscodium.com/" target="_blank">vscodium.com</a>
+- VS Code: <a href="https://vscodium.com/" target="_blank">code.visualstudio.com</a>
+- WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">jetbrains.com/webstorm</a>
+
+> Opmerking: Als u de voorkeur geeft aan robuustere tools en het niet erg vindt om in licenties te investeren, is WebStorm van JetBrains een uitstekende premiumoptie.
+
+Open de map van de applicatie in uw editor:
+
+- `📂 apps/mijn_applicatie`
+
+Alle bestanden van de applicatie worden opgeslagen en georganiseerd in deze map. Alle ontwikkeling, het aanmaken van routes, databaselogica en visuele interfaces gebeurt in deze map.
+
+:::info Begrijp de architectuur
+Om precies te weten waar u elk type bestand moet aanmaken en hoe Netuno de backend en frontend organiseert, raden we aan de gedetailleerde documentatie over de mapstructuur van de applicatie te lezen:
+
+**Raadpleeg de gids: [Applicatiemappen](/docs/category/app-structure)**
+:::
+
+### Samenvatting van de stappen
+
+Nu de eerste kennis van Netuno is geconsolideerd, passen we deze concepten in de praktijk toe door van begin tot eind een complete functionaliteit te maken.
+
+Het praktische doel is om twee nieuwe interactieve componenten aan de interface toe te voegen:
+
+* Een knop die verantwoordelijk is voor het laden en weergeven van het klantenformulier in een zwevend venster (modal).
+* Een knop die speciaal is bedoeld om de lijst met geregistreerde klanten te genereren en naar een PDF-bestand te exporteren.
+
+Om dit resultaat overzichtelijk en duidelijk te bereiken, hebben we de ontwikkeling opgedeeld in een logische reeks stappen. We volgen dit stappenplan:
+
+- **Interfacemapping**: De mapstructuur van de applicatie analyseren om te vinden waar de hoofd-HTML van het dashboard is gedefinieerd.
+
+- **Integratie met React**: De basis van de twee nieuwe knoppen configureren en toevoegen met behulp van het React-framework in de frontend.
+
+- **Modal-logica**: Het gedrag van de knop bouwen en programmeren om het klantenformulier correct te openen.
+
+- **Exportinterface**: De knop bouwen en positioneren die het downloaden van het PDF-bestand in de interface activeert.
+
+- **Ontwikkeling van de service (API)**: De backend programmeren door de service te maken die de gegevens leest en dynamisch het PDF-bestand met de klantenlijst genereert.
+
+Laten we beginnen!
+
+## Dashboardtemplate
+
+Navigeer naar de map `server/templates` en open het bestand dat verantwoordelijk is voor de HTML van het dashboardschema.
+
+```plaintext
+server/templates/dashboard.html
+```
+
+Wanneer u de code van het bestand dashboard.html verkent, scrolt u naar het einde van de pagina. U vindt een geïsoleerd `<div>`-element. Op precies dit punt "injecteert" het Netuno-platform de volledige interactieve interface die in React is gebouwd en start deze.
+
+```html title="server/templates/dashboard.html"
+...
+<div id="app-dashboard"></div>
+```
+
+Hoewel het HTML-skelet in de map server/templates staat, vinden de daadwerkelijke ontwikkeling van de interface en de visuele logica daar niet plaats.
+
+Om het gedrag van het dashboard te wijzigen of nieuwe componenten met React toe te voegen, moet u naar de map gaan die aan frontendontwikkeling is gewijd.
+
+In deze map `📂 ui/` vindt u de dashboardcomponenten en kunt u de nieuwe visuele functionaliteiten van uw applicatie ontwikkelen.
+
+## Formulier aanmaken
+
+In deze stap maken we de databasestructuur die voor deze tutorial nodig is: een formulier met de naam **Klant** met een tekstveld met de naam **Naam**.
+
+* Ga in de Backoffice naar het ontwikkelgebied door op de knop **Bouwen** te klikken (rechterbovenhoek).
+* Navigeer in het zijmenu naar **Beheer > Formulieren** en maak het nieuwe formulier met **Titel:** Klant.
+* Klik op **Opslaan**.
+
+De naam van de tabel wordt automatisch ingevuld met **klant** (houd deze in kleine letters, zoals aanbevolen voor databases).
+
+:::info Raadpleeg de gids
+Raadpleeg de volledige documentatie in **[Formulieren](/docs/academy/ui/forms)** als u vragen hebt over de geavanceerde instellingen van dit scherm.
+:::
+
+## Veld aanmaken
+Zodra het formulier is aangemaakt, verschijnt het in het linkerzijmenu onder de categorie **Velden**.
+
+* Klik op **Klant** om een nieuwe kolom toe te voegen:
+* Voer de tekst **"Naam"** in bij de titel van het veld.
+* Selecteer het gegevenstype **"text"** in het veld **Type**.
+* Vink de opties **Filteren toestaan** (om zoeken mogelijk te maken) en **Weergeven in resultaat** (om in de tabel te verschijnen) aan.
+* Klik op **Opslaan**.
+
+:::info Raadpleeg de gids
+Raadpleeg de gedetailleerde documentatie in **[Velden](/docs/academy/ui/fields)** om alle beschikbare gegevenstypen en hun eigenschappen te begrijpen.
+:::
+
+#### Testgegevens invoegen
+Om de PDF-export in de volgende stappen te kunnen testen, hebben we echte gegevens in het systeem nodig.
+
+* Klik op de knop **Weergeven** (rechterbovenhoek) om terug te keren naar de Backoffice voor gebruik van de applicatie.
+* Open het zojuist aangemaakte menu **Klant** in de zijbalk.
+* Gebruik de knop **+ Toevoegen** om enkele testklanten in het systeem te registreren.
+* Klik op **Opslaan**.
+
+## Database raadplegen
+
+Netuno biedt een geïntegreerde tool waarmee u SQL-opdrachten rechtstreeks in de database van uw applicatie kunt uitvoeren. Dit is essentieel voor snelle query's, het valideren van informatie of het snel manipuleren van systeemgegevens.
+
+Volg de onderstaande stappen om de query-interface te openen en uw opdrachten uit te voeren:
+
+* Ga in de hoofdinterface naar het ontwikkelgebied door op de knop **Bouwen** te klikken.
+* Zoek in het navigatiemenu aan de zijkant de sectie **Beheer**.
+* Klik op de optie **Query** om de databaseconsole te openen.
+* Typ in de teksteditor die op het scherm verschijnt de SQL-opdracht die u wilt uitvoeren.
+* Bevestig de uitvoering van de opdracht.
+
+Voer de onderstaande opdracht uit om de geregistreerde klanten op te vragen:
+
+```sql
+SELECT * FROM klant
+```
+
+Wanneer u klaar bent met de query's en wilt terugkeren naar de gebruikersinterface van het systeem (backoffice), klikt u gewoon op de knop **Weergeven**.
+
+## Knoppen toevoegen met React
+
+In deze stap configureren we het hoofdbestand van het **dashboard** om twee nieuwe knoppen weer te geven.
+
+In de interfacearchitectuur gebruiken we het concept **Containers** om brede gebieden van het systeem te definiëren, die grotere functionaliteiten omvatten en meerdere kleinere componenten groeperen.
+
+- Navigeer in uw code-editor naar de map met containers in `📂 ui/src/containers`.
+
+- Zoek en open het hoofdbestand van het dashboard: `📂 DashboardContainer/index.jsx`.
+
+- Voeg de code voor het importeren en renderen van de componenten toe zoals in het onderstaande voorbeeld.
+
+```javascript title="ui/src/containers/DashboardContainer/index.jsx"
+import { Space } from 'antd';
+
+import KlantModalKnop from '../../components/KlantModalKnop';
+import PDFKnop from '../../components/PDFKnop';
+
+import "./index.less";
+
+function DashboardContainer() {
+    return (
+        <div className="mijn-dashboard">
+            <Space>
+                <KlantModalKnop />
+                <PDFKnop />
+            </Space>
+        </div>
+    );
+}
+
+export default DashboardContainer;
+```
+
+Merk op dat deze knopbestanden nog niet fysiek in uw project bestaan. Omdat het kleinere en herbruikbare componenten zijn, maken we ze in de map voor speciale componenten.
+
+:::tip Architectuurorganisatie
+Houd altijd de scheiding aan tussen **Containers** (gebieden met een breed bereik, zoals volledige pagina's of dashboards) en **Components** (geïsoleerde interface-elementen, zoals knoppen en modals). Dit maakt uw code in Netuno veel schoner, eenvoudiger te onderhouden en schaalbaarder.
+:::
+
+### Knop voor formulier
+
+Ga naar de map `ui/src/components/` en maak een nieuwe map met de naam `KlantModalKnop`.
+
+Maak in de map **KlantModalKnop** het hoofdbestand van de component met de naam `index.jsx`.
+
+`📂 ui/src/components/KlantModalKnop/index.jsx`
+
+Open het bestand en voeg de onderstaande code toe:
+
+```javascript title="ui/src/components/KlantModalKnop/index.jsx"
+import { Button } from 'antd';
+
+function KlantModalKnop() {
+    const bijKlik = () => {
+        netuno.modal.create({
+            name: 'klant',
+            callback: function (modaal) {
+                let formulier = modaal.find('[netuno-form]');
+
+                formulier.on('netuno:new', () => {
+                    console.log('Een nieuwe klant aanmaken.');
+                });
+
+                formulier.on('netuno:save', () => {
+                    netuno.modal.hide(modaal)
+                    console.log('Een klant opgeslagen.');
+                });
+
+                formulier.on('netuno:delete', () => {
+                    netuno.modal.hide(modaal)
+                    console.log('Een klant verwijderd');
+                });
+
+                formulier.on('netuno:back', () => {
+                    console.log('Terug geklikt');
+                });
+
+                netuno.loadForm(formulier);
+                netuno.modal.show(modaal);
+            }
+        });
+    };
+    return (
+        <div>
+            <Button type="primary" onClick={ bijKlik }>
+                Klantformulier openen
+            </Button>
+        </div>
+    );
+}
+
+export default KlantModalKnop;
+```
+
+#### De code begrijpen
+De magie van deze component gebeurt binnen de functie bijKlik, die de globale interfacehulpmiddelen van Netuno gebruikt:
+
+- **netuno.modal.create()**: Deze methode maakt het modale venster op het scherm aan en koppelt het gewenste formulier eraan (in dit geval het formulier met de naam klant).
+
+- **Formulierevenementen (formulier.on)**: Het callbackblok stelt ons in staat om naar de acties van de gebruiker te "luisteren". We kunnen aangepaste acties activeren wanneer de gebruiker een record aanmaakt (netuno:new), opslaat (netuno:save), verwijdert (netuno:delete) of op terug klikt (netuno:back).
+
+- **netuno.modal.hide() / show()**: Methoden om de modal na een succesvolle actie te verbergen of weer te geven zodra het formulier is geladen.
+
+:::info Integratie voltooid
+Nu de component **KlantModalKnop** met succes is aangemaakt, werkt de import die we eerder in uw **DashboardContainer** hebben gedaan zonder fouten, en de knop zou al op uw scherm moeten worden weergegeven!
+:::
+
+### Knop voor PDF-export
+
+In deze stap maken we de tweede knop van het dashboard: de knop voor PDF-export.
+
+De belangrijkste functie van deze component in de interface is fungeren als trigger: wanneer erop wordt geklikt, doet hij een verzoek aan een backend-service, die verantwoordelijk is voor het verwerken van de systeemgegevens en het genereren van het PDF-bestand met de lijst met geregistreerde klanten.
+
+- Ga naar de map `ui/src/components/` en maak een nieuwe map met de naam **PDFKnop**.
+
+- Maak een bestand met de naam **index.jsx** in de map.
+
+`ui/src/components/PDFKnop/index.jsx`
+
+Open het bestand en voeg de onderstaande code toe:
+
+```javascript title="ui/src/components/PDFKnop/index.jsx"
+import { Button } from 'antd';
+
+function PDFKnop() {
+    return (
+        <div>
+            <Button
+                type="primary"
+                href="/services/klant/exporteer-pdf"
+                target="blank">
+                PDF exporteren
+            </Button>
+        </div>
+    );
+}
+
+export default PDFKnop;
+```
+
+Met het aanmaken van de component PDFKnop zijn beide knoppen die in uw DashboardContainer zijn gedeclareerd klaar.
+
+:::tip Volgende stappen
+De visuele structuur en de componenten zijn voltooid. Compileer de frontend om de weergave van de interface te testen.
+
+Het bouwen van de backend-service die daadwerkelijk de PDF genereert, komt in de volgende stap aan bod.
+:::
+
+## Frontend compileren
+
+Webbrowsers begrijpen code die in React is geschreven, `.jsx`- of `.tsx`-bestanden en CSS-preprocessors zoals `.less` niet native. Om uw interface correct te laten werken, is een compilatieproces (build) nodig. Dit proces vertaalt, bundelt en optimaliseert al uw code naar uiteindelijke statische bestanden (standaard JavaScript en CSS) die de browser met maximale efficiëntie kan verwerken.
+
+#### Vereisten
+
+Voordat u met de compilatie begint, zorg ervoor dat:
+
+- U de terminal of opdrachtprompt hebt geopend in uw ontwikkelomgeving.
+
+- De pakketbeheerder `Bun` correct op uw systeem is geïnstalleerd.
+
+## Compilatievoorbeelden
+
+Netuno biedt verschillende opdrachten, afhankelijk van de fase van uw ontwikkeling. Navigeer vanaf de hoofdmap van Netuno naar de map `ui` van uw applicatie.
+
+Voer de opdrachten uit in de map van de interface van uw applicatie: `📂 apps/mijnapp/ui`
+
+### Productiecompilatie
+
+Voert de volledige en geoptimaliseerde compilatie van de bestanden uit. Dit is de ideale opdracht wanneer u de ontwikkeling van een scherm of component hebt afgerond en de uiteindelijke lichte bestanden met betere prestaties wilt genereren.
+
+```bash
+bun run build
+```
+
+### Ontwikkelcompilatie
+
+De opdracht **watch** voert een snelle compilatie uit en blijft de map in de gaten houden. Telkens wanneer u een bestand in uw editor opslaat, voert de terminal automatisch de compilatie uit.
+
+```bash
+bun run watch
+```
+Ongeacht de gebruikte opdracht **build** of **watch**, verschijnen de wijzigingen niet onmiddellijk op het scherm van de gebruiker. Vernieuw de backofficepagina in uw browser om de nieuw gegenereerde bestanden te laden.
+
+:::tip Foutmonitoring en debugging
+Tijdens de ontwikkeling kunnen fouten in twee verschillende fasen optreden. Weet waar u moet zoeken:
+
+- **Compilatiefouten**: Syntaxfouten in de React-code of niet-gedeclareerde variabelen worden rechtstreeks in uw terminal weergegeven, waar de opdracht **bun** wordt uitgevoerd.
+
+- **Uitvoeringsfouten**: Fouten die optreden tijdens het gebruik van de applicatie worden weergegeven in de console van de browser. Vergeet niet altijd de pagina te inspecteren om te controleren of er een waarschuwing of fout is.
+:::
+
+### Geïntegreerde compilatie
+
+Met de functie voor geïntegreerde compilatie kunt u terminalopdrachten automatisch uitvoeren samen met het starten van de server. Dit optimaliseert de workflow door alle logs en monitoring in één centrale terminal samen te brengen.
+
+Om geïntegreerde compilatie in te schakelen, moet u de ontwikkelinstellingen van uw applicatie wijzigen:
+
+- Ga naar de hoofdmap van uw applicatie.
+
+- Open het configuratiebestand voor ontwikkeling: `_development.json`.
+
+- Zoek het codeblok met betrekking tot "**commands**".
+
+- Wijzig de waarde van de eigenschap "enabled" van **false** in **true**.
+
+- Sla het bestand op.
+
+Uw bestand `_development.json` moet een structuur hebben die lijkt op deze:
+
+```json title="config/_development.json"
+  ...
+  "commands": [{
+    "command": "bun run watch",
+    "enabled": true,
+    "install": "bun install",
+    "path": "ui"
+  }],
+  ...
+```
+
+Om Netuno het bijgewerkte bestand te laten lezen en de nieuwe configuratie toe te passen, moet u de server opnieuw starten:
+
+- Ga naar de terminal waar de Netuno-server wordt uitgevoerd.
+
+- Beëindig het proces door tegelijk op CTRL + C te drukken.
+
+- Start de server opnieuw en geef de naam van uw applicatie op:
+
+```shell
+./netuno server app=mijnapp
+```
+
+:::tip Eén terminal
+Na het herstarten van de server ziet u de logs in de terminal. U zult merken dat Netuno nu automatisch de frontend-compilatieopdrachten **bun run watch** op de achtergrond uitvoert. Vanaf nu werkt alles geïntegreerd in hetzelfde venster.
+:::
+
+## API-service om PDF te genereren
+
+In de vorige stap hebben we de knop **PDF exporteren** in de frontend geconfigureerd met het attribuut "**href**" dat verwijst naar het adres `services/klant/exporteer-pdf`. Als u er nu op klikt, gebeurt er echter niets. Dat komt omdat de API-service die verantwoordelijk is voor het genereren van het bestand nog niet bestaat.
+
+De volledige ontwikkeling van de API vindt plaats in de map `📂 server`. 
+In dit gedeelte maken we het script dat de records uit de database ophaalt en het PDF-document visueel opbouwt.
+
+#### Vereisten
+
+- De component PDFKnop in de frontend hebben aangemaakt die naar de juiste URL verwijst.
+- De Netuno-server actief hebben.
+
+Netuno routeert automatisch de URL's van uw API op basis van de mapstructuur in **server/services/**. Volg de stappen om de service aan te maken:
+
+- Navigeer naar de servicemap van de backend: `server/services/`. Maak een map met de naam **klant**.
+
+- Maak in die map een bestand met de naam `exporteer-pdf.js`.
+
+> Netuno is polyglot. We gebruiken JavaScript in dit voorbeeld; gebruik de extensie die overeenkomt met de taal van uw voorkeur.
+
+Open het bestand en voeg de onderstaande code toe om de structuur van uw PDF te genereren:
+
+<PolyglotPath files={[
+    'server/services/klant/exporteer-pdf'
+]} />
+
+<PolyglotCode
+    file="server/services/klant/exporteer-pdf"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("pdf")
+
+                const pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Klantenlijst:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                const dbKlanten = _db.form("klant").all()
+
+                for (const dbKlant of dbKlanten) {
+                    pdfDocument.add(
+                        _pdf.paragraph(dbKlant.getString("naam"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Klantenlijst:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                dbKlanten = _db.form("klant").all()
+
+                for dbKlant in dbKlanten:
+                    pdfDocument.add(
+                        _pdf.paragraph(dbKlant.getString("naam"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Klantenlijst:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                dbKlanten = _db.form("klant").all()
+
+                dbKlanten.each do |dbKlant|
+                    pdfDocument.add(
+                        _pdf.paragraph(dbKlant.getString("naam"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                end
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _header.contentType("pdf")
+
+                val pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Klantenlijst:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                val dbKlanten = _db.form("klant").all()
+
+                dbKlanten.forEach {
+                    pdfDocument.add(
+                        _pdf.paragraph(it.getString("naam"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _header.contentType("pdf")
+
+                def pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Klantenlijst:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                def dbKlanten = _db.form("klant").all()
+
+                for (dbKlant in dbKlanten) {
+                    pdfDocument.add(
+                        _pdf.paragraph(dbKlant.getString("naam"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                pdfDocument.close()
+            `
+        },
+    ]}
+/>
+
+
+#### De code begrijpen
+
+- **_header.contentType("pdf")**: Informeert de browser dat de respons van dit verzoek geen gewone tekst of JSON is, maar een PDF-bestand.
+
+- **_pdf**: Is de native Netuno-faciliteit voor het manipuleren van PDF's. Hiermee definiëren we de paginagrootte (A5), maken we alinea's en passen we lettergroottes (setFontSize) en kleuren (setFontColor) aan.
+
+- **_db.form("klant").all()**: Raadpleegt de database en retourneert alle opgeslagen records in het formulier "klant". De herhalingslus (for) doorloopt elk van deze klanten en haalt de informatie uit het veld "naam" om in het document af te drukken.
+
+- **pdfDocument.close()**: Voltooit de opbouw van het document en verzendt het als respons.
+
+#### Validatie en tests
+
+U hoeft niet elke keer op de dashboardknop te klikken om uw service te testen. Omdat het een eenvoudig verzoek (GET) betreft, kunt u de uitvoering valideren door de API-URL rechtstreeks in de browser te openen.
+
+Open voor dit voorbeeld het volgende adres:
+http://localhost:9000/services/klant/exporteer-pdf
+
+Als het PDF-bestand wordt gegenereerd en op het scherm wordt weergegeven met de klantenlijst, werkt de service perfect! Daardoor zal de knop PDF exporteren in uw dashboard automatisch werken.
+
+:::tip Foutopsporing in de backend
+Als de pagina blanco blijft of een foutmelding retourneert bij het openen van de URL, controleer dan onmiddellijk de terminal waar de Netuno-server draait. Anders dan bij de frontend, waarvan fouten in de browserconsole verschijnen, wordt elke uitvoeringsfout in de scripts van de map server gedetailleerd weergegeven in de terminal van de backend-server.
+:::
+
+## Conclusie
+
+In deze tutorial hebt u een praktische fullstackontwikkelingsreis met Netuno doorlopen.
+
+Het hoofddoel was demonstreren hoe het platform de bouw van visuele interfaces integreert met de robuustheid van de server, altijd met de focus op hoge productiviteit.
+
+Terugblikkend op de voltooide stappen:
+
+- **Frontendontwikkeling**: u hebt het dashboard in React aangepast, interfacecomponenten en interactieve knoppen op een modulaire manier gemaakt.
+
+- **Gegevensbeheer en -structuur**: u hebt gezien hoe snel u formulieren en velden in het paneel kunt aanmaken om informatie te registreren en te manipuleren zonder complexe persistentieroutines te schrijven.
+
+- **Directe query's**: u hebt de Query-functie gebruikt om SQL-opdrachten snel uit te voeren en de database te testen.
+
+- **API's maken in de backend**: u hebt een service voor PDF-generatie ontwikkeld en een van de grote voordelen van Netuno gezien: hot-reload. U hoeft de server niet opnieuw te starten bij elke wijziging in de backendcode, wat het programmeren enorm versnelt.
+
+- **Geoptimaliseerde omgeving**: u hebt geïntegreerde compilatie geconfigureerd, waardoor de frontend- en backendprocessen in één terminal zijn gecentraliseerd om de focus te behouden en afleiding te voorkomen.
+
+Het platform is vanaf de basis ontworpen om softwareontwikkeling te optimaliseren en versnellen. Nu u de basisflow van integratie tussen low-code en aangepaste code begrijpt, bent u klaar om veel complexere en schaalbare applicaties te bouwen.
+
+Blijf de volgende secties van de documentatie verkennen om nieuwe functies onder de knie te krijgen.
+
+Ontwikkelen wordt veel gemakkelijker wanneer u deel uitmaakt van een actieve community. Bezoek de links naar sociale netwerken in de voettekst van deze pagina.

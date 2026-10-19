@@ -1,0 +1,580 @@
+---
+id: files-manipulation
+title: 文件和文件夹操作
+sidebar_label: 文件和文件夹操作
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+## 介绍
+
+在 Netuno 平台的多语言后端代码中，我们可以操作任何文件或文件夹。
+
+操作包括创建、重命名和删除文件和文件夹，更改文件内容，以及列出文件夹内容。通常这些就是我们需要以编程方式完成的操作。
+
+在 Netuno 平台中，有低代码编程资源，可以操作应用内部的文件夹和文件，也可以操作系统中任意位置的文件和文件夹，即应用外部的位置。
+
+当我们需要自动化某个需要处理任意文件的流程时，这很有用，下面来看看如何操作。
+
+可用于操作文件的多语言低代码编程资源包括：
+
+- `_app` - [应用](/docs/library/resources/app)
+- `_storage` - [Storage](/docs/library/resources/storage)
+- `_os` - [操作系统](/docs/library/resources/os)
+
+通过这些资源，我们拥有以下方法：
+
+- `.file` - 已存在的文件。
+- `.folder` - 已存在的文件夹。
+- `.path` - 通用路径，可以是文件或文件夹，无论是否存在。
+
+通过这些方法，我们获得一个 [File](/docs/library/objects/File) 类型的对象，它提供了处理文件、文件夹和一般路径所需的所有方式，从而可以执行如下操作：
+
+- 创建文件和文件夹。
+- 删除文件和文件夹。
+- 列出文件夹内容。
+- 重命名文件和文件夹。
+- 读写文件中的数据。
+- 递归删除文件夹及其子文件夹和文件。
+
+## 应用
+
+要在应用结构内执行文件和文件夹的主要操作，我们使用 `_app` 资源：
+
+#### 应用中的文件夹
+
+确保获取一个已存在的文件夹，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 我的文件夹 = _app.folder("我的/文件夹")
+            `
+        },
+    ]}
+/>
+
+#### 应用中的文件
+
+确保获取一个已存在的文件，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 我的文件 = _app.file("我的/文件夹/文件.txt")
+            `
+        },
+    ]}
+/>
+
+#### 应用中的路径
+
+获取文件或文件夹路径，无论其是否存在，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 新文件 = _app.path("我的/文件夹/新文件.txt")
+            `
+        },
+    ]}
+/>
+
+## Storage
+
+要在应用的 `📁 storage` 文件夹内执行文件和文件夹的主要操作，我们使用 `_storage` 资源：
+
+#### Storage 中的文件夹
+
+确保获取一个已存在的文件夹，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 文件夹的实际路径将是：
+                // storage/filesystem/server/我的/文件夹
+                const storage我的文件夹 = _storage.filesystem("server", "我的/文件夹")
+                const 我的文件夹 = storage我的文件夹.folder()
+            `
+        },
+    ]}
+/>
+
+#### Storage 中的文件
+
+确保获取一个已存在的文件，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 文件的实际路径将是：
+                // storage/filesystem/server/我的/文件夹/文件.txt
+                const storage文件 = _storage.filesystem("server", "我的/文件夹", "文件.txt")
+                const 文件 = storage文件.file()
+            `
+        },
+    ]}
+/>
+
+#### Storage 中的路径
+
+获取文件或文件夹路径，无论其是否存在，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 新文件夹的实际路径将是：
+                // storage/filesystem/server/我的/新文件夹
+                const storage文件夹 = _storage.filesystem("server", "我的/新文件夹")
+                const 文件夹 = storage文件夹.path()
+
+                // 新文件的实际路径将是：
+                // storage/filesystem/server/我的/文件夹/新文件.txt
+                const storage文件 = _storage.filesystem("server", "我的/文件夹", "新文件.txt")
+                const 文件 = storage文件.path()
+            `
+        },
+    ]}
+/>
+
+## 操作系统
+
+要在操作系统中的任意位置执行文件和文件夹的主要操作，我们使用 `_os` 资源：
+
+#### 操作系统中的文件夹
+
+确保获取一个已存在的文件夹，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 我的文件夹 = _os.folder("/tmp/我的/文件夹")
+            `
+        },
+    ]}
+/>
+
+#### 操作系统中的文件
+
+确保获取一个已存在的文件，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 我的文件 = _os.file("/tmp/我的/文件夹/文件.txt")
+            `
+        },
+    ]}
+/>
+
+#### 操作系统中的路径
+
+获取文件或文件夹路径，无论其是否存在，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 新文件 = _os.path("/tmp/我的/文件夹/新文件.txt")
+            `
+        },
+    ]}
+/>
+
+## 创建文件夹
+
+`mkdir` 方法用于创建文件夹。
+
+在以下示例中，在应用根目录中创建指定文件夹：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文件夹 = _app.path("临时")
+                文件夹.mkdir()
+            `
+        },
+    ]}
+/>
+
+要在现有文件夹内创建子文件夹，请指定完整路径，并用 `/` 分隔文件夹层级：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 子文件夹 = _app.path("临时/另一个")
+                子文件夹.mkdir()
+            `
+        },
+    ]}
+/>
+
+而 `mkdirs` 会在上级文件夹和/或子文件夹不存在时创建它们，因此可以在应用中创建文件夹结构，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文件夹路径 = _app.path("临时/a/b/c")
+                文件夹路径.mkdirs()
+            `
+        },
+    ]}
+/>
+
+`_storage` 资源有 [ensurePath](/docs/library/resources/storage#ensurepath) 方法，它会检查路径是否存在，如果不存在则创建：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文件 = _storage.filesystem(
+                    "public",
+                    "临时/子文件夹",
+                    "文件.txt"
+                )
+                // 如果文件夹结构不存在则创建：
+                文件.ensurePath()
+            `
+        },
+    ]}
+/>
+
+因此，`ensurePath` 确保文件夹结构存在。
+
+## 删除文件和文件夹
+
+使用 `delete` 方法既可以删除文件夹也可以删除文件，但文件夹必须为空，请看示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 删除一个空文件夹：
+                const 空文件夹 = _app.folder("文件夹/空")
+                空文件夹.delete()
+
+                // 删除一个文件：
+                const 文件 = _app.file("文件夹/文件.txt")
+                文件.delete()
+
+                // 删除一个路径、空文件夹或文件：
+                const 路径 = _app.path("文件夹1/文件-或-空文件夹")
+                路径.delete()
+            `
+        },
+    ]}
+/>
+
+使用 `deleteAll` 可以删除所有内容，即递归删除所有文件、文件夹和子文件夹：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 递归删除文件夹及其所有内容：
+                const 空文件夹 = _app.folder("文件夹/示例")
+                空文件夹.deleteAll()
+
+                // 删除文件夹路径及其所有内部内容，
+                // 包括子文件夹和文件：
+                const 路径 = _app.path("路径/文件夹")
+                路径.deleteAll()
+            `
+        },
+    ]}
+/>
+
+如果只想删除文件夹内的文件而不删除子文件夹中的任何内容，可以使用 `deleteFiles`；如果只想删除具有特定扩展名的文件，它允许接收一个扩展名：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 仅删除文件夹内的文件：
+                const 文件夹 = _app.folder("文件夹/示例")
+                文件夹.deleteFiles()
+
+                // 仅删除文件夹内扩展名为 JPG 的文件：
+                const 路径 = _app.path("路径/文件夹")
+                路径.deleteFiles("jpg")
+`
+        },
+    ]}
+/>
+
+如果只想递归删除文件并保留文件夹结构，可以使用 `deleteAllFiles`；如果只想删除特定类型的文件，它也允许接收一个扩展名。请看这两个示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 删除文件夹及子文件夹内的所有文件：
+                const 文件夹 = _app.folder("文件夹/示例")
+                文件夹.deleteAllFiles()
+
+                // 删除文件夹及子文件夹内所有扩展名为 JPG 的文件：
+                const 路径 = _app.path("路径/文件夹")
+                路径.deleteAllFiles("jpg")
+            `
+        },
+    ]}
+/>
+
+## 重命名或移动
+
+移动文件夹与重命名文件夹相同：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文件夹 = _app.folder("临时")
+                文件夹.renameTo("测试")
+            `
+        },
+    ]}
+/>
+
+要重命名文件夹并更改其在文件夹层级中的级别，就等同于移动该文件夹：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文件夹 = _app.folder("临时/a/b")
+                文件夹.renameTo("测试/z")
+            `
+        },
+    ]}
+/>
+
+而要移动子文件夹但不更改其名称，只需在 `renameTo` 方法中指定新路径：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文件夹 = _app.folder("测试/另一个")
+                文件夹.renameTo("新另一个")
+            `
+        },
+    ]}
+/>
+
+## 将内容保存到文件
+
+将内容生成到文件是通过 `output` 方法完成的，它提供一个 [OutputStream](/docs/library/objects/OutputStream) 类型的对象。
+
+要将数据写入 `output`，我们使用 [printAndClose](/docs/library/objects/OutputStream#printandclose) 方法，它会将内容打印到文件并关闭文件以保存内容。
+
+#### 写入文本文件
+
+请看创建包含文本内容的文件的示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _app.path("临时").mkdir()
+                const 写入 = _app.path("临时/文件.txt").output()
+                写入.printAndClose("我的文本在这里...")
+            `
+        },
+    ]}
+/>
+
+> 每次使用 `output` 都会生成一个新文件，因此如果再次执行代码，文件将被重新创建。
+
+#### 写入 JSON 文件
+
+看看如何将 JSON 数据保存到文件：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _app.path("临时").mkdir()
+                const 写入 = _app.path("临时/客户.json").output()
+                写入.printAndClose(
+                    _val.map()
+                        .set("姓名", "张小明")
+                        .set(
+                            "记录",
+                            _val.list()
+                                .add(1).add(2).add(3)
+                        )
+                        .toJSON()
+                )
+            `
+        },
+    ]}
+/>
+
+要生成缩进的 JSON，即格式化为多行并带有制表符，可以传入用于缩进的空格数，例如 `.toJSON(4)`。
+
+> 有关 [Values 中的 toJSON](/docs/library/objects/Values#tojsonindentfactor-int--string) 方法的更多详情。
+
+## 从文件读取内容
+
+从文件获取内容是通过 `input` 方法完成的，它提供一个 [InputStream](/docs/library/objects/InputStream) 类型的对象。
+
+要读取 `input` 中的数据，我们使用 [readAllAndClose](/docs/library/objects/InputStream#readallandclose) 方法，它会处理文件内容的读取并关闭文件。
+
+#### 读取文本文件
+
+请看读取文件并获取文本内容的示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文件 = _app.file("临时/文件.txt")
+                const 读取 = 文件.input()
+                _log.info(读取.readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### 读取 JSON 文件
+
+看看如何处理从文件中获取的 JSON 数据：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文件 = _app.file("临时/文件.txt")
+                const 读取 = 文件.input()
+                const 数据 = _val.fromJSON(读取.readAllAndClose())
+                _log.info("文件数据：", 数据)
+            `
+        },
+    ]}
+/>
+
+> 有关 [Val 资源的 fromJSON](/docs/library/resources/val#fromjson) 方法的更多详情。
+
+## Storage 的特殊之处
+
+Storage 资源有一些可直接使用的方法。
+
+例如，我们可以通过 Storage 访问：
+
+- [Storage Output](/docs/library/resources/storage#output)
+- [Storage Input](/docs/library/resources/storage#input)
+
+这意味着我们不需要获取 `file` 或 `path` 就可以使用 `input` 或 `output`。
+
+#### 在 Storage 中写入文本文件
+
+为文件初始化 Storage 时，我们可以使用 [output](/docs/library/resources/storage#output) 方法进行写入，它会获取一个 [OutputStream](/docs/library/objects/OutputStream) 对象实例，以便处理并读取数据。
+
+然后，使用 `OutputStream` 的 [printAndClose](/docs/library/objects/OutputStream#printandclose) 方法将文本（`string`）写入文件并关闭文件。
+
+请看这个示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文本 = _storage.filesystem("server", "临时", "文件.txt")
+                文本.ensurePath()
+                文本.output().printAndClose("我的文本在这里...")
+            `
+        },
+    ]}
+/>
+
+#### 在 Storage 中读取文本文件
+
+为文件初始化 Storage 时，我们可以使用 [input](/docs/library/resources/storage#input) 方法进行读取，它会获取一个 [InputStream](/docs/library/objects/InputStream) 对象实例，以便处理并读取数据。
+
+然后，使用 `InputStream` 的 [readAllAndClose](/docs/library/objects/InputStream#readallandclose) 方法读取整个文件并关闭它，将数据作为文本（`string`）返回。
+
+请看这个示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文本 = _storage.filesystem("server", "临时", "文件.txt")
+                _log.info(文本.input().readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### 在 Storage 中创建随机文件
+
+`_storage` 资源允许使用 [newRandomFile](/docs/library/resources/storage#newrandomfile) 方法生成随机文件名。
+
+应为文件夹路径初始化 Storage，并在执行 `newRandomFile` 方法时传入所需文件的扩展名。
+
+该方法返回一个针对自动生成的随机文件的新 Storage 实例，以便在初始文件夹中使用。
+
+看看如何生成一个具有 `TXT` 扩展名的随机名称文件：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文件夹 = _storage.filesystem("server", "临时")
+                const 文件 = 文件夹.newRandomFile("txt")
+                文件.output().printAndClose("我的文本在这里...")
+            `
+        },
+    ]}
+/>
+
+## 结论
+
+借助 Netuno 的多语言低代码框架，我们可以直接执行所有主要的文件夹和文件操作。
+
+在使用以下用于操作文件和文件夹的专用资源时：
+
+- `_app` - 应用
+- `_storage` - 应用 Storage
+- `_os` - 操作系统
+
+> 出于良好实践和组织性的考虑，我们应优先使用 **Storage**，例外应仅限于个别且严格必要的情况。
+
+Netuno 会在服务处理结束时自动关闭 input 和 output，但出于良好实践，我们应始终尝试关闭它们。

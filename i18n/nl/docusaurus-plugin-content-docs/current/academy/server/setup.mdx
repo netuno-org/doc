@@ -1,0 +1,259 @@
+---
+id: setup
+title: Setup van de gegevens
+sidebar_label: Setup van de gegevens
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+## Inleiding
+
+Bij Netuno begint de ontwikkeling van applicaties eerst met het opbouwen van de database, via het
+construeren van de formulieren en velden.
+
+En wanneer men in team werkt of de ontwikkeling van de applicatie naar een andere omgeving moet worden
+overgedragen, is het nodig een back-up van de database samen met de code te maken.
+
+Zo zal op de bestemming de database opnieuw moeten worden geconfigureerd en kan de applicatie worden uitgevoerd
+zoals ze bij de oorsprong is ontwikkeld.
+
+Het probleem van dit proces is de inspanning om altijd te onthouden een nieuwe back-up te maken telkens wanneer er een
+wijziging in de database is. En hoe meer mensen bij de ontwikkeling betrokken zijn en/of hoe meer
+omgevingen er zijn om de applicatie te publiceren, hoe ingewikkelder dit proces wordt.
+
+Daarom brengt Netuno om dit probleem op te lossen een *setup*-systeem voor applicaties, waarbij automatisch
+de databasestructuur (*schema*) wordt gegenereerd, en daarnaast kan het laden van de
+initiële gegevens via aanvullende *scripts* handmatig worden geprogrammeerd.
+
+Het maakt het ook mogelijk het type databaseserver te wijzigen en ervoor te zorgen dat de *setup* normaal wordt uitgevoerd
+en de applicatie zonder problemen werkt. Dit betekent dat de applicatie in
+H2DataBase kan worden ontwikkeld en dat met de automatisch gegenereerde schema's de databaseverbinding van de applicatie kan worden gewijzigd naar
+PostgreSQL of MariaDB. Bij de eerste uitvoering van de applicatie op de nieuwe database wordt alles opnieuw opgebouwd,
+ongeacht de wijziging van het type databaseserver.
+
+Zo kan de database volledig worden gewijzigd zonder impact op de reeds uitgevoerde ontwikkeling.
+
+De programmeerbestanden van de _setup_ bevinden zich in de map van de applicatie in:
+
+- `server/setup`
+
+## Configuratie van de setup
+
+In de omgevingsconfiguraties van de applicaties die zich bevinden in:
+
+- `/apps/MIJN_APP/config/_development.json`
+- `/apps/MIJN_APP/config/_production.json`
+
+Kunt u het gedrag van de 'setup' beïnvloeden via de configuraties:
+
+```json
+    ...
+    "setup": {
+        "enabled": true,
+        "schema": {
+            "auto_create": true,
+            "execution": true
+        },
+        "scripts": {
+            "execution": true
+        }
+    },
+    ...
+```
+
+##### `enabled`: boolean > _standaard true_
+
+Bepaalt of de setup actief is of niet, en activeert of deactiveert zo, bij de eerste keer dat de applicatie wordt uitgevoerd,
+de uitvoering van de setupbewerkingen van de gegevens.
+
+##### `schema.auto_create`: boolean > _standaard true_
+
+Hiermee kan Netuno weten of het al dan niet de schema-bestanden van de database moet genereren telkens wanneer een formulier of
+veld wordt aangemaakt of gewijzigd.
+
+##### `schema.execution`: boolean > _standaard true_
+
+Bepaalt of het schema al dan niet moet worden uitgevoerd tijdens de setupbewerkingen die bij de eerste uitvoering van de
+applicatie worden uitgevoerd.
+
+##### `scripts.execution`: boolean > _standaard true_
+
+Activeert of deactiveert de uitvoering van de aanvullende scripts tijdens de setupbewerkingen die bij de eerste uitvoering
+van de applicatie worden uitgevoerd.
+
+## Schema
+
+Tijdens het aanmaken of wijzigen van de formulieren en velden in de webinterface van Netuno worden de schema-bestanden
+in de setup-map gegenereerd als volgt:
+
+<PolyglotPath files={[
+    "server/setup/_schema-NAAM_VAN_HET_FORMULIER"
+]} />
+
+Waarbij er een bestand `_schema-***` zal zijn voor elk formulier dat in de applicatie bestaat.
+
+Deze bestanden mogen niet handmatig worden gewijzigd, omdat ze automatisch door Netuno worden gegenereerd.
+
+Als u dus de inhoud van deze bestanden wijzigt, worden ze bij een volgende generatie van de schema's automatisch vervangen
+en gaan de rechtstreeks in de bestanden aangebrachte wijzigingen verloren.
+
+Om de automatische generatie van het databaseschema te laten uitvoeren, moet u ervoor zorgen dat de configuratie
+__schema.auto_create__ actief is en dat de map __setup__ in de map __server__ bestaat.
+
+## Scripts
+
+Scripts met op maat geprogrammeerde code zijn bestanden in de map __setup__ die niet met `_` beginnen.
+
+Het belangrijkste doel van deze scripts is de gegevens laden en ervoor zorgen dat de database de minimale informatie bevat
+die nodig is voor de correcte werking van de applicatie.
+
+Zo zal, wanneer de applicatie in een andere omgeving opnieuw wordt geconfigureerd, automatisch de initiële gegevens worden geladen
+en is ze klaar om te worden gebruikt.
+
+Om deze bewerkingen voor het laden van gegevens uit te voeren, moet u de functies van de resource *_db* gebruiken.
+
+De __scripts__ worden na de uitvoering van de __schema's__ uitgevoerd, in alfanumerieke volgorde van de bestandsnamen
+die niet met `_` beginnen.
+
+> Een numerieke reeks aan het begin van de bestandsnaam is ideaal om de uitvoeringsvolgorde te bepalen; daarom worden de
+> aangepaste scripts uitgevoerd in de volgorde van de bestandsnamen die niet met `_` beginnen.
+
+### Aangepaste gegevens invoegen
+
+En om het werk te besparen van het uitvoeren van databasequery's om te controleren of de __insert__
+van gegevens al dan niet kan worden uitgevoerd, biedt Netuno de functie `insertIfNotExists`.
+
+Deze functie controleert of de gegevens precies zoals ze in de database zijn gedefinieerd bestaan; als ze niet bestaan,
+worden ze aangemaakt.
+
+Een voorbeeld van het gebruik ervan is het laden van de velden __Code__ en __Naam__ van het formulier __Type grondgebied__,
+waarbij de naam van de tabel __type\_grondgebied__ is en deze de kolommen __code__ en __naam__ heeft; hiervoor volstaat het een
+bestand met de volgende inhoud te maken:
+
+<PolyglotCode
+    file="server/setup/001-type_grondgebied"
+    codes={[{
+        lang: 'javascript',
+        code: `
+            _db.insertIfNotExists("type_grondgebied", _val.map()
+                .set("code", "1001")
+                .set("naam", "Continentaal")
+            );
+            _db.insertIfNotExists("type_grondgebied", _val.map()
+                .set("code", "1002")
+                .set("naam", "Archipelagisch")
+            );
+            _db.insertIfNotExists("type_grondgebied", _val.map()
+                .set("code", "2003")
+                .set("naam", "Maritiem")
+            );
+            _db.insertIfNotExists("type_grondgebied", _val.map()
+                .set("code", "3004")
+                .set("naam", "Lucht")
+            );
+        `
+    }]}
+/>
+
+## Verwerkingscyclus
+
+Zoals al uitgelegd, wordt de *setup* alleen bij de eerste uitvoering van de applicatie uitgevoerd.
+
+En de uitvoeringsvolgorde is:
+
+1. `_start` - voert het initialisatiebestand uit dat elk type aangepaste programmering kan bevatten:
+    <PolyglotPath files={["MIJN_APP/server/setup/_start"]} />
+2. `_cleanup` - voert programmatisch het verwijderen van formulieren, rapporten en de bijbehorende velden uit:
+    <PolyglotPath files={["MIJN_APP/server/setup/_cleanup"]} />
+3. `_schema-*` - voert alle scripts met het voorvoegsel *_schema-* uit, bevat de opdrachten voor het aanmaken van de
+  formulieren, rapporten en de bijbehorende velden:
+    <PolyglotPath files={[
+        "MIJN_APP/server/setup/_schema-automatisch_gegenereerde_structuur",
+        "MIJN_APP/server/setup/_schema-categorie",
+        "MIJN_APP/server/setup/_schema-product",
+        "MIJN_APP/server/setup/_schema-klant",
+    ]} />
+4. `001-overige_scripts` - voert de op maat geprogrammeerde *scripts*-bestanden uit; dit zijn alle bestanden die niet
+  met `_` beginnen en die waarschijnlijk de __inserts__ van initiële gegevens of andere
+  aangepaste ontwikkelingen bevatten, bijvoorbeeld:
+    <PolyglotPath files={[
+        "MIJN_APP/server/setup/001-aangepaste_gegevens_invoegen",
+        "MIJN_APP/server/setup/002-categorie",
+        "MIJN_APP/server/setup/003-product",
+        "MIJN_APP/server/setup/004-klant",
+    ]} />
+5. *_end* - voert het afsluitbestand uit dat elk type aangepaste programmering kan bevatten:
+    <PolyglotPath files={["MIJN_APP/server/setup/_end"]} />
+
+Dat wil zeggen, het is toegestaan om op maat gemaakte code in de *start*- en *end*-scripts te maken om bepaalde bewerkingen
+uit te voeren die het zinvol is om vóór de setup of zelfs wanneer deze is voltooid, uit te voeren.
+
+Het is goed om te benadrukken dat deze verwerkingscyclus wordt uitgevoerd telkens wanneer de applicatie voor de eerste keer wordt uitgevoerd;
+daarom is het noodzakelijk om te garanderen dat het bestaan van de gegevens wordt gecontroleerd voordat ze worden aangemaakt.
+
+Zorg ervoor dat de volgende *configuraties* van de omgeving actief zijn om de uitvoering van dit
+proces mogelijk te maken in de bestanden `MIJN_APP/config/_development.json` of `MIJN_APP/config/_production.json`, afhankelijk van de
+omgeving:
+
+* Activeert of deactiveert volledig de uitvoering van elke setupbewerking:
+
+  `setup.enabled = true|false`
+
+* Activeert of deactiveert de uitvoering van de *_schemas-*:
+
+  `setup.schema.execution = true|false`
+
+* Activeert of deactiveert de uitvoering van de *scripts*:
+
+  `setup.scripts.execution = true|false`
+
+## Opschonen
+
+Om het verwijderen van formulieren en velden te programmeren, moeten we het script `_cleanup.js` gebruiken, wat garandeert
+dat in alle omgevingen die de projectbestanden synchroniseren, bij de uitvoering van de setup de structuur wordt verwijderd,
+indien deze bestaat.
+
+Voorbeeld van het opschoningsscript:
+
+<PolyglotCode file="server/setup/_cleanup"
+    codes={[{
+        lang: 'javascript',
+        code: `
+            // Verwijdert het formulier zone:
+            _form.dropIfExists("zone");
+            // Verwijdert het veld subgebied_id van het formulier gebied:
+            _form.dropFieldIfExists("gebied", "subgebied_id");
+        `
+    }]}
+/>
+
+## DBML
+
+Telkens wanneer Netuno de setup van de gegevens uitvoert, wordt het bestand gegenereerd:
+
+- `server/setup/_db-schema.dbml`
+
+Dit is het bestand met de volledige gegevensstructuur dat met kunstmatige intelligentie kan worden gebruikt.
+
+Op basis van de inhoud van de DBML begrijpt de kunstmatige intelligentie de gegevensstructuur en kan ze nauwkeurige SQL-query's
+genereren.
+
+Probeer dit bestand als bijlage in de prompt te gebruiken en vraag om complexe SQL-query's te genereren; u zult
+goede resultaten behalen.
+
+## Conclusie
+
+Het *setup*-proces van applicaties in Netuno heeft als belangrijkste functies:
+
+* *_schema-*: genereert automatisch de volledige structuur van formulieren en rapporten met hun respectievelijke velden,
+die ervoor zorgen dat de volledige samenhang van de databasestructuur van de applicatie wordt gegarandeerd, vooral wanneer de
+applicatie met een nieuwe lege database wordt uitgevoerd.
+* *scripts*: databasebewerkingen uitvoeren om ervoor te zorgen dat de applicatie de verplichte gegevens bevat
+die vooraf zijn geladen telkens wanneer ze voor de eerste keer wordt uitgevoerd.
+
+Op deze manier maakt Netuno het mogelijk dat applicaties in nieuwe omgevingen werken, zelfs als het type database
+wordt gewijzigd, en wordt de correcte werking van de applicatie gegarandeerd zonder dat __backups__ en __restore__
+van de databases nodig zijn.
+
+Bovendien kan alle automatisch en handmatig gegenereerde configuratiecode met bijvoorbeeld GIT worden geversioneerd.

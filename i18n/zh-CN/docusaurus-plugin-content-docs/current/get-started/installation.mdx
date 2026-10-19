@@ -1,0 +1,81 @@
+---
+sidebar_position: 1
+id: installation
+title: 快速安装
+sidebar_label: 快速安装
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# 简介
+
+欢迎来到 **Netuno** 安装指南，这是一个 *low-code*、多语言且 *open source* 的平台，专为加速项目创建、简化开发环境配置而打造。
+
+在这里，你可以将低代码的速度与传统编码的强大能力相结合，快速构建稳健的全栈应用。
+
+## 快速安装
+
+安装 Netuno 最简单的方式是使用平台提供的安装脚本。只需根据你的操作系统，在终端中执行相应的命令即可。
+
+<Tabs groupId="os">
+    <TabItem value="linux-mac" label="Linux 或 macOS" default>
+
+```bash
+bash <(curl -fsSL https://netu.no/install.sh)
+```
+
+    </TabItem>
+    <TabItem value="windows" label="Windows">
+
+```powershell
+powershell -c "irm https://netu.no/install.ps1|iex"
+```
+
+    </TabItem>
+</Tabs>
+
+## 启动演示应用
+
+安装完成后，在 `netuno` 文件夹内执行以下命令，即可启动带有演示应用的服务器：
+
+```bash
+./netuno server
+```
+
+### 在浏览器中打开应用
+
+启动后，浏览器会自动打开本地服务器地址。如果没有自动打开，请手动访问以下地址之一：
+
+- [http://demo.local.netu.no:9000](http://demo.local.netu.no:9000)
+- [http://localhost:9000](http://localhost:9000)
+
+## 停止服务器
+
+要关闭服务器，请在终端中按下以下按键：
+
+**CTRL + C**
+
+要再次启动它，请使用相同的命令 `./netuno server`。
+
+## 后续步骤
+
+以下是你现在可以着手的一些想法。
+
+### 初学者
+
+如果你是 Netuno 新手，请从创建你的第一个表单开始：
+
+[创建我的第一个表单](/docs/academy/demonstration/config)
+
+### 教程
+
+探索 Netuno 的实用开发教程：
+
+[查看开发教程](/docs/get-started/tutorials)
+
+### 项目
+
+了解如何在真实的商业项目中应用 Netuno：
+
+[探索项目与用例](/docs/academy/understand/backoffice)

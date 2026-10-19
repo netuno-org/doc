@@ -1,0 +1,580 @@
+---
+id: files-manipulation
+title: Manipulacja plikami i folderami
+sidebar_label: Manipulacja plikami i folderami
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+## Wprowadzenie
+
+W wielojęzycznym kodzie backendu platformy Netuno możemy manipulować dowolnym plikiem lub folderem.
+
+Manipulacja polega na możliwości tworzenia, zmieniania nazw i usuwania plików oraz folderów, zmieniania zawartości plików i listowania zawartości folderów. Ogólnie są to operacje, które zwykle musimy wykonywać programowo.
+
+W platformie Netuno dostępne są zasoby programowania low-code, które pozwalają manipulować folderami i plikami wewnętrznymi aplikacji, a także dowolnymi plikami i folderami systemu ogólnie, czyli poza aplikacją.
+
+Jest to przydatne, gdy musimy zautomatyzować proces, który wymaga ingerencji w dowolny plik; zobaczmy jak.
+
+Zasoby programowania wielojęzycznego low-code, które pozwalają manipulować plikami, to:
+
+- `_app` - [Aplikacja](/docs/library/resources/app)
+- `_storage` - [Storage](/docs/library/resources/storage)
+- `_os` - [System operacyjny](/docs/library/resources/os)
+
+Za pomocą tych zasobów mamy metody do:
+
+- `.file` - Istniejący plik.
+- `.folder` - Istniejący folder.
+- `.path` - Ogólna ścieżka; może być plikiem lub folderem, istniejącym lub nieistniejącym.
+
+Dzięki tym metodom otrzymujemy obiekt typu [File](/docs/library/objects/File), który zapewnia wszystkie możliwości manipulacji plikami, folderami i ścieżkami ogólnie, co pozwala wykonywać operacje takie jak:
+
+- Tworzenie plików i folderów.
+- Usuwanie plików i folderów.
+- Listowanie zawartości folderów.
+- Zmiana nazw plików i folderów.
+- Odczyt i zapis danych w plikach.
+- Rekurencyjne usuwanie folderów wraz z ich podfolderami i plikami.
+
+## Aplikacja
+
+Aby wykonywać główne operacje manipulacji plikami i folderami w strukturze aplikacji, używamy zasobu `_app`:
+
+#### Foldery w aplikacji
+
+Zapewnia uzyskanie istniejącego folderu, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mojFolder = _app.folder("moj/folder")
+            `
+        },
+    ]}
+/>
+
+#### Pliki w aplikacji
+
+Zapewnia uzyskanie istniejącego pliku, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mojPlik = _app.file("moj/folder/plik.txt")
+            `
+        },
+    ]}
+/>
+
+#### Ścieżki w aplikacji
+
+Pobiera ścieżkę pliku lub folderu, niezależnie od tego, czy istnieje, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nowyPlik = _app.path("moj/folder/nowy-plik.txt")
+            `
+        },
+    ]}
+/>
+
+## Storage
+
+Aby wykonywać główne operacje manipulacji plikami i folderami w folderze `📁 storage` aplikacji, używamy zasobu `_storage`:
+
+#### Foldery w Storage
+
+Zapewnia uzyskanie istniejącego folderu, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Rzeczywista ścieżka folderu będzie następująca:
+                // storage/filesystem/server/moj/folder
+                const storageMojFolder = _storage.filesystem("server", "moj/folder")
+                const mojFolder = storageMojFolder.folder()
+            `
+        },
+    ]}
+/>
+
+#### Pliki w Storage
+
+Zapewnia uzyskanie istniejącego pliku, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Rzeczywista ścieżka pliku będzie następująca:
+                // storage/filesystem/server/moj/folder/plik.txt
+                const storagePlik = _storage.filesystem("server", "moj/folder", "plik.txt")
+                const plik = storagePlik.file()
+            `
+        },
+    ]}
+/>
+
+#### Ścieżki w Storage
+
+Pobiera ścieżkę pliku lub folderu, niezależnie od tego, czy istnieje, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Rzeczywista ścieżka nowego folderu będzie następująca:
+                // storage/filesystem/server/moj/nowy-folder
+                const storageFolder = _storage.filesystem("server", "moj/nowy-folder")
+                const folder = storageFolder.path()
+
+                // Rzeczywista ścieżka nowego pliku będzie następująca:
+                // storage/filesystem/server/moj/folder/nowy-plik.txt
+                const storagePlik = _storage.filesystem("server", "moj/folder", "nowy-plik.txt")
+                const plik = storagePlik.path()
+            `
+        },
+    ]}
+/>
+
+## System operacyjny
+
+Aby wykonywać główne operacje manipulacji plikami i folderami w dowolnym miejscu systemu operacyjnego, używamy zasobu `_os`:
+
+#### Foldery w systemie operacyjnym
+
+Zapewnia uzyskanie istniejącego folderu, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mojFolder = _os.folder("/tmp/moj/folder")
+            `
+        },
+    ]}
+/>
+
+#### Pliki w systemie operacyjnym
+
+Zapewnia uzyskanie istniejącego pliku, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mojPlik = _os.file("/tmp/moj/folder/plik.txt")
+            `
+        },
+    ]}
+/>
+
+#### Ścieżki w systemie operacyjnym
+
+Pobiera ścieżkę pliku lub folderu, niezależnie od tego, czy istnieje, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nowyPlik = _os.path("/tmp/moj/folder/nowy-plik.txt")
+            `
+        },
+    ]}
+/>
+
+## Tworzenie folderów
+
+Metoda `mkdir` tworzy folder.
+
+W poniższym przykładzie tworzony jest określony folder w katalogu głównym aplikacji:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const folder = _app.path("temp")
+                folder.mkdir()
+            `
+        },
+    ]}
+/>
+
+Aby utworzyć podfolder w istniejącym folderze, podaj pełną ścieżkę, oddzielając hierarchię folderów znakiem `/`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const podfolder = _app.path("temp/inny")
+                podfolder.mkdir()
+            `
+        },
+    ]}
+/>
+
+Natomiast `mkdirs` tworzy foldery nadrzędne i/lub podfoldery, jeśli nie istnieją, więc pozwala utworzyć strukturę folderów w aplikacji, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sciezkaFolderow = _app.path("temp/a/b/c")
+                sciezkaFolderow.mkdirs()
+            `
+        },
+    ]}
+/>
+
+Zasób `_storage` ma metodę [ensurePath](/docs/library/resources/storage#ensurepath), która sprawdza, czy ścieżka istnieje; jeśli nie, to ją tworzy:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const plik = _storage.filesystem(
+                    "public",
+                    "temp/podfolder",
+                    "plik.txt"
+                )
+                // Tworzy strukturę folderów, jeśli nie istnieje:
+                plik.ensurePath()
+            `
+        },
+    ]}
+/>
+
+Zatem `ensurePath` zapewnia, że struktura folderów istnieje.
+
+## Usuwanie plików i folderów
+
+Metodą `delete` możemy usuwać zarówno foldery, jak i pliki, przy czym foldery muszą być puste; zobacz przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Usuwa pusty folder:
+                const pustyFolder = _app.folder("folder/pusty")
+                pustyFolder.delete()
+
+                // Usuwa plik:
+                const plik = _app.file("folder/plik.txt")
+                plik.delete()
+
+                // Usuwa ścieżkę, pusty folder lub plik:
+                const sciezka = _app.path("folder1/plik-lub-pusty-folder")
+                sciezka.delete()
+            `
+        },
+    ]}
+/>
+
+Metoda `deleteAll` pozwala usunąć wszystko, czyli wszystkie pliki, foldery i podfoldery rekurencyjnie:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Usuwa folder i całą zawartość rekurencyjnie:
+                const pustyFolder = _app.folder("folder/przyklad")
+                pustyFolder.deleteAll()
+
+                // Usuwa ścieżkę folderu i całą jego zawartość wewnętrzną,
+                // w tym podfoldery i pliki:
+                const sciezka = _app.path("sciezka/folder")
+                sciezka.deleteAll()
+            `
+        },
+    ]}
+/>
+
+Aby usunąć tylko pliki wewnątrz folderu i nie usuwać niczego w podfolderach, mamy `deleteFiles`, która pozwala przekazać rozszerzenie, jeśli chcesz usunąć tylko pliki z określonym rozszerzeniem:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Usuwa pliki tylko wewnątrz folderu:
+                const folder = _app.folder("folder/przyklad")
+                folder.deleteFiles()
+
+                // Usuwa pliki z rozszerzeniem JPG tylko wewnątrz folderu:
+                const sciezka = _app.path("sciezka/folder")
+                sciezka.deleteFiles("jpg")
+`
+        },
+    ]}
+/>
+
+Aby usuwać tylko pliki rekurencyjnie i zachować strukturę folderów, mamy `deleteAllFiles`, która również pozwala przekazać rozszerzenie, jeśli chcesz usunąć tylko określony typ pliku; zobacz te dwa przykłady:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Usuwa wszystkie pliki wewnątrz folderu i podfolderów:
+                const folder = _app.folder("folder/przyklad")
+                folder.deleteAllFiles()
+
+                // Usuwa wszystkie pliki z rozszerzeniem JPG wewnątrz folderu i podfolderów:
+                const sciezka = _app.path("sciezka/folder")
+                sciezka.deleteAllFiles("jpg")
+            `
+        },
+    ]}
+/>
+
+## Zmiana nazwy lub przenoszenie
+
+Przeniesienie folderu to to samo co zmiana jego nazwy:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const folder = _app.folder("temp")
+                folder.renameTo("test")
+            `
+        },
+    ]}
+/>
+
+Aby zmienić nazwę folderu i zmienić jego poziom w hierarchii folderów, to to samo co przeniesienie folderu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const folder = _app.folder("temp/a/b")
+                folder.renameTo("test/z")
+            `
+        },
+    ]}
+/>
+
+Aby przenieść podfolder bez zmiany jego nazwy, wystarczy wskazać nową ścieżkę w metodzie `renameTo`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const folder = _app.folder("test/inny")
+                folder.renameTo("nowy/inny")
+            `
+        },
+    ]}
+/>
+
+## Zapisywanie zawartości w plikach
+
+Generowanie zawartości w plikach odbywa się za pomocą metody `output`, która zwraca obiekt typu [OutputStream](/docs/library/objects/OutputStream).
+
+Aby zapisać dane do `output`, używamy metody [printAndClose](/docs/library/objects/OutputStream#printandclose), która wypisuje zawartość do pliku i zamyka plik, zapisując zawartość.
+
+#### Zapisywanie pliku tekstowego
+
+Zobacz przykład tworzenia pliku z zawartością tekstową:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _app.path("temp").mkdir()
+                const zapis = _app.path("temp/plik.txt").output()
+                zapis.printAndClose("Mój tekst tutaj...")
+            `
+        },
+    ]}
+/>
+
+> Za każdym razem, gdy używamy `output`, tworzony jest nowy plik, więc jeśli uruchomisz kod ponownie, plik zostanie utworzony od nowa.
+
+#### Zapisywanie pliku JSON
+
+Zobacz, jak możemy zapisywać dane JSON w plikach:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _app.path("temp").mkdir()
+                const zapis = _app.path("temp/klient.json").output()
+                zapis.printAndClose(
+                    _val.map()
+                        .set("imie", "Maria Kowalska")
+                        .set(
+                            "rekordy",
+                            _val.list()
+                                .add(1).add(2).add(3)
+                        )
+                        .toJSON()
+                )
+            `
+        },
+    ]}
+/>
+
+Aby wygenerować wcięty JSON, czyli sformatowany w wielu wierszach i z wcięciami, możemy przekazać liczbę spacji użytych do wcięcia, na przykład `.toJSON(4)`.
+
+> Więcej szczegółów o metodzie [toJSON w Values](/docs/library/objects/Values#tojsonindentfactor-int--string).
+
+## Odczytywanie zawartości plików
+
+Pobieranie zawartości plików odbywa się za pomocą metody `input`, która zwraca obiekt typu [InputStream](/docs/library/objects/InputStream).
+
+Aby odczytać dane z `input`, używamy metody [readAllAndClose](/docs/library/objects/InputStream#readallandclose), która odczytuje zawartość pliku i zamyka plik.
+
+#### Odczyt pliku tekstowego
+
+Zobacz przykład odczytu pliku i pobrania zawartości tekstowej:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const plik = _app.file("temp/plik.txt")
+                const odczyt = plik.input()
+                _log.info(odczyt.readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### Odczyt pliku JSON
+
+Zobacz, jak możemy przetwarzać dane JSON odczytane z plików:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const plik = _app.file("temp/plik.txt")
+                const odczyt = plik.input()
+                const dane = _val.fromJSON(odczyt.readAllAndClose())
+                _log.info("Dane z pliku:", dane)
+            `
+        },
+    ]}
+/>
+
+> Więcej szczegółów o metodzie [fromJSON zasobu Val](/docs/library/resources/val#fromjson).
+
+## Specyfika Storage
+
+Zasób Storage ma kilka metod do bezpośredniego użycia.
+
+Na przykład możemy uzyskać dostęp przez Storage:
+
+- [Storage Output](/docs/library/resources/storage#output)
+- [Storage Input](/docs/library/resources/storage#input)
+
+To oznacza, że nie musimy pobierać `file` ani `path`, aby pracować z `input` lub `output`.
+
+#### Zapisywanie pliku tekstowego w Storage
+
+Po zainicjowaniu Storage dla pliku możemy wykonać zapis metodą [output](/docs/library/resources/storage#output), która zwraca instancję obiektu [OutputStream](/docs/library/objects/OutputStream), pozwalającą przetwarzać i czytać dane.
+
+Następnie w `OutputStream` metoda [printAndClose](/docs/library/objects/OutputStream#printandclose) zapisuje tekst (`string`) do pliku i zamyka go.
+
+Zobacz ten przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const tekst = _storage.filesystem("server", "temp", "plik.txt")
+                tekst.ensurePath()
+                tekst.output().printAndClose("Mój tekst tutaj...")
+            `
+        },
+    ]}
+/>
+
+#### Odczyt pliku tekstowego w Storage
+
+Po zainicjowaniu Storage dla pliku możemy wykonać odczyt metodą [input](/docs/library/resources/storage#input), która zwraca instancję obiektu [InputStream](/docs/library/objects/InputStream), pozwalającą przetwarzać i czytać dane.
+
+Następnie w `InputStream` metoda [readAllAndClose](/docs/library/objects/InputStream#readallandclose) odczytuje cały plik i zamyka go, zwracając dane jako tekst (`string`).
+
+Zobacz ten przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const tekst = _storage.filesystem("server", "temp", "plik.txt")
+                _log.info(tekst.input().readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### Tworzenie losowego pliku w Storage
+
+Zasób `_storage` pozwala generować losowe nazwy plików metodą [newRandomFile](/docs/library/resources/storage#newrandomfile).
+
+Należy zainicjować Storage dla ścieżki folderu, a podczas wykonywania metody `newRandomFile` przekazuje się rozszerzenie żądanego pliku.
+
+Metoda zwraca nową instancję Storage dla automatycznie wygenerowanego losowego pliku, która ma być używana w początkowym folderze.
+
+Zobacz, jak wygenerować plik z rozszerzeniem `TXT` o losowej nazwie:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const folder = _storage.filesystem("server", "temp")
+                const plik = folder.newRandomFile("txt")
+                plik.output().printAndClose("Mój tekst tutaj...")
+            `
+        },
+    ]}
+/>
+
+## Podsumowanie
+
+Dzięki wielojęzycznej platformie low-code Netuno możemy bezpośrednio wykonywać wszystkie główne operacje na folderach i plikach.
+
+Używając zasobów przeznaczonych do manipulacji plikami i folderami w:
+
+- `_app` - Aplikacja
+- `_storage` - Storage aplikacji
+- `_os` - System operacyjny
+
+> Ze względu na dobre praktyki i organizację powinniśmy priorytetowo używać **Storage**, wyjątki powinny dotyczyć tylko pojedynczych i ściśle koniecznych przypadków.
+
+Netuno automatycznie zamyka wejścia i wyjścia na końcu przetwarzania usług, ale zgodnie z dobrymi praktykami powinniśmy zawsze starać się je zamykać.

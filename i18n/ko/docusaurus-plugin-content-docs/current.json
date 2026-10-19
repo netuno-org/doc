@@ -1,0 +1,126 @@
+{
+  "version.label": {
+    "message": "다음",
+    "description": "현재 버전의 레이블"
+  },
+  "sidebar.academySidebar.category.Demonstration": {
+    "message": "데모",
+    "description": "사이드바 academySidebar의 앱 데모 카테고리 레이블"
+  },
+  "sidebar.academySidebar.category.Demonstration.link.generated-index.description": {
+    "message": "기본 데모 애플리케이션을 변경하며 개발 투어를 진행하세요.",
+    "description": "사이드바 academySidebar의 앱 데모 카테고리에 대한 생성된 인덱스 페이지 설명"
+  },
+  "sidebar.academySidebar.category.User Interface": {
+    "message": "사용자 인터페이스",
+    "description": "사이드바 academySidebar의 사용자 인터페이스 카테고리 레이블"
+  },
+  "sidebar.academySidebar.category.User Interface.link.generated-index.description": {
+    "message": "사용자 인터페이스의 작동 방식, 양식 구성 및 데이터 관리.",
+    "description": "사이드바 academySidebar의 사용자 인터페이스 카테고리에 대한 생성된 인덱스 페이지 설명"
+  },
+  "sidebar.academySidebar.category.Explore": {
+    "message": "탐색",
+    "description": "사이드바 academySidebar의 탐색 카테고리 레이블"
+  },
+  "sidebar.academySidebar.category.Explore.link.generated-index.description": {
+    "message": "전반적인 기능과 개념을 살펴보세요.",
+    "description": "사이드바 academySidebar의 탐색 카테고리에 대한 생성된 인덱스 페이지 설명"
+  },
+  "sidebar.academySidebar.category.Understand": {
+    "message": "이해",
+    "description": "사이드바 academySidebar의 탐색 카테고리 레이블"
+  },
+  "sidebar.academySidebar.category.Understand.link.generated-index.description": {
+    "message": "플랫폼의 전반적인 적용 가능성과 전략적 잠재력.",
+    "description": "사이드바 academySidebar의 탐색 카테고리에 대한 생성된 인덱스 페이지 설명"
+  },
+  "sidebar.academySidebar.category.Server Backend": {
+    "message": "서버 백엔드",
+    "description": "사이드바 academySidebar의 서버 카테고리 레이블"
+  },
+  "sidebar.academySidebar.category.Server Backend.link.generated-index.description": {
+    "message": "폴리글랏 로우코드 개발과 통합된 백엔드에 관한 튜토리얼.",
+    "description": "사이드바 academySidebar의 서버 카테고리에 대한 생성된 인덱스 페이지 설명"
+  },
+  "sidebar.academySidebar.category.Database": {
+    "message": "데이터베이스",
+    "description": "사이드바 academySidebar의 데이터베이스 카테고리 레이블"
+  },
+  "sidebar.academySidebar.category.Database.link.generated-index.description": {
+    "message": "데이터베이스 관리 튜토리얼.",
+    "description": "사이드바 academySidebar의 데이터베이스 카테고리에 대한 생성된 인덱스 페이지 설명"
+  },
+  "sidebar.academySidebar.category.Service": {
+    "message": "서비스",
+    "description": "사이드바 academySidebar의 서비스 카테고리 레이블"
+  },
+  "sidebar.academySidebar.category.Service.link.generated-index.description": {
+    "message": "서비스에 사용되는 리소스에 관한 튜토리얼.",
+    "description": "사이드바 academySidebar의 서비스 카테고리에 대한 생성된 인덱스 페이지 설명"
+  },
+  "sidebar.academySidebar.category.Java Core": {
+    "message": "Java Core",
+    "description": "The label for category Java Core in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Java Core.link.generated-index.description": {
+    "message": "폴리글랏 로우코드 개발과 통합된 백엔드에 관한 튜토리얼.",
+    "description": "The generated-index page description for category Java Core in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Website Frontend": {
+    "message": "웹사이트 프론트엔드",
+    "description": "사이드바 academySidebar의 웹사이트 카테고리 레이블"
+  },
+  "sidebar.academySidebar.category.Website Frontend.link.generated-index.description": {
+    "message": "고급 프론트엔드 개발 및 통합.",
+    "description": "사이드바 academySidebar의 웹사이트 카테고리에 대한 생성된 인덱스 페이지 설명"
+  },
+  "sidebar.librarySidebar.category.App Structure": {
+    "message": "앱 구조",
+    "description": "사이드바 librarySidebar의 앱 폴더 카테고리 레이블"
+  },
+  "sidebar.librarySidebar.category.App Structure.link.generated-index.description": {
+    "message": "애플리케이션의 폴더 및 파일 구조를 자세히 설명합니다.",
+    "description": "사이드바 librarySidebar의 앱 폴더 카테고리에 대한 생성된 인덱스 페이지 설명"
+  },
+  "sidebar.librarySidebar.category.Resources": {
+    "message": "리소스",
+    "description": "사이드바 librarySidebar의 리소스 카테고리 레이블"
+  },
+  "sidebar.librarySidebar.category.Resources.link.generated-index.description": {
+    "message": "사용 가능한 모든 로우코드 리소스.",
+    "description": "사이드바 librarySidebar의 리소스 카테고리에 대한 생성된 인덱스 페이지 설명"
+  },
+  "sidebar.librarySidebar.category.Objects": {
+    "message": "객체",
+    "description": "사이드바 librarySidebar의 객체 카테고리 레이블"
+  },
+  "sidebar.librarySidebar.category.Objects.link.generated-index.description": {
+    "message": "사용 가능한 주요 로우코드 객체.",
+    "description": "사이드바 librarySidebar의 객체 카테고리에 대한 생성된 인덱스 페이지 설명"
+  },
+  "sidebar.academySidebar.category.CLUAR": {
+    "message": "CLUAR",
+    "description": "사이드바 academySidebar의 CLUAR 카테고리 레이블"
+  },
+  "sidebar.academySidebar.category.CLUAR.link.generated-index.description": {
+    "message": "콘텐츠 관리 및 다국어 웹사이트를 위한 바로 사용 가능한 솔루션.",
+    "description": "사이드바 academySidebar의 CLUAR 카테고리에 대한 생성된 인덱스 페이지 설명"
+  },
+  "sidebar.academySidebar.category.Components": {
+    "message": "컴포넌트",
+    "description": "사이드바 academySidebar의 컴포넌트 카테고리 레이블"
+  },
+  "sidebar.academySidebar.category.Components.link.generated-index.description": {
+    "message": "CLUAR의 콘텐츠 컴포넌트 — 배너, 콘텐츠, 목록, 슬라이더 및 기능 — 에 관한 튜토리얼.",
+    "description": "사이드바 academySidebar의 컴포넌트 카테고리에 대한 생성된 인덱스 페이지 설명"
+  },
+  "sidebar.academySidebar.category.Pages": {
+    "message": "페이지",
+    "description": "사이드바 academySidebar의 페이지 카테고리 레이블"
+  },
+  "sidebar.academySidebar.category.Pages.link.generated-index.description": {
+    "message": "CLUAR의 페이지 엔터티 — 필드, 버전 관리, 게시 및 복제 — 에 관한 튜토리얼.",
+    "description": "사이드바 academySidebar의 페이지 카테고리에 대한 생성된 인덱스 페이지 설명"
+  }
+}

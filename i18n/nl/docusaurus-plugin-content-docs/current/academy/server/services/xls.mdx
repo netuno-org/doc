@@ -1,0 +1,1002 @@
+---
+id: xls
+title: XLS - Excel
+sidebar_label: XLS - Excel
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Aangepaste Excel-bestanden verwerken.
+
+## Inleiding
+
+Netuno genereert Excel-bestanden die compatibel zijn met LibreOffice, OpenOffice, Microsoft Office, Google Drive, enz., via de [XLS](/docs/library/resources/xls)-functie. Deze biedt een low-code-abstractie van [Apache POI](https://poi.apache.org/) voor de verschillende programmeertalen die Netuno ondersteunt.
+
+We kunnen zowel XLSX-, XLS- als ODS-bestanden genereren.
+
+De applicatie die bij Netuno wordt geleverd en **demo** heet (de demonstratieapplicatie) bevat talrijke voorbeelden van mogelijke code-implementaties in verschillende talen, inclusief een demonstratie van het exporteren van werkbladen via de service `export-excel`, die zich bevindt in:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/export-excel`
+]} />
+
+## Initialisatie
+
+Om de XLS-voorziening te initialiseren:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const werkmap = _xls.create()
+            `
+        },
+    ]}
+/>
+
+Maakt het object met de context van het nieuwe bestand dat wordt opgebouwd, met een leeg werkblad.
+
+## Opmaak
+
+Het definiëren van visuele opmaakstijlen, dat wil zeggen de opmaak van datums, tijden, geld, enzovoort, moet gebeuren vóór het definiëren van celwaarden, omdat je bij het definiëren van celwaarden ook de opmaakstijl kunt koppelen.
+
+Zoals wordt gedemonstreerd in het voorbeeld dat bij de applicatie `demo` wordt geleverd, worden de opmaakstijlen direct aan het begin van de code gedefinieerd.
+
+Om datums op te maken:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stijlDatum = werkmap.cellStyleFormat("dd/mm/yy")
+            `
+        },
+    ]}
+/>
+
+Om tijden op te maken:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stijlTijd = werkmap.cellStyleFormat("hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+Om datums met tijden op te maken:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stijlDatumTijd = werkmap.cellStyleFormat("dd/mm/yyyy hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+Om geldwaarden in **euro** op te maken:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stijlGeldEuro = werkmap.cellStyleFormat("€#,##0.00;\\-€#,##0.00")
+            `
+        },
+    ]}
+/>
+
+Om geldwaarden in **Braziliaanse real** op te maken:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stijlGeldReal = werkmap.cellStyleFormat("R$#,##0.00;\\-R$#,##0.00")
+            `
+        },
+    ]}
+/>
+
+Om waarden als **percentage** op te maken:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stijlPercentage = werkmap.cellStyleFormat("0.00%")
+            `
+        },
+    ]}
+/>
+
+## Uiterlijk
+
+Het definiëren van visuele uiterlijkstijlen, dat wil zeggen het uiterlijk van cellen zoals kleuren, lettertype, randen, uitlijning, enzovoort, moet gebeuren vóór het definiëren van celwaarden, omdat je bij het definiëren van celwaarden ook de uiterlijkstijl kunt koppelen.
+
+Zoals wordt gedemonstreerd in het voorbeeld dat bij de applicatie `demo` wordt geleverd, worden de uiterlijkstijlen direct aan het begin van de code gedefinieerd.
+
+Voorbeeld voor het definiëren van kleuren en uitlijning:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stijlKop = werkmap.cellStyle()
+                stijlKop.setFillPattern(_xls.fillPattern("solid-foreground"))
+                stijlKop.setFillBackgroundColor(werkmap.color("black"))
+                stijlKop.setAlignment(_xls.horizontalAlignment("center"))
+            `
+        },
+    ]}
+/>
+
+> Documentatie met alle methoden van het object voor <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Stijlen in Apache POI</a>.
+
+Definitie van de randstijl:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stijlGegevens = werkmap.cellStyle()
+                stijlGegevens.setBorderBottom(_xls.borderStyle("thin"))
+                stijlGegevens.setBorderTop(_xls.borderStyle("thin"))
+                stijlGegevens.setBorderLeft(_xls.borderStyle("thin"))
+                stijlGegevens.setBorderRight(_xls.borderStyle("thin"))
+            `
+        },
+    ]}
+/>
+
+> Documentatie met alle methoden van het object voor <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Stijlen in Apache POI</a>.
+
+Maakt een nieuwe lettertypestijl voor de tekst en koppelt de lettertypedefinities aan een bepaalde bestaande celstijl:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const lettertypeTitel = werkmap.font()
+                lettertypeTitel.setBold(true)
+                lettertypeTitel.setFontHeightInPoints(14)
+                lettertypeTitel.setColor(werkmap.color("yellow"))
+                // Stelt het lettertype van stijlKop in
+                stijlKop.setFont(lettertypeTitel)
+            `
+        },
+    ]}
+/>
+
+> Documentatie met alle methoden van het object voor <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFFont.html" target="_blank">Lettertype in Apache POI</a>.
+
+## Afbeelding
+
+Om een afbeelding in het werkblad in te voegen die zich intern in de applicatie bevindt op `storage/samples/export-excel/logo.png`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                werkmap.insertPicture(
+                    _storage.filesystem("server", "samples/export-excel", "logo.png"),
+                    1, // Kolomnummer
+                    1  // Rijnummer
+                ).resize(2.3)
+            `
+        },
+    ]}
+/>
+
+Om een afbeelding in te voegen die in de applicatie staat op `public/images/logo.png`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                werkmap.insertPicture(
+                    _app.file("public/images/logo.png"),
+                    10, // Kolomnummer
+                    1  // Rijnummer
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+> Documentatie met alle methoden van het object voor <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/ss/usermodel/Picture.html" target="_blank">Afbeelding in Apache POI</a>.
+
+## Cellen samenvoegen
+
+Om cellen in een gebied samen te voegen gebruiken we de methode `mergedRegion`.
+
+De volgorde van de parameters is:
+
+1. Beginrij
+2. Beginkolom
+3. Eindrij
+4. Eindkolom
+
+> De numerieke positioneringsreferenties beginnen altijd bij **nul**.
+
+In het onderstaande voorbeeld worden alle cellen van kolom 10 tot en met kolom 15 op rij 3 samengevoegd:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                werkmap.mergedRegion(2, 9, 2, 14)
+            `
+        },
+    ]}
+/>
+
+## Cellen
+
+Om het object te verkrijgen dat een cel voorstelt:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Haalt de cel op die in kolom B en rij 2 staat:
+                const cel = werkmap.cell(1, 1)
+            `
+        },
+    ]}
+/>
+
+> De numerieke positioneringsreferenties beginnen altijd bij **nul**.
+
+Voorbeeld van hoe je de formule van de cel in de log toont:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Logt de formule van rij 2 en kolom B.
+                _log.info(
+                    "Formule cel B2: "+ werkmap.cell(1, 1).getCellFormula()
+                )
+            `
+        },
+    ]}
+/>
+
+Voorbeeld van hoe je de tekstwaarde van een cel kunt ophalen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Logt de tekstwaarde van de cel in rij 2 en kolom B.
+                _log.info(
+                    "Waarde cel B2: "+ werkmap.cell(1, 1).getStringCellValue()
+                )
+            `
+        },
+    ]}
+/>
+
+> Documentatie met alle methoden van het object voor <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCell.html" target="_blank">Cel in Apache POI</a>.
+
+## Rijen
+
+Om het object te verkrijgen dat een rij voorstelt:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Haalt het object op dat rij 2 voorstelt.
+                const rij = werkmap.row(1)
+            `
+        },
+    ]}
+/>
+
+> De numerieke positioneringsreferenties beginnen altijd bij **nul**.
+
+In het bovenstaande voorbeeld wordt automatisch een nieuwe rij aangemaakt als de rij niet bestaat.
+
+> Documentatie met alle methoden van het object voor <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFRow.html" target="_blank">Rij in Apache POI</a>.
+
+## Getabelleerde gegevens invoegen
+
+We kunnen een gegevenstabel invoegen met de methode `addDataTable`.
+
+Omdat de eerste twee parameters de positie bepalen waar de gegevenstabel moet worden ingevoegd, zijn dit de rij- en kolomnummers.
+
+> Let op dat de positionering in de code van rijen en kolommen altijd vanaf **nul** begint.
+>
+> Dat wil zeggen, rij 1 is positie `0` en kolom A is ook positie `0`.
+
+Vervolgens geven we een lijst met rijen door, waarbij elke rij een andere lijst voor de kolommen bevat; pas dan voegen we een map met de celwaarde toe.
+
+Volledig voorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                werkmap.addDataTable(
+                    6, 1,
+                    _val.list() // Rijen
+                        .add(
+                            _val.list() // Kolom
+                                .add(
+                                    _val.map() // Cel
+                                        .set("value", "Naam")
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "Leeftijd")
+                                )
+                        )
+                        .add( // Andere rij
+                            _val.list()
+                                .add( // Eerste kolom
+                                    _val.map()
+                                        .set("value", "Maria")
+                                )
+                                .add( // Tweede kolom
+                                    _val.map()
+                                        .set("value", 26)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Uiterlijk
+
+In de map van de cellen kunnen we de al gemaakte stijlen koppelen, bijvoorbeeld met de stijlen die we eerder in de sectie over uiterlijk en opmaak hebben gedefinieerd.
+
+Hier volgt een voorbeeld van hoe je de stijlen aan de cellen koppelt:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                werkmap.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map()
+                                        .set("value", "Naam")
+                                        .set("style", stijlKop)
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "Leeftijd")
+                                        .set("style", stijlKop)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Formules
+
+Om formules in te voegen gebruiken we de sleutel `formula` in de map met celdefinities.
+
+In dit voorbeeld wordt in de laatste cel de som van alle waarden van de andere cellen berekend:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                werkmap.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Totaal")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+Om de kolomletter op basis van het kolomnummer te verkrijgen kan de methode `columnReference` worden gebruikt, wat kan helpen bij het definiëren van de formules. Dezelfde methode kan ook worden gebruikt om het kolomnummer op basis van de referentieletter te verkrijgen, bijvoorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                werkmap.addDataTable(
+                    6, _xls.columnReference('B'),
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Totaal")
+                                )
+                                .add(
+                                    _val.map().set(
+                                        "formula",
+                                        "SUM("+ _xls.columnReference(1) +"7:"+ _xls.columnReference(2) +"8)"
+                                )
+                            )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+## Werkbladen
+
+Om een nieuw werkblad (_sheet_) in het document zelf te maken, zie het volgende voorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nieuwWerkblad = werkmap.createSheet("Nieuw werkblad")
+            `
+        },
+    ]}
+/>
+
+> In de methoden voor het manipuleren van cellen, afbeeldingen en gegevens kan als eerste parameter de referentie naar het werkbladobject worden toegevoegd.
+>
+> Afhankelijk van welk werkblad actief is, is het mogelijk het actieve werkblad te wijzigen met de methode [activeSheet](/docs/library/resources/xls#activesheet).
+
+Voorbeeld van hoe je een afbeelding in het nieuwe werkblad invoegt:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                werkmap.insertPicture(
+                    nieuwWerkblad,
+                    _app.file("public/images/logo.png"),
+                    10, // Kolomnummer
+                    1  // Rijnummer
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+Voorbeeld van hoe je een gegevenstabel in het nieuwe werkblad invoegt:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                werkmap.addDataTable(
+                    nieuwWerkblad,
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Totaal")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Activeren
+
+Om te voorkomen dat je in de methoden voortdurend moet aangeven welk werkblad moet worden verwerkt, zoals in de bovenstaande voorbeelden, kun je als alternatief het actieve werkblad aangeven.
+
+> Alle methoden voor het manipuleren van cellen, afbeeldingen en gegevens gebruiken het werkblad dat is geactiveerd wanneer **geen** specifiek werkblad wordt opgegeven.
+
+Bekijk twee manieren om een specifiek werkblad te activeren, eerst met de objectreferentie en daarna met de index van het werkblad:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                werkmap.activeSheet(mijnWerkblad) // Referentieobject van het werkblad.
+                werkmap.activeSheet(1) // Index van het werkblad dat wordt geactiveerd.
+            `
+        },
+    ]}
+/>
+
+### Nuttige bronnen
+
+Voorbeelden van andere nuttige methoden bij het manipuleren van werkbladen.
+
+Een werkblad op naam ophalen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Haalt het werkblad op basis van de naam op.
+                const mijnWerkblad = werkmap.getSheet("Naam van het werkblad")
+            `
+        },
+    ]}
+/>
+
+Een werkblad op zijn index ophalen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Haalt het werkblad op basis van het bijbehorende nummer op.
+                const mijnWerkblad = werkmap.getSheet(1)
+            `
+        },
+    ]}
+/>
+
+Om het totale aantal werkbladen op te halen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Totaal aantal werkbladen.
+                const totaalWerkbladen = werkmap.getNumberOfSheets()
+            `
+        },
+    ]}
+/>
+
+Om alle werkbladen in het document op te sommen.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Lijst alle werkbladen op.
+                const alleWerkbladen = werkmap.getAllSheets()
+                for (const werkblad of alleWerkbladen) {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                # Lijst alle werkbladen op.
+                alleWerkbladen = werkmap.getAllSheets()
+                for werkblad in alleWerkbladen:
+                    ...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                # Lijst alle werkbladen op.
+                alleWerkbladen = werkmap.getAllSheets()
+                alleWerkbladen.each do |werkblad|
+                    ...
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                // Lijst alle werkbladen op.
+                val alleWerkbladen = werkmap.getAllSheets()
+                alleWerkbladen.forEach {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                // Lijst alle werkbladen op.
+                def alleWerkbladen = werkmap.getAllSheets()
+                for (werkblad in alleWerkbladen) {
+                    ...
+                }
+            `
+        },
+    ]}
+/>
+
+> Documentatie met alle methoden van het object voor <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFSheet.html" target="_blank">Werkblad in Apache POI</a>.
+
+## Bestand genereren
+
+Met de methoden `save` en `output` wordt de binaire inhoud van het uiteindelijke bestand gegenereerd.
+
+Verstuurt het gegenereerde bestand als data-uitvoer (`output`) van de service:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                werkmap.output("bestand.xlsx")
+            `
+        },
+    ]}
+/>
+
+Om het gegenereerde bestand op te slaan in de map `storage/filesystem` van de applicatie:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                werkmap.save(_storage.filesystem("server", "bestand.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Om het gegenereerde bestand op te slaan in de map `/tmp` via het bestandssysteem van de harde schijf:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                werkmap.save(_os.file("/tmp/bestand.xlsx"))
+            `
+        },
+    ]}
+/>
+
+## Bestand bewerken
+
+We kunnen bestanden bewerken door ze te openen, de nodige wijzigingen aan te brengen en daarna het nieuwe bewerkte bestand op te slaan.
+
+Hieronder volgen enkele voorbeelden van hoe je bestanden kunt openen.
+
+Een bestand in de hoofdmap van de applicatie openen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const werkmap = _xls.open(_app.file("bestand.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Om het gegenereerde bestand in de map `storage/filesystem` van de applicatie te openen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const werkmap = _xls.open(_storage.filesystem("server", "bestand.xlsx"))
+            `
+        },
+    ]}
+/>
+
+En ook om het bestand in de map `/tmp` via het bestandssysteem van de harde schijf te openen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const werkmap = _xls.open(_os.file("/tmp/bestand.xlsx"))
+            `
+        },
+    ]}
+/>
+
+In de bovenstaande voorbeelden bevat de constante `werkmap` het bewerkingsobject met de context van het betreffende bestand, zodat je elk type manipulatie kunt uitvoeren.
+
+Wanneer je klaar bent met de wijzigingen, genereer je het nieuwe bestand.
+
+> Het is niet mogelijk hetzelfde geopende bestand rechtstreeks te wijzigen; er moet een nieuw bestand met een ander pad worden gegenereerd.
+
+Om hetzelfde bestand rechtstreeks te wijzigen, kan dit met de `inputStream`.
+
+Hier volgt een voorbeeld van hoe je de waarde van een cel wijzigt:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const bestandInvoer = _app.file("bestand.xlsx").inputStream()
+                const werkmap = _xls.open(bestandInvoer)
+
+                werkmap.setCellData(
+                    10, 1,
+                    _val.map()
+                        .set(
+                            "value",
+                            werkmap.getCellData(10, 1).getInt("value") + 10
+                        )
+                )
+
+                bestandInvoer.close() // Sluit het geopende bestand.
+                werkmap.save(_app.file("bestand.xlsx")) // Slaat de nieuwe versie op.
+                `
+        },
+    ]}
+/>
+
+## Bestand lezen
+
+Het extraheren van gegevens uit Excel-bestanden gebeurt met de methode `read`.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const gegevens = _xls.read(_app.file("bestand.xlsx"))
+            `
+        },
+    ]}
+/>
+
+De gegevens worden verkregen in een structuur van objecten van het type Values met lijsten voor de werkbladen, rijen en kolommen, en maps (sleutel en waarde) voor de cellen.
+
+Om alle gegevens te bekijken kunnen we ze als data-uitvoer van de service plaatsen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.json(gegevens)
+            `
+        },
+    ]}
+/>
+
+Om de iteratie uit te voeren moeten we in gedachten houden dat de gegevensstructuur in de volgende volgorde is georganiseerd:
+
+1. `sheets` - Werkbladen
+2. `rows` - Rijen
+3. `columns` - Kolommen
+
+Voorbeeld van een volledige iteratie:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const werkblad of gegevens.getValues("sheets")) {
+                    _out.println(\`<h4>Werkblad: \${werkblad.getInt("index")} - \${werkblad.getString("name")}</h4>\`)
+                    for (const rij of werkblad.getValues("rows")) {
+                        _out.println(\`<h4>Rij: \${rij.getInt("row")}</h4>\`)
+                        _out.println("<p>")
+                        for (const kolom of rij.getValues("columns")) {
+                            _out.print(\`\${kolom.getInt("row")}:\${kolom.getInt("column")}\`)
+                            _out.print(\` # \${kolom.getString("address")}\`)
+                            _out.print(\` # \${kolom.getString("type")}\`)
+                            _out.print(\` # \${kolom.getString("value")}\`)
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for werkblad in gegevens.getValues("sheets"):
+                    _out.println(f"<h4>Werkblad: {werkblad.getInt('index')} - {werkblad.getString('name')}</h4>")
+                    for rij in werkblad.getValues("rows"):
+                        _out.println(f"<h4>Rij: {rij.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for kolom in rij.getValues("columns"):
+                            _out.print(f"{kolom.getInt('row')}:{kolom.getInt('column')}")
+                            _out.print(f" # {kolom.getString('address')}")
+                            _out.print(f" # {kolom.getString('type')}")
+                            _out.print(f" # {kolom.getString('value')}")
+                            _out.println("<br>")
+                        _out.println("</p>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                gegevens.getValues("sheets").each do |werkblad|
+                    _out.println("<h4>Werkblad: #{werkblad.getInt("index")} - #{werkblad.getString("name")}</h4>")
+                    werkblad.getValues("rows").each do |rij|
+                        _out.println("<h4>Rij: #{rij.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        rij.getValues("columns").each do |kolom|
+                            _out.print("#{kolom.getInt("row")}:#{kolom.getInt("column")}")
+                            _out.print(" # #{kolom.getString("address")}")
+                            _out.print(" # #{kolom.getString("type")}")
+                            _out.print(" # #{kolom.getString("value")}")
+                            _out.println("<br>")
+                        end
+                        _out.println("</p>")
+                    end
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                gegevens.getValues("sheets").forEach {
+                    val werkblad = it
+                    _out.println("<h4>Werkblad: \${werkblad.getInt("index")} - \${werkblad.getString("name")}</h4>")
+                    werkblad.getValues("rows").forEach {
+                        val rij = it
+                        _out.println("<h4>Rij: \${rij.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        rij.getValues("columns").forEach {
+                            val kolom = it
+                            _out.print("\${kolom.getInt("row")}:\${kolom.getInt("column")}")
+                            _out.print(" # \${kolom.getString("address")}")
+                            _out.print(" # \${kolom.getString("type")}")
+                            _out.print(" # \${kolom.getString("value")}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (werkblad in gegevens.getValues("sheets")) {
+                    _out.println("<h4>Werkblad: \${werkblad.getInt('index')} - \${werkblad.getString('name')}</h4>")
+                    for (rij in werkblad.getValues("rows")) {
+                        _out.println("<h4>Rij: \${rij.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for (kolom in rij.getValues("columns")) {
+                            _out.print("\${kolom.getInt('row')}:\${kolom.getInt('column')}")
+                            _out.print(" # \${kolom.getString('address')}")
+                            _out.print(" # \${kolom.getString('type')}")
+                            _out.print(" # \${kolom.getString('value')}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+    ]}
+/>
+
+Het celtype wordt verkregen via de code:
+
+- `kolom.getString("type")`
+
+En de ondersteunde typen zijn:
+
+- `string` - Tekstinhoud.
+- `numeric` - Numerieke inhoud of datum en/of tijd.
+- `boolean` - Waar of onwaar.
+- `blank` - Lege cel.
+- `formula` - Cel die een formule bevat.
+- `error` - Fout bij het verwerken van de cel.
+
+### Aanvullende parameters
+
+Voor elk celtype hebben we enkele aanvullende parameters.
+
+`string` - Celtype met tekstuele inhoud.
+
+- `value` - Tekst van de cel.
+- `richValue` - Opmaak van de cel.
+
+`numeric` - Celtype met numerieke inhoud, of datums en ook tijden.
+
+- `value` - Waarde van de numerieke inhoud van de cel.
+  
+Bij datums en tijden zijn er nog deze aanvullende parameters:
+
+- `localDateTime` - Java Time LocalDateTime-object dat de datum- en tijdwaarde van de cel voorstelt.
+- `localDate` - Java Time LocalDate-object dat de datumwaarde van de cel voorstelt.
+- `localTime` - Java Time LocalTime-object dat de tijdwaarde van de cel voorstelt.
+- `instant` - Java Time Instant-object dat de datum- en/of tijdwaarde van de cel voorstelt.
+- `date` - Java Date-object dat de datum- en/of tijdwaarde van de cel voorstelt.
+
+`boolean` - Celtype met booleaanse inhoud, dat wil zeggen waar of onwaar.
+
+- `value` - Waarde van het type _boolean_, `true` of `false`.
+
+`blank` - Celtype zonder inhoud; bevat daarom geen aanvullende parameters.
+
+`formula` - Celtype dat berekeningsformules bevat.
+
+- `value` - Eindwaarde die uit de berekening resulteert.
+- `formula` - Bevat de formule-expressie die voor de berekening is gebruikt.
+
+`error` - Celtype dat een fout bevat.
+
+- `value` - Bytewaarde van de gegenereerde fout.
+- `code` - Als er fouten zijn in de formuleberekening, wordt hier de code van de opgetreden fout gegeven.
+
+## Video's
+
+Hier volgen enkele voorbeeldvideo's over hoe je Excel/XLSX-bestanden programmatisch kunt genereren:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/nTnoqEpLghQ?si=8engICqRqNFUPi_i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

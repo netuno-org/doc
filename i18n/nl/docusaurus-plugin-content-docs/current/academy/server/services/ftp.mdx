@@ -1,0 +1,379 @@
+---
+id: ftp
+title: FTP-client
+sidebar_label: FTP-client
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Bestanden uploaden en downloaden, externe mappen beheren.
+
+## Inleiding
+
+Netuno heeft een FTP-client geïntegreerd in zijn low-code framework, waarmee je verbinding kunt maken met servers, bestanden kunt verzenden en ontvangen, mappen kunt wijzigen, en andere externe bewerkingen kunt uitvoeren.
+
+Het ondersteunt meerdere gelijktijdige verbindingen en ook FTPS.
+
+Dit dankzij de Java- en open-source implementatie [Apache Commons Net](https://github.com/apache/commons-net), waarmee Netuno deze functionaliteiten in alle _script_-talen kan bieden via de `_ftp`-resource.
+
+> Meer over de [FTP](/docs/library/resources/ftp)-resource van Netuno.
+
+## Configuratie
+
+De eerste stap is het configureren van de FTP-toegangsgegevens die Netuno zal gebruiken om de verbinding tot stand te brengen.
+
+Navigeer binnen de applicatie die je aan het ontwikkelen bent naar het configuratiebestand van de omgeving. In dit voorbeeld gebruiken we het ontwikkelomgevingsbestand dat zich bevindt op:
+
+- `config/_development.json`
+
+Controleer of het nog geen FTP-instellingen bevat; als die er nog niet zijn, voeg dan aan het einde van het configuratiebestand (in JSON-formaat) de FTP-configuratieparameters toe:
+
+```json title="config/_development.json"
+{
+  ...
+  "ftp": {
+    "default": {
+      "enabled": true,
+      "host": "mijn.server.net",
+      "port": 21,
+      "username": "temp",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+Na het opslaan van de wijzigingen volstaat het om Netuno opnieuw op te starten om de configuratiewijzigingen over te nemen. Dit zijn de standaardinstellingen voor de verbinding, zoals de naam `default` aangeeft.
+
+Je kunt meer FTP-verbindingsinstellingen toevoegen, maar slechts één kan als standaard worden ingesteld.
+
+Om meer FTP-verbindingsinstellingen toe te voegen, herhaal je gewoon het standaardconfiguratieblok en vervang je de naam `default` door een andere naam naar keuze, zie het voorbeeld:
+
+```json title="config/_development.json"
+{
+  ...
+  "ftp": {
+    "default": {
+      "enabled": true,
+      "host": "mijn.server.net",
+      "port": 22,
+      "username": "temp",
+      "password": "$eCr37"
+    },
+    "anders": {
+      "enabled": true,
+      "host": "mijn.andere-server.net",
+      "port": 22,
+      "username": "temp",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+Een configuratie vergelijkbaar met het bovenstaande voorbeeld maakt het mogelijk om de standaardaccount te gebruiken wanneer deze als volgt in de code wordt aangeroepen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ftp = _ftp.init()
+            `
+        },
+    ]}
+/>
+
+En om de configuratie `anders` te gebruiken, voeg je gewoon de naam van de configuratie toe als parameter aan de functie `_ftp.init()` als volgt:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ftpAnders = _ftp.init("anders")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ftpAnders = _ftp.init("anders")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftpAnders = _ftp.init("anders")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ftpAnders = _ftp.init("anders")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ftpAnders = _ftp.init("anders")
+            `
+        },
+    ]}
+/>
+
+> Als je geen configuratienaam als parameter toevoegt, wordt altijd de standaardaccount gebruikt.
+
+## Verbinding
+
+Voordat je iets doet, moet je de FTP-verbinding starten:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.connect()
+            `
+        },
+    ]}
+/>
+
+## Werkmap
+
+Bij het uitvoeren van bewerkingen op de FTP moet je opgeven welke map gebruikt wordt.
+
+Door de werkmap te definiëren kunnen we de diverse manipulaties uitvoeren vanuit deze basismap.
+
+Om de werkmap te wijzigen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.changeWorkingDirectory("mijn/map/basis")
+            `
+        },
+    ]}
+/>
+
+Nu wordt elke bewerking uitgevoerd in of vanuit deze map.
+
+## Mappen aanmaken en verwijderen
+
+Bij het aanmaken van een map volstaat het om het pad van deze map op te geven:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.createDirectory("tijdelijke-map")
+                ftp.createDirectory("tijdelijke-map/sub-map")
+            `
+        },
+    ]}
+/>
+
+Om mappen te verwijderen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.deleteDirectory("tijdelijke-map/sub-map")
+                ftp.deleteDirectory("tijdelijke-map")
+            `
+        },
+    ]}
+/>
+
+## Hernoemen
+
+Het is mogelijk om bestanden of mappen te hernoemen; het oude pad wordt opgegeven en daarna het nieuwe pad:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.rename("oude-naam", "nieuwe-naam")
+            `
+        },
+    ]}
+/>
+
+## Bestanden uploaden
+
+Om een tekstbestand te uploaden:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.uploadText("mijn-bestand.txt", "Hallo FTP! Dit is mijn inhoud...")
+            `
+        },
+    ]}
+/>
+
+## Bestanden downloaden
+
+Om een tekstbestand op te halen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const bestandInhoud = ftp.downloadText("mijn-bestand.txt")
+                _out.println(bestandInhoud)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                bestandInhoud = ftp.downloadText("mijn-bestand.txt")
+                _out.println(bestandInhoud)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                bestandInhoud = ftp.downloadText("mijn-bestand.txt")
+                _out.println(bestandInhoud)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val bestandInhoud = ftp.downloadText("mijn-bestand.txt")
+                _out.println(bestandInhoud)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def bestandInhoud = ftp.downloadText("mijn-bestand.txt")
+                _out.println(bestandInhoud)
+            `
+        },
+    ]}
+/>
+
+## Items in de map weergeven
+
+Toont alle inhoud van een map:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const i of ftp.list("pad/map")) {
+                    if (i.isDirectory()) {
+                        _out.print("Map: ")
+                    } else if (i.isFile()) {
+                        _out.print("Bestand: ")
+                    } else {
+                        _out.print("Overig: ")
+                    }
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for i in ftp.list("pad/map"):
+                    if i.isDirectory():
+                        _out.print("Map: ")
+                    elif i.isFile():
+                        _out.print("Bestand: ")
+                    else:
+                        _out.print("Overig: ")
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftp.list("pad/map").each do |i|
+                    if i.isDirectory()
+                        _out.print("Map: ")
+                    elsif i.isFile()
+                        _out.print("Bestand: ")
+                    else
+                        _out.print("Overig: ")
+                    end
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                ftp.list("pad/map").forEach {
+                    if (it.isDirectory()) {
+                        _out.print("Map: ")
+                    } else if (it.isFile()) {
+                        _out.print("Bestand: ")
+                    } else {
+                        _out.print("Overig: ")
+                    }
+                    _out.println(it.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (i in ftp.list("pad/map")) {
+                    if (i.isDirectory()) {
+                        _out.print("Map: ")
+                    } else if (i.isFile()) {
+                        _out.print("Bestand: ")
+                    } else {
+                        _out.print("Overig: ")
+                    }
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+    ]}
+/>
+
+> Retourneert een lijst met objecten van het type [FTPFile](/docs/library/objects/FTPFile).

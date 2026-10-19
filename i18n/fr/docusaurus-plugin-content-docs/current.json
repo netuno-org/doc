@@ -59,11 +59,19 @@
     "message": "Tutoriels sur les ressources utilisées dans les services.",
     "description": "La description de page generated-index pour la catégorie Service dans la barre latérale academySidebar"
   },
+  "sidebar.academySidebar.category.Java Core": {
+    "message": "Java Core",
+    "description": "The label for category Java Core in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Java Core.link.generated-index.description": {
+    "message": "Tutoriels sur le backend intégré au développement low-code polyglotte.",
+    "description": "The generated-index page description for category Java Core in sidebar academySidebar"
+  },
   "sidebar.academySidebar.category.Website Frontend": {
     "message": "Frontend du site web",
     "description": "L'étiquette pour la catégorie Frontend du site web dans la barre latérale academySidebar"
   },
-  "sidebar.academySidebar.category.Website - Frontend.link.generated-index.description": {
+  "sidebar.academySidebar.category.Website Frontend.link.generated-index.description": {
     "message": "Développement frontend avancé et intégrations.",
     "description": "La description de page generated-index pour la catégorie Frontend du site web dans la barre latérale academySidebar"
   },

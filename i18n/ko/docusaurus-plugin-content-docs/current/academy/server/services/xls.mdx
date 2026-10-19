@@ -1,0 +1,1002 @@
+---
+id: xls
+title: XLS - Excel
+sidebar_label: XLS - Excel
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+사용자 정의 Excel 파일 처리.
+
+## 소개
+
+Netuno는 [XLS](/docs/library/resources/xls) 리소스를 통해 LibreOffice, OpenOffice, Microsoft Office, Google Drive 등과 호환되는 EXCEL 파일을 생성하며, 이 리소스는 Netuno에서 지원하는 다양한 프로그래밍 언어에 대해 [Apache POI](https://poi.apache.org/)의 로우 코드 추상화를 제공합니다.
+
+XLSX, XLS 또는 ODS 파일을 생성할 수 있습니다.
+
+Netuno와 함께 제공되는 **demo**(데모 애플리케이션)에는 여러 언어의 다양한 코드 구현 예제가 포함되어 있으며, 다음 위치에 있는 `export-excel` 서비스를 통한 스프레드시트 내보내기 데모도 포함되어 있습니다:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/export-excel`
+]} />
+
+## 초기화
+
+XLS 리소스를 초기화하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 엑셀 = _xls.create()
+            `
+        },
+    ]}
+/>
+
+빈 스프레드시트 한 개가 포함된, 새로 생성할 파일의 컨텍스트를 담은 객체를 만듭니다.
+
+## 서식
+
+날짜, 시간, 금액 등과 같은 시각적 서식 스타일의 정의는 셀 값을 정의하기 전에 수행해야 합니다. 셀 값을 정의할 때 해당 서식 스타일을 함께 연결할 수 있기 때문입니다.
+
+따라서 `demo` 애플리케이션에 포함된 예제에서 볼 수 있듯이, 서식은 코드 시작 부분에서 정의합니다.
+
+날짜 서식 지정:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 날짜스타일 = 엑셀.cellStyleFormat("dd/mm/yy")
+            `
+        },
+    ]}
+/>
+
+시간 서식 지정:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 시간스타일 = 엑셀.cellStyleFormat("hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+날짜와 시간 서식 지정:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 날짜시간스타일 = 엑셀.cellStyleFormat("dd/mm/yyyy hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+**유로** 금액 서식 지정:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 유로화폐스타일 = 엑셀.cellStyleFormat("€#,##0.00;\\-€#,##0.00")
+            `
+        },
+    ]}
+/>
+
+**레알** 금액 서식 지정:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 레알화폐스타일 = 엑셀.cellStyleFormat("R$#,##0.00;\\-R$#,##0.00")
+            `
+        },
+    ]}
+/>
+
+**백분율** 값 서식 지정:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 백분율스타일 = 엑셀.cellStyleFormat("0.00%")
+            `
+        },
+    ]}
+/>
+
+## 모양
+
+색상, 글꼴, 테두리, 정렬 등과 같은 시각적 모양 스타일의 정의는 셀 값을 정의하기 전에 수행해야 합니다. 셀 값을 정의할 때 해당 모양 스타일을 함께 연결할 수 있기 때문입니다.
+
+따라서 `demo` 애플리케이션에 포함된 예제에서 볼 수 있듯이, 모양은 코드 시작 부분에서 정의합니다.
+
+색상 및 정렬 정의 예:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 헤더스타일 = 엑셀.cellStyle()
+                헤더스타일.setFillPattern(_xls.fillPattern("solid-foreground"))
+                헤더스타일.setFillBackgroundColor(엑셀.color("black"))
+                헤더스타일.setAlignment(_xls.horizontalAlignment("center"))
+            `
+        },
+    ]}
+/>
+
+> <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Apache POI의 스타일</a> 객체에 대한 모든 메서드 문서입니다.
+
+테두리 스타일 정의:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 데이터스타일 = 엑셀.cellStyle()
+                데이터스타일.setBorderBottom(_xls.borderStyle("thin"))
+                데이터스타일.setBorderTop(_xls.borderStyle("thin"))
+                데이터스타일.setBorderLeft(_xls.borderStyle("thin"))
+                데이터스타일.setBorderRight(_xls.borderStyle("thin"))
+            `
+        },
+    ]}
+/>
+
+> <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Apache POI의 스타일</a> 객체에 대한 모든 메서드 문서입니다.
+
+텍스트에 사용할 새 글꼴 스타일을 만들고, 글꼴 정의를 기존 특정 셀 스타일에 연결합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 제목폰트 = 엑셀.font()
+                제목폰트.setBold(true)
+                제목폰트.setFontHeightInPoints(14)
+                제목폰트.setColor(엑셀.color("yellow"))
+                // 헤더스타일의 글꼴을 정의합니다
+                헤더스타일.setFont(제목폰트)
+            `
+        },
+    ]}
+/>
+
+> <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFFont.html" target="_blank">Apache POI의 글꼴</a> 객체에 대한 모든 메서드 문서입니다.
+
+## 이미지
+
+애플리케이션 내부의 `storage/samples/export-excel/logo.png`에 있는 이미지를 스프레드시트에 삽입하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                엑셀.insertPicture(
+                    _storage.filesystem("server", "samples/export-excel", "logo.png"),
+                    1, // 열 번호
+                    1  // 행 번호
+                ).resize(2.3)
+            `
+        },
+    ]}
+/>
+
+애플리케이션의 `public/images/logo.png`에 있는 이미지를 삽입하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                엑셀.insertPicture(
+                    _app.file("public/images/logo.png"),
+                    10, // 열 번호
+                    1  // 행 번호
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+> <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/ss/usermodel/Picture.html" target="_blank">Apache POI의 이미지</a> 객체에 대한 모든 메서드 문서입니다.
+
+## 셀 병합
+
+영역의 셀을 병합하려면 `mergedRegion` 메서드를 사용합니다.
+
+매개변수 순서는 다음과 같습니다:
+
+1. 시작 행
+2. 시작 열
+3. 끝 행
+4. 끝 열
+
+> 위치의 숫자 참조는 항상 **0**에서 시작합니다.
+
+아래 예에서는 3행에 있는 10번 열부터 15번 열까지의 모든 셀을 병합합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                엑셀.mergedRegion(2, 9, 2, 14)
+            `
+        },
+    ]}
+/>
+
+## 셀
+
+셀을 나타내는 객체를 얻으려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // B열 2행에 있는 셀을 가져옵니다:
+                const 셀 = 엑셀.cell(1, 1)
+            `
+        },
+    ]}
+/>
+
+> 위치의 숫자 참조는 항상 **0**에서 시작합니다.
+
+셀 수식을 로그로 출력하는 예:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 2행 B열의 수식을 로그로 출력합니다.
+                _log.info(
+                    "B2 셀 수식: "+ 엑셀.cell(1, 1).getCellFormula()
+                )
+            `
+        },
+    ]}
+/>
+
+셀의 텍스트 값을 얻는 예:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 2행 B열 셀의 텍스트 값을 로그로 출력합니다.
+                _log.info(
+                    "B2 셀 값: "+ 엑셀.cell(1, 1).getStringCellValue()
+                )
+            `
+        },
+    ]}
+/>
+
+> <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCell.html" target="_blank">Apache POI의 셀</a> 객체에 대한 모든 메서드 문서입니다.
+
+## 행
+
+행을 나타내는 객체를 얻으려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 2행을 나타내는 객체를 가져옵니다.
+                const 행 = 엑셀.row(1)
+            `
+        },
+    ]}
+/>
+
+> 위치의 숫자 참조는 항상 **0**에서 시작합니다.
+
+위 예에서 행이 존재하지 않으면 새 행이 자동으로 생성됩니다.
+
+> <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFRow.html" target="_blank">Apache POI의 행</a> 객체에 대한 모든 메서드 문서입니다.
+
+## 표 형식 데이터 삽입
+
+`addDataTable` 메서드를 사용하여 데이터 표를 삽입할 수 있습니다.
+
+처음 두 매개변수는 데이터 표를 삽입할 위치를 정의하므로 행 번호와 열 번호입니다.
+
+> 코드에서 행과 열의 위치는 항상 **0**부터 시작합니다.
+>
+> 즉, 1행은 위치 `0`이고 A열도 위치 `0`입니다.
+
+다음으로 행 목록을 전달하며, 각 행에는 열을 위한 또 다른 목록이 포함되고, 그다음 셀 값을 담은 맵을 추가합니다.
+
+전체 예:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                엑셀.addDataTable(
+                    6, 1,
+                    _val.list() // 행
+                        .add(
+                            _val.list() // 열
+                                .add(
+                                    _val.map() // 셀
+                                        .set("value", "이름")
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "나이")
+                                )
+                        )
+                        .add( // 다른 행
+                            _val.list()
+                                .add( // 첫 번째 열
+                                    _val.map()
+                                        .set("value", "민지")
+                                )
+                                .add( // 두 번째 열
+                                    _val.map()
+                                        .set("value", 26)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### 모양
+
+셀 맵에서는 앞서 모양 및 서식 섹션에서 정의한 스타일을 사용하는 등, 이미 생성한 스타일을 연결할 수 있습니다.
+
+셀에 스타일을 연결하는 예는 다음과 같습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                엑셀.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map()
+                                        .set("value", "이름")
+                                        .set("style", 헤더스타일)
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "나이")
+                                        .set("style", 헤더스타일)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### 수식
+
+수식을 삽입하려면 셀 정의 맵에서 `formula` 키를 사용합니다.
+
+이 예에서는 마지막 셀에서 다른 모든 셀 값의 합계를 계산합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                엑셀.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "합계")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+열 번호로부터 열 문자를 얻으려면 `columnReference` 메서드를 사용할 수 있으며, 이는 수식 정의에 도움이 됩니다. 같은 메서드를 사용하여 참조 문자로부터 열 번호를 얻을 수도 있습니다. 예:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                엑셀.addDataTable(
+                    6, _xls.columnReference('B'),
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "합계")
+                                )
+                                .add(
+                                    _val.map().set(
+                                        "formula",
+                                        "SUM("+ _xls.columnReference(1) +"7:"+ _xls.columnReference(2) +"8)"
+                                )
+                            )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+## 시트
+
+문서 자체 내에 새 스프레드시트(_sheet_)를 만들려면 다음 예를 참고하십시오:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 새시트 = 엑셀.createSheet("새 시트")
+            `
+        },
+    ]}
+/>
+
+> 셀, 이미지 및 데이터 조작 메서드에서는 첫 번째 매개변수에 시트 객체 참조를 추가할 수 있습니다.
+>
+> 활성화된 시트에 따라 [activeSheet](/docs/library/resources/xls#activesheet) 메서드로 활성 시트를 변경할 수 있습니다.
+
+새 시트에 이미지를 삽입하는 예:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                엑셀.insertPicture(
+                    새시트,
+                    _app.file("public/images/logo.png"),
+                    10, // 열 번호
+                    1  // 행 번호
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+새 시트에 데이터 표를 삽입하는 예:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                엑셀.addDataTable(
+                    새시트,
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "합계")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### 활성화
+
+따라서 위 예제들처럼 메서드마다 처리할 시트를 계속 지정하지 않으려면, 대안으로 활성 시트를 지정할 수 있습니다.
+
+> 셀, 이미지 및 데이터 조작 메서드는 특정 시트를 지정하지 **않은** 경우 활성화된 시트를 사용합니다.
+
+특정 시트를 활성화하는 두 가지 방법을 확인하십시오. 먼저 객체 참조를 사용하고, 다음으로 시트 인덱스를 사용합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                엑셀.activeSheet(내시트) // 시트 참조 객체.
+                엑셀.activeSheet(1) // 활성화할 시트 인덱스.
+            `
+        },
+    ]}
+/>
+
+### 유용한 기능
+
+시트 조작에 유용한 다른 메서드의 예입니다.
+
+이름으로 시트 가져오기:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 이름으로 시트를 가져옵니다.
+                const 내시트 = 엑셀.getSheet("시트 이름")
+            `
+        },
+    ]}
+/>
+
+인덱스로 시트 가져오기:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 해당 번호로 시트를 가져옵니다.
+                const 내시트 = 엑셀.getSheet(1)
+            `
+        },
+    ]}
+/>
+
+전체 시트 수를 얻으려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 전체 시트 수.
+                const 시트수 = 엑셀.getNumberOfSheets()
+            `
+        },
+    ]}
+/>
+
+문서에 존재하는 모든 시트를 나열하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 모든 시트를 나열합니다.
+                const 모든시트 = 엑셀.getAllSheets()
+                for (const 시트 of 모든시트) {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                # 모든 시트를 나열합니다.
+                모든시트 = 엑셀.getAllSheets()
+                for 시트 in 모든시트:
+                    ...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                # 모든 시트를 나열합니다.
+                모든시트 = 엑셀.getAllSheets()
+                모든시트.each do |시트|
+                    ...
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                // 모든 시트를 나열합니다.
+                val 모든시트 = 엑셀.getAllSheets()
+                모든시트.forEach {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                // 모든 시트를 나열합니다.
+                def 모든시트 = 엑셀.getAllSheets()
+                for (시트 in 모든시트) {
+                    ...
+                }
+            `
+        },
+    ]}
+/>
+
+> <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFSheet.html" target="_blank">Apache POI의 시트</a> 객체에 대한 모든 메서드 문서입니다.
+
+## 파일 생성
+
+`save` 및 `output` 메서드에서 최종 파일의 바이너리가 생성됩니다.
+
+생성된 파일을 서비스의 데이터 출력(`output`)으로 전송합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                엑셀.output("파일.xlsx")
+            `
+        },
+    ]}
+/>
+
+생성된 파일을 애플리케이션의 `storage/filesystem` 폴더에 저장하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                엑셀.save(_storage.filesystem("server", "파일.xlsx"))
+            `
+        },
+    ]}
+/>
+
+생성된 파일을 HD 파일 시스템의 `/tmp` 폴더에 저장하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                엑셀.save(_os.file("/tmp/파일.xlsx"))
+            `
+        },
+    ]}
+/>
+
+## 파일 편집
+
+파일을 열어 필요한 변경을 수행한 다음 편집된 새 파일을 저장하여 파일을 편집할 수 있습니다.
+
+다음은 파일을 여는 방법에 대한 몇 가지 예입니다.
+
+애플리케이션 루트의 파일 열기:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 엑셀 = _xls.open(_app.file("파일.xlsx"))
+            `
+        },
+    ]}
+/>
+
+애플리케이션의 `storage/filesystem` 폴더에 있는 파일을 열려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 엑셀 = _xls.open(_storage.filesystem("server", "파일.xlsx"))
+            `
+        },
+    ]}
+/>
+
+또한 HD 파일 시스템의 `/tmp` 폴더에 있는 파일을 열려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 엑셀 = _xls.open(_os.file("/tmp/파일.xlsx"))
+            `
+        },
+    ]}
+/>
+
+위 예에서 `엑셀` 상수에는 해당 파일의 컨텍스트를 가진 편집 객체가 포함되므로, 어떤 종류의 조작이든 수행할 수 있습니다.
+
+변경을 완료하면 새 파일 생성을 수행하십시오.
+
+> 열린 동일한 파일을 직접 변경할 수 없으며, 다른 경로로 새 파일을 생성해야 합니다.
+
+동일한 파일을 직접 변경하려면 `inputStream`을 사용할 수 있습니다.
+
+셀 값을 변경하는 예는 다음과 같습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 파일입력 = _app.file("파일.xlsx").inputStream()
+                const 엑셀 = _xls.open(파일입력)
+
+                엑셀.setCellData(
+                    10, 1,
+                    _val.map()
+                        .set(
+                            "value",
+                            엑셀.getCellData(10, 1).getInt("value") + 10
+                        )
+                )
+
+                파일입력.close() // 열린 파일을 닫습니다.
+                엑셀.save(_app.file("파일.xlsx")) // 새 버전을 저장합니다.
+                `
+        },
+    ]}
+/>
+
+## 파일 읽기
+
+Excel 파일의 데이터 추출은 `read` 메서드로 수행합니다.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 데이터 = _xls.read(_app.file("파일.xlsx"))
+            `
+        },
+    ]}
+/>
+
+데이터는 시트, 행 및 열을 위한 목록과 셀을 위한 맵(키와 값)을 포함하는 Values 유형 객체 구조로 얻습니다.
+
+모든 데이터를 확인하려면 서비스의 데이터 출력으로 넣을 수 있습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.json(데이터)
+            `
+        },
+    ]}
+/>
+
+반복 처리를 수행하려면 데이터 구조가 다음 순서로 구성된다는 점을 기억해야 합니다:
+
+1. `sheets` - 시트
+2. `rows` - 행
+3. `columns` - 열
+
+전체 반복 처리 예:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const 시트 of 데이터.getValues("sheets")) {
+                    _out.println(\`<h4>시트: \${시트.getInt("index")} - \${시트.getString("name")}</h4>\`)
+                    for (const 행 of 시트.getValues("rows")) {
+                        _out.println(\`<h4>행: \${행.getInt("row")}</h4>\`)
+                        _out.println("<p>")
+                        for (const 열 of 행.getValues("columns")) {
+                            _out.print(\`\${열.getInt("row")}:\${열.getInt("column")}\`)
+                            _out.print(\` # \${열.getString("address")}\`)
+                            _out.print(\` # \${열.getString("type")}\`)
+                            _out.print(\` # \${열.getString("value")}\`)
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for 시트 in 데이터.getValues("sheets"):
+                    _out.println(f"<h4>시트: {시트.getInt('index')} - {시트.getString('name')}</h4>")
+                    for 행 in 시트.getValues("rows"):
+                        _out.println(f"<h4>행: {행.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for 열 in 행.getValues("columns"):
+                            _out.print(f"{열.getInt('row')}:{열.getInt('column')}")
+                            _out.print(f" # {열.getString('address')}")
+                            _out.print(f" # {열.getString('type')}")
+                            _out.print(f" # {열.getString('value')}")
+                            _out.println("<br>")
+                        _out.println("</p>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                데이터.getValues("sheets").each do |시트|
+                    _out.println("<h4>시트: #{시트.getInt("index")} - #{시트.getString("name")}</h4>")
+                    시트.getValues("rows").each do |행|
+                        _out.println("<h4>행: #{행.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        행.getValues("columns").each do |열|
+                            _out.print("#{열.getInt("row")}:#{열.getInt("column")}")
+                            _out.print(" # #{열.getString("address")}")
+                            _out.print(" # #{열.getString("type")}")
+                            _out.print(" # #{열.getString("value")}")
+                            _out.println("<br>")
+                        end
+                        _out.println("</p>")
+                    end
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                데이터.getValues("sheets").forEach {
+                    val 시트 = it
+                    _out.println("<h4>시트: \${시트.getInt("index")} - \${시트.getString("name")}</h4>")
+                    시트.getValues("rows").forEach {
+                        val 행 = it
+                        _out.println("<h4>행: \${행.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        행.getValues("columns").forEach {
+                            val 열 = it
+                            _out.print("\${열.getInt("row")}:\${열.getInt("column")}")
+                            _out.print(" # \${열.getString("address")}")
+                            _out.print(" # \${열.getString("type")}")
+                            _out.print(" # \${열.getString("value")}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (시트 in 데이터.getValues("sheets")) {
+                    _out.println("<h4>시트: \${시트.getInt('index')} - \${시트.getString('name')}</h4>")
+                    for (행 in 시트.getValues("rows")) {
+                        _out.println("<h4>행: \${행.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for (열 in 행.getValues("columns")) {
+                            _out.print("\${열.getInt('row')}:\${열.getInt('column')}")
+                            _out.print(" # \${열.getString('address')}")
+                            _out.print(" # \${열.getString('type')}")
+                            _out.print(" # \${열.getString('value')}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+    ]}
+/>
+
+셀 유형은 다음 코드로 얻습니다:
+
+- `열.getString("type")`
+
+지원되는 유형은 다음과 같습니다:
+
+- `string` - 텍스트 내용.
+- `numeric` - 숫자 또는 날짜 및/또는 시간 내용.
+- `boolean` - 참 또는 거짓.
+- `blank` - 빈 셀.
+- `formula` - 수식을 포함하는 셀.
+- `error` - 셀 처리 오류.
+
+### 추가 매개변수
+
+각 셀 유형에는 몇 가지 추가 매개변수가 있습니다.
+
+`string` - 텍스트 내용을 가진 셀 유형.
+
+- `value` - 셀 텍스트.
+- `richValue` - 셀 서식.
+
+`numeric` - 숫자 내용 또는 날짜 및 시간을 가진 셀 유형.
+
+- `value` - 셀의 숫자 내용 값.
+  
+날짜와 시간의 경우 다음 추가 매개변수가 더 있습니다:
+
+- `localDateTime` - 셀의 날짜 및 시간 값을 나타내는 Java Time LocalDateTime 객체.
+- `localDate` - 셀의 날짜 값을 나타내는 Java Time LocalDate 객체.
+- `localTime` - 셀의 시간 값을 나타내는 Java Time LocalTime 객체.
+- `instant` - 셀의 날짜 및/또는 시간 값을 나타내는 Java Time Instant 객체.
+- `date` - 셀의 날짜 및/또는 시간 값을 나타내는 Java Date 객체.
+
+`boolean` - 불리언 내용, 즉 참 또는 거짓을 가진 셀 유형.
+
+- `value` - _boolean_ 유형의 값, `true` 또는 `false`.
+
+`blank` - 내용이 없는 셀 유형이므로 추가 매개변수가 없습니다.
+
+`formula` - 계산 수식을 포함하는 셀 유형.
+
+- `value` - 계산의 최종 결과 값.
+- `formula` - 계산에 사용된 수식 표현을 포함합니다.
+
+`error` - 오류를 포함하는 셀 유형.
+
+- `value` - 발생한 오류의 바이트 값.
+- `code` - 수식 계산에 오류가 있는 경우 발생한 오류 코드를 여기에 제공합니다.
+
+## 동영상
+
+프로그래밍 방식으로 Excel/XLSX 파일을 생성하는 방법에 대한 예시 동영상은 다음과 같습니다:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/nTnoqEpLghQ?si=8engICqRqNFUPi_i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -1,0 +1,8 @@
+{
+  "label": "라이브러리",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "모든 리소스와 객체."
+  }
+}

@@ -1,0 +1,344 @@
+---
+id: altcha
+title: Altcha
+sidebar_label: Altcha
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Альтернатива reCaptcha с открытым исходным кодом.
+
+## Введение
+
+Реализация механизма безопасности с капчей имеет огромное значение; вот несколько важных причин:
+
+- Предотвращать автоматические обращения роботов к эндпоинтам API.
+- Гарантировать, что доступ осуществляется реальным человеком.
+- Также гарантировать, что доступ был выполнен через браузер.
+
+Долгое время механизм капчи предлагал пользователю задачу, которую нужно было решить.
+
+Сегодня в этом нет необходимости, потому что используется механизм зашифрованных ключей в сочетании с задачей, которую должен решить алгоритм, использующий взаимодействие в браузере, и таким образом определяется, является ли взаимодействие человеческим или роботизированным.
+
+> Этот метод остроумен и надёжен: всего одним кликом определяется, человек это или робот.
+
+[Altcha](https://altcha.org/) — это проект с открытым исходным кодом, который реализует этот процесс безопасности: фронтенд-виджет, который также интегрируется с React, и серверную часть, которую предоставляет Netuno.
+
+## Ограничения
+
+[Altcha](https://altcha.org/) использует [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API),
+работает только на защищённых HTTPS-адресах с SSL-сертификатом или локально.
+
+> На фронтенде, если домен не `localhost`, URL обязательно должен быть защищённым HTTPS с SSL-сертификатом.
+
+Когда к фронтенду обращаются локально, браузеры разрешают использовать [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API)
+только по локальному адресу, обязательно `localhost`; в противном случае требуется защищённый HTTPS с SSL-сертификатом.
+
+## Бэк-офис
+
+Чтобы включить аутентификацию с [Altcha](https://altcha.org/) в бэк-офисе вашего приложения Netuno, используйте
+следующую конфигурацию приложения:
+
+```json title="config/_[ОКРУЖЕНИЕ].json"
+{
+  ...
+  "auth": {
+    "altcha": {
+      "admin": {
+        "enabled": true
+      }
+    }
+  },
+  ...
+}
+```
+
+Готово: теперь достаточно открыть экран входа в бэк-офис, и вы увидите _чекбокс_ [Altcha](https://altcha.org/) в работе.
+
+### Как это работает
+
+Netuno предоставляет в REST API стандартный сервис, который передаёт параметры [Altcha](https://altcha.org/) на
+фронтенд; обычно адрес этого сервиса:
+
+- `http://localhost:9000/services/_altcha`
+
+С этими параметрами виджет [Altcha](https://altcha.org/) на фронтенде генерирует результат решения задачи с цифровой подписью, который
+отправляется на бэкенд в скрытом поле формы `altcha`.
+
+На бэкенде проверяется, действительно ли результат и цифровая подпись корректны.
+
+### Виджет в HTML
+
+Пример интеграции виджета в HTML страницы входа бэк-офиса:
+
+```html title="login.html"
+<script type="text/javascript" src="/scripts/plugins/altcha/altcha.i18n.umd.min.cjs"></script>
+<form ...>
+  <input id="inputAltcha" type="hidden" name="altcha" value="">
+  <altcha-widget id="widgetAltcha"
+    challenge="/services/_altcha" language="ru"
+    hideLogo hideFooter></altcha-widget>
+  <script>
+    document.getElementById("widgetAltcha").addEventListener("statechange", function (e) {
+      if (e.detail.state === "verified") {
+        document.getElementById("inputAltcha").value = e.detail.payload;
+      }
+    }, false);
+  </script>
+  ...
+</form>
+```
+
+Обратите внимание: URL в атрибуте `challenge` виджета — это автоматически созданный Netuno сервис с
+параметрами задачи.
+
+## Внешняя аутентификация
+
+Аутентификация, обычно реализуемая безопасно с помощью JWT, использует стандартный сервис REST API для
+аутентификации, который обычно имеет адрес:
+
+- `http://localhost:9000/services/_auth`
+
+Этот автоматически созданный Netuno сервис обеспечивает безопасность внешней аутентификации с встроенным JWT, но
+также проверяет результат решения задачи виджета капчи.
+
+Чтобы включить [Altcha](https://altcha.org/) при аутентификации, добавьте конфигурацию:
+
+```json title="config/_[ОКРУЖЕНИЕ].json"
+{
+  ...
+  "auth": {
+    "altcha": {
+      "enabled": true
+    }
+  },
+  ...
+}
+```
+
+Таким образом, успешно аутентифицироваться смогут только запросы аутентификации, то есть логины, которые отправляют действительный ключ результата решения задачи, сгенерированный
+[Altcha](https://altcha.org/); иначе вход будет заблокирован.
+
+> На фронтенде должен быть интегрирован виджет [Altcha](https://altcha.org/), а ключ результата решения
+> задачи — отправлен в поле `altcha`.
+
+### Виджет в React
+
+Ниже показано, как интегрировать виджет в React:
+
+Добавьте зависимость [Altcha](https://altcha.org/):
+
+- `bun add altcha`
+
+Импортируйте [Altcha](https://altcha.org/) в код:
+
+```jsx title="website/src/pages/Login/index.jsx"
+import "altcha/i18n";
+```
+
+Создайте состояние для хранения ключа результата решения задачи:
+
+```jsx title="website/src/pages/Login/index.jsx"
+const [altchaPayload, setAltchaPayload] = useState(null);
+```
+
+Создайте внутренний ref компонента React для виджета:
+
+```jsx title="website/src/pages/Login/index.jsx"
+const altcha = useRef(null);
+```
+
+Добавьте эффект загрузки компонента, использующий ref виджета, с событием, которое отслеживает
+нажатие чекбокса виджета, чтобы загрузить ключ результата решения задачи в состояние:
+
+```jsx title="website/src/pages/Login/index.jsx"
+useEffect(() => {
+  if (altcha && altcha.current) {
+    function altchaVerified(ev) {
+      if (ev.detail.state === "verified") {
+        setAltchaPayload(ev.detail.payload);
+      }
+    }
+    altcha.current.addEventListener("statechange", altchaVerified, false);
+    return () => {
+      if (altcha.current != null) {
+        altcha.current.removeEventListener("statechange", altchaVerified, false);
+      }
+    }
+  }
+}, [altcha]);
+```
+
+Пример виджета в «HTML» компонента React:
+
+```jsx title="website/src/pages/Login/index.jsx"
+<altcha-widget
+    ref={altcha}
+    challenge={_service.url('/_altcha')}
+    language="ru"
+    delay={1}
+    hideLogo={true}
+    hideFooter={true}
+></altcha-widget>
+```
+
+### Auth Client
+
+Посмотрите, как интегрировать [Altcha](https://altcha.org/) в [Auth Client](https://www.npmjs.com/package/@netuno/auth-client).
+
+Используйте приведённый ниже код в событии, которое отправляет данные формы входа на бэкенд,
+например в событиях `onSubmit`, `onClick` или `onFinish` форм Ant.Design:
+
+```jsx title="website/src/pages/Login/index.jsx"
+_auth.login({
+  username,
+  password,
+  data: (data) => {
+    data.altcha = altchaPayload;
+    return data;
+  },
+  success: ({json}) => {
+    ...
+  },
+  fail: (data) => {
+    ...
+  }
+});
+```
+
+Обратите внимание: `altchaPayload` — это состояние, содержащее ключ результата решения задачи капчи.
+
+Полный пример на странице входа ReAuthKit:
+
+- [Исходный код страницы входа ReAuthKit.](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Login/index.jsx)
+
+## Интеграция в сервисы
+
+Помимо аутентификации, как показано выше, механизм капчи с [Altcha](https://altcha.org/) можно интегрировать в любой другой тип сервиса.
+
+Рекомендуется интегрировать капчу в любой публичный сервис, который может стать целью атак, например
+для защиты от исчерпывающей автоматизации роботов при массовой регистрации данных.
+
+На фронтенде на экране, где интегрирован сервис REST API, также должен быть реализован защитный виджет [Altcha](https://altcha.org/),
+то есть виджет нужно использовать там, где вызывается сервис.
+
+### Service Client
+
+Далее показано, как интегрировать [Altcha](https://altcha.org/) в [Service Client](https://www.npmjs.com/package/@netuno/service-client).
+
+Интеграция виджета на фронтенде аналогична уже описанному выше:
+
+- [Виджет в HTML](#виджет-в-html)
+- [Виджет в React](#виджет-в-react)
+
+Нужно получить payload виджета точно так же, как показано выше; процесс такой же, как при
+аутентификации входа.
+
+Payload отправляется на бэкенд через параметр в URL, поле формы или как свойство в
+JSON — в зависимости от HTTP-метода и реализации сервиса.
+
+Пример отправки payload в сервис регистрации или создания новой учётной записи пользователя:
+
+```jsx title="pages/Register/index.jsx"
+_service({
+  method: 'POST',
+  url: 'register',
+  data: {
+    name,
+    email,
+    password,
+    altcha: altchaPayload
+  },
+  success: (response) => {
+    ...
+  },
+  fail: (e) => {
+    ...
+  }
+});
+```
+
+Обратите внимание: `altchaPayload` — это состояние, содержащее ключ результата решения задачи капчи.
+
+Полный пример на странице регистрации ReAuthKit:
+
+- [Исходный код страницы регистрации ReAuthKit.](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Register/index.jsx)
+
+### Бэкенд
+
+Когда payload отправляется в сервис REST API, в коде сервиса на стороне бэкенда его нужно проверить; смотрите как:
+
+<PolyglotCode
+    file="server/services/register/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+            const altchaPayload = _req.getString("altcha");
+
+            if (_auth.altchaEnabled() && !_altcha.verifySolution(altchaPayload)) {
+              _header.status(409);
+              _out.json(
+                _val.map()
+                  .set("error", "invalid-altcha-payload")
+              );
+              _exec.stop();
+            }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+            altchaPayload = _req.getString("altcha")
+
+            if _auth.altchaEnabled() and _altcha.verifySolution(altchaPayload) == False:
+                _header.status(409)
+                _out.json(
+                    _val.map()
+                        .set("error", "invalid-altcha-payload")
+                )
+                _exec.stop()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                altchaPayload = _req.getString("altcha")
+
+                if _auth.altchaEnabled() and _altcha.verifySolution(altchaPayload) == false
+                    _header.status(409)
+                    _out.json(
+                        _val.map()
+                            .set("error", "invalid-altcha-payload")
+                    )
+                    _exec.stop()
+                end
+            `
+        },
+    ]}
+/>
+
+Полный пример сервиса регистрации ReAuthKit:
+
+- [Исходный код сервиса регистрации ReAuthKit.](https://github.com/netuno-org/reauthkit/blob/main/server/services/profile/post.js)
+
+Подробнее о возможностях low-code и полиглотного программирования:
+
+- [Altcha](/docs/library/resources/altcha)
+- [Auth](/docs/library/resources/auth)
+
+## Заключение
+
+Достаточно простым способом можно создать механизм безопасности в сервисах API, чтобы защититься от роботов и
+гарантировать взаимодействие людей через браузер.
+
+> Рекомендуется использовать механизм капчи с [Altcha](https://altcha.org/) в наиболее чувствительных публичных
+> сервисах, таких как сервисы регистрации и аутентификации.
+
+Благодаря встроенной реализации, которую предлагает Netuno, очень просто включить и использовать этот механизм в
+любом сервисе REST API.
+
+> Рекомендуется, чтобы в автоматически созданном бэк-офисе Netuno в производственной среде всегда была
+> включена аутентификация с [Altcha](https://altcha.org/), а также использовались HTTPS и SSL-сертификат.
+
+По возможности используйте [Altcha](https://altcha.org/), чтобы обеспечить безопасность и надёжность публичных сервисов вашего API.

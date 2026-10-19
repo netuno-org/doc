@@ -1,0 +1,197 @@
+---
+id: debug
+title: Depurazione (Debug)
+sidebar_label: Depura
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Consente di analizzare l'esecuzione del codice in tempo reale.
+
+## Introduzione
+
+Durante la programmazione capita spesso di dover analizzare l'esecuzione del codice.
+
+Nel caso di Netuno possiamo utilizzare:
+
+- `_out.print` - Per mostrare qualche informazione nell'output dei dati (_output_).
+- `_log.info` - Per mostrare qualche informazione nel terminale del server Netuno.
+
+Capita però anche che ci siano scenari più complessi in cui vogliamo analizzare più a fondo, ad esempio
+verificare più valori di oggetti e variabili contemporaneamente, testare l'esecuzione di codice specifico in questo
+contesto, tutto per capire meglio il comportamento.
+
+È sempre possibile utilizzare in questi casi più complessi i metodi mostrati sopra come `_out.print` e
+`_log.info`, ma possiamo finire in un processo molto laborioso e confuso per arrivare a una buona
+comprensione di ciò che sta accadendo.
+
+La depurazione (_debug_) serve proprio a fornire una buona comprensione di ciò che sta accadendo, specialmente in
+situazioni più complesse.
+
+> La depurazione (in inglese: _debugging_, _debug_) è il processo utilizzato nello sviluppo per trovare e ridurre
+> difetti, guasti, comportamenti errati, ecc.
+
+La depurazione può essere suddivisa in 3 meccanismi importanti:
+
+- Punto di interruzione (_Break Point_): Fa fermare l'esecuzione del codice, poi possiamo iniziare l'indagine nel punto
+in cui il codice è fermo.
+- Osservazione (_Watch_): Consente di osservare i valori delle variabili nel punto in cui il codice è fermo.
+- Esecuzione di codice (_Code Execution_): Possiamo eseguire temporaneamente qualsiasi codice, per effettuare qualche
+test nel punto in cui l'esecuzione è ferma per la depurazione.
+
+## Punto di interruzione (_Breakpoint_)
+
+Il punto di interruzione (_breakpoint_) è il punto del codice in cui l'esecuzione deve essere messa in pausa per
+iniziare il processo di depurazione.
+
+Per avviare la depurazione in qualsiasi codice e in qualsiasi linguaggio supportato da Netuno, come JavaScript, Python,
+Ruby, Kotlin o Groovy, nel punto in cui desideri avviare la depurazione, inserisci il seguente codice:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _exec.debug()
+            `
+        },
+    ]}
+/>
+
+> Poiché Netuno è poliglotta, funziona con qualsiasi linguaggio supportato, come: JavaScript, Python, Kotlin, Ruby,
+> o Groovy.
+
+Ora, per avviare la depurazione, esegui il codice e l'esecuzione resterà bloccata, in pausa.
+
+Quindi andiamo nell'interfaccia di sviluppo, nel backoffice in `Costruisci`, e nel menu a sinistra abbiamo l'opzione:
+
+- **Depura**
+
+Dove possiamo trovare la doppia freccia verde che indica che, cliccandola, l'esecuzione potrà continuare:
+
+![Debug - Proseguire](/docs/assets/academy/server/debug/step-over-pt.jpg "Debug - Proseguire")
+
+> La doppia freccia verde interrompe la pausa della depurazione facendo sì che l'esecuzione del codice continui
+> normalmente dal punto in cui si era fermata.
+
+## Osservare (_Watch_)
+
+Per vedere il valore delle variabili utilizziamo la lente d'ingrandimento gialla.
+
+Cliccando sulla lente d'ingrandimento gialla possiamo inserire il nome della variabile di cui vogliamo osservare il valore.
+
+![Debug - Osservare](/docs/assets/academy/server/debug/watch-pt.jpg "Debug - Osservare")
+
+Il nome della variabile e il suo valore attuale compaiono nell'elenco; possiamo osservare il valore di più variabili;
+se una variabile non esiste, non ci sarà alcun valore.
+
+## Eseguire il codice (_Execute Code_)
+
+Possiamo iniettare codice da eseguire nel contesto del punto di interruzione, ovvero dove sta avvenendo la
+depurazione.
+
+Clicchiamo sul simbolo del codice blu e possiamo inserire il codice che intendiamo eseguire.
+
+![Debug - Esegui codice](/docs/assets/academy/server/debug/execute-code-pt.jpg "Debug - Esegui codice")
+
+Il codice eseguito viene mostrato nell'elenco sottostante con l'indicazione che il codice è stato eseguito con
+successo; se c'è qualche errore, il messaggio di errore viene mostrato insieme al codice.
+
+## Configurazione per la depurazione remota
+
+Quando si esegue Netuno localmente non dovrebbe essere necessaria alcuna configurazione.
+
+Perché nello sviluppo locale l'`host` dell'indirizzo del WebSocket viene configurato automaticamente.
+
+Negli indirizzi locali normalmente si utilizzano questi valori come `host`:
+
+- `localhost`
+- `127.0.0.1`
+- `192.168.1.*` - Esempio di qualsiasi IP di rete locale.
+- `mia-app.local.netu.no`
+
+> Gli indirizzi locali non richiedono alcuna configurazione, quindi questo passaggio può essere saltato.
+
+In produzione o nello sviluppo remoto, ad esempio in container o VPN, potrebbe essere necessario definire
+l'indirizzo esterno (IP o dominio) utilizzato per la connessione WebSocket.
+
+In questo caso, spostati all'interno dell'applicazione in fase di sviluppo fino al file di configurazione
+dell'ambiente. In questo esempio utilizzeremo il file di ambiente di sviluppo, che si trova in:
+
+- 📂 `config/_development.json`
+
+Verifica se per caso la configurazione non esista già; se non esiste, aggiungi alla fine del file di
+configurazione (in formato JSON) i parametri di configurazione dell'indirizzo esterno da utilizzare nella
+connessione WebSocket, ad esempio:
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": "dev.netuno.org"
+        }
+    },
+    ...
+}
+```
+
+> L'informazione sulla porta non deve essere aggiunta all'indirizzo `host` del WebSocket.
+
+Si possono anche passare più indirizzi `host` in un array:
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": [ "mio-container.dev.netuno.org", "mio-progetto.com" ]
+        }
+    },
+    ...
+}
+```
+
+### Proxy in produzione (NGINX)
+
+In produzione è comune utilizzare un server web che fa da proxy inverso, come NGINX.
+
+Affinché la depurazione funzioni attraverso un proxy, è quindi necessario aggiungere una configurazione specifica
+per inoltrare il traffico relativo all'indirizzo WebSocket:
+
+```
+server {
+    listen 443 ssl;
+    server_name mio-progetto.com;
+    
+    ...
+    
+    location /dev/ws/ {
+        proxy_pass http://127.0.0.1:9000;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        add_header X-Frame-Options "";
+    }
+}
+```
+
+## Conclusione
+
+Con l'interfaccia di depurazione e il comando `_exec.debug()` possiamo svolgere un'indagine approfondita di ciò che
+sta accadendo.
+
+Nella maggior parte dei linguaggi e delle tecnologie backend, specialmente le tecnologie di scripting, il debug
+di solito è impossibile o complesso.
+
+Netuno offre un modo semplice per eseguire il debug del codice poliglotta che funziona nei vari linguaggi supportati
+come JavaScript, Python, Ruby, Kotlin e Groovy.
+
+> Consente la depurazione poliglotta in ambienti remoti e in produzione.
+
+Utilizzare la depurazione rende lo sviluppo molto più agile, offrendo maggiore precisione nella risoluzione dei
+problemi, e diventa uno strumento essenziale: provalo.

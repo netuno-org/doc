@@ -1,0 +1,479 @@
+---
+id: ssh
+title: SSH-client
+sidebar_label: SSH-client
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Commando's op de server uitvoeren en bestanden overdragen.
+
+## Inleiding
+
+Netuno heeft in zijn low-code framework een SSH-client geïntegreerd, waarmee je verbinding kunt maken met servers,
+commando's kunt uitvoeren, bestanden kunt verzenden en ontvangen, mappen kunt wijzigen, en andere externe
+bewerkingen kunt uitvoeren.
+
+Het ondersteunt meerdere gelijktijdige verbindingen, en ook SCP en SFTP.
+
+Dit dankzij de Java- en open-source-implementatie
+<a target="_blank" href="https://github.com/hierynomus/sshj/tree/master">SSHJ</a>, die het Netuno mogelijk maakt
+deze functionaliteiten aan alle scripttalen te bieden via de functie `_ssh`.
+
+> Meer over de functie [SSH](/docs/library/resources/ssh) van Netuno.
+
+## Configuratie
+
+De eerste stap is het configureren van de SSH-toegangsgegevens die Netuno zal gebruiken om de verbinding tot stand te brengen.
+
+Navigeer binnen de applicatie die je aan het ontwikkelen bent naar het configuratiebestand van de omgeving. In dit voorbeeld
+gebruiken we het ontwikkelingsbestand, dat zich bevindt in:
+
+- `config/_development.json`
+
+Controleer of er SSH-configuraties aanwezig zijn; als die er niet zijn, voeg dan aan het einde van het configuratiebestand (in JSON-formaat)
+de SSH-configuratieparameters toe, bijvoorbeeld:
+
+```json
+{
+  ...
+  "ssh": {
+    "default": {
+      "enabled": true,
+      "host": "mijn.server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+Na het opslaan van de wijzigingen volstaat het Netuno opnieuw op te starten om de wijzigingen in de configuratie over te nemen. Dit zijn de
+standaardconfiguraties voor de verbinding, zoals de naam van de sleutel `default` aangeeft.
+
+Je kunt meer SSH-verbindingsconfiguraties toevoegen met andere sleutels in de JSON.
+
+Om meer SSH-verbindingsconfiguraties toe te voegen, volstaat het het standaardconfiguratieblok te herhalen en de sleutel
+`default` te vervangen door een andere naar keuze, bijvoorbeeld:
+
+```json
+{
+  ...
+  "ssh": {
+    "default": {
+      "enabled": true,
+      "host": "mijn.server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    },
+    "overig": {
+      "enabled": true,
+      "host": "mijn.andere-server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+De bovenstaande configuratie maakt het mogelijk de account `default` te gebruiken wanneer er als volgt wordt gecodeerd:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ssh = _ssh.init()
+            `
+        },
+    ]}
+/>
+
+Om de configuratie `overig` te gebruiken, volstaat het de sleutel van de configuratie als parameter van de functie
+`_ssh.init()` toe te voegen, als volgt:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshOverig = _ssh.init("overig")
+            `
+        },
+    ]}
+/>
+
+> Als je geen configuratienaam als parameter toevoegt, wordt de configuratie van de account `default` gebruikt.
+
+## Verbinding
+
+Voordat je iets kunt doen, moet je de SSH-verbinding starten:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ssh.connect()
+            `
+        },
+    ]}
+/>
+
+## Commando's
+
+Om commando's uit te voeren, moet je een commando-sessie starten:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSessie = ssh.initSession()
+            `
+        },
+    ]}
+/>
+
+Bij het uitvoeren van een commando wordt een object geleverd dat de status van de uitvoering en de bijbehorende gegevensuitvoer
+(output) bevat, bijvoorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshCommandoResultaat = sshSessie.exec("ls -rato")
+                if (sshCommandoResultaat.ok) {
+                    _out.println("Succesvol uitgevoerd:")
+                    _out.println(sshCommandoResultaat.output())
+                } else {
+                    _out.println("Het commando is mislukt:")
+                    _out.println(sshCommandoResultaat.error())
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                sshCommandoResultaat = sshSessie.exec("ls -rato")
+                if sshCommandoResultaat.ok:
+                    _out.println("Succesvol uitgevoerd:")
+                    _out.println(sshCommandoResultaat.output())
+                else:
+                    _out.println("Het commando is mislukt:")
+                    _out.println(sshCommandoResultaat.error())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                sshCommandoResultaat = sshSessie.exec("ls -rato")
+                if sshCommandoResultaat.ok
+                    _out.println("Succesvol uitgevoerd:")
+                    _out.println(sshCommandoResultaat.output())
+                else
+                    _out.println("Het commando is mislukt:")
+                    _out.println(sshCommandoResultaat.error())
+                end
+            `
+        },
+    ]}
+/>
+
+> Het object dat door het commando wordt geretourneerd is het [SSHExecResult](/docs/library/objects/SSHExecResult).
+
+Vergeet niet de sessie altijd te sluiten:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sshSessie.close()
+            `
+        },
+    ]}
+/>
+
+## SCP
+
+Via SCP kunnen we bestanden verzenden en ontvangen.
+
+Om een tekstbestand aan te maken vanuit een string en de inhoud van het aangemaakte bestand te downloaden, zie het voorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // Maakt het tekstbestand aan.
+                sshSCP.uploadText("hallo.txt", "Hallo! Mijn inhoud hier...")
+                // Downloadt en toont de inhoud van het bestand.
+                _out.println(sshSCP.downloadText("hallo.txt"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+Om bestanden die in de applicatie bestaan te verzenden (upload):
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // Verstuurt een bestand dat in de storage/filesystem staat.
+                sshSCP.upload("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // Verstuurt een bestand dat in de hoofdmap van de applicatie staat.
+                sshSCP.upload("document.pdf", _app.file("document.pdf"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+Om bestanden van de server naar de applicatie te downloaden:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // Downloadt het bestand naar de storage/filesystem.
+                sshSCP.download("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // Downloadt het bestand naar de hoofdmap van de applicatie.
+                sshSCP.download("document.pdf", _app.file("document.pdf"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+## SFTP
+
+SFTP is een manier van overdracht en bewerking van bestanden en mappen die dezelfde functionaliteiten ondersteunt
+als FTP, maar gebruikmaakt van SSH.
+
+Om een nieuwe SFTP-sessie te starten:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sftp = ssh.initSFTP()
+            `
+        },
+    ]}
+/>
+
+> Start het object [SSHSFTP](/docs/library/objects/SSHSFTP), de client van de sessie.
+
+Een nieuwe map op afstand aanmaken:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.createDirectory("pad/nieuwe-map")
+            `
+        },
+    ]}
+/>
+
+Maakt het externe bestand aan of vervangt het met de doorgegeven tekstinhoud:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.uploadText("map/bestand.txt", "Mijn inhoud!")
+            `
+        },
+    ]}
+/>
+
+Haalt de tekstinhoud van een extern bestand op:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const inhoudExternBestand = sftp.downloadText("map/bestand.txt"))
+                _out.println(inhoudExternBestand)
+            `
+        },
+    ]}
+/>
+
+Verwijdert een extern bestand definitief:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.deleteFile("map/bestand.txt")
+            `
+        },
+    ]}
+/>
+
+Verwijdert de externe map definitief:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.deleteDirectory("map")
+            `
+        },
+    ]}
+/>
+
+Toont de volledige inhoud van een map:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const i of sftp.list("pad/map")) {
+                    if (i.directory) {
+                        _out.print("Map: ")
+                    } else if (i.regularFile) {
+                        _out.print("Bestand: ")
+                    } else {
+                        _out.print("Overig: ")
+                    }
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for i in sftp.list("pad/map":
+                    if i.directory:
+                        _out.print("Map: ")
+                    elif i.regularFile:
+                        _out.print("Bestand: ")
+                    else:
+                        _out.print("Overig: ")
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                sftp.list("pad/map").each do |i|
+                    if i.directory
+                        _out.print("Map: ")
+                    elsif i.regularFile
+                        _out.print("Bestand: ")
+                    else
+                        _out.print("Overig: ")
+                    end
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                sftp.list("pad/map").forEach {
+                    if (it.directory) {
+                        _out.print("Map: ")
+                    } else if (it.regularFile) {
+                        _out.print("Bestand: ")
+                    } else {
+                        _out.print("Overig: ")
+                    }
+                    _out.println(it.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (i in sftp.list("pad/map")) {
+                    if (i.directory) {
+                        _out.print("Map: ")
+                    } else if (i.regularFile) {
+                        _out.print("Bestand: ")
+                    } else {
+                        _out.print("Overig: ")
+                    }
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+    ]}
+/>
+
+> Retourneert een lijst met objecten van het type [SSHFile](/docs/library/objects/SSHFile).
+
+Om bestanden die in de applicatie bestaan te verzenden (upload):
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Verstuurt een bestand dat in de storage/filesystem staat.
+                sftp.upload("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // Verstuurt een bestand dat in de hoofdmap van de applicatie staat.
+                sftp.upload("document.pdf", _app.file("document.pdf"))
+            `
+        },
+    ]}
+/>
+
+Om bestanden van de server naar de applicatie te downloaden:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Downloadt het bestand naar de storage/filesystem.
+                sftp.download("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // Downloadt het bestand naar de hoofdmap van de applicatie.
+                sftp.download("document.pdf", _app.file("document.pdf"))
+            `
+        },
+    ]}
+/>
+
+Vergeet niet de SFTP-sessie altijd te sluiten:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.close()
+            `
+        },
+    ]}
+/>

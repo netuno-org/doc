@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Netuno",
+    "description": "ナビゲーションバーのタイトル"
+  },
+  "logo.alt": {
+    "message": "Netuno ドキュメント",
+    "description": "ナビゲーションバーのロゴの代替テキスト"
+  },
+  "item.label.Get Started": {
+    "message": "はじめに",
+    "description": "「はじめに」ラベルのナビゲーションバー項目"
+  },
+  "item.label.Academy": {
+    "message": "アカデミー",
+    "description": "「アカデミー」ラベルのナビゲーションバー項目"
+  },
+  "item.label.Library": {
+    "message": "ライブラリ",
+    "description": "「ライブラリ」ラベルのナビゲーションバー項目"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "「GitHub」ラベルのナビゲーションバー項目"
+  }
+}

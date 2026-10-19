@@ -1,0 +1,9 @@
+{
+  "label": "Demonstration",
+  "key": "Demonstration",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Take a development tour by modifying the default demo application."
+  }
+}
