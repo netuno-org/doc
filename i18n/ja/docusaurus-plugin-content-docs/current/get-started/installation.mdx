@@ -1,0 +1,81 @@
+---
+sidebar_position: 1
+id: installation
+title: クイックインストール
+sidebar_label: クイックインストール
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# はじめに
+
+**Netuno** のインストールガイドへようこそ。Netuno は、プロジェクトの作成を加速し、開発環境の設定を容易にするために開発された、多言語対応の *low-code* かつ *open source* のプラットフォームです。
+
+ここでは、low-code のスピードと従来のコーディングの力を組み合わせて、堅牢なフルスタックアプリケーションを迅速に構築できます。
+
+## クイックインストール
+
+Netuno をインストールする最も簡単な方法は、プラットフォームが提供するインストールスクリプトを使用することです。お使いのオペレーティングシステムに応じて、ターミナルでコマンドを実行するだけです。
+
+<Tabs groupId="os">
+    <TabItem value="linux-mac" label="Linux または macOS" default>
+
+```bash
+bash <(curl -fsSL https://netu.no/install.sh)
+```
+
+    </TabItem>
+    <TabItem value="windows" label="Windows">
+
+```powershell
+powershell -c "irm https://netu.no/install.ps1|iex"
+```
+
+    </TabItem>
+</Tabs>
+
+## デモアプリを起動
+
+インストール完了後、`netuno` フォルダー内で以下のコマンドを実行して、デモアプリケーションでサーバーを起動します:
+
+```bash
+./netuno server
+```
+
+### ブラウザでアプリケーションを開く
+
+起動後、ローカルサーバーのアドレスでブラウザが自動的に開きます。開かない場合は、以下のいずれかのアドレスに手動でアクセスしてください:
+
+- [http://demo.local.netu.no:9000](http://demo.local.netu.no:9000)
+- [http://localhost:9000](http://localhost:9000)
+
+## サーバーを停止
+
+サーバーを終了するには、ターミナルで次のキーを押します:
+
+**CTRL + C**
+
+再度起動するには、同じ `./netuno server` コマンドを使用します。
+
+## 次のステップ
+
+今できることのいくつかのアイデアです。
+
+### 初心者
+
+Netuno が初めての場合は、最初のフォームを作成するところから始めましょう:
+
+[最初のフォームを作成する](/docs/academy/demonstration/config)
+
+### チュートリアル
+
+Netuno を使った実践的な開発チュートリアルを探索しましょう:
+
+[開発チュートリアルを見る](/docs/get-started/tutorials)
+
+### プロジェクト
+
+実際のビジネスプロジェクトで Netuno をどのように活用できるかをご覧ください:
+
+[プロジェクトとユースケースを見る](/docs/academy/understand/backoffice)

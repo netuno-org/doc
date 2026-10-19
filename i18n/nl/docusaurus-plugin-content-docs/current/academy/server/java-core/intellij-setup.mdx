@@ -1,0 +1,242 @@
+---
+id: setup
+title: Projectconfiguratie met IntelliJ IDEA
+sidebar_label: Configuratie met IntelliJ
+sidebar_position: 2
+---
+
+import Image from "@site/src/components/Image";
+
+## Vereisten
+
+In dit voorbeeld gebruiken we de <a href="https://www.jetbrains.com/idea/download/" target="_blank">IDE IntelliJ 
+IDEA Community Edition</a>; via deze vorige link vindt u de Community-versie verder naar beneden, direct na de 
+Ultimate-versie.
+
+Een andere IDE specifiek voor Java kan als alternatief worden gebruikt, bijvoorbeeld Eclipse of NetBeans; u hoeft 
+alleen een vergelijkbare configuratie uit te voeren.
+
+Installeer het Netuno-platform; het Java-project wordt geïntegreerd met het vooraf geïnstalleerde Netuno-platform.
+
+## Project aanmaken
+
+Zodra u IntelliJ IDEA Community opent, maakt u een nieuw project aan; klik op de knop `New Project`.
+
+Kies aan de linkerkant de optie `Java` en gebruik voor de projectnaam, in het veld `Name:`, in dit voorbeeld 
+`Rekenmachine`.
+
+Kies bij `Location:` waar het project in uw bestanden komt te staan.
+
+En het `Build system:` is gewoon `IntelliJ`.
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/01.png").default} />
+
+Bij `JDK` moeten we de `GraalVM` kiezen die met Netuno wordt meegeleverd; wijzig dit om deze toe te voegen via de optie 
+`Add JDK from Disk...`, ga naar de locatie waar het Netuno-platform is geïnstalleerd en kies de map:
+
+- `netuno/core/graalvm`
+
+Dit is de GraalVM-JDK die we aanbevelen voor het project, om te garanderen dat we het project kunnen uitvoeren en 
+debuggen.
+
+## Projectinstellingen
+
+Klik in de projectbestanden die links worden weergegeven, op het eerste bestand met de projectnaam, in dit geval 
+`Rekenmachine`, met de rechtermuisknop om het optiemenu te openen en ga naar `Open Module Settings`.
+
+Het venster dat wordt geopend, moet links de optie `Modules` hebben geselecteerd, met aan de rechterkant 3 tabbladen:
+
+1. Sources
+2. Paths
+3. Dependencies
+
+### Paden
+
+Op het tabblad `Paths` kiezen we bij `Compiler Output` de tweede optie:
+
+- `Use module compile output path`
+
+En we kiezen de map `netuno/core/web/WEB-INF/classes` in het geïnstalleerde Netuno-platform; voor zowel 
+`Output path:` als `Test output path:` moet dit hetzelfde pad zijn.
+
+> De map `classes` in `netuno/core/web/WEB-INF` moet worden aangemaakt omdat deze standaard niet bestaat.
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/02.png").default} />
+
+### Afhankelijkheden
+
+Klik op het tabblad `Dependencies` op de knop `+` boven de lijst met opties.
+
+Klik in de verschenen opties op de eerste optie, `1 Jars or Directories...`.
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/03.png").default} />
+
+Ga naar de locatie waar het Netuno-platform is geïnstalleerd en voeg alle afhankelijkheden toe:
+
+1. `netuno/netuno.jar` - staat in de hoofdmap van het platform.
+2. `netuno/core/lib` - selecteer en voeg alle bestanden toe.
+3. `netuno/core/web/WEB-INF/lib` - selecteer en voeg alle bestanden toe.
+
+Als een venster met `Detected Roots` en `Choose Roots` verschijnt, **vink** alle geselecteerde opties **uit** en 
+klik op `OK`.
+
+Controleer in de bestandenlijst of van de eerste tot en met de laatste JAR zijn toegevoegd; als u alle bestanden met 
+sneltoetsen van het toetsenbord probeert te selecteren, werkt dat niet goed. Selecteer de eerste JAR en scrol omlaag 
+totdat u met de shift-toets op de laatste JAR klikt; zo kan IntelliJ ze allemaal correct laden.
+
+> Controleer goed dat alle afhankelijkheden correct zijn toegevoegd en verifieer of u de eerste en de 
+laatste JAR van elke map in de lijst ziet staan.
+
+Hiermee is het volledige Netuno-ecosysteem voor Java aan uw project gekoppeld.
+
+### Artefacten
+
+Hier kunnen we het JAR-bestand van ons project genereren, wat de distributie van de code naar andere 
+Netuno-instanties op andere computers vergemakkelijkt.
+
+Klik in de optie `Artifiacts` die beschikbaar is in het menu aan de linkerkant van het venster dat wordt weergegeven in 
+`Open Module Settings`, op de beschikbare `+`-knop, daarna op de optie `JAR` en ten slotte op de optie 
+`Empty`.
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/04.png").default} />
+
+Vul in het veld `Name:` de projectnaam in, bijvoorbeeld `rekenmachine`.
+
+Klik direct daaronder in `Output Layout` op de `+`-knop en kies de optie `Module Output`; selecteer in het venster 
+met opties dat verschijnt ons project en klik op `OK`.
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/05.png").default} />
+
+Klik op `Apply` of op `OK` om het venster met projectinstellingen te sluiten.
+
+### Het artefact genereren
+
+Om het artefact te genereren gaat u naar het globale menu van IntelliJ en naar de optie `Build` > `Build Artifacts...`.
+
+Kies de optie van het betreffende project en klik op `Build`.
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/06.png").default} />
+
+In de bestanden aan de linkerkant verschijnt het gegenereerde bestand in de map `out`; in dit voorbeeld is dat:
+
+- `out/artifacts/rekenmachine/rekenmachine.jar`
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/07.png").default} />
+
+### Artefact publiceren
+
+Het gemaakte JAR-bestand kan worden gedistribueerd en in elk ander Netuno-platform worden geplaatst.
+
+Op het platform waarop de ontwikkeling plaatsvindt, mag het JAR-bestand van het project echter niet aanwezig zijn, 
+omdat de code al wordt gepubliceerd in:
+
+- `netuno/core/web/WEB-INF/classes`
+
+Daarom gebruiken we voor de andere platforms die niet voor ontwikkeling worden gebruikt en die de classes niet 
+hebben, het JAR-bestand.
+
+Op elk geïnstalleerd Netuno-platform moet dit JAR-bestand in de map `lib` in de hoofdmap van Netuno worden geplaatst:
+
+- `netuno/lib`
+
+Let op: deze map bestaat standaard niet, dus het kan nodig zijn deze aan te maken.
+
+Alle JAR-bestanden in deze map worden automatisch geladen in het Netuno-platform.
+
+## Codepakket
+
+Zoals gebruikelijk is in Java, moet de code altijd een `package` hebben.
+
+Uw `package` moet worden geregistreerd in het globale configuratiebestand van Netuno:
+
+- `netuno/config.js`
+
+Voeg aan het einde de volgende code toe:
+
+```javascript
+config.packagesScan.add("mijn.project.java")
+```
+
+Als uw pakket niet op deze manier aan de configuratie wordt toegevoegd, wordt uw project nooit geladen.
+
+Netuno zoekt namelijk alleen naar resources en services in pakketten die vooraf zijn toegevoegd.
+
+Een alternatief om te voorkomen dat u het pakket in de configuratie registreert, is Java-pakketten gebruiken die met 
+`org.netuno` beginnen.
+
+Netuno zoekt automatisch naar resources en services in pakketten die met `org.netuno` beginnen.
+
+> Het wordt aanbevolen het voorvoegsel `org.netuno.addon` te gebruiken.
+
+We kunnen bijvoorbeeld `org.netuno.addon.rekenmachine` gebruiken.
+
+Het pakketvoorvoegsel `org.netuno.addon` geeft aan dat het gaat om functionaliteit die extern is toegevoegd en geen 
+deel uitmaakt van Netuno zelf.
+
+Daarom moet al uw Java-code die met Netuno integreert, worden gedefinieerd en gebouwd in:
+
+- `org.netuno.addon.mijn.project`
+
+Voeg na `org.netuno.addon` de identificatie van uw project toe.
+
+
+## Uitvoering
+
+Om het project uit te voeren, moeten we een nieuwe uitvoeringsconfiguratie aanmaken.
+
+In de bovenste balk hebben we een knop `Run` en een knop `Debug`.
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/08.png").default} />
+
+Klik op de optie met de tekst Current File en het pictogram van een neerwaartse pijl, vóór de pijltjesknoop 
+voor uitvoering.
+
+Klik vervolgens op `Edit configurations...`.
+
+Klik in het venster dat opent op de knop `+` in de linkerbovenhoek en kies de optie `Application`.
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/09.png").default} />
+
+Vul bij `Name:` `Netuno` in en vul in het veld `Main class` `org.netuno.cli.Main` in.
+
+Vul bij `Program arguments` de opstartinstructie van de Netuno-server met een applicatie in; in dit voorbeeld is 
+vooraf een applicatie aangemaakt die ook `rekenmachine` heet:
+
+`server app=rekenmachine`
+
+> De app moet vooraf worden aangemaakt; gebruik in Netuno de opdracht: `./netuno app`
+
+Stel bij `Working directory:` de hoofdmap van Netuno in; het is heel belangrijk dat dit het volledige pad is.
+
+Het moet er zo uitzien:
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/10.png").default} />
+
+Klik nu op `Apply` en `OK`.
+
+Hiermee kunt u het project uitvoeren of zelfs debuggen.
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/11.png").default} />
+
+## Conclusie
+
+We hebben gezien hoe u een nieuw Java-project aanmaakt om nieuwe gedragingen aan de kern van Netuno toe te voegen.
+
+We hebben ook de best practices gezien om het JAR-bestand te genereren en hoe u het in de map `netuno/lib` distribueert.
+
+Alle Java-programmeertechnieken en -bibliotheken kunnen worden gebruikt om elk soort functionaliteit in Netuno te 
+creëren.
+
+Met name het creëren van low-code-programmeerresources die beschikbaar zijn voor alle ondersteunde scripttalen, 
+zoals:
+
+- JavaScript
+- Python
+- Ruby
+- Kotlin
+- Groovy
+
+Bekijk in de volgende tutorials hoe u uw eerste low-code-programmeerresource maakt.
+
+En ook hoe u uw eerste multi-applicatie-webservice maakt, beschikbaar in alle applicaties die in Netuno zijn 
+geconfigureerd.

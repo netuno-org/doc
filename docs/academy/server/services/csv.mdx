@@ -1,29 +1,29 @@
 ---
-id: csv
-title: CSV
-sidebar_label: CSV
+id: csv 
+title: CSV 
+sidebar_label: CSV 
 ---
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
 import PolyglotPath from "@site/src/components/PolyglotPath";
 
-Process custom CSV files.
+Process custom PDF files.
 
 ## Introduction
 
-Netuno generates CSV files through the [CSV](/docs/library/resources/csv) resource, which provides a low-code abstraction over [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/) for the various programming languages supported by Netuno.
+Netuno generates CSV files through the [CSV](/docs/library/resources/csv) feature, which provides a low-code abstraction of [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/) for the various programming languages supported by Netuno.
 
-The application included with Netuno called **demo** (demonstration application) contains several examples of possible implementations in multiple programming languages, including a demonstration of CSV export through the `csv` service located at:
+The application that comes with Netuno called **demo** (demonstration application) contains many examples of possible code implementations in various languages, including the demonstration of export to CSV through the `csv` service located at:
 
 <PolyglotPath files={[
     `netuno/apps/demo/server/services/samples/%lang%/csv`
 ]} />
 
-## Creating a CSV file
+## Create a CSV file
 
-To create a CSV file, you first need to initialize a `CSVPrinter` from `Apache Commons CSV`.
-To do this, you must provide the folder name and file name, and the CSV format.
-In this example, the file will be generated inside the application's `storage`:
+To create a CSV file, first you need to initialize a `CSVPrinter` from `Apache Commons CSV`.
+To do this, we need to pass the folder name and the file name, as well as the CSV format.
+In the example, we will generate the file inside the application's `storage`:
 
 <PolyglotCode
     codes={[
@@ -75,7 +75,7 @@ In this example, the file will be generated inside the application's `storage`:
     ]}
 />
 
-The supported formats are described [here](https://doc.netuno.org/docs/library/resources/csv/#format).
+The supported formats are described [here](https://doc.netuno.org/pt/docs/library/resources/csv/#format).
 
 ### Writing
 
@@ -95,7 +95,7 @@ To write rows to the CSV file:
 
 ### Closing
 
-When finished, you must close the `CSVPrinter`:
+At the end, you need to close the `CSVPrinter`:
 
 <PolyglotCode
     codes={[
@@ -108,11 +108,12 @@ When finished, you must close the `CSVPrinter`:
     ]}
 />
 
-## Reading a CSV file
 
-To read a CSV file, you first need to initialize a `CSVParser` from `Apache Commons CSV`.
-To do this, you must provide the folder name and the file name.
-In this example, the file is read from the application's `storage`:
+## Read a CSV file
+
+To read a CSV file, first you need to initialize a `CSVParser` from `Apache Commons CSV`.
+To do this, we need to pass the folder name and the file name.
+In the example, we will read the file inside the application's `storage`:
 
 <PolyglotCode
     codes={[
@@ -125,9 +126,9 @@ In this example, the file is read from the application's `storage`:
     ]}
 />
 
-### Rows
+### Rows 
 
-You can now iterate through the `CSVRecord` objects from `Apache Commons CSV`, each representing a row in the CSV file:
+Now it is possible to iterate over the `CSVRecord` from `Apache Commons CSV`, which represent each row of the CSV file:
 
 <PolyglotCode
     codes={[
@@ -178,8 +179,8 @@ You can now iterate through the `CSVRecord` objects from `Apache Commons CSV`, e
     ]}
 />
 
-Alternatively, you can retrieve each row using the `getRecords` method from `Apache Commons CSV`.
-In this example, the first `get` retrieves the first row. The second `get` retrieves the first field/value of that row:
+Or get each row with the `getRecord` method from `Apache Commons CSV`.
+In this example, the first `get` gets the first row. The second `get` gets the first field/value of that row:
 
 <PolyglotCode
     codes={[
@@ -194,7 +195,7 @@ In this example, the first `get` retrieves the first row. The second `get` retri
 
 ### Closing
 
-When finished, you must close the `CSVParser`:
+At the end, you need to close the `CSVParser`:
 
 <PolyglotCode
     codes={[

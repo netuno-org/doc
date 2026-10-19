@@ -1,0 +1,185 @@
+---
+id: resource 
+title: ポリグロット・ローコードリソース 
+sidebar_label: リソース 
+sidebar_position: 5
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+このチュートリアルでは、Netuno 用のネイティブリソースを作成します。つまり、Netuno のベースディレクトリに配置され、`apps` フォルダ内の任意のアプリケーションから `_foo.methodName(ars)` という構文で利用できる Java クラスを作成します。
+
+前のチュートリアルに従い、ここで作成する例は `_keisan` リソースです。これは簡単な算術演算を実行するためのサンプルリソースです。
+
+まず、プロジェクトのフォルダ構造を作成する必要があります。この例では、プロジェクトが `Keisan` というフォルダ内に作成されるものとします。次に、パッケージ名（この例では `org.netuno.addon.keisan`）を反映したフォルダ構造を作成します。したがって、フォルダ構造は次のようになります。
+
+- `Keisan/src/main/java/org/netuno/addon/keisan/resource/`
+
+この構造内に、カスタムネイティブリソースを定義する `KeisanResource` という Java クラスを作成します。
+
+- ` Keisan/src/main/java/org/netuno/addon/keisan/resource/KeisanResource.java`
+
+すると、クラス内で定義されるパッケージは次のようになります。
+
+```java
+package org.netuno.addon.keisan.resource;
+```
+
+クラスがカスタムネイティブリソースを定義するには、そのクラスに `org.netuno.tritao.ResourceBase` アノテーションを付ける必要があります。`name` パラメータはリソース名になり、名前にアンダースコア（`_`）を付けてアクセスできます（この例では `_keisan`）。リソースを作成する最も簡単な方法は、`org.netuno.tritao.resource.ResourceBase` クラスを継承することです。
+
+```java
+package org.netuno.addon.keisan.resource;
+
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "keisan")
+public class KeisanResource extends ResourceBase {
+    // ...
+}
+```
+
+`ResourceBase` クラスを継承すると、リソースを初期化する必要がなくなり、正しい引数で `super` を呼び出すだけで済みます。
+
+```java
+package org.netuno.addon.keisan.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "keisan")
+public class KeisanResource extends ResourceBase {
+    // ...
+    public KeisanResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+}
+```
+
+`init` 関数は必須で、その中で親クラスの getter を使って自クラスのコンストラクタを呼び出し、リソースを初期化します。
+
+```java
+package org.netuno.addon.keisan.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "keisan")
+public class KeisanResource extends ResourceBase {
+    // ...
+    public KeisanResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public KeisanResource init() {
+        return new KeisanResource(getProteu(), getHili());
+    }
+}
+```
+
+その後、独自のフィールドと関数を定義します。
+
+```java
+package org.netuno.addon.keisan.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "keisan")
+public class KeisanResource extends ResourceBase {
+    public double value = 0;
+
+    public KeisanResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public KeisanResource init() {
+        return new KeisanResource(getProteu(), getHili());
+    }
+
+    public KeisanResource set(double v) {
+        value = v;
+        return this;
+    }
+
+    public KeisanResource plus(double v) {
+        value += v;
+        return this;
+    }
+
+    public KeisanResource minus(double v) {
+        value -= v;
+        return this;
+    }
+
+    public double get() {
+        return value;
+    }
+}
+```
+
+あとはクラスをコンパイルし、`KeisanResource.class` ファイルが次のフォルダにあることを確認するだけです。
+
+- `netuno/core/web/WEB-INF/classes/org/netuno/addon/keisan/resource/`
+
+または JAR ファイルを作成し、それが次のフォルダにあることを確認します。
+
+- `netuno/lib/`
+
+このリソースを使用するテストアプリケーションを作成しましょう。
+
+```bash
+./netuno app name=keisan
+```
+
+このアプリケーションに、リソースを使用するサービスも作成しましょう。
+例では、`netuno/apps/keisan/server/services/keisan-test.js` ファイルを作成します。
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _keisan.set(10);
+
+                _keisan.plus(120);
+
+                _out.println(_keisan.get());
+            `
+        },
+    ]}
+/>
+
+アプリケーションを起動します。
+
+```bash
+./netuno server app=keisan
+```
+
+これで、このサービスに次のリクエストを送ると、
+
+- `http://localhost:9000/services/keisan-test`
+
+値 `130` が返されます。
+
+Java コードでリソースを使用するには、`org.netuno.tritao.Web` や `org.netuno.tritao.event.EventBase` のようないくつかのクラスが提供する `resource` 関数を使います。この関数がリソースを初期化します。
+`keisan` リソースを使用したいクラスでは、次のようにします。
+
+```java
+import org.netuno.addon.keisan.resource.KeisanResource;
+
+// ...
+    KeisanResource keisan = resource(KeisanResource.class);
+    keisan.set(10);
+    keisan.plus(120);
+    System.out.println(keisan.get());
+// ...
+```
+
+プロジェクトの完全なファイルはこちらの[リンク](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/resource)で確認できます。

@@ -1,0 +1,406 @@
+---
+id: actions
+title: Akcje (Actions)
+sidebar_label: Akcje
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Dostosowania w operacjach bazodanowych.
+
+## Wprowadzenie
+
+Cały czas wykonywana jest jakaś manipulacja danymi i często istnieją reguły, na przykład:
+
+- Przy usuwaniu klienta należy usunąć jego historię.
+- Przy anulowaniu produktu trzeba usunąć go z zamówień i skorygować wartość całkowitą.
+- Przy finalizowaniu zakupu trzeba wysłać dane do innego systemu, który realizuje dystrybucję.
+
+Akcje (_actions_) służą właśnie do tego, aby wstrzykiwać kod wykonywany w określonych sytuacjach,
+gdy następuje manipulacja danymi.
+
+Podczas **wstawiania** lub **zmieniania** informacji uruchamiane są akcje zapisu (_save_) i po zapisie
+(_saved_):
+
+- `save`: Przed wykonaniem polecenia w bazie danych.
+- `saved`: Po wykonaniu polecenia w bazie danych.
+
+Natomiast podczas **usuwania**, **kasowania** lub **eliminowania** informacji uruchamiane są akcje usuwania (_remove_) i
+po usunięciu (_removed_).
+
+- `remove`: Przed wykonaniem polecenia w bazie danych.
+- `removed`: Po wykonaniu polecenia w bazie danych.
+
+Tak więc, gdy zmieniamy coś w formularzu, wykonując operacje tworzenia, zmiany lub usuwania informacji,
+w bazie danych wykonywane są odrębne operacje i uruchamiane są odpowiednie akcje (_actions_).
+
+> Czy słyszałeś o _triggerach_ bazy danych? _Trigger_ bazy danych jest uruchamiany zawsze, gdy występują
+> modyfikacje danych, dlatego akcje (_actions_) są podobne do _triggerów_, tyle że na poziomie kodu.
+
+Pamiętaj, że każdy typ operacji wykonuje odrębne polecenie w bazie danych:
+
+- Tworzenie: `insert into ...`
+- Zmiana: `update ...`
+- Usuwanie: `delete from ...`
+
+Gdy wykonujemy jedno z tych poleceń bazy danych przez `_db.execute(...)`, żadna akcja nie zostanie uruchomiona,
+ponieważ polecenie jest wykonywane bezpośrednio w bazie danych, bez możliwości interakcji z akcjami.
+
+> W kodzie akcji można używać dowolnych zasobów poliglotycznego frameworka low-code.
+
+Akcje są uruchamiane, gdy w formularzach backoffice automatycznie generowanego przez Netuno następuje manipulacja danymi
+albo gdy wykonujemy operacje w bazie danych w kodzie, używając:
+
+- `_db.insert(...)`, `_db.form(...).insert()`, `_db.insertIfNotExits(...)`, `_db.insertMany(...)`, między innymi.
+- `_db.update(...)`, `_db.form(...).update()`, `_db.updateMany(...)`, między innymi.
+- `_db.delete(...)`, `_db.form(...).delete()`, `_db.deleteMany(...)`, między innymi.
+
+Innymi słowy, gdy używamy w kodzie jakiegoś mechanizmu poliglotycznego frameworka low-code do wykonywania operacji
+manipulacji danymi, zostanie uruchomiona odpowiednia akcja, jeśli istnieje.
+
+Jeśli jednak polecenie zostanie wykonane bezpośrednio w bazie danych, nie będzie możliwe uruchomienie akcji.
+
+> Zaleca się unikać wykonywania poleceń bezpośrednio w bazie danych, aby nie omijać mechanizmów
+> manipulacji danymi oferowanych przez Netuno.
+
+W kodzie akcji można wykonać dowolną operację związaną z manipulacją danymi.
+
+## Element danych (Data Item)
+
+Element danych (`_dataItem`) to zasób poliglotycznego frameworka low-code, który zawiera pełny zestaw danych
+tworzonych, zmienianych lub usuwanych.
+
+Dzięki zasobowi `_dataItem` możemy uzyskać dostęp do wszystkich informacji i sprawdzić szczegóły procesu operacji,
+która właśnie trwa.
+
+> Zapoznaj się z dokumentacją zasobu [DataItem](/docs/library/resources/dataItem), aby poznać więcej szczegółów na temat tego, co
+> obsługuje zasób `_dataItem`.
+
+**Uwaga:** Zasób `_dataItem` jest dostępny tylko w kodzie akcji (_actions_).
+
+## Zapisywanie, przechowywanie, zmiana lub tworzenie nowego (_Save_)
+
+Aby utworzyć akcję, która zostanie uruchomiona podczas tworzenia nowego rekordu lub zmiany czegoś, skrypt
+tej akcji będzie nazywał się `save`, co oznacza, że coś jest zapisywane w bazie danych, na przykład:
+
+<PolyglotPath files={[
+    'moja_aplikacja/server/actions/moj_formularz/save'
+]} />
+
+> Ta akcja jest wykonywana przed wykonaniem polecenia bazy danych.
+
+Gdy kod ma zostać wykonany po zapisaniu danych w bazie danych, używamy akcji
+`saved`, na przykład:
+
+<PolyglotPath files={[
+    'moja_aplikacja/server/actions/moj_formularz/saved'
+]} />
+
+> Ta akcja jest wykonywana po wykonaniu polecenia bazy danych.
+
+Innymi słowy, w aplikacji w folderze `server/actions` tworzymy podfolder o nazwie formularza (tabeli), a
+w nim umieszczamy skrypt o nazwie `save` lub `saved`, zawierający odpowiedni kod do wykonania przed
+lub po poleceniu bazy danych.
+
+Aby rozpoznać, czy trwa tworzenie danych, możemy za pomocą `if` sprawdzić wynik metody
+`_dataItem.isInsert()`, na przykład:
+
+<PolyglotCode
+    file="moja_aplikacja/server/actions/moj_formularz/save"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isInsert()) {
+                    // Trwa tworzenie nowych danych...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isInsert():
+                    # Trwa tworzenie nowych danych...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isInsert()
+                    # Trwa tworzenie nowych danych...
+                end
+            `
+        },
+    ]}
+/>
+
+Aby rozpoznać, czy trwa zmiana danych, możemy za pomocą `if` sprawdzić wynik metody
+`_dataItem.isUpdate()`, na przykład:
+
+<PolyglotCode
+    file="moja_aplikacja/server/actions/moj_formularz/saved"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isUpdate()) {
+                    // Trwa modyfikowanie danych...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isUpdate():
+                    # Trwa modyfikowanie danych...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isUpdate()
+                    # Trwa modyfikowanie danych...
+                end
+            `
+        },
+    ]}
+/>
+
+### Pobieranie ID
+
+Aby pobrać ID (identyfikator) elementu, który jest zmieniany:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _dataItem.getId()
+            `
+        },
+    ]}
+/>
+
+### Sprawdzanie, co jest modyfikowane
+
+Aby sprawdzić, co jest modyfikowane, możemy użyć `getOldRecord()`, aby pobrać stare dane z
+bazy danych, i porównać je z nowymi danymi z `getRecord()`, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email")) {
+                    // Uwaga: adres e-mail jest zmieniany!
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email"):
+                    # Uwaga: adres e-mail jest zmieniany!
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email")
+                    # Uwaga: adres e-mail jest zmieniany!
+                end
+            `
+        },
+    ]}
+/>
+
+### Generowanie błędu
+
+Można wygenerować błąd, aby uniemożliwić kontynuowanie operacji. Generowanie błędu zwykle odbywa się przed
+wykonaniem polecenia bazy danych, czyli w akcji `save`, na przykład:
+
+<PolyglotCode
+    file="moja_aplikacja/server/actions/moj_formularz/save"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _dataItem.setStatusWithError()
+                    .setErrorTitle("Email")
+                    .setErrorMessage("Nie można zmienić adresu e-mail.")
+            `
+        },
+    ]}
+/>
+
+### Sprawdzanie, czy wystąpił błąd
+
+Można sprawdzić, czy wystąpił jakiś błąd podczas wykonywania polecenia w bazie danych. Może wystąpić wiele błędów,
+na przykład:
+
+- Nie można mieć powtórzonych adresów e-mail.
+- Pole obowiązkowe nie zostało poprawnie wypełnione.
+- I wiele innych.
+
+Sprawdzanie błędów odbywa się zwykle po wykonaniu polecenia bazy danych, czyli w akcji
+`saved`, na przykład:
+
+<PolyglotCode
+    file="moja_aplikacja/server/actions/moj_formularz/saved"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isError()) {
+                    // Wystąpił błąd i nie udało się zapisać danych...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isError():
+                    # Wystąpił błąd i nie udało się zapisać danych...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isError()
+                    # Wystąpił błąd i nie udało się zapisać danych...
+                end
+            `
+        },
+    ]}
+/>
+
+### Konfiguracja
+
+Można mieć osobną `action`, która jest wykonywana tylko wtedy, gdy zmiany danych są dokonywane podczas
+konfiguracji (_setup_) bazy danych.
+
+Na przykład:
+
+<PolyglotPath files={[
+    'moja_aplikacja/server/actions/moj_formularz/setup_save',
+    'moja_aplikacja/server/actions/moj_formularz/setup_saved',
+]} />
+
+## Usuwanie, kasowanie lub eliminowanie (_Remove_)
+
+Aby utworzyć akcję, która zostanie uruchomiona podczas usuwania rekordu, skrypt tej akcji będzie nazywał się
+`remove`, co oznacza, że coś jest usuwane z bazy danych, na przykład:
+
+<PolyglotPath files={[
+    'moja_aplikacja/server/actions/moj_formularz/setup_remove',
+]} />
+
+> Ta akcja jest wykonywana przed wykonaniem polecenia bazy danych.
+
+Gdy kod ma zostać wykonany po usunięciu danych z bazy danych, używamy akcji
+`removed`, na przykład:
+
+<PolyglotPath files={[
+    'moja_aplikacja/server/actions/moj_formularz/setup_removed',
+]} />
+
+> Ta akcja jest wykonywana po wykonaniu polecenia bazy danych.
+
+Innymi słowy, w aplikacji w folderze `server/actions` tworzymy podfolder o nazwie formularza (tabeli), a
+w nim umieszczamy skrypt o nazwie `remove` lub `removed`, zawierający odpowiedni kod do wykonania przed
+lub po poleceniu bazy danych.
+
+### Konflikt z relacjami
+
+W zależności od modelu danych może się zdarzyć, że usunięcie rekordu używanego w relacji z
+inną tabelą, która również jest innym formularzem, nie będzie możliwe, aby uniknąć przerwania relacji.
+
+Wtedy w akcji `removed`, wykonywanej po poleceniu usunięcia w bazie danych, możemy sprawdzić, czy wystąpił ten
+błąd, w następujący sposób:
+
+<PolyglotCode
+    file="moja_aplikacja/server/actions/moj_formularz/removed"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations()) {
+                    _log.error(
+                        "Nie udało się usunąć, ponieważ istnieje powiązanie z tabelą "
+                        + _dataItem.getRelationTable() +" przy użyciu ID " + _dataItem.getRelationItem().getInt("id")
+                    )
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isStatusAsError() and _dataItem.isStatusAsRelations():
+                    _log.error(
+                        "Nie udało się usunąć, ponieważ istnieje powiązanie z tabelą "
+                        + _dataItem.getRelationTable() +" przy użyciu ID " + _dataItem.getRelationItem().getInt("id")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations())
+                    _log.error(
+                        "Nie udało się usunąć, ponieważ istnieje powiązanie z tabelą "
+                        + _dataItem.getRelationTable() +" przy użyciu ID " + _dataItem.getRelationItem().getInt("id")
+                    )
+                end
+            `
+        },
+    ]}
+/>
+
+Alternatywnie w akcji `remove`, wykonywanej przed poleceniem bazy danych usuwającym rekord,
+możemy zaimplementować „czyszczenie” innych rekordów, które mogą być powiązane, na przykład:
+
+<PolyglotCode
+    file="moja_aplikacja/server/actions/moj_formularz/remove"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _db.form("inny_formularz")
+                    .where(
+                        _db.where("moj_formularz_id")
+                            .equals(_dataItem.getRecord().getInt("id"))
+                    )
+                    .delete()
+            `
+        },
+    ]}
+/>
+
+### Konfiguracja
+
+Można mieć osobną `action`, która jest wykonywana tylko wtedy, gdy usuwanie danych odbywa się podczas
+konfiguracji (_setup_) bazy danych.
+
+Na przykład:
+
+<PolyglotPath files={[
+    'moja_aplikacja/server/actions/moj_formularz/setup_remove',
+    'moja_aplikacja/server/actions/moj_formularz/setup_removed',
+]} />
+
+## Podsumowanie
+
+Dzięki akcjom (`actions`) możemy centralizować określone operacje związane z manipulacją
+konkretnymi danymi.
+
+Pozwalają wzbogacić aplikację kodem, który zapewnia użyteczne mechanizmy gwarantujące integralność, ułatwiające zadania,
+realizujące integracje, wykonujące operacje równoległe, dodatkowe weryfikacje i wiele więcej.
+
+Kodowanie akcji jest proste i niezwykle użyteczne; można je rozszerzać, wykorzystując dowolny inny zasób
+poliglotycznego frameworka low-code.
+
+> W kodzie akcji można używać dowolnych zasobów poliglotycznego frameworka low-code.
+
+Rozważ korzystanie z akcji — szybko można przekonać się, jak uzyskana łatwość może wzmocnić
+wiele użytecznych strategii.

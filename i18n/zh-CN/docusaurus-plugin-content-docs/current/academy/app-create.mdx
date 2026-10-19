@@ -1,0 +1,662 @@
+---
+sidebar_position: 3
+id: app-create
+title: 创建应用
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+本指南概述初始配置，涵盖前端、数据库和 API 服务。
+我们将快速且实际地创建一个新的全栈应用。
+
+## 简介
+
+尽管该平台支持多语言并支持多种编程语言，但在本教程中我们将只专注于 JavaScript 的使用。因此，我们将创建一个实用应用，它由一个显示在模态窗口（弹窗）中的表单组成，并具有将数据导出为 PDF 的功能。
+
+#### 前置条件
+
+开始之前，请确保您具备：
+
+- 已在您的机器上安装 Netuno 平台。若此步骤有疑问，请参阅[平台安装](/docs/get-started/installation)指南。
+
+- 可访问开发环境的终端或命令提示符。
+
+## 创建新应用
+
+按照以下说明初始化您的新应用：
+
+打开终端并导航到安装 Netuno 的根目录。
+
+执行应用创建命令：
+
+```shell
+./netuno app
+```
+
+### 使用参数创建
+
+可以在执行命令时直接定义应用名称，例如：
+
+```shell
+./netuno app name=my_application
+```
+
+:::info 命名最佳实践
+定义应用名称时，请避免使用空格、重音符号或特殊字符。建议使用小写字母，并用连字符或下划线分隔（例如：**sales-app** 或 **hr_management**），以保持与 URL 和系统文件夹的兼容性。
+:::
+
+## 初始配置
+
+命令行向导将提出一些问题来配置您的项目。请填写：
+
+- **应用名称**：项目的标识符。
+- **数据库类型**：将使用的数据库管理系统。
+- **语言**：应用界面的默认语言。
+
+:::tip 提示与最佳实践
+
+**面向初学者的数据库建议**
+
+在分步过程中，当系统询问数据库类型时，我们建议选择 **H2 Database** 选项。
+
+H2 Database 是一个嵌入式数据库，已集成到 Netuno 服务器中。其最大优势是无需安装或配置外部服务器（如 PostgreSQL 或 MySQL），从而使初始开发和测试更加方便快捷。
+:::
+
+### 启动服务器的命令
+
+创建新应用后，启动 Netuno 平台服务器。这将使您的项目可在浏览器中访问，并准备好进行持续开发。
+
+在终端中执行以下命令并等待启动。
+
+```shell
+./netuno server app=my_application
+```
+
+通过传入参数 **app=my_application**，服务器会将其理解为此实例要运行的默认应用。服务器运行后，您就可以开始编辑项目了。
+
+应用的所有文件和源代码都存储并组织在 `📂 apps/my_application` 文件夹中。
+
+:::info 访问凭据（Backoffice）
+首次通过 **Backoffice** 管理界面访问应用时，系统会要求身份验证。对于本地开发环境，请使用以下默认凭据：
+
+**用户：** dev
+
+**密码：** dev
+
+*建议在将应用迁移到生产环境时更改这些凭据。*
+:::
+
+
+### 代码编辑器
+
+为确保最佳开发体验，我们建议使用现代、轻量且具有良好扩展生态的代码编辑器。
+
+如果您还没有喜欢的编辑器，推荐以下由社区广泛使用的免费选项：
+
+- VS Codium: <a href="https://vscodium.com/" target="_blank">vscodium.com</a>
+- VS Code: <a href="https://vscodium.com/" target="_blank">code.visualstudio.com</a>
+- WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">jetbrains.com/webstorm</a>
+
+> 注意：如果您更喜欢功能更强大的工具，并且不介意购买许可证，JetBrains 的 WebStorm 是一个出色的高级选项。
+
+在编辑器中打开应用文件夹：
+
+- `📂 apps/my_application`
+
+应用的所有文件都存储并组织在此文件夹中。所有开发、路由创建、数据库逻辑和可视化界面都将在该文件夹内进行。
+
+:::info 了解架构
+要确切了解每种文件应创建在哪里，以及 Netuno 如何组织后端和前端，建议阅读关于应用文件夹结构的详细文档：
+
+**请参阅指南：[应用文件夹](/docs/category/app-structure)**
+:::
+
+### 步骤概览
+
+在巩固 Netuno 的初步知识后，我们将把这些概念应用到实践中，从头到尾创建一个完整功能。
+
+实际目标是向界面添加两个新的交互组件：
+
+* 一个负责在浮动窗口（Modal）中加载并显示客户表单的按钮。
+* 一个专门用于生成客户列表并将其导出为 PDF 文件的按钮。
+
+为了有条理且清晰地实现这一结果，我们将开发过程划分为一系列逻辑步骤。我们将按照以下路线进行：
+
+- **界面映射**：分析应用的文件夹结构，定位仪表盘主 HTML 的定义位置。
+
+- **与 React 集成**：在前端使用 React 框架配置并添加两个新按钮的基础。
+
+- **Modal 逻辑**：构建并编写按钮行为，使其能够正确打开客户表单。
+
+- **导出界面**：在界面中构建并放置触发 PDF 文件下载的按钮。
+
+- **服务（API）开发**：编写后端，创建读取数据并动态生成包含客户列表的 PDF 文件的服务。
+
+让我们开始吧！
+
+## 仪表盘模板
+
+导航到 `server/templates` 文件夹，并打开负责提供仪表盘屏幕 HTML 的文件。
+
+```plaintext
+server/templates/dashboard.html
+```
+
+浏览 dashboard.html 文件的代码，滚动到页面末尾。您会找到一个单独的 `<div>` 元素。Netuno 平台正是在此处“注入”并启动整个使用 React 构建的交互界面。
+
+```html title="server/templates/dashboard.html"
+...
+<div id="app-dashboard"></div>
+```
+
+尽管 HTML 骨架位于 server/templates 文件夹中，但界面的实际开发和视觉逻辑并不在那里进行。
+
+要更改仪表盘的行为或使用 React 添加新组件，您需要访问专门用于前端开发的文件夹。
+
+正是在 `📂 ui/` 文件夹中，您会找到仪表盘组件，并可以开发应用的新可视化功能。
+
+
+## 创建表单
+
+在此步骤中，我们将创建本教程所需的数据库结构：一个名为 **客户** 的表单，其中包含一个名为 **名称** 的文本字段。
+
+* 在 Backoffice 中，点击 **构建** 按钮（右上角）进入开发区域。
+* 在侧边菜单中，导航到 **管理 > 表单**，并创建新表单，**标题：** 客户。
+* 点击 **保存**。
+
+表名将自动填充为 **customer**（保持小写，符合数据库建议）。
+
+:::info 查阅指南
+如果对此屏幕的高级配置有疑问，请查阅 **[表单](/docs/academy/ui/forms)** 中的完整文档。
+:::
+
+## 创建字段
+表单创建后，它会出现在左侧菜单的 **字段** 类别中。
+
+* 点击 **客户** 以添加新列：
+* 在字段标题中输入文本 **“名称”**。
+* 在 **类型** 字段中选择数据类型为 **“text”**。
+* 勾选 **允许筛选**（以启用搜索）和 **在结果中显示**（以显示在表格中）。
+* 点击 **保存**。
+
+
+:::info 查阅指南
+要了解所有可用数据类型及其属性，请访问 **[字段](/docs/academy/ui/fields)** 中的详细文档。
+:::
+
+#### 插入测试数据
+为了让我们在后续步骤中测试 PDF 导出，我们需要系统中有真实数据。
+
+* 点击 **查看** 按钮（右上角）返回应用使用的 Backoffice。
+* 在侧边栏中访问刚刚创建的 **客户** 菜单。
+* 使用 **+ 添加** 按钮在系统中注册一些测试客户。
+* 点击 **保存**。
+
+
+## 查询数据库
+
+Netuno 提供了一种集成工具，允许您直接在应用的数据库中执行 SQL 命令。这对于快速查询、验证信息或灵活操作系统数据至关重要。
+
+要访问查询界面并执行命令，请按以下步骤操作：
+
+* 在主界面中，点击 **构建** 按钮进入开发区域。
+* 在侧边导航菜单中，找到 **管理** 部分。
+* 点击 **查询** 选项以打开数据库控制台。
+* 在屏幕上出现的文本编辑器中，输入要执行的 SQL 命令。
+* 确认执行命令。
+
+执行以下命令以查询已注册的客户：
+
+```sql
+SELECT * FROM customer
+```
+
+完成查询并希望返回系统用户界面（Backoffice）时，只需点击 **查看** 按钮。
+
+## 使用 React 添加按钮
+
+在此步骤中，我们将配置 **dashboard** 面板的主文件，以显示两个新按钮。
+
+在界面架构中，我们使用 **Containers** 的概念来定义系统的广泛区域，这些区域包含更大的功能并聚合多个较小的组件。
+
+- 在代码编辑器中，导航到 `📂 ui/src/containers` 中的 containers 文件夹。
+
+- 找到并打开仪表盘主文件：`📂 DashboardContainer/index.jsx`。
+
+- 按照以下示例插入组件导入和渲染代码。
+
+```javascript title="ui/src/containers/DashboardContainer/index.jsx"
+import { Space } from 'antd';
+
+import CustomerModalButton from '../../components/CustomerModalButton';
+import PDFButton from '../../components/PDFButton';
+
+import "./index.less";
+
+function DashboardContainer() {
+    return (
+        <div className="my-dashboard">
+            <Space>
+                <CustomerModalButton />
+                <PDFButton />
+            </Space>
+        </div>
+    );
+}
+
+export default DashboardContainer;
+```
+
+请注意，这些按钮文件在您的项目中尚不存在。由于它们是较小且可复用的组件，我们将在专门存放组件的文件夹中创建它们。
+
+:::tip 架构组织
+始终将 **Containers**（范围广泛的区域，如整个页面或仪表盘）和 **Components**（独立的界面元素，如按钮和模态框）分开。这会使您在 Netuno 中的代码更整洁、更易维护且更具可扩展性。
+:::
+
+### 表单按钮
+
+访问 `ui/src/components/` 文件夹，并创建一个名为 `CustomerModalButton` 的新文件夹。
+
+在 **CustomerModalButton** 文件夹内，创建组件主文件，命名为 `index.jsx`。
+
+`📂 ui/src/components/CustomerModalButton/index.jsx`
+
+打开文件并插入以下代码：
+
+```javascript title="ui/src/components/CustomerModalButton/index.jsx"
+import { Button } from 'antd';
+
+function CustomerModalButton() {
+    const onClick = () => {
+        netuno.modal.create({
+            name: 'customer',
+            callback: function (modal) {
+                let form = modal.find('[netuno-form]');
+
+                form.on('netuno:new', () => {
+                    console.log('正在创建新客户。');
+                });
+
+                form.on('netuno:save', () => {
+                    netuno.modal.hide(modal)
+                    console.log('已保存客户。');
+                });
+
+                form.on('netuno:delete', () => {
+                    netuno.modal.hide(modal)
+                    console.log('已删除客户');
+                });
+
+                form.on('netuno:back', () => {
+                    console.log('点击了返回');
+                });
+
+                netuno.loadForm(form);
+                netuno.modal.show(modal);
+            }
+        });
+    };
+    return (
+        <div>
+            <Button type="primary" onClick={ onClick }>
+                打开客户表单
+            </Button>
+        </div>
+    );
+}
+
+export default CustomerModalButton;
+```
+
+#### 代码讲解
+此组件的魔力发生在 `onClick` 函数内部，它使用了 Netuno 的全局界面工具：
+
+- **netuno.modal.create()**：此方法负责在屏幕上实例化模态窗口，并将所需表单（在本例中为名为 customer 的表单）绑定到该窗口。
+
+- **表单事件（form.on）**：`callback` 块允许我们“监听”用户操作。我们可以在用户创建记录（`netuno:new`）、保存（`netuno:save`）、删除（`netuno:delete`）或点击返回（`netuno:back`）时触发自定义操作。
+
+- **netuno.modal.hide() / show()**：用于在成功操作后隐藏模态框，或在表单加载后显示它的方法。
+
+:::info 集成完成
+现在 **CustomerModalButton** 组件已成功创建，之前我们在 **DashboardContainer** 中进行的导入将不再报错，按钮应该已经渲染到您的屏幕上了！
+:::
+
+### 导出 PDF 按钮
+
+在此步骤中，我们将创建仪表盘的第二个按钮：导出 PDF 按钮。
+
+该组件在界面中的主要功能是作为触发器，也就是说，点击它会向后端服务发起请求，由后端服务处理系统数据并生成包含已注册客户列表的 PDF 文件。
+
+- 访问 `ui/src/components/` 文件夹，并创建一个名为 **PDFButton** 的新文件夹。
+
+- 在该文件夹内创建一个名为 **index.jsx** 的文件。
+
+`ui/src/components/PDFButton/index.jsx`
+
+打开文件并插入以下代码：
+
+```javascript title="ui/src/components/PDFButton/index.jsx"
+import { Button } from 'antd';
+
+function PDFButton() {
+    return (
+        <div>
+            <Button
+                type="primary"
+                href="/services/customer/export-pdf"
+                target="blank">
+                导出 PDF
+            </Button>
+        </div>
+    );
+}
+
+export default PDFButton;
+```
+
+创建 PDFButton 组件后，您在 DashboardContainer 中声明的两个按钮都已准备就绪。
+
+:::tip 后续步骤
+可视化结构和组件已经完成。编译前端以测试界面渲染。
+
+实际生成 PDF 的后端服务构建将在下一步中介绍。
+:::
+
+## 编译前端
+
+互联网浏览器原生并不理解用 React 编写的代码、`.jsx` 或 `.tsx` 文件，以及 `.less` 等 CSS 预处理器。要使界面正常工作，需要经过编译（build）过程。该过程会将您的所有代码转换、打包并优化为浏览器能够以最高效率处理的最终静态文件（标准 JavaScript 和 CSS）。
+
+#### 前置条件
+
+开始编译之前，请确保：
+
+- 在开发环境中已打开终端或命令提示符。
+
+- 系统中已正确安装包管理器 `Bun`。
+
+## 编译示例
+
+Netuno 根据开发阶段提供不同的命令。从 Netuno 根目录开始，导航到应用的 `ui` 文件夹。
+
+在应用的界面文件夹内执行命令：`📂 apps/my_application/ui`
+
+### 生产编译
+
+执行完整且优化的文件编译。当您完成屏幕或组件的开发，并希望生成轻量且性能更好的最终文件时，这是理想的命令。
+
+```bash
+bun run build
+```
+
+### 开发编译
+
+**watch** 命令会执行快速编译，并持续监视文件夹。每当您在编辑器中保存文件时，终端都会自动执行编译。
+
+```bash
+bun run watch
+```
+无论使用 **build** 还是 **watch** 命令，更改都不会立即出现在用户屏幕上。请刷新浏览器中的 Backoffice 页面，以加载新生成的文件。
+
+:::tip 错误监控与调试
+在开发过程中，错误可能发生在两个不同阶段。请了解在哪里查找它们：
+
+- **编译错误**：React 代码中的语法错误或未声明的变量会直接显示在运行 **bun** 命令的终端中。
+
+- **运行时错误**：在应用使用过程中发生的故障会显示在浏览器控制台中。请始终记得检查页面，查看是否有任何警告或错误。
+:::
+
+### 集成编译
+
+集成编译功能允许在服务器启动时自动执行终端命令。这优化了工作流程，将所有日志和监控集中到一个终端中。
+
+要启用集成编译，需要修改应用的开发配置：
+
+- 访问应用的根文件夹。
+
+- 打开开发配置文件：`_development.json`。
+
+- 找到与“**commands**”相关的代码块。
+
+- 将“enabled”属性的值从 **false** 改为 **true**。
+
+- 保存文件。
+
+您的 `_development.json` 文件结构应类似以下内容：
+
+```json title="config/_development.json"
+  ...
+  "commands": [{
+    "command": "bun run watch",
+    "enabled": true,
+    "install": "bun install",
+    "path": "ui"
+  }],
+  ...
+```
+
+为了让 Netuno 读取更新后的文件并应用新配置，需要重启服务器：
+
+- 转到正在运行 Netuno 服务器的终端。
+
+- 同时按下 CTRL + C 键结束进程。
+
+- 重新启动服务器，并指定您的应用名称：
+
+```shell
+./netuno server app=my_application
+```
+
+:::tip 单一终端
+重启服务器后，观察终端中的日志。您会注意到 Netuno 现在正在后台自动执行前端编译命令 **bun run watch**。从现在起，所有内容都在同一个窗口中集成运行。
+:::
+
+## 用于生成 PDF 的 API 服务
+
+在上一步中，我们在前端配置了 **导出 PDF** 按钮，其 “**href**” 属性指向地址 `services/customer/export-pdf`。然而，如果现在点击它，什么也不会发生。这是因为负责生成文件的 API 服务尚不存在。
+
+API 的所有开发都在 `📂 server` 文件夹内进行。
+在本节中，我们将创建从数据库获取记录并以可视化方式构建 PDF 文档的脚本。
+
+#### 前置条件
+
+- 已在前端创建指向正确 URL 的 PDFButton 组件。
+- Netuno 服务器正在运行。
+
+
+Netuno 会根据 **server/services/** 内的文件夹结构自动路由 API URL。要创建服务，请按照以下步骤操作：
+
+- 导航到后端服务文件夹：`server/services/`。创建一个名为 **customer** 的文件夹。
+
+- 在该文件夹内，创建一个名为 `export-pdf.js` 的文件。
+
+> Netuno 是多语言平台。本示例中我们将使用 JavaScript，请根据您偏好的语言使用相应的扩展名。
+
+打开文件并插入以下代码，以生成 PDF 的结构：
+
+<PolyglotPath files={[
+    'server/services/customer/export-pdf'
+]} />
+
+<PolyglotCode
+    file="server/services/customer/export-pdf"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("pdf")
+
+                const pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("客户列表：")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                const dbCustomers = _db.form("customer").all()
+
+                for (const dbCustomer of dbCustomers) {
+                    pdfDocument.add(
+                        _pdf.paragraph(dbCustomer.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("客户列表：")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                dbCustomers = _db.form("customer").all()
+
+                for dbCustomer in dbCustomers:
+                    pdfDocument.add(
+                        _pdf.paragraph(dbCustomer.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("客户列表：")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                dbCustomers = _db.form("customer").all()
+
+                dbCustomers.each do |dbCustomer|
+                    pdfDocument.add(
+                        _pdf.paragraph(dbCustomer.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                end
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _header.contentType("pdf")
+
+                val pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("客户列表：")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                val dbCustomers = _db.form("customer").all()
+
+                dbCustomers.forEach {
+                    pdfDocument.add(
+                        _pdf.paragraph(it.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _header.contentType("pdf")
+
+                def pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("客户列表：")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                def dbCustomers = _db.form("customer").all()
+
+                for (dbCustomer in dbCustomers) {
+                    pdfDocument.add(
+                        _pdf.paragraph(dbCustomer.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                pdfDocument.close()
+            `
+        },
+    ]}
+/>
+
+
+#### 代码讲解
+
+- **_header.contentType("pdf")**：告知浏览器该请求的响应不是普通文本或 JSON，而是 PDF 文件。
+
+- **_pdf**：是 Netuno 原生用于操作 PDF 的资源。通过它，我们定义页面大小（A5）、创建段落、调整字体大小（setFontSize）和颜色（setFontColor）。
+
+- **_db.form("customer").all()**：查询数据库并返回表单 "customer" 中保存的所有记录。循环（for）遍历每个客户，并提取 "name" 字段的信息以打印到文档中。
+
+- **pdfDocument.close()**：完成文档构建并将其作为响应发送。
+
+#### 验证与测试
+
+每次想测试服务时，都不必点击仪表盘按钮。由于这是一个简单请求（GET），您可以通过浏览器直接访问 API URL 来验证执行情况。
+
+对于此示例，请访问以下地址：
+http://localhost:9000/services/customer/export-pdf
+
+如果 PDF 文件生成并显示在屏幕上，且包含客户列表，则服务运行正常！因此，您仪表盘中的导出 PDF 按钮也将自动开始工作。
+
+:::tip 后端错误追踪
+如果访问 URL 时页面空白或返回错误消息，请立即检查运行 Netuno 服务器的终端。与前端错误显示在浏览器控制台不同，server 文件夹中脚本的任何执行故障都会在后端服务器终端中详细显示。
+:::
+
+## 结论
+
+在本教程中，您使用 Netuno 完成了一次全栈开发的实践之旅。
+
+主要目标是演示该平台如何将可视化界面构建与服务器的稳健性相结合，并始终关注高生产力。
+
+回顾已完成的步骤：
+
+- **前端开发**：使用 React 自定义仪表盘，以模块化方式创建界面组件和交互按钮。
+
+- **数据管理与结构**：了解了在面板中创建表单和字段以注册和操作信息是多么快速，而无需编写复杂的持久化例程。
+
+- **直接查询**：使用 Query 功能灵活执行 SQL 命令，测试数据库。
+
+- **后端 API 创建**：开发了一个生成 PDF 的服务，并观察到了 Netuno 的一大优势：热重载（hot-reload）。您无需在每次更改后端代码时重启服务器，这极大地加快了编程速度。
+
+- **优化环境**：配置了集成编译，将前端和后端进程集中到一个终端中，以保持专注并避免分心。
+
+该平台从本质上就是为了优化和加速软件开发而设计的。现在您已经理解了低代码与自定义代码集成的基本流程，您已经准备好构建更加复杂和可扩展的应用。
+
+继续探索文档的后续章节，以掌握更多功能。
+
+当您成为一个活跃社区的一部分时，开发会变得容易得多。请访问本页页脚中的社交媒体链接。

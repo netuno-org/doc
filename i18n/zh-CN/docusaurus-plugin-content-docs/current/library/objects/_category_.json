@@ -1,0 +1,8 @@
+{
+  "label": "Objects",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Main low-code objects available."
+  }
+}

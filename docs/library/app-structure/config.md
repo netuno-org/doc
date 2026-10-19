@@ -4,11 +4,13 @@ title: Config
 sidebar_label: Config
 ---
 
-## Configuration Folder
+General application settings.
 
-Application configurations are available in the `📂 config` folder, where general configurations are made for the application and external integrations.
+## Settings Folder
 
-Netuno supports several types of environments. By default, we use `development` and `production`.
+The application settings are available in the `📂 config` folder, where the general settings of the application and external integrations are configured.
+
+Netuno supports several types of environments; by default we use `development` and `production`.
 
 The active environment is defined in `config.js`, which is located at the root of the Netuno installation:
 
@@ -18,40 +20,32 @@ config.env = 'development'
 ...
 ```
 
-Any name can be used to define the environment, and applications must have the same
-environment name as the file names (`.json` and `.js` in the application's `📂 config` folder).
+Any name can be used to define the environment, and applications must have the same environment name as the file names (`.json` and `.js` in the application's `📂 config` folder).
 
-By default, this folder contains the following files:
+By default, in this folder we find the following files:
 
 ## _development.js
 
-JavaScript code injection that allows dynamic configurations through programmatic logic
-on the parameters defined in the `_development.json` file. For example, defining a configuration
-based on information in a database, defining the parameterization of code execution behavior, among others.
+The injection of JavaScript code that allows dynamic configuration through programmatic logic over the settings defined in the `_development.json` file. For example, defining some configuration based on information in a database, defining the behavior settings for code execution, among others.
 
 This file is used depending on the environment definition, if it is `development`.
 
 ## _development.json
 
-Defining application parameters such as language, general resource settings, and integrations.
-Such as database configurations, cron jobs, integrations with SMTP or remote APIs, authentication,
-among many others.
+Definition of application settings such as language, general resource settings, and integrations.
+For example, database settings, Cron Jobs, integrations with SMTP or remote APIs, authentication, among many others.
 
 This file is used depending on the environment definition, if it is `development`.
 
 ## _production.js
 
-JavaScript code injection allows you to perform dynamic configurations through programmatic logic on the
-parameterizations defined in `_production.js`. For example, defining the configuration with information from the
-database, parameterizing code execution behavior, among others.
+The injection of JavaScript code allows dynamic configuration through programmatic logic over the settings defined in `_production.js`. For example, defining the configuration with information in a database, parameterization of code execution behavior, among others.
 
 This file is used depending on the environment definition, if it is `production`.
 
 ## _production.json
 
-Defining application parameters Application settings such as language, general resource settings, and integrations.
-
-For example, database settings, Cron Jobs, SMTP or remote API integrations, authentication,
-among many others.
+Definition of application settings such as language, general resource settings, and integrations.
+For example, database settings, Cron Jobs, integrations with SMTP or remote APIs, authentication, among many others.
 
 This file is used depending on the environment definition, if it is `production`.

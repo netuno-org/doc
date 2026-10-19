@@ -1,66 +1,66 @@
 ---
 id: cron-jobs
-title: Cron Jobs
+title: Cron Jobs - Scheduled Services
 sidebar_label: Cron Jobs
 ---
 
-## Before You Starting
+## Before You Start
 
-Please make sure you have basic knowledge skills in _**JavaScript**_ and in _Netuno_ platform, also available at [Netuno Academy](/docs/academy/overview).
+Before proceeding, make sure you have basic knowledge of _**JavaScript**_ and that you already have the Netuno basics from the step-by-step guide available in the [Academy](/docs/academy/overview).
 
 ## Introduction
 
-Cron Jobs allow you to automate certain commands or scripts on your server to complete repetitive tasks automatically. This can be a very resourceful tool as a **Cron Job** can be set to run by 15 minute or hourly increments, a day of the week or month, or any combination of these. [Cron in Linux](https://opensource.com/article/17/11/how-use-cron-linux).
+It is common to need to run tasks periodically; that is, from time to time it is necessary to send data to another system, import data from another system, send an email, validate database records, and much more...
 
-In Linux/UNIX/Mac there is a service called _Cron_ with the famous settings `crontab`, on the other hand on _Windows_ will be the `Task Manager`.
+On Linux/UNIX/Mac there is the Cron service with the famous configuration file `crontab`, while on Windows there is Task Manager (_Windows Task Manager_).
 
-**Cron Jobs** comes already fully integrated with _Netuno_ platform which helps to avoid further external configurations.
+And in Netuno, Cron Jobs comes already integrated, thus helping to avoid external configurations.
 
-_Cron Jobs_ are known as periodic operations.
+This type of periodic operation is known as Cron Jobs or, in Portuguese, Scheduled Services.
 
-Each _Netuno_ app can have several **Cron Jobs**, also these _Netuno_ Cron Jobs can execute internal and external URL's and services
+Each Netuno application can have countless Cron Jobs, and Netuno Cron Jobs can run both internal services and URLs as well as external URLs.
 
-> For more information please check our documentation at [Cron](/docs/library/resources/cron).
+> For more information, see the documentation for the [cron](/docs/library/resources/cron) resource.
 
-## Cron Jobs Guide
+## How It Works
 
-Each application has its own service settings reschedule (**cron jobs**) with a specific execution configuration.
+Each application has the configuration for its own scheduled services (**cron jobs**) with their respective execution configuration.
 
-To simplify each scheduled service, it is a separate ** job **, which has its own execution configuration, and can be executed every minute, every 5 minutes, every hour, on a certain day and time of the week, also has the URL that will be called when it is time to execute it.
+To simplify, each scheduled service is a separate **job**, which has its own execution configuration and can run every minute, every 5 minutes, every hour, on a specific day and time of the week, etc. It also has the URL that will be called when it is time to run.
 
->_Netuno_ uses the library <a href="http://www.quartz-scheduler.org/" target="_blank">Quartz Scheduler</a> to manage the execution of scheduled services. The timing rules configuration can be found in this library.
+> Netuno uses the <a href="http://www.quartz-scheduler.org/" target="_blank">Quartz Scheduler</a> library to manage the execution of scheduled services. The configuration of the timing rules is specific to this library.
 
-Furthermore, the execution of each **job** involves the execution of a URL (_web address, link_), which can be both external and internal to the application itself. When it is an external link, it can be from another application or any external URL on the internet, on the network or on the computer.
+Thus, the execution of each job involves calling a URL (_web address, link_), which can be either external or internal to the application itself. When it is an external link, it can be from another application or any external URL on the internet, the network, or the computer.
 
 ![Cron Diagram](/docs/assets/academy/server/cron.svg)
 
-The graph above shows that _Netuno_ contains 2 applications, where each one has configured 2 jobs (_scheduled services_), which are executed at different times, corresponding to any configuration.
+The graph above shows that Netuno contains 2 applications, where each one has 2 jobs configured (_scheduled services_), which run at different times according to some configuration. 
 
-The execution that will happen is as follows:
+The execution behavior that will occur is as follows:
 
-- App 1 send 2 jobs:
-  - Job 1: Run an URL internal service of the App 1 itself.
-  - Job 2: Run an external, public URL.
-- App 2 send 2 jobs:
-  - Job 3: Run an internal service URL from App 2 itself.
-  - Job 4: Run an App 1 service URL.
+- App 1 launches 2 jobs:
+  - Job 1: Calls an internal service URL of App 1 itself.
+  - Job 2: Calls an external, public URL.
+- App 2 launches 2 jobs:
+  - Job 3: Calls an internal service URL of App 2 itself
+  - Job 4: Calls a service URL of App 1.
 
-> Applications should have the services that are run by **Cron Jobs** within the folder:
+> Applications must keep the services run by Cron Jobs inside the folder:
 > - 📂 `server/services/jobs`
 
-Each URL is executed using the _HTTP POST_ method. In the job configuration, it allows adding additional parameters, as well as a secret key to prevent it from being executed outside the controlled context.
+Each URL is called with the HTTP POST method. The job configuration allows you to add additional parameters and also a secret key to prevent it from being run outside the controlled context.
 
 ## Configuration
 
-According to the environment, the schedule services is carried out in the configuration file app.
+Scheduled services are configured in the application configuration file, according to the environment.
 
-> This configure should never start with `*` this will cause the execution to occur every second, therefore generating performance complications in a snowball effect in case the processing at any time takes more than 1 second.
+> The configuration must never start with `*`; this will cause execution every second, generating performance complications with a snowball effect if processing ever takes longer than 1 second.
 
 To do this, navigate within the application you are developing to the environment configuration file. In this example, we will use the development environment file located at:
 
 - 📂 `config/_development.json`
 
-Check that there are no more configurations for _Cron_, if it does not add the configuration parameters at the end of the configuration file (in JSON format):
+Check whether there are no existing Cron configurations; if there are none, add the configuration parameters at the end of the configuration file (in JSON format):
 
 ```
 {
@@ -79,7 +79,7 @@ Check that there are no more configurations for _Cron_, if it does not add the c
                 "url": "http://my-app.local.netu.no:9000/services/jobs/my-other-job",
                 "params": {
                     "secret": "m3u-Ou7ro-S3Gred0",
-                    "type": "client"
+                    "type": "customer"
                 }
             }
         ]
@@ -88,97 +88,99 @@ Check that there are no more configurations for _Cron_, if it does not add the c
 }
 ```
 
-In this configuration, the first job will be executed every day at noon and thirty minutes. And the second job will run every 2 minutes.
+In this configuration, the first job will run every day at 12:30 PM.
+
+And the second job will run every 2 minutes.
+
 
 ##### Jobs
 
-The list of scheduled services that we have in the application is an array and for this reason we can have multiple services configured.
+The list of scheduled services in the application; since it is an array, we can have multiple services configured.
 
 ##### Secret
 
-It is a security key parameter that protects the service, to be executed only when it receives this parameter with exactly the same value.
+It is a security key parameter that protects the service so that it runs only when it receives this parameter with exactly the same value.
 
-The reason why `jobs` are public services and to prevent them from being executed externally they contain this protection.
+This is because `jobs` are public services, and to prevent them from being run externally they contain this protection.
 
 ##### Name
 
-The name that identifies the service internally, which can be used to perform management manipulation, such as stop and restart.
+The name that identifies the service internally, which can be used to perform management operations such as pausing and resuming.
 
 ##### Config
 
-The configuration of the expression of the service timing, on other hand the rules of its scheduling.
+The service timing expression configuration, that is, its scheduling rules.
 
-> The configuration should never start with `*` this will cause the execution to occur every second, thus, generating performance complications with a snowball effect in case the processing at any time takes more than 1 second.
+> The configuration must never start with `*`; this will cause execution every second, generating performance complications with a snowball effect if processing ever takes longer than 1 second.
 
-Check the supported expressions below.
+See the supported expressions below.
 
 ##### URL
 
-The address that will be executed periodically.
+The address that will be called periodically.
 
 ##### Params
 
-The parameters that are passed to the URL in the execution, the URL is executed with the ** HTTP POST ** method and therefore additional parameters such as _type_ can be added in the example above, or even specify another secret key.
+These are the parameters passed to the URL when it runs; the URL is called with the **HTTP POST** method, so additional parameters such as _type_ in the example above can be added, or even another secret key can be specified.
 
-### Supported formats of Cron expressions
+### Supported Cron Expression Formats
 
-|Name Field | Compulsory | VALUES ACCEPTED| SPECIAL CHARACTERS ALLOWED |
+|FIELD NAME | REQUIRED | ACCEPTED VALUES | ALLOWED SPECIAL CHARACTERS |
 | ------- |:------:|:-----------:|--------------|
 | Seconds | YES | 0-59 | , - * / |
 | Minutes | YES | 0-59 | , - * / |
 | Hours | YES | 0-23 | , - * / |
-| Day of the Month | YES | 1-31 | , - * ? / L W |
+| Day of Month | YES | 1-31 | , - * ? / L W |
 | Month | YES | 1-12 or JAN-DEC | , - * / |
-| Day of the week | YES | 1-7 or SUN-SAT | , - * ? / L # |
+| Day of Week | YES | 1-7 or SUN-SAT | , - * ? / L # |
 | Year | NO | empty, 1970-2099 | , - * / |
 
-##### Cron expressions, examples
+##### Examples of Cron Expressions
 
 |EXPRESSION | MEANING |
 | ------- |------|
-| 1 * * * * ? | Performs on the second number 1 of every minute. |
-| 0 0 12 * * ? | Starts at 12h00 every day |
-| 0 15 10 ? * * | Starts at 10h15 every day|
-| 0 15 10 * * ? | Starts at 10h15 every day |
-| 0 15 10 * * ? * | Starts at 10h15 every day |
-| 0 15 10 * * ? 2005 | Starts at 10h15 every day during 2005 |
-| 0 * 14 * * ? | Starts every minute starting at 14h and ends at 14h59, every day |
-| 0 0/5 14 * * ? | Starts every 5 minutes starting at 14h00 and ending at 14h55, every day |
-| 0 0/5 14,18 * * ? | It starts every 5 minutes, starting at 14h00 and ending at 14h55. Subsequently, it starts every 5 minutes, starting at 18h00 and ending at 18h55, every day |
-| 0 0-5 14 * * ? | Starts every minute starting at 14h00 and ends at 14h05, every day |
-| 0 10,44 14 ? 3 WED | Starts at 14h10 and 14h44 every Wednesday in March. |
-| 0 15 10 ? * MON-FRI | Starts at 10h15 every working day of the week (Monday to Friday) |
-| 0 15 10 15 * ? | Starts at 10h15 on the 15th of each month |
-| 0 15 10 L * ? | Starts at 10h15 on the last day of each month |
-| 0 15 10 L-2 * ? | Starts at 10h15 on the penultimate day of each month |
-| 0 15 10 ? * 6L | Starts at 10h15 on the last Friday of each month |
-| 0 15 10 ? * 6L 2002-2005 | Starts at 10h15 every last Friday of each month during 2002, 2003, 2004 and 2005 |
-| 0 15 10? * 6 # 3 | Starts at 10h15 on the third Friday of each month |
-| 0 0 12 1/5 * ? | Starts at 12 noon every 5 days of each month, starting on the first day of each month. |
-| 0 11 11 11 11 ? | It starts every 11th of November at 11h11 |
+| 1 * * * * ? | Runs at second number 1 of every minute. |
+| 0 0 12 * * ? | Starts at 12:00 PM every day |
+| 0 15 10 ? * * | Starts at 10:15 AM every day |
+| 0 15 10 * * ? | Starts at 10:15 AM every day |
+| 0 15 10 * * ? * | Starts at 10:15 AM every day |
+| 0 15 10 * * ? 2005 | Starts at 10:15 AM every day during the year 2005 |
+| 0 * 14 * * ? | Starts every minute beginning at 2:00 PM and ends at 2:59 PM, every day |
+| 0 0/5 14 * * ? | Starts every 5 minutes beginning at 2:00 PM and ends at 2:55 PM, every day |
+| 0 0/5 14,18 * * ? | Starts every 5 minutes beginning at 2:00 PM and ends at 2:55 PM. Then starts every 5 minutes beginning at 6:00 PM and ends at 6:55 PM, every day |
+| 0 0-5 14 * * ? | Starts every minute beginning at 2:00 PM and ends at 2:05 PM, every day |
+| 0 10,44 14 ? 3 WED | Starts at 2:10 PM and 2:44 PM every Wednesday in March. |
+| 0 15 10 ? * MON-FRI | Starts at 10:15 AM every weekday (Monday through Friday) |
+| 0 15 10 15 * ? | Starts at 10:15 AM on the 15th day of every month |
+| 0 15 10 L * ? | Starts at 10:15 AM on the last day of every month |
+| 0 15 10 L-2 * ? | Starts at 10:15 AM on the second-to-last day of every month |
+| 0 15 10 ? * 6L | Starts at 10:15 AM on the last Friday of every month |
+| 0 15 10 ? * 6L 2002-2005 | Starts at 10:15 AM on every last Friday of every month during the years 2002, 2003, 2004, and 2005 |
+| 0 15 10 ? * 6#3 | Starts at 10:15 AM on the third Friday of every month |
+| 0 0 12 1/5 * ? | Starts at 12:00 PM every 5 days of every month, beginning on the first day of each month. |
+| 0 11 11 11 11 ? | Starts every November 11 at 11:11 AM. |
 
-> The configuration should never start with `*` this will cause the execution to occur every second, thus generating performance complications with a snowball effect in case the processing at any time takes more than 1 second. 
-[Cron Tab](https://crontab.guru/examples.html)
+> The configuration must never start with `*`; this will cause execution every second, generating performance complications with a snowball effect if processing ever takes longer than 1 second.
 
 ## Service
 
-Scheduled services should be scheduled within the folder:
+Scheduled services must be programmed inside the folder:
 
 - 📂 `server/services/jobs`
 
-_Netuno_ will automatically execute these services and validate the `secret` parameter with the right configuration value.
+Netuno will automatically run these services and validates the `secret` parameter against the value in the configuration.
 
-> The `secret` has the purpose for the service to be executed externally without authentication, but in a secure way.
+> The `secret` allows the service to be run externally without authentication, but securely.
 
-The service will be executed periodically according to the defined parameterization.
+The service will run periodically according to the defined parameterization.
 
-Just execute the service's direct URL and pass the `secret` parameter, to run the service execution test manually.
+To manually test the service execution, simply call the service's direct URL and pass the `secret` parameter.
 
-Via GET for example:
+For example, via GET:
 
 - http://my-app.local.netu.no:9000/services/job/my-job?secret=\*\*\*\*\*
 
-In place of the `*****` at the end of the URL, it should be replaced with the actual configured value of the` secret`.
+The `*****` at the end of the URL should be replaced with the real configured `secret` value.
 
 ## Example
 
@@ -186,15 +188,15 @@ Create the file at:
 
 - 📂 `server/services/jobs/test.js`
 
-In this service file, place the following code:
+In this service file, put the following code:
 ```javascript
-_log.info("Job test!")
+_log.info("Test job!")
 _out.print("Ok")
 ```
 
-In your application's configuration JSON, adjust the parameterization as below:
+In your application's configuration JSON, adjust the parameterization as follows:
 
-```javascript
+```json
 {
     ...
     "cron": {
@@ -211,35 +213,33 @@ In your application's configuration JSON, adjust the parameterization as below:
 }
 ```
 
-When running the _Netuno_ server into the terminal, the message `Test job!` Will appear every 30 seconds.
+When you run the Netuno server in the terminal, the message `Test job!` will start appearing every 30 seconds.
 
-Open the URL in the browser:
+If you open the URL in the browser:
 
 - http://localhost:9000/services/jobs/test?secret=m3u-S3Gred0
 
-Only `Ok` will return and the message` Test job! `Will appear in the terminal.
+It will return only `Ok`, and the message `Test job!` will appear in the terminal.
 
-> In the `development` environment, the validation of the` secret` has no effect, so it can run without passing any `secret` and it will work, but in different environment, such as the production one will be already taken into account.
+> In the `development` environment, `secret` validation has no effect, so you can run it without passing any `secret` and it will work; however, in another environment such as production, it is taken into account.
 
 ## Many Tasks
 
-When there is a need to create many scheduled tasks, it is advisable to increase the number of threads used for the 
-parallel execution of the various scheduled tasks.
+When there is a need to create many scheduled tasks, it is advisable to increase the number of threads used for the parallel execution of the various scheduled tasks.
 
-This configuration is done in the `config.js` file located in the Netuno root, adding the example line:
+This configuration is done in the `config.js` file located at the root of Netuno, by adding the example line:
 
 ```javascript
 config.cronThreadCount = 10
 ```
 
-> By default this configuration only allows 3 threads.
->
-> You should be careful to increase the number of threads according to the number of CPU cores.
+> By default, this configuration allows only 3 threads.
+> 
+> Be careful to increase the number of threads according to the number of CPU cores.
 
-Using too few threads to execute too many parallel schedules may result in scheduled tasks stopping execution.
+Using too few threads to run many parallel schedules can result in the scheduled tasks stopping execution.
 
-So if there are cases where tasks get stuck after some time, it is likely that too many tasks are being executed in 
-parallel, so it is necessary to increase the number of threads.
+Therefore, if there are cases where tasks get stuck after some time, too many tasks are probably being run in parallel, so it is necessary to increase the number of threads.
 
 ## Programmatically
 
@@ -249,18 +249,18 @@ This means that through code we can manage everything.
 
 ### Create New Task
 
-To create a new task, we create its schedule through [`_cron.schedule`](/docs/library/resources/cron#schedule).
+To create a new task, we create its schedule using [`_cron.schedule`](/docs/library/resources/cron#schedule).
 
 The [`_cron.schedule`](/docs/library/resources/cron#schedule) receives the following parameters:
 
 1. Task identification key: `key`.
-2. Configuration of the scheduling time for execution.
-3. Location of the service that should be executed, i.e.: `URL`.
-4. Additional parameters that are sent when calling the service.
+2. Execution scheduling time configuration.
+3. Address of the service that must be run, that is, the: `URL`.
+4. Additional parameters sent in the service call.
 
 ```javascript
 _cron.schedule(
-    'minha-tarefa',
+    'my-task',
     '0 0/60 * * * ?',
     `/services/jobs/product-update`,
     _val.map()
@@ -268,15 +268,15 @@ _cron.schedule(
 )
 ```
 
-If it is necessary to create tasks automatically when the application starts, this automation can be coded in the file:
+If it is necessary to create the tasks automatically when the application starts, this automation can be coded in the file:
 
 - `server/core/_init.js`
 
-Where this file is executed whenever the application is started by the Netuno server.
+This file runs whenever the application is initialized by the Netuno server.
 
 ### Remove Task
 
-To remove a specific task we use [`_cron.remove(key)`](/docs/library/resources/cron#remove).
+To remove a specific task, we use [`_cron.remove(key)`](/docs/library/resources/cron#remove).
 
 Where `key` is the task identification key.
 
@@ -288,9 +288,9 @@ _cron.remove('my-task')
 
 ### List Tasks
 
-Through [`_cron.schedules()`](/docs/library/resources/cron#schedules) we can list all configured tasks.
+Using [`_cron.schedules()`](/docs/library/resources/cron#schedules) we can list all configured tasks.
 
-Example of how to list all scheduled tasks:
+Example of how to list all scheduled tasks: 
 
 ```javascript
 const list = _cron.schedules()
@@ -300,8 +300,8 @@ _out.println(`  <td>Key</td>`)
 _out.println(`  <td>URL</td>`)
 _out.println(`  <td>Parameters</td>`)
 _out.println(`  <td>Description</td>`)
-_out.println(`  <td>Previous Fire Time</td>`)
-_out.println(`  <td>Next Fire Time</td>`)
+_out.println(`  <td>Last Execution</td>`)
+_out.println(`  <td>Next Execution</td>`)
 _out.println(`  <td>Priority</td>`)
 _out.println('</tr>')
 for (const schedule of list) {
@@ -329,7 +329,7 @@ const list = _cron.schedules()
 _out.println('<table>')
 _out.println('<tr>')
 _out.println(`  <td>Key</td>`)
-_out.println(`  <td>Paused</td>`)
+_out.println(`  <td>Stopped</td>`)
 _out.println('</tr>')
 for (const schedule of list) {
     _out.println('<tr>')
@@ -346,7 +346,7 @@ _out.println('</table>')
 
 Using [`_cron.resume(key)`](/docs/library/resources/cron#resume) we can resume the execution of a specific task.
 
-Example of how to resume all scheduled tasks, and shows when the tasks will be executed:
+Example of how to resume all scheduled tasks and show when the tasks will run:
 
 ```javascript
 const list = _cron.schedules()
@@ -354,7 +354,7 @@ _out.println('<table>')
 _out.println('<tr>')
 _out.println(`  <td>Key</td>`)
 _out.println(`  <td>Resumed</td>`)
-_out.println(`  <td>Next Fire Time</td>`)
+_out.println(`  <td>Next Execution</td>`)
 _out.println('</tr>')
 for (const schedule of list) {
     _out.println('<tr>')

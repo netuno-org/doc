@@ -1,0 +1,1069 @@
+---
+id: upload
+title: 업로드
+sidebar_label: 업로드
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+API로 파일을 전송하고 폴더나 데이터베이스에 저장합니다.
+
+## 소개
+
+API REST 서비스로 파일을 전송해야 할 때 Netuno에서는 이 개발을 수행하는 여러 가지 방법이 있습니다.
+
+일반적으로 파일은 multipart 형식으로 구조화된 HTTP 요청 본문으로 전송되며, 이는 프런트엔드에서 가장 흔한 절차입니다. 예를 들어 양식을 작성할 때 파일을 선택하는 필드가 있는 경우입니다.
+
+대안으로, 100% JSON인 API REST를 원할 때 파일 바이트를 Base64로 인코딩하여 JSON 객체의 값으로 전송할 수 있습니다.
+
+## 파일
+
+`_req.file`을 통해 필드 이름을 전달하여 전송된 파일 객체를 얻을 수 있습니다. 다음과 같습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 내파일 = _req.file("파일");
+            `
+        },
+    ]}
+/>
+
+즉, `_req`에는 HTTP 요청 본문에서 받은 모든 데이터가 있습니다.
+
+그리고 `file` 메서드를 통해 전송된 파일을 나타내는 객체를 얻을 수 있습니다.
+
+파일이 없으면 얻은 값은 `null`일 수 있습니다.
+
+## 이미지
+
+이미지를 받을 때는 이미지의 일관성을 보장하고 차지하는 공간을 줄이기 위해 크기를 조정해야 하는 경우가 흔합니다.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 내파일 = _req.getFile("이미지");
+                if (내파일 != null
+                    && (내파일.isExtension("jpeg")
+                        || 내파일.isExtension("jpg")
+                        || 내파일.isExtension("png")
+                    )) {
+                    const 내이미지 = _image.init(내파일)
+                        .resize(200, 200)
+                        .file(내파일.baseName() +".jpg", "jpeg");
+                    _header.contentTypeJPG();
+                    _out.copy(내이미지);
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                내파일 = _req.getFile("이미지")
+                if 내파일 is not None and (
+                    내파일.isExtension("jpeg")
+                    or 내파일.isExtension("jpg")
+                    or 내파일.isExtension("png")):
+                    내이미지 = (
+                        _image.init(내파일)
+                            .resize(200, 200)
+                            .file(내파일.baseName() +".jpg", "jpeg")
+                    )
+                    _header.contentTypeJPG()
+                    _out.copy(내이미지)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                내_파일 = _req.getFile("이미지")
+                if !내_파일.nil? && (
+                    내_파일.isExtension("jpeg") ||
+                    내_파일.isExtension("jpg") ||
+                    내_파일.isExtension("png")
+                )
+                    내_이미지 = _image.init(내_파일)
+                        .resize(200, 200)
+                        .file(내_파일.baseName() +".jpg", "jpeg")
+                    _header.contentTypeJPG()
+                    _out.copy(내_이미지)
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 내파일 = _req.getFile("이미지")
+                if (내파일 != null
+                    && (내파일.isExtension("jpeg")
+                        || 내파일.isExtension("jpg")
+                        || 내파일.isExtension("png")
+                    )) {
+                    val 내이미지 = _image.init(내파일.input())
+                        .resize(200, 200)
+                        .file(내파일.baseName() +".jpg", "jpeg")
+                    _header.contentTypeJPG()
+                    _out.copy(내이미지.input())
+                }
+            `
+        }
+    ]}
+/>
+
+폴리글랏 로우코드 프로그래밍 리소스 [Image](/docs/library/resources/image)를 사용하면 이미지를 조작하고, 자르고, 크기를 조정하고, 새로 만들 수 있습니다.
+
+## JSON에서 Base64 사용
+
+서비스로 전송되는 JSON에서 파일을 업로드하려면 다음과 같은 값을 가진 속성을 정의할 수 있습니다:
+
+`data:image/png;base64,...`
+
+여기서 `...`에는 Base64로 인코딩된 파일 바이트 시퀀스가 이어집니다.
+
+파일 유형은 `data` 뒤에 오며, 예를 들면 다음과 같습니다:
+
+- PNG: `image/png`.
+- JPG: `image/jpeg`
+- TXT: `text/plain`
+- PDF: `application/pdf`
+- XLSX: `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
+
+작은 PNG 이미지 파일이 JSON으로 서비스에 전송되는 예를 보십시오:
+
+```json
+{
+  "파일": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAFIGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpDb2xvclNwYWNlPSIxIgogICBleGlmOlBpeGVsWERpbWVuc2lvbj0iMyIKICAgZXhpZjpQaXhlbFlEaW1lbnNpb249IjMiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMyIKICAgdGlmZjpJbWFnZVdpZHRoPSIzIgogICB0aWZmOlJlc29sdXRpb25Vbml0PSIyIgogICB0aWZmOlhSZXNvbHV0aW9uPSI3Mi8xIgogICB0aWZmOllSZXNvbHV0aW9uPSI3Mi8xIgogICB4bXA6TWV0YWRhdGFEYXRlPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMTItMjlUMTk6MTI6MjdaIj4KICAgPHhtcE1NOkhpc3Rvcnk+CiAgICA8cmRmOlNlcT4KICAgICA8cmRmOmxpCiAgICAgIHhtcE1NOmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHhtcE1NOnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IERlc2lnbmVyIDEuMTAuNSIKICAgICAgeG1wTU06d2hlbj0iMjAyNS0wMi0yM1QyMjoxNDozM1oiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IDMuMC4xIgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+UGhcxwAAAYFpQ0NQc1JHQiBJRUM2MTk2Ni0yLjEAACiRdZG7SwNBEIe/JEqCRhS0sFAIEq3iG4I2ggmigkiIEXw1yZmHkMdxlyDBVrANKIg2vgr9C7QVrAVBUQSx1lbRRuWc84QEMbPMzre/3Rl2Z8EeSSsZvaYPMtm8Fh4PeObmFzzOZ9y004yL3qiiq6Oh0BRV7f0Wmxmvu81a1c/9a/XLcV0Bm0t4RFG1vPCE8NRqXjV5S7hFSUWXhU+EfZpcUPjG1GMWP5mctPjTZC0SDoK9SdiTrOBYBSspLSMsL8ebSReU3/uYL3HHs7MzEjvE29AJM04AD5OMEcRPP8My++lmgB5ZUSW/7yd/mpzkKjKrFNFYIUmKPD5RC1I9LjEhelxGmqLZ/7991RODA1Z1dwBqHw3jtROcm/BVMoyPA8P4OgTHA5xny/m5fRh6E71U1rx70LgOpxdlLbYNZxvQeq9GteiP5BC3JxLwcgwN89B8BXWLVs9+9zm6g8iafNUl7OxCl5xvXPoGe8Rn71E5kqUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAySURBVAiZAScA2P8BJYrEogr//l3h5+qlBP4HCF3n/AAA/wP7WwLu7PKk+eHWAPzWyKSmfRbbIj23ZQAAAABJRU5ErkJggg=="
+}
+```
+
+전송된 파일은 다음과 같이 얻을 수 있습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 내파일 = _req.getFile("파일");
+                if (내파일 != null) {
+                    _out.json(
+                        _val.map()
+                            .set("결과", true)
+                            .set("이름", 내파일.name())
+                            .set("크기바이트", 내파일.size())
+                            .set("크기KB", 내파일.sizeKB())
+                            .set("크기MB", 내파일.sizeMB())
+                            .set("크기GB", 내파일.sizeGB())
+                    );
+                } else {
+                    _out.json(
+                        _val.map()
+                            .set("결과", false)
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                내파일 = _req.getFile("파일")
+                if 내파일 is not None:
+                    _out.json(
+                        _val.map()
+                            .set("결과", True)
+                            .set("이름", 내파일.name())
+                            .set("크기바이트", 내파일.size())
+                            .set("크기KB", 내파일.sizeKB())
+                            .set("크기MB", 내파일.sizeMB())
+                            .set("크기GB", 내파일.sizeGB())
+                    )
+                else:
+                    _out.json(
+                        _val.map()
+                            .set("결과", False)
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                내_파일 = _req.getFile("파일")
+                if 내_파일.nil?
+                    _out.json(
+                        _val.map()
+                            .set("결과", true)
+                            .set("이름", 내_파일.name())
+                            .set("크기바이트", 내_파일.size())
+                            .set("크기KB", 내_파일.sizeKB())
+                            .set("크기MB", 내_파일.sizeMB())
+                            .set("크기GB", 내_파일.sizeGB())
+                    )
+                else
+                    _out.json(
+                        _val.map()
+                            .set("결과", false)
+                    )
+                end
+            `
+        },
+    ]}
+/>
+
+위 서비스에서 생성된 출력 예:
+
+```json
+{
+  "이름": "파일.png",
+  "결과": true,
+  "크기": 1849,
+  "크기KB": 1
+}
+```
+
+### 객체
+
+파일이 하위 객체 내부의 JSON 내부 구조에 있는 경우:
+
+```json
+{
+  "사람": {
+    "파일": "data:image/png;base64,..."
+  }
+}
+```
+
+다음과 같이 얻을 수 있습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 내파일 = _req.getValues("사람").getFile("아바타");
+            `
+        },
+    ]}
+/>
+
+### 배열
+
+파일이 배열 내부의 JSON 내부 구조에 있는 경우:
+
+```json
+{
+  "파일들": [
+    "data:image/png;base64,..."
+  ]
+}
+```
+
+다음과 같이 얻을 수 있습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 내파일 = _req.getValues("파일들").getFile(0);
+            `
+        },
+    ]}
+/>
+
+## OpenAPI
+
+Netuno는 OpenAPI와의 통합을 지원하며 OpenAPI 정의를 사용하여 HTTP 요청을 검증합니다.
+
+> [Netuno의 OpenAPI](/docs/academy/server/services/openapi)에 대해 더 알아보십시오.
+
+`file` 유형을 사용하면 Netuno는 값이 JSON의 파일 형식으로 시작하는지 검증합니다. 예를 들면 다음과 같습니다:
+
+- `data:image/png;base64,...`
+
+JSON 객체의 속성에서 파일을 수신하는지 검증하려면:
+
+```json title="post.in.json"
+{
+  "summary": "파일 업로드",
+  "description": "JSON 객체에서 파일을 수신하는 서비스.",
+  "type": "object",
+  "properties": {
+    "파일": {
+      "type": "file"
+    }
+  },
+  "required": [
+    "파일"
+  ]
+}
+```
+
+JSON 배열에서 파일 목록을 수신하는지 검증하려면:
+
+```json title="post.in.json"
+{
+  "summary": "파일 업로드",
+  "description": "JSON 배열에서 파일 목록을 수신하는 서비스.",
+  "properties": {
+    "파일들": {
+      "type": "array",
+      "items": {
+        "type": "file"
+      }
+    }
+  },
+  "required": [
+    "파일들"
+  ]
+}
+```
+
+## 파일 저장
+
+일반적으로 서비스에서 파일을 받으면 이를 저장해야 합니다. 예를 들면 다음과 같습니다:
+
+- **데이터베이스**: 사용자와 같은 레코드에 관련된 파일.
+- **스토리지**: 일반적으로 파일을 관리하는 애플리케이션 내부 폴더.
+- **폴더**: 시스템의 임의 폴더에 파일을 넣습니다.
+
+### 데이터베이스
+
+양식 필드 관리에서 Netuno는 `image` 및 `file` 유형을 지원합니다:
+
+- **Image**: 일반적인 이미지 파일, JPG 및 PNG.
+- **File**: 모든 유형의 파일.
+
+상품 양식에 이미지 필드가 있다고 가정하면, 업로드로 전송된 파일을 다음과 같이 저장할 수 있습니다:
+
+#### DB Form을 사용하는 예:
+
+`_db.form` 사용에 주목하십시오:
+
+<PolyglotCode
+    file="services/상품/이미지/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 상품UID = _req.getString("uid");
+                const 상품이미지 = _req.getFile("이미지");
+
+                if (상품이미지 == null) {
+                    _header.status(400);
+                    _out.json(
+                        _val.map()
+                            .set("결과", false)
+                            .set("오류", "이미지-필수")
+                    );
+                    _exec.stop();
+                }
+
+                const db결과 = _db.form("상품")
+                    .set("이미지", 상품이미지)
+                    .where(_db.where("uid").equals(상품UID))
+                    .update();
+
+                if (db결과.getInt("상품") == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("결과", true)
+                    );
+                } else {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("결과", false)
+                            .set("오류", "uid-상품-없음")
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                상품UID = _req.getString("uid")
+                상품이미지 = _req.getFile("이미지")
+
+                if 상품이미지 is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("결과", False)
+                            .set("오류", "이미지-필수")
+                    )
+                    _exec.stop()
+
+                db결과 = (
+                    _db.form("상품")
+                        .set("이미지", 상품이미지)
+                        .where(_db.where("uid").equals(상품UID))
+                        .update()
+                )
+
+                if db결과.getInt("상품") == 1:
+                    _out.json(
+                        _val.map()
+                            .set("결과", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("결과", False)
+                            .set("오류", "uid-상품-없음")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                상품_UID = _req.getString("uid")
+                상품_이미지 = _req.getFile("이미지")
+
+                if 상품_이미지.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("결과", false)
+                      .set("오류", "이미지-필수")
+                  )
+                  _exec.stop
+                end
+
+                db_결과 = _db.form("상품")
+                  .set("이미지", 상품_이미지)
+                  .where(_db.where("uid").equals(상품_UID))
+                  .update()
+
+                if db_결과.getInt("상품") == 1
+                  _out.json(
+                    _val.map()
+                      .set("결과", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("결과", false)
+                      .set("오류", "uid-상품-없음")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### 클래식 update를 사용하는 예:
+
+`_db.update` 사용에 주목하십시오:
+
+<PolyglotCode
+    file="services/상품/이미지/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 상품UID = _req.getString("uid");
+                const 상품이미지 = _req.getFile("이미지");
+
+                if (상품이미지 == null) {
+                    _header.status(400);
+                    _out.json(
+                        _val.map()
+                            .set("결과", false)
+                            .set("오류", "이미지-필수")
+                    );
+                    _exec.stop();
+                }
+
+                const db결과 = _db.update(
+                    "상품",
+                    상품UID,
+                    _val.map()
+                        .set("이미지", 상품이미지)
+                );
+
+                if (db결과 == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("결과", true)
+                    );
+                } else {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("결과", false)
+                            .set("오류", "uid-상품-없음")
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                상품UID = _req.getString("uid")
+                상품이미지 = _req.getFile("이미지")
+
+                if 상품이미지 is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("결과", False)
+                            .set("오류", "이미지-필수")
+                    )
+                    _exec.stop()
+
+                db결과 = (
+                    _db.update(
+                        "상품",
+                        상품UID,
+                        _val.map()
+                            .set("이미지", 상품이미지)
+                    )
+                )
+
+                if db결과 == 1:
+                    _out.json(
+                        _val.map()
+                            .set("결과", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("결과", False)
+                            .set("오류", "uid-상품-없음")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                상품_UID = _req.getString("uid")
+                상품_이미지 = _req.getFile("이미지")
+
+                if 상품_이미지.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("결과", false)
+                      .set("오류", "이미지-필수")
+                  )
+                  _exec.stop
+                end
+
+                db_결과 = _db.update(
+                  "상품",
+                  상품_UID,
+                  _val.map()
+                    .set("이미지", 상품_이미지)
+                )
+
+                if db_결과 == 1
+                  _out.json(
+                    _val.map()
+                      .set("결과", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("결과", false)
+                      .set("오류", "uid-상품-없음")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### 데이터베이스에서 파일 다운로드
+
+저장된 파일을 표시하려면 파일 바이트를 제공하는 서비스를 만들어야 합니다.
+
+위 예처럼 데이터베이스에 저장된 파일의 경우, 파일 자체는 애플리케이션의 스토리지에 저장되고 데이터베이스에는 최종 파일 이름만 저장됩니다.
+
+> 애플리케이션의 스토리지는 일반 파일 구조를 저장하고 구성하기 위한 폴더입니다.
+
+따라서 위 예에서 `상품` 양식과 `이미지` 필드의 데이터베이스 파일은 다음에 저장됩니다:
+
+- `storage/database/상품/이미지/*`
+
+> Netuno는 파일 이름 중복을 피하기 위해 저장된 파일 이름을 자동으로 관리합니다.
+
+파일을 얻으려면 예를 들어 상품 이미지 파일을 표시하는 서비스를 만들 수 있습니다:
+
+<PolyglotCode
+    file="services/상품/이미지/get"
+    codes={[
+    {
+        lang: 'javascript',
+        code: `
+            const 상품UID = _req.getString("uid");
+
+            // DB Form:
+            const db상품 = _db.form("상품")
+                .where(_db.where("uid").equals(상품UID))
+                .first();
+            // 클래식 DB 대안:
+            // const db상품 = _db.get("상품", 상품UID)
+
+            if (db상품 == null) {
+                _header.status(404);
+                _out.json(
+                    _val.map()
+                        .set("결과", false)
+                        .set("오류", "상품-찾을-수-없음")
+                );
+                _exec.stop();
+            }
+
+            const db상품이미지이름 = db상품.getString("이미지");
+
+            const storage상품이미지파일 = _storage.database(
+                "상품",
+                "이미지",
+                db상품이미지이름
+            );
+
+            if (storage상품이미지파일.extension() == "jpg" || storage상품이미지파일.extension() == "jpeg") {
+                _header.contentTypeJPG();
+            } else {
+                _header.contentTypePNG();
+            }
+
+            _header.noCache();
+
+            _out.copy(storage상품이미지파일.inputStream());
+        `
+    },
+    {
+        lang: 'python',
+        code: `
+            상품UID = _req.getString("uid")
+
+            # DB Form:
+            db상품 = (
+                _db.form("상품")
+                    .where(_db.where("uid").equals(상품UID))
+                    .first()
+            )
+            # 클래식 DB 대안:
+            # db상품 = _db.get("상품", 상품UID)
+
+            if db상품 is None:
+                _header.status(404)
+                _out.json(
+                    _val.map()
+                        .set("결과", False)
+                        .set("오류", "상품-찾을-수-없음")
+                )
+                _exec.stop()
+
+            db상품이미지이름 = db상품.getString("이미지")
+
+            storage상품이미지파일 = _storage.database(
+                "상품",
+                "이미지",
+                db상품이미지이름
+            )
+
+            if storage상품이미지파일.extension() == "jpg" or storage상품이미지파일.extension() == "jpeg":
+                _header.contentTypeJPG()
+            else:
+                _header.contentTypePNG()
+
+            _header.noCache()
+
+            _out.copy(storage상품이미지파일.inputStream())
+        `
+    },
+    {
+        lang: 'ruby',
+        code: `
+            상품UID = _req.getString("uid")
+
+            # DB Form:
+            db상품 = _db.form("상품")
+                .where(_db.where("uid").equals(상품UID))
+                .first()
+            # 클래식 DB 대안:
+            # db상품 = _db.get("상품", 상품UID)
+
+            if db상품.nil?
+                _header.status(404)
+                _out.json(
+                    _val.map()
+                        .set("결과", false)
+                        .set("오류", "상품-찾을-수-없음")
+                )
+                _exec.stop()
+            end
+
+            db상품이미지이름 = db상품.getString("이미지")
+
+            storage상품이미지파일 = _storage.database(
+                "상품",
+                "이미지",
+                db상품이미지이름
+            )
+
+            if storage상품이미지파일.extension() == "jpg" || storage상품이미지파일.extension() == "jpeg"
+                _header.contentTypeJPG()
+            else
+                _header.contentTypePNG()
+            end
+
+            _header.noCache()
+
+            _out.copy(storage상품이미지파일.inputStream())
+        `
+    },
+]}
+/>
+
+`_storage` 리소스([Storage](/docs/library/resources/storage))가 파일을 얻는 데 사용됩니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _storage.database(
+                    "상품", // 양식/테이블 이름.
+                    "이미지", // 필드/컬럼 이름.
+                    db상품이미지이름 // 파일 이름.
+                );
+            `
+        },
+    ]}
+/>
+
+데이터베이스에는 파일 이름만 저장되며, `_storage.database`를 통해 파일 자체를 얻을 수 있습니다.
+
+### 스토리지
+
+애플리케이션의 `storage`에 파일을 직접 저장할 수 있습니다.
+
+데이터베이스 파일과 섞지 않기 위해, 데이터베이스에 연결되지 않은 일반 파일을 저장하는 것을 목적으로 하는 `filesystem` 폴더를 사용해야 합니다.
+
+파일을 받기 위해, 이 예에서는 `POST` 서비스로 전송된 파일이 스토리지에 직접 저장되는 방법을 보여줍니다:
+
+<PolyglotCode
+    file="services/파일/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 파일 = _req.getFile("파일");
+                _storage.filesystem("서버", "업로드").ensurePath();
+                파일.save(_storage.filesystem("서버", "업로드", 파일.name()));
+            `
+        },
+    ]}
+/>
+
+파일은 애플리케이션의 `storage` 폴더에 다음 위치로 저장됩니다:
+
+- `storage/filesystem/서버/업로드/*`
+
+> [Storage](/docs/library/resources/storage) 리소스는 폴더 및 파일 경로를 얻는 데 사용됩니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _storage.filesystem(
+                    "서버", // filesystem 내 하위 폴더 이름.
+                    "업로드", // 내부 하위 폴더 이름 또는 경로.
+                    파일.name() // 최종 파일 이름.
+                );
+            `
+        },
+    ]}
+/>
+
+> [Storage](/docs/library/resources/storage) 문서에서 더 알아보십시오.
+
+파일을 다운로드하기 위해, 이 예에서는 `GET` 서비스를 통해 파일 바이트를 얻는 방법을 보여줍니다:
+
+<PolyglotCode
+    file="services/파일/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 파일이름 = _req.getString("파일");
+
+                const 파일 = _storage.filesystem(
+                    "서버",
+                    "업로드",
+                    파일이름
+                ).file();
+
+                if (파일.exists() == false) {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("결과", false)
+                            .set("오류", "파일-없음")
+                    );
+                    _exec.stop();
+                }
+
+                _header.downloadFile(파일.name());
+                _out.copy(파일.input());
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                파일이름 = _req.getString("파일")
+
+                파일 = _storage.filesystem(
+                    "서버",
+                    "업로드",
+                    파일이름
+                ).file()
+
+                if 파일.exists() == False:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("결과", False)
+                            .set("오류", "파일-없음")
+                    )
+                    _exec.stop()
+
+                _header.downloadFile(파일.name())
+                _out.copy(파일.input())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                파일_이름 = _req.getString("파일")
+
+                파일 = _storage.filesystem(
+                    "서버",
+                    "업로드",
+                    파일_이름
+                ).file()
+
+                if 파일.exists() == false
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("결과", false)
+                            .set("오류", "파일-없음")
+                    )
+                    _exec.stop()
+                end
+
+                _header.downloadFile(파일.name())
+                _out.copy(파일.input())
+            `
+        },
+    ]}
+/>
+
+### 폴더
+
+컴퓨터의 임의 폴더에 파일을 직접 저장할 수 있습니다.
+
+이러한 경우 매우 유용한 두 가지 리소스가 있습니다:
+
+- `_app` - 애플리케이션의 모든 폴더나 파일을 가져올 수 있습니다.
+- `_os` - 컴퓨터의 모든 폴더나 파일을 가져올 수 있습니다.
+
+> 각각의 리소스 [App](/docs/library/resources/app) 및 [OS](/docs/library/resources/os) 문서를 참조하십시오. 두 리소스 모두 `folder` 및 `file` 메서드가 있으며, 이를 통해 각각 폴더 또는 파일 경로를 지정할 수 있습니다.
+
+파일을 받기 위해, 이 예에서는 `POST` 서비스로 전송된 파일이 애플리케이션의 폴더에 직접 저장되는 방법을 보여줍니다:
+
+<PolyglotCode
+    file="services/파일/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 파일 = _req.getFile("파일");
+                const 폴더 = _app.folder("임시");
+                if (폴더.exists() == false) {
+                    폴더.mkdir();
+                }
+                파일.save(_app.file(\`임시/\${파일.name()}\`));
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                파일 = _req.getFile("파일")
+                폴더 = _app.folder("임시")
+                if 폴더.exists() == False:
+                    폴더.mkdir()
+
+                파일.save(_app.file(f"임시/{파일.name()}"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                파일 = _req.getFile("파일")
+                폴더 = _app.folder("임시")
+                if 폴더.exists() == false
+                    폴더.mkdir()
+                end
+                파일.save(_app.file("임시/#{파일.name()}"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 파일 = _req.getFile("파일")
+                val 폴더 = _app.folder("임시")
+                if (폴더.exists() == false) {
+                    폴더.mkdir()
+                }
+                파일.save(_app.file("임시/\${파일.name()}"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                final 파일 = _req.getFile("파일")
+                final 폴더 = _app.folder("임시")
+                if (폴더.exists() == false) {
+                    폴더.mkdir()
+                }
+                파일.save(_app.file("임시/\${파일.name()}"))
+            `
+        },
+    ]}
+/>
+
+위 코드는 애플리케이션 내부에 `임시` 폴더를 만들고 받은 파일을 이 폴더에 저장합니다.
+
+파일을 다운로드하기 위해, 이 예에서는 `GET` 서비스를 통해 파일 바이트를 얻는 방법을 보여줍니다:
+
+<PolyglotCode
+    file="services/파일/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 파일이름 = _req.getString("파일");
+                const 파일 = _app.file(\`임시/\${파일이름}\`);
+
+                if (파일.exists() == false) {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("결과", false)
+                            .set("오류", "파일-없음")
+                    );
+                    _exec.stop();
+                }
+
+                _header.downloadFile(파일.name());
+                _out.copy(파일.input());
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                파일이름 = _req.getString("파일")
+                파일 = _app.file(f"임시/{파일이름}")
+
+                if 파일.exists() == False:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("결과", False)
+                            .set("오류", "파일-없음")
+                    )
+                    _exec.stop()
+
+                _header.downloadFile(파일.name())
+                _out.copy(파일.input())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                파일_이름 = _req.getString("파일")
+                파일 = _app.file("임시/#{파일_이름}")
+
+                if 파일.exists() == false
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("결과", false)
+                            .set("오류", "파일-없음")
+                    )
+                    _exec.stop()
+                end
+
+                _header.downloadFile(파일.name())
+                _out.copy(파일.input())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 파일이름 = _req.getString("파일")
+                val 파일 = _app.file("임시/\${파일이름}")
+
+                if (파일.exists() == false) {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("결과", false)
+                            .set("오류", "파일-없음")
+                    )
+                    _exec.stop()
+                }
+
+                _header.downloadFile(파일.name())
+                _out.copy(파일.input())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                final 파일이름 = _req.getString("파일")
+                final 파일 = _app.file("임시/\${파일이름}")
+
+                if (파일.exists() == false) {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("결과", false)
+                            .set("오류", "파일-없음")
+                    )
+                    _exec.stop()
+                }
+
+                _header.downloadFile(파일.name())
+                _out.copy(파일.input())
+            `
+        },
+    ]}
+/>
+
+## 결론
+
+살펴본 것처럼 API REST 서비스에 파일 업로드를 통합할 수 있으며, OpenAPI와도 통합할 수 있습니다.
+
+파일을 데이터베이스, 애플리케이션의 `storage` 폴더 또는 컴퓨터의 임의 폴더에 저장할 수 있습니다.
+
+파일을 조작할 수 있도록 이 튜토리얼에서 사용한 리소스 문서를 참조하십시오:
+
+- [Storage](/docs/library/resources/storage)
+- [App](/docs/library/resources/app)
+- [OS](/docs/library/resources/os)
+
+데이터베이스에서는 `image` 유형 필드에 이미지를 저장할 수 있고, `file` 유형 필드에 모든 유형의 파일을 저장할 수 있습니다. 파일을 저장하거나 얻는 방법은 이미지든 일반 파일이든 모든 경우에 동일합니다.

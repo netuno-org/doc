@@ -1,61 +1,61 @@
 ---
 id: monitor-alerts
-title: Monitor and Alerts
-sidebar_label: Monitor and Alerts
+title: Monitoring and Alerts
+sidebar_label: Monitoring and Alerts
 ---
 
-Alarms about server hardware utilization.
+Alerting on server hardware usage.
 
 ## Introduction
 
-The Netuno server has encapsulated the performance monitoring mechanism that allows the impact of the software system on hardware consumption to be analysed.
+The Netuno server encapsulates the performance monitoring mechanism that allows analyzing the impact of the software system on hardware usage.
 
-With the monitoring, apps are allowed to implement alarming rules to alert when something reaches a threshold that needs attention.
+With monitoring, apps can implement alerting rules to notify when something reaches a level that requires attention.
 
-The monitoring and alerts are not only carried out on the performance data of the Netuno server process itself but also on the entire running computer system.
+Monitoring and alerts are performed not only on the performance data of the Netuno server process itself but also on the entire running computer system.
 
-Allows you to perform a complete monitoring and alarming.
+This allows complete monitoring with alerting.
 
 ## Configuration
 
-The general configuration allows you to activate the presentation of data in the general Netuno logs, and control the execution interval of the collection and analysis of performance indicators.
+The general configuration allows enabling the display of data in Netuno's general logs and controlling the execution interval for collecting and analyzing performance indicators.
 
-The configuration of alerts is performed in each app, and allows you to have multiple alerts per application.
+Alert configuration is done in each app and allows having multiple alerts per application.
 
-## Logs and General Interval
+### Logs and General Interval
 
-Netuno stores the performance logs inside the `logs` folder which is inside the Netuno root folder.
+Netuno stores performance logs inside the `logs` folder, which is inside the Netuno root folder.
 
-In this `logs` folder is where the `stats-ANO_MES_DIA.json` files are found, these are always automatically generated according to the interval that can be changed as indicated below.
+In this `logs` folder, the `stats-YEAR_MONTH_DAY.json` files are found; they are always generated automatically according to the interval that can be changed as indicated below.
 
-> For a better visualization of the files you can use the automatic formation of your preferred editor or with online tools such as:
+> For better file visualization, you can use the automatic formatting of your preferred editor or online tools such as:
 >
 > - http://jsonviewer.stack.hu/
 > - https://jsonformatter.org/json-viewer
 >
-> They can also be opened in **Firefox** which makes an excellent training.
+> They can also be opened in **Firefox**, which performs excellent formatting.
 
-##### Logs Configuration and General Interval
+##### Logs and General Interval Configuration
 
-To enable performance data to be displayed in the general logs (`logs/netuno.log`) and in the **console**, edit the `config.js` file that is at the root of the Netuno folder.
+To enable the display of performance data in the general logs (`logs/netuno.log`) and in the **console**, edit the `config.js` file located in the Netuno folder root.
 
-Add the following line if it doesn't already exist:
+Add the following line if it does not already exist:
 
 ```
 config.monitorLog = true
 ```
 
-You can also change the default interval of **60 seconds**, the information is only displayed in log every minute. For this, also add the line of code below and change the seconds value to the desired time:
+You can also change the default interval of **60 seconds**, meaning the information is only logged once per minute. To do this, also add the code line below and change the seconds value to the desired time:
 
 ```
 config.monitorInterval = 60
 ```
 
-> This interval is general and interferes with the interval configured in the app alerts, which will never be less than this general interval.
+> This interval is general and affects the interval configured in the app alerts, which will never be less than this general interval.
 
-**Restart** the Netuno server for this to be effective.
+**Restart** the Netuno server for it to take effect.
 
-Monitoring information will start to be displayed on the console, for example:
+The monitoring information will start being displayed in the console, for example:
 
 ```
 2020-11-17 14:56:08,109 INFO  [Thread-13] cli.Monitor - MONITOR
@@ -76,16 +76,16 @@ Disk:
 	Free: 11,854.3MB (2.5% -21.3MB)
 ```
 
-### Alert in Apps
+### Alerts in Apps
 
-Alerts are configured in apps, so edit your app's configuration.
+Alerts are configured in the applications, so edit your app configuration.
 
-That is, inside the app in the `config` folder in the environment configuration, in files like:
+That is, inside the application in the `config` folder in the environment configuration, in files such as:
 
 - _development.json
 - _production.json
 
-Add the monitoring alerts configuration:
+Add the monitoring alert configuration:
 
 ```
 ...
@@ -93,24 +93,24 @@ Add the monitoring alerts configuration:
         "alerts": [
             {
                 "name": "my-alert",
-                "url": "http://APP-NAME.local.netu.no:9000/services/my-alert-service"
+                "url": "http://MY-APP.local.netu.no:9000/services/my-alert-service"
             }
         ]
     }
 ...
 ```
 
-> This is the most simplified setup.
+> This is the simplest configuration.
 
-When there is a situation that needs to be alerted then the `url` will be called and the performance parameters will be passed.
+When there is a situation that needs to be alerted, that `url` will be called and the performance parameters will be passed.
 
-By default the alerts have an interval of **1h** for each type of alert, so there will only be the realization of the alert if the **Processor**, the **Memory** or the **Disk** (HD) exceeds the limit of **90%** of the maximum capacity, after an hour it will send another alert.
+By default, alerts have an interval of **1h** for each alert type, so an alert will only be triggered if the **Processor**, **Memory**, or **Disk** (HD) exceeds the **90%** limit of maximum capacity; after one hour, another alert will be sent.
 
-> In situations of multiple alerts then the interval is shortened, for example, if the Memory alert has been triggered and after 20 minutes the Disk also exceeds 90%, then a new alert is triggered immediately, and the 1 hour interval is restarted.
+> In situations with multiple alerts, the interval is shortened; for example, if the Memory alert has been triggered and after 20 minutes the Disk also exceeds 90%, then a new alert is triggered immediately, and the 1-hour interval restarts.
 
 ### Advanced Alerts
 
-Below is a more advanced configuration where you can change the range and limits of the **Processor**, **Memory** or **Disk** (HD) consumption:
+Below is a more advanced configuration that allows changing the interval and usage thresholds for the **Processor**, **Memory**, or **Disk** (HD):
 
 ```
 ...
@@ -118,11 +118,11 @@ Below is a more advanced configuration where you can change the range and limits
         "alerts": [
             {
                 "name": "my-simple-alert",
-                "url": "http://APP-NAME.local.netu.no:9000/services/my-alert-service"
+                "url": "http://MY-APP.local.netu.no:9000/services/my-alert-service"
             },
             {
                 "name": "my-advanced-alert",
-                "url": "http://APP-NAME.local.netu.no:9000/services/my-alert-service",
+                "url": "http://MY-APP.local.netu.no:9000/services/my-alert-service",
                 "enabled": true,
                 "interval": 3600,
                 "threshold": {
@@ -133,7 +133,7 @@ Below is a more advanced configuration where you can change the range and limits
             },
             {
                 "name": "my-more-advanced-alert",
-                "url": "http://APP-NAME.local.netu.no:9000/services/my-alert-service",
+                "url": "http://MY-APP.local.netu.no:9000/services/my-alert-service",
                 "enabled": true,
                 "interval": 3600,
                 "threshold": {
@@ -153,55 +153,55 @@ Below is a more advanced configuration where you can change the range and limits
 ...
 ```
 
-> The above values are **standard values**!
+> The values above are **default values**!
 
 ##### Name
 
-Name identifying the alert.
+Alert identification name.
 
 ##### Enabled
 
-Allows enabling and disabling the alert, the default is _true_ (active).
+Allows enabling and disabling the alert; the default is _true_ (enabled).
 
 ##### Interval
 
-Sets the interval between alerts in **seconds**, default is _3600 seconds_ (one hour).
+Defines the interval between alerts in **seconds**; the default is _3600 seconds_ (one hour).
 
 ##### Threshold
 
-Sets the CPU, Memory and Disk (HD) limits.
+Defines the CPU, Memory, and Disk (HD) thresholds.
 
 ##### CPU
 
-The CPU consumption threshold at which the alert should be triggered.
+The CPU usage threshold at which the alert should be triggered.
 
-It also allows to set the specific limit for _system_ and _process_.
+It also allows defining the specific threshold for _system_ and _process_.
 
 ##### Memory
 
-The Memory consumption limit at which the alert should be triggered.
+The Memory usage threshold at which the alert should be triggered.
 
-It also allows to set the specific limit for _system_ and _process_.
+It also allows defining the specific threshold for _system_ and _process_.
 
 ##### System
 
-These are the limits for the overall operating system with all the processes that are running.
+These are the thresholds for the operating system as a whole with all running processes.
 
 ##### Process
 
-These are the limits only for the Netuno server process.
+These are the thresholds only for the Netuno server process.
 
 ##### Disk
 
-The Disk usage limit at which the alert should be triggered.
+The Disk (HD) usage threshold at which the alert should be triggered.
 
 ## Sent Parameters
 
-When an `url` is invoked an alert is triggered that some limit has been exceeded, and then the hardware consumption performance data is sent.
+When a `url` is invoked, an alert is triggered because a threshold has been exceeded, so hardware usage performance data will be sent.
 
-The `url` is executed with the `POST` method and the content is sent in JSON: `Content-Type: application/json`.
+The `url` is executed with the `POST` method and the content is sent as JSON: `Content-Type: application/json`.
 
-An example of  JSON data that is sent to the `url` for alerts:
+Example of the JSON with data sent to the alerts `url`:
 
 ```
 {
@@ -263,19 +263,19 @@ An example of  JSON data that is sent to the `url` for alerts:
 
 ##### Key
 
-The name (key) that is defined when configuring the alert in the application.
+The name (key) defined in the alert configuration in the application.
 
 ##### App
 
-The name of the application that has the alert configured and causes it to trigger.
+The name of the application that has the alert configured and that causes it to be triggered.
 
 ##### Hostname
 
-Name of the computer running the Netuno server that causes the alert.
+Name of the computer running the Netuno server that triggers the alert.
 
 ##### Timezone
 
-Time zone of the computer running the Netuno server that causes the alert.
+Timezone of the computer running the Netuno server that triggers the alert.
 
 ##### Started
 
@@ -287,54 +287,54 @@ Date and time of the moment when the alert was generated.
 
 ##### Before
 
-Information from the previous alert, has exactly the same JSON structure but with the data referring to the previously triggered alert.
+Information about the previous alert; it has exactly the same JSON structure but with data referring to the previously triggered alert.
 
 ##### Alerts
 
-List of alerts that have been triggered, where you specify the type (_type_) of alert and the threshold (_threshold_) that has been exceeded.
+List of alerts that were triggered, specifying the alert type (_type_) and the threshold (_threshold_) that was exceeded.
 
-The types of alerts are:
+The alert types are:
 
-- `cpu-system`: Alert of the CPU usage of the computer system with all processes running in general.
-- `cpu-process`: Alert of the CPU consumption of the Netuno server process.
-- `memory-system`: Alert of the memory consumption of the computer system with all running processes in general.
-- `memory-process`: Alert of the memory consumption of the Netuno server process.
-- `disk`: Disk alert (HD).
+- `cpu-system`: Alert for CPU usage of the computer system with all running processes as a whole.
+- `cpu-process`: Alert for CPU usage of the Netuno server process.
+- `memory-system`: Alert for Memory usage of the computer system with all running processes as a whole.
+- `memory-process`: Alert for Memory usage of the Netuno server process.
+- `disk`: Alert for Disk (HD).
 
 ##### CPU
 
-It's the Processor data that is sent with the following information:
+These are the Processor data sent with the following information:
 
 - `cores`: Number of physical processors.
 - `vcores`: Number of virtual processors (threads).
 - `load`: Processor load information:
-  - `system`: The processing load of the operating system with all processes in general, the value is between **0** (_0%_) and **1** (_100%_).
-  - `process`: The processing load of the Netuno server, the value is between **0** (_0%_) and **1** (_100%_).
-  - `ticks`: Returns the processor load on the overall system in an array of eight elements which is represented in milliseconds what was spent in the following states: _User_ (0), _Nice_ (1), _System_ (2), _Idle_ (3), _IOwait_ (4), _Hardware interrupts (IRQ)_ (5), _Software interrupts/DPC (SoftIRQ)_ (6) and _Steal_ (7).
-  - `frequency`: maximum frequency (`max`) of the processor and the average frequency used among all cores (`average`), values are in _hertz_, so 2500000000 _Hz_ equals 2.5 _GHz_.
+  - `system`: Processing load of the operating system with all processes as a whole; the value is between **0** (_0%_) and **1** (_100%_).
+  - `process`: Processing load of the Netuno server; the value is between **0** (_0%_) and **1** (_100%_).
+  - `ticks`: Returns the processor load in the overall system in an array with eight elements representing, in milliseconds, what was spent in the following states: _User_ (0), _Nice_ (1), _System_ (2), _Idle_ (3), _IOwait_ (4), _Hardware interrupts (IRQ)_ (5), _Software interrupts/DPC (SoftIRQ)_ (6), and _Steal_ (7).
+  - `frequency`: Maximum frequency (`max`) of the processor and the average frequency used across all cores (`average`); the values are in _hertz_, so 2500000000 _Hz_ equals 2.5 _GHz_.
 
-> Frequency division is performed as follows:
+> The frequency division is performed as follows:
 > 
-> 2500000000 (_Hz_) / 1000 (_KHz_) / (1000) (_MGz_) / 1000 (_GHz_) = 2.5 _GHz_
+> 2500000000 (_Hz_) / 1000 (_kHz_) / (1000) (_MHz_) / 1000 (_GHz_) = 2.5 _GHz_
 >
-> Hz (_Hertz_), KHz (_Kilohertz_), MGz (_Megahertz_), GHz (_Gigahertz_)
+> Hz (_Hertz_), kHz (_Kilohertz_), MHz (_Megahertz_), GHz (_Gigahertz_)
 
 ##### Memory
 
-It's the Memory data that is sent with the following information:
+These are the Memory data sent with the following information:
 
-- `system`: This is the information of the memory consumption of the operating system with all processes in general.
-  - `Total`: Total memory of the computer.
-  - `used`: Allocated memory in use.
-  - `free`: Free available memory.
-- `process`: The memory utilization data of the Netuno server process.
-  - `max`: The maximum amount of memory that can be used by Netuno.
+- `system`: This is the memory usage information of the operating system with all processes as a whole.
+  - `total`: Total memory of the computer.
+  - `used`: Memory allocated in use.
+  - `free`: Available free memory.
+- `process`: These are the memory usage data of the Netuno server process.
+  - `max`: Maximum amount of memory that can be used by Netuno.
   - `total`: Total reserved (allocated) memory, including used and "free" memory.
-  - `used`: Amount of memory actually being used.
-  - `free`: Amount of free (reserved) memory available for use.
-  - `gc`: Whether the _garbage collector_ execution was invoked.
+  - `used`: Amount of memory that is actually being used.
+  - `free`: Amount of free (reserved) memory available to be used.
+  - `gc`: Whether the execution of the _garbage collector_ (memory garbage collector) was invoked.
 
-> Values are in Bytes, so 17179869184 Bytes equals 16 Gigabytes.
+> The values are in Bytes, so 17179869184 Bytes equals 16 Gigabytes.
 >
 > How the division is performed:
 >
@@ -344,33 +344,33 @@ It's the Memory data that is sent with the following information:
 
 ##### Disk
 
-This is the hard disk (HD) usage data that is sent with the following information:
+These are the hard disk (HD) usage data sent with the following information:
 
-- `total`: Total size of the disk.
-- `used`: Amount of space used on the disk.
-- `free`: Amount of available disk space.
+- `total`: Total disk size.
+- `used`: Amount of disk space used.
+- `free`: Amount of disk space available.
 
-> The values are in Bytes, so 500068036608 Bytes equals 465,72 Gigabytes.
+> The values are in Bytes, so 500068036608 Bytes equals 465.72 Gigabytes.
 >
 > How the division is performed:
 >
-> 500068036608 _B_ / 1024 (_KB_) / 1024 (_MB_) / 1024 (_GB_) = 465,72 _GB_ 
+> 500068036608 _B_ / 1024 (_KB_) / 1024 (_MB_) / 1024 (_GB_) = 465.72 _GB_ 
 >
 > B (_Bytes_), KB (_Kilobytes_), MB (_Megabytes_), GB (_Gigabytes_)
 
-## Alarm Service Example
+## Example of Alerting Services
 
-Netuno services can be used as a 'url' for alerts.
+Netuno services can be used as the alerts `url`.
 
-It can be implemented to send alerts through email, SMS, or even store the information in a database.
+Sending alerts via email, SMS, or even storing the information in a database can be implemented.
 
-Also any kind of `url` can be used and so the alert can be triggered to other technologies like NodeJS, PHP, .NET, Rails, Laravel, Sails, etc...
+Any type of `url` can also be used, so the alert can be triggered for other technologies such as NodeJS, PHP, .NET, Rails, Laravel, Sails, etc.
 
-In the case of Netuno you can implement a service for sending email by following the instructions in the [Sending Emails](/docs/academy/server/services/sending-emails) tutorial.
+In the case of Netuno, a service for sending email can be implemented following the instructions in the [Sending Emails](/docs/academy/server/services/sending-emails) tutorial.
 
-Below is how to implement a complete example adapted to monitoring alerts.
+Below is how to implement a complete example adapted to monitoring alerting.
 
-Before you start make sure you have the SMTP configuration in the application configuration and also the monitoring configuration, such as:
+Before starting, make sure you have the SMTP configuration in the application configuration and also the monitoring configuration, for example:
 
 ```
 ...
@@ -384,14 +384,14 @@ Before you start make sure you have the SMTP configuration in the application co
             "from": "noreply@MY.DOMAIN.com",
             "to": "info@MY.DOMAIN.com",
             "username": "noreply@MY.DOMAIN.com",
-            "password": "S3gr3d0"
+            "password": "S3cr3t0"
         }
     },
     ...
     "monitor": {
         "alerts": [
             {
-                "name": "alert-email",
+                "name": "email-alert",
                 "url": "http://MY-APP.local.netu.no:9000/services/monitor/alert"
             }
         ]
@@ -399,12 +399,12 @@ Before you start make sure you have the SMTP configuration in the application co
 ...
 ```
 
-> Make sure you set the parameters especially those highlighted in capital letters.
+> Make sure you adjust the parameters, especially those highlighted in uppercase values.
 
-The alert service could be in `server/services/monitor/alert.js`, with the following code:
+The alerting service can be placed in `server/services/monitor/alert.js`, with the following code:
 
 ```
-_log.info("Monitor Alert Informations:\n"+ _req.toJSON())
+_log.info("Monitor Alert Information:\n"+ _req.toJSON())
 
 const cpu = _req.getValues("cpu")
 const memory = _req.getValues("memory")
@@ -425,11 +425,11 @@ for (const alertType of _req.getValues("alerts")) {
     }
     if (alertType.getString("type") == 'cpu-system') {
         subjectTypes += "System CPU"
-        htmlInfos += `<p>The processor of the <b>system</b> reaches the <b>${cpuLoadSystem}%</b></p>`
+        htmlInfos += `<p>The <b>system</b> processor reaches <b>${cpuLoadSystem}%</b></p>`
     }
     if (alertType.getString("type") == 'cpu-process') {
         subjectTypes += "Process CPU"
-        htmlInfos += `<p>The processor of the <b>process</b> reaches the <b>${cpuLoadProcess}%</b></p>`
+        htmlInfos += `<p>The <b>process</b> processor reaches <b>${cpuLoadProcess}%</b></p>`
     }
     if (alertType.getString("type") == 'memory-system') {
         subjectTypes += "System Memory"
@@ -451,15 +451,15 @@ smtp.subject += `${_req.getString("hostname")} - ${subjectTypes}`
 
 smtp.html += `<h2>${_req.getString("hostname")}</h2>${htmlInfos}`
 
-smtp.text = "Information in the HTML content version of this e-mail."
+smtp.text = "Information in the HTML content version of this email."
 
 smtp.send()
 ```
 
-> An email will be sent with the alerts.
+> An email with the alerts will be sent.
 
-In this case there was only the need to alert the disk space situation, as can be seen in this email received:
+In this case, there was only a need to alert about the disk space situation, as can be seen in this received email:
 
-![mail](/docs/assets/library/advanced/monitor-alerts-mail-pt.png)
+![email](/docs/assets/library/advanced/monitor-alerts-mail-pt.png)
 
-To implement the sending of **SMS** there are examples in the **demo** application with remote REST API integration that allows you to integrate with the SMS platform of your choice.
+To implement **SMS** sending, there are examples in the **demo**_nstration_ application with remote REST API integration that allows integration with the SMS platform you prefer.

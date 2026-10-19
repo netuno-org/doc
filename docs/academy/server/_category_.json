@@ -1,8 +1,9 @@
 {
-  "label": "Server Backend",
+  "label": "Backend Server",
+  "key": "Server Backend",
   "position": 9,
   "link": {
     "type": "generated-index",
-    "description": "Tutorials about the backend integrated with polyglot low-code development."
+    "description": "Tutorials on the backend integrated into polyglot low-code development."
   }
 }

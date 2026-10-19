@@ -1,8 +1,9 @@
 {
   "label": "Java Core",
+  "key": "Java Core",
   "position": 9,
   "link": {
     "type": "generated-index",
-    "description": "Tutorials about the backend integrated with polyglot low-code development."
+    "description": "Tutorials about core development in Java."
   }
 }

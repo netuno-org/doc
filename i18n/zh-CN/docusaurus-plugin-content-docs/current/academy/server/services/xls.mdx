@@ -1,0 +1,1002 @@
+---
+id: xls
+title: XLS - Excel
+sidebar_label: XLS - Excel
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+处理自定义 Excel 文件。
+
+## 简介
+
+Netuno 通过 [XLS](/docs/library/resources/xls) 资源生成与 LibreOffice、OpenOffice、Microsoft Office、Google Drive 等兼容的 EXCEL 文件，该资源为 Netuno 支持的多种编程语言提供了对 [Apache POI](https://poi.apache.org/) 的低代码抽象。
+
+我们可以生成 XLSX、XLS 或 ODS 文件。
+
+Netuno 自带的名为 **demo** 的应用（演示应用）包含大量各种语言中可能实现方式的代码示例，其中包括通过 `export-excel` 服务导出电子表格的演示，该服务位于：
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/export-excel`
+]} />
+
+## 初始化
+
+要初始化 XLS 资源：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.create()
+            `
+        },
+    ]}
+/>
+
+创建包含将要构建的新文件上下文的对象，并带有一个空白工作表。
+
+## 格式化
+
+视觉格式化样式（即日期、时间、货币等格式）的定义必须在定义单元格值之前完成，因为在定义单元格值时可以将格式样式一并关联。
+
+因此，正如 `demo` 应用中附带的示例所演示的那样，格式化都在代码开头处定义。
+
+格式化日期：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 日期样式 = excel.cellStyleFormat("dd/mm/yy")
+            `
+        },
+    ]}
+/>
+
+格式化时间：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 时间样式 = excel.cellStyleFormat("hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+格式化日期和时间：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 日期时间样式 = excel.cellStyleFormat("dd/mm/yyyy hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+格式化**欧元**货币值：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 欧元货币样式 = excel.cellStyleFormat("€#,##0.00;\\-€#,##0.00")
+            `
+        },
+    ]}
+/>
+
+格式化**雷亚尔**货币值：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 雷亚尔货币样式 = excel.cellStyleFormat("R$#,##0.00;\\-R$#,##0.00")
+            `
+        },
+    ]}
+/>
+
+格式化**百分比**值：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 百分比样式 = excel.cellStyleFormat("0.00%")
+            `
+        },
+    ]}
+/>
+
+## 外观
+
+视觉外观样式（即单元格的颜色、字体、边框、对齐方式等外观）的定义必须在定义单元格值之前完成，因为在定义单元格值时可以将外观样式一并关联。
+
+因此，正如 `demo` 应用中附带的示例所演示的那样，外观都在代码开头处定义。
+
+定义颜色和对齐方式的示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 表头样式 = excel.cellStyle()
+                表头样式.setFillPattern(_xls.fillPattern("solid-foreground"))
+                表头样式.setFillBackgroundColor(excel.color("black"))
+                表头样式.setAlignment(_xls.horizontalAlignment("center"))
+            `
+        },
+    ]}
+/>
+
+> 关于 <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Apache POI 中的样式</a>对象所有方法的文档。
+
+定义边框样式：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 数据样式 = excel.cellStyle()
+                数据样式.setBorderBottom(_xls.borderStyle("thin"))
+                数据样式.setBorderTop(_xls.borderStyle("thin"))
+                数据样式.setBorderLeft(_xls.borderStyle("thin"))
+                数据样式.setBorderRight(_xls.borderStyle("thin"))
+            `
+        },
+    ]}
+/>
+
+> 关于 <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Apache POI 中的样式</a>对象所有方法的文档。
+
+为文本创建新的字体样式，将字体定义关联到某个已存在的单元格样式中：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 标题字体 = excel.font()
+                标题字体.setBold(true)
+                标题字体.setFontHeightInPoints(14)
+                标题字体.setColor(excel.color("yellow"))
+                // 设置表头样式的字体
+                表头样式.setFont(标题字体)
+            `
+        },
+    ]}
+/>
+
+> 关于 <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFFont.html" target="_blank">Apache POI 中的字体</a>对象所有方法的文档。
+
+## 图片
+
+要插入位于应用内部 `storage/samples/export-excel/logo.png` 的图片到电子表格中：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _storage.filesystem("server", "samples/export-excel", "logo.png"),
+                    1, // 列号
+                    1  // 行号
+                ).resize(2.3)
+            `
+        },
+    ]}
+/>
+
+要插入应用中位于 `public/images/logo.png` 的图片：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _app.file("public/images/logo.png"),
+                    10, // 列号
+                    1  // 行号
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+> 关于 <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/ss/usermodel/Picture.html" target="_blank">Apache POI 中的图片</a>对象所有方法的文档。
+
+## 合并单元格
+
+要在某个区域合并单元格，我们使用 `mergedRegion` 方法。
+
+参数顺序如下：
+
+1. 起始行
+2. 起始列
+3. 结束行
+4. 结束列
+
+> 位置的数字索引始终从 **零** 开始。
+
+在下面的示例中，将合并第 3 行中从第 10 列到第 15 列的所有单元格：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.mergedRegion(2, 9, 2, 14)
+            `
+        },
+    ]}
+/>
+
+## 单元格
+
+要获取表示单元格的对象：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 获取位于 B 列第 2 行的单元格：
+                const 单元格 = excel.cell(1, 1)
+            `
+        },
+    ]}
+/>
+
+> 位置的数字索引始终从 **零** 开始。
+
+将单元格公式输出到日志的示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 记录第 2 行 B 列单元格的公式。
+                _log.info(
+                    "单元格 B2 公式: "+ excel.cell(1, 1).getCellFormula()
+                )
+            `
+        },
+    ]}
+/>
+
+获取单元格文本值的示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 记录第 2 行 B 列单元格的文本值。
+                _log.info(
+                    "单元格 B2 值: "+ excel.cell(1, 1).getStringCellValue()
+                )
+            `
+        },
+    ]}
+/>
+
+> 关于 <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCell.html" target="_blank">Apache POI 中的单元格（Cell）</a>对象所有方法的文档。
+
+## 行
+
+要获取表示行的对象：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 获取表示第 2 行的对象。
+                const 行 = excel.row(1)
+            `
+        },
+    ]}
+/>
+
+> 位置的数字索引始终从 **零** 开始。
+
+在上面的示例中，如果该行不存在，将自动创建新行。
+
+> 关于 <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFRow.html" target="_blank">Apache POI 中的行（Row）</a>对象所有方法的文档。
+
+## 插入表格数据
+
+我们可以使用 `addDataTable` 方法插入数据表。
+
+由于前两个参数定义了数据表应插入的位置，它们分别是行号和列号。
+
+> 注意，代码中行和列的位置始终从 **零** 开始。
+>
+> 也就是说，第 1 行是位置 `0`，A 列也是位置 `0`。
+
+接着我们传入一个行列表，其中每一行又包含一个用于列的列表，然后才添加一个包含单元格值的映射。
+
+完整示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list() // 行
+                        .add(
+                            _val.list() // 列
+                                .add(
+                                    _val.map() // 单元格
+                                        .set("value", "姓名")
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "年龄")
+                                )
+                        )
+                        .add( // 另一行
+                            _val.list()
+                                .add( // 第一列
+                                    _val.map()
+                                        .set("value", "玛丽亚")
+                                )
+                                .add( // 第二列
+                                    _val.map()
+                                        .set("value", 26)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### 外观
+
+在单元格的映射中，我们可以关联已经创建的样式，例如使用前面看到的外观和格式化部分中定义的样式。
+
+以下是将样式关联到单元格的示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map()
+                                        .set("value", "姓名")
+                                        .set("style", 表头样式)
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "年龄")
+                                        .set("style", 表头样式)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### 公式
+
+要插入公式，我们在单元格定义的映射中使用 `formula` 键。
+
+在这个示例中，将在最后一个单元格中对其他所有单元格的值求和：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "合计")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+要从列号获取列字母，可以使用 `columnReference` 方法，这有助于定义公式。该方法也可以用来从引用字母获取列号，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, _xls.columnReference('B'),
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "合计")
+                                )
+                                .add(
+                                    _val.map().set(
+                                        "formula",
+                                        "SUM("+ _xls.columnReference(1) +"7:"+ _xls.columnReference(2) +"8)"
+                                )
+                            )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+## 工作表
+
+要在文档自身内部创建新的工作表（_sheet_），请参考以下示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 新工作表 = excel.createSheet("新工作表")
+            `
+        },
+    ]}
+/>
+
+> 在单元格、图片和数据的处理方法中，可以在第一个参数中添加工作表对象的引用。
+>
+> 取决于当前激活的是哪个工作表，可以使用 [activeSheet](/docs/library/resources/xls#activesheet) 方法更改活动工作表。
+
+在新工作表中插入图片的示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    新工作表,
+                    _app.file("public/images/logo.png"),
+                    10, // 列号
+                    1  // 行号
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+在新工作表中插入数据表的示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    新工作表,
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "合计")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### 激活
+
+因此，为了避免像上面的示例那样在方法中不断指明应该处理哪个工作表，另一种做法是指定哪个是活动工作表。
+
+> 所有单元格、图片和数据的处理方法，在**未**指定特定工作表时，都会使用当前激活的工作表。
+
+以下是激活特定工作表的两种方式，首先是通过对象引用，然后是通过工作表索引：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.activeSheet(我的工作表) // 工作表的引用对象。
+                excel.activeSheet(1) // 将被激活的工作表索引。
+            `
+        },
+    ]}
+/>
+
+### 实用资源
+
+操作工作表时其他实用方法的示例。
+
+按名称获取工作表：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 按其名称获取工作表。
+                const 我的工作表 = excel.getSheet("工作表名称")
+            `
+        },
+    ]}
+/>
+
+按其索引获取工作表：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 按其编号获取工作表。
+                const 我的工作表 = excel.getSheet(1)
+            `
+        },
+    ]}
+/>
+
+获取工作表总数：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 工作表总数。
+                const 工作表总数 = excel.getNumberOfSheets()
+            `
+        },
+    ]}
+/>
+
+列出文档中所有现有的工作表。
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 列出所有工作表。
+                const 所有工作表 = excel.getAllSheets()
+                for (const sheet of 所有工作表) {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                # 列出所有工作表。
+                所有工作表 = excel.getAllSheets()
+                for sheet in 所有工作表:
+                    ...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                # 列出所有工作表。
+                所有工作表 = excel.getAllSheets()
+                所有工作表.each do |sheet|
+                    ...
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                // 列出所有工作表。
+                val 所有工作表 = excel.getAllSheets()
+                所有工作表.forEach {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                // 列出所有工作表。
+                def 所有工作表 = excel.getAllSheets()
+                for (sheet in 所有工作表) {
+                    ...
+                }
+            `
+        },
+    ]}
+/>
+
+> 关于 <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFSheet.html" target="_blank">Apache POI 中的工作表（Planilha）</a>对象所有方法的文档。
+
+## 生成文件
+
+在 `save` 和 `output` 方法中会生成最终文件的二进制内容。
+
+将生成的文件作为服务的数据输出（`output`）发送：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.output("file.xlsx")
+            `
+        },
+    ]}
+/>
+
+将生成的文件保存到应用的 `storage/filesystem` 文件夹：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_storage.filesystem("server", "file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+将生成的文件保存到硬盘文件系统中的 `/tmp` 文件夹：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_os.file("/tmp/file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+## 编辑文件
+
+我们可以通过打开文件、进行必要的修改，然后保存编辑后的新文件来编辑文件。
+
+以下是一些如何打开文件的示例。
+
+打开应用根目录中的文件：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_app.file("file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+打开应用中 `storage/filesystem` 文件夹里生成的文件：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_storage.filesystem("server", "file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+以及打开硬盘文件系统中 `/tmp` 文件夹里的文件：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_os.file("/tmp/file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+在上面的示例中，常量 `excel` 将包含带有相应文件上下文的编辑对象，因此可以进行任何类型的操作。
+
+完成修改后，执行新文件的生成。
+
+> 无法直接修改同一个打开的文件，需要以不同的路径生成一个新文件。
+
+要直接修改同一个文件，可以使用 `inputStream` 来实现。
+
+以下是修改单元格值的示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文件输入 = _app.file("file.xlsx").inputStream()
+                const excel = _xls.open(文件输入)
+
+                excel.setCellData(
+                    10, 1,
+                    _val.map()
+                        .set(
+                            "value",
+                            excel.getCellData(10, 1).getInt("value") + 10
+                        )
+                )
+
+                文件输入.close() // 关闭已打开的文件。
+                excel.save(_app.file("file.xlsx")) // 保存新版本。
+                `
+        },
+    ]}
+/>
+
+## 读取文件
+
+从 Excel 文件中提取数据使用 `read` 方法。
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 数据 = _xls.read(_app.file("file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+数据以 Values 类型的对象结构获取，其中包含用于工作表、行和列的列表（List），以及用于单元格的映射（Map，键和值）。
+
+要查看所有数据，我们可以将其作为服务的数据输出：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.json(数据)
+            `
+        },
+    ]}
+/>
+
+要进行遍历，我们必须记住数据的结构按以下顺序组织：
+
+1. `sheets` - 工作表
+2. `rows` - 行
+3. `columns` - 列
+
+完整遍历的示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const 工作表 of 数据.getValues("sheets")) {
+                    _out.println(\`<h4>工作表: \${工作表.getInt("index")} - \${工作表.getString("name")}</h4>\`)
+                    for (const 行 of 工作表.getValues("rows")) {
+                        _out.println(\`<h4>行: \${行.getInt("row")}</h4>\`)
+                        _out.println("<p>")
+                        for (const 列 of 行.getValues("columns")) {
+                            _out.print(\`\${列.getInt("row")}:\${列.getInt("column")}\`)
+                            _out.print(\` # \${列.getString("address")}\`)
+                            _out.print(\` # \${列.getString("type")}\`)
+                            _out.print(\` # \${列.getString("value")}\`)
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for 工作表 in 数据.getValues("sheets"):
+                    _out.println(f"<h4>工作表: {工作表.getInt('index')} - {工作表.getString('name')}</h4>")
+                    for 行 in 工作表.getValues("rows"):
+                        _out.println(f"<h4>行: {行.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for 列 in 行.getValues("columns"):
+                            _out.print(f"{列.getInt('row')}:{列.getInt('column')}")
+                            _out.print(f" # {列.getString('address')}")
+                            _out.print(f" # {列.getString('type')}")
+                            _out.print(f" # {列.getString('value')}")
+                            _out.println("<br>")
+                        _out.println("</p>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                数据.getValues("sheets").each do |工作表|
+                    _out.println("<h4>工作表: #{工作表.getInt("index")} - #{工作表.getString("name")}</h4>")
+                    工作表.getValues("rows").each do |行|
+                        _out.println("<h4>行: #{行.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        行.getValues("columns").each do |列|
+                            _out.print("#{列.getInt("row")}:#{列.getInt("column")}")
+                            _out.print(" # #{列.getString("address")}")
+                            _out.print(" # #{列.getString("type")}")
+                            _out.print(" # #{列.getString("value")}")
+                            _out.println("<br>")
+                        end
+                        _out.println("</p>")
+                    end
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                数据.getValues("sheets").forEach {
+                    val 工作表 = it
+                    _out.println("<h4>工作表: \${工作表.getInt("index")} - \${工作表.getString("name")}</h4>")
+                    工作表.getValues("rows").forEach {
+                        val 行 = it
+                        _out.println("<h4>行: \${行.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        行.getValues("columns").forEach {
+                            val 列 = it
+                            _out.print("\${列.getInt("row")}:\${列.getInt("column")}")
+                            _out.print(" # \${列.getString("address")}")
+                            _out.print(" # \${列.getString("type")}")
+                            _out.print(" # \${列.getString("value")}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (工作表 in 数据.getValues("sheets")) {
+                    _out.println("<h4>工作表: \${工作表.getInt('index')} - \${工作表.getString('name')}</h4>")
+                    for (行 in 工作表.getValues("rows")) {
+                        _out.println("<h4>行: \${行.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for (列 in 行.getValues("columns")) {
+                            _out.print("\${列.getInt('row')}:\${列.getInt('column')}")
+                            _out.print(" # \${列.getString('address')}")
+                            _out.print(" # \${列.getString('type')}")
+                            _out.print(" # \${列.getString('value')}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+    ]}
+/>
+
+单元格的类型通过以下代码获取：
+
+- `列.getString("type")`
+
+支持的类型有：
+
+- `string` - 文本内容。
+- `numeric` - 数字或日期和/或时间内容。
+- `boolean` - 真或假。
+- `blank` - 空白单元格。
+- `formula` - 包含公式的单元格。
+- `error` - 单元格处理中的错误。
+
+### 附加参数
+
+每种单元格类型都有一些附加参数。
+
+`string` - 具有文本内容的单元格类型。
+
+- `value` - 单元格的文本。
+- `richValue` - 单元格的格式。
+
+`numeric` - 具有数字内容，或日期和时间的单元格类型。
+
+- `value` - 单元格数字内容的值。
+  
+在日期和时间的情况下，我们还有以下附加参数：
+
+- `localDateTime` - 表示单元格日期和时间值的 Java Time LocalDateTime 对象。
+- `localDate` - 表示单元格日期值的 Java Time LocalDate 对象。
+- `localTime` - 表示单元格时间值的 Java Time LocalTime 对象。
+- `instant` - 表示单元格日期和/或时间值的 Java Time Instant 对象。
+- `date` - 表示单元格日期和/或时间值的 Java Date 对象。
+
+`boolean` - 具有布尔内容，即真或假的单元格类型。
+
+- `value` - _boolean_ 类型的值，`true` 或 `false`。
+
+`blank` - 无内容的单元格类型，因此不包含附加参数。
+
+`formula` - 包含计算公式的单元格类型。
+
+- `value` - 计算得出的最终结果值。
+- `formula` - 包含用于计算的公式表达式。
+
+`error` - 包含错误的单元格类型。
+
+- `value` - 所产生错误的字节值。
+- `code` - 如果公式计算中出现错误，这里提供所发生错误的代码。
+
+## 视频
+
+以下是一些示例视频，演示如何以编程方式生成 Excel/XLSX 文件：
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/nTnoqEpLghQ?si=8engICqRqNFUPi_i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

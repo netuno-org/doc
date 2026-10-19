@@ -1,0 +1,1002 @@
+---
+id: xls
+title: XLS - Excel
+sidebar_label: XLS - Excel
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Procesarea fișierelor Excel personalizate.
+
+## Introducere
+
+Netuno generează fișiere EXCEL compatibile cu LibreOffice, OpenOffice, Microsoft Office, Google Drive etc., prin intermediul resursei [XLS](/docs/library/resources/xls) care permite o abstractizare low-code a [Apache POI](https://poi.apache.org/) pentru diferitele limbaje de programare suportate de Netuno.
+
+Putem genera atât fișiere XLSX, XLS, cât și ODS.
+
+Aplicația care vine împreună cu Netuno, numită **demo** (aplicație de demonstrație), conține numeroase exemple ale implementărilor posibile de cod în diverse limbaje, inclusiv demonstrația exportării de foi de calcul prin serviciul `export-excel` care se află în:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/export-excel`
+]} />
+
+## Inițializare
+
+Pentru a iniția resursa XLS:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.create()
+            `
+        },
+    ]}
+/>
+
+Creează obiectul care conține contextul noului fișier ce va fi construit, cu o foaie de calcul goală.
+
+## Formatare
+
+Definirea stilurilor de formatare vizuală, adică formatul datelor, orelor, banilor etc., trebuie făcută înainte de definirea valorilor celulelor, deoarece la definirea valorilor celulelor este posibil să se asocieze împreună stilul lor de formatare.
+
+Deci, după cum se demonstrează în exemplul care vine în aplicația `demo`, formatările sunt definite chiar la începutul codului.
+
+Pentru a formata datele:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilData = excel.cellStyleFormat("dd/mm/yy")
+            `
+        },
+    ]}
+/>
+
+Pentru a formata orele:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilOra = excel.cellStyleFormat("hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+Pentru a formata datele cu ore:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilDataOra = excel.cellStyleFormat("dd/mm/yyyy hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+Pentru a formata valorile monetare în **euro**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilBaniEuro = excel.cellStyleFormat("€#,##0.00;\\-€#,##0.00")
+            `
+        },
+    ]}
+/>
+
+Pentru a formata valorile monetare în **reali**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilBaniReal = excel.cellStyleFormat("R$#,##0.00;\\-R$#,##0.00")
+            `
+        },
+    ]}
+/>
+
+Pentru a formata valorile în **procente**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilProcent = excel.cellStyleFormat("0.00%")
+            `
+        },
+    ]}
+/>
+
+## Aspect
+
+Definirea stilurilor de aspect vizual, adică aspectul celulelor precum culori, font, borduri, aliniere etc., trebuie făcută înainte de definirea valorilor celulelor, deoarece la definirea valorilor celulelor este posibil să se asocieze împreună stilul lor de aspect.
+
+Deci, după cum se demonstrează în exemplul care vine în aplicația `demo`, aspectele sunt definite chiar la începutul codului.
+
+Exemplu pentru definirea culorilor și alinierii:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilAntet = excel.cellStyle()
+                stilAntet.setFillPattern(_xls.fillPattern("solid-foreground"))
+                stilAntet.setFillBackgroundColor(excel.color("black"))
+                stilAntet.setAlignment(_xls.horizontalAlignment("center"))
+            `
+        },
+    ]}
+/>
+
+> Documentație cu toate metodele obiectului de <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Stiluri în Apache POI</a>.
+
+Definirea stilului de borduri:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilDate = excel.cellStyle()
+                stilDate.setBorderBottom(_xls.borderStyle("thin"))
+                stilDate.setBorderTop(_xls.borderStyle("thin"))
+                stilDate.setBorderLeft(_xls.borderStyle("thin"))
+                stilDate.setBorderRight(_xls.borderStyle("thin"))
+            `
+        },
+    ]}
+/>
+
+> Documentație cu toate metodele obiectului de <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Stiluri în Apache POI</a>.
+
+Creează un nou stil de font pentru text, asociază definițiile fontului unui anumit stil de celulă deja existent:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fontTitlu = excel.font()
+                fontTitlu.setBold(true)
+                fontTitlu.setFontHeightInPoints(14)
+                fontTitlu.setColor(excel.color("yellow"))
+                // Definește fontul pentru stilAntet
+                stilAntet.setFont(fontTitlu)
+            `
+        },
+    ]}
+/>
+
+> Documentație cu toate metodele obiectului de <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFFont.html" target="_blank">Font în Apache POI</a>.
+
+## Imagine
+
+Pentru a insera o imagine în foaia de calcul care se află la `storage/samples/export-excel/logo.png` în interiorul aplicației:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _storage.filesystem("server", "samples/export-excel", "logo.png"),
+                    1, // Numărul coloanei
+                    1  // Numărul rândului
+                ).resize(2.3)
+            `
+        },
+    ]}
+/>
+
+Pentru a insera o imagine care se află în aplicație la `public/images/logo.png`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _app.file("public/images/logo.png"),
+                    10, // Numărul coloanei
+                    1  // Numărul rândului
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+> Documentație cu toate metodele obiectului de <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/ss/usermodel/Picture.html" target="_blank">Imagine în Apache POI</a>.
+
+## Îmbinarea Celulelor
+
+Pentru a uni celule într-o regiune folosim metoda `mergedRegion`.
+
+Ordinea parametrilor este:
+
+1. Rândul Inițial
+2. Coloana Inițială
+3. Rândul Final
+4. Coloana Finală
+
+> Referințele numerice de poziționare încep întotdeauna de la **zero**.
+
+În exemplul de mai jos vor fi îmbinate toate celulele de la coloana 10 până la coloana 15 care se află pe rândul 3:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.mergedRegion(2, 9, 2, 14)
+            `
+        },
+    ]}
+/>
+
+## Celule
+
+Pentru a obține obiectul care reprezintă o celulă:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Obține celula care se află în coloana B și rândul 2:
+                const celula = excel.cell(1, 1)
+            `
+        },
+    ]}
+/>
+
+> Referințele numerice de poziționare încep întotdeauna de la **zero**.
+
+Exemplu de afișare în log a formulei celulei:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Afișează în log formula rândului 2 și coloanei B.
+                _log.info(
+                    "Formula celulei B2: "+ excel.cell(1, 1).getCellFormula()
+                )
+            `
+        },
+    ]}
+/>
+
+Exemplu de obținere a valorii text a unei celule:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Afișează în log valoarea text a celulei din rândul 2 și coloana B.
+                _log.info(
+                    "Valoarea celulei B2: "+ excel.cell(1, 1).getStringCellValue()
+                )
+            `
+        },
+    ]}
+/>
+
+> Documentație cu toate metodele obiectului de <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCell.html" target="_blank">Celulă în Apache POI</a>.
+
+## Rânduri
+
+Pentru a obține obiectul care reprezintă un rând:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Obține obiectul care reprezintă rândul 2.
+                const rand = excel.row(1)
+            `
+        },
+    ]}
+/>
+
+> Referințele numerice de poziționare încep întotdeauna de la **zero**.
+
+În exemplul de mai sus, în cazul în care rândul nu există, va fi creat automat un rând nou.
+
+> Documentație cu toate metodele obiectului de <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFRow.html" target="_blank">Rând în Apache POI</a>.
+
+## Inserarea Datelor Tabelare
+
+Putem insera un tabel de date folosind metoda `addDataTable`.
+
+Deoarece primii doi parametri definesc poziția în care trebuie inserat tabelul de date, aceștia sunt numerele rândurilor și coloanelor.
+
+> Atenție, poziționarea în cod a rândurilor și coloanelor începe întotdeauna de la **zero**.
+>
+> Adică Rândul 1 este poziția `0` și Coloana A este de asemenea poziția `0`.
+
+În continuare transmitem o listă de rânduri, unde fiecare rând conține o altă listă pentru coloane, abia apoi adăugăm o mapă cu valoarea celulei.
+
+Exemplu complet:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list() // Rânduri
+                        .add(
+                            _val.list() // Coloană
+                                .add(
+                                    _val.map() // Celulă
+                                        .set("value", "Nume")
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "Vârstă")
+                                )
+                        )
+                        .add( // Alt rând
+                            _val.list()
+                                .add( // Prima coloană
+                                    _val.map()
+                                        .set("value", "Maria")
+                                )
+                                .add( // A doua coloană
+                                    _val.map()
+                                        .set("value", 26)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Aspect
+
+În mapa celulelor putem asocia stilurile deja create, folosind de exemplu stilurile definite în secțiunea de aspect și formatare pe care le-am văzut anterior.
+
+Urmează exemplul de asociere a stilurilor în celule:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map()
+                                        .set("value", "Nume")
+                                        .set("style", stilAntet)
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "Vârstă")
+                                        .set("style", stilAntet)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Formule
+
+Pentru a insera formule folosim cheia `formula` în mapa de definiții a celulei.
+
+În acest exemplu se va realiza suma în ultima celulă a tuturor valorilor celorlalte celule:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Total")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+Pentru a obține litera coloanei din numărul coloanei se poate folosi metoda `columnReference`, ceea ce poate ajuta la definirea formulelor. Aceeași metodă poate fi folosită și pentru a obține numărul coloanei din litera de referință, de exemplu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, _xls.columnReference('B'),
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Total")
+                                )
+                                .add(
+                                    _val.map().set(
+                                        "formula",
+                                        "SUM("+ _xls.columnReference(1) +"7:"+ _xls.columnReference(2) +"8)"
+                                )
+                            )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+## Foi de Calcul
+
+Pentru a crea o nouă foaie de calcul (_sheet_) în interiorul documentului propriu-zis, observați următorul exemplu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const foaieNoua = excel.createSheet("Foaie Nouă")
+            `
+        },
+    ]}
+/>
+
+> În metodele de manipulare a celulelor, imaginilor și datelor, poate fi adăugată pe primul parametru referința obiectului foii de calcul.
+>
+> În funcție de ce foaie este activă, este posibil să se schimbe foaia activă cu metoda [activeSheet](/docs/library/resources/xls#activesheet).
+
+Exemplu de inserare a unei imagini în noua foaie:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    foaieNoua,
+                    _app.file("public/images/logo.png"),
+                    10, // Numărul coloanei
+                    1  // Numărul rândului
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+Exemplu de inserare a unui tabel de date în noua foaie:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    foaieNoua,
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Total")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Activare
+
+Astfel, pentru a evita indicarea constantă în metode a foii care trebuie procesată, ca în exemplele de mai sus, în alternativă este posibil să se indice care este foaia activă.
+
+> Toate metodele de manipulare a celulelor, imaginilor și datelor folosesc foaia care este activată atunci când **nu** este indicată o foaie specifică.
+
+Vedeți două moduri de activare a unei foi specifice, mai întâi cu referința obiectului și apoi cu indexul foii:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.activeSheet(foaiaMea) // Obiectul de referință al foii.
+                excel.activeSheet(1) // Indexul foii care va fi activată.
+            `
+        },
+    ]}
+/>
+
+### Resurse Utile
+
+Exemple de alte metode utile în manipularea foilor de calcul.
+
+Obținerea unei foi după nume:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Obține foaia după numele ei.
+                const foaiaMea = excel.getSheet("Numele Foii")
+            `
+        },
+    ]}
+/>
+
+Obținerea unei foi după indexul ei:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Obține foaia după numărul ei.
+                const foaiaMea = excel.getSheet(1)
+            `
+        },
+    ]}
+/>
+
+Pentru a obține numărul total de foi:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Numărul total de foi.
+                const totalFoi = excel.getNumberOfSheets()
+            `
+        },
+    ]}
+/>
+
+Pentru a lista toate foile existente în document.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Listează toate foile.
+                const toateFoile = excel.getAllSheets()
+                for (const foaie of toateFoile) {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                # Listează toate foile.
+                toateFoile = excel.getAllSheets()
+                for foaie in toateFoile:
+                    ...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                # Listează toate foile.
+                toateFoile = excel.getAllSheets()
+                toateFoile.each do |foaie|
+                    ...
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                // Listează toate foile.
+                val toateFoile = excel.getAllSheets()
+                toateFoile.forEach {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                // Listează toate foile.
+                def toateFoile = excel.getAllSheets()
+                for (foaie in toateFoile) {
+                    ...
+                }
+            `
+        },
+    ]}
+/>
+
+> Documentație cu toate metodele obiectului de <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFSheet.html" target="_blank">Foaie de Calcul în Apache POI</a>.
+
+## Generarea Fișierului
+
+În metodele `save` și `output` este generat binarul fișierului final.
+
+Trimite fișierul generat ca ieșire de date (`output`) a serviciului:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.output("file.xlsx")
+            `
+        },
+    ]}
+/>
+
+Pentru a salva fișierul generat în folderul `storage/filesystem` al aplicației:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_storage.filesystem("server", "file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Pentru a salva fișierul generat în folderul `/tmp` din sistemul de fișiere al HDD-ului:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_os.file("/tmp/file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+## Editarea Fișierului
+
+Putem edita fișiere deschizându-le, efectuând modificările necesare și apoi salvând noul fișier editat.
+
+Urmează mai jos câteva exemple de cum este posibil să deschidem fișiere.
+
+Deschiderea unui fișier în rădăcina aplicației:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_app.file("file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Pentru a deschide fișierul generat în folderul `storage/filesystem` al aplicației:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_storage.filesystem("server", "file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Și de asemenea pentru a deschide fișierul în folderul `/tmp` din sistemul de fișiere al HDD-ului:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_os.file("/tmp/file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+În exemplele de mai sus, constanta `excel` va conține obiectul de editare cu contextul fișierului respectiv, astfel fiind posibilă orice tip de manipulare.
+
+Când încheiați modificările, realizați generarea noului fișier.
+
+> Nu este posibil să se modifice direct același fișier deschis, fiind necesar să se genereze un fișier nou cu o cale diferită.
+
+Pentru a modifica direct același fișier, atunci se poate face folosind `inputStream`.
+
+Urmează un exemplu de modificare a valorii unei celule:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fisierIntrare = _app.file("file.xlsx").inputStream()
+                const excel = _xls.open(fisierIntrare)
+
+                excel.setCellData(
+                    10, 1,
+                    _val.map()
+                        .set(
+                            "value",
+                            excel.getCellData(10, 1).getInt("value") + 10
+                        )
+                )
+
+                fisierIntrare.close() // Închide fișierul deschis.
+                excel.save(_app.file("file.xlsx")) // Salvează noua versiune.
+                `
+        },
+    ]}
+/>
+
+## Citirea Fișierului
+
+Extragerea datelor din fișierele Excel se face cu metoda `read`.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const date = _xls.read(_app.file("file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Datele sunt obținute într-o structură de obiecte de tip Values care conține Liste, pentru foi, rânduri și coloane, și Mape (cheie și valoare) pentru celule.
+
+Pentru a vizualiza toate datele putem pune ca ieșire de date a serviciului:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.json(date)
+            `
+        },
+    ]}
+/>
+
+Pentru a realiza interacțiunea trebuie să avem în minte că structura datelor este organizată în următoarea ordine:
+
+1. `sheets` - Foi
+2. `rows` - Rânduri
+3. `columns` - Coloane
+
+Exemplu de interacțiune completă:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const foaie of date.getValues("sheets")) {
+                    _out.println(\`<h4>Foaie: \${foaie.getInt("index")} - \${foaie.getString("name")}</h4>\`)
+                    for (const rand of foaie.getValues("rows")) {
+                        _out.println(\`<h4>Rând: \${rand.getInt("row")}</h4>\`)
+                        _out.println("<p>")
+                        for (const coloana of rand.getValues("columns")) {
+                            _out.print(\`\${coloana.getInt("row")}:\${coloana.getInt("column")}\`)
+                            _out.print(\` # \${coloana.getString("address")}\`)
+                            _out.print(\` # \${coloana.getString("type")}\`)
+                            _out.print(\` # \${coloana.getString("value")}\`)
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for foaie in date.getValues("sheets"):
+                    _out.println(f"<h4>Foaie: {foaie.getInt('index')} - {foaie.getString('name')}</h4>")
+                    for rand in foaie.getValues("rows"):
+                        _out.println(f"<h4>Rând: {rand.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for coloana in rand.getValues("columns"):
+                            _out.print(f"{coloana.getInt('row')}:{coloana.getInt('column')}")
+                            _out.print(f" # {coloana.getString('address')}")
+                            _out.print(f" # {coloana.getString('type')}")
+                            _out.print(f" # {coloana.getString('value')}")
+                            _out.println("<br>")
+                        _out.println("</p>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                date.getValues("sheets").each do |foaie|
+                    _out.println("<h4>Foaie: #{foaie.getInt("index")} - #{foaie.getString("name")}</h4>")
+                    foaie.getValues("rows").each do |rand|
+                        _out.println("<h4>Rând: #{rand.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        rand.getValues("columns").each do |coloana|
+                            _out.print("#{coloana.getInt("row")}:#{coloana.getInt("column")}")
+                            _out.print(" # #{coloana.getString("address")}")
+                            _out.print(" # #{coloana.getString("type")}")
+                            _out.print(" # #{coloana.getString("value")}")
+                            _out.println("<br>")
+                        end
+                        _out.println("</p>")
+                    end
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                date.getValues("sheets").forEach {
+                    val foaie = it
+                    _out.println("<h4>Foaie: \${foaie.getInt("index")} - \${foaie.getString("name")}</h4>")
+                    foaie.getValues("rows").forEach {
+                        val rand = it
+                        _out.println("<h4>Rând: \${rand.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        rand.getValues("columns").forEach {
+                            val coloana = it
+                            _out.print("\${coloana.getInt("row")}:\${coloana.getInt("column")}")
+                            _out.print(" # \${coloana.getString("address")}")
+                            _out.print(" # \${coloana.getString("type")}")
+                            _out.print(" # \${coloana.getString("value")}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (foaie in date.getValues("sheets")) {
+                    _out.println("<h4>Foaie: \${foaie.getInt('index')} - \${foaie.getString('name')}</h4>")
+                    for (rand in foaie.getValues("rows")) {
+                        _out.println("<h4>Rând: \${rand.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for (coloana in rand.getValues("columns")) {
+                            _out.print("\${coloana.getInt('row')}:\${coloana.getInt('column')}")
+                            _out.print(" # \${coloana.getString('address')}")
+                            _out.print(" # \${coloana.getString('type')}")
+                            _out.print(" # \${coloana.getString('value')}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+    ]}
+/>
+
+Tipul celulei este obținut prin codul:
+
+- `coloana.getString("type")`
+
+Iar tipurile suportate sunt:
+
+- `string` - Conținut text.
+- `numeric` - Conținut numeric sau de dată și/sau oră.
+- `boolean` - Adevărat sau fals.
+- `blank` - Celulă goală.
+- `formula` - Celulă care conține o formulă.
+- `error` - Eroare la procesarea celulei.
+
+### Parametri Suplimentari
+
+Pentru fiecare tip de celulă avem câțiva parametri suplimentari.
+
+`string` - Tip de celulă cu conținut textual.
+
+- `value` - Textul celulei.
+- `richValue` - Formatările celulei.
+
+`numeric` - Tip de celulă cu conținut numeric, sau date și de asemenea ore.
+
+- `value` - Valoarea conținutului numeric al celulei.
+  
+În cazul datelor și orelor avem acești parametri suplimentari:
+
+- `localDateTime` - Obiect Java Time LocalDateTime care reprezintă valoarea de dată și oră a celulei.
+- `localDate` - Obiect Java Time LocalDate care reprezintă valoarea de dată a celulei.
+- `localTime` - Obiect Java Time LocalTime care reprezintă valoarea de oră a celulei.
+- `instant` - Obiect Java Time Instant care reprezintă valoarea de dată și/sau oră a celulei.
+- `date` - Obiect Date din Java care reprezintă valoarea de dată și/sau oră a celulei.
+
+`boolean` - Tip de celulă cu conținut boolean, adică adevărat sau fals.
+
+- `value` - Valoare de tip _boolean_, `true` sau `false`.
+
+`blank` - Tip de celulă fără conținut, prin urmare nu conține parametri suplimentari.
+
+`formula` - Tip de celulă care conține formule de calcul.
+
+- `value` - Valoarea finală rezultată din calcul.
+- `formula` - Conține expresia formulei utilizate pentru calcul.
+
+`error` - Tip de celulă care conține eroare.
+
+- `value` - Valoarea în bytes a erorii generate.
+- `code` - În cazul în care există erori la calculul formulei, aici este furnizat codul erorii apărute.
+
+## Videoclipuri
+
+Urmează câteva videoclipuri exemplificative despre cum să realizați generarea fișierelor Excel/XLSX în mod programatic:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/nTnoqEpLghQ?si=8engICqRqNFUPi_i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

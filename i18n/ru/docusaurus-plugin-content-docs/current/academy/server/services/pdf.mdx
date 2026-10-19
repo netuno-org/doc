@@ -1,0 +1,1340 @@
+---
+id: pdf
+title: PDF
+sidebar_label: PDF
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Обработка пользовательских PDF-файлов.
+
+## Введение
+
+Netuno создаёт PDF-файлы с поддержкой изображений, таблиц, шрифтов и многого другого через ресурс [PDF](/docs/library/resources/pdf), который предоставляет low-code-абстракцию над [iTextPDF](https://itextpdf.com/) для различных языков программирования, поддерживаемых Netuno.
+
+Приложение, поставляемое с Netuno под названием **demo** (демонстрационное приложение), содержит множество примеров возможных реализаций кода на разных языках, включая демонстрацию экспорта в PDF через сервис `export-pdf`, который находится по пути:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/export-pdf`
+]} />
+
+## Инициализация
+
+Прежде всего нужно создать объект, который будет содержать контекст нового создаваемого документа; по умолчанию размер страниц — A4.
+
+При создании документа определяется, где он будет создан.
+
+Если ничего не задано, он будет создан в выводе данных сервиса, например:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument()
+            `
+        },
+    ]}
+/>
+
+
+Чтобы создать PDF-файл внутри папки `docs` приложения, можно сделать так:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_app.file("docs/file.pdf").output())
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_app.file("docs/file.pdf").output())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_app.file("docs/file.pdf").output())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_app.file("docs/file.pdf").output())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_app.file("docs/file.pdf").output())
+            `
+        },
+    ]}
+/>
+
+Если нужно создать документ в новом файле вне приложения, например:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_os.file("/tmp/file.pdf").output())
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_os.file("/tmp/file.pdf").output())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_os.file("/tmp/file.pdf").output())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_os.file("/tmp/file.pdf").output())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_os.file("/tmp/file.pdf").output())
+            `
+        },
+    ]}
+/>
+
+Или ещё в `storage` приложения:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output())
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output())
+            `
+        },
+    ]}
+/>
+
+> По умолчанию документ создаётся с форматом страницы **A4**.
+
+### Формат страницы
+
+Чтобы настроить формат страницы, достаточно указать его при создании документа.
+
+Создаёт новый документ для вывода данных сервиса со страницами формата **letter**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+    ]}
+/>
+
+Создаёт новый документ для файла в корне приложения с форматом страницы **B3**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_app.file("file.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_app.file("file.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_app.file("file.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_app.file("file.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_app.file("file.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+    ]}
+/>
+
+Создаёт новый документ в `storage` приложения с форматом страницы **legal**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_storage.filesystem("server", "file.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+    ]}
+/>
+
+> Смотрите документацию о [задании размера страниц](/docs/library/resources/pdf/#pagesize).
+
+PDF-документы можно создавать с заданием пользовательского размера страницы; для этого используйте `pageSize`, передав значения ширины и высоты страницы, например:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.pageSize(50, 30)
+            `
+        },
+    ]}
+/>
+
+## HTTP-заголовок
+
+Чтобы создать сервис в REST API, который возвращает PDF-файл как вывод данных, нужно добавить в заголовок параметр `Content-Type` протокола HTTP.
+
+Пример определения содержимого как PDF:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("pdf")
+            `
+        },
+    ]}
+/>
+
+Код `pdf` — это сокращение для:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("application/pdf")
+            `
+        },
+    ]}
+/>
+
+## Разрыв страницы
+
+Для создания новой страницы используется `areaBreak`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.areaBreak()
+                )
+            `
+        },
+    ]}
+/>
+
+## Абзац
+
+Добавляет новый абзац в документ:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.paragraph("Мой текст здесь...")
+                        .setFontSize(15)
+                )
+            `
+        },
+    ]}
+/>
+
+Чтобы добавить абзац в фиксированной позиции:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    pdfDocument.add(
+                        _pdf.paragraph("Мой фиксированный текст...")
+                            .setFixedPosition(100, 500, 200)
+                            .setFontSize(15)
+                    )
+                )
+            `
+        },
+    ]}
+/>
+
+В приведённом выше коде в методе `setFixedPosition` первый параметр — это позиция X (`100`), второй параметр — позиция Y (`500`), а третий параметр — ширина (`200`).
+
+**Внимание:** если Y задан значением `0`, это означает, что элемент находится внизу страницы; чтобы поднять его, нужно увеличить значение Y. Чем больше значение Y, тем выше он будет отображаться, но если оно слишком велико и выходит за пределы длины страницы, элемент не будет виден.
+
+> Документация со всеми методами объекта [Paragraph iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Paragraph.html).
+
+## Шрифт
+
+Чтобы задать встроенный шрифт, можно сделать так:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const helvetica = _pdf.font("helvetica")
+                const helveticaBold = _pdf.font("helvetica-bold")
+                const helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                const helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                helvetica = _pdf.font("helvetica")
+                helveticaBold = _pdf.font("helvetica-bold")
+                helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                helvetica = _pdf.font("helvetica")
+                helveticaBold = _pdf.font("helvetica-bold")
+                helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val helvetica = _pdf.font("helvetica")
+                val helveticaBold = _pdf.font("helvetica-bold")
+                val helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                val helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def helvetica = _pdf.font("helvetica")
+                def helveticaBold = _pdf.font("helvetica-bold")
+                def helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                def helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+    ]}
+/>
+
+Чтобы задать собственный шрифт, можно использовать `storage`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+    ]}
+/>
+
+Также можно использовать файл внутри приложения; в этом примере шрифт находится в папке `fonts` в корне приложения:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+    ]}
+/>
+
+Или использовать файл по любому пути в системе; в этом примере шрифт находится в папке `fonts`, которая находится в папке временных файлов системы:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+    ]}
+/>
+
+> Документация со всеми методами объекта [Font iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/kernel/font/PdfFont.html).
+
+Чтобы использовать шрифт в текстах, нужно передать константу шрифта в абзац следующим образом:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.paragraph("Использование шрифта жирного начертания.")
+                        .setFont(helveticaBold)
+                        .setFontSize(15)
+                )
+            `
+        },
+    ]}
+/>
+
+## Изображение
+
+Вставка изображений в программно создаваемый PDF-документ выполняется так:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.image(_storage.filesystem("server", "samples/export-pdf", "logo.png"))
+                        .scaleAbsolute(120, 36)
+                )
+            `
+        },
+    ]}
+/>
+
+Обратите внимание, что метод `scaleAbsolute` очень полезен для изменения размера и подгонки изображения.
+
+В качестве альтернативы можно использовать файл внутри приложения, как в этом примере:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+    ]}
+/>
+
+Или использовать файл по любому пути в системе, как в этом примере:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+    ]}
+/>
+
+Чтобы добавить изображение в фиксированной позиции:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    imageLogo
+                        .scaleAbsolute(120, 36)
+                        .setFixedPosition(100, 500)
+                )
+            `
+        },
+    ]}
+/>
+
+При этом выше в методе `setFixedPosition` первый параметр — это позиция X (`100`), а второй параметр — позиция Y (`500`).
+
+**Внимание:** если Y задан значением `0`, это означает, что элемент находится внизу страницы; чтобы поднять его, нужно увеличить значение Y. Чем больше значение Y, тем выше он будет отображаться, но если оно слишком велико и выходит за пределы длины страницы, элемент не будет виден.
+
+> Документация со всеми методами объекта [Image iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Image.html).
+
+## Таблица
+
+Можно создавать таблицы, что позволяет представить набор данных более наглядно.
+
+Количество столбцов таблицы задаётся параметром: `_pdf.table(количествоСтолбцов)`
+
+В примере ниже `количествоСтолбцов` равно `1`, то есть один столбец.
+
+Поскольку мы добавляем в таблицу две ячейки, вторая ячейка переходит на следующую строку.
+
+Обратите внимание:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.table(1)
+                        .addCell(
+                            _pdf.cell()
+                                .add(
+                                    _pdf.paragraph("Человек")
+                                        .setFont(helvetica)
+                                        .setFontSize(10)
+                                )
+                                .setBorder(_pdf.border("solid", 2))
+                                .setBackgroundColor(_pdf.colorRGB(1, 0, 0))
+                        )
+                        .addCell(
+                            _pdf.cell()
+                                .add(
+                                    _pdf.paragraph("Николь")
+                                        .setFont(helvetica)
+                                        .setFontSize(10)
+                                )
+                                .setBackgroundColor(_pdf.colorGray(0.5))
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+Метод `addCell` позволяет вставлять определения ячеек с соответствующим содержимым.
+
+> Документация со всеми методами объекта [Cell iText](https://api.itextpdf.com/iText/java//8.0.3/com/itextpdf/layout/element/Cell.html).
+
+## Закрытие и сохранение документа
+
+Документ полностью сохраняется или создаётся только при вызове метода `close` следующим образом:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.close()
+            `
+        },
+    ]}
+/>
+
+Место создания документа определяется при инициализации, поэтому именно при инициализации документа мы задаём, где будет создан итоговый документ: в выводе данных сервиса (`output`) или в файле.
+
+## Редактирование файла
+
+Можно редактировать уже существующий PDF-документ, например:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.openDocument(_app.file("file.pdf"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.openDocument(_app.file("file.pdf"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.openDocument(_app.file("file.pdf"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.openDocument(_app.file("file.pdf"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.openDocument(_app.file("file.pdf"))
+            `
+        },
+    ]}
+/>
+
+Итоговый созданный документ будет отправлен в вывод данных сервиса.
+
+> Это очень полезно, чтобы использовать PDF как основу, словно шаблон.
+
+Пример редактирования документа в `storage` приложения:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'file.pdf'))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'file.pdf'))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'file.pdf'))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'file.pdf'))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'file.pdf'))
+            `
+        },
+    ]}
+/>
+
+Использует документ как основу, но сохраняет изменения в новый PDF-файл:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.openDocument(
+                    _app.file("базовый-документ.pdf"),
+                    _app.file("итоговый-документ.pdf")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.openDocument(
+                    _app.file("базовый-документ.pdf"),
+                    _app.file("итоговый-документ.pdf")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.openDocument(
+                    _app.file("базовый-документ.pdf"),
+                    _app.file("итоговый-документ.pdf")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.openDocument(
+                    _app.file("базовый-документ.pdf"),
+                    _app.file("итоговый-документ.pdf")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.openDocument(
+                    _app.file("базовый-документ.pdf"),
+                    _app.file("итоговый-документ.pdf")
+                )
+            `
+        },
+    ]}
+/>
+
+Пример использования документа в `storage` как основы с сохранением в другой файл:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "базовый-договор.pdf"),
+                    _storage.filesystem("server", "итоговый-договор.pdf")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "базовый-договор.pdf"),
+                    _storage.filesystem("server", "итоговый-договор.pdf")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "базовый-договор.pdf"),
+                    _storage.filesystem("server", "итоговый-договор.pdf")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "базовый-договор.pdf"),
+                    _storage.filesystem("server", "итоговый-договор.pdf")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "базовый-договор.pdf"),
+                    _storage.filesystem("server", "итоговый-договор.pdf")
+                )
+            `
+        },
+    ]}
+/>
+
+После загрузки документа мы можем добавлять содержимое, а при закрытии методом `close` в конце создаётся итоговый документ с новым программно добавленным содержимым.
+
+Пример сервиса, который использует существующий PDF как шаблон для создания PDF-файла с добавленным динамическим содержимым:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("pdf")
+
+                const pdfDocument = _pdf.openDocument(_app.file("шаблон-1.pdf"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Мой динамический контент.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.openDocument(_app.file("шаблон-1.pdf"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Мой динамический контент.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.openDocument(_app.file("шаблон-1.pdf"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Мой динамический контент.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _header.contentType("pdf")
+
+                val pdfDocument = _pdf.openDocument(_app.file("шаблон-1.pdf"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Мой динамический контент.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _header.contentType("pdf")
+
+                def pdfDocument = _pdf.openDocument(_app.file("шаблон-1.pdf"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Мой динамический контент.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                pdfDocument.close()
+            `
+        },
+    ]}
+/>
+
+## Чтение файла
+
+Чтобы прочитать PDF-документ, извлекая текстовую информацию.
+
+Используем метод `extract`, который получает все данные PDF-файла в объект JSON.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfData = _pdf.extract(_app.file("file-1.pdf"))
+
+                _out.json(pdfData)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfData = _pdf.extract(_app.file("file-1.pdf"))
+
+                _out.json(pdfData)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfData = _pdf.extract(_app.file("file-1.pdf"))
+
+                _out.json(pdfData)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfData = _pdf.extract(_app.file("file-1.pdf"))
+
+                _out.json(pdfData)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfData = _pdf.extract(_app.file("file-1.pdf"))
+
+                _out.json(pdfData)
+            `
+        },
+    ]}
+/>
+
+Возвращаемый JSON содержит ключ `content` со всем текстовым содержимым PDF-файла и ключ `metadata` с различными свойствами PDF-файла.
+
+Вот пример JSON, возвращаемого `extract`:
+
+```json
+{
+  "content": "Всё текстовое содержимое PDF-файла здесь...",
+  "metadata":{
+    "Content-Type":"application/pdf",
+    "dc:format":"application/pdf; version=1.4",
+    "dc:title":"Linux 1",
+    "pdf:PDFVersion":"1.4",
+    "pdf:charsPerPage":"580",
+    "pdf:containsDamagedFont":"false",
+    "pdf:containsNonEmbeddedFont":"false",
+    "pdf:docinfo:producer":"Skia/PDF m125 Google Docs Renderer",
+    "pdf:docinfo:title":"Файл 1",
+    "pdf:encrypted":"false",
+    "xmpTPg:NPages":"3",
+    ...
+  }
+}
+```
+
+Есть много других данных, получаемых в `metadata`, но они опущены в `...`, чтобы пример не стал слишком длинным.
+
+## Конвертация
+
+Можно программно конвертировать PDF в текст или даже в HTML.
+
+### PDF в текст
+
+Мы можем извлечь всё содержимое PDF-файла в виде сплошного текста с помощью метода:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.toText(...)
+            `
+        },
+    ]}
+/>
+
+Пример его использования для чтения файла в корне приложения:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toText(_app.file("мой-документ.pdf")))
+            `
+        },
+    ]}
+/>
+
+Или используя файл в `storage` приложения:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toText(_storage.filesystem("server", "мой-документ.pdf")))
+            `
+        },
+    ]}
+/>
+
+
+### PDF в HTML
+
+
+Мы можем извлечь всё содержимое PDF-файла в HTML с помощью метода:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.toHTML(...)
+            `
+        },
+    ]}
+/>
+
+Пример его использования для чтения файла в корне приложения:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toHTML(_app.file("мой-документ.pdf")))
+            `
+        },
+    ]}
+/>
+
+Или используя файл в `storage` приложения:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toHTML(_storage.filesystem("server", "мой-документ.pdf")))
+            `
+        },
+    ]}
+/>
+
+### HTML в PDF
+
+
+Можно создавать PDF-файлы из HTML-кода с помощью метода:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.fromHTML(...)
+            `
+        },
+    ]}
+/>
+
+Пример его использования для создания файла для скачивания в сервисе:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const icon = _app.file("public/images/icon.png");
+
+                const pdfFile = _pdf.fromHTML(\`
+                    <html>
+                        <head>
+                            <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Roboto" rel="stylesheet">
+                            <style>
+                                * {
+                                    font-family: Roboto;
+                                }
+                                div.sidebar {
+                                    position: fixed;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100px;
+                                    background: #1B5886;
+                                }
+                                div.sidebar > div {
+                                    position: absolute;
+                                    top: 350px;
+                                    transform: rotate(-90deg) translate(-50%, -34px);
+                                    font-family: Limelight;
+                                    font-size: 40px;
+                                    color: #89CFF1;
+                                }
+                                main {
+                                    padding-left: 150px;
+                                }
+                                h1 {
+                                    margin: 0 auto;
+                                    text-align: center;
+                                    font-family: Limelight;
+                                    color: #BA250E;
+                                }
+                                table {
+                                    margin: 0 auto;
+                                    border: 1px solid black;
+                                    border-spacing: 0;
+                                    border-collapse: collapse;
+                                }
+                                table > thead {
+                                    background: #40712A;
+                                    color: #fff;
+                                }
+                                table td, table th {
+                                    padding: 5px;
+                                    text-align: center;
+                                }
+                                table > tbody > tr:nth-child(even) {
+                                    background: #e1e1e1;
+                                }
+                                a {
+                                    font-family: Limelight;
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    text-decoration: none;
+                                    color: #1E5FB5;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="sidebar">
+                                <div>Демонстрация</div>
+                            </div>
+                            <main>
+                                <h1>PDF из HTML</h1>
+                                <div style="text-align: center; margin: 30px 0;">
+                                    <img width="50" src="\${icon.uri()}">
+                                </div>
+                                <p>
+                                    Это пример HTML для создания PDF-файла.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                                    tellus arcu, pharetra quis condimentum eget, dapibus convallis metus.
+                                </p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Имя</th>
+                                            <th>Возраст</th>
+                                        </tr>
+                                    </thread>
+                                    <tbody>
+                                        <tr>
+                                            <td>Мария Луиза</td>
+                                            <td>23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Жозе Матос</td>
+                                            <td>38</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr style="margin-top: 50px; height: 1px; background: #50B6C6; border: none;"/>
+                                <div>
+                                    <a href="https://netuno.org" target="_blank">Netuno.org</a>
+                                </div>
+                            </main>
+                        </body>
+                    </html>
+                \`);
+
+                _header.contentTypePDF();
+                _out.copy(pdfFile.input());
+            `
+        },
+    ]}
+/>
+
+## Видео
+
+Ниже приведены несколько видео с примерами программного создания PDF-файлов:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/OyUzHr9hi0c?si=eTecDP0i0P_9rhG4" title="Проигрыватель YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+

@@ -1,0 +1,371 @@
+---
+id: actions
+title: アクション (Actions)
+sidebar_label: アクション
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+データベース操作のカスタマイズ。
+
+## はじめに
+
+データ操作は常に行われており、たとえば次のようなルールがよくあります:
+
+- 顧客を削除するときは、その履歴も削除する必要があります。
+- 商品をキャンセルするときは、注文から商品を削除し、合計金額を調整する必要があります。
+- 購入を確定するときは、配送を行う別システムにデータを送信する必要があります。
+
+アクション (_actions_) はまさにそのためにあり、データ操作が発生した特定の状況で実行するコードを挿入できます。
+
+情報を**挿入**または**変更**すると、保存 (_save_) と保存後 (_saved_) のアクションが実行されます:
+
+- `save`: データベースでコマンドを実行する前。
+- `saved`: データベースでコマンドを実行した後。
+
+一方、情報を**削除**、**除去**、または**消去**すると、削除 (_remove_) と削除後 (_removed_) のアクションが実行されます。
+
+- `remove`: データベースでコマンドを実行する前。
+- `removed`: データベースでコマンドを実行した後。
+
+このように、フォームで何かを変更し、情報の作成・変更・削除の操作を行うと、データベースでは異なる操作が実行され、それぞれのアクション (_actions_) が実行されます。
+
+> データベースの _トリガー_ について聞いたことがありますか？データベーストリガーはデータの変更があるたびに実行されます。したがって、アクション (_actions_) は _トリガー_ に似ていますが、コードレベルで動作します。
+
+各操作タイプはデータベースで異なるコマンドを実行することを思い出してください。具体的には次のとおりです:
+
+- 作成: `insert into ...`
+- 変更: `update ...`
+- 削除: `delete from ...`
+
+これらのデータベースコマンドのいずれかを `_db.execute(...)` を通じて実行した場合、コマンドはアクションと連携できない形でデータベースに直接実行されるため、アクションは実行されません。
+
+> アクションのコードでは、多言語対応ローコードフレームワークのあらゆるリソースを利用できます。
+
+アクションは、Netuno によって自動生成されるバックオフィスのフォームでデータ操作が発生したとき、またはコード内で次のものを使用してデータベース操作を実行したときに実行されます:
+
+- `_db.insert(...)`、`_db.form(...).insert()`、`_db.insertIfNotExits(...)`、`_db.insertMany(...)` など。
+- `_db.update(...)`、`_db.form(...).update()`、`_db.updateMany(...)` など。
+- `_db.delete(...)`、`_db.form(...).delete()`、`_db.deleteMany(...)` など。
+
+つまり、コード内で多言語対応ローコードフレームワークの何らかのメカニズムを使用してデータ操作を行うと、対応するアクションが存在する場合はそれが実行されます。
+
+ただし、データベースでコマンドを直接実行した場合は、アクションを実行できません。
+
+> Netuno が提供するデータ操作の仕組みを迂回しないよう、データベースでコマンドを直接実行することは避けることをお勧めします。
+
+アクションのコードでは、データ操作に関連するあらゆる操作を実行できます。
+
+## データ項目 (Data Item)
+
+データ項目 (`_dataItem`) は、作成・変更・削除されるデータの関係全体を含む、多言語対応ローコードフレームワークのリソースです。
+
+`_dataItem` リソースを通じて、すべての情報にアクセスし、実行中の操作プロセスの詳細を確認できます。
+
+> `_dataItem` リソースがサポートする内容の詳細については、[DataItem](/docs/library/resources/dataItem) リソースのドキュメントを参照してください。
+
+**注意:** `_dataItem` リソースはアクション (_actions_) のコードでのみ利用できます。
+
+## 保存、変更、新規作成 (_Save_)
+
+新しいレコードが作成されたとき、または何かが変更されたときに実行されるアクションを作成するには、このアクションのスクリプトを `save` と呼びます。これは、何かがデータベースに保存されていることを意味します。たとえば:
+
+<PolyglotPath files={[
+    'watashi_no_app/server/actions/watashi_no_form/save'
+]} />
+
+> このアクションはデータベースコマンドを実行する前に実行されます。
+
+データがデータベースに保存された後にコードを実行する場合は、`saved` アクションを使用します。たとえば:
+
+<PolyglotPath files={[
+    'watashi_no_app/server/actions/watashi_no_form/saved'
+]} />
+
+> このアクションはデータベースコマンドが実行された後に実行されます。
+
+つまり、アプリケーション内の `server/actions` フォルダにフォーム（テーブル）名のサブフォルダを作成し、その中に `save` または `saved` というスクリプトを配置します。このスクリプトには、データベースコマンドの前または後に実行するコードを記述します。
+
+データの作成かどうかを区別するには、`if` で `_dataItem.isInsert()` メソッドの結果を確認できます。たとえば:
+
+<PolyglotCode
+    file="watashi_no_app/server/actions/watashi_no_form/save"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isInsert()) {
+                    // 新しいデータが作成されています...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isInsert():
+                    # 新しいデータが作成されています...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isInsert()
+                    # 新しいデータが作成されています...
+                end
+            `
+        },
+    ]}
+/>
+
+データの変更かどうかを区別するには、`if` で `_dataItem.isUpdate()` メソッドの結果を確認できます。たとえば:
+
+<PolyglotCode
+    file="watashi_no_app/server/actions/watashi_no_form/saved"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isUpdate()) {
+                    // データが変更されています...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isUpdate():
+                    # データが変更されています...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isUpdate()
+                    # データが変更されています...
+                end
+            `
+        },
+    ]}
+/>
+
+### ID の取得
+
+変更されている項目の ID（識別子）を取得するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _dataItem.getId()
+            `
+        },
+    ]}
+/>
+
+### 変更内容の確認
+
+何が変更されているかを確認するには、`getOldRecord()` を使用してデータベース内の古いデータを取得し、新しいデータ `getRecord()` と比較できます。たとえば:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email")) {
+                    // 注意: メールアドレスが変更されています！
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email"):
+                    # 注意: メールアドレスが変更されています！
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email")
+                    # 注意: メールアドレスが変更されています！
+                end
+            `
+        },
+    ]}
+/>
+
+### エラーの生成
+
+操作の進行を防ぐためにエラーを生成できます。エラーの生成は通常、データベースコマンドを実行する前に行うため、たとえば `save` アクションで次のようにします:
+
+<PolyglotCode
+    file="watashi_no_app/server/actions/watashi_no_form/save"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _dataItem.setStatusWithError()
+                    .setErrorTitle("メールアドレス")
+                    .setErrorMessage("メールアドレスは変更できません。")
+            `
+        },
+    ]}
+/>
+
+### エラーの確認
+
+データベースでのコマンド実行中にエラーが発生したかどうかを確認できます。さまざまなエラーが発生する可能性があります。たとえば:
+
+- メールアドレスの重複は許可されていません。
+- 必須項目が正しく入力されていません。
+- その他多数。
+
+エラーの確認は通常、データベースコマンドの実行後に行うため、たとえば `saved` アクションで次のようにします:
+
+<PolyglotCode
+    file="watashi_no_app/server/actions/watashi_no_form/saved"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isError()) {
+                    // エラーが発生し、データを保存できませんでした...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isError():
+                    # エラーが発生し、データを保存できませんでした...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isError()
+                    # エラーが発生し、データを保存できませんでした...
+                end
+            `
+        },
+    ]}
+/>
+
+### セットアップ
+
+データベースのセットアップ (_setup_) 中にデータ変更が行われた場合にのみ実行される特定の `action` を用意できます。
+
+たとえば:
+
+<PolyglotPath files={[
+    'watashi_no_app/server/actions/watashi_no_form/setup_save',
+    'watashi_no_app/server/actions/watashi_no_form/setup_saved',
+]} />
+
+## 削除 (_Remove_)
+
+レコードが削除されたときに実行されるアクションを作成するには、このアクションのスクリプトを `remove` と呼びます。これは、何かがデータベースから削除されていることを意味します。たとえば:
+
+<PolyglotPath files={[
+    'watashi_no_app/server/actions/watashi_no_form/setup_remove',
+]} />
+
+> このアクションはデータベースコマンドを実行する前に実行されます。
+
+データベースからデータが削除された後にコードを実行する場合は、`removed` アクションを使用します。たとえば:
+
+<PolyglotPath files={[
+    'watashi_no_app/server/actions/watashi_no_form/setup_removed',
+]} />
+
+> このアクションはデータベースコマンドが実行された後に実行されます。
+
+つまり、アプリケーション内の `server/actions` フォルダにフォーム（テーブル）名のサブフォルダを作成し、その中に `remove` または `removed` というスクリプトを配置します。このスクリプトには、データベースコマンドの前または後に実行するコードを記述します。
+
+### 関連との競合
+
+データモデルによっては、別のテーブル（これも別のフォームです）との関連で使用されているレコードを削除する場合、関連が壊れるのを防ぐために削除できないことがあります。
+
+そのため、削除のデータベースコマンドの後に実行される `removed` アクションで、次のようにしてこのエラーが発生するかどうかを確認できます:
+
+<PolyglotCode
+    file="watashi_no_app/server/actions/watashi_no_form/removed"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations()) {
+                    _log.error(
+                        "テーブルとの関連があるため削除できませんでした "
+                        + _dataItem.getRelationTable() + " が ID " + _dataItem.getRelationItem().getInt("id") + " を使用しています"
+                    )
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isStatusAsError() and _dataItem.isStatusAsRelations():
+                    _log.error(
+                        "テーブルとの関連があるため削除できませんでした "
+                        + _dataItem.getRelationTable() + " が ID " + _dataItem.getRelationItem().getInt("id") + " を使用しています"
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations())
+                    _log.error(
+                        "テーブルとの関連があるため削除できませんでした "
+                        + _dataItem.getRelationTable() + " が ID " + _dataItem.getRelationItem().getInt("id") + " を使用しています"
+                    )
+                end
+            `
+        },
+    ]}
+/>
+
+代わりに、レコードを削除するデータベースコマンドの前に実行される `remove` アクションで、関連する可能性のある他のレコードの「クリーンアップ」を実装することもできます。たとえば:
+
+<PolyglotCode
+    file="watashi_no_app/server/actions/watashi_no_form/remove"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _db.form("betsu_no_form")
+                    .where(
+                        _db.where("watashi_no_form_id")
+                            .equals(_dataItem.getRecord().getInt("id"))
+                    )
+                    .delete()
+            `
+        },
+    ]}
+/>
+
+### セットアップ
+
+データベースのセットアップ (_setup_) 中にデータの削除が行われた場合にのみ実行される特定の `action` を用意できます。
+
+たとえば:
+
+<PolyglotPath files={[
+    'watashi_no_app/server/actions/watashi_no_form/setup_remove',
+    'watashi_no_app/server/actions/watashi_no_form/setup_removed',
+]} />
+
+## まとめ
+
+アクション (`actions`) を使用すると、特定のデータ操作に関連する固有の処理を一元化できます。
+
+コードを組み込むことで、整合性の保証、タスクの容易化、連携の実行、並列処理、追加の検証など、多くの有用な仕組みを提供できます。
+
+アクションのコーディングは簡単で非常に有用であり、多言語対応ローコードフレームワークの他のあらゆるリソースを利用して拡張できます。
+
+> アクションのコードでは、多言語対応ローコードフレームワークのあらゆるリソースを利用できます。
+
+アクションの利用を検討すれば、得られる容易さが多くの有用な戦略を強化できることをすぐに確認できます。

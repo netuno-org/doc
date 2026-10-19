@@ -7,80 +7,80 @@ title: Create Application
 import PolyglotCode from "@site/src/components/PolyglotCode";
 import PolyglotPath from "@site/src/components/PolyglotPath";
 
-This guide provides an overview of the initial setup, covering the frontend, database, and API service.
-We will create a new full-stack application quickly and easily.
+This guide provides an overview of initial setup, covering the frontend, database, and API service.
+We will create a new fullstack application quickly and practically.
 
 ## Introduction
 
-Although the platform is multilingual and supports several programming languages, we will focus exclusively on using JavaScript in this tutorial. As a result, we will create a practical application consisting of a form displayed in a modal (pop-up) window with the functionality to export data to PDF.
+Although the platform is polyglot and supports multiple programming languages, we will focus exclusively on using JavaScript in this tutorial. As a result, we will create a practical application consisting of a form displayed in a modal window (pop-up) with data export to PDF functionality.
 
 #### Prerequisites
 
 Before starting, make sure you have:
 
-- The Netuno platform pre-installed on your machine. If you have any questions at this stage, consult the guide [Platform Installation](/docs/get-started/installation).
+- The Netuno platform previously installed on your machine. If you have questions about this step, see the [Platform Installation](/docs/get-started/installation) guide.
 
 - Access to the terminal or command prompt of the development environment.
 
-
-## Creating a New Application
+## Create a New Application
 
 Follow the instructions below to initialize your new application:
 
 Open the terminal and navigate to the root folder where Netuno was installed.
 
-Execute the application creation command:
+Run the application creation command:
 
 ```shell
 ./netuno app
 ```
 
-### Creating with Parameters
+### Creation with Parameter
 
-It is possible to define the application name directly when executing the command, for example:
+You can define the application name directly when running the command, for example:
 
 ```shell
 ./netuno app name=my_application
 ```
 
-:::info Best Naming Practices
-When defining your application name, avoid using spaces, accents, or special characters. Prefer the use of lowercase letters separated by hyphens or underscores (example: **app-sales** or **hr_management**) to maintain compatibility with URLs and system folders.
+:::info Naming Best Practices
+When defining your application name, avoid using spaces, accents, or special characters. Prefer using lowercase letters separated by hyphens or underscores (example: **app-sales** or **hr_management**) to maintain compatibility with URLs and system folders.
 :::
 
-## Initial Setting
+## Initial Configuration
 
-The command-line wizard will ask some questions to configure your project. Please provide:
+The command-line wizard will ask a few questions to configure your project. Provide:
 
-- **Application Name**: The identifier of your project.
-- **Database Type**: The database management system that will be used.
-- **Language**: The default language of your application's interface.
+- **Application name**: Your project identifier.
+- **Database type**: The database management system that will be used.
+- **Language**: The default language of your application interface.
 
 :::tip Tips and Best Practices
+
 **Database Recommendation for Beginners**
 
 During the step-by-step process, when prompted for the database type, we recommend choosing the **H2 Database** option.
 
-H2 Database is an embedded database that comes integrated into the Netuno server. The great advantage is that it does not require the installation or configuration of external servers (such as PostgreSQL or MySQL), making initial development and testing much more practical and faster.
+The H2 Database is an embedded database that is already integrated into the Netuno server. The great advantage is that it does not require installing or configuring external servers (such as PostgreSQL or MySQL), making initial development and testing much more practical and faster.
 :::
 
 ### Command to Start the Server
 
 After creating your new application, start the Netuno platform server. This will make your project accessible in the browser and ready for continuous development.
 
-Execute the command below in your terminal and wait for initialization.
+Run the command below in your terminal and wait for startup.
 
 ```shell
 ./netuno server app=my_application
 ```
 
-By passing the parameter **app=my_application**, the server understands that this will be the default application to be executed in this instance. With the server running, you can start editing your project.
+When passing the **app=my_application** parameter, the server understands that this will be the default application to run in this instance. With the server running, you can start editing your project.
 
-All files and source code of your application are stored and organized within the folder `📂 apps/myapp`.
+All files and source code for your application are stored and organized inside the `📂 apps/myapp` folder.
 
 :::info Access Credentials (Backoffice)
-When accessing the **Backoffice** administration interface of your application for the first time, the system will request authentication. For local development environments, use the following default credentials:
+When accessing your application's **Backoffice** administration interface for the first time, the system will request authentication. For local development environments, use the following default credentials:
 
-**Username:** dev
+**User:** dev
 
 **Password:** dev
 
@@ -89,48 +89,48 @@ When accessing the **Backoffice** administration interface of your application f
 
 ### Code Editor
 
-To ensure the best development experience, we suggest using modern, lightweight code editors with a good ecosystem of extensions.
+To ensure the best development experience, we suggest using modern, lightweight code editors with a good extension ecosystem.
 
-If you don't already have a favorite editor, we recommend the following free and widely used options in the community:
+If you don't yet have a favorite editor, we recommend the following free and widely used community options:
 
 - VS Codium: <a href="https://vscodium.com/" target="_blank">vscodium.com</a>
 - VS Code: <a href="https://vscodium.com/" target="_blank">code.visualstudio.com</a>
 - WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">jetbrains.com/webstorm</a>
 
-> Note: If you prefer more robust tools and don't mind investing in licenses, JetBrains' WebStorm is an excellent premium option.
+> Note: If you prefer more robust tools and don't mind investing in licenses, JetBrains WebStorm is an excellent premium option.
 
 Open the application folder in your editor:
 
 - `📂 apps/my_application`
 
-All application files are stored and organized within this folder. All development, route creation, database logic, and visual interfaces will take place within this folder.
+All application files are stored and organized inside this folder. All development, route creation, database logic, and visual interfaces will happen inside this folder.
 
-:::info Understanding the Architecture
-To know exactly where to create each type of file and how Netuno organizes the back-end and front-end, we recommend reading the detailed documentation on the application folder structure:
+:::info Understand the Architecture
+To know exactly where to create each type of file and how Netuno organizes the backend and frontend, we recommend reading the detailed documentation about the application folder structure:
 
 **See the guide: [Application Folders](/docs/category/app-structure)**
 :::
 
 ### Summary of Steps
 
-With the initial knowledge of Netuno consolidated, we will apply these concepts in practice, creating a complete functionality from start to finish.
+With the initial Netuno knowledge consolidated, we will apply these concepts in practice by creating a complete feature, from start to finish.
 
-The practical objective is to add two new interactive components to the interface:
+The practical goal is to add two new interactive components to the interface:
 
-* A button responsible for loading and displaying the customer form within a floating window (Modal).
+* A button responsible for loading and displaying the customer form inside a floating window (Modal).
 * A button dedicated to generating and exporting the list of registered customers to a PDF file.
 
-To achieve this result with organization and clarity, we have divided the development into a logical sequence of steps. We will follow this roadmap:
+To achieve this result with organization and clarity, we divided development into a logical sequence of steps. We will follow this roadmap:
 
-- **Interface Mapping**: Analyze the application's folder structure to locate where the main HTML of the dashboard is defined.
+- **Interface Mapping**: Analyze the application folder structure to locate where the main dashboard HTML is defined.
 
-- **Integration with React**: Configure and add the base of the two new buttons using the React framework on the frontend.
+- **React Integration**: Configure and add the base of the two new buttons using the React framework in the frontend.
 
-- **Modal Logic**: Build and program the button's behavior to correctly open the customer form.
+- **Modal Logic**: Build and program the button behavior to correctly open the customer form.
 
-- **Export Interface**: Build and position the button that will trigger the download of the PDF file in the interface.
+- **Export Interface**: Build and position the button that will trigger the PDF file download in the interface.
 
-- **Service Development (API)**: Program the backend, creating the service that will read the data and dynamically generate the PDF file containing the list of clients.
+- **Service Development (API)**: Program the backend by creating the service that will read the data and dynamically generate the PDF file containing the customer list.
 
 Let's get started!
 
@@ -142,86 +142,85 @@ Navigate to the `server/templates` folder and open the file responsible for prov
 server/templates/dashboard.html
 ```
 
-While exploring the code in the dashboard.html file, scroll to the bottom of the page. You will find an isolated `<div>` element. This is exactly where the Netuno platform "injects" and starts the entire interactive interface built in React.
+When exploring the code in the dashboard.html file, scroll to the bottom of the page. You will find an isolated `<div>` element. This is exactly the point where the Netuno platform "injects" and starts all the interactive interface built in React.
 
 ```html title="server/templates/dashboard.html"
 ...
 <div id="app-dashboard"></div>
 ```
 
-Although the HTML skeleton is in the server/templates folder, the actual interface development and visual logic do not happen there.
+Although the HTML skeleton stays in the server/templates folder, the actual interface development and visual logic do not happen there.
 
-To change the dashboard's behavior or add new components with React, you must access the folder dedicated to frontend development.
+To change the dashboard behavior or add new components with React, you must access the folder dedicated to frontend development.
 
-It is in this `📂 ui/` folder that you will find the dashboard components and can develop the new visual functionalities of your application.
+It is in this `📂 ui/` folder that you will find the dashboard components and can develop the new visual features of your application.
 
 ## Create Form
 
-In this step, we will create the database structure needed for this tutorial: a form called **Client** containing a text field called **Name**.
+In this step, we will create the database structure necessary for this tutorial: a form called **Customer** containing a text field called **Name**.
 
-* In the Backoffice, access the development area by clicking the **Build** button (upper right corner).
-* In the side menu, navigate to **Management > Forms** and create the new form with the **Title:** Client.
+* In the Backoffice, access the development area by clicking the **Build** button (top right).
+* In the side menu, navigate to **Management > Forms** and create the new form with the **Title:** Customer.
 * Click **Save**.
 
-The table name will be automatically filled with **client** (keep it in lowercase, as recommended for databases).
+The table name will be automatically filled with **customer** (keep it lowercase, as recommended for databases).
 
-:::info Consult the Guide
-If you have questions about the advanced settings of this screen, consult the complete documentation at **[Forms](/docs/academy/ui/forms)**.
+:::info See the Guide
+If you have questions about the advanced settings on this screen, see the complete documentation in **[Forms](/docs/academy/ui/forms)**.
 :::
 
 ## Create Field
+With the form created, it will appear in the left side menu under the **Fields** category.
 
-With the form created, it will appear in the left sidebar menu under the **Fields** category.
-
-* Click on **Client** to add a new column:
+* Click **Customer** to add a new column:
 * Enter the text **"Name"** in the Field Title.
 * Select the data type as **"text"** in the **Type** field.
-* Check the **Allow Filtering** (to enable searching) and **Show in Results** (to appear in the table) options.
+* Check the **Allow Filtering** (to enable search) and **Show in Result** (to appear in the table) options.
 * Click **Save**.
 
-:::info Consult the Guide
-To understand all available data types and their properties, access the detailed documentation at **[Fields](/docs/academy/ui/fields)**.
+:::info See the Guide
+To understand all available data types and their properties, access the detailed documentation in **[Fields](/docs/academy/ui/fields)**.
 :::
 
 #### Insert Test Data
-In order to test PDF export in the next steps, we need real data in the system.
+So that we can test PDF export in the next steps, we need real data in the system.
 
-* Click the **View** button (upper right corner) to return to the application's back office.
-* Access the newly created **Client** menu on the side.
-* Use the **+ Add** button to register some test clients in the system.
+* Click the **Preview** button (top right) to return to the application's Backoffice.
+* Access the newly created **Customer** menu on the side.
+* Use the **+ Add** button to register some test customers in the system.
 * Click **Save**.
 
-## Database Query
+## Query the Database
 
-Netuno offers an integrated tool that allows you to execute SQL commands directly in your application's database. This is essential for performing quick queries, validating information, or manipulating system data efficiently.
+Netuno offers an integrated tool that allows you to run SQL commands directly on your application's database. This is essential for quickly running queries, validating information, or manipulating system data efficiently.
 
-To access the query interface and execute your commands, follow the steps below:
+To access the query interface and run your commands, follow the steps below:
 
 * In the main interface, access the development area by clicking the **Build** button.
 * In the side navigation menu, locate the **Management** section.
 * Click the **Query** option to open the database console.
-* In the text editor that appears on the screen, type the SQL command you wish to execute.
-* Confirm the execution of the command.
+* In the text editor that appears on the screen, type the SQL command you want to run.
+* Confirm the command execution.
 
-Execute the command below to query registered clients:
+Run the command below to query registered customers:
 
 ```sql
-SELECT * FROM client
+SELECT * FROM customer
 ```
 
-When you finish the queries and wish to return to the system's user interface (back office), simply click the **View** button.
+When you finish the queries and want to return to the system's user interface (backoffice), simply click the **Preview** button.
 
 ## Add Buttons with React
 
-In this step, we will configure the main dashboard file to display two new buttons.
+In this step, we will configure the main **dashboard** file to display two new buttons.
 
-In interface architecture, we use the concept of Containers to define broad areas of the system, encompassing larger functionalities and grouping multiple smaller components.
+In the interface architecture, we use the concept of **Containers** to define broad areas of the system, which encompass larger features and group multiple smaller components.
 
-- In your code editor, navigate to the containers folder in `📂 ui/src/containers`.
+- In your code editor, navigate to the containers folder at `📂 ui/src/containers`.
 
 - Locate and open the main dashboard file: `📂 DashboardContainer/index.jsx`.
 
-- Insert the import and rendering code for the components as shown in the example below.
+- Insert the import and rendering code for the components as in the example below.
 
 ```javascript title="ui/src/containers/DashboardContainer/index.jsx"
 import { Space } from 'antd';
@@ -244,21 +243,22 @@ function DashboardContainer() {
 
 export default DashboardContainer;
 ```
-Note that these button files do not yet physically exist in your project. Since they are smaller, reusable components, we will create them within the dedicated components folder.
+
+Note that these button files do not yet physically exist in your project. Since they are smaller reusable components, we will create them inside the dedicated components folder.
 
 :::tip Architecture Organization
-Always maintain a separation between **Containers** (widely sized areas, such as entire pages or dashboards) and **Components** (isolated interface elements, such as buttons and modals). This makes your code in Netuno much cleaner, easier to maintain, and more scalable.
+Always keep the separation between **Containers** (broad-scope areas, such as entire pages or dashboards) and **Components** (isolated interface elements, such as buttons and modals). This makes your Netuno code much cleaner, easier to maintain, and scalable.
 :::
 
-### Button for Form
+### Form Button
 
-Access the `ui/src/components/` folder and create a new folder called `CustomerModalButton`.
+Access the `ui/src/components/` folder and create a new folder named `CustomerModalButton`.
 
-Inside the `CustomerModalButton` folder, create the main component file named `index.jsx`.
+Inside the **CustomerModalButton** folder, create the component's main file named `index.jsx`.
 
 `📂 ui/src/components/CustomerModalButton/index.jsx`
 
-Open the file and enter the code below:
+Open the file and insert the code below:
 
 ```javascript title="ui/src/components/CustomerModalButton/index.jsx"
 import { Button } from 'antd';
@@ -281,11 +281,11 @@ function CustomerModalButton() {
 
                 form.on('netuno:delete', () => {
                     netuno.modal.hide(modal)
-                    console.log('Removed a Customer.');
+                    console.log('Removed a Customer');
                 });
 
                 form.on('netuno:back', () => {
-                    console.log('Clicked back.');
+                    console.log('Clicked back');
                 });
 
                 netuno.loadForm(form);
@@ -306,28 +306,27 @@ export default CustomerModalButton;
 ```
 
 #### Understanding the Code
+The magic of this component happens inside the onClick function, which uses Netuno's global interface tools:
 
-The magic of this component happens within the onClick function, which uses Netuno's global interface tools:
+- **netuno.modal.create()**: This method is responsible for instantiating the modal window on the screen and linking the desired form to it (in this case, the form named customer).
 
-- **netuno.modal.create()**: This method is responsible for instantiating the modal window on the screen and linking the desired form to it (in this case, the form called client).
-
-- **Form Events (form.on)**: The callback block allows us to "listen" for user actions. We can trigger custom actions when the user creates a record (netuno:new), saves (netuno:save), deletes (netuno:delete), or clicks back (netuno:back).
+- **Form Events (form.on)**: The callback block allows us to "listen" to user actions. We can trigger custom actions when the user creates a record (netuno:new), saves (netuno:save), deletes (netuno:delete), or clicks back (netuno:back).
 
 - **netuno.modal.hide() / show()**: Methods used to hide the modal after a successful action or display it as soon as the form is loaded.
 
-:::info Integration Completed
-Now that the **CustomerModalButton** component has been successfully created, the import we previously performed in your **DashboardContainer** will now work without errors, and the button should now be rendered on your screen!
+:::info Integration Complete
+Now that the **CustomerModalButton** component has been created successfully, the import we made earlier in your **DashboardContainer** will work without errors, and the button should already be rendered on your screen!
 :::
 
 ### PDF Export Button
 
-In this step, we will create the second button for the Dashboard: the PDF Export Button.
+In this step, we will create the Dashboard's second button: the PDF Export Button.
 
-The main function of this component in the interface is to act as a trigger; that is, when clicked, it will make a request to a backend service, responsible for processing the system data and generating the PDF file containing the list of registered clients.
+The main role of this component in the interface is to act as a trigger; that is, when clicked, it will make a request to a backend service responsible for processing the system data and generating the PDF file containing the list of registered customers.
 
-- Access the `ui/src/components/` folder and create a new folder called **PDFButton**.
+- Access the `ui/src/components/` folder and create a new folder named **PDFButton**.
 
-- Create a file called **index.jsx** inside the folder.
+- Create a file named **index.jsx** inside the folder.
 
 `ui/src/components/PDFButton/index.jsx`
 
@@ -341,9 +340,9 @@ function PDFButton() {
         <div>
             <Button
                 type="primary"
-                href="/services/customer/pdf-export"
+                href="/services/customer/export-pdf"
                 target="blank">
-                Generate PDF
+                Export PDF
             </Button>
         </div>
     );
@@ -357,16 +356,16 @@ With the creation of the PDFButton component, both buttons declared in your Dash
 :::tip Next Steps
 The visual structure and components are complete. Compile the frontend to test the interface rendering.
 
-The construction of the backend service that will actually generate the PDF will be addressed in the next step.
+Building the backend service that will actually generate the PDF will be covered in the next step.
 :::
 
 ## Compile Frontend
 
-Web browsers do not natively understand React code in `.jsx` or `.tsx` files and CSS pre-processors like `.less`. For your interface to function correctly, it needs to go through a compilation (build) process. This process translates, packages, and optimizes all your code into final static files (standard JavaScript and CSS) that the browser can process with maximum efficiency.
+Internet browsers do not natively understand code written in React, `.jsx` or `.tsx` files, or CSS preprocessors such as `.less`. For your interface to work correctly, it must go through a compilation (build) process. This process translates, bundles, and optimizes all your code into final static files (standard JavaScript and CSS) that the browser can process with maximum efficiency.
 
 #### Prerequisites
 
-Before starting the compilation, make sure that:
+Before starting compilation, make sure that:
 
 - You have the terminal or command prompt open in your development environment.
 
@@ -374,13 +373,13 @@ Before starting the compilation, make sure that:
 
 ## Compilation Examples
 
-Netuno provides different commands depending on the stage of your development. From the Netuno root folder, navigate to the `ui` folder of your application.
+Netuno provides different commands depending on your development stage. From the Netuno root folder, navigate to your application's `ui` folder.
 
-Execute the commands within your application's interface folder: `📂 apps/myapp/ui`
+Run the commands inside your application's interface folder: `📂 apps/myapp/ui`
 
 ### Production Compilation
 
-Performs a complete and optimized compilation of the files. It is the ideal command when you finish developing a screen or component and want to generate lightweight final files with better performance.
+Performs the complete and optimized compilation of files. It is the ideal command when you finish developing a screen or component and want to generate final lightweight files with better performance.
 
 ```bash
 bun run build
@@ -388,24 +387,24 @@ bun run build
 
 ### Development Compilation
 
-The **watch** command performs a quick compilation and monitors the folder. Whenever you save a file in your editor, the terminal automatically executes the compilation.
+The **watch** command performs a quick compilation and keeps watching the folder. Whenever you save a file in your editor, the terminal automatically runs compilation.
 
 ```bash
 bun run watch
 ```
-Regardless of the command used, **build** or **watch**, the changes do not appear instantly on the user's screen. Refresh the backoffice page in your browser to load the newly generated files.
+Regardless of the command used, **build** or **watch**, changes do not appear instantly on the user's screen. Refresh the backoffice page in your browser to load the newly generated files.
 
 :::tip Error Monitoring and Debugging
-During development, errors can occur at two different stages. Learn where to look for them:
+During development, errors can occur at two different stages. Know where to look for them:
 
-- **Compilation Errors**: Syntax errors in React code or undeclared variables will be displayed directly in your terminal, where the **bun** command is running.
+- **Compilation Errors**: Syntax failures in React code or undeclared variables will be presented directly in your terminal, where the **bun** command is running.
 
-- **Run-Time Errors**: Errors that occur during application use will be displayed in the browser console. Always remember to inspect the page to check for any alerts or errors.
+- **Runtime Errors**: Failures that occur while using the application will be presented in the browser console. Always remember to inspect the page to check for any warning or error.
 :::
 
 ### Integrated Compilation
 
-The integrated compilation feature allows you to automatically execute terminal commands along with server startup. This optimizes workflow by consolidating all logs and monitoring into a single central terminal.
+The integrated compilation feature allows you to run terminal commands automatically together with server startup. This optimizes the workflow by consolidating all logs and monitoring into a single central terminal.
 
 To enable integrated compilation, you need to modify your application's development settings:
 
@@ -413,7 +412,7 @@ To enable integrated compilation, you need to modify your application's developm
 
 - Open the development configuration file: `_development.json`.
 
-- Locate the code block related to "**commands**".
+- Locate the code block referring to "**commands**".
 
 - Change the value of the "enabled" property from **false** to **true**.
 
@@ -432,51 +431,50 @@ Your `_development.json` file should have a structure similar to this:
   ...
 ```
 
-To allow Netuno to read the updated file and apply the new configuration, it is necessary to restart the server:
+For Netuno to read the updated file and apply the new configuration, you need to restart the server:
 
 - Go to the terminal where the Netuno server is running.
 
-- Terminate the process by pressing CTRL + C simultaneously.
+- Stop the process by pressing CTRL + C simultaneously.
 
-- Start the server again, specifying the name of your application:
+- Start the server again, indicating your application name:
 
 ```shell
 ./netuno server app=myapp
 ```
 
 :::tip Single Terminal
-After restarting the server, observe the logs in the terminal. You will notice that Netuno is now automatically executing the frontend compilation commands **bun run watch** in the background. From now on, everything works integrated in the same window.
+After restarting the server, observe the logs in the terminal. You will notice that Netuno is now automatically running the frontend compilation commands **bun run watch** in the background. From now on, everything works integrated in the same window.
 :::
 
 ## API Service to Generate PDF
 
-In the previous step, we configured the **Export PDF** button on the frontend with the "**href**" attribute pointing to the address `services/client/export-pdf`. However, if you click it now, nothing will happen. This is because the API service responsible for generating the file does not yet exist.
+In the previous step, we configured the **Export PDF** button in the frontend with the "**href**" attribute pointing to the address `services/customer/export-pdf`. However, if you click it now, nothing will happen. This occurs because the API service responsible for generating the file does not yet exist.
 
-All API development takes place within the `📂 server` folder.
-In this section, we will create the script that retrieves records from the database and builds the PDF document visually.
+All API development takes place inside the `📂 server` folder.
+In this section, we will create the script that fetches records from the database and visually builds the PDF document.
 
 #### Prerequisites
 
-- Have created the PDFButton component on the frontend pointing to the correct URL.
-- Have the Netuno server running.
+- Having created the PDFButton component in the frontend pointing to the correct URL.
+- Having the Netuno server running.
 
-Netuno automatically routes your API URLs based on the folder structure within **server/services/**. To create the service, follow these steps:
+Netuno automatically routes your API URLs based on the folder structure inside **server/services/**. To create the service, follow the steps:
 
-- Navigate to the backend services folder: `server/services/`. Create a folder called **client**.
+- Navigate to the backend services folder: `server/services/`. Create a folder named **customer**.
 
-- Inside this folder, create a file called `exporta-pdf.js`.
+- Inside this folder, create a file named `export-pdf.js`.
 
-> Netuno is multilingual. We will use JavaScript in this example; use the extension corresponding to your preferred language.
+> Netuno is polyglot. We will use JavaScript in this example; use the extension corresponding to your preferred language.
 
-Open the file and enter the code below to generate your PDF structure:
+Open the file and insert the code below to generate your PDF structure:
 
 <PolyglotPath files={[
-    'server/services/client/pdf-export'
+    'server/services/customer/export-pdf'
 ]} />
 
-
 <PolyglotCode
-    file="server/services/client/pdf-export"
+    file="server/services/customer/export-pdf"
     codes={[
         {
             lang: 'javascript',
@@ -486,7 +484,7 @@ Open the file and enter the code below to generate your PDF structure:
                 const pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
 
                 pdfDocument.add(
-                    _pdf.paragraph("Customers List:")
+                    _pdf.paragraph("Customer List:")
                         .setFontSize(16)
                         .setFontColor(_pdf.color("#1abc9c"))
                 )
@@ -495,7 +493,7 @@ Open the file and enter the code below to generate your PDF structure:
 
                 for (const dbCustomer of dbCustomers) {
                     pdfDocument.add(
-                        _pdf.paragraph(dbCustomer.getString("nome"))
+                        _pdf.paragraph(dbCustomer.getString("name"))
                             .setFontSize(12)
                             .setFontColor(_pdf.color("#748dae"))
                     )
@@ -512,7 +510,7 @@ Open the file and enter the code below to generate your PDF structure:
                 pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
 
                 pdfDocument.add(
-                    _pdf.paragraph("Customers List:")
+                    _pdf.paragraph("Customer List:")
                         .setFontSize(16)
                         .setFontColor(_pdf.color("#1abc9c"))
                 )
@@ -521,7 +519,7 @@ Open the file and enter the code below to generate your PDF structure:
 
                 for dbCustomer in dbCustomers:
                     pdfDocument.add(
-                        _pdf.paragraph(dbCustomer.getString("nome"))
+                        _pdf.paragraph(dbCustomer.getString("name"))
                             .setFontSize(12)
                             .setFontColor(_pdf.color("#748dae"))
                     )
@@ -537,7 +535,7 @@ Open the file and enter the code below to generate your PDF structure:
                 pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
 
                 pdfDocument.add(
-                    _pdf.paragraph("Customers List:")
+                    _pdf.paragraph("Customer List:")
                         .setFontSize(16)
                         .setFontColor(_pdf.color("#1abc9c"))
                 )
@@ -546,14 +544,14 @@ Open the file and enter the code below to generate your PDF structure:
 
                 dbCustomers.each do |dbCustomer|
                     pdfDocument.add(
-                        _pdf.paragraph(dbCustomer.getString("nome"))
+                        _pdf.paragraph(dbCustomer.getString("name"))
                             .setFontSize(12)
                             .setFontColor(_pdf.color("#748dae"))
                     )
                 end
 
                 pdfDocument.close()
-`
+            `
         },
         {
             lang: 'kotlin',
@@ -563,7 +561,7 @@ Open the file and enter the code below to generate your PDF structure:
                 val pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
 
                 pdfDocument.add(
-                    _pdf.paragraph("Customers List:")
+                    _pdf.paragraph("Customer List:")
                         .setFontSize(16)
                         .setFontColor(_pdf.color("#1abc9c"))
                 )
@@ -572,7 +570,7 @@ Open the file and enter the code below to generate your PDF structure:
 
                 dbCustomers.forEach {
                     pdfDocument.add(
-                        _pdf.paragraph(it.getString("nome"))
+                        _pdf.paragraph(it.getString("name"))
                             .setFontSize(12)
                             .setFontColor(_pdf.color("#748dae"))
                     )
@@ -589,7 +587,7 @@ Open the file and enter the code below to generate your PDF structure:
                 def pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
 
                 pdfDocument.add(
-                    _pdf.paragraph("Customers List:")
+                    _pdf.paragraph("Customer List:")
                         .setFontSize(16)
                         .setFontColor(_pdf.color("#1abc9c"))
                 )
@@ -598,7 +596,7 @@ Open the file and enter the code below to generate your PDF structure:
 
                 for (dbCustomer in dbCustomers) {
                     pdfDocument.add(
-                        _pdf.paragraph(dbCustomer.getString("nome"))
+                        _pdf.paragraph(dbCustomer.getString("name"))
                             .setFontSize(12)
                             .setFontColor(_pdf.color("#748dae"))
                     )
@@ -612,32 +610,32 @@ Open the file and enter the code below to generate your PDF structure:
 
 #### Understanding the Code
 
-- **_header.contentType("pdf")**: Tells the browser that the response to this request is not a regular text or JSON file, but a PDF file.
+- **_header.contentType("pdf")**: Tells the browser that the response to this request is not ordinary text or JSON, but a PDF file.
 
-- **_pdf**: This is Netuno's native resource for manipulating PDFs. With it, we define the page size (A5), create paragraphs, adjust font sizes (setFontSize) and colors (setFontColor).
+- **_pdf**: This is Netuno's native resource for manipulating PDFs. With it, we define the page size (A5), create paragraphs, and adjust font sizes (setFontSize) and colors (setFontColor).
 
-- **_db.form("cliente").all()**: Queries the database and returns all records saved in the "cliente" form. The loop (for) iterates through each of these clients and extracts the information from the "nome" field to print in the document.
+- **_db.form("customer").all()**: Queries the database and returns all records saved in the "customer" form. The loop (for) goes through each of these customers and extracts the information from the "name" field to print in the document.
 
-- **pdfDocument.close()**: Finalizes the document construction and sends it as a response.
+- **pdfDocument.close()**: Finalizes document construction and sends it as a response.
 
-#### Validation and Testing
+#### Validation and Tests
 
-It's not necessary to click the dashboard button every time you want to test your service. Since it's a simple request (GET), you can validate the execution by accessing the API URL directly through your browser.
+You do not need to click the dashboard button every time you want to test your service. Since this is a simple request (GET), you can validate execution by accessing the API URL directly in the browser.
 
 For this example, access the following address:
-http://localhost:9000/services/cliente/exporta-pdf
+http://localhost:9000/services/customer/export-pdf
 
-If the PDF file is generated and displayed on the screen containing the client list, the service is working perfectly! Consequently, the Export PDF button on your Dashboard will start working automatically.
+If the PDF file is generated and displayed on the screen containing the customer list, the service is working perfectly! Consequently, the Export PDF button in your Dashboard will start working automatically.
 
 :::tip Backend Error Tracking
-If the page is blank or returns an error message when accessing the URL, immediately check the terminal where the Netuno server is running. Unlike the frontend, whose errors appear in the browser console, any execution failure in the scripts in the server folder will be displayed in detail in the backend server terminal.
+If the page is blank or returns an error message when accessing the URL, immediately check the terminal where the Netuno server is running. Unlike the frontend, whose errors appear in the browser console, any execution failure in scripts in the server folder will be displayed in detail in the backend server terminal.
 :::
 
 ## Conclusion
 
-In this tutorial, you went through a practical journey of full-stack development using Netuno.
+In this tutorial, you went through a practical fullstack development journey using Netuno.
 
-The main objective was to demonstrate how the platform integrates the construction of visual interfaces with server robustness, always focusing on high productivity.
+The main goal was to demonstrate how the platform integrates the construction of visual interfaces with the robustness of the server, always focusing on high productivity.
 
 Recapping the completed steps:
 
@@ -645,13 +643,13 @@ Recapping the completed steps:
 
 - **Data Management and Structure**: saw how quick it is to create forms and fields in the panel to register and manipulate information without needing to write complex persistence routines.
 
-- **Direct Queries**: used the Query feature to execute SQL commands quickly, testing the database.
+- **Direct Queries**: Used the Query feature to run SQL commands quickly, testing the database.
 
-- **Backend API Creation**: developed a service for PDF generation and observed one of Netuno's great advantages: hot-reload. You don't need to restart the server with every change in the backend code, which greatly speeds up programming. 
+- **Backend API Creation**: Developed a service to generate PDF and observed one of Netuno's great advantages: hot-reload. You do not need to restart the server every time you change backend code, which greatly speeds up programming.
 
-- **Optimized Environment**: Configures integrated compilation, centralizing frontend and backend processes in a single terminal to maintain focus and avoid distractions.
+- **Optimized Environment**: Configured integrated compilation, centralizing frontend and backend processes in a single terminal to stay focused and avoid distractions.
 
-The platform was designed from the ground up to optimize and accelerate software development. Now that you understand the basic integration flow between low-code and custom code, you are ready to build much more complex and scalable applications.
+The platform was designed from its essence to optimize and accelerate software development. Now that you understand the basic flow of integration between low-code and custom code, you are ready to build much more complex and scalable applications.
 
 Continue exploring the next sections of the documentation to master new features.
 

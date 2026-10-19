@@ -1,0 +1,1002 @@
+---
+id: xls
+title: XLS - Excel
+sidebar_label: XLS - Excel
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Przetwarzanie niestandardowych plików Excel.
+
+## Wprowadzenie
+
+Netuno generuje pliki EXCEL zgodne z LibreOffice, OpenOffice, Microsoft Office, Google Drive itp., poprzez funkcję [XLS](/docs/library/resources/xls), która zapewnia abstrakcję low-code dla [Apache POI](https://poi.apache.org/) w różnych językach programowania obsługiwanych przez Netuno.
+
+Możemy generować zarówno pliki XLSX, XLS, jak i ODS.
+
+Aplikacja dostarczana z Netuno o nazwie **demo** (aplikacja demonstracyjna) zawiera wiele przykładów możliwych implementacji kodu w różnych językach, w tym demonstrację eksportu arkuszy kalkulacyjnych poprzez usługę `export-excel`, która znajduje się w:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/export-excel`
+]} />
+
+## Inicjalizacja
+
+Aby zainicjować funkcję XLS:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.create()
+            `
+        },
+    ]}
+/>
+
+Tworzy obiekt zawierający kontekst nowego pliku, który zostanie zbudowany, z pustym arkuszem kalkulacyjnym.
+
+## Formatowanie
+
+Definicja stylów formatowania wizualnego, czyli formatu dat, godzin, wartości pieniężnych itp., musi zostać wykonana przed zdefiniowaniem wartości komórek, ponieważ podczas ustawiania wartości komórek można jednocześnie przypisać ich styl formatowania.
+
+Jak pokazano w przykładzie dostępnym w aplikacji `demo`, formatowania są definiowane na początku kodu.
+
+Aby formatować daty:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stylData = excel.cellStyleFormat("dd/mm/yy")
+            `
+        },
+    ]}
+/>
+
+Aby formatować godziny:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stylCzas = excel.cellStyleFormat("hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+Aby formatować daty z godzinami:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stylDataCzas = excel.cellStyleFormat("dd/mm/yyyy hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+Aby formatować wartości pieniężne w **euro**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stylPieniadzeEuro = excel.cellStyleFormat("€#,##0.00;\\-€#,##0.00")
+            `
+        },
+    ]}
+/>
+
+Aby formatować wartości pieniężne w **realach**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stylPieniadzeReal = excel.cellStyleFormat("R$#,##0.00;\\-R$#,##0.00")
+            `
+        },
+    ]}
+/>
+
+Aby formatować wartości w **procentach**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stylProcent = excel.cellStyleFormat("0.00%")
+            `
+        },
+    ]}
+/>
+
+## Wygląd
+
+Definicja stylów wyglądu wizualnego, czyli wyglądu komórek, takiego jak kolory, czcionka, obramowania, wyrównanie itp., musi zostać wykonana przed ustawieniem wartości komórek, ponieważ podczas ustawiania wartości komórek można jednocześnie przypisać ich styl wyglądu.
+
+Jak pokazano w przykładzie dostępnym w aplikacji `demo`, style wyglądu są definiowane na początku kodu.
+
+Przykład definicji kolorów i wyrównania:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stylNaglowka = excel.cellStyle()
+                stylNaglowka.setFillPattern(_xls.fillPattern("solid-foreground"))
+                stylNaglowka.setFillBackgroundColor(excel.color("black"))
+                stylNaglowka.setAlignment(_xls.horizontalAlignment("center"))
+            `
+        },
+    ]}
+/>
+
+> Dokumentacja wszystkich metod obiektu <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Style w Apache POI</a>.
+
+Definicja stylu obramowań:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stylDanych = excel.cellStyle()
+                stylDanych.setBorderBottom(_xls.borderStyle("thin"))
+                stylDanych.setBorderTop(_xls.borderStyle("thin"))
+                stylDanych.setBorderLeft(_xls.borderStyle("thin"))
+                stylDanych.setBorderRight(_xls.borderStyle("thin"))
+            `
+        },
+    ]}
+/>
+
+> Dokumentacja wszystkich metod obiektu <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Style w Apache POI</a>.
+
+Tworzy nowy styl czcionki dla tekstu i przypisuje definicje czcionki do istniejącego stylu komórki:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const czcionkaTytulu = excel.font()
+                czcionkaTytulu.setBold(true)
+                czcionkaTytulu.setFontHeightInPoints(14)
+                czcionkaTytulu.setColor(excel.color("yellow"))
+                // Ustawia czcionkę dla stylNaglowka
+                stylNaglowka.setFont(czcionkaTytulu)
+            `
+        },
+    ]}
+/>
+
+> Dokumentacja wszystkich metod obiektu <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFFont.html" target="_blank">Czcionka w Apache POI</a>.
+
+## Obraz
+
+Aby wstawić obraz do arkusza, który znajduje się w `storage/samples/export-excel/logo.png` wewnątrz aplikacji:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _storage.filesystem("server", "samples/export-excel", "logo.png"),
+                    1, // Numer kolumny
+                    1  // Numer wiersza
+                ).resize(2.3)
+            `
+        },
+    ]}
+/>
+
+Aby wstawić obraz, który znajduje się w aplikacji w `public/images/logo.png`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _app.file("public/images/logo.png"),
+                    10, // Numer kolumny
+                    1  // Numer wiersza
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+> Dokumentacja wszystkich metod obiektu <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/ss/usermodel/Picture.html" target="_blank">Obraz w Apache POI</a>.
+
+## Scalanie komórek
+
+Aby scalić komórki w obszarze, używamy metody `mergedRegion`.
+
+Kolejność parametrów jest następująca:
+
+1. Wiersz początkowy
+2. Kolumna początkowa
+3. Wiersz końcowy
+4. Kolumna końcowa
+
+> Numeryczne odwołania do pozycji zawsze zaczynają się od **zera**.
+
+W poniższym przykładzie zostaną scalone wszystkie komórki od kolumny 10 do kolumny 15, które znajdują się w wierszu 3:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.mergedRegion(2, 9, 2, 14)
+            `
+        },
+    ]}
+/>
+
+## Komórki
+
+Aby uzyskać obiekt reprezentujący komórkę:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Pobiera komórkę znajdującą się w kolumnie B i w wierszu 2:
+                const komorka = excel.cell(1, 1)
+            `
+        },
+    ]}
+/>
+
+> Numeryczne odwołania do pozycji zawsze zaczynają się od **zera**.
+
+Przykład wyświetlenia w logu formuły komórki:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Loguje formułę z wiersza 2 i kolumny B.
+                _log.info(
+                    "Formuła komórki B2: "+ excel.cell(1, 1).getCellFormula()
+                )
+            `
+        },
+    ]}
+/>
+
+Przykład pobrania wartości tekstowej komórki:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Loguje wartość tekstową komórki z wiersza 2 i kolumny B.
+                _log.info(
+                    "Wartość komórki B2: "+ excel.cell(1, 1).getStringCellValue()
+                )
+            `
+        },
+    ]}
+/>
+
+> Dokumentacja wszystkich metod obiektu <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCell.html" target="_blank">Komórka w Apache POI</a>.
+
+## Wiersze
+
+Aby uzyskać obiekt reprezentujący wiersz:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Pobiera obiekt reprezentujący wiersz 2.
+                const wiersz = excel.row(1)
+            `
+        },
+    ]}
+/>
+
+> Numeryczne odwołania do pozycji zawsze zaczynają się od **zera**.
+
+W powyższym przykładzie, jeśli wiersz nie istnieje, zostanie automatycznie utworzony nowy wiersz.
+
+> Dokumentacja wszystkich metod obiektu <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFRow.html" target="_blank">Wiersz w Apache POI</a>.
+
+## Wstawianie danych tabelarycznych
+
+Możemy wstawić tabelę danych za pomocą metody `addDataTable`.
+
+Ponieważ dwa pierwsze parametry określają pozycję, w której ma zostać wstawiona tabela danych, są to numery wierszy i kolumn.
+
+> Uwaga: pozycjonowanie wierszy i kolumn w kodzie zawsze zaczyna się od **zera**.
+>
+> Oznacza to, że wiersz 1 to pozycja `0`, a kolumna A również jest pozycją `0`.
+
+Następnie przekazujemy listę wierszy, gdzie każdy wiersz zawiera kolejną listę dla kolumn, a dopiero potem dodajemy mapę z wartością komórki.
+
+Pełny przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list() // Wiersze
+                        .add(
+                            _val.list() // Kolumna
+                                .add(
+                                    _val.map() // Komórka
+                                        .set("value", "Imię")
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "Wiek")
+                                )
+                        )
+                        .add( // Inny wiersz
+                            _val.list()
+                                .add( // Pierwsza kolumna
+                                    _val.map()
+                                        .set("value", "Maria")
+                                )
+                                .add( // Druga kolumna
+                                    _val.map()
+                                        .set("value", 26)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Wygląd
+
+W mapie komórek możemy przypisać już utworzone style, używając na przykład stylów zdefiniowanych w sekcji wyglądu i formatowania, którą widzieliśmy wcześniej.
+
+Poniżej przykład przypisania stylów do komórek:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map()
+                                        .set("value", "Imię")
+                                        .set("style", stylNaglowka)
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "Wiek")
+                                        .set("style", stylNaglowka)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Formuły
+
+Aby wstawić formuły, używamy klucza `formula` w mapie definicji komórki.
+
+W tym przykładzie w ostatniej komórce zostanie wykonane sumowanie wszystkich wartości z pozostałych komórek:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Suma")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+Aby uzyskać literę kolumny na podstawie numeru kolumny, można użyć metody `columnReference`, co może pomóc w definiowaniu formuł. Ta sama metoda może być również użyta do uzyskania numeru kolumny na podstawie litery odwołania, na przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, _xls.columnReference('B'),
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Suma")
+                                )
+                                .add(
+                                    _val.map().set(
+                                        "formula",
+                                        "SUM("+ _xls.columnReference(1) +"7:"+ _xls.columnReference(2) +"8)"
+                                )
+                            )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+## Arkusze
+
+Aby utworzyć nowy arkusz kalkulacyjny (_sheet_) w samym dokumencie, zobacz następujący przykład:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nowyArkusz = excel.createSheet("Nowy arkusz")
+            `
+        },
+    ]}
+/>
+
+> W metodach manipulacji komórkami, obrazami i danymi można dodać jako pierwszy parametr odwołanie do obiektu arkusza.
+>
+> W zależności od tego, który arkusz jest aktywny, można zmienić aktywny arkusz metodą [activeSheet](/docs/library/resources/xls#activesheet).
+
+Przykład wstawienia obrazu do nowego arkusza:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    nowyArkusz,
+                    _app.file("public/images/logo.png"),
+                    10, // Numer kolumny
+                    1  // Numer wiersza
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+Przykład wstawienia tabeli danych do nowego arkusza:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    nowyArkusz,
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Suma")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Aktywacja
+
+Aby uniknąć ciągłego wskazywania w metodach, który arkusz ma być przetwarzany, jak w powyższych przykładach, alternatywnie można wskazać aktywny arkusz.
+
+> Wszystkie metody manipulacji komórkami, obrazami i danymi używają arkusza, który jest aktywny, gdy **nie** wskazano konkretnego arkusza.
+
+Zobacz dwa sposoby aktywowania konkretnego arkusza: najpierw przez odwołanie do obiektu, a następnie przez indeks arkusza:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.activeSheet(mojArkusz) // Obiekt referencyjny arkusza.
+                excel.activeSheet(1) // Indeks arkusza, który zostanie aktywowany.
+            `
+        },
+    ]}
+/>
+
+### Przydatne zasoby
+
+Przykłady innych przydatnych metod do manipulacji arkuszami.
+
+Pobieranie arkusza po nazwie:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Pobiera arkusz na podstawie jego nazwy.
+                const mojArkusz = excel.getSheet("Nazwa arkusza")
+            `
+        },
+    ]}
+/>
+
+Pobieranie arkusza po indeksie:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Pobiera arkusz na podstawie jego numeru.
+                const mojArkusz = excel.getSheet(1)
+            `
+        },
+    ]}
+/>
+
+Aby uzyskać łączną liczbę arkuszy:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Łączna liczba arkuszy.
+                const liczbaArkuszy = excel.getNumberOfSheets()
+            `
+        },
+    ]}
+/>
+
+Aby wyświetlić listę wszystkich arkuszy istniejących w dokumencie.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Wyświetla listę wszystkich arkuszy.
+                const wszystkieArkusze = excel.getAllSheets()
+                for (const arkusz of wszystkieArkusze) {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                # Wyświetla listę wszystkich arkuszy.
+                wszystkieArkusze = excel.getAllSheets()
+                for arkusz in wszystkieArkusze:
+                    ...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                # Wyświetla listę wszystkich arkuszy.
+                wszystkieArkusze = excel.getAllSheets()
+                wszystkieArkusze.each do |arkusz|
+                    ...
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                // Wyświetla listę wszystkich arkuszy.
+                val wszystkieArkusze = excel.getAllSheets()
+                wszystkieArkusze.forEach {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                // Wyświetla listę wszystkich arkuszy.
+                def wszystkieArkusze = excel.getAllSheets()
+                for (arkusz in wszystkieArkusze) {
+                    ...
+                }
+            `
+        },
+    ]}
+/>
+
+> Dokumentacja wszystkich metod obiektu <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFSheet.html" target="_blank">Arkusz w Apache POI</a>.
+
+## Generowanie pliku
+
+W metodach `save` i `output` generowany jest binarny plik końcowy.
+
+Wysyła wygenerowany plik jako dane wyjściowe (`output`) usługi:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.output("plik.xlsx")
+            `
+        },
+    ]}
+/>
+
+Aby zapisać wygenerowany plik w folderze `storage/filesystem` aplikacji:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_storage.filesystem("server", "plik.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Aby zapisać wygenerowany plik w folderze `/tmp` w systemie plików dysku:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_os.file("/tmp/plik.xlsx"))
+            `
+        },
+    ]}
+/>
+
+## Edycja pliku
+
+Możemy edytować pliki, otwierając je, wprowadzając niezbędne zmiany, a następnie zapisując nowy edytowany plik.
+
+Poniżej znajduje się kilka przykładów otwierania plików.
+
+Otwieranie pliku w katalogu głównym aplikacji:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_app.file("plik.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Aby otworzyć plik wygenerowany w folderze `storage/filesystem` aplikacji:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_storage.filesystem("server", "plik.xlsx"))
+            `
+        },
+    ]}
+/>
+
+A także aby otworzyć plik w folderze `/tmp` w systemie plików dysku:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_os.file("/tmp/plik.xlsx"))
+            `
+        },
+    ]}
+/>
+
+W powyższych przykładach stała `excel` będzie zawierać obiekt edycji z kontekstem danego pliku, dzięki czemu można wykonywać dowolny rodzaj manipulacji.
+
+Po zakończeniu zmian wygeneruj nowy plik.
+
+> Nie można bezpośrednio zmienić tego samego otwartego pliku; konieczne jest wygenerowanie nowego pliku z inną ścieżką.
+
+Aby zmienić bezpośrednio ten sam plik, można to zrobić za pomocą `inputStream`.
+
+Poniżej przykład zmiany wartości komórki:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const plikWejsciowy = _app.file("plik.xlsx").inputStream()
+                const excel = _xls.open(plikWejsciowy)
+
+                excel.setCellData(
+                    10, 1,
+                    _val.map()
+                        .set(
+                            "value",
+                            excel.getCellData(10, 1).getInt("value") + 10
+                        )
+                )
+
+                plikWejsciowy.close() // Zamyka otwarty plik.
+                excel.save(_app.file("plik.xlsx")) // Zapisuje nową wersję.
+                `
+        },
+    ]}
+/>
+
+## Odczyt pliku
+
+Wyodrębnianie danych z plików Excel odbywa się metodą `read`.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dane = _xls.read(_app.file("plik.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Dane są uzyskiwane w strukturze obiektów typu Values, która zawiera listy dla arkuszy, wierszy i kolumn oraz mapy (klucz i wartość) dla komórek.
+
+Aby wyświetlić wszystkie dane, możemy ustawić je jako dane wyjściowe usługi:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.json(dane)
+            `
+        },
+    ]}
+/>
+
+Aby wykonać iterację, musimy pamiętać, że struktura danych jest zorganizowana w następującej kolejności:
+
+1. `sheets` - Arkusze
+2. `rows` - Wiersze
+3. `columns` - Kolumny
+
+Przykład pełnej iteracji:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const arkusz of dane.getValues("sheets")) {
+                    _out.println(\`<h4>Arkusz: \${arkusz.getInt("index")} - \${arkusz.getString("name")}</h4>\`)
+                    for (const wiersz of arkusz.getValues("rows")) {
+                        _out.println(\`<h4>Wiersz: \${wiersz.getInt("row")}</h4>\`)
+                        _out.println("<p>")
+                        for (const kolumna of wiersz.getValues("columns")) {
+                            _out.print(\`\${kolumna.getInt("row")}:\${kolumna.getInt("column")}\`)
+                            _out.print(\` # \${kolumna.getString("address")}\`)
+                            _out.print(\` # \${kolumna.getString("type")}\`)
+                            _out.print(\` # \${kolumna.getString("value")}\`)
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for arkusz in dane.getValues("sheets"):
+                    _out.println(f"<h4>Arkusz: {arkusz.getInt('index')} - {arkusz.getString('name')}</h4>")
+                    for wiersz in arkusz.getValues("rows"):
+                        _out.println(f"<h4>Wiersz: {wiersz.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for kolumna in wiersz.getValues("columns"):
+                            _out.print(f"{kolumna.getInt('row')}:{kolumna.getInt('column')}")
+                            _out.print(f" # {kolumna.getString('address')}")
+                            _out.print(f" # {kolumna.getString('type')}")
+                            _out.print(f" # {kolumna.getString('value')}")
+                            _out.println("<br>")
+                        _out.println("</p>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                dane.getValues("sheets").each do |arkusz|
+                    _out.println("<h4>Arkusz: #{arkusz.getInt("index")} - #{arkusz.getString("name")}</h4>")
+                    arkusz.getValues("rows").each do |wiersz|
+                        _out.println("<h4>Wiersz: #{wiersz.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        wiersz.getValues("columns").each do |kolumna|
+                            _out.print("#{kolumna.getInt("row")}:#{kolumna.getInt("column")}")
+                            _out.print(" # #{kolumna.getString("address")}")
+                            _out.print(" # #{kolumna.getString("type")}")
+                            _out.print(" # #{kolumna.getString("value")}")
+                            _out.println("<br>")
+                        end
+                        _out.println("</p>")
+                    end
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                dane.getValues("sheets").forEach {
+                    val arkusz = it
+                    _out.println("<h4>Arkusz: \${arkusz.getInt("index")} - \${arkusz.getString("name")}</h4>")
+                    arkusz.getValues("rows").forEach {
+                        val wiersz = it
+                        _out.println("<h4>Wiersz: \${wiersz.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        wiersz.getValues("columns").forEach {
+                            val kolumna = it
+                            _out.print("\${kolumna.getInt("row")}:\${kolumna.getInt("column")}")
+                            _out.print(" # \${kolumna.getString("address")}")
+                            _out.print(" # \${kolumna.getString("type")}")
+                            _out.print(" # \${kolumna.getString("value")}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (arkusz in dane.getValues("sheets")) {
+                    _out.println("<h4>Arkusz: \${arkusz.getInt('index')} - \${arkusz.getString('name')}</h4>")
+                    for (wiersz in arkusz.getValues("rows")) {
+                        _out.println("<h4>Wiersz: \${wiersz.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for (kolumna in wiersz.getValues("columns")) {
+                            _out.print("\${kolumna.getInt('row')}:\${kolumna.getInt('column')}")
+                            _out.print(" # \${kolumna.getString('address')}")
+                            _out.print(" # \${kolumna.getString('type')}")
+                            _out.print(" # \${kolumna.getString('value')}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+    ]}
+/>
+
+Typ komórki uzyskuje się za pomocą kodu:
+
+- `kolumna.getString("type")`
+
+Obsługiwane typy to:
+
+- `string` - Zawartość tekstowa.
+- `numeric` - Zawartość liczbowa lub data i/lub godzina.
+- `boolean` - Prawda lub fałsz.
+- `blank` - Pusta komórka.
+- `formula` - Komórka zawierająca formułę.
+- `error` - Błąd podczas przetwarzania komórki.
+
+### Parametry dodatkowe
+
+Dla każdego typu komórki mamy kilka dodatkowych parametrów.
+
+`string` - Typ komórki z zawartością tekstową.
+
+- `value` - Tekst komórki.
+- `richValue` - Formatowania komórki.
+
+`numeric` - Typ komórki z zawartością liczbową, datami lub godzinami.
+
+- `value` - Wartość liczbowa zawartości komórki.
+  
+W przypadku dat i godzin mamy jeszcze następujące dodatkowe parametry:
+
+- `localDateTime` - Obiekt Java Time LocalDateTime reprezentujący wartość daty i godziny komórki.
+- `localDate` - Obiekt Java Time LocalDate reprezentujący wartość daty komórki.
+- `localTime` - Obiekt Java Time LocalTime reprezentujący wartość godziny komórki.
+- `instant` - Obiekt Java Time Instant reprezentujący wartość daty i/lub godziny komórki.
+- `date` - Obiekt Date z Javy reprezentujący wartość daty i/lub godziny komórki.
+
+`boolean` - Typ komórki z zawartością logiczną, czyli prawda lub fałsz.
+
+- `value` - Wartość typu _boolean_, `true` lub `false`.
+
+`blank` - Typ komórki bez zawartości, dlatego nie zawiera dodatkowych parametrów.
+
+`formula` - Typ komórki zawierającej formuły obliczeniowe.
+
+- `value` - Końcowa wartość wynikająca z obliczenia.
+- `formula` - Zawiera wyrażenie formuły użytej do obliczenia.
+
+`error` - Typ komórki zawierającej błąd.
+
+- `value` - Wartość bajtowa wygenerowanego błędu.
+- `code` - W przypadku błędów w obliczeniu formuły podaje tutaj kod wystąpienia błędu.
+
+## Wideo
+
+Poniżej kilka przykładowych filmów pokazujących, jak programowo generować pliki Excel/XLSX:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/nTnoqEpLghQ?si=8engICqRqNFUPi_i" title="Odtwarzacz wideo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

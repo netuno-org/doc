@@ -1,0 +1,186 @@
+---
+id: resource 
+title: Polyglotte Low-Code-Ressource 
+sidebar_label: Ressource 
+sidebar_position: 5
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+In diesem Tutorial erstellen wir eine native Ressource für Netuno. Das bedeutet, dass wir eine Java-Klasse erstellen, die im Basisverzeichnis von Netuno liegt und von jeder Anwendung im Ordner `apps` unter Verwendung der Syntax `_foo.methodenName(argumente)` verwendet werden kann.
+
+Das Beispiel, das wir erstellen werden, den vorherigen Tutorials folgend, ist die Ressource `_rechner`, eine Beispielressource zum Ausführen einfacher arithmetischer Operationen.
+
+Zunächst ist es notwendig, die Ordnerstruktur des Projekts zu erstellen. In diesem Beispiel gehen wir davon aus, dass das Projekt in einem Ordner namens `Rechner` erstellt wird. Dann muss die Ordnerstruktur erstellt werden, die den Paketnamen widerspiegelt (in unserem Beispiel `org.netuno.addon.rechner`). Unsere Ordnerstruktur wird daher wie folgt aussehen:
+
+- `Rechner/src/main/java/org/netuno/addon/rechner/ressource/`
+
+Innerhalb dieser Struktur erstellen wir eine Java-Klasse namens `RechnerRessource`, die unsere benutzerdefinierte native Ressource definiert.
+
+- ` Rechner/src/main/java/org/netuno/addon/rechner/ressource/RechnerRessource.java`
+
+Das in der Klasse definierte Paket wird also sein:
+
+```java
+package org.netuno.addon.rechner.ressource;
+```
+
+Damit die Klasse eine benutzerdefinierte native Ressource definiert, muss sie mit der Annotation `org.netuno.tritao.ResourceBase` annotiert werden. Der Parameter `name` ist der Name der Ressource, auf die mit einem Unterstrich (`_`) vor dem Namen zugegriffen werden kann (in unserem Fall `_rechner`). Der einfachste Weg, die Ressource zu erstellen, besteht darin, die Klasse `org.netuno.tritao.resource.ResourceBase` zu erweitern:
+
+```java
+package org.netuno.addon.rechner.ressource;
+
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "rechner")
+public class RechnerRessource extends ResourceBase {
+    // ...
+}
+```
+
+Das Erweitern der Klasse `ResourceBase` erspart es uns, die Ressource initialisieren zu müssen; es reicht, `super` mit den richtigen Argumenten aufzurufen:
+
+```java
+package org.netuno.addon.rechner.ressource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "rechner")
+public class RechnerRessource extends ResourceBase {
+    // ...
+    public RechnerRessource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+}
+```
+
+Die Funktion `init` ist obligatorisch, und darin initialisieren wir die Ressource, indem wir den Konstruktor unserer Klasse mit den Gettern der Elternklasse aufrufen:
+
+```java
+package org.netuno.addon.rechner.ressource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "rechner")
+public class RechnerRessource extends ResourceBase {
+    // ...
+    public RechnerRessource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public RechnerRessource init() {
+        return new RechnerRessource(getProteu(), getHili());
+    }
+}
+```
+
+Danach definieren wir unsere eigenen Felder und Funktionen:
+
+```java
+package org.netuno.addon.rechner.ressource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "rechner")
+public class RechnerRessource extends ResourceBase {
+    public double wert = 0;
+
+    public RechnerRessource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public RechnerRessource init() {
+        return new RechnerRessource(getProteu(), getHili());
+    }
+
+    public RechnerRessource setzen(double v) {
+        wert = v;
+        return this;
+    }
+
+    public RechnerRessource plus(double v) {
+        wert += v;
+        return this;
+    }
+
+    public RechnerRessource minus(double v) {
+        wert -= v;
+        return this;
+    }
+
+    public double abrufen() {
+        return wert;
+    }
+}
+```
+
+Jetzt müssen Sie nur noch die Klasse kompilieren und sicherstellen, dass die Datei `RechnerRessource.class` im Ordner liegt:
+
+- `netuno/core/web/WEB-INF/classes/org/netuno/addon/rechner/ressource/`
+
+Oder eine JAR-Datei erzeugen und sicherstellen, dass sie im Ordner liegt:
+
+- `netuno/lib/`
+
+Erstellen wir eine Testanwendung, um diese Ressource zu verwenden:
+
+```bash
+./netuno app name=rechner
+```
+
+Erstellen wir außerdem einen Dienst in dieser Anwendung, um die Ressource zu verwenden.
+Im Beispiel erstellen wir die Datei `netuno/apps/rechner/server/services/rechner-test.js`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _rechner.setzen(10);
+
+                _rechner.plus(120);
+
+                _out.println(_rechner.abrufen());
+            `
+        },
+    ]}
+/>
+
+Starten wir unsere Anwendung:
+
+```bash
+./netuno server app=rechner
+```
+
+Und jetzt, wenn wir diesen Dienst aufrufen:
+
+- `http://localhost:9000/services/rechner-test`
+
+gibt er den Wert `130` zurück.
+
+Um eine Ressource im Java-Code zu verwenden, stellen einige Klassen wie `org.netuno.tritao.Web`
+und `org.netuno.tritao.event.EventBase` die Funktion `resource` bereit, die diese Ressource initialisiert.
+In der Klasse, in der Sie die Ressource `rechner` verwenden möchten, tun Sie Folgendes:
+
+```java
+import org.netuno.addon.rechner.ressource.RechnerRessource;
+
+// ...
+    RechnerRessource rechner = resource(RechnerRessource.class);
+    rechner.setzen(10);
+    rechner.plus(120);
+    System.out.println(rechner.abrufen());
+// ...
+```
+
+Die vollständigen Projektdateien finden Sie unter diesem [Link](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/resource).

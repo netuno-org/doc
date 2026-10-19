@@ -6,32 +6,35 @@ sidebar_label: Import
 
 ## Introduction
 
-When developing, we need to use multiple interconnected code files to organize, reuse functionalities to 
-avoid repetition, and facilitate maintenance by centralizing useful functions, which reduces the overall 
-lines of code and consequently greatly reduces bugs.
+When we develop, we need to use multiple interconnected code files to
+organize and reuse functionality, avoid repetition, and facilitate maintenance by
+centralizing useful functions, which reduces lines of code overall and consequently
+greatly reduces bugs.
 
-So we centralize the useful code in another code file that can be imported by others who can easily reuse it.
+So we centralize useful code in another code file that can be imported by
+other files that can easily reuse it.
 
-Here we will demonstrate some solutions that Netuno offers for code reuse.
+Here we will demonstrate some solutions that Netuno provides for reusing
+code.
 
-## Core Polyglot
+## Polyglot Core
 
-In any programming language supported by Netuno, we can import any code file located in the application's 
-`server/core` folder.
+In any programming language supported by Netuno, we can import any
+code file that is in the application's `server/core` folder.
 
-The simplified way that Netuno offers is to use a special comment format for importing code, where the 
-commented line has the prefix `_core:`, followed by the path to the code file from the application's 
-`server/core` folder.
+The simplified form that Netuno offers is to use a special comment format
+for code import, where the commented line has the prefix `_core:`, followed by
+the path of the code file from the application's `server/core` folder.
 
-So, to import the code file:
+So to import the code file:
 
 - `server/core/example/file`
 
-> The file should have the extension that corresponds to the programming language used.
+> The file must have the extension according to the programming language used.
 
-It's possible to import another file at the beginning of any code file, for example, in services.
+It is possible to import another file at the beginning of any code file, for example, in services.
 
-In the case of JavaScript, Groovy, and Kotlin:
+For JavaScript, Groovy, and Kotlin:
 
 ```javascript
 // _core: example/file
@@ -39,7 +42,7 @@ In the case of JavaScript, Groovy, and Kotlin:
 ...
 ```
 
-In the case of Python and Ruby:
+For Python and Ruby:
 
 ```python
 # _core: example/file
@@ -47,15 +50,15 @@ In the case of Python and Ruby:
 ...
 ```
 
-> In this special import comment, it is not necessary to include the file extension;
+> In this special import comment, there is no need to include the file extension;
 > Netuno detects it automatically.
 
-The variables, constants, functions, classes, etc., declared in the imported file are made available for 
-use in the file that performs the import with this type of comment at the beginning.
+The variables, constants, functions, classes, etc., declared in the imported file are made available
+for use in the file that performs the import with this type of comment at the beginning.
 
-To import multiple files, simply repeat the import comment with the path to the other files.
+To import multiple files, simply repeat the import comment with the paths of the other files.
 
-In the case of JavaScript, Groovy, and Kotlin, to import multiple files:
+For JavaScript, Groovy, and Kotlin, to import multiple files:
 
 ```javascript
 // _core: example/file1
@@ -65,7 +68,7 @@ In the case of JavaScript, Groovy, and Kotlin, to import multiple files:
 ...
 ```
 
-In the case of Python and Ruby, to import multiple files:
+For Python and Ruby, to import multiple files:
 
 ```python
 # _core: example/file1
@@ -75,54 +78,56 @@ In the case of Python and Ruby, to import multiple files:
 ...
 ```
 
-## Recurso Exec
+## Exec Resource
 
-Using the `_exec` feature, we can import code at any time during execution.
+Through the `_exec` resource, we can import code at any time during execution.
 
 > The variables, constants, functions, classes, etc., declared in the imported code file can be used.
 
 ### core
 
-To programmatically import a code file, in this case within the `📁 server/core` folder:
+To programmatically execute the import of a code file, in this case inside the
+`📁 server/core` folder:
 
 ```javascript
-_exec.core("path/of/file")
+_exec.core('path/to/file')
 ```
 
-> There's no need to include the file extension; Netuno detects it automatically.
+> There is no need to include the file extension; Netuno detects it automatically.
 
 ### services
 
-To programmatically import a code file, in this case within the `📁 server/services` folder:
+To programmatically execute the import of a code file, in this case inside the
+`📁 server/services` folder:
 
 ```javascript
-_exec.service("path/of/file")
+_exec.service('path/to/file')
 ```
 
-> There's no need to include the file extension; Netuno detects it automatically.
+> There is no need to include the file extension; Netuno detects it automatically.
 
 ## JavaScript
 
-Netuno forces a foundation for development in JavaScript, being the most widely used language, especially 
-because in JavaScript we program both the front-end and the back-end, allowing for full-stack development 
+Netuno enforces a foundation for development in JavaScript, as it is the most used language, especially
+because in JavaScript we program both the front-end and the back-end, allowing full-stack development
 using the same programming language.
 
-Netuno analyzes the code and automatically detects whether `import` (ECMAScript Modules) or 
+Netuno analyzes the code and automatically detects whether `import` (ECMAScript Modules) or
 `require` (CommonJS) is being used.
 
-> The `import` and `require` patterns should not be mixed; one or the other must be used.
+> You should not mix the `import` standard with `require`; one or the other should be used.
 
-This allows us to always use the `.js` extension in code files, and when using `import` instructions, 
-Netuno will process them as ECMAScript Modules, allowing us to use the `export default`.
+With this, we can always use the `.js` extension in code files, and when using statements with `import`,
+Netuno will process them as ECMAScript Modules, and thus we can use `export default`.
 
-> The use of `import` is recommended whenever possible as it is the modern standard.
+> The use of `import` is recommended whenever possible because it is the modern standard.
 
 ### Import Code
 
-When using native import, unlike the previous examples, only what is explicitly exported will be imported, 
-based on the CommonJS (`require`) or ECMAScript Modules (`import`) pattern.
+When using native imports, unlike the previous examples, only what is
+explicitly exported will be imported, based on the CommonJS (`require`) or ECMAScript Modules (`import`) standard.
 
-The `📁 server` folder contains the `package.json` file, where we should have the following instruction:
+The `📁 server` folder contains the `package.json` file, where we must have the following instruction:
 
 ```json
 ...
@@ -152,7 +157,7 @@ The `📁 server` folder contains the `package.json` file, where we should have 
 ...
 ```
 
-This allows us to import any file into any other code file, for example:
+With this, we can import any file into any other code file, for example:
 
 ```js title="server/services/profile/get.js"
 import profile from "#core/lib/profile.js";
@@ -160,7 +165,7 @@ import profile from "#core/lib/profile.js";
 const dbProfile = profile.getLogged();
 ```
 
-Since `import` is used in the imported file, `export default` will be used as well.
+Since `import` is used, `export default` will be used in the imported file:
 
 ```js title="server/core/lib/profile.js"
 import {_db, _user} from "@netuno/server-types";
@@ -174,9 +179,10 @@ export default {
 };
 ```
 
-> It is not recommended to mix the use of `import` (ECMAScript Modules) and `require` (CommonJS) in the 
-> same application or project, even in different files and situations; it is always preferable to adopt a 
-> homogeneous standardization. We recommend using `import` as it is the modern method.
+> It is not recommended, in the same application or project, to mix the use of `import` (ECMAScript Modules) and
+> `require` (CommonJS), even in different files and situations; it is preferable to always adopt
+> a homogeneous standardization.
+> We recommend using `import` because it is the modern method.
 
 Alternatively, if `require` (CommonJS) is used instead of `import` (ECMAScript Modules):
 
@@ -186,7 +192,7 @@ const profile = require("#core/lib/profile.js");
 const dbProfile = profile.getLogged();
 ```
 
-Since `require` is used in the imported file, `module.exports` will be used as well.
+Since `require` is used, `module.exports` will be used in the imported file:
 
 ```js title="server/core/lib/profile.js"
 const {_db, _user} = require("@netuno/server-types");
@@ -202,12 +208,12 @@ module.exports = {
 
 ### Code Autocomplete and Validation
 
-To have the code autocomplete function with code validation integrated into the editors, we must install 
-the [Server Types](https://www.npmjs.com/package/@netuno/server-types) in the application's `📁 server` folder.
+To have code autocomplete with integrated code validation in editors, we must install the
+[Server Types](https://www.npmjs.com/package/@netuno/server-types) in the application's `📁 server` folder.
 
-> The server types (`@netuno/server-types`) define all the low-code polyglot programming features in TypeScript, 
-> allowing editors to detect everything that the Netuno low-code polyglot framework offers, but because it's 
-> TypeScript, it only serves to assist in JavaScript code.
+> The server types (`@netuno/server-types`) are the definition of all polyglot low-code
+> programming resources in TypeScript, which allows editors to detect everything that Netuno's
+> polyglot low-code framework offers, but because it is TypeScript, it only serves to assist with JavaScript code.
 
 Inside the `📁 server` folder, install the [Server Types](https://www.npmjs.com/package/@netuno/server-types):
 
@@ -215,8 +221,8 @@ Inside the `📁 server` folder, install the [Server Types](https://www.npmjs.co
 bun add @netuno/server-types
 ```
 
-With this, the code in general can import any of the low-code polyglot resources available in the Netuno 
-framework, for example, this service code:
+With this, in code in general, you can import any of the polyglot low-code resources available in the
+Netuno framework, for example, this service code:
 
 ```javascript
 import {_req, _db, _out, _val} from "@netuno/server-types";
@@ -234,28 +240,30 @@ _out.json(
 );
 ```
 
-Note that the editor will validate and autocomplete the code, which is extremely useful and greatly speeds 
-up development.
+Notice that the editor will validate and autocomplete the code, which is extremely useful and greatly
+speeds up development.
 
-> In some editors, it may be necessary to configure/activate the `📁 server` folder to detect the code root. 
-> For example, Visual Studio Code detects it automatically, but in WebStorm, you need to right-click on the 
-> `server` folder and click on `Mark Directory As Resource Root` and reopen the project.
+> In some editors, it may be necessary to perform some configuration/activation to detect the `📁 server`
+> folder as the code root; for example, Visual Studio Code detects it automatically, but in WebStorm you need
+> to right-click the `server` folder, click `Mark Directory As > Resource Root`, and
+> reopen the project.
 
 ## JS & NPM - External Dependencies
 
-External dependencies of **NPM** can be installed within the `📁 server` folder inside the application, where 
-the `package.json` file is located.
+External **NPM** dependencies can be installed inside the `📁 server` folder within the application, where
+the `package.json` is located.
 
-However, contrary to what we previously recommended, to import external libraries we use `require`, and in 
-this case we can mix it with `import` for internal project files, which is not very elegant, but it is possible.
+However, contrary to what we recommended earlier, to import external libraries we use
+`require`, and in this case we can mix it with `import` of internal project files, which is not very
+elegant, but it is possible.
 
-So, to add a dependency, simply install it with the `bund add` command.
+So to add a dependency, simply install it with the `bun add` command.
 
-For example, you can install `momentjs`:
+For example, it is possible to install `momentjs`:
 
 - `bun add moment`
 
-To import dependencies, use `require`, here's an example:
+To import dependencies, `require` is used; see the example:
 
 ```javascript
 import {_out} from "@netuno/server-types";
@@ -263,7 +271,7 @@ const moment = require('moment')
 _out.json(moment().format())
 ```
 
-Another example using `dayjs`, first install:
+Another example with `dayjs`, first install:
 
 - `bun add dayjs`
 
@@ -291,19 +299,19 @@ _out.println(formatDistance(
 ));
 ```
 
-> Relying on external libraries is an exceptional situation; normally, we find everything we need within 
-> the low-code, polyglot framework of Netuno.
+> Relying on external libraries is an exceptional situation; normally we find everything we need
+> in Netuno's polyglot low-code framework.
 
-### Native NodeJS Modules
+### NodeJS Native Modules
 
-Since GraalVM is not fully compatible with native NodeJS modules, a workaround is possible with external 
-dependencies that implement an alternative solution to these modules.
+Since GraalVM is not fully compatible with NodeJS native modules, to work around this it is possible to achieve
+greater compatibility with external dependencies that implement an alternative solution to these modules.
 
-It is possible to install some external dependencies as an alternative that offer compatibility as if they 
-were native modules.
+It is possible to install some external dependencies as alternatives that offer compatibility as if
+they were native modules.
 
-Below is a list of modules used as alternatives to replace native NodeJS modules, and their respective 
-installation commands:
+Below is the list of modules used as alternatives to replace NodeJS native modules, along with their
+respective installation commands:
 
 - <a href="https://www.npmjs.com/package/buffer" target="_blank">Buffer</a>: `bun add buffer`
 - <a href="https://www.npmjs.com/package/events" target="_blank">Events</a>: `bun add events`
@@ -313,19 +321,20 @@ installation commands:
 - <a href="https://www.npmjs.com/package/http-browserify" target="_blank">HTTP</a>: `bun add http-browserify`
 - <a href="https://www.npmjs.com/package/https-browserify" target="_blank">HTTPS</a>: `bun add https-browserify`
 
-Remember, you must install these modules above in the `📁 server` folder within the application; compatibility 
-with native NodeJS modules is provided, and these alternative modules will be used.
+Remember, you must install these modules above in the `📁 server` folder inside the application; compatibility
+with NodeJS native modules is provided by using these alternative modules.
 
 ## Conclusion
 
-We can organize our code in many ways, but reusing code and avoiding repetition is always very important.
+We can organize our code in several ways, but reusing code and avoiding
+repetition is always very important.
 
-The more lines of code there are, the greater the likelihood of bugs.
+The more lines of code there are, the greater the probability of bugs.
 
-Remember to organize your code well and centralize its reuse; it facilitates maintenance, avoids bugs, 
-and increases overall productivity.
+Remember to organize your code well and centralize its reuse; this facilitates maintenance,
+avoids bugs, and increases productivity overall.
 
-Although there are still some limitations with the use of external dependencies, we are working to improve 
-the ecosystem.
+Although there are still some limitations with the use of external dependencies, we are
+working to improve the ecosystem.
 
-Meanwhile, Netuno offers several low-code and polyglot features that meet most needs.
+Meanwhile, Netuno offers several low-code and polyglot resources that meet most needs.

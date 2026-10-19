@@ -1,0 +1,662 @@
+---
+sidebar_position: 3
+id: app-create
+title: アプリケーションの作成
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+このガイドでは、フロントエンド、データベース、APIサービスの初期設定について概要を説明します。
+新しいフルスタックアプリケーションを迅速かつ実践的に作成します。
+
+## はじめに
+
+プラットフォームはポリグロットで複数のプログラミング言語をサポートしていますが、このチュートリアルではJavaScriptの使用に限定して解説します。その結果、モーダルウィンドウ（ポップアップ）に表示されるフォームと、データをPDFにエクスポートする機能を備えた実用的なアプリケーションを作成します。
+
+#### 前提条件
+
+開始する前に、次の条件を満たしていることを確認してください。
+
+- Netunoプラットフォームがマシンにインストールされていること。このステップで不明点がある場合は、[プラットフォームのインストール](/docs/get-started/installation)ガイドを参照してください。
+
+- 開発環境のターミナルまたはコマンドプロンプトにアクセスできること。
+
+## 新しいアプリケーションの作成
+
+新しいアプリケーションを初期化するには、以下の手順に従ってください。
+
+ターミナルを開き、Netunoがインストールされているルートフォルダに移動します。
+
+アプリケーション作成コマンドを実行します。
+
+```shell
+./netuno app
+```
+
+### パラメータを指定した作成
+
+コマンドの実行時にアプリケーション名を直接指定できます。例:
+
+```shell
+./netuno app name=my_application
+```
+
+:::info 命名のベストプラクティス
+アプリケーション名を定義するときは、スペース、アクセント記号、特殊文字の使用は避けてください。URLやシステムフォルダとの互換性を保つため、小文字をハイフンまたはアンダースコアで区切る使用を推奨します（例: **app-sales** または **hr_management**）。
+:::
+
+## 初期設定
+
+コマンドラインウィザードがプロジェクトを設定するためにいくつか質問します。次を入力してください。
+
+- **アプリケーション名**: プロジェクトの識別子。
+- **データベースの種類**: 使用するデータベース管理システム。
+- **言語**: アプリケーションインターフェースのデフォルト言語。
+
+:::tip ヒントとベストプラクティス
+
+**初心者向けデータベースの推奨**
+
+ステップバイステップの途中でデータベースの種類を求められたら、**H2 Database**オプションを選択することをお勧めします。
+
+H2 DatabaseはNetunoサーバーにすでに統合されている組み込みデータベースです。大きな利点は、外部サーバー（PostgreSQLやMySQLなど）のインストールや設定が不要で、初期開発とテストがはるかに実用的かつ迅速になることです。
+:::
+
+### サーバー起動コマンド
+
+新しいアプリケーションを作成した後、Netunoプラットフォームのサーバーを起動します。これにより、プロジェクトがブラウザでアクセス可能になり、継続的な開発の準備が整います。
+
+ターミナルで以下のコマンドを実行し、起動を待ちます。
+
+```shell
+./netuno server app=my_application
+```
+
+**app=my_application**パラメータを渡すと、サーバーはこれがこのインスタンスで実行されるデフォルトアプリケーションであると認識します。サーバーが実行されていれば、プロジェクトの編集を開始できます。 
+
+アプリケーションのすべてのファイルとソースコードは`📂 apps/myapp`フォルダ内に保存および整理されます。
+
+:::info アクセス資格情報（Backoffice）
+アプリケーションの管理インターフェース**Backoffice**に初めてアクセスすると、システムは認証を要求します。ローカル開発環境では、次のデフォルト資格情報を使用してください。
+
+**ユーザー:** dev
+
+**パスワード:** dev
+
+*アプリケーションを本番環境に移行する際は、これらの資格情報を変更することをお勧めします。*
+:::
+
+
+### コードエディタ
+
+最高の開発体験を確保するため、モダンで軽量、かつ優れた拡張機能エコシステムを持つコードエディタの使用をお勧めします。
+
+まだお気に入りのエディタがない場合は、コミュニティで広く使用されている以下の無料オプションをお勧めします。
+
+- VS Codium: <a href="https://vscodium.com/" target="_blank">vscodium.com</a>
+- VS Code: <a href="https://vscodium.com/" target="_blank">code.visualstudio.com</a>
+- WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">jetbrains.com/webstorm</a>
+
+> 注: より堅牢なツールを好み、ライセンスへの投資を気にしない場合は、JetBrainsのWebStormが優れたプレミアムオプションです。
+
+アプリケーションのフォルダをエディタで開きます。
+
+- `📂 apps/my_application`
+
+アプリケーションのすべてのファイルはこのフォルダ内に保存および整理されます。ルートの作成、データベースロジック、視覚インターフェースなど、すべての開発はこのフォルダ内で行われます。
+
+:::info アーキテクチャを理解する
+各タイプのファイルを正確にどこに作成するか、Netunoがバックエンドとフロントエンドをどのように整理するかを知るには、アプリケーションのフォルダ構造に関する詳細ドキュメントを読むことをお勧めします。
+
+**ガイドを参照: [アプリケーションのフォルダ](/docs/category/app-structure)**
+:::
+
+### ステップの概要
+
+Netunoの初期知識を固めたので、これらの概念を実践に適用し、完全な機能を最初から最後まで作成します。 
+
+実践的な目的は、インターフェースに2つの新しいインタラクティブコンポーネントを追加することです。
+
+* フローティングウィンドウ（モーダル）内に顧客フォームを読み込んで表示する役割を持つボタン。
+* 登録済み顧客のリストをPDFファイルとして生成および出力する専用のボタン。
+
+この結果を整理して明確に達成するため、開発を論理的なステップの順序に分割しました。次のロードマップに従います。
+
+- **インターフェースのマッピング**: アプリケーションのフォルダ構造を分析し、ダッシュボードのメインHTMLがどこで定義されているかを特定します。
+
+- **Reactとの統合**: フロントエンドでReactフレームワークを使用して、2つの新しいボタンの基盤を設定および追加します。
+
+- **モーダルのロジック**: 顧客フォームを正しく開くためのボタンの動作を構築およびプログラムします。
+
+- **出力インターフェース**: PDFファイルのダウンロードをトリガーするボタンをインターフェース上に構築して配置します。
+
+- **サービス（API）の開発**: データを読み取り、顧客リストを含むPDFファイルを動的に生成するサービスを作成してバックエンドをプログラムします。
+
+始めましょう！
+
+## ダッシュボードテンプレート
+
+`server/templates`フォルダに移動し、ダッシュボード画面のHTMLを提供するファイルを開きます。
+
+```plaintext
+server/templates/dashboard.html
+```
+
+`dashboard.html`ファイルのコードを調べ、ページの最後までスクロールします。孤立した`<div>`要素が見つかります。まさにこの箇所で、NetunoプラットフォームがReactで構築されたインタラクティブなインターフェース全体を「注入」して開始します。
+
+```html title="server/templates/dashboard.html"
+...
+<div id="app-dashboard"></div>
+```
+
+HTMLの骨組みはserver/templatesフォルダにありますが、実際のインターフェース開発と視覚的ロジックはそこで行われるわけではありません。
+
+ダッシュボードの動作を変更したり、Reactで新しいコンポーネントを追加したりするには、フロントエンド開発専用のフォルダにアクセスする必要があります。
+
+この`📂 ui/`フォルダでダッシュボードのコンポーネントが見つかり、アプリケーションの新しい視覚機能を開発できます。
+
+
+## フォームの作成
+
+このステップでは、このチュートリアルに必要なデータベース構造を作成します。**顧客**というフォームと、**名前**というテキストフィールドです。
+
+* Backofficeで、右上の**構築**ボタンをクリックして開発エリアにアクセスします。 
+* サイドメニューで**管理 > フォーム**に移動し、**タイトル:** 顧客で新しいフォームを作成します。
+* **保存**をクリックします。
+
+テーブル名は自動的に**customer**で入力されます（データベースの推奨に従い、小文字のままにしてください）。
+
+:::info ガイドを参照 
+この画面の詳細設定について不明な点がある場合は、**[フォーム](/docs/academy/ui/forms)**の完全なドキュメントを参照してください。
+:::
+
+## フィールドの作成 
+フォームが作成されると、左サイドメニューの**フィールド**カテゴリに表示されます。 
+
+* **顧客**をクリックして新しい列を追加します。
+* フィールドのタイトルに**「名前」**というテキストを入力します。 
+* **タイプ**フィールドでデータ型として**「text」**を選択します。
+* **フィルタを許可**（検索を有効にする）と**結果に表示**（テーブルに表示する）のオプションをオンにします。
+* **保存**をクリックします。
+
+
+:::info ガイドを参照 
+利用可能なすべてのデータ型とそのプロパティを理解するには、**[フィールド](/docs/academy/ui/fields)**の詳細ドキュメントにアクセスしてください。
+:::
+
+#### テストデータの挿入
+次のステップでPDF出力をテストできるように、システムに実際のデータが必要です。
+
+* 右上の**表示**ボタンをクリックして、アプリケーション使用用のBackofficeに戻ります。
+* サイドバーで新しく作成した**顧客**メニューにアクセスします。
+* **+ 追加**ボタンを使用して、テスト用の顧客をいくつか登録します。
+* **保存**をクリックします。
+
+
+## データベースへの問い合わせ
+
+Netunoは、アプリケーションのデータベースでSQLコマンドを直接実行できる統合ツールを提供します。これは、迅速な問い合わせ、情報の検証、システムデータの機敏な操作に不可欠です。 
+
+問い合わせインターフェースにアクセスしてコマンドを実行するには、次の手順に従います。
+
+* メインインターフェースで、**構築**ボタンをクリックして開発エリアにアクセスします。
+* ナビゲーションサイドメニューで**管理**セクションを見つけます。
+* **クエリ**オプションをクリックしてデータベースコンソールを開きます。
+* 画面に表示されるテキストエディタで、実行するSQLコマンドを入力します。
+* コマンドの実行を確認します。
+
+登録済みの顧客を問い合わせるには、以下のコマンドを実行します。
+
+```sql
+SELECT * FROM customer
+```
+
+問い合わせを終えてシステムのユーザーインターフェース（Backoffice）に戻りたい場合は、**表示**ボタンをクリックするだけです。
+
+## Reactでボタンを追加
+
+このステップでは、**ダッシュボード**パネルのメインファイルを設定して、2つの新しいボタンを表示します。 
+
+インターフェースアーキテクチャでは、**コンテナ**の概念を使用してシステムの広範な領域を定義します。コンテナはより大きな機能を包含し、複数の小さなコンポーネントをまとめます。
+
+- コードエディタで、`📂 ui/src/containers`のコンテナフォルダに移動します。
+
+- ダッシュボードのメインファイル`📂 DashboardContainer/index.jsx`を見つけて開きます。
+
+- 以下の例に従って、コンポーネントのインポートとレンダリングのコードを挿入します。
+
+```javascript title="ui/src/containers/DashboardContainer/index.jsx"
+import { Space } from 'antd';
+
+import CustomerModalButton from '../../components/CustomerModalButton';
+import PdfButton from '../../components/PdfButton';
+
+import "./index.less";
+
+function DashboardContainer() {
+    return (
+        <div className="my-dashboard">
+            <Space>
+                <CustomerModalButton />
+                <PdfButton />
+            </Space>
+        </div>
+    );
+}
+
+export default DashboardContainer;
+```
+
+これらのボタンファイルはまだプロジェクトに物理的に存在しないことに注意してください。これらは小さく再利用可能なコンポーネントであるため、専用のコンポーネントフォルダ内に作成します。
+
+:::tip アーキテクチャの整理
+常に**コンテナ**（ページ全体やダッシュボードなど、広いスコープの領域）と**コンポーネント**（ボタンやモーダルなど、分離されたインターフェース要素）を分離してください。これにより、Netunoのコードがよりクリーンで保守しやすく、スケーラブルになります。
+:::
+
+### フォーム用ボタン 
+
+`ui/src/components/`フォルダにアクセスし、`CustomerModalButton`という新しいフォルダを作成します。
+
+**CustomerModalButton**フォルダ内に、`index.jsx`という名前のコンポーネントのメインファイルを作成します。
+
+`📂 ui/src/components/CustomerModalButton/index.jsx`
+
+ファイルを開き、以下のコードを挿入します。
+
+```javascript title="ui/src/components/CustomerModalButton/index.jsx"
+import { Button } from 'antd';
+
+function CustomerModalButton() {
+    const onClick = () => {
+        netuno.modal.create({
+            name: 'customer',
+            callback: function (modal) {
+                let form = modal.find('[netuno-form]');
+
+                form.on('netuno:new', () => {
+                    console.log('新しい顧客を作成しています。');
+                });
+
+                form.on('netuno:save', () => {
+                    netuno.modal.hide(modal)
+                    console.log('顧客を保存しました。');
+                });
+
+                form.on('netuno:delete', () => {
+                    netuno.modal.hide(modal)
+                    console.log('顧客を削除しました');
+                });
+
+                form.on('netuno:back', () => {
+                    console.log('戻るをクリックしました');
+                });
+
+                netuno.loadForm(form);
+                netuno.modal.show(modal);
+            }
+        });
+    };
+    return (
+        <div>
+            <Button type="primary" onClick={ onClick }>
+                顧客フォームを開く
+            </Button>
+        </div>
+    );
+}
+
+export default CustomerModalButton;
+```
+
+#### コードの理解
+このコンポーネントの魔法は、Netunoのグローバルインターフェースツールを使用するonClick関数内で起こります。
+
+- **netuno.modal.create()**: このメソッドは、画面上にモーダルウィンドウをインスタンス化し、目的のフォーム（この場合はcustomerという名前のフォーム）を関連付ける役割を果たします。
+
+- **フォームイベント（form.on）**: callbackブロックにより、ユーザーのアクションを「リッスン」できます。ユーザーがレコードを作成（netuno:new）、保存（netuno:save）、削除（netuno:delete）、または戻るをクリック（netuno:back）したときにカスタムアクションを発火できます。
+
+- **netuno.modal.hide() / show()**: 成功アクション後にモーダルを非表示にしたり、フォームが読み込まれたら表示したりするために使用するメソッドです。 
+
+:::info 統合完了
+**CustomerModalButton**コンポーネントが正常に作成されたので、先ほど**DashboardContainer**で行ったインポートはエラーなく機能し、ボタンが画面にレンダリングされるはずです！
+:::
+
+### PDF出力用ボタン
+
+このステップでは、ダッシュボードの2つ目のボタンであるPDF出力用ボタンを作成します。
+
+このコンポーネントのインターフェースにおける主な機能はトリガーとして動作することです。つまり、クリックされるとバックエンドサービスにリクエストを送り、そのサービスがシステムのデータを処理して、登録済み顧客のリストを含むPDFファイルを生成します。
+
+- `ui/src/components/`フォルダにアクセスし、**PdfButton**という新しいフォルダを作成します。
+
+- フォルダ内に**index.jsx**というファイルを作成します。
+
+`ui/src/components/PdfButton/index.jsx`
+
+ファイルを開き、以下のコードを挿入します。
+
+```javascript title="ui/src/components/PdfButton/index.jsx"
+import { Button } from 'antd';
+
+function PdfButton() {
+    return (
+        <div>
+            <Button
+                type="primary"
+                href="/services/customer/export-pdf"
+                target="blank">
+                PDFを出力
+            </Button>
+        </div>
+    );
+}
+
+export default PdfButton;
+```
+
+PdfButtonコンポーネントの作成により、DashboardContainerで宣言した両方のボタンが準備できました。 
+
+:::tip 次のステップ
+視覚構造とコンポーネントは完成しました。フロントエンドをコンパイルして、インターフェースのレンダリングをテストしてください。 
+
+実際にPDFを生成するバックエンドサービスの構築は次のステップで扱います。
+:::
+
+## フロントエンドのコンパイル
+
+インターネットブラウザは、Reactで書かれた`.jsx`や`.tsx`ファイル、および`.less`などのCSSプリプロセッサのコードをネイティブに理解できません。インターフェースを正しく動作させるには、コンパイル（ビルド）プロセスを経る必要があります。このプロセスは、すべてのコードを変換、バンドル、最適化して、ブラウザが最大限の効率で処理できる最終的な静的ファイル（標準のJavaScriptとCSS）にします。
+
+#### 前提条件
+
+コンパイルを開始する前に、次のことを確認してください。
+
+- 開発環境でターミナルまたはコマンドプロンプトを開いていること。
+
+- パッケージマネージャー`Bun`がシステムに正しくインストールされていること。
+
+## コンパイルの例
+
+Netunoは、開発段階に応じて異なるコマンドを提供します。Netunoのルートフォルダから、アプリケーションの`ui`フォルダに移動します。 
+
+アプリケーションのインターフェースフォルダ内でコマンドを実行します: `📂 apps/myapp/ui`
+
+### 本番用コンパイル
+
+完全で最適化されたファイルのコンパイルを実行します。画面やコンポーネントの開発を終え、軽量で最高のパフォーマンスを持つ最終ファイルを生成したい場合に最適なコマンドです。
+
+```bash
+bun run build
+```
+
+### 開発用コンパイル
+
+**watch**コマンドは高速コンパイルを実行し、フォルダを監視し続けます。エディタでファイルを保存するたびに、ターミナルが自動的にコンパイルを実行します。
+
+```bash
+bun run watch
+```
+**build**または**watch**のどちらのコマンドを使用しても、変更はユーザーの画面に即座に表示されません。ブラウザでBackofficeのページを更新して、生成された新しいファイルを読み込んでください。
+
+:::tip エラー監視とデバッグ
+開発中、エラーは2つの異なる段階で発生する可能性があります。どこを確認すべきかを把握しておきましょう。
+
+- **コンパイルエラー**: Reactコードの構文エラーや未宣言の変数は、**bun**コマンドが実行されているターミナルに直接表示されます。
+
+- **実行時エラー**: アプリケーションの使用中に発生する障害は、ブラウザのコンソールに表示されます。ページを検査して、アラートやエラーがないか常に確認することを忘れないでください。
+:::
+
+### 統合コンパイル
+
+統合コンパイル機能を使用すると、サーバーの起動と同時にターミナルコマンドを自動実行できます。これによりワークフローが最適化され、すべてのログと監視が単一の中央ターミナルに集約されます。
+
+統合コンパイルを有効にするには、アプリケーションの開発設定を変更する必要があります。
+
+- アプリケーションのルートフォルダにアクセスします。
+
+- 開発設定ファイル`_development.json`を開きます。
+
+- "**commands**"に関連するコードブロックを探します。
+
+- "enabled"プロパティの値を**false**から**true**に変更します。
+
+- ファイルを保存します。
+
+`_development.json`ファイルの構造は次のようになります。
+
+```json title="config/_development.json"
+  ...
+  "commands": [{
+    "command": "bun run watch",
+    "enabled": true,
+    "install": "bun install",
+    "path": "ui"
+  }],
+  ...
+```
+
+Netunoが更新されたファイルを読み取り、新しい設定を適用するには、サーバーを再起動する必要があります。
+
+- Netunoサーバーが実行されているターミナルに移動します。
+
+- CTRL + Cキーを同時に押してプロセスを終了します。
+
+- アプリケーション名を指定してサーバーを再度起動します。
+
+```shell
+./netuno server app=myapp
+```
+
+:::tip 単一ターミナル
+サーバーを再起動した後、ターミナルのログを確認してください。Netunoがバックグラウンドでフロントエンドのコンパイルコマンド**bun run watch**を自動実行していることがわかります。これ以降、すべてが同じウィンドウで統合されて動作します。
+:::
+
+## PDF生成用APIサービス
+
+前のステップでは、フロントエンドの**PDF出力**ボタンを設定し、"**href**"属性が`services/customer/export-pdf`というアドレスを指すようにしました。しかし、今クリックしても何も起こりません。これは、ファイル生成を担当するAPIサービスがまだ存在しないためです。
+
+APIの開発はすべて`📂 server`フォルダ内で行います。 
+このセクションでは、データベースからレコードを取得し、PDFドキュメントを視覚的に構築するスクリプトを作成します。
+
+#### 前提条件
+
+- フロントエンドで正しいURLを指すPdfButtonコンポーネントを作成済みであること。
+- Netunoサーバーが実行中であること。
+
+
+Netunoは、**server/services/**内のフォルダ構造に基づいてAPIのURLを自動的にルーティングします。サービスを作成するには、次の手順に従います。
+
+- バックエンドのサービスフォルダ`server/services/`に移動します。**customer**というフォルダを作成します。
+
+- そのフォルダ内に`export-pdf.js`というファイルを作成します。
+
+> Netunoはポリグロットです。この例ではJavaScriptを使用します。好みの言語に対応する拡張子を使用してください。
+
+ファイルを開き、PDFの構造を生成する以下のコードを挿入します。
+
+<PolyglotPath files={[
+    'server/services/customer/export-pdf'
+]} />
+
+<PolyglotCode
+    file="server/services/customer/export-pdf"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("pdf")
+
+                const pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("顧客リスト:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                const dbCustomers = _db.form("customer").all()
+
+                for (const dbCustomer of dbCustomers) {
+                    pdfDocument.add(
+                        _pdf.paragraph(dbCustomer.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("顧客リスト:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                dbCustomers = _db.form("customer").all()
+
+                for dbCustomer in dbCustomers:
+                    pdfDocument.add(
+                        _pdf.paragraph(dbCustomer.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("顧客リスト:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                dbCustomers = _db.form("customer").all()
+
+                dbCustomers.each do |dbCustomer|
+                    pdfDocument.add(
+                        _pdf.paragraph(dbCustomer.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                end
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _header.contentType("pdf")
+
+                val pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("顧客リスト:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                val dbCustomers = _db.form("customer").all()
+
+                dbCustomers.forEach {
+                    pdfDocument.add(
+                        _pdf.paragraph(it.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _header.contentType("pdf")
+
+                def pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("顧客リスト:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                def dbCustomers = _db.form("customer").all()
+
+                for (dbCustomer in dbCustomers) {
+                    pdfDocument.add(
+                        _pdf.paragraph(dbCustomer.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                pdfDocument.close()
+            `
+        },
+    ]}
+/>
+
+
+#### コードの理解
+
+- **_header.contentType("pdf")**: このリクエストのレスポンスが通常のテキストやJSONではなく、PDFファイルであることをブラウザに通知します。
+
+- **_pdf**: PDFを操作するためのNetunoネイティブリソースです。これを使用して、ページサイズ（A5）を定義し、段落を作成し、フォントサイズ（setFontSize）と色（setFontColor）を調整します。
+
+- **_db.form("customer").all()**: データベースに問い合わせ、フォーム「customer」に保存されているすべてのレコードを返します。繰り返しループ（for）は各顧客を巡回し、「name」フィールドの情報を抽出してドキュメントに出力します。
+
+- **pdfDocument.close()**: ドキュメントの構築を終了し、レスポンスとして送信します。
+
+#### 検証とテスト
+
+サービスのテスト時に毎回ダッシュボードのボタンをクリックする必要はありません。これは単純なリクエスト（GET）であるため、ブラウザからAPIのURLに直接アクセスして実行を検証できます。
+
+この例では、次のアドレスにアクセスします。
+http://localhost:9000/services/customer/export-pdf
+
+PDFファイルが生成され、顧客リストを含む内容が画面に表示されれば、サービスは完全に動作しています。その結果、ダッシュボードのPDF出力ボタンも自動的に機能するようになります。
+
+:::tip バックエンドのエラー追跡
+URLにアクセスしたときにページが空白になるかエラーメッセージが返される場合は、Netunoサーバーが実行されているターミナルをすぐに確認してください。エラーがブラウザのコンソールに表示されるフロントエンドとは異なり、serverフォルダ内のスクリプトの実行失敗はバックエンドサーバーのターミナルに詳細に表示されます。
+:::
+
+## まとめ
+
+このチュートリアルでは、Netunoを使用したフルスタック開発の実践的な流れを体験しました。
+
+主な目的は、プラットフォームが視覚的なインターフェースの構築とサーバーの堅牢性をどのように統合し、常に高い生産性に焦点を当てているかを示すことでした。
+
+完了したステップを振り返ります。
+
+- **フロントエンド開発**: Reactでダッシュボードをカスタマイズし、インターフェースコンポーネントとインタラクティブなボタンをモジュール形式で作成しました。
+
+- **データ管理と構造**: 複雑な永続化ルーチンを書くことなく、パネルでフォームとフィールドをすばやく作成し、情報を登録・操作できることを確認しました。
+
+- **直接クエリ**: Query機能を使用してSQLコマンドを迅速に実行し、データベースをテストしました。
+
+- **バックエンドでのAPI作成**: PDF生成サービスを開発し、Netunoの大きな利点の1つであるホットリロードを確認しました。バックエンドコードを変更するたびにサーバーを再起動する必要がなく、プログラミングが大幅に迅速化されます。
+
+- **最適化された環境**: 統合コンパイルを設定し、フロントエンドとバックエンドのプロセスを単一のターミナルに集約して、集中力を維持し、気を散らさないようにしました。
+
+プラットフォームは、その本質からソフトウェア開発を最適化し、加速するように設計されています。ローコードとカスタムコードの統合の基本的な流れを理解したので、より複雑でスケーラブルなアプリケーションを構築する準備ができました。
+
+新しい機能を習得するために、ドキュメントの次のセクションを引き続き探索してください。
+
+活発なコミュニティの一員であると、開発はずっと簡単になります。このページのフッターにあるソーシャルメディアのリンクにアクセスしてください。

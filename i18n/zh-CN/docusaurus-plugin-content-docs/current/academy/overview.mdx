@@ -1,0 +1,136 @@
+---
+sidebar_position: 1
+id: overview
+title: 概述
+---
+
+import Image from "@site/src/components/Image";
+
+# Netuno 概览
+
+## 简介
+
+欢迎来到 **Netuno**！
+
+我们知道，由于市场上有大量可选方案，采用新技术可能是一项挑战。Netuno 正是为解决这一问题而生：它将最佳工具和解决方案汇集于一处，从而简化开发。
+
+我们是一个专注于生产力的平台。Netuno 最大的加速因素之一，就是没有耗时的编译或构建过程。
+
+我们提供流畅灵活的开发体验，可使用多种编程语言并与主流数据库集成。
+
+Netuno 的**低代码**环境支持多语言，让你可以选择最适合每个服务特定需求的语言。
+
+> 我们的信条很简单：**更少代码，成就更多。**
+
+## 支持的语言
+
+在所有开发选项中，均原生支持以下语言：
+
+* <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>
+* <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>
+* <a href="https://www.jython.org/" target="_blank">Python</a>
+* <a href="https://www.jruby.org/" target="_blank">Ruby</a>
+* <a href="https://kotlinlang.org/" target="_blank">Kotlin</a>
+* <a href="https://groovy-lang.org/" target="_blank">Groovy</a>
+
+## 工作效率
+
+Netuno 通过以下核心支柱消除开发瓶颈：
+
+-  **可靠的工具体系：** 减少前期调研与配置时间。Netuno 已内置当前最高效的解决方案。
+
+- **多语言灵活性：** 在同一生态系统中使用你偏好的编程语言，并针对每个特定 Web 服务使用丰富的现成资源。
+
+- **快速创建 Web 服务：** 低代码方式可让你快速开发复杂的 REST API。
+
+- **轻松集成：** 快速开发后端，并轻松连接任意前端、移动应用、企业门户或电商网站。
+
+- **实时更新（热重载）：** 开发速度快也得益于无需重启服务器。在 Netuno 生态中，没有编译和重启。代码修改立即生效并实时反映。
+
+* **敏捷开发：** 开发过程中可同时测试 API。在 Netuno 中保存代码，即可立即从前端发起请求。
+
+* **聚焦业务规则：** 让 Netuno 处理基础架构与连接。专注于系统如何为最终用户创造更多价值。
+
+![Netuno 是学习 Web 开发的平台](/docs/assets/academy/overview.jpg "Netuno 是学习 Web 开发的平台。")
+
+## 后台管理
+
+该平台将表单界面创建与数据库自动结构化统一起来，从而简化开发流程。
+
+这种方式大幅降低学习曲线，让开发者专注于业务逻辑，而由平台管理基础设施。
+
+这样无需手动编写 SQL 脚本，也无需创建重复的 CRUD（创建、读取、更新、删除）界面。
+
+
+设计表单时，你同时在建模数据库并生成完整的管理界面。
+
+Netuno 提供开箱即用的管理生态，包括：
+
+| 功能 | 说明 |
+| :--- | :--- |
+| **关系** | 自动管理关系图、外键和表之间的关联。 |
+| **高级搜索** | 精细筛选，快速定位记录。 |
+| **文件管理** | 用于上传图片和文档的原生组件。 |
+| **导出** | 按兼容格式导出数据以用于报表。 |
+| **安全** | 访问配置控制和集成认证。 |
+
+Netuno 是**开源**的，让你可以免费且协作地探索该工具的全部潜力，以高生产率完成复杂工作。[立即开始](/docs/get-started/installation)。
+
+## 数据库
+
+Netuno 将后台管理创建与数据库结构统一起来，从而简化数据管理。这种构建方式无需为创建表手动编写复杂的 SQL 脚本。
+
+通过可视化界面，可以定义字段和关系，平台会将这些定义同步到数据库，并自动生成管理界面和数据关系图。
+
+## 数据关系图
+
+Netuno 会自动生成动态图，表示应用的数据模型。该功能对于查看信息架构和表之间的关联至关重要。
+
+<Image src={require("/static/docs/assets/academy/overview/diagram.jpg").default} />
+
+## 查询
+
+Netuno 提供强大且直观的数据库控制台，让开发者能够以敏捷且有序的方式直接与数据交互。
+
+可以保存复杂或常用命令，以便日后快速访问。系统会保留已执行命令的历史记录，便于审计和恢复先前的查询逻辑。
+
+控制台支持同时执行多个命令。要分隔指令并确保 Netuno 正确解释每一条指令，请使用双分号 `;;` 作为分隔符。
+
+<Image src={require("/static/docs/assets/academy/overview/query.jpg").default} />
+
+## 低代码与多语言开发
+
+
+Netuno 以其灵活的架构脱颖而出，允许每个项目同时使用多种编程语言。
+
+可以创建多个独立应用（项目），并在每个应用中使用 Netuno 支持的主流编程语言编写服务。
+
+平台会根据在服务器服务目录中创建的文件扩展名，自动识别要使用的执行引擎，例如：
+
+- `.js` - JavaScript
+- `.py` - Python
+- `.rb` - Ruby
+- `.kts` - Kotlin Script
+- `.groovy` - Groovy
+
+
+## 服务结构
+
+在 Netuno 附带的演示应用中，你可以查看这些语言如何共存的真实示例。服务位于：
+
+- [apps/demo/server/services/samples](https://github.com/netuno-org/platform/tree/main/bundle/base/apps/demo/server/services/samples)
+
+下面是一个使用 **JavaScript** 编写的服务示例，用于管理附件上传和用户验证：
+
+<Image src={require("/static/docs/assets/academy/overview/code.jpg").default} />
+
+
+如需深入了解如何充分利用平台的多语言能力，请查看以下资源：
+
+- [低代码多语言功能通用文档](/docs/category/resources)
+
+探索源代码、关注更新，并**点亮 Star 支持项目：**
+
+- ⭐ [GitHub 上的 Netuno Platform](https://github.com/netuno-org/platform)
+
+如果发现错误（bug）或有新功能建议，欢迎提交 Issue。我们的团队和社区随时提供帮助。

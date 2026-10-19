@@ -1,0 +1,58 @@
+{
+  "link.title.Open Source": {
+    "message": "Open Source",
+    "description": "Der Titel der Fußzeilen-Linkspalte mit dem Titel=Open Source in der Fußzeile"
+  },
+  "link.title.Community": {
+    "message": "Community",
+    "description": "Der Titel der Fußzeilen-Linkspalte mit dem Titel=Community in der Fußzeile"
+  },
+  "link.title.More": {
+    "message": "Mehr",
+    "description": "Der Titel der Fußzeilen-Linkspalte mit dem Titel=More in der Fußzeile"
+  },
+  "link.item.label.Installation": {
+    "message": "Installation",
+    "description": "Die Bezeichnung des Fußzeilen-Links mit label=Installation, der auf /docs/get-started/installation verlinkt"
+  },
+  "link.item.label.Releases": {
+    "message": "Releases",
+    "description": "Die Bezeichnung des Fußzeilen-Links mit label=Releases, der auf https://github.com/netuno-org/platform/releases verlinkt"
+  },
+  "link.item.label.Documentation": {
+    "message": "Dokumentation",
+    "description": "Die Bezeichnung des Fußzeilen-Links mit label=Documentation, der auf https://github.com/netuno-org/doc verlinkt"
+  },
+  "link.item.label.YouTube": {
+    "message": "YouTube",
+    "description": "Die Bezeichnung des Fußzeilen-Links mit label=YouTube, der auf https://www.youtube.com/channel/UCYY1Nz6T2NJtP29vba2fqkg verlinkt"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "Die Bezeichnung des Fußzeilen-Links mit label=Discord, der auf https://discord.gg/4sfXG6YWFu verlinkt"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "Die Bezeichnung des Fußzeilen-Links mit label=LinkedIn, der auf https://www.linkedin.com/company/netuno-org/ verlinkt"
+  },
+  "link.item.label.Instagram": {
+    "message": "Instagram",
+    "description": "Die Bezeichnung des Fußzeilen-Links mit label=Instagram, der auf https://www.instagram.com/netuno_org/ verlinkt"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Die Bezeichnung des Fußzeilen-Links mit label=GitHub, der auf https://github.com/netuno-org/ verlinkt"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "Die Bezeichnung des Fußzeilen-Links mit label=Twitter, der auf https://twitter.com/netuno_org verlinkt"
+  },
+  "link.item.label.Facebook": {
+    "message": "Facebook",
+    "description": "Die Bezeichnung des Fußzeilen-Links mit label=Facebook, der auf https://www.facebook.com/netuno.org/ verlinkt"
+  },
+  "copyright": {
+    "message": "Copyright © 2025 <a target=\"_blank\" href=\"https://www.sitana.pt/pt\">Sitana</a>",
+    "description": "Der Copyright-Hinweis der Fußzeile"
+  }
+}

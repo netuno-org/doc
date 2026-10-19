@@ -4,53 +4,47 @@ id: api
 title: API
 ---
 
-_Netuno_ has its own framework for creating low-code REST APIs, with support for JWT (JSON Web Token) and OpenAPI 3.0.
+Netuno has its own framework for creating REST APIs in a low-code way, with support for JWT (JSON Web Token) and OpenAPI 3.0.
 
-> More info about [Open API](/docs/academy/server/services/openapi).
+The entire framework for developing web services in Netuno is very versatile, allowing any type of development.
 
-The entire development framework of web services in _Netuno_ is very versatile allowing any type of development to be carried out.
+The framework already provides many features for low-code development, saving many lines of code to meet the most common needs such as sending emails, consuming other REST APIs, integrating with other databases, generating PDF and Excel files, sending SMS, manipulating database data, among many others.
 
-The framework already offers several features for low-code development, saving many lines of code to fulfill the most common needs such as sending `mails`, consuming other `REST APIs`, integrating with other `databases`, generating `PDF` and `Excel` files, sending `SMS`, manipulating data database and many others.
-
-Nevertheless when there are no solutions in the _Netuno_ framework, it is possible to easily integrate existing **Java**, **Kotlin**, or even **JavaSript** libraries or to develop resources tailored to be integrated with the _Netuno_ framework.
+And when there are no solutions in Netuno's framework, it is possible to easily integrate existing Java, Kotlin, or even JavaScript libraries to develop custom resources and integrate them with Netuno's framework.
 
 ## JWT - JSON Web Token
 
-[JWT.io](https://jwt.io/) is the standard specification for passing data from the session context to the client via JSON object.
+[JWT.io](https://jwt.io/) is the specification of the standard for passing session context data to the client via a JSON object.
 
-> More info about [JWT Token](/docs/academy/server/services/jwt).
+Thus, the server does not need to store the sensitive data of logged-in users in the session; instead, it becomes a token that is transmitted to the client, and later, on each request, this token must be returned.
 
-Therefore, the server does not need to store the sensitive data of the users logged in, instead it becomes a token that is passed on to the client and later on each request this token must be returned.
+This token undergoes some security checks, such as its expiration time and a process that allows creating a new token without requiring re-authentication.
 
-This token undergoes some security controls such as a validity timeout and a process to allow the creation of a new token without requiring new authentication.
-
-_Netuno_ has integrated **JWT support**, simple and easy to use, also works integrated with _Netuno_ users and native authenticity.
+Netuno has integrated support for JWT; it is simple and easy to use, and it also works integrated with Netuno's native users and authentication.
 
 ## OpenAPI 3.0
 
-After the success of Swagger v1 and v2, which have long since become a standard for developing the definition of web services and generating client code.
+After the success of Swagger v1 and v2, which long ago became a standard for developing web service definitions and generating client code.
 
-Swagger made its definition open and started to be [OpenAPI 3](https://www.openapis.org/).
+Thus, Swagger made its definition open and became [OpenAPI 3](https://www.openapis.org/).
 
-For this reason, remains the foundation for setting the standard of how it is documenting the API and how customers are generated to consume the API.
+Where it remains the foundation for defining the standard for how the API is documented and how clients are generated to consume the API.
 
-_Netuno_ already has all the integration with OpenAPI 3.0 and that uses the definition of OpenAPI together with the validation of [JSON Schema](https://json-schema.org/).
+Netuno already provides full integration with OpenAPI 3.0 and uses the OpenAPI definition together with [JSON Schema](https://json-schema.org/) validation.
 
-_Netuno_ allows validating the `input` and `output` of web services using the validation of the `JSON schema` to obtain and return as you can see below:
+This means that Netuno also allows validating the input and output of web services, using validation of the JSON schema obtained and returned, thus for:
 
-- `Input`: If there is a call to the web service that does not comply with the structure and validations then it will be rejected.
-- `Output`: If data is returned that does not comply with the defined structure and validations, then an alert is generated that the web service is not in compliance.
+- `Input`: If there is a call to the web service that does not comply with the structure and validations, then it is rejected
+- `Output`: If it returns data that does not comply with the defined structure and validations, then an alert is generated that the web service is not compliant.
 
-_Netuno_ saves the creation of many `if`s in code to validate the data received, as well as guarantee a validation of the result that the web service is generating, performing a _unit test_.
+Thus, Netuno both saves the creation of many `if`s in code for validating received data and also guarantees validation of the result that the web service is generating, performing a _unit test_.
 
-The OpenAPI structure generated by _Netuno_ can be used with the [Swagger Editor](https://editor.swagger.io/) to generate the test interface, documentation and code for API clients in other technologies.
+The structure of the OpenAPI generated by Netuno can also be used with the [Swagger Editor](https://editor.swagger.io/) to generate the testing interface, documentation, and client code for the API in other technologies.
 
 ## Basic
 
-_Netuno_ also supports the creation of web services and hassle-free authentication. It is not compulsory to use JWT or OpenAPI, despite being a highly recommended and standard tool.
+Netuno also supports creating web services and authentication without complications, meaning it is not mandatory to use JWT or OpenAPI, although it is the standard recommendation.
 
-It is often used to accelerate the building process of the API or even in situations that involve communication between servers, we choose to simplify as much as possible and save more time.
+Often, to speed up API creation or in situations involving server-to-server communication, one chooses to simplify as much as possible and save time.
 
-> _Netuno_ allows [HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication).
-
-
+> Netuno supports [HTTP authentication](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Authentication).

@@ -1,0 +1,1339 @@
+---
+id: pdf
+title: PDF
+sidebar_label: PDF
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+カスタムPDFファイルを処理します。
+
+## はじめに
+
+Netunoは、Netunoがサポートするさまざまなプログラミング言語向けに [iTextPDF](https://itextpdf.com/) の低コード抽象化を可能にする [PDF](/docs/library/resources/pdf) リソースを通じて、画像、表、フォントなどをサポートするPDFファイルを生成します。
+
+Netunoに付属する **demo** というアプリケーション（デモアプリケーション）には、さまざまな言語でのコード実装例が多数含まれています。これには、次の場所にある `export-pdf` サービスを通じたPDFエクスポートのデモも含まれます：
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/export-pdf`
+]} />
+
+## 初期化
+
+まず、作成する新しいドキュメントのコンテキストを含むオブジェクトを作成する必要があります。デフォルトのページサイズはA4です。
+
+ドキュメントを作成するときに、生成先を定義します。
+
+何も定義しない場合は、たとえばサービスのデータ出力に生成されます：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument()
+            `
+        },
+    ]}
+/>
+
+
+アプリケーションの `docs` フォルダ内にPDFファイルを生成するには、次のようにします：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_app.file("docs/ファイル.pdf").output())
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_app.file("docs/ファイル.pdf").output())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_app.file("docs/ファイル.pdf").output())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_app.file("docs/ファイル.pdf").output())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_app.file("docs/ファイル.pdf").output())
+            `
+        },
+    ]}
+/>
+
+アプリケーション外の新しいファイルにドキュメントを生成する場合は、たとえば：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_os.file("/tmp/ファイル.pdf").output())
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_os.file("/tmp/ファイル.pdf").output())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_os.file("/tmp/ファイル.pdf").output())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_os.file("/tmp/ファイル.pdf").output())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_os.file("/tmp/ファイル.pdf").output())
+            `
+        },
+    ]}
+/>
+
+または、アプリケーションの `storage` 内：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_storage.filesystem("server", "ファイル.pdf").output())
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_storage.filesystem("server", "ファイル.pdf").output())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_storage.filesystem("server", "ファイル.pdf").output())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_storage.filesystem("server", "ファイル.pdf").output())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_storage.filesystem("server", "ファイル.pdf").output())
+            `
+        },
+    ]}
+/>
+
+> デフォルトでは、ドキュメントは **A4** のページ形式で作成されます。
+
+### ページ形式
+
+ページ形式をカスタマイズするには、ドキュメント作成時に指定するだけです。
+
+**レター** 形式のページで、サービスのデータ出力用に新しいドキュメントを作成します：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+    ]}
+/>
+
+アプリケーションのルートにあるファイル用に、**B3** のページ形式で新しいドキュメントを作成します：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_app.file("ファイル.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_app.file("ファイル.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_app.file("ファイル.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_app.file("ファイル.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_app.file("ファイル.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+    ]}
+/>
+
+アプリケーションの `storage` 内に、**リーガル** のページ形式で新しいドキュメントを作成します：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.newDocument(_storage.filesystem("server", "ファイル.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.newDocument(_storage.filesystem("server", "ファイル.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.newDocument(_storage.filesystem("server", "ファイル.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.newDocument(_storage.filesystem("server", "ファイル.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.newDocument(_storage.filesystem("server", "ファイル.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+    ]}
+/>
+
+> ページサイズの定義に関するドキュメントについては、[ページサイズの定義](/docs/library/resources/pdf/#pagesize) を参照してください。
+
+PDFドキュメントは、カスタムのページサイズを定義して作成することもできます。そのためには、`pageSize` にページの幅と高さの値を渡します。たとえば：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.pageSize(50, 30)
+            `
+        },
+    ]}
+/>
+
+## HTTPヘッダー
+
+REST APIでPDFファイルをデータ出力として返すサービスを作成するには、HTTPプロトコルの `Content-Type` パラメータをヘッダーに追加する必要があります。
+
+コンテンツをPDFとして定義する例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("pdf")
+            `
+        },
+    ]}
+/>
+
+`pdf` というコードは次の略称です：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("application/pdf")
+            `
+        },
+    ]}
+/>
+
+## ページ区切り
+
+新しいページを作成するには `areaBreak` を使用します：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.areaBreak()
+                )
+            `
+        },
+    ]}
+/>
+
+## 段落
+
+ドキュメントに新しい段落を追加します：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.paragraph("ここにテキスト...")
+                        .setFontSize(15)
+                )
+            `
+        },
+    ]}
+/>
+
+固定位置に段落を追加するには：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    pdfDocument.add(
+                        _pdf.paragraph("固定テキスト...")
+                            .setFixedPosition(100, 500, 200)
+                            .setFontSize(15)
+                    )
+                )
+            `
+        },
+    ]}
+/>
+
+上記のコードでは、`setFixedPosition` メソッドの最初のパラメータがX位置（`100`）、2番目のパラメータがY位置（`500`）、3番目のパラメータが幅（`200`）です。
+
+**注意：** Yを `0` に設定するとページの最下部になります。上に移動するにはYの値を大きくします。Yの値が大きいほど上に表示されますが、ページの長さを超えて大きすぎると表示されません。
+
+> [iTextの段落](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Paragraph.html)オブジェクトのすべてのメソッドに関するドキュメント。
+
+## フォント
+
+ネイティブフォントを定義するには、次のようにします：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const helvetica = _pdf.font("helvetica")
+                const helveticaBold = _pdf.font("helvetica-bold")
+                const helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                const helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                helvetica = _pdf.font("helvetica")
+                helveticaBold = _pdf.font("helvetica-bold")
+                helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                helvetica = _pdf.font("helvetica")
+                helveticaBold = _pdf.font("helvetica-bold")
+                helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val helvetica = _pdf.font("helvetica")
+                val helveticaBold = _pdf.font("helvetica-bold")
+                val helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                val helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def helvetica = _pdf.font("helvetica")
+                def helveticaBold = _pdf.font("helvetica-bold")
+                def helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
+                def helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+    ]}
+/>
+
+カスタムフォントを定義するには、`storage` を使用できます：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def viksiScript = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+    ]}
+/>
+
+アプリケーション内のファイルを使用することもできます。次の例では、フォントがアプリケーションのルートにある `fonts` フォルダ内にあります：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
+            `
+        },
+    ]}
+/>
+
+または、システム上の任意のパスにあるファイルを使用することもできます。次の例では、フォントはシステムの一時ファイルフォルダ内にある `fonts` フォルダにあります：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
+            `
+        },
+    ]}
+/>
+
+> [iTextのフォント](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/kernel/font/PdfFont.html)オブジェクトのすべてのメソッドに関するドキュメント。
+
+テキストでフォントを使用するには、フォント定数を段落に渡す必要があります。次のようにします：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.paragraph("太字フォントを使用しています。")
+                        .setFont(helveticaBold)
+                        .setFontSize(15)
+                )
+            `
+        },
+    ]}
+/>
+
+## 画像
+
+プログラムで生成するPDFドキュメントに画像を挿入するには、次のようにします：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.image(_storage.filesystem("server", "samples/export-pdf", "logo.png"))
+                        .scaleAbsolute(120, 36)
+                )
+            `
+        },
+    ]}
+/>
+
+`scaleAbsolute` メソッドは、画像のサイズ変更と調整に非常に便利です。
+
+代わりに、次の例のようにアプリケーション内のファイルを使用できます：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def imageLogo = _pdf.image(_app.file("public/images/logo.png")
+            `
+        },
+    ]}
+/>
+
+または、次の例のようにシステム上の任意のパスにあるファイルを使用できます：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def imageLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
+            `
+        },
+    ]}
+/>
+
+固定位置に画像を追加するには：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    imageLogo
+                        .scaleAbsolute(120, 36)
+                        .setFixedPosition(100, 500)
+                )
+            `
+        },
+    ]}
+/>
+
+上記の `setFixedPosition` メソッドでは、最初のパラメータがX位置（`100`）、2番目のパラメータがY位置（`500`）です。
+
+**注意：** Yを `0` に設定するとページの最下部になります。上に移動するにはYの値を大きくします。Yの値が大きいほど上に表示されますが、ページの長さを超えて大きすぎると表示されません。
+
+> [iTextの画像](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Image.html)オブジェクトのすべてのメソッドに関するドキュメント。
+
+## 表
+
+表を作成できるため、データの集合をより読みやすく提示できます。
+
+表の列数はパラメータ `_pdf.table(列数)` で定義します。
+
+以下の例では `列数` は `1`、つまり1列です。
+
+表に2つのセルを追加しているため、2番目のセルは次の行に移動します。
+
+ご覧ください：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.add(
+                    _pdf.table(1)
+                        .addCell(
+                            _pdf.cell()
+                                .add(
+                                    _pdf.paragraph("人物")
+                                        .setFont(helvetica)
+                                        .setFontSize(10)
+                                )
+                                .setBorder(_pdf.border("solid", 2))
+                                .setBackgroundColor(_pdf.colorRGB(1, 0, 0))
+                        )
+                        .addCell(
+                            _pdf.cell()
+                                .add(
+                                    _pdf.paragraph("ニコル")
+                                        .setFont(helvetica)
+                                        .setFontSize(10)
+                                )
+                                .setBackgroundColor(_pdf.colorGray(0.5))
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+`addCell` メソッドを使用すると、セルの定義とそれぞれの内容を挿入できます。
+
+> [iTextのセル](https://api.itextpdf.com/iText/java//8.0.3/com/itextpdf/layout/element/Cell.html)オブジェクトのすべてのメソッドに関するドキュメント。
+
+## ドキュメントを閉じて保存
+
+ドキュメントは、`close` メソッドが呼び出されたときにのみ完全に保存または生成されます。次のようにします：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                pdfDocument.close()
+            `
+        },
+    ]}
+/>
+
+ドキュメントをどこに生成するかは初期化時に定義されます。したがって、最終ドキュメントをサービスのデータ出力（`output`）に生成するかファイルに生成するかは、ドキュメントの初期化時に定義します。
+
+## ファイルの編集
+
+既存のPDFドキュメントを編集できます。例えば：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.openDocument(_app.file("ファイル.pdf"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.openDocument(_app.file("ファイル.pdf"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.openDocument(_app.file("ファイル.pdf"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.openDocument(_app.file("ファイル.pdf"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.openDocument(_app.file("ファイル.pdf"))
+            `
+        },
+    ]}
+/>
+
+生成された最終ドキュメントは、サービスのデータ出力に送信されます。
+
+> PDFをテンプレートのようにベースとして使用する場合に非常に便利です。
+
+アプリケーションの `storage` にあるドキュメントを編集する例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'ファイル.pdf'))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'ファイル.pdf'))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'ファイル.pdf'))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'ファイル.pdf'))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.openDocument(_storage.filesystem('server', 'ファイル.pdf'))
+            `
+        },
+    ]}
+/>
+
+ドキュメントをベースとして使用し、変更を新しいPDFファイルに保存します：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.openDocument(
+                    _app.file("ベース文書.pdf"),
+                    _app.file("最終文書.pdf")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.openDocument(
+                    _app.file("ベース文書.pdf"),
+                    _app.file("最終文書.pdf")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.openDocument(
+                    _app.file("ベース文書.pdf"),
+                    _app.file("最終文書.pdf")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.openDocument(
+                    _app.file("ベース文書.pdf"),
+                    _app.file("最終文書.pdf")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.openDocument(
+                    _app.file("ベース文書.pdf"),
+                    _app.file("最終文書.pdf")
+                )
+            `
+        },
+    ]}
+/>
+
+`storage` にあるドキュメントをベースとして使用し、別の場所に保存する例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "契約ベース.pdf"),
+                    _storage.filesystem("server", "契約最終.pdf")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "契約ベース.pdf"),
+                    _storage.filesystem("server", "契約最終.pdf")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "契約ベース.pdf"),
+                    _storage.filesystem("server", "契約最終.pdf")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "契約ベース.pdf"),
+                    _storage.filesystem("server", "契約最終.pdf")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfDocument = _pdf.openDocument(
+                    _storage.filesystem("server", "契約ベース.pdf"),
+                    _storage.filesystem("server", "契約最終.pdf")
+                )
+            `
+        },
+    ]}
+/>
+
+ドキュメントを読み込んだ後、コンテンツを追加できます。最後に `close` メソッドで閉じると、プログラムで追加した新しいコンテンツを含む最終ドキュメントが生成されます。
+
+既存のPDFをテンプレートとして使用し、動的コンテンツを追加したPDFファイルを出力するサービスの例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("pdf")
+
+                const pdfDocument = _pdf.openDocument(_app.file("テンプレート-1.pdf"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("動的コンテンツ。")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.openDocument(_app.file("テンプレート-1.pdf"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("動的コンテンツ。")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.openDocument(_app.file("テンプレート-1.pdf"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("動的コンテンツ。")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _header.contentType("pdf")
+
+                val pdfDocument = _pdf.openDocument(_app.file("テンプレート-1.pdf"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("動的コンテンツ。")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _header.contentType("pdf")
+
+                def pdfDocument = _pdf.openDocument(_app.file("テンプレート-1.pdf"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("動的コンテンツ。")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                pdfDocument.close()
+            `
+        },
+    ]}
+/>
+
+## ファイルの読み取り
+
+PDFドキュメントを読み取り、テキスト情報を抽出するには。
+
+`extract` メソッドを使用します。これはPDFファイルのすべてのデータをJSONオブジェクトとして取得します。
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pdfData = _pdf.extract(_app.file("ファイル-1.pdf"))
+
+                _out.json(pdfData)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                pdfData = _pdf.extract(_app.file("ファイル-1.pdf"))
+
+                _out.json(pdfData)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                pdfData = _pdf.extract(_app.file("ファイル-1.pdf"))
+
+                _out.json(pdfData)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val pdfData = _pdf.extract(_app.file("ファイル-1.pdf"))
+
+                _out.json(pdfData)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def pdfData = _pdf.extract(_app.file("ファイル-1.pdf"))
+
+                _out.json(pdfData)
+            `
+        },
+    ]}
+/>
+
+返されるJSONには、PDFファイルのすべてのテキスト内容を持つ `content` キーと、PDFファイルのさまざまなプロパティを持つ `metadata` キーがあります。
+
+`extract` によって返されるJSONの例を次に示します：
+
+```json
+{
+  "content": "PDFファイルのすべてのテキスト内容がここに表示されます...",
+  "metadata":{
+    "Content-Type":"application/pdf",
+    "dc:format":"application/pdf; version=1.4",
+    "dc:title":"Linux 1",
+    "pdf:PDFVersion":"1.4",
+    "pdf:charsPerPage":"580",
+    "pdf:containsDamagedFont":"false",
+    "pdf:containsNonEmbeddedFont":"false",
+    "pdf:docinfo:producer":"Skia/PDF m125 Google Docs Renderer",
+    "pdf:docinfo:title":"ファイル1",
+    "pdf:encrypted":"false",
+    "xmpTPg:NPages":"3",
+    ...
+  }
+}
+```
+
+`metadata` で取得されるデータは他にも多数ありますが、例が長くなりすぎないよう `...` では省略しています。
+
+## 変換
+
+プログラムでPDFをテキストまたはHTMLに変換できます。
+
+### PDFからテキストへ
+
+次のメソッドを使用すると、PDFファイルのすべての内容を連続テキストとして抽出できます：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.toText(...)
+            `
+        },
+    ]}
+/>
+
+アプリケーションのルートにあるファイルを読み取るために使用する例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toText(_app.file("私の文書.pdf")))
+            `
+        },
+    ]}
+/>
+
+または、アプリケーションの `storage` にあるファイルを使用する場合：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toText(_storage.filesystem("server", "私の文書.pdf")))
+            `
+        },
+    ]}
+/>
+
+
+### PDFからHTMLへ
+
+
+次のメソッドを使用すると、PDFファイルのすべての内容をHTMLとして抽出できます：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.toHTML(...)
+            `
+        },
+    ]}
+/>
+
+アプリケーションのルートにあるファイルを読み取るために使用する例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toHTML(_app.file("私の文書.pdf")))
+            `
+        },
+    ]}
+/>
+
+または、アプリケーションの `storage` にあるファイルを使用する場合：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toHTML(_storage.filesystem("server", "私の文書.pdf")))
+            `
+        },
+    ]}
+/>
+
+### HTMLからPDFへ
+
+
+HTMLコードからPDFファイルを生成できます。次のメソッドを使用します：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.fromHTML(...)
+            `
+        },
+    ]}
+/>
+
+サービスでダウンロードファイルを生成するために使用する例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const icon = _app.file("public/images/icon.png");
+
+                const pdfFile = _pdf.fromHTML(\`
+                    <html>
+                        <head>
+                            <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Roboto" rel="stylesheet">
+                            <style>
+                                * {
+                                    font-family: Roboto;
+                                }
+                                div.sidebar {
+                                    position: fixed;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100px;
+                                    background: #1B5886;
+                                }
+                                div.sidebar > div {
+                                    position: absolute;
+                                    top: 350px;
+                                    transform: rotate(-90deg) translate(-50%, -34px);
+                                    font-family: Limelight;
+                                    font-size: 40px;
+                                    color: #89CFF1;
+                                }
+                                main {
+                                    padding-left: 150px;
+                                }
+                                h1 {
+                                    margin: 0 auto;
+                                    text-align: center;
+                                    font-family: Limelight;
+                                    color: #BA250E;
+                                }
+                                table {
+                                    margin: 0 auto;
+                                    border: 1px solid black;
+                                    border-spacing: 0;
+                                    border-collapse: collapse;
+                                }
+                                table > thead {
+                                    background: #40712A;
+                                    color: #fff;
+                                }
+                                table td, table th {
+                                    padding: 5px;
+                                    text-align: center;
+                                }
+                                table > tbody > tr:nth-child(even) {
+                                    background: #e1e1e1;
+                                }
+                                a {
+                                    font-family: Limelight;
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    text-decoration: none;
+                                    color: #1E5FB5;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="sidebar">
+                                <div>デモ</div>
+                            </div>
+                            <main>
+                                <h1>HTMLからPDF</h1>
+                                <div style="text-align: center; margin: 30px 0;">
+                                    <img width="50" src="\${icon.uri()}">
+                                </div>
+                                <p>
+                                    これはPDFファイル生成のためのHTMLの例です。
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                                    tellus arcu, pharetra quis condimentum eget, dapibus convallis metus.
+                                </p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>名前</th>
+                                            <th>年齢</th>
+                                        </tr>
+                                    </thread>
+                                    <tbody>
+                                        <tr>
+                                            <td>山田 花子</td>
+                                            <td>23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>佐藤 健</td>
+                                            <td>38</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr style="margin-top: 50px; height: 1px; background: #50B6C6; border: none;"/>
+                                <div>
+                                    <a href="https://netuno.org" target="_blank">Netuno.org</a>
+                                </div>
+                            </main>
+                        </body>
+                    </html>
+                \`);
+
+                _header.contentTypePDF();
+                _out.copy(pdfFile.input());
+            `
+        },
+    ]}
+/>
+
+## 動画
+
+プログラムでPDFファイルを生成する方法の例を示す動画をいくつか紹介します：
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/OyUzHr9hi0c?si=eTecDP0i0P_9rhG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -1,0 +1,1340 @@
+---
+id: pdf
+title: PDF
+sidebar_label: PDF
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Procesarea fișierelor PDF personalizate.
+
+## Introducere
+
+Netuno generează fișiere PDF cu suport pentru imagini, tabele, fonturi și multe altele, prin resursa [PDF](/docs/library/resources/pdf) care permite o abstractizare low-code a [iTextPDF](https://itextpdf.com/) pentru diversele limbaje de programare acceptate de Netuno.
+
+Aplicația care vine împreună cu Netuno, denumită **demo** (aplicație de demonstrație), conține numeroase exemple de implementări de cod în diverse limbaje, inclusiv demonstrația exportului în PDF prin serviciul `export-pdf`, care se află în:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/export-pdf`
+]} />
+
+## Inițializare
+
+În primul rând, este necesar să se creeze obiectul care va conține contextul noului document ce este creat; în mod implicit, dimensiunea paginilor este A4.
+
+La crearea documentului se definește unde va fi generat.
+
+Dacă nu se definește nimic, acesta va fi generat în ieșirea de date a serviciului, de exemplu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const documentPdf = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                documentPdf = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                documentPdf = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val documentPdf = _pdf.newDocument()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def documentPdf = _pdf.newDocument()
+            `
+        },
+    ]}
+/>
+
+
+Pentru a genera un fișier PDF în folderul `docs` al aplicației, se poate face astfel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const documentPdf = _pdf.newDocument(_app.file("docs/fișier.pdf").output())
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                documentPdf = _pdf.newDocument(_app.file("docs/fișier.pdf").output())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                documentPdf = _pdf.newDocument(_app.file("docs/fișier.pdf").output())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val documentPdf = _pdf.newDocument(_app.file("docs/fișier.pdf").output())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def documentPdf = _pdf.newDocument(_app.file("docs/fișier.pdf").output())
+            `
+        },
+    ]}
+/>
+
+Dacă se generează documentul într-un fișier nou în afara aplicației, de exemplu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const documentPdf = _pdf.newDocument(_os.file("/tmp/fișier.pdf").output())
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                documentPdf = _pdf.newDocument(_os.file("/tmp/fișier.pdf").output())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                documentPdf = _pdf.newDocument(_os.file("/tmp/fișier.pdf").output())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val documentPdf = _pdf.newDocument(_os.file("/tmp/fișier.pdf").output())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def documentPdf = _pdf.newDocument(_os.file("/tmp/fișier.pdf").output())
+            `
+        },
+    ]}
+/>
+
+Sau chiar în `storage`-ul aplicației:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const documentPdf = _pdf.newDocument(_storage.filesystem("server", "fișier.pdf").output())
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                documentPdf = _pdf.newDocument(_storage.filesystem("server", "fișier.pdf").output())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                documentPdf = _pdf.newDocument(_storage.filesystem("server", "fișier.pdf").output())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val documentPdf = _pdf.newDocument(_storage.filesystem("server", "fișier.pdf").output())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def documentPdf = _pdf.newDocument(_storage.filesystem("server", "fișier.pdf").output())
+            `
+        },
+    ]}
+/>
+
+> În mod implicit, documentul este creat cu formatul de pagină **A4**.
+
+### Formatul paginii
+
+Pentru a personaliza formatul paginii, este suficient să se indice la crearea documentului.
+
+Creează un document nou pentru ieșirea de date a serviciului cu pagini în formatul **letter**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const documentPdf = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                documentPdf = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                documentPdf = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val documentPdf = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def documentPdf = _pdf.newDocument(_pdf.pageSize("letter"))
+            `
+        },
+    ]}
+/>
+
+Creează un document nou pentru un fișier în rădăcina aplicației cu formatul de pagină **B3**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const documentPdf = _pdf.newDocument(_app.file("fișier.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                documentPdf = _pdf.newDocument(_app.file("fișier.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                documentPdf = _pdf.newDocument(_app.file("fișier.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val documentPdf = _pdf.newDocument(_app.file("fișier.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def documentPdf = _pdf.newDocument(_app.file("fișier.pdf").output(), _pdf.pageSize("B3"))
+            `
+        },
+    ]}
+/>
+
+Creează un document nou în `storage`-ul aplicației cu formatul de pagină **legal**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const documentPdf = _pdf.newDocument(_storage.filesystem("server", "fișier.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                documentPdf = _pdf.newDocument(_storage.filesystem("server", "fișier.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                documentPdf = _pdf.newDocument(_storage.filesystem("server", "fișier.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val documentPdf = _pdf.newDocument(_storage.filesystem("server", "fișier.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def documentPdf = _pdf.newDocument(_storage.filesystem("server", "fișier.pdf").output(), _pdf.pageSize("legal"))
+            `
+        },
+    ]}
+/>
+
+> Consultați documentația despre [definirea dimensiunii paginilor](/docs/library/resources/pdf/#pagesize).
+
+Documentele PDF pot fi create cu definirea dimensiunii personalizate a paginii; pentru aceasta, utilizați `pageSize` transmițând valorile lățimii și înălțimii paginii, de exemplu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.pageSize(50, 30)
+            `
+        },
+    ]}
+/>
+
+## Antet HTTP
+
+Pentru a crea un serviciu în API-ul REST care returnează un fișier PDF ca ieșire de date, este necesar să se adauge în antet parametrul `Content-Type` al protocolului HTTP.
+
+Exemplu de definire a conținutului ca PDF:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("pdf")
+            `
+        },
+    ]}
+/>
+
+Codul `pdf` este o abreviere pentru:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("application/pdf")
+            `
+        },
+    ]}
+/>
+
+## Salt de pagină
+
+Pentru a crea o pagină nouă se utilizează `areaBreak`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                documentPdf.add(
+                    _pdf.areaBreak()
+                )
+            `
+        },
+    ]}
+/>
+
+## Paragraf
+
+Adaugă un paragraf nou în document:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                documentPdf.add(
+                    _pdf.paragraph("Textul meu aici...")
+                        .setFontSize(15)
+                )
+            `
+        },
+    ]}
+/>
+
+Pentru a adăuga un paragraf într-o poziție fixă:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                documentPdf.add(
+                    documentPdf.add(
+                        _pdf.paragraph("Textul meu fix...")
+                            .setFixedPosition(100, 500, 200)
+                            .setFontSize(15)
+                    )
+                )
+            `
+        },
+    ]}
+/>
+
+În codul de mai sus, în metoda `setFixedPosition`, primul parametru este poziția X (`100`), al doilea parametru este poziția Y (`500`), iar al treilea parametru este lățimea (`200`).
+
+**Atenție:** dacă Y este definit cu valoarea `0`, înseamnă că se află în partea de jos a paginii; prin urmare, pentru a urca trebuie crescută valoarea lui Y; cu cât valoarea lui Y este mai mare, cu atât va apărea mai sus, dar dacă este prea mare dincolo de lungimea paginii, atunci nu va fi vizibil.
+
+> Documentație cu toate metodele obiectului [Paragraf din iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Paragraph.html).
+
+## Font
+
+Pentru a defini un font nativ, putem face astfel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const helvetica = _pdf.font("helvetica")
+                const helveticaAldin = _pdf.font("helvetica-bold")
+                const helveticaAldinOblique = _pdf.font("helvetica-boldoblique")
+                const helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                helvetica = _pdf.font("helvetica")
+                helveticaAldin = _pdf.font("helvetica-bold")
+                helveticaAldinOblique = _pdf.font("helvetica-boldoblique")
+                helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                helvetica = _pdf.font("helvetica")
+                helveticaAldin = _pdf.font("helvetica-bold")
+                helveticaAldinOblique = _pdf.font("helvetica-boldoblique")
+                helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val helvetica = _pdf.font("helvetica")
+                val helveticaAldin = _pdf.font("helvetica-bold")
+                val helveticaAldinOblique = _pdf.font("helvetica-boldoblique")
+                val helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def helvetica = _pdf.font("helvetica")
+                def helveticaAldin = _pdf.font("helvetica-bold")
+                def helveticaAldinOblique = _pdf.font("helvetica-boldoblique")
+                def helveticaOblique = _pdf.font("helvetica-oblique")
+            `
+        },
+    ]}
+/>
+
+Iar pentru a defini un font personalizat la cerere, putem utiliza `storage`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const scriptViksi = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                scriptViksi = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                scriptViksi = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val scriptViksi = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def scriptViksi = _pdf.font(_storage.filesystem("server", "samples/export-pdf", "viksi-script.ttf"), true)
+            `
+        },
+    ]}
+/>
+
+De asemenea, putem utiliza un fișier din interiorul aplicației, cum demonstrează acest exemplu, în care fontul se află în folderul `fonturi` din rădăcina aplicației:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const roboto = _pdf.font(_app.file("fonturi/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                roboto = _pdf.font(_app.file("fonturi/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                roboto = _pdf.font(_app.file("fonturi/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val roboto = _pdf.font(_app.file("fonturi/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def roboto = _pdf.font(_app.file("fonturi/roboto.ttf"), true)
+            `
+        },
+    ]}
+/>
+
+Sau chiar un fișier aflat în orice cale a sistemului; astfel, în acest exemplu fontul se află în folderul `fonturi` care este în folderul de fișiere temporare al sistemului:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const roboto = _pdf.font(_os.file("/tmp/fonturi/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                roboto = _pdf.font(_os.file("/tmp/fonturi/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                roboto = _pdf.font(_os.file("/tmp/fonturi/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val roboto = _pdf.font(_os.file("/tmp/fonturi/roboto.ttf"), true)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def roboto = _pdf.font(_os.file("/tmp/fonturi/roboto.ttf"), true)
+            `
+        },
+    ]}
+/>
+
+> Documentație cu toate metodele obiectului [Font din iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/kernel/font/PdfFont.html).
+
+Pentru a utiliza fontul în texte, trebuie transmisă constanta fontului către paragraf, astfel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                documentPdf.add(
+                    _pdf.paragraph("Folosind fontul îngroșat.")
+                        .setFont(helveticaAldin)
+                        .setFontSize(15)
+                )
+            `
+        },
+    ]}
+/>
+
+## Imagine
+
+Inserarea imaginilor în documentul PDF generat programatic se face astfel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                documentPdf.add(
+                    _pdf.image(_storage.filesystem("server", "samples/export-pdf", "logo.png"))
+                        .scaleAbsolute(120, 36)
+                )
+            `
+        },
+    ]}
+/>
+
+Observați că metoda `scaleAbsolute` este foarte utilă pentru redimensionarea și ajustarea dimensiunii imaginii.
+
+Ca alternativă, putem utiliza un fișier din interiorul aplicației, ca în acest exemplu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const imagineLogo = _pdf.image(_app.file("public/imagini/logo.png")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                imagineLogo = _pdf.image(_app.file("public/imagini/logo.png")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                imagineLogo = _pdf.image(_app.file("public/imagini/logo.png")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val imagineLogo = _pdf.image(_app.file("public/imagini/logo.png")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def imagineLogo = _pdf.image(_app.file("public/imagini/logo.png")
+            `
+        },
+    ]}
+/>
+
+Sau chiar un fișier aflat în orice cale a sistemului, ca în acest exemplu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const imagineLogo = _pdf.image(_os.file("/tmp/imagini/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                imagineLogo = _pdf.image(_os.file("/tmp/imagini/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                imagineLogo = _pdf.image(_os.file("/tmp/imagini/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val imagineLogo = _pdf.image(_os.file("/tmp/imagini/pdf-logo.png")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def imagineLogo = _pdf.image(_os.file("/tmp/imagini/pdf-logo.png")
+            `
+        },
+    ]}
+/>
+
+Pentru a adăuga o imagine într-o poziție fixă:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                documentPdf.add(
+                    imagineLogo
+                        .scaleAbsolute(120, 36)
+                        .setFixedPosition(100, 500)
+                )
+            `
+        },
+    ]}
+/>
+
+În codul de mai sus, în metoda `setFixedPosition`, primul parametru este poziția X (`100`), iar al doilea parametru este poziția Y (`500`).
+
+**Atenție:** dacă Y este definit cu valoarea `0`, înseamnă că se află în partea de jos a paginii; prin urmare, pentru a urca trebuie crescută valoarea lui Y; cu cât valoarea lui Y este mai mare, cu atât va apărea mai sus, dar dacă este prea mare dincolo de lungimea paginii, atunci nu va fi vizibil.
+
+> Documentație cu toate metodele obiectului [Imagine din iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Image.html).
+
+## Tabel
+
+Este posibil să se creeze tabele, ceea ce permite prezentarea unui set de date într-o formă mai lizibilă.
+
+Numărul de coloane al tabelului este definit cu parametrul: `_pdf.table(numarColoane)`
+
+În exemplul de mai jos, `numarColoane` este numărul `1`, adică o coloană.
+
+Deoarece adăugăm două celule în tabel, a doua celulă trece pe linia următoare.
+
+Observați:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                documentPdf.add(
+                    _pdf.table(1)
+                        .addCell(
+                            _pdf.cell()
+                                .add(
+                                    _pdf.paragraph("Persoană")
+                                        .setFont(helvetica)
+                                        .setFontSize(10)
+                                )
+                                .setBorder(_pdf.border("solid", 2))
+                                .setBackgroundColor(_pdf.colorRGB(1, 0, 0))
+                        )
+                        .addCell(
+                            _pdf.cell()
+                                .add(
+                                    _pdf.paragraph("Nicole")
+                                        .setFont(helvetica)
+                                        .setFontSize(10)
+                                )
+                                .setBackgroundColor(_pdf.colorGray(0.5))
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+Metoda `addCell` permite inserirea definiției celulelor împreună cu conținutul lor respectiv.
+
+> Documentație cu toate metodele obiectului [Celulă din iText](https://api.itextpdf.com/iText/java//8.0.3/com/itextpdf/layout/element/Cell.html).
+
+## Închiderea și salvarea documentului
+
+Documentul este salvat sau generat complet doar atunci când este apelată metoda `close`, astfel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                documentPdf.close()
+            `
+        },
+    ]}
+/>
+
+Locul unde este generat documentul este definit la inițializare; prin urmare, la inițializarea documentului definim unde va fi generat documentul final, fie în ieșirea de date a serviciului (`output`), fie într-un fișier.
+
+## Editarea fișierului
+
+Este posibil să editați un document PDF deja existent, de exemplu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const documentPdf = _pdf.openDocument(_app.file("fișier.pdf"))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                documentPdf = _pdf.openDocument(_app.file("fișier.pdf"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                documentPdf = _pdf.openDocument(_app.file("fișier.pdf"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val documentPdf = _pdf.openDocument(_app.file("fișier.pdf"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def documentPdf = _pdf.openDocument(_app.file("fișier.pdf"))
+            `
+        },
+    ]}
+/>
+
+Documentul final generat va fi trimis în ieșirea de date a serviciului.
+
+> Este foarte util pentru a utiliza un PDF ca bază, ca și cum ar fi un șablon.
+
+Exemplu pentru editarea unui document în `storage`-ul aplicației:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const documentPdf = _pdf.openDocument(_storage.filesystem('server', 'fișier.pdf'))
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                documentPdf = _pdf.openDocument(_storage.filesystem('server', 'fișier.pdf'))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                documentPdf = _pdf.openDocument(_storage.filesystem('server', 'fișier.pdf'))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val documentPdf = _pdf.openDocument(_storage.filesystem('server', 'fișier.pdf'))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def documentPdf = _pdf.openDocument(_storage.filesystem('server', 'fișier.pdf'))
+            `
+        },
+    ]}
+/>
+
+Utilizează un document ca bază, dar salvează modificările într-un fișier PDF nou:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const documentPdf = _pdf.openDocument(
+                    _app.file("document-baza.pdf"),
+                    _app.file("document-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                documentPdf = _pdf.openDocument(
+                    _app.file("document-baza.pdf"),
+                    _app.file("document-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                documentPdf = _pdf.openDocument(
+                    _app.file("document-baza.pdf"),
+                    _app.file("document-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val documentPdf = _pdf.openDocument(
+                    _app.file("document-baza.pdf"),
+                    _app.file("document-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def documentPdf = _pdf.openDocument(
+                    _app.file("document-baza.pdf"),
+                    _app.file("document-final.pdf")
+                )
+            `
+        },
+    ]}
+/>
+
+Exemplu care utilizează ca bază un document din `storage`, dar salvează într-un altul:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const documentPdf = _pdf.openDocument(
+                    _storage.filesystem("server", "contract-baza.pdf"),
+                    _storage.filesystem("server", "contract-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                documentPdf = _pdf.openDocument(
+                    _storage.filesystem("server", "contract-baza.pdf"),
+                    _storage.filesystem("server", "contract-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                documentPdf = _pdf.openDocument(
+                    _storage.filesystem("server", "contract-baza.pdf"),
+                    _storage.filesystem("server", "contract-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val documentPdf = _pdf.openDocument(
+                    _storage.filesystem("server", "contract-baza.pdf"),
+                    _storage.filesystem("server", "contract-final.pdf")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def documentPdf = _pdf.openDocument(
+                    _storage.filesystem("server", "contract-baza.pdf"),
+                    _storage.filesystem("server", "contract-final.pdf")
+                )
+            `
+        },
+    ]}
+/>
+
+Cu documentul încărcat, putem adăuga conținuturi, iar la închiderea cu metoda `close` la final este generat documentul final cu noul conținut adăugat programatic.
+
+Exemplu de serviciu care utilizează un PDF existent ca șablon pentru a genera o ieșire de fișier PDF cu conținut dinamic adăugat:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("pdf")
+
+                const documentPdf = _pdf.openDocument(_app.file("sablon-1.pdf"))
+
+                documentPdf.add(
+                    _pdf.paragraph("Conținutul meu dinamic.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                documentPdf.close()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _header.contentType("pdf")
+
+                documentPdf = _pdf.openDocument(_app.file("sablon-1.pdf"))
+
+                documentPdf.add(
+                    _pdf.paragraph("Conținutul meu dinamic.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                documentPdf.close()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _header.contentType("pdf")
+
+                documentPdf = _pdf.openDocument(_app.file("sablon-1.pdf"))
+
+                documentPdf.add(
+                    _pdf.paragraph("Conținutul meu dinamic.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                documentPdf.close()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _header.contentType("pdf")
+
+                val documentPdf = _pdf.openDocument(_app.file("sablon-1.pdf"))
+
+                documentPdf.add(
+                    _pdf.paragraph("Conținutul meu dinamic.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                documentPdf.close()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _header.contentType("pdf")
+
+                def documentPdf = _pdf.openDocument(_app.file("sablon-1.pdf"))
+
+                documentPdf.add(
+                    _pdf.paragraph("Conținutul meu dinamic.")
+                        .setFixedPosition(37, 730, 100)
+                        .setFontSize(15)
+                )
+
+                documentPdf.close()
+            `
+        },
+    ]}
+/>
+
+## Citirea fișierului
+
+Pentru a citi un document PDF, extrăgând informațiile text.
+
+Utilizăm metoda `extract`, care obține toate datele fișierului PDF într-un obiect JSON.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const datePdf = _pdf.extract(_app.file("fișier-1.pdf"))
+
+                _out.json(datePdf)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                datePdf = _pdf.extract(_app.file("fișier-1.pdf"))
+
+                _out.json(datePdf)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                datePdf = _pdf.extract(_app.file("fișier-1.pdf"))
+
+                _out.json(datePdf)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val datePdf = _pdf.extract(_app.file("fișier-1.pdf"))
+
+                _out.json(datePdf)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def datePdf = _pdf.extract(_app.file("fișier-1.pdf"))
+
+                _out.json(datePdf)
+            `
+        },
+    ]}
+/>
+
+JSON-ul returnat are cheia `content` cu tot conținutul text al fișierului PDF și are cheia `metadata` cu diversele proprietăți ale fișierului PDF.
+
+Iată un exemplu de JSON returnat de `extract`:
+
+```json
+{
+  "content": "Tot conținutul text al fișierului PDF apare aici...",
+  "metadata":{
+    "Content-Type":"application/pdf",
+    "dc:format":"application/pdf; version=1.4",
+    "dc:title":"Linux 1",
+    "pdf:PDFVersion":"1.4",
+    "pdf:charsPerPage":"580",
+    "pdf:containsDamagedFont":"false",
+    "pdf:containsNonEmbeddedFont":"false",
+    "pdf:docinfo:producer":"Skia/PDF m125 Google Docs Renderer",
+    "pdf:docinfo:title":"Fișier 1",
+    "pdf:encrypted":"false",
+    "xmpTPg:NPages":"3",
+    ...
+  }
+}
+```
+
+Există multe alte date obținute în `metadata`, dar care au fost omise în `...` pentru ca exemplul să nu devină prea lung.
+
+## Conversie
+
+Este posibil să convertiți programatic PDF-ul în text sau chiar în HTML.
+
+### PDF în text
+
+Putem extrage tot conținutul fișierului PDF în text continuu utilizând metoda:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.toText(...)
+            `
+        },
+    ]}
+/>
+
+Exemplu de utilizare pentru a citi un fișier din rădăcina aplicației:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toText(_app.file("documentul-meu.pdf")))
+            `
+        },
+    ]}
+/>
+
+Sau chiar utilizând un fișier din `storage`-ul aplicației:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toText(_storage.filesystem("server", "documentul-meu.pdf")))
+            `
+        },
+    ]}
+/>
+
+
+### PDF în HTML
+
+
+Putem extrage tot conținutul fișierului PDF în HTML utilizând metoda:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.toHTML(...)
+            `
+        },
+    ]}
+/>
+
+Exemplu de utilizare pentru a citi un fișier din rădăcina aplicației:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toHTML(_app.file("documentul-meu.pdf")))
+            `
+        },
+    ]}
+/>
+
+Sau chiar utilizând un fișier din `storage`-ul aplicației:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.print(_pdf.toHTML(_storage.filesystem("server", "documentul-meu.pdf")))
+            `
+        },
+    ]}
+/>
+
+### HTML în PDF
+
+
+Este posibil să generați fișiere PDF pornind de la cod HTML, utilizând metoda:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _pdf.fromHTML(...)
+            `
+        },
+    ]}
+/>
+
+Exemplu de utilizare pentru a genera un fișier de descărcare în serviciu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const pictograma = _app.file("public/imagini/pictograma.png");
+
+                const fisierPdf = _pdf.fromHTML(\`
+                    <html>
+                        <head>
+                            <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Roboto" rel="stylesheet">
+                            <style>
+                                * {
+                                    font-family: Roboto;
+                                }
+                                div.sidebar {
+                                    position: fixed;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100px;
+                                    background: #1B5886;
+                                }
+                                div.sidebar > div {
+                                    position: absolute;
+                                    top: 350px;
+                                    transform: rotate(-90deg) translate(-50%, -34px);
+                                    font-family: Limelight;
+                                    font-size: 40px;
+                                    color: #89CFF1;
+                                }
+                                main {
+                                    padding-left: 150px;
+                                }
+                                h1 {
+                                    margin: 0 auto;
+                                    text-align: center;
+                                    font-family: Limelight;
+                                    color: #BA250E;
+                                }
+                                table {
+                                    margin: 0 auto;
+                                    border: 1px solid black;
+                                    border-spacing: 0;
+                                    border-collapse: collapse;
+                                }
+                                table > thead {
+                                    background: #40712A;
+                                    color: #fff;
+                                }
+                                table td, table th {
+                                    padding: 5px;
+                                    text-align: center;
+                                }
+                                table > tbody > tr:nth-child(even) {
+                                    background: #e1e1e1;
+                                }
+                                a {
+                                    font-family: Limelight;
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    text-decoration: none;
+                                    color: #1E5FB5;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div class="sidebar">
+                                <div>Demonstrație</div>
+                            </div>
+                            <main>
+                                <h1>PDF din HTML</h1>
+                                <div style="text-align: center; margin: 30px 0;">
+                                    <img width="50" src="\${icon.uri()}">
+                                </div>
+                                <p>
+                                    Acesta este un HTML de exemplu pentru generarea unui fișier PDF.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                                    tellus arcu, pharetra quis condimentum eget, dapibus convallis metus.
+                                </p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Nume</th>
+                                            <th>Vârstă</th>
+                                        </tr>
+                                    </thread>
+                                    <tbody>
+                                        <tr>
+                                            <td>Maria Luísa</td>
+                                            <td>23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>José Matos</td>
+                                            <td>38</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr style="margin-top: 50px; height: 1px; background: #50B6C6; border: none;"/>
+                                <div>
+                                    <a href="https://netuno.org" target="_blank">Netuno.org</a>
+                                </div>
+                            </main>
+                        </body>
+                    </html>
+                \`);
+
+                _header.contentTypePDF();
+                _out.copy(fisierPdf.input());
+            `
+        },
+    ]}
+/>
+
+## Videoclipuri
+
+Urmează câteva videoclipuri exemplificative despre cum se realizează generarea fișierelor PDF programatic:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/OyUzHr9hi0c?si=eTecDP0i0P_9rhG4" title="Player video YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+

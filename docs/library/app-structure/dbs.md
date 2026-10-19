@@ -3,16 +3,17 @@ id: dbs
 title: DBs
 sidebar_label: DBs
 ---
-Database File Organization.
+
+Organization of the database files.
 
 ## Database Folder
 
-The `📂 dbs` folder is intended to store your application's database files.
+The `📂 dbs` folder is intended to store the database files of your application.
 
-In the case of H2 Database databases, all files are automatically generated in this folder.
+In the case of H2 Database databases, all files are generated automatically in this folder.
 
-This folder is useful for storing anything related to the database, such as backups, scripts,
+This folder is useful to store anything related to the database, for example backups, scripts,
 dumps, diagrams, etc.
 
-All database-related documentation that should accompany the application project is recommended
+All documentation related to the database that should accompany the application project is recommended
 to be organized in this folder.

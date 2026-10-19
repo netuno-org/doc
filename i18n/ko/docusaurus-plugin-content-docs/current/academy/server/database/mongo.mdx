@@ -1,0 +1,1965 @@
+---
+id: mongo
+title: MongoDB
+sidebar_label: MongoDB
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+## 소개
+
+<a href="https://www.mongodb.com/" target="_blank">MongoDB</a>는 문서 지향 NoSQL 데이터베이스입니다. 테이블과 행 대신 데이터는 JSON과 유사한 형식의 문서에 저장되므로 데이터 모델에 큰 유연성을 제공합니다.
+
+Netuno는 MongoDB와의 통합을 위해 [_mongo](/docs/library/resources/mongo) 리소스를 제공합니다. 이 리소스는 Java용 공식 MongoDB 클라이언트 위에 로우코드 추상화를 제공하며, Netuno가 지원하는 다양한 프로그래밍 언어에서 사용할 수 있습니다: **JavaScript, Python, Ruby, Kotlin, Groovy**.
+
+> 시작하기 전에 Netuno에서 서비스를 만드는 방법을 아는 것이 좋습니다. [REST - 웹 서비스](/docs/academy/server/services/rest) 튜토리얼을 참고하세요.
+
+여기에 제시된 작업의 구현 예시는 다음 위치에 있는 예제 서비스 `mongo.js`에서 확인할 수 있습니다:
+
+<PolyglotPath files={[
+    `apps/demo/server/services/samples/javascript/mongo`
+]} />
+
+## MongoDB 설치
+
+### Docker 사용
+
+Docker가 설치되어 있다고 가정하면, MongoDB 이미지를 다운로드하고 새 컨테이너를 시작하기만 하면 됩니다:
+
+```shell
+docker pull mongo
+docker run -d --name mongo -p 27017:27017 mongo
+```
+
+이렇게 하면 MongoDB가 인증 없이 `localhost:27017`에서 접근 가능합니다.
+
+애플리케이션 설정에 맞게 데이터베이스 사용자를 생성하려면 다음을 실행하세요:
+
+```shell
+docker exec -it mongo mongosh 상품_db --eval 'db.createUser({ user: "상품_사용자", pwd: "12345678", roles: [{ role: "readWrite", db: "상품_db" }] })'
+```
+
+### Ubuntu 사용
+
+MongoDB는 Ubuntu 공식 저장소에 포함되어 있지 않으므로 설치 전에 공식 저장소를 추가해야 합니다:
+
+```shell
+sudo apt-get install gnupg curl
+curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg --dearmor
+echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] http://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+```
+
+설치 후 다음 명령으로 서비스를 시작할 수 있습니다:
+
+```shell
+sudo systemctl start mongod
+```
+
+### Windows 사용
+
+- <a href="https://www.mongodb.com/try/download/community" target="_blank">MongoDB Community Server 다운로드</a>.
+
+다운로드한 설치 프로그램을 실행하고 **Service Configuration** 단계에서 **Install MongoD as a Service**를 활성화하여 MongoDB가 자동으로 시작되도록 하세요. MongoDB는 인증 없이 `localhost:27017`에서 접근 가능합니다.
+
+> 다른 배포판과 버전은 [MongoDB 공식 문서](https://www.mongodb.com/docs/manual/installation/)를 참고하세요.
+
+## 애플리케이션 설정
+
+MongoDB 연결 설정은 환경에 따라 애플리케이션 설정 파일에서 구성합니다:
+
+- `config/_development.json`
+
+> 애플리케이션의 [설정 파일](/docs/academy/explore/configuration)에 대해 더 알아보세요.
+
+설정 파일 안에 `mongo` 블록을 추가하고, 각 키가 하나의 연결을 식별하도록 합니다:
+
+```javascript
+{
+    ...
+    "mongo": {
+        "매장": "mongodb://매장_사용자:12345678@localhost/매장_db",
+        "상품": {
+            "username": "상품_사용자",
+            "password": "12345678",
+            "host": "127.0.0.1",
+            "port": "27017",
+            "database": "상품_db"
+        }
+    },
+    ...
+}
+```
+
+연결은 두 가지 방식으로 정의할 수 있습니다:
+
+- **연결 URL** — 값은 단순한 문자열입니다. 예: `"mongodb://매장_사용자:12345678@localhost/매장_db"`.
+- **설정 객체** — 다음 필드를 사용합니다:
+  - `url` — 정의된 경우 연결 URL로 직접 사용되며 다른 필드는 무시됩니다.
+  - `protocol` — 연결 프로토콜, 기본값 `mongodb`.
+  - `username`과 `password` — 접근 자격 증명.
+  - `host` — 서버 주소, 기본값 `localhost`.
+  - `port` — 연결 포트, 기본값 `27017`.
+  - `database` — 데이터베이스 이름, 기본값은 연결 키의 이름.
+  - `params` — URL에 추가되는 연결 매개변수, 예: `{ "authSource": "admin" }`. 객체 필드로 URL을 구성할 때만 적용됩니다.
+
+> 연결이 애플리케이션의 주 데이터베이스일 필요는 없습니다. `db` 설정과 달리 `mongo` 블록은 독립적이며 여러 연결을 동시에 허용합니다.
+
+## 연결 초기화
+
+첫 번째 단계는 설정 키 이름 또는 연결 URL을 전달하여 `_mongo.init(...)` 리소스로 MongoDB 클라이언트를 초기화하는 것입니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 몽고 = _mongo.init("상품")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                몽고 = _mongo.init("상품")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                몽고 = _mongo.init("상품")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 몽고 = _mongo.init("상품")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 몽고 = _mongo.init("상품")
+            `
+        }
+    ]}
+/>
+
+URL로 직접 연결을 초기화할 수도 있습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 몽고 = _mongo.init("mongodb://localhost:27017/상품_db")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                몽고 = _mongo.init("mongodb://localhost:27017/상품_db")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                몽고 = _mongo.init("mongodb://localhost:27017/상품_db")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 몽고 = _mongo.init("mongodb://localhost:27017/상품_db")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 몽고 = _mongo.init("mongodb://localhost:27017/상품_db")
+            `
+        }
+    ]}
+/>
+
+> 인수 없이 `_mongo.init()`을 호출하면 `default` 설정 키가 사용됩니다. 사용하는 연결이 명확해지도록 항상 키 이름이나 URL을 전달하는 것이 좋습니다.
+
+## 데이터베이스와 컬렉션
+
+클라이언트가 초기화되면 `database("이름")`으로 데이터베이스 인스턴스를 가져옵니다. 그다음 컬렉션을 만들고 기존 컬렉션에 접근할 수 있습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 디비 = 몽고.database("상품_db")
+
+                디비.createCollection("제품")
+
+                const 컬렉션 = 디비.collection("제품")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                디비 = 몽고.database("상품_db")
+
+                디비.createCollection("제품")
+
+                컬렉션 = 디비.collection("제품")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                디비 = 몽고.database("상품_db")
+
+                디비.createCollection("제품")
+
+                컬렉션 = 디비.collection("제품")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 디비 = 몽고.database("상품_db")
+
+                디비.createCollection("제품")
+
+                val 컬렉션 = 디비.collection("제품")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 디비 = 몽고.database("상품_db")
+
+                디비.createCollection("제품")
+
+                def 컬렉션 = 디비.collection("제품")
+            `
+        }
+    ]}
+/>
+
+`ping()`으로 데이터베이스 연결을 테스트하고, `collectionNames()`로 기존 컬렉션을 모두 나열할 수 있습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                디비.ping()
+
+                const 이름들 = 디비.collectionNames()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                디비.ping()
+
+                이름들 = 디비.collectionNames()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                디비.ping()
+
+                이름들 = 디비.collectionNames()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                디비.ping()
+
+                val 이름들 = 디비.collectionNames()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                디비.ping()
+
+                def 이름들 = 디비.collectionNames()
+            `
+        }
+    ]}
+/>
+
+`renameCollection()`으로 컬렉션 이름을 변경할 수 있습니다. 데이터베이스가 포함된 전체 이름을 전달하거나 데이터베이스 이름과 새 컬렉션 이름을 따로 전달할 수 있습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                컬렉션.renameCollection("상품_db.제품_아카이브")
+
+                컬렉션.renameCollection("아카이브_db", "제품_아카이브")
+            `
+        }
+    ]}
+/>
+
+컬렉션과 해당 컬렉션의 모든 문서를 삭제하려면 `drop()`을 사용하세요:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                컬렉션.drop()
+            `
+        }
+    ]}
+/>
+
+## 문서 삽입
+
+데이터는 `_val` 리소스로 표현되며, 문서에는 `_val.map()`, 값 목록에는 `_val.list()`를 사용합니다.
+
+### 단일 문서 삽입
+
+`insertOne()`으로 문서를 하나 삽입하고 생성된 ID를 가져옵니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 아이디 = 컬렉션.insertOne(
+                    _val.map()
+                        .set("이름", "노트북")
+                        .set("수량", 22)
+                        .set("가격", 100)
+                        .set("카테고리", "컴퓨터")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                아이디 = 컬렉션.insertOne(
+                    _val.map()
+                        .set("이름", "노트북")
+                        .set("수량", 22)
+                        .set("가격", 100)
+                        .set("카테고리", "컴퓨터")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                아이디 = 컬렉션.insertOne(
+                    _val.map()
+                        .set("이름", "노트북")
+                        .set("수량", 22)
+                        .set("가격", 100)
+                        .set("카테고리", "컴퓨터")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 아이디 = 컬렉션.insertOne(
+                    _val.map()
+                        .set("이름", "노트북")
+                        .set("수량", 22)
+                        .set("가격", 100)
+                        .set("카테고리", "컴퓨터")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 아이디 = 컬렉션.insertOne(
+                    _val.map()
+                        .set("이름", "노트북")
+                        .set("수량", 22)
+                        .set("가격", 100)
+                        .set("카테고리", "컴퓨터")
+                )
+            `
+        }
+    ]}
+/>
+
+문서에는 목록과 다른 문서 같은 중첩 구조가 포함될 수 있습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                컬렉션.insertOne(
+                    _val.map()
+                        .set("이름", "태블릿")
+                        .set("태그",
+                            _val.list()
+                                .add("프로모션")
+                                .add("신규")
+                        )
+                        .set("상세",
+                            _val.map()
+                                .set("색상", "파랑")
+                                .set("재고", 10)
+                        )
+                )
+            `
+        }
+    ]}
+/>
+
+### 여러 문서 삽입
+
+`insertMany()`로 여러 문서를 한 번에 삽입하고 생성된 ID 목록을 받습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 아이디들 = 컬렉션.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("이름", "스마트폰")
+                                .set("수량", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("이름", "모니터")
+                                .set("수량", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                아이디들 = 컬렉션.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("이름", "스마트폰")
+                                .set("수량", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("이름", "모니터")
+                                .set("수량", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                아이디들 = 컬렉션.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("이름", "스마트폰")
+                                .set("수량", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("이름", "모니터")
+                                .set("수량", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 아이디들 = 컬렉션.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("이름", "스마트폰")
+                                .set("수량", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("이름", "모니터")
+                                .set("수량", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 아이디들 = 컬렉션.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("이름", "스마트폰")
+                                .set("수량", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("이름", "모니터")
+                                .set("수량", 8)
+                        )
+                )
+            `
+        }
+    ]}
+/>
+
+## 문서 조회
+
+`find()` 메서드는 [MongoFindIterable](/docs/library/objects/MongoFindIterable)을 반환하며, 여기서 `all()`(전체) 또는 `first()`(첫 번째 문서, 없으면 `null`)로 문서를 가져옵니다.
+
+컬렉션의 모든 문서를 가져오려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 문서들 = 컬렉션.find().all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                문서들 = 컬렉션.find().all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                문서들 = 컬렉션.find().all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 문서들 = 컬렉션.find().all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 문서들 = 컬렉션.find().all()
+            `
+        }
+    ]}
+/>
+
+필터로 조회하려면 [_mongo.filters()](/docs/library/objects/MongoFilters) 팩토리를 사용하세요:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 문서들 = 컬렉션.find(
+                    _mongo.filters().eq("이름", "노트북")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                문서들 = 컬렉션.find(
+                    _mongo.filters().eq("이름", "노트북")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                문서들 = 컬렉션.find(
+                    _mongo.filters().eq("이름", "노트북")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 문서들 = 컬렉션.find(
+                    _mongo.filters().eq("이름", "노트북")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 문서들 = 컬렉션.find(
+                    _mongo.filters().eq("이름", "노트북")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+### 필터
+
+`_mongo.filters()` 팩토리는 MongoDB의 주요 쿼리 연산자를 제공합니다:
+
+| 연산자 | 설명 |
+|---|---|
+| `eq("필드", 값)` | 값과 같습니다. |
+| `ne("필드", 값)` | 값과 다릅니다. |
+| `gt("필드", 값)` | 값보다 큽니다. |
+| `gte("필드", 값)` | 값보다 크거나 같습니다. |
+| `lt("필드", 값)` | 값보다 작습니다. |
+| `lte("필드", 값)` | 값보다 작거나 같습니다. |
+| `in("필드", 값1, 값2, ...)` | 값 중 하나와 같습니다. |
+| `nin("필드", 값1, 값2, ...)` | 모든 값과 다릅니다. |
+| `and(필터1, 필터2, ...)` | 모든 필터와 일치합니다. |
+| `or(필터1, 필터2, ...)` | 필터 중 하나 이상과 일치합니다. |
+| `not(필터)` | 필터와 일치하지 않습니다. |
+| `regex("필드", "패턴")` | 정규 표현식과 일치합니다. |
+| `exists("필드")` | 문서에 해당 필드가 존재합니다. |
+| `text("검색")` | 텍스트 검색입니다. |
+| `type("필드", "유형")` | 필드가 지정된 유형입니다. |
+| `mod("필드", 제수, 나머지)` | 필드를 제수로 나눈 나머지가 지정된 값과 같습니다. |
+| `where("표현식")` | JavaScript 표현식을 만족하는 문서와 일치합니다. 예: `"this.가격 > 100"`. |
+| `size("필드", n)` | 배열 필드에 정확히 `n`개의 요소가 있습니다. |
+
+예를 들어 가격이 50보다 크고 수량이 30보다 작은 제품을 가져오려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 문서들 = 컬렉션.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("가격", 50),
+                        _mongo.filters().lt("수량", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                문서들 = 컬렉션.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("가격", 50),
+                        _mongo.filters().lt("수량", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                문서들 = 컬렉션.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("가격", 50),
+                        _mongo.filters().lt("수량", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 문서들 = 컬렉션.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("가격", 50),
+                        _mongo.filters().lt("수량", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 문서들 = 컬렉션.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("가격", 50),
+                        _mongo.filters().lt("수량", 30)
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+또는 이름이 정규 표현식과 일치하는 제품을 가져오려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 문서들 = 컬렉션.find(
+                    _mongo.filters().regex("이름", "^[노스]")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                문서들 = 컬렉션.find(
+                    _mongo.filters().regex("이름", "^[노스]")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                문서들 = 컬렉션.find(
+                    _mongo.filters().regex("이름", "^[노스]")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 문서들 = 컬렉션.find(
+                    _mongo.filters().regex("이름", "^[노스]")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 문서들 = 컬렉션.find(
+                    _mongo.filters().regex("이름", "^[노스]")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+## 결과 순회
+
+조회 결과로 찾은 모든 문서를 순회할 수 있습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const 문서 of 컬렉션.find().all()) {
+                    _out.println(문서.getString("이름"))
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for 문서 in 컬렉션.find().all():
+                    _out.println(문서.getString("이름"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                컬렉션.find().all().each do |문서|
+                    _out.println(문서.getString("이름"))
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                for (문서 in 컬렉션.find().all()) {
+                    _out.println(문서.getString("이름"))
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (문서 in 컬렉션.find().all()) {
+                    _out.println(문서.getString("이름"))
+                }
+            `
+        }
+    ]}
+/>
+
+함수를 전달하여 `forEach()`로 결과를 순회할 수도 있습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                컬렉션.find().forEach((문서) =>
+                    _out.println(문서.getString("이름"))
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                컬렉션.find().forEach(
+                    lambda 문서: _out.println(문서.getString("이름"))
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                컬렉션.find().forEach do |문서|
+                    _out.println(문서.getString("이름"))
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                컬렉션.find().forEach { 문서 ->
+                    _out.println(문서.getString("이름"))
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                컬렉션.find().forEach { 문서 ->
+                    _out.println(문서.getString("이름"))
+                }
+            `
+        }
+    ]}
+/>
+
+## 정렬
+
+`_mongo.sorts()` 팩토리로 결과의 오름차순 또는 내림차순 순서를 정의합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 문서들 = 컬렉션.find().sort(
+                    _mongo.sorts().descending("가격")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                문서들 = 컬렉션.find().sort(
+                    _mongo.sorts().descending("가격")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                문서들 = 컬렉션.find().sort(
+                    _mongo.sorts().descending("가격")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 문서들 = 컬렉션.find().sort(
+                    _mongo.sorts().descending("가격")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 문서들 = 컬렉션.find().sort(
+                    _mongo.sorts().descending("가격")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+여러 필드로 정렬하려면 `orderBy()`를 사용하세요:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 문서들 = 컬렉션.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("가격"),
+                        _mongo.sorts().ascending("수량")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                문서들 = 컬렉션.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("가격"),
+                        _mongo.sorts().ascending("수량")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                문서들 = 컬렉션.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("가격"),
+                        _mongo.sorts().ascending("수량")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 문서들 = 컬렉션.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("가격"),
+                        _mongo.sorts().ascending("수량")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 문서들 = 컬렉션.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("가격"),
+                        _mongo.sorts().ascending("수량")
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+## 필드 프로젝션
+
+`_mongo.projections()` 팩토리로 문서에서 반환되는 필드를 제한합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 문서들 = 컬렉션.find().projection(
+                    _mongo.projections().include("이름", "수량")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                문서들 = 컬렉션.find().projection(
+                    _mongo.projections().include("이름", "수량")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                문서들 = 컬렉션.find().projection(
+                    _mongo.projections().include("이름", "수량")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 문서들 = 컬렉션.find().projection(
+                    _mongo.projections().include("이름", "수량")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 문서들 = 컬렉션.find().projection(
+                    _mongo.projections().include("이름", "수량")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+여러 프로젝션을 결합하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 문서들 = 컬렉션.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("이름", "수량"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                문서들 = 컬렉션.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("이름", "수량"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                문서들 = 컬렉션.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("이름", "수량"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 문서들 = 컬렉션.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("이름", "수량"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 문서들 = 컬렉션.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("이름", "수량"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+사용 가능한 프로젝션 유형은 다음과 같습니다:
+
+| 프로젝션 | 설명 |
+|---|---|
+| `include("필드", ...)` | 지정된 필드만 포함합니다. |
+| `exclude("필드", ...)` | 지정된 필드를 제외합니다. |
+| `excludeId()` | `_id` 필드를 제외합니다. |
+| `fields(프로젝션1, ...)` | 프로젝션을 결합합니다. |
+| `slice("필드", n)` | 배열 필드의 처음 `n`개 요소만 포함합니다. |
+| `slice("필드", 건너뛸수, n)` | 배열 필드에서 처음 `건너뛸수`개 요소 이후부터 `n`개 요소를 포함합니다. |
+| `elemMatch("필드")` | 배열 필드의 첫 번째 요소만 포함합니다. |
+| `elemMatch("필드", 필터)` | 필터와 일치하는 배열의 첫 번째 요소만 포함합니다. |
+| `computed("필드", 표현식)` | 집계 표현식을 기반으로 계산된 필드를 추가합니다. |
+
+## 제한 및 건너뛰기
+
+`limit()`과 `skip()`으로 반환되는 결과 수를 제어합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 문서들 = 컬렉션.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                문서들 = 컬렉션.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                문서들 = 컬렉션.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 문서들 = 컬렉션.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 문서들 = 컬렉션.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        }
+    ]}
+/>
+
+## 문서 업데이트
+
+`_mongo.updates()` 팩토리로 적용할 변경 사항을 정의하고, `updateOne()` 또는 `updateMany()`로 필터와 일치하는 문서에 변경 사항을 적용합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                컬렉션.updateOne(
+                    _mongo.filters().eq("이름", "노트북"),
+                    _mongo.updates().set("수량", 42)
+                )
+
+                컬렉션.updateMany(
+                    _mongo.filters().eq("카테고리", "컴퓨터"),
+                    _mongo.updates().set("카테고리", "추천")
+                )
+            `
+        }
+    ]}
+/>
+
+`_mongo.updates()` 팩토리는 다음 업데이트 연산자를 제공합니다:
+
+| 연산자 | 설명 |
+|---|---|
+| `set("필드", 값)` | 필드 값을 설정합니다. |
+| `unset("필드")` | 문서에서 필드를 제거합니다. |
+| `rename("필드", "새이름")` | 필드 이름을 변경합니다. |
+| `push("필드", 값)` | 배열에 값을 추가합니다. |
+| `combine(업데이트1, 업데이트2, ...)` | 여러 업데이트를 하나로 결합합니다. |
+
+여러 변경 사항을 한 번에 적용하려면 `combine()`을 사용하세요:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 결합 = _mongo.updates().combine(
+                    _mongo.updates().set("수량", 42),
+                    _mongo.updates().rename("기타", "추가")
+                )
+
+                컬렉션.updateOne(
+                    _mongo.filters().eq("이름", "노트북"),
+                    결합
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                결합 = _mongo.updates().combine(
+                    _mongo.updates().set("수량", 42),
+                    _mongo.updates().rename("기타", "추가")
+                )
+
+                컬렉션.updateOne(
+                    _mongo.filters().eq("이름", "노트북"),
+                    결합
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                결합 = _mongo.updates().combine(
+                    _mongo.updates().set("수량", 42),
+                    _mongo.updates().rename("기타", "추가")
+                )
+
+                컬렉션.updateOne(
+                    _mongo.filters().eq("이름", "노트북"),
+                    결합
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 결합 = _mongo.updates().combine(
+                    _mongo.updates().set("수량", 42),
+                    _mongo.updates().rename("기타", "추가")
+                )
+
+                컬렉션.updateOne(
+                    _mongo.filters().eq("이름", "노트북"),
+                    결합
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 결합 = _mongo.updates().combine(
+                    _mongo.updates().set("수량", 42),
+                    _mongo.updates().rename("기타", "추가")
+                )
+
+                컬렉션.updateOne(
+                    _mongo.filters().eq("이름", "노트북"),
+                    결합
+                )
+            `
+        }
+    ]}
+/>
+
+### 찾아서 업데이트
+
+`findOneAndUpdate()`로 문서를 원자적으로 찾아 업데이트하고, 원본 문서(없으면 `null`)를 반환합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 이전문서 = 컬렉션.findOneAndUpdate(
+                    _mongo.filters().eq("이름", "노트북"),
+                    _mongo.updates().set("수량", 42)
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                이전문서 = 컬렉션.findOneAndUpdate(
+                    _mongo.filters().eq("이름", "노트북"),
+                    _mongo.updates().set("수량", 42)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                이전문서 = 컬렉션.findOneAndUpdate(
+                    _mongo.filters().eq("이름", "노트북"),
+                    _mongo.updates().set("수량", 42)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 이전문서 = 컬렉션.findOneAndUpdate(
+                    _mongo.filters().eq("이름", "노트북"),
+                    _mongo.updates().set("수량", 42)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 이전문서 = 컬렉션.findOneAndUpdate(
+                    _mongo.filters().eq("이름", "노트북"),
+                    _mongo.updates().set("수량", 42)
+                )
+            `
+        }
+    ]}
+/>
+
+## 문서 교체
+
+`replaceOne()`으로 문서 전체를 교체합니다(업데이트와 달리 업데이트 연산자를 포함할 수 없습니다):
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                컬렉션.replaceOne(
+                    _mongo.filters().eq("이름", "노트북"),
+                    _val.map()
+                        .set("이름", "노트북")
+                        .set("수량", 50)
+                        .set("가격", 150)
+                        .set("카테고리", "추천")
+                )
+            `
+        }
+    ]}
+/>
+
+원자적으로 찾아서 교체하고 이전 문서를 반환하려면 `findOneAndReplace()`를 사용하세요:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 이전문서 = 컬렉션.findOneAndReplace(
+                    _mongo.filters().eq("이름", "노트북"),
+                    _val.map()
+                        .set("이름", "노트북")
+                        .set("수량", 50)
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                이전문서 = 컬렉션.findOneAndReplace(
+                    _mongo.filters().eq("이름", "노트북"),
+                    _val.map()
+                        .set("이름", "노트북")
+                        .set("수량", 50)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                이전문서 = 컬렉션.findOneAndReplace(
+                    _mongo.filters().eq("이름", "노트북"),
+                    _val.map()
+                        .set("이름", "노트북")
+                        .set("수량", 50)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 이전문서 = 컬렉션.findOneAndReplace(
+                    _mongo.filters().eq("이름", "노트북"),
+                    _val.map()
+                        .set("이름", "노트북")
+                        .set("수량", 50)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 이전문서 = 컬렉션.findOneAndReplace(
+                    _mongo.filters().eq("이름", "노트북"),
+                    _val.map()
+                        .set("이름", "노트북")
+                        .set("수량", 50)
+                )
+            `
+        }
+    ]}
+/>
+
+## 문서 삭제
+
+`deleteOne()`과 `deleteMany()`로 필터와 일치하는 문서를 삭제합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                컬렉션.deleteOne(
+                    _mongo.filters().eq("이름", "노트북")
+                )
+
+                컬렉션.deleteMany(
+                    _mongo.filters().eq("카테고리", "비활성")
+                )
+            `
+        }
+    ]}
+/>
+
+원자적으로 문서를 찾아 삭제하고 삭제된 문서를 반환하려면 `findOneAndDelete()`를 사용하세요:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 이전문서 = 컬렉션.findOneAndDelete(
+                    _mongo.filters().eq("이름", "태블릿")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                이전문서 = 컬렉션.findOneAndDelete(
+                    _mongo.filters().eq("이름", "태블릿")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                이전문서 = 컬렉션.findOneAndDelete(
+                    _mongo.filters().eq("이름", "태블릿")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 이전문서 = 컬렉션.findOneAndDelete(
+                    _mongo.filters().eq("이름", "태블릿")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 이전문서 = 컬렉션.findOneAndDelete(
+                    _mongo.filters().eq("이름", "태블릿")
+                )
+            `
+        }
+    ]}
+/>
+
+컬렉션의 모든 문서를 삭제하려면 `_mongo.valToDoc()`을 사용해 빈 필터를 전달하세요:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                컬렉션.deleteMany(_mongo.valToDoc(_val.map()))
+            `
+        }
+    ]}
+/>
+
+## 문서 수 세기
+
+`countDocuments()`로 컬렉션의 문서 수를 가져오며, 선택적으로 필터를 사용할 수 있습니다. `estimatedDocumentCount()`는 컬렉션 메타데이터를 사용하므로 더 빠르지만 필터를 사용할 수 없습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 전체 = 컬렉션.countDocuments()
+
+                const 컴퓨터_전체 = 컬렉션.countDocuments(
+                    _mongo.filters().eq("카테고리", "컴퓨터")
+                )
+
+                const 추정 = 컬렉션.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                전체 = 컬렉션.countDocuments()
+
+                컴퓨터_전체 = 컬렉션.countDocuments(
+                    _mongo.filters().eq("카테고리", "컴퓨터")
+                )
+
+                추정 = 컬렉션.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                전체 = 컬렉션.countDocuments()
+
+                컴퓨터_전체 = 컬렉션.countDocuments(
+                    _mongo.filters().eq("카테고리", "컴퓨터")
+                )
+
+                추정 = 컬렉션.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 전체 = 컬렉션.countDocuments()
+
+                val 컴퓨터_전체 = 컬렉션.countDocuments(
+                    _mongo.filters().eq("카테고리", "컴퓨터")
+                )
+
+                val 추정 = 컬렉션.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 전체 = 컬렉션.countDocuments()
+
+                def 컴퓨터_전체 = 컬렉션.countDocuments(
+                    _mongo.filters().eq("카테고리", "컴퓨터")
+                )
+
+                def 추정 = 컬렉션.estimatedDocumentCount()
+            `
+        }
+    ]}
+/>
+
+## 인덱스
+
+`_mongo.indexes()` 팩토리로 쿼리 성능을 개선하는 인덱스를 생성합니다. 인덱스를 생성하려면 `createIndex()`에 사양을 전달하면 됩니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                컬렉션.createIndex(
+                    _mongo.indexes().ascending("수량")
+                )
+
+                컬렉션.createIndex(
+                    _mongo.indexes().compoundIndex(
+                        _mongo.indexes().descending("가격"),
+                        _mongo.indexes().ascending("수량")
+                    )
+                )
+            `
+        }
+    ]}
+/>
+
+`hint()`로 쿼리에서 사용할 인덱스를 MongoDB에 지정할 수 있습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 문서들 = 컬렉션.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("수량", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                문서들 = 컬렉션.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("수량", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                문서들 = 컬렉션.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("수량", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 문서들 = 컬렉션.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("수량", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 문서들 = 컬렉션.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("수량", 1)
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+`min()`과 `max()`로 쿼리가 순회하는 인덱스 값 범위를 제한합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 문서들 = 컬렉션.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("수량", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("수량", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                문서들 = 컬렉션.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("수량", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("수량", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                문서들 = 컬렉션.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("수량", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("수량", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 문서들 = 컬렉션.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("수량", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("수량", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 문서들 = 컬렉션.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("수량", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("수량", 50)
+                        )
+                    )
+                    .all()
+            `
+        }
+    ]}
+/>
+
+## 집계
+
+더 고급 분석을 위해 `aggregate()`로 집계 파이프라인을 실행할 수 있으며, 각 단계는 `_mongo.aggregates()` 팩토리로, 누적기는 `_mongo.accumulators()`로 정의합니다.
+
+예를 들어 제품을 카테고리별로 그룹화하고 각 그룹의 가격을 합산하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 문서들 = 컬렉션.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("카테고리", "컴퓨터")
+                    ),
+                    _mongo.aggregates().group(
+                        "$카테고리",
+                        _mongo.accumulators().sum("합계", "$가격")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("합계")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                문서들 = 컬렉션.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("카테고리", "컴퓨터")
+                    ),
+                    _mongo.aggregates().group(
+                        "$카테고리",
+                        _mongo.accumulators().sum("합계", "$가격")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("합계")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                문서들 = 컬렉션.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("카테고리", "컴퓨터")
+                    ),
+                    _mongo.aggregates().group(
+                        "$카테고리",
+                        _mongo.accumulators().sum("합계", "$가격")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("합계")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 문서들 = 컬렉션.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("카테고리", "컴퓨터")
+                    ),
+                    _mongo.aggregates().group(
+                        "$카테고리",
+                        _mongo.accumulators().sum("합계", "$가격")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("합계")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 문서들 = 컬렉션.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("카테고리", "컴퓨터")
+                    ),
+                    _mongo.aggregates().group(
+                        "$카테고리",
+                        _mongo.accumulators().sum("합계", "$가격")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("합계")
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+사용 가능한 집계 단계는 다음과 같습니다:
+
+| 단계 | 설명 |
+|---|---|
+| `match(필터)` | 필터와 일치하는 문서만 선택합니다. |
+| `group("$필드", 누적기)` | 필드를 기준으로 문서를 그룹화하고 누적기를 적용합니다. |
+| `project(프로젝션)` | 문서의 필드를 추가, 제거 또는 변경합니다. |
+| `sort(정렬)` | 문서를 정렬합니다. |
+| `limit(n)` | 처음 `n`개 문서로 제한합니다. |
+| `skip(n)` | 처음 `n`개 문서를 건너뜁니다. |
+| `count()` | 문서 수를 셉니다. |
+| `lookup("컬렉션", "로컬필드", "외래필드", "별칭")` | 다른 컬렉션과 조인을 수행합니다. |
+
+그리고 가장 많이 사용되는 누적기는 다음과 같습니다:
+
+| 누적기 | 설명 |
+|---|---|
+| `sum("필드", "$표현식")` | 값의 합계입니다. |
+| `avg("필드", "$표현식")` | 값의 평균입니다. |
+| `min("필드", "$표현식")` | 최솟값입니다. |
+| `max("필드", "$표현식")` | 최댓값입니다. |
+| `first("필드", "$표현식")` | 첫 번째 문서의 값입니다. |
+| `last("필드", "$표현식")` | 마지막 문서의 값입니다. |
+| `top("필드", 정렬, "$표현식")` | 정렬에 따른 상위 값입니다. |
+| `bottom("필드", 정렬, "$표현식")` | 정렬에 따른 하위 값입니다. |
+
+> 누적기에서 `$` 접두사가 붙은 표현식은 입력 문서의 필드를 참조합니다. 예: `"$가격"`.
+
+## Value와 BSON 간 변환
+
+때로는 Netuno의 `_val` 객체와 MongoDB의 BSON 문서 간 변환이 필요합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 문서 = _mongo.valToDoc(
+                    _val.map().set("이름", "노트북")
+                )
+
+                const 값들 = _mongo.docToVal(문서)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                문서 = _mongo.valToDoc(
+                    _val.map().set("이름", "노트북")
+                )
+
+                값들 = _mongo.docToVal(문서)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                문서 = _mongo.valToDoc(
+                    _val.map().set("이름", "노트북")
+                )
+
+                값들 = _mongo.docToVal(문서)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 문서 = _mongo.valToDoc(
+                    _val.map().set("이름", "노트북")
+                )
+
+                val 값들 = _mongo.docToVal(문서)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 문서 = _mongo.valToDoc(
+                    _val.map().set("이름", "노트북")
+                )
+
+                def 값들 = _mongo.docToVal(문서)
+            `
+        }
+    ]}
+/>
+
+## 옵션을 사용하는 작업
+
+`_mongo` 리소스의 `*Options()` 팩토리는 MongoDB 드라이버의 기본 옵션 객체를 반환하며, 해당 메서드를 직접 체이닝할 수 있습니다. 예를 들어 `upsert(true)`는 필터와 일치하는 기존 문서가 없을 때 문서를 삽입합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 이전문서 = 컬렉션.findOneAndUpdate(
+                    _mongo.filters().eq("이름", "모니터"),
+                    _mongo.updates().set("수량", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                이전문서 = 컬렉션.findOneAndUpdate(
+                    _mongo.filters().eq("이름", "모니터"),
+                    _mongo.updates().set("수량", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                이전문서 = 컬렉션.findOneAndUpdate(
+                    _mongo.filters().eq("이름", "모니터"),
+                    _mongo.updates().set("수량", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 이전문서 = 컬렉션.findOneAndUpdate(
+                    _mongo.filters().eq("이름", "모니터"),
+                    _mongo.updates().set("수량", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 이전문서 = 컬렉션.findOneAndUpdate(
+                    _mongo.filters().eq("이름", "모니터"),
+                    _mongo.updates().set("수량", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        }
+    ]}
+/>
+
+문서가 삽입되면 `findOneAndUpdate()`는 `null`을 반환합니다.
+
+사용 가능한 옵션 팩토리는 다음과 같습니다: `insertOneOptions()`, `insertManyOptions()`, `updateOptions()`, `findOneAndUpdateOptions()`, `replaceOptions()`, `findOneAndReplaceOptions()`, `deleteOptions()`, `findOneAndDeleteOptions()`, `countOptions()`, `estimatedDocumentCountOptions()`, `dropCollectionOptions()`, `textSearchOptions()`.
+
+## 연결 닫기
+
+작업을 마치면 MongoDB 연결을 닫는 것이 좋습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _mongo.close()
+            `
+        }
+    ]}
+/>
+
+## 결론
+
+`_mongo` 리소스를 통해 Netuno는 Java용 공식 MongoDB 클라이언트 위에 로우코드이자 다언어 추상화를 제공하므로, JavaScript, Python, Ruby, Kotlin, Groovy에서 문서, 필터, 정렬, 프로젝션, 업데이트, 인덱스, 집계를 다룰 수 있습니다.
+
+사용 가능한 모든 메서드에 대한 자세한 내용은 [_mongo](/docs/library/resources/mongo) 리소스와 [MongoCollection](/docs/library/objects/MongoCollection) 클래스 문서를 참고하세요.
+
+즐거운 개발 되세요!

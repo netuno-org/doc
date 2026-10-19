@@ -1,0 +1,254 @@
+---
+sidebar_position: 6
+id: service
+title: Service
+description: Leer webservices en REST-API's maken in Netuno, gegevens tussen systemen integreren en dynamische gegevens asynchroon aan de frontend leveren.
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Met Netuno is het mogelijk **_webservices_** te maken en elke vorm van complexe **<a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a>-API's** te bouwen voor gegevensintegratie tussen systemen.
+
+:::info Wat is een webservice?
+Een webservice maakt het mogelijk dat systemen online informatie uitwisselen op een gestandaardiseerde manier. In Netuno wordt elk bestand in `server/services/` automatisch een endpoint dat toegankelijk is via HTTP.
+:::
+
+## Waarom webservices gebruiken?
+
+Het gebruik van asynchrone services biedt duidelijke voordelen voor de gebruikerservaring:
+
+- **Sneller laden:** de server levert de visuele structuur van de pagina onmiddellijk, zonder te wachten op de verwerking van alle gegevens.
+- **Dynamische gegevens op aanvraag:** de frontend vraagt alleen de benodigde gegevens op, wanneer dat nodig is.
+- **Integratie tussen systemen:** een in Netuno gemaakte service kan door elke externe applicatie worden gebruikt (mobiel, een ander websysteem, enz.).
+- **Betere gebruikerservaring:** de gebruiker hoeft niet te wachten tot de pagina volledig is verwerkt voordat er iets op het scherm verschijnt.
+
+## Vereisten
+
+Voordat u begint, controleert u of:
+
+- Netuno is geïnstalleerd en draait lokaal.
+- De applicatie `demo` is aangemaakt zoals beschreven in [Applicatie maken](../app-create).
+- Er zijn gegevens geregistreerd in **Taken** en gekoppeld aan **Registraties** (nodig zodat de respons niet leeg is).
+
+## De code-editor configureren
+
+Om services in Netuno te maken en te bewerken, gebruikt u een code-editor naar keuze. We raden **[Visual Studio Code](https://code.visualstudio.com/download)** aan omdat het gratis, licht en zeer intuïtief is, maar elke editor die compatibel is met JavaScript/Python/Groovy werkt normaal.
+
+## De demo-applicatie openen {#abrir-a-aplicacao-demo}
+
+1. Open **Visual Studio Code**.
+2. Klik op het pictogram **Bestanden** in de linkerzijbalk.
+3. Selecteer **Map openen** (File > Open Folder).
+4. Navigeer naar de installatiemap van Netuno.
+5. Selecteer de map: **`apps/demo`**
+6. Klik op **Openen**.
+
+De mappenstructuur van de applicatie `demo` wordt in het linkerpaneel geladen.
+
+## De service maken
+
+Services worden aan de **serverzijde** verwerkt. Om een nieuwe service te maken:
+
+1. Vouw in het bestandspaneel de structuur uit tot u de map `server/services/` vindt.
+2. Klik met de **rechtermuisknop** op de map `services`.
+3. Selecteer **Nieuw bestand** (`New File`).
+4. Geef het bestand een naam overeenkomstig de taal die u wilt gebruiken:
+
+<PolyglotPath files={[
+    'server/services/werknemers'
+]} />
+
+
+<PolyglotCode
+    file="server/services/werknemers"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                /**
+                *** Zet de querygegevens om naar JSON-output.
+                */
+                const dbRegistraties = _db.query(\`
+                    SELECT DISTINCT
+                        werknemer.naam, SUM(DATEDIFF(HOUR, registratie.start, registratie.einde)) AS totaal
+                    FROM werknemer INNER JOIN registratie
+                        ON werknemer.id = registratie.werknemer_id
+                    WHERE werknemer.actief = true AND registratie.actief = true
+                    GROUP BY werknemer.naam
+                    ORDER BY totaal ASC
+                \`);
+
+                const lijst = _val.list();
+
+                for (const dbRegistratie of dbRegistraties) {
+                    lijst.add(
+                        _val.map()
+                            .set("naam", dbRegistratie.getString("naam"))
+                            .set("totaal", dbRegistratie.getInt("totaal"))
+                    );
+                }
+
+                _out.json(lijst);
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                #
+                # Zet de querygegevens om naar JSON-output.
+                #
+                dbRegistraties = _db.query(
+                    """SELECT DISTINCT
+                        werknemer.naam, SUM(DATEDIFF(HOUR, registratie.start, registratie.einde)) AS totaal
+                    FROM werknemer INNER JOIN registratie
+                        ON werknemer.id = registratie.werknemer_id
+                    WHERE werknemer.actief = true AND registratie.actief = true
+                    GROUP BY werknemer.naam
+                    ORDER BY totaal ASC"""
+                )
+
+                lijst = _val.list()
+
+                for dbRegistratie in dbRegistraties:
+                    lijst.add(
+                        _val.map()
+                            .set("naam", dbRegistratie.getString("naam"))
+                            .set("totaal", dbRegistratie.getInt("totaal"))
+                    )
+
+                _out.json(lijst)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                #
+                # Zet de querygegevens om naar JSON-output.
+                #
+                dbRegistraties = _db.query(%{
+                    SELECT DISTINCT
+                        werknemer.naam, SUM(DATEDIFF(HOUR, registratie.start, registratie.einde)) AS totaal
+                    FROM werknemer INNER JOIN registratie
+                        ON werknemer.id = registratie.werknemer_id
+                    WHERE werknemer.actief = true AND registratie.actief = true
+                    GROUP BY werknemer.naam
+                    ORDER BY totaal ASC
+                })
+
+                lijst = _val.list()
+
+                dbRegistraties.each do |dbRegistratie|
+                    lijst.add(
+                        _val.map()
+                            .set("naam", dbRegistratie.getString("naam"))
+                            .set("totaal", dbRegistratie.getInt("totaal"))
+                    )
+                end
+
+                _out.json(lijst)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                /**
+                *** Zet de querygegevens om naar JSON-output.
+                */
+                val dbRegistraties = _db.query(
+                    """SELECT DISTINCT
+                        werknemer.naam, SUM(DATEDIFF(HOUR, registratie.start, registratie.einde)) AS totaal
+                    FROM werknemer INNER JOIN registratie
+                        ON werknemer.id = registratie.werknemer_id
+                    WHERE werknemer.actief = true AND registratie.actief = true
+                    GROUP BY werknemer.naam
+                    ORDER BY totaal ASC"""
+                );
+
+                val lijst = _val.list();
+
+                dbRegistraties.forEach {
+                    lijst.add(
+                        _val.map()
+                            .set("naam", it.getString("naam"))
+                            .set("totaal", it.getInt("totaal"))
+                    );
+                }
+
+                _out.json(lijst);
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                /**
+                *** Zet de querygegevens om naar JSON-output.
+                */
+                def dbRegistraties = _db.query("""\\
+                    SELECT DISTINCT
+                        werknemer.naam, SUM(DATEDIFF(HOUR, registratie.start, registratie.einde)) AS totaal
+                    FROM werknemer INNER JOIN registratie
+                        ON werknemer.id = registratie.werknemer_id
+                    WHERE werknemer.actief = true AND registratie.actief = true
+                    GROUP BY werknemer.naam
+                    ORDER BY totaal ASC
+                """);
+
+                def lijst = _val.list();
+
+                for (dbRegistratie in dbRegistraties) {
+                    lijst.add(
+                        _val.map()
+                            .set("naam", dbRegistratie.getString("naam"))
+                            .set("totaal", dbRegistratie.getInt("totaal"))
+                    );
+                }
+
+                _out.json(lijst);
+            `
+        },
+    ]}
+/>
+
+Implementeer de service door de onderstaande code aan het aangemaakte bestand toe te voegen. Deze service raadpleegt de database en retourneert een lijst van werknemers met het totale aantal geregistreerde uren, in **JSON**-formaat.
+
+### De code begrijpen
+
+| Object/Methode | Beschrijving |
+|---|---|
+| `_db.query()` | Voert een SQL-query uit en retourneert een lijst van objecten in sleutel-waardevorm (kolom → gegeven). |
+| `_val.list()` | Maakt een muteerbare lijst om de resultaten in te verzamelen. |
+| `_val.map()` | Maakt een mappingobject (sleutel-waarde) voor elke resultaatrij. |
+| `_out.json()` | Serialiseert het object naar JSON en stuurt het antwoord op HTTP-verzoeken. |
+
+:::warning Benodigde gegevens
+Zorg ervoor dat er gegevens zijn geregistreerd in **Taken** en gekoppeld aan **Registraties**. Anders retourneert het endpoint een lege lijst `[]`.
+:::
+
+## De service uitvoeren en testen
+
+Open, met Netuno actief, het endpoint in de browser:
+
+:::tip Tip om de JSON te bekijken
+We raden **[Firefox](https://www.mozilla.org/)** aan om endpoints rechtstreeks in de browser te testen, omdat het de JSON-respons leesbaar opmaakt en weergeeft met syntaxisaccentuering. Gebruik als alternatief extensies zoals **JSON Viewer** in Chrome of tools zoals **[Postman](https://www.postman.com/)** voor geavanceerdere tests.
+:::
+
+De verwachte respons is een JSON die lijkt op:
+
+```json
+[
+  { "naam": "Anna de Vries", "totaal": 12 },
+  { "naam": "Karel Meijer", "totaal": 28 },
+  { "naam": "Jan de Boer", "totaal": 45 }
+]
+```
+
+## Volgende stappen
+
+Nu uw service werkt, kunt u:
+
+- 📄 **[Interface & Design](./ui)** — deze service integreren in de frontend van de applicatie.
+- 📚 **[Servicebibliotheek](../../library/overview)** — de objecten `_db`, `_val`, `_out` en andere die in Netuno beschikbaar zijn verkennen.
+- 🔗 **Authenticatie** en **toegangscontrole** aan uw service toevoegen.
+
+___

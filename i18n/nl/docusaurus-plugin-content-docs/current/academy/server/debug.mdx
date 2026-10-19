@@ -1,0 +1,173 @@
+---
+id: debug
+title: Foutopsporing (Debug)
+sidebar_label: Foutopsporing
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Hiermee kun je de uitvoering van code in realtime analyseren.
+
+## Inleiding 
+
+Tijdens het coderen gebeurt het vaak dat je de uitvoering van code moet analyseren.
+
+In het geval van Netuno kunnen we gebruiken:
+
+- `_out.print` - Om informatie weer te geven in de gegevensuitvoer (_output_).
+- `_log.info` - Om informatie weer te geven in de terminal van de Netuno-server.
+
+Maar er zijn ook complexere scenario's waarin we dieper willen analyseren, bijvoorbeeld meerdere waarden van objecten en variabelen tegelijk controleren, de uitvoering van specifieke code in deze context testen, allemaal om het gedrag beter te begrijpen.
+
+In deze complexere gevallen is het altijd mogelijk om de hierboven getoonde methoden zoals `_out.print` en `_log.info` te gebruiken, maar we kunnen terechtkomen in een zeer arbeidsintensief en verwarrend proces om tot een goed begrip te komen van wat er gebeurt.
+
+Foutopsporing (_debug_) dient juist om een goed begrip te geven van wat er gebeurt, vooral in complexere situaties.
+
+> Foutopsporing (in het Engels: _debugging_, _debug_) is het proces dat bij de ontwikkeling wordt gebruikt om defecten, fouten, verkeerd gedrag, enz. te vinden en te verminderen.
+
+Foutopsporing kan worden verdeeld in 3 belangrijke mechanismen:
+
+- Breekpunt (_Break Point_): Laat de uitvoering van de code stoppen; we kunnen dan het onderzoek starten waar de code stilstaat.
+- Observatie (_Watch_): Maakt het mogelijk de waarden van variabelen te observeren waar de code is gestopt.
+- Code-uitvoering (_Code Execution_): We kunnen tijdelijk willekeurige code uitvoeren om een test uit te voeren op het punt waar de uitvoering is gestopt voor foutopsporing.
+
+## Breekpunt (_Breakpoint_)
+
+Het breekpunt (_breakpoint_) is de plaats in de code waar de uitvoering moet worden gepauzeerd om het foutopsporingsproces te starten.
+
+Om foutopsporing te starten in code van elke taal die door Netuno wordt ondersteund, zoals JavaScript, Python, Ruby, Kotlin of Groovy, plaats je op de plaats waar je de foutopsporing wilt starten de volgende code:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _exec.debug()
+            `
+        },
+    ]}
+/>
+
+> Omdat Netuno polyglot is, werkt het met elke ondersteunde taal, zoals: JavaScript, Python, Kotlin, Ruby of Groovy.
+
+Voer nu, om de foutopsporing te starten, de code uit en de uitvoering blijft vastzitten, gepauzeerd.
+
+Ga dan naar de ontwikkelinterface, in het backoffice onder `Bouwen`, en in het menu aan de linkerkant hebben we de optie:
+
+- **Foutopsporing**
+
+Waar we de groene dubbele pijl kunnen vinden die aangeeft dat de uitvoering kan doorgaan als erop wordt geklikt:
+
+![Debug - Doorgaan](/docs/assets/academy/server/debug/step-over-pt.jpg "Debug - Doorgaan")
+
+> De groene dubbele pijl onderbreekt de pauze van de foutopsporing, waardoor de uitvoering van de code normaal doorgaat vanaf het punt waar deze is gestopt.
+
+## Observeren (_Watch_)
+
+Om de waarde van variabelen te zien, gebruiken we het gele vergrootglas.
+
+Als we op het gele vergrootglas klikken, kunnen we de naam invoeren van de variabele waarvan we de waarde willen observeren.
+
+![Debug - Observeren](/docs/assets/academy/server/debug/watch-pt.jpg "Debug - Observeren")
+
+De naam van de variabele en de huidige waarde verschijnen in de lijst; we kunnen de waarde van meerdere variabelen observeren. Als een variabele niet bestaat, is er geen waarde.
+
+## Code uitvoeren (_Execute Code_)
+
+We kunnen code injecteren die wordt uitgevoerd in de context van het breekpunt, dat wil zeggen waar de foutopsporing plaatsvindt.
+
+We klikken op het blauwe code-symbool en kunnen de code invoeren die we willen uitvoeren.
+
+![Debug - Code uitvoeren](/docs/assets/academy/server/debug/execute-code-pt.jpg "Debug - Code uitvoeren")
+
+De uitgevoerde code wordt in de lijst hieronder weergegeven met de melding dat de code met succes is uitgevoerd; als er een fout is, wordt de foutmelding samen met de code weergegeven.
+
+## Configuratie voor foutopsporing op afstand
+
+Bij het lokaal uitvoeren van Netuno zou er geen configuratie nodig moeten zijn.
+
+Omdat bij lokale ontwikkeling de `host` van het WebSocket-adres automatisch wordt geconfigureerd.
+
+Lokale adressen gebruiken normaal gesproken deze waarden als `host`:
+
+- `localhost`
+- `127.0.0.1`
+- `192.168.1.*` - Voorbeeld van elk lokaal netwerk-IP.
+- `mijn-app.local.netu.no`
+
+> Lokale adressen hebben geen configuratie nodig, dus deze stap kan worden overgeslagen.
+
+In productie of bij externe ontwikkeling, zoals in een container of via VPN, kan het echter nodig zijn het externe adres (IP of domein) te definiëren dat wordt gebruikt voor de WebSocket-verbinding.
+
+Navigeer in dat geval binnen de applicatie die wordt ontwikkeld naar het omgevingsconfiguratiebestand. In dit voorbeeld gebruiken we het configuratiebestand voor de ontwikkelomgeving, dat zich bevindt in:
+
+- 📂 `config/_development.json`
+
+Controleer of de configuratie misschien al niet bestaat; als deze niet bestaat, voeg dan aan het einde van het configuratiebestand (in JSON-formaat) de configuratieparameters toe voor het externe adres dat moet worden gebruikt voor de WebSocket-verbinding, bijvoorbeeld:
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": "dev.netuno.org"
+        }
+    },
+    ...
+}
+```
+
+> De poortinformatie mag niet aan het `host`-adres in de WebSocket worden toegevoegd.
+
+Er kunnen ook meerdere `host`-adressen in een array worden doorgegeven:
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": [ "mijn-container.dev.netuno.org", "mijn-project.com" ]
+        }
+    },
+    ...
+}
+```
+
+### Proxy in productie (NGINX)
+
+In productie wordt vaak een webserver gebruikt die als reverse proxy fungeert, zoals NGINX.
+
+Om foutopsporing via een proxy te laten werken, is het dan nodig een specifieke configuratie toe te voegen om het verkeer dat verband houdt met het WebSocket-adres door te sturen:
+
+```
+server {
+    listen 443 ssl;
+    server_name mijn-project.com;
+    
+    ...
+    
+    location /dev/ws/ {
+        proxy_pass http://127.0.0.1:9000;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        add_header X-Frame-Options "";
+    }
+}
+```
+
+## Conclusie
+
+Met de foutopsporingsinterface en de opdracht `_exec.debug()` kunnen we een diepgaand onderzoek uitvoeren naar wat er gebeurt.
+
+In de meeste backendtalen en -technologieën, vooral scripttalen, is debuggen meestal onmogelijk of complex.
+
+Netuno biedt een eenvoudige manier om polyglotcode te debuggen die werkt in de verschillende ondersteunde talen, zoals JavaScript, Python, Ruby, Kotlin en Groovy.
+
+> Maakt polyglotte foutopsporing mogelijk in externe omgevingen en in productie.
+
+Foutopsporing gebruiken versnelt de ontwikkeling aanzienlijk, biedt meer precisie bij het oplossen van problemen en wordt een essentieel hulpmiddel. Probeer het eens.

@@ -1,0 +1,1093 @@
+---
+id: upload
+title: Загрузка
+sidebar_label: Загрузка
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Отправка файлов в API и сохранение в папку или базу данных.
+
+## Введение
+
+Когда нужно отправлять файлы в сервисы REST API, в Netuno есть несколько способов
+реализовать это.
+
+Обычно файлы отправляются в теле HTTP-запроса в формате
+multipart — это наиболее распространённый подход во фронтенде, например когда заполняют
+форму и в ней есть поле для выбора файла.
+
+В качестве альтернативы можно отправлять байты файлов, закодированные в Base64, как значение
+в объекте JSON, если нужен REST API, полностью работающий с JSON.
+
+## Файлы
+
+Через `_req.file` можно передать имя поля и таким образом получить объект файла,
+который был отправлен. Смотрите:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const moiFayl = _req.file("fayl");
+            `
+        },
+    ]}
+/>
+
+То есть `_req` содержит все данные, полученные в теле HTTP-запроса.
+
+А через метод `file` можно получить объект, представляющий отправленный
+файл.
+
+Полученное значение может быть `null`, если файла нет.
+
+## Изображения
+
+Когда принимаются изображения, часто нужно изменять их размер, чтобы обеспечить
+единообразие и уменьшить занимаемое изображениями место.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const moiFayl = _req.getFile("izobrazhenie");
+                if (moiFayl != null
+                    && (moiFayl.isExtension("jpeg")
+                        || moiFayl.isExtension("jpg")
+                        || moiFayl.isExtension("png")
+                    )) {
+                    const moeIzobrazhenie = _image.init(moiFayl)
+                        .resize(200, 200)
+                        .file(moiFayl.baseName() +".jpg", "jpeg");
+                    _header.contentTypeJPG();
+                    _out.copy(moeIzobrazhenie);
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                moiFayl = _req.getFile("izobrazhenie")
+                if moiFayl is not None and (
+                    moiFayl.isExtension("jpeg")
+                    or moiFayl.isExtension("jpg")
+                    or moiFayl.isExtension("png")):
+                    moeIzobrazhenie = (
+                        _image.init(moiFayl)
+                            .resize(200, 200)
+                            .file(moiFayl.baseName() +".jpg", "jpeg")
+                    )
+                    _header.contentTypeJPG()
+                    _out.copy(moeIzobrazhenie)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                moi_fayl = _req.getFile("izobrazhenie")
+                if !moi_fayl.nil? && (
+                    moi_fayl.isExtension("jpeg") ||
+                    moi_fayl.isExtension("jpg") ||
+                    moi_fayl.isExtension("png")
+                )
+                    moe_izobrazhenie = _image.init(moi_fayl)
+                        .resize(200, 200)
+                        .file(moi_fayl.baseName() +".jpg", "jpeg")
+                    _header.contentTypeJPG()
+                    _out.copy(moe_izobrazhenie)
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val moiFayl = _req.getFile("izobrazhenie")
+                if (moiFayl != null
+                    && (moiFayl.isExtension("jpeg")
+                        || moiFayl.isExtension("jpg")
+                        || moiFayl.isExtension("png")
+                    )) {
+                    val moeIzobrazhenie = _image.init(moiFayl.input())
+                        .resize(200, 200)
+                        .file(moiFayl.baseName() +".jpg", "jpeg")
+                    _header.contentTypeJPG()
+                    _out.copy(moeIzobrazhenie.input())
+                }
+            `
+        }
+    ]}
+/>
+
+С помощью ресурса полиглотного low-code программирования [Image](/docs/library/resources/image)
+можно обрабатывать изображения: обрезать, изменять размер, создавать новые и т. д.
+
+## Как Base64 в JSON
+
+Чтобы загрузить файл в JSON, отправляемый в сервис, можно задать свойство со значением:
+
+`data:image/png;base64,...`
+
+Где в `...` идёт последовательность байтов файла, закодированных в Base64.
+
+Тип файла указывается после `data`, например:
+
+- PNG: `image/png`.
+- JPG: `image/jpeg`
+- TXT: `text/plain`
+- PDF: `application/pdf`
+- XLSX: `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
+
+Смотрите пример небольшого PNG-изображения, отправляемого в JSON в сервис:
+
+```json
+{
+  "fayl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAFIGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpDb2xvclNwYWNlPSIxIgogICBleGlmOlBpeGVsWERpbWVuc2lvbj0iMyIKICAgZXhpZjpQaXhlbFlEaW1lbnNpb249IjMiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMyIKICAgdGlmZjpJbWFnZVdpZHRoPSIzIgogICB0aWZmOlJlc29sdXRpb25Vbml0PSIyIgogICB0aWZmOlhSZXNvbHV0aW9uPSI3Mi8xIgogICB0aWZmOllSZXNvbHV0aW9uPSI3Mi8xIgogICB4bXA6TWV0YWRhdGFEYXRlPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMTItMjlUMTk6MTI6MjdaIj4KICAgPHhtcE1NOkhpc3Rvcnk+CiAgICA8cmRmOlNlcT4KICAgICA8cmRmOmxpCiAgICAgIHhtcE1NOmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHhtcE1NOnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IERlc2lnbmVyIDEuMTAuNSIKICAgICAgeG1wTU06d2hlbj0iMjAyNS0wMi0yM1QyMjoxNDozM1oiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IDMuMC4xIgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+UGhcxwAAAYFpQ0NQc1JHQiBJRUM2MTk2Ni0yLjEAACiRdZG7SwNBEIe/JEqCRhS0sFAIEq3iG4I2ggmigkiIEXw1yZmHkMdxlyDBVrANKIg2vgr9C7QVrAVBUQSx1lbRRuWc84QEMbPMzre/3Rl2Z8EeSSsZvaYPMtm8Fh4PeObmFzzOZ9y004yL3qiiq6Oh0BRV7f0Wmxmvu81a1c/9a/XLcV0Bm0t4RFG1vPCE8NRqXjV5S7hFSUWXhU+EfZpcUPjG1GMWP5mctPjTZC0SDoK9SdiTrOBYBSspLSMsL8ebSReU3/uYL3HHs7MzEjvE29AJM04AD5OMEcRPP8My++lmgB5ZUSW/7yd/mpzkKjKrFNFYIUmKPD5RC1I9LjEhelxGmqLZ/7991RODA1Z1dwBqHw3jtROcm/BVMoyPA8P4OgTHA5xny/m5fRh6E71U1rx70LgOpxdlLbYNZxvQeq9GteiP5BC3JxLwcgwN89B8BXWLVs9+9zm6g8iafNUl7OxCl5xvXPoGe8Rn71E5kqUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAySURBVAiZAScA2P8BJYrEogr//l3h5+qlBP4HCF3n/AAA/wP7WwLu7PKk+eHWAPzWyKSmfRbbIj23ZQAAAABJRU5ErkJggg=="
+}
+```
+
+Получить отправленный файл можно так:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const moiFayl = _req.getFile("fayl");
+                if (moiFayl != null) {
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", true)
+                            .set("imya", moiFayl.name())
+                            .set("razmerBayt", moiFayl.size())
+                            .set("razmerKB", moiFayl.sizeKB())
+                            .set("razmerMB", moiFayl.sizeMB())
+                            .set("razmerGB", moiFayl.sizeGB())
+                    );
+                } else {
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", false)
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                moiFayl = _req.getFile("fayl")
+                if moiFayl is not None:
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", True)
+                            .set("imya", moiFayl.name())
+                            .set("razmerBayt", moiFayl.size())
+                            .set("razmerKB", moiFayl.sizeKB())
+                            .set("razmerMB", moiFayl.sizeMB())
+                            .set("razmerGB", moiFayl.sizeGB())
+                    )
+                else:
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", False)
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                moi_fayl = _req.getFile("fayl")
+                if moi_fayl.nil?
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", true)
+                            .set("imya", moi_fayl.name())
+                            .set("razmerBayt", moi_fayl.size())
+                            .set("razmerKB", moi_fayl.sizeKB())
+                            .set("razmerMB", moi_fayl.sizeMB())
+                            .set("razmerGB", moi_fayl.sizeGB())
+                    )
+                else
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", false)
+                    )
+                end
+            `
+        },
+    ]}
+/>
+
+Пример вывода, сгенерированного сервисом выше:
+
+```json
+{
+  "imya": "fayl.png",
+  "rezultat": true,
+  "razmer": 1849,
+  "razmerKB": 1
+}
+```
+
+### Объект
+
+Если файл находится во внутренней структуре JSON внутри подобъекта:
+
+```json
+{
+  "chelovek": {
+    "fayl": "data:image/png;base64,..."
+  }
+}
+```
+
+Его можно получить так:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const moiFayl = _req.getValues("chelovek").getFile("avatar");
+            `
+        },
+    ]}
+/>
+
+### Массив
+
+Если файл находится во внутренней структуре JSON внутри массива:
+
+```json
+{
+  "fayly": [
+    "data:image/png;base64,..."
+  ]
+}
+```
+
+Его можно получить так:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const moiFayl = _req.getValues("fayly").getFile(0);
+            `
+        },
+    ]}
+/>
+
+## OpenAPI
+
+Netuno поддерживает интеграцию с OpenAPI и использует определение OpenAPI для проверки HTTP-запроса.
+
+> Подробнее об [OpenAPI в Netuno](/docs/academy/server/services/openapi).
+
+С типом `file` Netuno проверяет, начинается ли значение с формата файла в JSON, например:
+
+- `data:image/png;base64,...`
+
+Чтобы проверить, что в свойстве объекта JSON принимается файл:
+
+```json title="post.in.json"
+{
+  "summary": "Загрузка файла",
+  "description": "Сервис, который принимает файл в объекте JSON.",
+  "type": "object",
+  "properties": {
+    "fayl": {
+      "type": "file"
+    }
+  },
+  "required": [
+    "fayl"
+  ]
+}
+```
+
+Чтобы проверить, что в JSON принимается список файлов в массиве:
+
+```json title="post.in.json"
+{
+  "summary": "Загрузка файлов",
+  "description": "Сервис, который принимает список файлов в массиве JSON.",
+  "properties": {
+    "fayly": {
+      "type": "array",
+      "items": {
+        "type": "file"
+      }
+    }
+  },
+  "required": [
+    "fayly"
+  ]
+}
+```
+
+## Сохранение файла
+
+Обычно, когда сервис получает файл, его нужно сохранить, например:
+
+- **База данных**: файл, связанный с записью, например с пользователем.
+- **Storage**: внутренняя папка приложения, предназначенная для управления файлами в целом.
+- **Папка**: поместить файл в любую папку системы.
+
+### База данных
+
+При управлении полями форм Netuno поддерживает типы `image` и `file`, а именно:
+
+- **Image**: файлы изображений в целом, JPG и PNG.
+- **File**: любой тип файла.
+
+Представьте, что в форме `Produkt` есть поле изображения; сохранить файл, загруженный
+через загрузку, можно так:
+
+#### Пример с использованием DB Form:
+
+Обратите внимание на использование `_db.form`:
+
+<PolyglotCode
+    file="services/produkt/izobrazhenie/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const produktUid = _req.getString("uid");
+                const produktIzobrazhenie = _req.getFile("izobrazhenie");
+
+                if (produktIzobrazhenie == null) {
+                    _header.status(400);
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", false)
+                            .set("oshibka", "izobrazhenie-obyazatelno")
+                    );
+                    _exec.stop();
+                }
+
+                const dbRezultat = _db.form("produkt")
+                    .set("izobrazhenie", produktIzobrazhenie)
+                    .where(_db.where("uid").equals(produktUid))
+                    .update();
+
+                if (dbRezultat.getInt("produkt") == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", true)
+                    );
+                } else {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", false)
+                            .set("oshibka", "uid-produkt-ne-sushchestvuet")
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                produktUid = _req.getString("uid")
+                produktIzobrazhenie = _req.getFile("izobrazhenie")
+
+                if produktIzobrazhenie is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", False)
+                            .set("oshibka", "izobrazhenie-obyazatelno")
+                    )
+                    _exec.stop()
+
+                dbRezultat = (
+                    _db.form("produkt")
+                        .set("izobrazhenie", produktIzobrazhenie)
+                        .where(_db.where("uid").equals(produktUid))
+                        .update()
+                )
+
+                if dbRezultat.getInt("produkt") == 1:
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", False)
+                            .set("oshibka", "uid-produkt-ne-sushchestvuet")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                produkt_uid = _req.getString("uid")
+                produkt_izobrazhenie = _req.getFile("izobrazhenie")
+
+                if produkt_izobrazhenie.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("rezultat", false)
+                      .set("oshibka", "izobrazhenie-obyazatelno")
+                  )
+                  _exec.stop
+                end
+
+                db_rezultat = _db.form("produkt")
+                  .set("izobrazhenie", produkt_izobrazhenie)
+                  .where(_db.where("uid").equals(produkt_uid))
+                  .update()
+
+                if db_rezultat.getInt("produkt") == 1
+                  _out.json(
+                    _val.map()
+                      .set("rezultat", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("rezultat", false)
+                      .set("oshibka", "uid-produkt-ne-sushchestvuet")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### Пример с использованием классического update:
+
+Обратите внимание на использование `_db.update`:
+
+<PolyglotCode
+    file="services/produkt/izobrazhenie/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const produktUid = _req.getString("uid");
+                const produktIzobrazhenie = _req.getFile("izobrazhenie");
+
+                if (produktIzobrazhenie == null) {
+                    _header.status(400);
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", false)
+                            .set("oshibka", "izobrazhenie-obyazatelno")
+                    );
+                    _exec.stop();
+                }
+
+                const dbRezultat = _db.update(
+                    "produkt",
+                    produktUid,
+                    _val.map()
+                        .set("izobrazhenie", produktIzobrazhenie)
+                );
+
+                if (dbRezultat == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", true)
+                    );
+                } else {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", false)
+                            .set("oshibka", "uid-produkt-ne-sushchestvuet")
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                produktUid = _req.getString("uid")
+                produktIzobrazhenie = _req.getFile("izobrazhenie")
+
+                if produktIzobrazhenie is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", False)
+                            .set("oshibka", "izobrazhenie-obyazatelno")
+                    )
+                    _exec.stop()
+
+                dbRezultat = (
+                    _db.update(
+                        "produkt",
+                        produktUid,
+                        _val.map()
+                            .set("izobrazhenie", produktIzobrazhenie)
+                    )
+                )
+
+                if dbRezultat == 1:
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", False)
+                            .set("oshibka", "uid-produkt-ne-sushchestvuet")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                produkt_uid = _req.getString("uid")
+                produkt_izobrazhenie = _req.getFile("izobrazhenie")
+
+                if produkt_izobrazhenie.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("rezultat", false)
+                      .set("oshibka", "izobrazhenie-obyazatelno")
+                  )
+                  _exec.stop
+                end
+
+                db_rezultat = _db.update(
+                  "produkt",
+                  produkt_uid,
+                  _val.map()
+                    .set("izobrazhenie", produkt_izobrazhenie)
+                )
+
+                if db_rezultat == 1
+                  _out.json(
+                    _val.map()
+                      .set("rezultat", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("rezultat", false)
+                      .set("oshibka", "uid-produkt-ne-sushchestvuet")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### Скачивание файла из базы данных
+
+Чтобы отдать сохранённый файл, нужно создать сервис, который возвращает байты файла.
+
+При этом файлы, сохранённые в базе данных, как в примере выше, сам файл помещается в storage
+приложения, а в базе данных хранится только итоговое имя файла.
+
+> Storage приложения — это папка, предназначенная для хранения и организации структур общих файлов.
+
+Таким образом, в примере выше файлы базы данных формы `Produkt` и поля `Izobrazhenie` хранятся в:
+
+- `storage/database/produkt/izobrazhenie/*`
+
+> Netuno автоматически управляет именем сохраняемого файла, чтобы избежать повторяющихся имён файлов.
+
+Чтобы получить файл, можно создать сервис, который отдаёт файл изображения продукта, например:
+
+<PolyglotCode
+    file="services/produkt/izobrazhenie/get"
+    codes={[
+    {
+        lang: 'javascript',
+        code: `
+            const produktUid = _req.getString("uid");
+
+            // Форма БД:
+            const dbProdukt = _db.form("produkt")
+                .where(_db.where("uid").equals(produktUid))
+                .first();
+            // Альтернатива с классическим DB:
+            // const dbProdukt = _db.get("produkt", produktUid)
+
+            if (dbProdukt == null) {
+                _header.status(404);
+                _out.json(
+                    _val.map()
+                        .set("rezultat", false)
+                        .set("oshibka", "produkt-ne-nayden")
+                );
+                _exec.stop();
+            }
+
+            const dbProduktIzobrazhenieImya = dbProdukt.getString("izobrazhenie");
+
+            const storageProduktIzobrazhenieFayl = _storage.database(
+                "produkt",
+                "izobrazhenie",
+                dbProduktIzobrazhenieImya
+            );
+
+            if (storageProduktIzobrazhenieFayl.extension() == "jpg" || storageProduktIzobrazhenieFayl.extension() == "jpeg") {
+                _header.contentTypeJPG();
+            } else {
+                _header.contentTypePNG();
+            }
+
+            _header.noCache();
+
+            _out.copy(storageProduktIzobrazhenieFayl.inputStream());
+        `
+    },
+    {
+        lang: 'python',
+        code: `
+            produktUid = _req.getString("uid")
+
+            # Форма БД:
+            dbProdukt = (
+                _db.form("produkt")
+                    .where(_db.where("uid").equals(produktUid))
+                    .first()
+            )
+            # Альтернатива с классическим DB:
+            # dbProdukt = _db.get("produkt", produktUid)
+
+            if dbProdukt is None:
+                _header.status(404)
+                _out.json(
+                    _val.map()
+                        .set("rezultat", False)
+                        .set("oshibka", "produkt-ne-nayden")
+                )
+                _exec.stop()
+
+            dbProduktIzobrazhenieImya = dbProdukt.getString("izobrazhenie")
+
+            storageProduktIzobrazhenieFayl = _storage.database(
+                "produkt",
+                "izobrazhenie",
+                dbProduktIzobrazhenieImya
+            )
+
+            if storageProduktIzobrazhenieFayl.extension() == "jpg" or storageProduktIzobrazhenieFayl.extension() == "jpeg":
+                _header.contentTypeJPG()
+            else:
+                _header.contentTypePNG()
+
+            _header.noCache()
+
+            _out.copy(storageProduktIzobrazhenieFayl.inputStream())
+        `
+    },
+    {
+        lang: 'ruby',
+        code: `
+            produktUid = _req.getString("uid")
+
+            # Форма БД:
+            dbProdukt = _db.form("produkt")
+                .where(_db.where("uid").equals(produktUid))
+                .first()
+            # Альтернатива с классическим DB:
+            # dbProdukt = _db.get("produkt", produktUid)
+
+            if dbProdukt.nil?
+                _header.status(404)
+                _out.json(
+                    _val.map()
+                        .set("rezultat", false)
+                        .set("oshibka", "produkt-ne-nayden")
+                )
+                _exec.stop()
+            end
+
+            dbProduktIzobrazhenieImya = dbProdukt.getString("izobrazhenie")
+
+            storageProduktIzobrazhenieFayl = _storage.database(
+                "produkt",
+                "izobrazhenie",
+                dbProduktIzobrazhenieImya
+            )
+
+            if storageProduktIzobrazhenieFayl.extension() == "jpg" || storageProduktIzobrazhenieFayl.extension() == "jpeg"
+                _header.contentTypeJPG()
+            else
+                _header.contentTypePNG()
+            end
+
+            _header.noCache()
+
+            _out.copy(storageProduktIzobrazhenieFayl.inputStream())
+        `
+    },
+]}
+/>
+
+Обратите внимание, что ресурс `_storage` ([Storage](/docs/library/resources/storage)) используется для получения файла:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _storage.database(
+                    "produkt", // Имя формы/таблицы.
+                    "izobrazhenie", // Имя поля/столбца.
+                    dbProduktIzobrazhenieImya // Имя файла.
+                );
+            `
+        },
+    ]}
+/>
+
+В базе данных хранится только имя файла, а с помощью `_storage.database` можно
+получить сам файл.
+
+### Storage
+
+Можно сохранить файл напрямую в `storage` приложения.
+
+Чтобы не смешивать с файлами базы данных, следует использовать папку `filesystem`,
+предназначенную для хранения общих файлов, не связанных с базой данных.
+
+Чтобы принять файл, в этом примере показано, как файл, отправленный в сервис
+`POST`, сохраняется напрямую в storage:
+
+<PolyglotCode
+    file="services/fayl/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fayl = _req.getFile("fayl");
+                _storage.filesystem("server", "zagruzka").ensurePath();
+                fayl.save(_storage.filesystem("server", "zagruzka", fayl.name()));
+            `
+        },
+    ]}
+/>
+
+Файл сохраняется в папке `storage` приложения по пути:
+
+- `storage/filesystem/server/zagruzka/*`
+
+> Ресурс [Storage](/docs/library/resources/storage) используется для получения пути к папке и файлу:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _storage.filesystem(
+                    "server", // Имя подпапки в filesystem.
+                    "zagruzka", // Имя или путь внутренней подпапки.
+                    fayl.name() // Итоговое имя файла.
+                );
+            `
+        },
+    ]}
+/>
+
+> Подробнее см. в документации [Storage](/docs/library/resources/storage).
+
+Чтобы скачать файл, в этом примере показано, как получить байты файла
+через сервис `GET`:
+
+<PolyglotCode
+    file="services/fayl/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const faylImya = _req.getString("fayl");
+
+                const fayl = _storage.filesystem(
+                    "server",
+                    "zagruzka",
+                    faylImya
+                ).file();
+
+                if (fayl.exists() == false) {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", false)
+                            .set("oshibka", "fayl-ne-sushchestvuet")
+                    );
+                    _exec.stop();
+                }
+
+                _header.downloadFile(fayl.name());
+                _out.copy(fayl.input());
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                faylImya = _req.getString("fayl")
+
+                fayl = _storage.filesystem(
+                    "server",
+                    "zagruzka",
+                    faylImya
+                ).file()
+
+                if fayl.exists() == False:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", False)
+                            .set("oshibka", "fayl-ne-sushchestvuet")
+                    )
+                    _exec.stop()
+
+                _header.downloadFile(fayl.name())
+                _out.copy(fayl.input())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fayl_imya = _req.getString("fayl")
+
+                fayl = _storage.filesystem(
+                    "server",
+                    "zagruzka",
+                    fayl_imya
+                ).file()
+
+                if fayl.exists() == false
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", false)
+                            .set("oshibka", "fayl-ne-sushchestvuet")
+                    )
+                    _exec.stop()
+                end
+
+                _header.downloadFile(fayl.name())
+                _out.copy(fayl.input())
+            `
+        },
+    ]}
+/>
+
+### Папка
+
+Можно сохранить файл напрямую в любую папку компьютера.
+
+В таких случаях очень полезны два ресурса:
+
+- `_app` — можно получить любую папку или файл в приложении.
+- `_os` — можно получить любую папку или файл на компьютере.
+
+> См. документацию соответствующих ресурсов [App](/docs/library/resources/app) и [OS](/docs/library/resources/os);
+> оба ресурса имеют методы `folder` и `file`, которые позволяют указать путь к папке или файлу
+> соответственно.
+
+Чтобы принять файл, в этом примере показано, как файл, отправленный в сервис
+`POST`, сохраняется напрямую в папку приложения:
+
+<PolyglotCode
+    file="services/fayl/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fayl = _req.getFile("fayl");
+                const papka = _app.folder("temp");
+                if (papka.exists() == false) {
+                    papka.mkdir();
+                }
+                fayl.save(_app.file(\`temp/\${fayl.name()}\`));
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                fayl = _req.getFile("fayl")
+                papka = _app.folder("temp")
+                if papka.exists() == False:
+                    papka.mkdir()
+
+                fayl.save(_app.file(f"temp/{fayl.name()}"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fayl = _req.getFile("fayl")
+                papka = _app.folder("temp")
+                if papka.exists() == false
+                    papka.mkdir()
+                end
+                fayl.save(_app.file("temp/#{fayl.name()}"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val fayl = _req.getFile("fayl")
+                val papka = _app.folder("temp")
+                if (papka.exists() == false) {
+                    papka.mkdir()
+                }
+                fayl.save(_app.file("temp/\${fayl.name()}"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                final fayl = _req.getFile("fayl")
+                final papka = _app.folder("temp")
+                if (papka.exists() == false) {
+                    papka.mkdir()
+                }
+                fayl.save(_app.file("temp/\${fayl.name()}"))
+            `
+        },
+    ]}
+/>
+
+Приведённый код создаст папку `temp` внутри приложения и сохранит полученный файл
+в эту папку.
+
+Чтобы скачать файл, в этом примере показано, как получить байты файла
+через сервис `GET`:
+
+<PolyglotCode
+    file="services/fayl/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const faylImya = _req.getString("fayl");
+                const fayl = _app.file(\`temp/\${faylImya}\`);
+
+                if (fayl.exists() == false) {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", false)
+                            .set("oshibka", "fayl-ne-sushchestvuet")
+                    );
+                    _exec.stop();
+                }
+
+                _header.downloadFile(fayl.name());
+                _out.copy(fayl.input());
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                faylImya = _req.getString("fayl")
+                fayl = _app.file(f"temp/{faylImya}")
+
+                if fayl.exists() == False:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", False)
+                            .set("oshibka", "fayl-ne-sushchestvuet")
+                    )
+                    _exec.stop()
+
+                _header.downloadFile(fayl.name())
+                _out.copy(fayl.input())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fayl_imya = _req.getString("fayl")
+                fayl = _app.file("temp/#{fayl_imya}")
+
+                if fayl.exists() == false
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", false)
+                            .set("oshibka", "fayl-ne-sushchestvuet")
+                    )
+                    _exec.stop()
+                end
+
+                _header.downloadFile(fayl.name())
+                _out.copy(fayl.input())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val faylImya = _req.getString("fayl")
+                val fayl = _app.file("temp/\${faylImya}")
+
+                if (fayl.exists() == false) {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", false)
+                            .set("oshibka", "fayl-ne-sushchestvuet")
+                    )
+                    _exec.stop()
+                }
+
+                _header.downloadFile(fayl.name())
+                _out.copy(fayl.input())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                final faylImya = _req.getString("fayl")
+                final fayl = _app.file("temp/\${faylImya}")
+
+                if (fayl.exists() == false) {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("rezultat", false)
+                            .set("oshibka", "fayl-ne-sushchestvuet")
+                    )
+                    _exec.stop()
+                }
+
+                _header.downloadFile(fayl.name())
+                _out.copy(fayl.input())
+            `
+        },
+    ]}
+/>
+
+## Заключение
+
+Как видно, можно интегрировать загрузку файлов в сервисы REST API, в том числе
+с OpenAPI.
+
+Можно сохранять файл в базе данных, в папке `storage` приложения или в любой папке
+компьютера.
+
+См. документацию ресурсов, использованных в этом руководстве и позволяющих
+работать с файлами:
+
+- [Storage](/docs/library/resources/storage)
+- [App](/docs/library/resources/app)
+- [OS](/docs/library/resources/os)
+
+В базе данных можно сохранять изображения в поля типа `image` и любые типы файлов
+в поля типа `file`; способ сохранения и получения файлов одинаков в любом случае —
+будь то изображение или обычный файл.

@@ -4,16 +4,21 @@ type Language = {
 };
 
 const languages: Language[] = [
-  { code: "en", label: "English" },
-  { code: "pt", label: "Português" },
-  { code: "es", label: "Español" },
-  { code: "fr", label: "Français" },
-  { code: "de", label: "Deutsch" },
-  { code: "it", label: "Italiano" },
-  { code: "nl", label: "Nederlands" },
-  { code: "pl", label: "Polski" },
-  { code: "ru", label: "Русский" },
-  { code: "ro", label: "Română" },
+  { code: "en", label: "English (US)" },
+  // { code: "en-GB", label: "English (UK)" },
+  // { code: "pt", label: "Portuguese (Portugal)" },
+  // { code: "pt-BR", label: "Portuguese (Brazil)" },
+  { code: "es", label: "Spanish (Spain)" },
+  { code: "fr", label: "French" },
+  { code: "de", label: "German" },
+  { code: "it", label: "Italian" },
+  { code: "nl", label: "Dutch" },
+  { code: "pl", label: "Polish" },
+  { code: "ru", label: "Russian" },
+  { code: "ro", label: "Romanian" },
+  { code: "ja", label: "Japanese" },
+  { code: "ko", label: "Korean" },
+  { code: "zh-CN", label: "Chinese" },
 ];
 
 export function selectLanguage(): Language {

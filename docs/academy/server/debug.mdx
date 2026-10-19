@@ -1,49 +1,51 @@
 ---
 id: debug
-title: Debug
+title: Debugging
 sidebar_label: Debug
 ---
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
 
-Allows you to analyze code execution in real time.
+Allows analyzing code execution in real time.
 
 ## Introduction
 
-During coding, it's often necessary to analyze code execution.
+During coding, it often happens that you need to analyze code execution.
 
-In the case of Netuno, we can use:
+With Netuno we can use:
 
-- `_out.print` - To display some information in the output.
-- `_log.info` - To display some information in the Netuno server terminal.
+- `_out.print` - To show some information in the data output (_output_).
+- `_log.info` - To show some information in the Netuno server terminal.
 
-However, there are also more complex scenarios where we want to analyze in greater depth, for example, checking 
-multiple values of objects and variables simultaneously, testing the execution of some specific code in this 
+However, there are also more complex scenarios where we want to analyze more deeply, for example
+checking several values of objects and variables at the same time, testing the execution of some specific code in this
 context, all to better understand the behavior.
 
-In these more complex cases, it's always possible to use the methods shown above, such as `_out.print` and
-`_log.info`, but this can be a very laborious and confusing process to achieve a good
-understanding of what's happening.
+It is always possible to use in these more complex cases the methods shown above such as `_out.print` and
+`_log.info`, but we can fall into a very laborious and confusing process to reach a good
+understanding of what is happening.
 
-Debugging (_debug_) serves precisely to provide a good understanding of what's happening, especially in
+Debugging serves precisely to provide a good understanding of what is happening, especially in
 more complex situations.
 
-> Debugging is the process used in development to find and reduce defects, failures, erroneous behavior, etc.
+> Debugging is the process used in development to find and reduce
+> defects, failures, wrong behaviors, etc.
 
-Debugging can be divided into three main mechanisms:
+Debugging can be divided into 3 important mechanisms:
 
-- **Breakpoint**: Stops code execution, allowing us to begin investigating where
-  the code is stopped.
-- **Watch**: Allows us to observe the values of variables where the code is stopped.
-- **Code Execution**: We can temporarily execute any code to perform some
-  testing at the point where execution is stopped for debugging.
+- Breakpoint: Makes code execution stop, we can then start investigating where
+the code is stopped.
+- Watch: Allows observing the values of variables where the code is stopped.
+- Code Execution: We can execute any code temporarily, to perform some
+test at the point where execution is stopped for debugging.
 
 ## Breakpoint
 
-The breakpoint is where execution in the code should be paused to begin the debugging process.
+The breakpoint is where in the code execution should be paused to start the
+debugging process.
 
-To start debugging any code in any language supported by Netuno, such as JavaScript, Python,
-Ruby, Kotlin, or Groovy, place the following code where you want to start debugging:
+To start debugging in any code and in any language supported by Netuno, such as JavaScript, Python,
+Ruby, Kotlin or Groovy, at the location where you want to start debugging, place the following code:
 
 <PolyglotCode
     codes={[
@@ -56,70 +58,71 @@ Ruby, Kotlin, or Groovy, place the following code where you want to start debugg
     ]}
 />
 
-> Since Netuno is polyglot, it works with any supported language, such as JavaScript, Python, Kotlin, Ruby,
+> Since Netuno is polyglot, it works with any supported language, such as: JavaScript, Python, Kotlin, Ruby,
 > or Groovy.
 
-To start debugging, run the code, and execution will pause.
+Now to start debugging, run the code and execution will be held, paused.
 
-Then go to the development interface, in the back office, and select 'Build'. In the left-hand menu, you'll find 
-the following option:
+Then let's go to the development interface, in the backoffice under `Build`, and in the left side menu we have the option:
 
 - **Debug**
 
-Where can we find the double green arrow that indicates that by clicking on it, execution can continue:
+Where we can find the double green arrow that indicates that clicking on it will allow execution to continue:
 
-![Debug - Step Over](/docs/assets/academy/server/debug/step-over-en.jpg "Debug - Step Over")
+![Debug - Step Over](/docs/assets/academy/server/debug/step-over-pt.jpg "Debug - Step Over")
 
-> The double green arrow interrupts the debugging pause, causing code execution to continue normally from the 
-> point where it left off.
+> The double green arrow interrupts the debugging pause causing code execution to continue normally from
+> the point where it stopped.
 
 ## Watch
 
-To view the values of variables, we use the yellow magnifying glass.
+To see the value of variables we use the yellow magnifying glass.
 
-By clicking on the yellow magnifying glass, we can enter the name of the variable whose value we want to view.
+By clicking on the yellow magnifying glass we can enter the name of the variable whose value we want to observe.
 
-![Debug - Watch](/docs/assets/academy/server/debug/watch-en.jpg "Debug - Watch")
+![Debug - Watch](/docs/assets/academy/server/debug/watch-pt.jpg "Debug - Watch")
 
-The name of the variable and its current value appear in the list. We can see the value of several variables. If any 
-variable does not exist, then there will be no value.
+The variable name and its current value appear in the list, we can observe the value of several variables, if any
+variable does not exist then there will be no value.
 
 ## Execute Code
 
-We can inject code to be executed in the context of the breakpoint, that is, where debugging is taking place.
+We can inject code to be executed in the context of the breakpoint, that is, where debugging is
+happening.
 
-We click the blue code symbol and we can insert the code we want to execute.
+We click on the blue code symbol and we can enter the code we intend to execute.
 
-![Debug - Execute Code](/docs/assets/academy/server/debug/execute-code-en.jpg "Debug - Execute Code")
+![Debug - Execute Code](/docs/assets/academy/server/debug/execute-code-pt.jpg "Debug - Execute Code")
 
-The executed code is presented in the list below, indicating that the code was executed successfully. If there is an
-error, the error message is displayed along with the code.
+The executed code is presented in the list below with an indication that the code was executed successfully, if
+there is any error then the error message is presented together with the code.
 
 ## Configuration for Remote Debugging
 
 When running Netuno locally, no configuration should be necessary.
 
-Because in local development, the WebSocket address's host is configured automatically.
+Because in local development the `host` of the WebSocket address is configured automatically.
 
-For local addresses, these values are typically used as the host:
+Local addresses normally use these values as `host`:
 
 - `localhost`
 - `127.0.0.1`
-- `192.168.1.*` - Example of any local network IP address.
+- `192.168.1.*` - Example of any local network IP.
 - `my-app.local.netu.no`
 
-> Local addresses don't require any configuration, so this step can be skipped.
+> Local addresses do not need any configuration, so this step can be skipped.
 
-In production or remote development, such as in a container or VPN, it may be necessary to define the external
-address (IP or domain) used for the WebSocket connection.
+In production or remote development such as in a container or VPN, it may be necessary to define the external
+address (IP or domain) that is being used for the WebSocket connection.
 
-In this case, navigate within the application being developed to the environment configuration file. In this
-example, we'll use the development environment file, located at:
+In this case, navigate within the application being developed to the environment configuration file.
+In this example, we will use the development environment file, which is located at:
 
 - 📂 `config/_development.json`
 
-Check if the configuration already exists. If it doesn't, add the external address configuration parameters to be
-used in the WebSocket connection to the end of the configuration file (in JSON format). For example:
+Check if the configuration does not already exist, if it does not exist add at the end of the configuration file
+(in JSON format) the configuration parameters for the external address to be used in the WebSocket connection,
+such as for example:
 
 ```json
 {
@@ -133,9 +136,9 @@ used in the WebSocket connection to the end of the configuration file (in JSON f
 }
 ```
 
-> Port information should not be added to the host address in the WebSocket.
+> The port information should not be added to the WebSocket `host` address.
 
-Multiple host addresses can also be passed in an array:
+Multiple `host` addresses can also be passed in an array:
 
 ```json
 {
@@ -149,12 +152,12 @@ Multiple host addresses can also be passed in an array:
 }
 ```
 
-### Production Proxy (NGINX)
+### Proxy in Production (NGINX)
 
-In production, it's common to use a web server that acts as a reverse proxy, such as NGINX.
+In production it is common to use some web server that performs reverse proxy, such as NGINX.
 
-For debugging to work through a proxy, you need to add a specific configuration to route traffic related to the
-WebSocket address:
+For debugging to work through a proxy, it is then necessary to add a specific configuration to
+forward the traffic related to the WebSocket address:
 
 ```
 server {
@@ -179,16 +182,16 @@ server {
 
 ## Conclusion
 
-With the debugging interface and the `_exec.debug()` command, we can perform an in-depth investigation of what's 
+With the debugging interface and the `_exec.debug()` command we can perform a deep investigation of what is
 happening.
 
-In most backend languages and technologies, especially scripting technologies, debugging is often impossible or 
-complex.
+In most backend languages and technologies, especially scripting technologies, debugging is usually
+impossible or complex.
 
-Netuno offers a simple way to debug polyglot code that works in various supported languages, such as JavaScript, 
-Python, Ruby, Kotlin, and Groovy.
+Netuno offers a simple way to debug polyglot code that works across the various supported languages
+such as JavaScript, Python, Ruby, Kotlin and Groovy.
 
-> It allows polyglot debugging in remote and production environments.
+> Allows polyglot debugging in remote environments and in production.
 
-Using debugging greatly speeds up development, providing greater precision for troubleshooting, and it becomes an 
-essential tool. Give it a try.
+Using debugging greatly speeds up development by offering greater precision to solve problems and becomes
+an essential tool, give it a try.

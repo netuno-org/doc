@@ -28,11 +28,11 @@ Download and install MariaDB:
 
 ## Client
 
-Connect to MariaDB to execute management commands on the database server.
+Connect to MariaDB to run management commands on the database server.
 
 #### Ubuntu
 
-Run in terminal:
+Run in the terminal:
 
 ```shell
 sudo mariadb
@@ -64,13 +64,13 @@ Run the following command while connected to the MariaDB client:
 CREATE USER 'app_user'@'localhost' IDENTIFIED BY 'S3cR3t';
 ```
 
-To grant the user general access to the newly created database, run:
+To grant the user full access to the database that was created, run:
 
 ```sql
 GRANT ALL PRIVILEGES ON app_db.* TO 'app_user'@'localhost';
 ```
 
-Update access privileges:
+Refresh the access privileges:
 
 ```sql
 FLUSH PRIVILEGES;
@@ -80,11 +80,11 @@ FLUSH PRIVILEGES;
 
 ## Configure the Application
 
-Edit the application configuration file according to the environment:
+Edit the application's configuration file according to the environment:
 
 - `config/_development.json`
 
-Example of database configuration for MariaDB:
+Example of the database configuration for MariaDB:
 
 ```javascript
 {
@@ -103,7 +103,7 @@ Example of database configuration for MariaDB:
 }
 ```
 
-Advanced settings can be used such as:
+Advanced configurations can be used, such as:
 
 ```javascript
 {
@@ -126,4 +126,4 @@ Advanced settings can be used such as:
 }
 ```
 
-> See more about [Database connection settings with HikariCP](/docs/academy/server/database/hikaricp-database-connection-pool).
+> See more about [database connection configurations with HikariCP](/docs/academy/server/database/hikaricp-database-connection-pool).

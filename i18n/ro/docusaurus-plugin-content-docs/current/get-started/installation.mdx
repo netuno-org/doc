@@ -1,0 +1,81 @@
+---
+sidebar_position: 1
+id: installation
+title: Instalare rapidă
+sidebar_label: Instalare rapidă
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Introducere
+
+Bine ați venit la ghidul de instalare pentru **Netuno**, platforma *low-code*, poliglotă și *open source* dezvoltată pentru a accelera crearea proiectelor dumneavoastră și a facilita configurarea mediului de dezvoltare.
+
+Aici construiți aplicații full-stack robuste în mod agil, combinând viteza low-code cu puterea codării tradiționale.
+
+## Instalare rapidă 
+
+Cel mai simplu mod de a instala Netuno este prin scriptul de instalare pus la dispoziție de platformă. Trebuie doar să executați comenzile în terminal în funcție de sistemul dumneavoastră de operare.
+
+<Tabs groupId="os">
+    <TabItem value="linux-mac" label="Linux sau macOS" default>
+
+```bash
+bash <(curl -fsSL https://netu.no/install.sh)
+```
+
+    </TabItem>
+    <TabItem value="windows" label="Windows">
+
+```powershell
+powershell -c "irm https://netu.no/install.ps1|iex"
+```
+
+    </TabItem>
+</Tabs>
+
+## Pornirea aplicației DEMO
+
+După finalizarea instalării, executați comanda de mai jos în folderul `netuno` pentru a porni serverul cu aplicația de demonstrație:
+
+```bash
+./netuno server
+```
+
+### Deschiderea aplicației în browser
+
+După inițializare, browserul se va deschide automat cu adresa serverului local. Dacă acest lucru nu se întâmplă, accesați manual una dintre adresele de mai jos:
+
+- [http://demo.local.netu.no:9000](http://demo.local.netu.no:9000)
+- [http://localhost:9000](http://localhost:9000)
+
+## Oprirea serverului
+
+Pentru a opri serverul, apăsați în terminal tastele:
+
+**CTRL + C**
+
+Pentru a-l porni din nou, utilizați aceeași comandă `./netuno server`.
+
+## Următorii pași
+
+Câteva idei despre ce puteți face acum.
+
+### Începători
+
+Dacă sunteți nou în Netuno, începeți prin a vă crea primul formular:
+
+[Creați-vă primul formular](/docs/academy/demonstration/config)
+
+### Tutoriale
+
+Explorați tutoriale practice de dezvoltare cu Netuno:
+
+[Vedeți tutorialele de dezvoltare](/docs/get-started/tutorials)
+
+### Proiecte
+
+Vedeți cum să aplicați Netuno în proiecte reale de afaceri:
+
+[Explorați proiecte și cazuri de utilizare](/docs/academy/understand/backoffice)

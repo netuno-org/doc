@@ -4,7 +4,7 @@ title: Storage
 sidebar_label: Storage
 ---
 
-Files integrated into the code or database.
+Files integrated into code or in the database.
 
 ## General Storage
 
@@ -12,7 +12,7 @@ The `📂 storage` folder is intended to securely store general files that are u
 
 ## Folder Structure
 
-The `📂 storage` folder has the following structure:
+The `📂 storage` folder contains the following structure:
 
 <pre class="doc-structure__tree">
 <span>./<b>storage</b>/</span>
@@ -27,16 +27,15 @@ The `📂 storage` folder has the following structure:
 
 The `📂 database` folder is used to store files or images related to the database.
 
-It's not practical to store files directly in the database, as it compromises backups and data synchronization, considerably increasing the size of the database due to the space taken up by many files.
+Storing files directly in the database is not practical, because they compromise backups and data synchronization, considerably increasing the database size due to the space occupied by many files in general.
 
-Therefore, for any data form that has a file or image upload field, the final file is organized and saved here, and only the final file name is saved in the database field.
+Therefore, for any data form that has a file or image upload field, the final file is organized and stored here, and only the final file name is saved in the database field.
 
-If the data structure contains files, then to perform a full application backup, you must back up this folder in addition to the database backup.
+If the data structure contains files, then to perform a full backup of the application, you must back up this folder in addition to the database backup.
 
 ## General File System
 
-The `📂 filesystem` folder allows you to organize, with access restrictions, general files that are useful to the
-application.
+The `📂 filesystem` folder allows organizing, with access restrictions, the general files that are useful for the application.
 
 Any file that is directly useful in the application code should be stored here.
 
@@ -44,7 +43,7 @@ The restrictions are divided into:
 
 ### Private
 
-The `📂 private` folder should only be read or written to by authenticated users in the application.
+The `📂 private` folder should only be accessed for reading or writing by users authenticated in the application.
 
 ### Public
 
@@ -54,6 +53,6 @@ The `📂 public` folder is useful for external access.
 
 The `📂 server` folder only allows reading and writing from the application's internal code.
 
-Therefore, no internal or external users can access its contents.
+Therefore, no internal or external user accesses its content.
 
-Its contents are only accessible through the code.
+Its content is only accessible through code.

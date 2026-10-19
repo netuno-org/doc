@@ -46,9 +46,9 @@ The script asks for the target language (the prompts are in Portuguese):
 ```
 Escolha o idioma de destino:
 
-1. English
-2. Português
-3. Español
+1. English (US)
+2. English (UK)
+3. Português (Portugal)
 ...
 
 Idioma:
@@ -92,6 +92,19 @@ Portuguese is always the source language.
   with `git diff`.
 - Do not choose `Português`: source and destination would be the same folder,
   and the original files would be rewritten.
+
+## Docusaurus configuration
+
+On every run, the language code is added to `i18n.locales` in
+`docusaurus.config.js` and `docusaurus.config.sample.js` (in the project root),
+if it isn't there yet, so the language shows up in the site's language menu.
+
+- Only the `locales: [...]` list is changed; the rest of the file is kept.
+- A missing config file is skipped with a warning (`Configuração não
+  encontrada`). If a file has no `locales` list, the script stops with
+  `Lista "locales" não encontrada`.
+- The language is added even if some files fail to translate. Untranslated
+  pages fall back to the default language content.
 
 ## Library (objects and resources)
 
@@ -165,7 +178,8 @@ code blocks and commands.
 
 These are never changed:
 
-- link and image targets (`![alt](/docs/assets/image.png)`)
+- link and image targets (`![alt](/docs/assets/image.png)`), except the
+  anchor of internal links (see below)
 - `src` and `href` attributes
 - `import` / `require` paths in MDX
 - Netuno and external library API, command and parameter names
@@ -177,6 +191,21 @@ restored afterwards. If the model drops a placeholder, the file is not written
 and the script fails with the error
 `A tradução perdeu referências protegidas` ("The translation lost protected
 references").
+
+### Anchors
+
+The `#anchor` part of an internal link (`/docs/page#campos-comuns` or
+`#campos-comuns`) is not protected: the model translates it to match the
+translated heading (`#common-fields` in English), as Docusaurus generates
+anchors from heading text. External URLs (`https://...#format`) keep their
+anchor, and headings with an explicit `{#anchor}` keep theirs.
+
+When the heading is in another page, the model can't see its translation, so
+some links may still point to a missing anchor. The build reports them as
+`Docusaurus found broken anchors!` warnings.
+
+Existing translations only get translated anchors after running with
+`--force`, because changing the prompt doesn't change the hashes.
 
 ## After translating
 
@@ -192,6 +221,7 @@ references").
 | What | Where |
 |---|---|
 | Available languages | `src/menu/index.ts` |
+| Config files updated with the language (`CONFIG_FILES`) | `src/config/index.ts` |
 | Source and destination folders | `src/index.ts` |
 | Copied library folders (`LIBRARY_FOLDERS`) | `src/library/index.ts` |
 | Reference library folders | `library/<code>/` |

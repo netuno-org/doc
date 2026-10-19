@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Netuno",
+    "description": "Il titolo nella barra di navigazione"
+  },
+  "logo.alt": {
+    "message": "Documentazione Netuno",
+    "description": "Il testo alternativo del logo della barra di navigazione"
+  },
+  "item.label.Get Started": {
+    "message": "Per Iniziare",
+    "description": "Voce della barra di navigazione con etichetta Per Iniziare"
+  },
+  "item.label.Academy": {
+    "message": "Accademia",
+    "description": "Voce della barra di navigazione con etichetta Accademia"
+  },
+  "item.label.Library": {
+    "message": "Libreria",
+    "description": "Voce della barra di navigazione con etichetta Libreria"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Voce della barra di navigazione con etichetta GitHub"
+  }
+}

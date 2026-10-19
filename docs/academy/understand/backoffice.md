@@ -4,76 +4,78 @@ id: backoffice
 title: Backoffice
 ---
 
-For web development / Mobile applications it is very common to have the concept of backoffice or data management layer.
+When developing Web and/or mobile applications, it is common to have the concept of a Backoffice, the data management layer.
 
-In other words, is normally the web layer where business management users will enter an interface that allows us to carrying out data interventions.
+In other words, it is a layer usually on the web where business management users enter an interface that allows them to perform interventions on data.
 
-Also very common to have the following requirements:
+The following requirements are quite common:
 
-- User Management
-- Management User Groups;
-- Database manipulation records all adapted to business rules;
-- Record of User Logs;
-- Limit access, Building permissions, depending on the Group & User;
+- User Management;
+- User Group Management;
+- Manipulation of database records adapted to business rules;
+- Logs to record what users did and when;
+- Restrict access; depending on the group or user, they may not be able to change or even see certain data;
 - Allow access via browser and mobile devices;
-- Management reports process;
-- Adapted dashboard to the business with important info and graphs presented;
+- Generate management reports;
+- Dashboard tailored to the business with relevant information, which may present charts and tables;
 
-Developing the backoffice often takes as much or more time spent than developing the final application.
+For these and other reasons, developing the Backoffice often takes as much or more work than developing the final application.
 
-Also very common for the back office to provide the [REST API](/docs/academy/server/services/openapi) with web services that will allow the communication of datta business with the final application or the frontend.
+In addition, it is also common for the Backoffice to provide the REST API with web services that enables business data communication with the final application, or frontend.
 
 ![Backoffice.](/docs/assets/business/business-backoffice.svg "Backoffice.")
 
-_Netuno_ brings a powerful backoffice engine where without code it is possible to build the data structure generating forms integrated with the database for the most common manipulations such as `CREATE`, `SEARCH`, `EDIT` and `DELETE`.
+Netuno provides a powerful Backoffice engine where, without code, it is possible to create the data structure, generating forms integrated with the database for the most common manipulations, such as create, search, edit, and delete.
 
-> Users and Groups Management, Log Records and Access Controls
+It also provides user and group management and access controls with log records.
 
-Allows you to create with low-code dashboards, reports and the [REST API](/docs/academy/server/services/openapi) (web services) integrated with [JWT Token](/docs/academy/server/services/jwt).
+With low-code, it allows creating dashboards, reports, and the REST API (web services) integrated with JWT (JSON Web Token).
 
-> _Netuno_ will offer all the functionalities that can be tailored to your Business.
+> Because Netuno provides all the most common features ready to be shaped according to the business model, the effort to develop a custom Backoffice is drastically reduced.
 
-## New Projects - Backoffice
+## Backoffice for New Projects
 
-When developing new projects, especially when it comes to applications for external customers, is usually common to cut in backoffice budget.
+When developing new projects, especially when they are applications for external clients, it is common to penalize the Backoffice budget, that is, the time invested in its development and in designing the interfaces is penalized.
 
-The reaosn why it will not be visible to the target customer, so it can be left in the background.
+This is because it will not be visible to the target client, so it can be left for later.
 
-In addition, the main goal is more about the `Final Result` and not through management internal layers, even more when it involves relevant costs.
+Furthermore, decision-makers' objective is more about achieving the final result and not the internal management layers, especially when it involves significant costs.
 
-Therefore during development and especially at the time of testing, having a backoffice interface will allow a better assessment of data.
+However, during development and especially during testing, having a Backoffice interface allows for better validation of data consistency.
 
-_Netuno_ easily build the **Data Model and Auto-provide Responsive Forms for Data Management in a Web Interface**, you will automatically obtain the simple backoffice interface just using _Netuno_ in the Data Structure Modeling phase.
+Because Netuno facilitates building the **data model and automatically provides responsive forms in a web interface for data management**, simply use Netuno during the data structure modeling phase and you will automatically get the Backoffice interface. Quite simple!
 
-Afert that can be choosed to evolve further to the point of developing dashboards, reports and web services all in one.
+Then you can choose to evolve further to develop dashboards, reports, and web services all in Netuno.
 
-Due to some kind of limitations, can be developed `web services` and all the `REST API` with any other technology, just for this to consume the database generated by _Netuno_.
+Or, due to some type of limitation or requirement, you can develop the web services and the entire REST API with any other technology; for that, simply consume the database generated by Netuno.
 
-## Existing Applications Backoffice
+In any case, you will have Netuno as an option to meet Backoffice needs.
 
-In already existed applications and where a backoffice has not been developed or even if it exists and there are some limitations.
+## Backoffice for Existing Applications
 
-_Netuno_ can be used either to carry out the expansion of the existing backoffice or the missing one.
+In existing applications where a Backoffice has not been developed, or even where one exists and has limitations.
 
-As with _Netuno_ the effort to create a backoffice with is very reduced, an entire backoffice and modules can be made in _Netuno_
+Netuno can be used both to expand the existing Backoffice or the Backoffice that is missing.
 
-It is up you to decide the direction of technologies options to use, it will not be necessary to complicate, thinking about modular backoffice that is being developed and growing over time according to their needs.
+Since the effort to create a Backoffice with Netuno is quite small, either an entire Backoffice can be built in Netuno or just some modules.
 
-Usually developing in modules is very complex, thus with _Netuno_ simplifies this process by allowing the multi-developed applications in the same database, also an excellent solution for developing independent auxiliary modules to extend an existing back office without impacting the existing one .
+It is up to the person to decide the direction of the technological options to use and their imagination; one thing is certain, there is no need to complicate much if you think of the modular Backoffice being developed and growing over time to suit you.
 
-_Netuno_ easily integrates and manages multiple databases in the same application, will be easy to import/export data to another database.
+Normally, developing in modules is very complex, but since Netuno also simplifies this process by allowing multiple applications to be developed on the same database, it is also an excellent solution for developing independent auxiliary modules to extend an existing Backoffice without impacting the existing Backoffice.
 
-Thus being able to better separate the complexity of the backoffice from the _Netuno_ applications that are like "modules" in addition to the existing.
+Since Netuno easily integrates and can manage multiple databases in the same application, it becomes easy to import and export information to another database.
 
-## Summarizing
+Thus, it is possible to better separate the complexity of the Backoffice from the Netuno applications that are like additional "modules" to the existing Backoffice.
 
-One of the main goals of _Netuno_ is to simplify the backoffice development as much as possible and perform the integration both in existing and new projects where can be integrated well with other technologies.
+## Conclusion
 
-_Netuno_ is not a closed platform where all development must be done on it, in other hand _Netuno_ can be used simply to meet specific needs to overcome the limitations of:
+Undoubtedly, one of Netuno's main objectives is to simplify Backoffice development as much as possible and to integrate it into both existing projects and new projects, where it can integrate well with other technologies.
+
+Netuno is not a closed platform where all development must be done in Netuno; quite the opposite, Netuno can be used simply to meet specific needs and overcome limitations of:
 
 - Cost
 - Time
 
-Offering integration with any other technology.
+Allowing it to be integrated with any other technology.
 
-For example if the issue will be the lack of money or the delivery date is too tight, or if there is a huge complexity and several technologies to integrate, _Netuno_ should be seen as one more technology that will reduce the cost and time, making your life easier.
+So, if the problem is a lack of money or a delivery date that is too tight, and on top of that there is a lot of complexity and several integrated technologies, Netuno should be seen as one more technology that will solve cost and time problems to make life easier.

@@ -1,0 +1,1965 @@
+---
+id: mongo
+title: MongoDB
+sidebar_label: MongoDB
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+## 简介
+
+<a href="https://www.mongodb.com/" target="_blank">MongoDB</a> 是一个面向文档的 NoSQL 数据库。数据不是以表和行的形式存储，而是保存在类似 JSON 格式的文档中，这使得数据模型具有很大的灵活性。
+
+Netuno 提供 [_mongo](/docs/library/resources/mongo) 资源用于与 MongoDB 集成，它在面向 Java 的官方 MongoDB 客户端之上提供低代码抽象，并可用于 Netuno 支持的各种编程语言：**JavaScript、Python、Ruby、Kotlin 和 Groovy**。
+
+> 在继续之前，建议先了解如何在 Netuno 中创建服务，请参阅教程 [REST - Web 服务](/docs/academy/server/services/rest)。
+
+此处介绍的操作的实现示例可在示例服务 `mongo.js` 中找到，该文件位于：
+
+<PolyglotPath files={[
+    `apps/demo/server/services/samples/javascript/mongo`
+]} />
+
+## 安装 MongoDB
+
+### 使用 Docker
+
+假设已安装 Docker，只需下载 MongoDB 镜像并启动一个新容器：
+
+```shell
+docker pull mongo
+docker run -d --name mongo -p 27017:27017 mongo
+```
+
+这样，MongoDB 就可以在 `localhost:27017` 上访问，且无需身份验证。
+
+要根据应用配置创建数据库用户，请执行：
+
+```shell
+docker exec -it mongo mongosh 产品_数据库 --eval 'db.createUser({ user: "产品_用户", pwd: "12345678", roles: [{ role: "readWrite", db: "产品_数据库" }] })'
+```
+
+### 使用 Ubuntu
+
+MongoDB 未包含在 Ubuntu 官方软件仓库中，因此需要在安装前添加官方仓库：
+
+```shell
+sudo apt-get install gnupg curl
+curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg --dearmor
+echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] http://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+```
+
+安装完成后，可以使用以下命令启动服务：
+
+```shell
+sudo systemctl start mongod
+```
+
+### 使用 Windows
+
+- <a href="https://www.mongodb.com/try/download/community" target="_blank">下载 MongoDB Community Server</a>。
+
+运行下载的安装程序，并在 **Service Configuration** 步骤中启用 **Install MongoD as a Service**，以便 MongoDB 自动启动。这样，MongoDB 就可以在 `localhost:27017` 上访问，且无需身份验证。
+
+> 其他发行版和版本请参阅 [MongoDB 官方文档](https://www.mongodb.com/docs/manual/installation/)。
+
+## 应用配置
+
+MongoDB 连接的配置在应用的配置文件中完成，具体取决于环境：
+
+- `config/_development.json`
+
+> 详细了解应用的[配置文件](/docs/academy/explore/configuration)。
+
+在配置文件中，添加 `mongo` 块，其中每个键标识一个连接：
+
+```javascript
+{
+    ...
+    "mongo": {
+        "商店": "mongodb://商店_用户:12345678@localhost/商店_数据库",
+        "产品": {
+            "username": "产品_用户",
+            "password": "12345678",
+            "host": "127.0.0.1",
+            "port": "27017",
+            "database": "产品_数据库"
+        }
+    },
+    ...
+}
+```
+
+连接可以通过两种方式定义：
+
+- **作为连接 URL** — 值就是一个字符串，例如 `"mongodb://商店_用户:12345678@localhost/商店_数据库"`。
+- **作为配置对象** — 包含以下字段：
+  - `url` — 如果定义，则直接用作连接 URL，并忽略其他字段。
+  - `protocol` — 连接协议，默认 `mongodb`。
+  - `username` 和 `password` — 访问凭据。
+  - `host` — 服务器地址，默认 `localhost`。
+  - `port` — 连接端口，默认 `27017`。
+  - `database` — 数据库名称，默认使用连接键的名称。
+  - `params` — 添加到 URL 的额外连接参数，例如 `{ "authSource": "admin" }`。仅在根据对象字段构建 URL 时应用。
+
+> 连接不必是应用的主数据库。与 `db` 配置不同，`mongo` 块是独立的，并允许同时存在多个连接。
+
+## 初始化连接
+
+第一步是使用 `_mongo.init(...)` 初始化 MongoDB 客户端，传入配置键的名称或直接传入连接 URL：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mongo客户端 = _mongo.init("产品")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                mongo客户端 = _mongo.init("产品")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                mongo客户端 = _mongo.init("产品")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val mongo客户端 = _mongo.init("产品")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def mongo客户端 = _mongo.init("产品")
+            `
+        }
+    ]}
+/>
+
+也可以直接使用 URL 初始化连接：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mongo客户端 = _mongo.init("mongodb://localhost:27017/产品_数据库")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                mongo客户端 = _mongo.init("mongodb://localhost:27017/产品_数据库")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                mongo客户端 = _mongo.init("mongodb://localhost:27017/产品_数据库")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val mongo客户端 = _mongo.init("mongodb://localhost:27017/产品_数据库")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def mongo客户端 = _mongo.init("mongodb://localhost:27017/产品_数据库")
+            `
+        }
+    ]}
+/>
+
+> 调用不带参数的 `_mongo.init()` 时，会使用配置键 `default`。建议始终传入键名或 URL，以明确所使用的连接。
+
+## 数据库和集合
+
+初始化客户端后，使用 `database("名称")` 获取数据库实例。然后可以创建集合并访问现有集合：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 数据库 = mongo客户端.database("产品_数据库")
+
+                数据库.createCollection("产品")
+
+                const 集合 = 数据库.collection("产品")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                数据库 = mongo客户端.database("产品_数据库")
+
+                数据库.createCollection("产品")
+
+                集合 = 数据库.collection("产品")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                数据库 = mongo客户端.database("产品_数据库")
+
+                数据库.createCollection("产品")
+
+                集合 = 数据库.collection("产品")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 数据库 = mongo客户端.database("产品_数据库")
+
+                数据库.createCollection("产品")
+
+                val 集合 = 数据库.collection("产品")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 数据库 = mongo客户端.database("产品_数据库")
+
+                数据库.createCollection("产品")
+
+                def 集合 = 数据库.collection("产品")
+            `
+        }
+    ]}
+/>
+
+可以使用 `ping()` 测试数据库连接，并使用 `collectionNames()` 列出所有现有集合：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                数据库.ping()
+
+                const 名称列表 = 数据库.collectionNames()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                数据库.ping()
+
+                名称列表 = 数据库.collectionNames()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                数据库.ping()
+
+                名称列表 = 数据库.collectionNames()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                数据库.ping()
+
+                val 名称列表 = 数据库.collectionNames()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                数据库.ping()
+
+                def 名称列表 = 数据库.collectionNames()
+            `
+        }
+    ]}
+/>
+
+可以使用 `renameCollection()` 重命名集合，传入包含数据库的完整名称，或者分别传入数据库名称和新集合名称：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                集合.renameCollection("产品_数据库.产品_归档")
+
+                集合.renameCollection("归档_数据库", "产品_归档")
+            `
+        }
+    ]}
+/>
+
+要删除集合及其所有文档，请使用 `drop()`：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                集合.drop()
+            `
+        }
+    ]}
+/>
+
+## 插入文档
+
+数据使用 `_val` 资源表示，文档通过 `_val.map()` 表示，值列表通过 `_val.list()` 表示。
+
+### 插入单个文档
+
+使用 `insertOne()` 插入一个文档并获取生成的 ID：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 标识 = 集合.insertOne(
+                    _val.map()
+                        .set("名称", "笔记本电脑")
+                        .set("数量", 22)
+                        .set("价格", 100)
+                        .set("分类", "电脑")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                标识 = 集合.insertOne(
+                    _val.map()
+                        .set("名称", "笔记本电脑")
+                        .set("数量", 22)
+                        .set("价格", 100)
+                        .set("分类", "电脑")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                标识 = 集合.insertOne(
+                    _val.map()
+                        .set("名称", "笔记本电脑")
+                        .set("数量", 22)
+                        .set("价格", 100)
+                        .set("分类", "电脑")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 标识 = 集合.insertOne(
+                    _val.map()
+                        .set("名称", "笔记本电脑")
+                        .set("数量", 22)
+                        .set("价格", 100)
+                        .set("分类", "电脑")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 标识 = 集合.insertOne(
+                    _val.map()
+                        .set("名称", "笔记本电脑")
+                        .set("数量", 22)
+                        .set("价格", 100)
+                        .set("分类", "电脑")
+                )
+            `
+        }
+    ]}
+/>
+
+文档可以包含嵌套结构，例如列表和其他文档：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                集合.insertOne(
+                    _val.map()
+                        .set("名称", "平板电脑")
+                        .set("标签",
+                            _val.list()
+                                .add("促销")
+                                .add("新品")
+                        )
+                        .set("详情",
+                            _val.map()
+                                .set("颜色", "蓝色")
+                                .set("库存", 10)
+                        )
+                )
+            `
+        }
+    ]}
+/>
+
+### 插入多个文档
+
+使用 `insertMany()` 一次插入多个文档，并接收生成的 ID 列表：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 标识列表 = 集合.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("名称", "智能手机")
+                                .set("数量", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("名称", "显示器")
+                                .set("数量", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                标识列表 = 集合.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("名称", "智能手机")
+                                .set("数量", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("名称", "显示器")
+                                .set("数量", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                标识列表 = 集合.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("名称", "智能手机")
+                                .set("数量", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("名称", "显示器")
+                                .set("数量", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 标识列表 = 集合.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("名称", "智能手机")
+                                .set("数量", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("名称", "显示器")
+                                .set("数量", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 标识列表 = 集合.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("名称", "智能手机")
+                                .set("数量", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("名称", "显示器")
+                                .set("数量", 8)
+                        )
+                )
+            `
+        }
+    ]}
+/>
+
+## 查询文档
+
+`find()` 方法返回一个 [MongoFindIterable](/docs/library/objects/MongoFindIterable)，可以从中使用 `all()`（全部）或 `first()`（第一个；如果没有则返回 `null`）获取文档。
+
+要获取集合中的所有文档：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文档列表 = 集合.find().all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                文档列表 = 集合.find().all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                文档列表 = 集合.find().all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 文档列表 = 集合.find().all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 文档列表 = 集合.find().all()
+            `
+        }
+    ]}
+/>
+
+要使用过滤器查询，请使用工厂 [_mongo.filters()](/docs/library/objects/MongoFilters)：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文档列表 = 集合.find(
+                    _mongo.filters().eq("名称", "笔记本电脑")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                文档列表 = 集合.find(
+                    _mongo.filters().eq("名称", "笔记本电脑")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                文档列表 = 集合.find(
+                    _mongo.filters().eq("名称", "笔记本电脑")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 文档列表 = 集合.find(
+                    _mongo.filters().eq("名称", "笔记本电脑")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 文档列表 = 集合.find(
+                    _mongo.filters().eq("名称", "笔记本电脑")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+### 过滤器
+
+`_mongo.filters()` 工厂提供 MongoDB 的主要查询操作符：
+
+| 操作符 | 描述 |
+|---|---|
+| `eq("字段", 值)` | 等于该值。 |
+| `ne("字段", 值)` | 不等于该值。 |
+| `gt("字段", 值)` | 大于该值。 |
+| `gte("字段", 值)` | 大于或等于该值。 |
+| `lt("字段", 值)` | 小于该值。 |
+| `lte("字段", 值)` | 小于或等于该值。 |
+| `in("字段", 值1, 值2, ...)` | 等于任意一个值。 |
+| `nin("字段", 值1, 值2, ...)` | 不等于所有值。 |
+| `and(过滤器1, 过滤器2, ...)` | 匹配所有过滤器。 |
+| `or(过滤器1, 过滤器2, ...)` | 匹配至少一个过滤器。 |
+| `not(过滤器)` | 不匹配该过滤器。 |
+| `regex("字段", "模式")` | 匹配正则表达式。 |
+| `exists("字段")` | 文档中存在该字段。 |
+| `text("搜索")` | 文本搜索。 |
+| `type("字段", "类型")` | 字段为指定类型。 |
+| `mod("字段", 除数, 余数)` | 字段除以除数的余数等于该值。 |
+| `where("表达式")` | 匹配满足 JavaScript 表达式的文档，例如 `"this.价格 > 100"`。 |
+| `size("字段", n)` | 数组字段恰好有 `n` 个元素。 |
+
+例如，要获取价格高于 50 且数量低于 30 的产品：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文档列表 = 集合.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("价格", 50),
+                        _mongo.filters().lt("数量", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                文档列表 = 集合.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("价格", 50),
+                        _mongo.filters().lt("数量", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                文档列表 = 集合.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("价格", 50),
+                        _mongo.filters().lt("数量", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 文档列表 = 集合.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("价格", 50),
+                        _mongo.filters().lt("数量", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 文档列表 = 集合.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("价格", 50),
+                        _mongo.filters().lt("数量", 30)
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+或者获取名称匹配正则表达式的产品：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文档列表 = 集合.find(
+                    _mongo.filters().regex("名称", "^[笔智]")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                文档列表 = 集合.find(
+                    _mongo.filters().regex("名称", "^[笔智]")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                文档列表 = 集合.find(
+                    _mongo.filters().regex("名称", "^[笔智]")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 文档列表 = 集合.find(
+                    _mongo.filters().regex("名称", "^[笔智]")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 文档列表 = 集合.find(
+                    _mongo.filters().regex("名称", "^[笔智]")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+## 遍历结果
+
+使用查询结果，可以遍历找到的所有文档：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const 文档 of 集合.find().all()) {
+                    _out.println(文档.getString("名称"))
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for 文档 in 集合.find().all():
+                    _out.println(文档.getString("名称"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                集合.find().all().each do |文档|
+                    _out.println(文档.getString("名称"))
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                for (文档 in 集合.find().all()) {
+                    _out.println(文档.getString("名称"))
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (文档 in 集合.find().all()) {
+                    _out.println(文档.getString("名称"))
+                }
+            `
+        }
+    ]}
+/>
+
+也可以传入一个函数，使用 `forEach()` 遍历结果：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                集合.find().forEach((文档) =>
+                    _out.println(文档.getString("名称"))
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                集合.find().forEach(
+                    lambda 文档: _out.println(文档.getString("名称"))
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                集合.find().forEach do |文档|
+                    _out.println(文档.getString("名称"))
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                集合.find().forEach { 文档 ->
+                    _out.println(文档.getString("名称"))
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                集合.find().forEach { 文档 ->
+                    _out.println(文档.getString("名称"))
+                }
+            `
+        }
+    ]}
+/>
+
+## 排序
+
+使用 `_mongo.sorts()` 工厂可以定义结果的升序或降序：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文档列表 = 集合.find().sort(
+                    _mongo.sorts().descending("价格")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                文档列表 = 集合.find().sort(
+                    _mongo.sorts().descending("价格")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                文档列表 = 集合.find().sort(
+                    _mongo.sorts().descending("价格")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 文档列表 = 集合.find().sort(
+                    _mongo.sorts().descending("价格")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 文档列表 = 集合.find().sort(
+                    _mongo.sorts().descending("价格")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+要按多个字段排序，请使用 `orderBy()`：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文档列表 = 集合.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("价格"),
+                        _mongo.sorts().ascending("数量")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                文档列表 = 集合.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("价格"),
+                        _mongo.sorts().ascending("数量")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                文档列表 = 集合.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("价格"),
+                        _mongo.sorts().ascending("数量")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 文档列表 = 集合.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("价格"),
+                        _mongo.sorts().ascending("数量")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 文档列表 = 集合.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("价格"),
+                        _mongo.sorts().ascending("数量")
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+## 字段投影
+
+使用 `_mongo.projections()` 工厂可以限制文档中返回的字段：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文档列表 = 集合.find().projection(
+                    _mongo.projections().include("名称", "数量")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                文档列表 = 集合.find().projection(
+                    _mongo.projections().include("名称", "数量")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                文档列表 = 集合.find().projection(
+                    _mongo.projections().include("名称", "数量")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 文档列表 = 集合.find().projection(
+                    _mongo.projections().include("名称", "数量")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 文档列表 = 集合.find().projection(
+                    _mongo.projections().include("名称", "数量")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+要组合多个投影：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文档列表 = 集合.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("名称", "数量"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                文档列表 = 集合.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("名称", "数量"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                文档列表 = 集合.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("名称", "数量"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 文档列表 = 集合.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("名称", "数量"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 文档列表 = 集合.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("名称", "数量"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+可用的投影类型如下：
+
+| 投影 | 描述 |
+|---|---|
+| `include("字段", ...)` | 仅包含指定字段。 |
+| `exclude("字段", ...)` | 排除指定字段。 |
+| `excludeId()` | 排除 `_id` 字段。 |
+| `fields(投影1, ...)` | 组合多个投影。 |
+| `slice("字段", n)` | 仅包含数组字段的前 `n` 个元素。 |
+| `slice("字段", 跳过, n)` | 跳过前 `跳过` 个元素后，包含数组字段的 `n` 个元素。 |
+| `elemMatch("字段")` | 仅包含数组字段的第一个元素。 |
+| `elemMatch("字段", 过滤器)` | 仅包含数组中与过滤器匹配的第一个元素。 |
+| `computed("字段", 表达式)` | 基于聚合表达式添加一个计算字段。 |
+
+## 限制和跳过
+
+使用 `limit()` 和 `skip()` 可以控制返回结果的数量：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文档列表 = 集合.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                文档列表 = 集合.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                文档列表 = 集合.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 文档列表 = 集合.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 文档列表 = 集合.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        }
+    ]}
+/>
+
+## 更新文档
+
+使用 `_mongo.updates()` 工厂定义要应用的更改，并通过 `updateOne()` 或 `updateMany()` 将更改应用到与过滤器匹配的文档：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                集合.updateOne(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    _mongo.updates().set("数量", 42)
+                )
+
+                集合.updateMany(
+                    _mongo.filters().eq("分类", "电脑"),
+                    _mongo.updates().set("分类", "精选")
+                )
+            `
+        }
+    ]}
+/>
+
+`_mongo.updates()` 工厂提供更新操作符：
+
+| 操作符 | 描述 |
+|---|---|
+| `set("字段", 值)` | 设置字段的值。 |
+| `unset("字段")` | 从文档中移除字段。 |
+| `rename("字段", "新名称")` | 重命名字段。 |
+| `push("字段", 值)` | 向数组添加一个值。 |
+| `combine(更新1, 更新2, ...)` | 将多个更新合并为一个。 |
+
+要一次应用多个更改，请使用 `combine()`：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 组合更新 = _mongo.updates().combine(
+                    _mongo.updates().set("数量", 42),
+                    _mongo.updates().rename("其他", "更多")
+                )
+
+                集合.updateOne(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    组合更新
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                组合更新 = _mongo.updates().combine(
+                    _mongo.updates().set("数量", 42),
+                    _mongo.updates().rename("其他", "更多")
+                )
+
+                集合.updateOne(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    组合更新
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                组合更新 = _mongo.updates().combine(
+                    _mongo.updates().set("数量", 42),
+                    _mongo.updates().rename("其他", "更多")
+                )
+
+                集合.updateOne(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    组合更新
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 组合更新 = _mongo.updates().combine(
+                    _mongo.updates().set("数量", 42),
+                    _mongo.updates().rename("其他", "更多")
+                )
+
+                集合.updateOne(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    组合更新
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 组合更新 = _mongo.updates().combine(
+                    _mongo.updates().set("数量", 42),
+                    _mongo.updates().rename("其他", "更多")
+                )
+
+                集合.updateOne(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    组合更新
+                )
+            `
+        }
+    ]}
+/>
+
+### 查找并更新
+
+使用 `findOneAndUpdate()` 可以原子地查找并更新一个文档，并返回原始文档（如果没有则返回 `null`）：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 旧文档 = 集合.findOneAndUpdate(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    _mongo.updates().set("数量", 42)
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                旧文档 = 集合.findOneAndUpdate(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    _mongo.updates().set("数量", 42)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                旧文档 = 集合.findOneAndUpdate(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    _mongo.updates().set("数量", 42)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 旧文档 = 集合.findOneAndUpdate(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    _mongo.updates().set("数量", 42)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 旧文档 = 集合.findOneAndUpdate(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    _mongo.updates().set("数量", 42)
+                )
+            `
+        }
+    ]}
+/>
+
+## 替换文档
+
+使用 `replaceOne()` 替换整个文档（与更新不同，它不能包含更新操作符）：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                集合.replaceOne(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    _val.map()
+                        .set("名称", "笔记本电脑")
+                        .set("数量", 50)
+                        .set("价格", 150)
+                        .set("分类", "精选")
+                )
+            `
+        }
+    ]}
+/>
+
+要原子地查找并替换，并返回旧文档，请使用 `findOneAndReplace()`：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 旧文档 = 集合.findOneAndReplace(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    _val.map()
+                        .set("名称", "笔记本电脑")
+                        .set("数量", 50)
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                旧文档 = 集合.findOneAndReplace(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    _val.map()
+                        .set("名称", "笔记本电脑")
+                        .set("数量", 50)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                旧文档 = 集合.findOneAndReplace(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    _val.map()
+                        .set("名称", "笔记本电脑")
+                        .set("数量", 50)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 旧文档 = 集合.findOneAndReplace(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    _val.map()
+                        .set("名称", "笔记本电脑")
+                        .set("数量", 50)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 旧文档 = 集合.findOneAndReplace(
+                    _mongo.filters().eq("名称", "笔记本电脑"),
+                    _val.map()
+                        .set("名称", "笔记本电脑")
+                        .set("数量", 50)
+                )
+            `
+        }
+    ]}
+/>
+
+## 删除文档
+
+使用 `deleteOne()` 和 `deleteMany()` 删除与过滤器匹配的文档：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                集合.deleteOne(
+                    _mongo.filters().eq("名称", "笔记本电脑")
+                )
+
+                集合.deleteMany(
+                    _mongo.filters().eq("分类", "停用")
+                )
+            `
+        }
+    ]}
+/>
+
+要原子地查找并删除一个文档，并返回被删除的文档，请使用 `findOneAndDelete()`：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 旧文档 = 集合.findOneAndDelete(
+                    _mongo.filters().eq("名称", "平板电脑")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                旧文档 = 集合.findOneAndDelete(
+                    _mongo.filters().eq("名称", "平板电脑")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                旧文档 = 集合.findOneAndDelete(
+                    _mongo.filters().eq("名称", "平板电脑")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 旧文档 = 集合.findOneAndDelete(
+                    _mongo.filters().eq("名称", "平板电脑")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 旧文档 = 集合.findOneAndDelete(
+                    _mongo.filters().eq("名称", "平板电脑")
+                )
+            `
+        }
+    ]}
+/>
+
+要删除集合中的所有文档，请借助 `_mongo.valToDoc()` 传入一个空过滤器：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                集合.deleteMany(_mongo.valToDoc(_val.map()))
+            `
+        }
+    ]}
+/>
+
+## 统计文档
+
+使用 `countDocuments()` 获取集合中的文档数量，可选地传入过滤器。而 `estimatedDocumentCount()` 更快，因为它使用集合元数据，但不支持过滤器：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 总数 = 集合.countDocuments()
+
+                const 主总数 = 集合.countDocuments(
+                    _mongo.filters().eq("分类", "电脑")
+                )
+
+                const 估算数 = 集合.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                总数 = 集合.countDocuments()
+
+                主总数 = 集合.countDocuments(
+                    _mongo.filters().eq("分类", "电脑")
+                )
+
+                估算数 = 集合.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                总数 = 集合.countDocuments()
+
+                主总数 = 集合.countDocuments(
+                    _mongo.filters().eq("分类", "电脑")
+                )
+
+                估算数 = 集合.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 总数 = 集合.countDocuments()
+
+                val 主总数 = 集合.countDocuments(
+                    _mongo.filters().eq("分类", "电脑")
+                )
+
+                val 估算数 = 集合.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 总数 = 集合.countDocuments()
+
+                def 主总数 = 集合.countDocuments(
+                    _mongo.filters().eq("分类", "电脑")
+                )
+
+                def 估算数 = 集合.estimatedDocumentCount()
+            `
+        }
+    ]}
+/>
+
+## 索引
+
+使用 `_mongo.indexes()` 工厂创建索引以提升查询性能。要创建索引，只需将规约传给 `createIndex()`：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                集合.createIndex(
+                    _mongo.indexes().ascending("数量")
+                )
+
+                集合.createIndex(
+                    _mongo.indexes().compoundIndex(
+                        _mongo.indexes().descending("价格"),
+                        _mongo.indexes().ascending("数量")
+                    )
+                )
+            `
+        }
+    ]}
+/>
+
+可以使用 `hint()` 告诉 MongoDB 在查询中使用哪个索引：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文档列表 = 集合.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("数量", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                文档列表 = 集合.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("数量", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                文档列表 = 集合.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("数量", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 文档列表 = 集合.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("数量", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 文档列表 = 集合.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("数量", 1)
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+使用 `min()` 和 `max()` 可以限制查询遍历的索引值范围：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文档列表 = 集合.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("数量", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("数量", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                文档列表 = 集合.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("数量", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("数量", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                文档列表 = 集合.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("数量", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("数量", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 文档列表 = 集合.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("数量", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("数量", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 文档列表 = 集合.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("数量", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("数量", 50)
+                        )
+                    )
+                    .all()
+            `
+        }
+    ]}
+/>
+
+## 聚合
+
+对于更高级的分析，`aggregate()` 允许执行聚合管道，其中每个阶段由 `_mongo.aggregates()` 工厂定义，累加器由 `_mongo.accumulators()` 定义。
+
+例如，要按分类对产品分组并汇总每个分组的价格：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文档列表 = 集合.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("分类", "电脑")
+                    ),
+                    _mongo.aggregates().group(
+                        "$分类",
+                        _mongo.accumulators().sum("总计", "$价格")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("总计")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                文档列表 = 集合.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("分类", "电脑")
+                    ),
+                    _mongo.aggregates().group(
+                        "$分类",
+                        _mongo.accumulators().sum("总计", "$价格")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("总计")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                文档列表 = 集合.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("分类", "电脑")
+                    ),
+                    _mongo.aggregates().group(
+                        "$分类",
+                        _mongo.accumulators().sum("总计", "$价格")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("总计")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 文档列表 = 集合.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("分类", "电脑")
+                    ),
+                    _mongo.aggregates().group(
+                        "$分类",
+                        _mongo.accumulators().sum("总计", "$价格")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("总计")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 文档列表 = 集合.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("分类", "电脑")
+                    ),
+                    _mongo.aggregates().group(
+                        "$分类",
+                        _mongo.accumulators().sum("总计", "$价格")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("总计")
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+可用的聚合阶段如下：
+
+| 阶段 | 描述 |
+|---|---|
+| `match(过滤器)` | 仅选择与过滤器匹配的文档。 |
+| `group("$字段", 累加器)` | 按字段对文档分组并应用累加器。 |
+| `project(投影)` | 在文档中添加、移除或更改字段。 |
+| `sort(排序)` | 对文档排序。 |
+| `limit(n)` | 限制为前 `n` 个文档。 |
+| `skip(n)` | 跳过前 `n` 个文档。 |
+| `count()` | 统计文档数量。 |
+| `lookup("集合", "本地字段", "外部字段", "作为")` | 与另一个集合执行 join。 |
+
+以及常用的累加器：
+
+| 累加器 | 描述 |
+|---|---|
+| `sum("字段", "$表达式")` | 值之和。 |
+| `avg("字段", "$表达式")` | 值的平均值。 |
+| `min("字段", "$表达式")` | 最小值。 |
+| `max("字段", "$表达式")` | 最大值。 |
+| `first("字段", "$表达式")` | 第一个文档的值。 |
+| `last("字段", "$表达式")` | 最后一个文档的值。 |
+| `top("字段", 排序, "$表达式")` | 按排序取顶部的值。 |
+| `bottom("字段", 排序, "$表达式")` | 按排序取底部的值。 |
+
+> 在累加器中，带 `$` 前缀的表达式引用输入文档中的字段，例如 `"$价格"`。
+
+## Values 与 BSON 之间的转换
+
+有时需要在 Netuno 的 `_val` 对象与 MongoDB 的 BSON 文档之间进行转换：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 文档 = _mongo.valToDoc(
+                    _val.map().set("名称", "笔记本电脑")
+                )
+
+                const 值对象 = _mongo.docToVal(文档)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                文档 = _mongo.valToDoc(
+                    _val.map().set("名称", "笔记本电脑")
+                )
+
+                值对象 = _mongo.docToVal(文档)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                文档 = _mongo.valToDoc(
+                    _val.map().set("名称", "笔记本电脑")
+                )
+
+                值对象 = _mongo.docToVal(文档)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 文档 = _mongo.valToDoc(
+                    _val.map().set("名称", "笔记本电脑")
+                )
+
+                val 值对象 = _mongo.docToVal(文档)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 文档 = _mongo.valToDoc(
+                    _val.map().set("名称", "笔记本电脑")
+                )
+
+                def 值对象 = _mongo.docToVal(文档)
+            `
+        }
+    ]}
+/>
+
+## 带选项的操作
+
+`_mongo` 资源的 `*Options()` 工厂返回 MongoDB 驱动程序的默认选项对象，你可以直接链式调用其方法。例如，当过滤器不匹配任何现有文档时，`upsert(true)` 会插入该文档：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 旧文档 = 集合.findOneAndUpdate(
+                    _mongo.filters().eq("名称", "显示器"),
+                    _mongo.updates().set("数量", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                旧文档 = 集合.findOneAndUpdate(
+                    _mongo.filters().eq("名称", "显示器"),
+                    _mongo.updates().set("数量", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                旧文档 = 集合.findOneAndUpdate(
+                    _mongo.filters().eq("名称", "显示器"),
+                    _mongo.updates().set("数量", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val 旧文档 = 集合.findOneAndUpdate(
+                    _mongo.filters().eq("名称", "显示器"),
+                    _mongo.updates().set("数量", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def 旧文档 = 集合.findOneAndUpdate(
+                    _mongo.filters().eq("名称", "显示器"),
+                    _mongo.updates().set("数量", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        }
+    ]}
+/>
+
+当文档被插入时，`findOneAndUpdate()` 返回 `null`。
+
+可用的选项工厂包括：`insertOneOptions()`、`insertManyOptions()`、`updateOptions()`、`findOneAndUpdateOptions()`、`replaceOptions()`、`findOneAndReplaceOptions()`、`deleteOptions()`、`findOneAndDeleteOptions()`、`countOptions()`、`estimatedDocumentCountOptions()`、`dropCollectionOptions()` 和 `textSearchOptions()`。
+
+## 关闭连接
+
+完成后，最好关闭与 MongoDB 的连接：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _mongo.close()
+            `
+        }
+    ]}
+/>
+
+## 结论
+
+通过 `_mongo` 资源，Netuno 在面向 Java 的官方 MongoDB 客户端之上提供了低代码、多语言抽象，允许在 JavaScript、Python、Ruby、Kotlin 和 Groovy 中处理文档、过滤器、排序、投影、更新、索引和聚合。
+
+有关所有可用方法的更多详细信息，请参阅 [_mongo](/docs/library/resources/mongo) 资源和 [MongoCollection](/docs/library/objects/MongoCollection) 类的文档。
+
+祝你开发顺利！

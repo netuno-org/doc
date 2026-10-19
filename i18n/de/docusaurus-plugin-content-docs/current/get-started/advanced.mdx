@@ -1,0 +1,248 @@
+---
+sidebar_position: 2
+id: advanced
+title: Erweiterte Installation
+sidebar_label: Erweiterte Installation
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Erweiterte Installation
+
+Falls es Probleme mit der Schnellinstallation per Skript gibt, Sie ein besseres Verständnis dafür erhalten möchten, wie die Installation von Netuno funktioniert, oder aus einem anderen Grund, können Sie die manuelle Installation durchführen.
+
+Wählen Sie die gewünschte Version. Die hier getroffene Auswahl gilt für alle Befehlsblöcke auf dieser Seite.
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Stabile Version" default>
+
+Die **Stabile Version** ist die freigegebene Edition von Netuno. Sie wurde strengen Tests unterzogen und ist vollständig für den Einsatz in Produktionsumgebungen bereit.
+
+</TabItem>
+  <TabItem value="testing" label="Testversion">
+
+:::danger NICHT IN DER PRODUKTION VERWENDEN
+Die **Testversion** enthält die neuesten Funktionen und laufende Implementierungen. Da sie experimentell ist, kann sie Instabilitäten aufweisen. Wir empfehlen sie nur, um neue Funktionen kennenzulernen, Tests durchzuführen oder zum Ökosystem der Plattform beizutragen.
+:::
+
+  </TabItem>
+</Tabs>
+
+## Voraussetzungen
+
+Bevor Sie beginnen, prüfen Sie, was auf Ihrem Computer installiert sein muss:
+
+- **Java** *(Nur für das Installationsprogramm)*
+
+**Java** muss zuvor in Ihrem Betriebssystem installiert sein. Es wird **ausschließlich** verwendet, um das anfängliche Installationsskript von Netuno auszuführen.
+
+- **GraalVM** *(Automatische Installation)*
+
+Während der Installation wird die **GraalVM**-Engine automatisch im Netuno-Ordner selbst heruntergeladen und konfiguriert. Ab diesem Zeitpunkt wird das isolierte Java der GraalVM verwendet, um die Plattform auszuführen, was Stabilität und hohe Leistung gewährleistet, ohne die globalen Einstellungen Ihres Rechners zu beeinträchtigen.
+
+Weitere Informationen über die Technologie finden Sie unter: [GraalVM](https://www.graalvm.org/).
+
+:::info Frontend-Anforderungen sind optional
+Die Installation von Frontend-Tools (wie Node.js, NPM oder Yarn) ist vollständig optional. Sie müssen sie nur konfigurieren, wenn Sie fortgeschrittene Benutzeroberflächen im Full-Stack-Modus entwickeln möchten.
+:::
+
+### Backend - Java
+
+Dieser Schritt stellt sicher, dass die Umgebung für die Ausführung des Plattform-Installers vorbereitet ist. **Java Version 11 oder höher** muss installiert sein.
+
+Prüfen Sie, ob Java bereits installiert ist, indem Sie den folgenden Befehl im Terminal ausführen:
+
+```bash
+java -version
+```
+
+Falls es nicht installiert ist, empfehlen wir die Installation von **Java Open Source**:
+
+- Windows und macOS: [Java OpenJDK Eclipse Temurin](https://adoptium.net/pt-BR)
+
+- Linux (Ubuntu / Debian):
+
+```bash
+apt install default-jdk-headless
+```
+
+### Frontend - Bun
+
+Für die Entwicklung von Benutzeroberflächen (UI / Frontend) empfehlen wir die Verwendung von **Bun**, dem offiziellen Standardwerkzeug des Netuno-Ökosystems für die Frontend-Kompilierung.
+
+#### Warum Bun verwenden?
+
+**Bun** ist eine moderne und hochoptimierte Alternative zu Node.js. Im Netuno-Umfeld zeichnet es sich durch Folgendes aus:
+
+- **Hohe Leistung:** Sichtbar schnellere Ausführung und Installation von Abhängigkeiten.
+- **Produktivität:** Bessere Leistung im täglichen Entwicklungsablauf für Benutzeroberflächen.
+- **Native Integration:** Alle Beispielprojekte und Templates von Netuno sind bereits für die Verwendung mit Bun vorkonfiguriert.
+
+Rufen Sie die Anleitung auf: [Bun-Installation](/docs/academy/website/bun)
+
+Netuno schränkt Ihre technologischen Entscheidungen nicht ein. Falls Sie es bevorzugen, **können Sie Node.js mit NPM, PNPM, Yarn** oder einem anderen Paketmanager verwenden. Die Wahl des Frontend-Stacks liegt ganz bei Ihnen.
+
+:::tip HALTEN SIE DIE WERKZEUGE AKTUALISIERT
+Unabhängig von der gewählten Technologie sollten Sie immer die neuesten Versionen verwenden, um Kompatibilität, Sicherheit und Leistung zu gewährleisten.
+:::
+
+## Linux oder macOS
+
+Die meisten Linux-Distributionen und macOS enthalten **cURL** oder **Wget** bereits standardmäßig. Prüfen Sie, welches verfügbar ist:
+
+```bash
+curl --version
+```
+```bash
+wget --version
+```
+
+Führen Sie die folgenden Schritte aus:
+
+**1. Erstellen Sie den Ordner und wechseln Sie hinein:**
+
+```bash
+mkdir -p netuno && cd netuno
+```
+
+**2. Laden Sie den Installer herunter** (wählen Sie nur eine Methode):
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Stabile Version" default>
+
+**Mit cURL:**
+```bash
+curl -L https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -o netuno-setup.jar
+```
+
+**Mit Wget:**
+```bash
+wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -O netuno-setup.jar
+```
+
+  </TabItem>
+  <TabItem value="testing" label="Testversion">
+
+**Mit cURL:**
+```bash
+curl -L https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -o netuno-setup.jar
+```
+
+**Mit Wget:**
+```bash
+wget https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -O netuno-setup.jar
+```
+
+  </TabItem>
+</Tabs>
+
+**3. Führen Sie die Installation aus:**
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Stabile Version" default>
+
+```bash
+java -jar netuno-setup.jar install
+```
+
+  </TabItem>
+  <TabItem value="testing" label="Testversion">
+
+```bash
+java -jar netuno-setup.jar install version=testing
+```
+
+  </TabItem>
+</Tabs>
+
+:::caution ACHTUNG
+macOS verfügt über einen nativen Sicherheitsmechanismus (Gatekeeper), der über das Terminal heruntergeladene Anwendungen blockieren kann.
+:::
+
+Führen Sie unter **macOS** unmittelbar nach Schritt 3, noch im Ordner `netuno`, den folgenden Befehl aus, um sicherzustellen, dass Netuno ohne Berechtigungsfehler funktioniert.
+
+```bash
+sudo xattr -r -d com.apple.quarantine .
+```
+
+Das System fordert zur Bestätigung das Administratorpasswort Ihres Macs an.
+
+## Windows
+
+Wir verwenden **PowerShell** für den Download und die Installation. Öffnen Sie PowerShell über das Startmenü, indem Sie `powershell` eingeben.
+
+**1. Erstellen Sie den Ordner, wechseln Sie hinein und laden Sie den Installer herunter**. Kopieren Sie den gesamten Block und drücken Sie die Eingabetaste:
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Stabile Version" default>
+
+```powershell
+md netuno; cd netuno
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar" -OutFile "netuno-setup.jar"
+```
+
+  </TabItem>
+  <TabItem value="testing" label="Testversion">
+
+```powershell
+md netuno; cd netuno
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar" -OutFile "netuno-setup.jar"
+```
+
+  </TabItem>
+</Tabs>
+
+**2. Führen Sie die Installation aus:**
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Stabile Version" default>
+
+```powershell
+java -jar netuno-setup.jar install
+```
+
+  </TabItem>
+  <TabItem value="testing" label="Testversion">
+
+```powershell
+java -jar netuno-setup.jar install version=testing
+```
+
+  </TabItem>
+</Tabs>
+
+:::caution ACHTUNG
+Die Standardinstallation erfordert in der Regel keine erhöhten Rechte. Wenn Sie jedoch eine Meldung „Zugriff verweigert“ erhalten, schließen Sie PowerShell, öffnen Sie es erneut als **Administrator** und führen Sie den Befehl erneut aus.
+:::
+
+## Von Grund auf neu starten
+
+So bereinigen Sie die Umgebung und beginnen von vorn:
+
+**1. Gehen Sie im Terminal eine Ebene zurück:**
+
+```bash
+cd ..
+```
+
+**2. Entfernen Sie den fehlerhaften Ordner:**
+
+<Tabs groupId="os">
+  <TabItem value="linux-mac" label="Linux oder macOS" default>
+
+```bash
+rm -rf netuno
+```
+
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+
+```powershell
+rmdir /s /q netuno
+```
+
+  </TabItem>
+</Tabs>
+
+**3. Starten Sie die Installation erneut**.

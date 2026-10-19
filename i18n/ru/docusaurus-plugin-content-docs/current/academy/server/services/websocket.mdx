@@ -1,0 +1,675 @@
+---
+id: websocket
+title: WebSocket
+sidebar_label: WebSocket
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Мгновенный обмен сообщениями между сервером и клиентом.
+
+## Введение
+
+С помощью WebSocket можно установить постоянное соединение между сервером и браузером клиента.
+
+Это означает, что в любой момент браузер может использовать установленное через WebSocket соединение для отправки
+данных на сервер без обязательного получения ответа. То же самое относится к серверу, который может связываться
+с браузером клиента, отправляя данные немедленно.
+
+> Обмен происходит мгновенно, и в любой момент можно передавать данные в обе стороны
+независимо и сразу.
+
+Это очень полезно для выполнения операций в реальном времени с мгновенной связью: это как чат, беседа
+между браузером и сервером, когда в любой момент любой участник может отправить сообщение, а другой его получит.
+
+Например, это широко используется — от чатов в целом до игр; мы также применяем это для отображения изменений
+данных в реальном времени, то есть когда есть необходимость в максимально быстрой связи.
+
+В упрощённом виде разница между классической связью HTTP и WebSocket:
+
+![Классический HTTP против WebSocket](/docs/assets/academy/server/services/websocket/comparison-pt.png)
+
+На стороне сервера создаётся `endpoint` — адрес, позволяющий устанавливать соединения через WebSocket.
+
+Сервер может отправлять данные только в конкретное соединение, то есть можно отправлять новые
+сообщения конкретному участнику чата.
+
+Также сервер может выполнять `broadcast` — отправку данных всем активным соединениям по определённому
+адресу, то есть когда сообщение отправляется всем участникам чата, находящимся в комнате или
+группе.
+
+## Активация и настройка
+
+Чтобы активировать и настроить WebSocket в вашем приложении Netuno, необходимо отредактировать файл конфигурации
+приложения для используемой среды, например:
+
+- `📂 config/_development.json`
+- `📂 config/_production.json`
+
+Добавьте и настройте следующие параметры:
+
+```json
+    ...
+    "ws": {
+        "hosts": [...], "<-- НЕОБЯЗАТЕЛЬНО": "подробнее в документации ниже.",
+        "endpoints": [
+            {
+                "name": "obshchiy",
+                "enabled": true,
+                "sendTimeout": 10000,
+                "idleTimeout": 0,
+                "maxText": 15000,
+                "public": "/ws/obshchiy",
+                "path": "/",
+                "service": "/services/ws/obshchiy"
+            },
+            {
+                "name": "komnata",
+                "enabled": true,
+                "sendTimeout": 10000,
+                "idleTimeout": 0,
+                "maxText": 15000,
+                "public": "/ws/komnata",
+                "path": "/{uid}",
+                "service": "/services/ws/komnata"
+            }
+        ]
+    },
+    ...
+```
+
+#### endpoints
+
+Это массив, позволяющий определить, что сервер будет поддерживать WebSocket через несколько указанных публичных
+адресов (_endpoints_), то есть каждый endpoint — это публичный адрес, поддерживающий приём соединений через
+WebSocket из браузеров.
+
+#### name
+
+Идентификационное имя endpoint.
+
+#### enabled
+
+Позволяет включать и отключать endpoint; значение по умолчанию — `true` (активен).
+
+#### sendTimeout
+
+Максимальное время для отправки сообщения клиентам; значение по умолчанию — `60000` миллисекунд, то есть
+1 минута.
+
+#### idleTimeout
+
+Максимальное время неактивности соединения; значение по умолчанию — `300000` миллисекунд, то есть 5 минут.
+
+#### maxText
+
+Ограничение в байтах для максимальной длины сообщения; значение по умолчанию — `1048576`, что эквивалентно 1 мегабайту.
+
+#### public
+
+Определяет базу публичного адреса, который позволит принимать соединения через WebSocket из браузеров.
+
+Итоговый адрес состоит из значения настройки `public`, за которым следует то, что определено в `path`.
+
+#### path
+
+Определяет конечную часть пути публичного адреса; может быть динамическим, что позволяет, например, создавать несколько
+отдельных каналов, например это полезно для создания нескольких комнат.
+
+> Внимание: `path` всегда должен начинаться с `/`, а в конфигурации подключения на фронтенде очень важно указывать
+слэш именно так, как определено в `path`.
+
+На фронтенде итоговый адрес будет `public` + `path`, см. пример:
+
+```json
+    ...
+    "public": "/ws/obshchiy",
+    "path": "/",
+    ...
+```
+
+Тогда итоговый адрес на фронтенде будет `/ws/obshchiy/`, со слэшем в конце.
+
+##### service
+
+Адрес базы бэкенд-сервиса приложения, который обрабатывает соединения и связь через WebSocket.
+
+#### hosts
+
+Опционально можно определить хосты, на которых доступны наши endpoints, то есть при подключении в HTTP-заголовке
+приходит адрес Host; учитывается только информация о домене или IP этого хоста, а указание порта
+отбрасывается — это используется для сопоставления и поиска соответствующего endpoint.
+
+> Поэтому endpoint для корректной работы должен сочетать `host` и `public` + `path` следующим образом:
+>
+> `ws://[host]:9000[public][path]`
+>
+> В продакшене с NGINX, обратным прокси и SSL это должно выглядеть так:
+>
+> `wss://[host][public][path]`
+
+Netuno определяет некоторые локальные домены с префиксом имени приложения, которые автоматически
+связываются как значения по умолчанию для хостов endpoints; кроме того, для приложения в разработке также добавляются
+`localhost` и `127.0.0.1` к хостам по умолчанию, поэтому определение хостов необязательно — эта конфигурация
+выполняется автоматически.
+
+Следующие хосты определяются автоматически для endpoints, если имя приложения — `moeapp`:
+
+- Этот направляет напрямую на локальный IP 127.0.0.1:
+  - `moeapp.local.netu.no`
+- Для работы этих хостов необходимо зарегистрировать их в файле hosts операционной системы:
+  - `moeapp.localhost`
+  - `moeapp.local`
+
+Если имя приложения — `moe_prilozhenie`, то автоматическими будут следующие хосты:
+
+- Этот направляет напрямую на локальный IP 127.0.0.1:
+  - `moe-prilozhenie.local.netu.no`
+- Для работы этих хостов необходимо зарегистрировать их в файле hosts операционной системы:
+  - `moe-prilozhenie.localhost`
+  - `moe-prilozhenie.local`
+
+> В домене не допускается `_` (подчёркивание), а в имени приложений не допускается `-` (дефис), поэтому снаружи
+> мы используем `-` (дефис) в адресе, но Netuno автоматически преобразует `-` (дефис) в `_` (подчёркивание), чтобы
+> найти нужное приложение.
+
+Приложение по умолчанию или приложение, указанное при запуске сервера Netuno, дополнительно имеет следующие
+хосты:
+
+- `localhost`
+- `127.0.0.1`
+
+Для определения пользовательских хостов используем следующие настройки:
+
+```json
+    ...
+    "ws": {
+        "endpoints": [
+            {
+                "hosts": ["moy-domen1.com", "www.moy-domen1.com"],
+                ...
+            },
+            {
+                "hosts": ["moy-domen2.com", "www.moy-domen2.com"],
+                ...
+            }
+        ]
+    },
+    ...
+```
+
+Если все endpoints работают для одних и тех же хостов, можно определить их глобально так:
+
+```json
+    ...
+    "ws": {
+        "hosts": ["moy-domen.com", "www.moy-domen1.com"],
+        "endpoints": [
+            ...
+        ]
+    },
+    ...
+```
+
+Убедитесь, что в итоговом адресе WebSocket всегда используется домен или IP, являющийся допустимым хостом, иначе
+это не будет работать, потому что endpoint не удастся найти внутри.
+
+## Сервис для эндпоинтов
+
+### POST = новое соединение
+
+Сервис, настроенный для метода `POST`, выполняется при установке нового соединения, например:
+
+<PolyglotCode
+    file="server/services/ws/komnata/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const uidKomnaty = _ws.path().getString("uid")
+                const dbKomnaty = _db.get("komnata", uidKomnaty)
+
+                if (dbKomnaty == null) {
+                    _log.warn(\`Недопустимая комната \${uidKomnaty}.\`)
+                    _ws.close()
+                } else {
+                    _log.info(\`Новая сессия WebSocket: \${_ws.sessionId()}\`)
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                uidKomnaty = _ws.path().getString("uid")
+                dbKomnaty = _db.get("komnata", uidKomnaty)
+
+                if dbKomnaty == null:
+                    _log.warn(f"Недопустимая комната {uidKomnaty}.")
+                    _ws.close()
+                else:
+                    _log.info(f"Новая сессия WebSocket: {_ws.sessionId()}")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                uidKomnaty = _ws.path().getString("uid")
+                dbKomnaty = _db.get("komnata", uidKomnaty)
+
+                if dbKomnaty == null
+                    _log.warn("Недопустимая комната #{uidKomnaty}.")
+                    _ws.close()
+                else
+                    _log.info("Новая сессия WebSocket: #{_ws.sessionId()}")
+                end
+`
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val uidKomnaty = _ws.path().getString("uid")
+                val dbKomnaty = _db.get("komnata", uidKomnaty)
+
+                if (dbKomnaty == null) {
+                    _log.warn("Недопустимая комната \${uidKomnaty}.")
+                    _ws.close()
+                } else {
+                    _log.info("Новая сессия WebSocket: \${_ws.sessionId()}")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def uidKomnaty = _ws.path().getString("uid")
+                def dbKomnaty = _db.get("komnata", uidKomnaty)
+
+                if (dbKomnaty == null) {
+                    _log.warn("Недопустимая комната \${uidKomnaty}.")
+                    _ws.close()
+                } else {
+                    _log.info("Новая сессия WebSocket: \${_ws.sessionId()}")
+                }
+            `
+        },
+    ]}
+/>
+
+> Обычно `_ws.sessionId()` сохраняется в базе данных для использования в будущих коммуникациях.
+
+### PUT = новое сообщение
+
+Если полученное сообщение не в формате JSON или если это JSON, который не в поддерживаемом формате для выполнения
+конкретного сервиса (`service`), тогда будет выполнен этот универсальный сервис:
+
+<PolyglotCode
+    file="server/services/ws/komnata/put"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(\`Сессия \${_ws.sessionId()} отправила это сообщение: \${_ws.message()}\`)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _log.info(f"Сессия {_ws.sessionId()} отправила это сообщение: {_ws.message()}")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _log.info("Сессия #{_ws.sessionId()} отправила это сообщение: #{_ws.message()}")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _log.info("Сессия \${_ws.sessionId()} отправила это сообщение: \${_ws.message()}")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _log.info("Сессия \${_ws.sessionId()} отправила это сообщение: \${_ws.message()}")
+            `
+        },
+    ]}
+/>
+
+### DELETE = соединение закрыто
+
+Выполняется при отключении браузера клиента.
+
+<PolyglotCode
+    file="server/services/ws/komnata/delete"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(\`Сессия \${_ws.sessionId()} отключилась.\`)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _log.info(f"Сессия {_ws.sessionId()} отключилась.")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _log.info("Сессия #{_ws.sessionId()} отключилась.")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _log.info("Сессия \${_ws.sessionId()} отключилась.")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _log.info("Сессия \${_ws.sessionId()} отключилась.")
+            `
+        },
+    ]}
+/>
+
+
+### GET = непрерывный поток сообщений
+
+Запускается при установке нового соединения браузера клиента, и выполнение продолжается до завершения
+соединения.
+
+То есть сервис для HTTP-метода `GET` непрерывно получает сообщения, приходящие от клиента
+в `stream`, то есть это открытый и непрерывный поток сообщений, который может как принимать, так и отправлять.
+
+<PolyglotCode
+    file="server/services/ws/komnata/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_ws.isStream()) {
+                    while (_ws.awaitStream()) {
+                        if (_ws.isBinaryStreamed()) {
+                            _log.info("Получено новое бинарное сообщение: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        } else if (_ws.isTextStreamed()) {
+                            _log.info("Получено новое текстовое сообщение: "+ _ws.textStreamed())
+                        }
+                        _ws.sendText("Ок! Сообщение успешно получено.")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _ws.isStream():
+                    while _ws.awaitStream():
+                        if _ws.isBinaryStreamed():
+                            _log.info("Получено новое бинарное сообщение: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        elif _ws.isTextStreamed():
+                            _log.info("Получено новое текстовое сообщение: "+ _ws.textStreamed())
+                        _ws.sendText("Ок! Сообщение успешно получено.")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _ws.isStream()
+                    while _ws.awaitStream()
+                        if _ws.isBinaryStreamed()
+                            _log.info("Получено новое бинарное сообщение: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        elsif _ws.isTextStreamed()
+                            _log.info("Получено новое текстовое сообщение: "+ _ws.textStreamed())
+                        end
+                        _ws.sendText("Ок! Сообщение успешно получено.")
+                    end
+                end
+            `
+        },
+    ]}
+/>
+
+`if` с `_ws.isStream()` проверяет, действительно ли это внутренний запрос, управляемый WebSocket, для
+выполнения stream.
+
+В `while` с `_ws.awaitStream()` происходит ожидание прихода нового потока сообщений, то есть ожидание
+поступления нового сообщения. Как только появляется новое сообщение, выполняется внутренний код `while`.
+
+> `_ws.awaitStream()` работает как бесконечный цикл в ожидании нового сообщения.
+
+Затем во внутренних `ifs` цикла `while` проверяется тип сообщения: бинарное оно или текстовое; в обоих
+случаях содержимое этих сообщений выводится в логи. Обратите внимание, что может использоваться любой формат
+сообщений, и их можно обрабатывать любым удобным способом.
+
+Наконец, в `_ws.sendText` клиенту отправляется ответное сообщение, подтверждающее получение.
+
+> Каждое выполнение сервиса `GET` будет отдельным активным соединением.
+
+Когда соединение с endpoint WebSocket завершается, выполнение этого сервиса завершается
+внутренне.
+
+## Связь
+
+### sendService
+
+Выполняет сервис и отправляет сгенерированный вывод конкретному клиенту, подключённому через WebSocket, используя ID
+соединения клиента (`sessionId`).
+
+#### Пример вызова сервиса
+
+Код ниже можно использовать в сервисе метода PUT endpoint (`service`); обратите внимание, что используется
+`_ws.sessionId()`, который получает ID сессии соединения клиента. Если идентификатор сессии
+сохранён в базе данных, `sendService` можно выполнить в любом другом сервисе в любой
+момент.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const uid = _ws.path().getString("uid")
+                _ws.sendService(
+                    _ws.sessionId(), // Идентификация текущего соединения WebSocket.
+                    _val.map() // Параметризация сервиса, который будет выполнен.
+                        .set("method", "POST")
+                        .set("service", "/services/komnata/uchastnik/novyy")
+                        .set(
+                            "data", // Параметры, которые будут переданы в сервис и получены через _req.
+                            _val.map()
+                                .set("uid", uid)
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+То есть в конфигурации `path`, настроенный в `endpoint`, имеет значение `/{uid}`, что позволяет клиенту
+подключаться через публичный адрес:
+
+- `/ws/komnata/d641f095-30eb-4025-a39c-b2e3e497eab7`
+
+Тогда значением `uid` будет `d641f095-30eb-4025-a39c-b2e3e497eab7`.
+
+После этого будет выполнен сервис, находящийся по URL `/services/komnata/uchastnik/novyy`, и будет передан `uid`.
+
+`uid` можно получить в коде выполняемого сервиса как параметр HTTP-запроса, см. пример:
+
+<PolyglotCode
+    file="/server/services/komnata/uchastnik/novyy"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // UID, отправленный в запросе, получается напрямую в request.
+                const uid = _req.getString('uid')
+            `
+        },
+    ]}
+/>
+
+### broadcastService
+
+Чтобы выполнить broadcast, нужно имя endpoint WebSocket, определить путь (`path`), если применимо, и
+сервис, который будет выполнен.
+
+> Вывод сервиса будет отправлен всем активным соединениям на указанном `endpoint`.
+
+#### Пример широковещательной рассылки
+
+<PolyglotCode
+    file="/server/services/komnata/uchastnik/novyy"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _ws.broadcastService(
+                    "admin", // Имя endpoint WebSocket.
+                    "/", // Путь, настроенный в endpoint (path).
+                    _val.map() // Параметризация сервиса, который будет выполнен.
+                        .set("service", "/services/komnata/uchastnik/spisok")
+                )
+            `
+        },
+    ]}
+/>
+
+В этом примере содержимое вывода, сгенерированного сервисом `komnata/uchastnik/spisok`, будет отправлено всем, кто
+подключён к endpoint `admin`.
+
+## WS-клиент - NPM
+
+Для удобной интеграции с фронтендом предоставляется модуль NPM:
+
+- https://www.npmjs.com/package/@netuno/ws-client
+
+Команда установки:
+
+- `bun install @netuno/ws-client`
+
+```js
+import _ws from '@netuno/ws-client';
+
+_ws.config({
+    url: 'ws://localhost:9000/ws/primer/',
+    servicesPrefix: '/services',
+    autoReconnect: true,
+    connect: (sobytie) => {
+        console.info('WebSocket подключён', sobytie);
+    },
+    close: (sobytie) => {
+        console.warn('WebSocket закрыт', sobytie);
+    },
+    error: (oshibka) => {
+        console.error('Ошибка WebSocket', oshibka);
+    },
+    message: (dannye, sobytie) => {
+        console.debug('Сообщение WebSocket', dannye);
+    }
+});
+```
+
+> Убедитесь, что URL правильно сочетает значения, настроенные в endpoint для `host` и `public` + `path`,
+> следующим образом:
+>
+> `ws://[host]:9000[public][path]`
+>
+> А URL в продакшене с интеграцией NGINX, обратного прокси и SSL, вероятно, будет таким:
+>
+> `wss://[host][public][path]`
+
+Затем можно инициировать соединение:
+
+```js
+_ws.connect();
+```
+
+### Выполнение сервиса через WebSocket
+
+Мы можем выполнять сервисы REST API через соединение WebSocket; это означает, что не будет выполняться никакой
+HTTP-запрос, поэтому данные запроса отправляются как сообщение, а ответ сервиса получается как
+принятое обратно сообщение.
+
+Перед началом нужно создать наблюдатель ответа сервиса, например:
+
+```js
+const ssylkaNaNablyudatelya = _ws.addListener({
+    method: 'GET', // Необязательно; пропустите, чтобы слушать все методы.
+    service: 'put/k/moemu/servisu/zdes',
+    success: (dannye) => {
+        console.log('Ответ сервиса, выполненного через WebSocket:', dannye);
+    },
+    fail: (oshibka)=> {
+        console.log('Сервис, выполненный через WebSocket, завершился ошибкой:', oshibka);
+    }
+});
+```
+
+Теперь можно отправить запрос на выполнение сервиса; ответ сервиса будет получен в наблюдателе,
+созданном выше. Выполняем сервис так:
+
+```js
+_ws.sendService({
+    method: 'GET', // Необязательно; запросы используют GET, если не указан.
+    service: 'put/k/moemu/servisu/zdes',
+    data: {
+        message: 'Привет...'
+    }
+});
+```
+
+Чтобы удалить добавленный наблюдатель, используйте:
+
+```js
+_ws.removeListener(ssylkaNaNablyudatelya);
+```
+
+А чтобы закрыть соединение WebSocket:
+
+```js
+_ws.close();
+```
+
+## Обратный прокси NGINX
+
+В NGINX обратный прокси можно настроить так:
+
+```
+    location /ws {
+        proxy_pass http://localhost:9000;
+        proxy_set_header Host moe-prilozhenie.local.netu.no;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        add_header X-Frame-Options "";
+    }
+```
+
+> В строке 3, где определяется `Host`, часть `moe-prilozhenie` нужно заменить на соответствующее имя
+> приложения Netuno. Если в имени приложения есть `_`, то в адресе `Host` он заменяется на `-`,
+> например, приложение `moe_prilozhenie` будет иметь значение `Host` `moe-prilozhenie.local.netu.no`.
+
+Перезапустите NGINX, чтобы конфигурация вступила в силу.
+
+Домены, настроенные в NGINX, то есть параметр `server_name`, не обязательно должны быть в hosts
+endpoint приложения Netuno, потому что в конфигурации прокси выше Host в HTTP-заголовке изменяется
+на стандартный адрес, который всегда автоматически настраивается Netuno, если префикс с именем
+приложения указан правильно.
+
+Если сервер NGINX использует порт 80, итоговый URL будет:
+
+- `ws://[host][public][path]`
+
+А с SSL/HTTPS, если сервер NGINX использует порт 443, итоговый URL будет:
+
+- `wss://[host][public][path]`

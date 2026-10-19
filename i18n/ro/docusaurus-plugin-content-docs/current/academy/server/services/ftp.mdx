@@ -1,0 +1,386 @@
+---
+id: ftp
+title: Client FTP
+sidebar_label: Client FTP
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Încărcați și descărcați fișiere, gestionați dosare la distanță.
+
+## Introducere
+
+Netuno are integrat în framework-ul său low-code un client FTP, care permite conectarea la servere, trimiterea și
+primirea fișierelor, modificarea dosarelor, printre alte operații la distanță.
+
+Suportă multiple conexiuni simultane și, de asemenea, FTPS.
+
+Acest lucru se datorează implementării Java și open-source [Apache Commons Net](https://github.com/apache/commons-net), care
+permite Netuno să ofere aceste funcționalități în toate limbajele de _script_ prin intermediul resursei `_ftp`.
+
+> Mai multe despre resursa [FTP](/docs/library/resources/ftp) din Netuno.
+
+## Configurare
+
+Primul pas va fi configurarea datelor de acces FTP pe care Netuno le va utiliza pentru a realiza conexiunea.
+
+Navigați în cadrul aplicației pe care o dezvoltați până la fișierul de configurare a mediului. În acest exemplu,
+vom utiliza fișierul de mediu de dezvoltare localizat în:
+
+- `config/_development.json`
+
+Verificați dacă nu conține deja configurațiile pentru FTP; dacă acestea nu există încă, atunci la sfârșitul fișierului de
+configurare (în format JSON) adăugați parametrii de configurare FTP:
+
+```json title="config/_development.json"
+{
+  ...
+  "ftp": {
+    "default": {
+      "enabled": true,
+      "host": "serverul.meu.net",
+      "port": 21,
+      "username": "temp",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+După salvarea modificărilor, este suficient să reporniți Netuno pentru a prelua modificările de configurare. Acestea sunt
+configurațiile implicite pentru conexiune, după cum indică numele `default`.
+
+Puteți adăuga mai multe configurații de conexiune FTP, dar doar una poate fi definită ca implicită.
+
+Pentru a adăuga mai multe configurații de conexiune FTP, este suficient să repetați blocul de configurare implicit și să înlocuiți numele
+`default` cu un alt nume ales de dvs.; vedeți exemplul:
+
+```json title="config/_development.json"
+{
+  ...
+  "ftp": {
+    "default": {
+      "enabled": true,
+      "host": "serverul.meu.net",
+      "port": 22,
+      "username": "temp",
+      "password": "$eCr37"
+    },
+    "altul": {
+      "enabled": true,
+      "host": "serverul.alt.net",
+      "port": 22,
+      "username": "temp",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+O configurație similară exemplului de mai sus va permite utilizarea contului default atunci când este apelată în cod după cum urmează:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ftp = _ftp.init()
+            `
+        },
+    ]}
+/>
+
+Iar pentru a utiliza configurația `altul`, trebuie doar să adăugați numele configurației ca parametru la funcția
+`_ftp.init()` după cum urmează:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ftpAltul = _ftp.init("altul")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ftpAltul = _ftp.init("altul")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftpAltul = _ftp.init("altul")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ftpAltul = _ftp.init("altul")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ftpAltul = _ftp.init("altul")
+            `
+        },
+    ]}
+/>
+
+> Dacă nu adăugați un nume de configurație ca parametru, va fi utilizat întotdeauna contul default.
+
+## Conexiune
+
+Înainte de a face orice, este necesar să inițiați conexiunea FTP:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.connect()
+            `
+        },
+    ]}
+/>
+
+## Director de lucru
+
+Când efectuați operații pe FTP, este necesar să definiți ce dosar va fi utilizat.
+
+Prin definirea directorului de lucru vom putea realiza diversele manipulări pornind de la acest dosar de bază.
+
+Pentru a schimba directorul de lucru:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.changeWorkingDirectory("dosar/meu/de/baza")
+            `
+        },
+    ]}
+/>
+
+Acum orice operație va fi efectuată în acest dosar sau pornind de la el.
+
+## Crearea și ștergerea dosarelor
+
+Pentru a crea un dosar, este suficient să indicați calea acestui dosar:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.createDirectory("dosar-temporar")
+                ftp.createDirectory("dosar-temporar/sub-dosar")
+            `
+        },
+    ]}
+/>
+
+Pentru a șterge sau elimina dosare:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.deleteDirectory("dosar-temporar/sub-dosar")
+                ftp.deleteDirectory("dosar-temporar")
+            `
+        },
+    ]}
+/>
+
+## Redenumire
+
+Este posibil să redenumiți fișiere sau dosare; se transmite calea veche și apoi noua cale:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.rename("nume-vechi", "nume-nou")
+            `
+        },
+    ]}
+/>
+
+## Trimiterea fișierelor
+
+Pentru a încărca un fișier text:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.uploadText("fisier-meu.txt", "Salut FTP! Acesta este conținutul meu...")
+            `
+        },
+    ]}
+/>
+
+## Primirea fișierelor
+
+Pentru a obține un fișier text:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const continutFisier = ftp.downloadText("fisier-meu.txt")
+                _out.println(continutFisier)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                continutFisier = ftp.downloadText("fisier-meu.txt")
+                _out.println(continutFisier)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                continutFisier = ftp.downloadText("fisier-meu.txt")
+                _out.println(continutFisier)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val continutFisier = ftp.downloadText("fisier-meu.txt")
+                _out.println(continutFisier)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def continutFisier = ftp.downloadText("fisier-meu.txt")
+                _out.println(continutFisier)
+            `
+        },
+    ]}
+/>
+
+## Listarea elementelor din dosar
+
+Listează întregul conținut al unui dosar:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const i of ftp.list("cale/dosar")) {
+                    if (i.isDirectory()) {
+                        _out.print("Dosar: ")
+                    } else if (i.isFile()) {
+                        _out.print("Fișier: ")
+                    } else {
+                        _out.print("Altul: ")
+                    }
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for i in ftp.list("cale/dosar"):
+                    if i.isDirectory():
+                        _out.print("Dosar: ")
+                    elif i.isFile():
+                        _out.print("Fișier: ")
+                    else:
+                        _out.print("Altul: ")
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftp.list("cale/dosar").each do |i|
+                    if i.isDirectory()
+                        _out.print("Dosar: ")
+                    elsif i.isFile()
+                        _out.print("Fișier: ")
+                    else
+                        _out.print("Altul: ")
+                    end
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                ftp.list("cale/dosar").forEach {
+                    if (it.isDirectory()) {
+                        _out.print("Dosar: ")
+                    } else if (it.isFile()) {
+                        _out.print("Fișier: ")
+                    } else {
+                        _out.print("Altul: ")
+                    }
+                    _out.println(it.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (i in ftp.list("cale/dosar")) {
+                    if (i.isDirectory()) {
+                        _out.print("Dosar: ")
+                    } else if (i.isFile()) {
+                        _out.print("Fișier: ")
+                    } else {
+                        _out.print("Altul: ")
+                    }
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+    ]}
+/>
+
+> Returnează o listă de obiecte de tipul [FTPFile](/docs/library/objects/FTPFile).

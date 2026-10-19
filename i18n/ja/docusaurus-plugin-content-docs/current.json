@@ -1,0 +1,126 @@
+{
+  "version.label": {
+    "message": "次",
+    "description": "現在のバージョンのラベル"
+  },
+  "sidebar.academySidebar.category.Demonstration": {
+    "message": "デモ",
+    "description": "サイドバー academySidebar のカテゴリ アプリデモのラベル"
+  },
+  "sidebar.academySidebar.category.Demonstration.link.generated-index.description": {
+    "message": "標準デモアプリを変更しながら、開発ツアーを体験できます。",
+    "description": "サイドバー academySidebar のカテゴリ アプリデモの generated-index ページの説明"
+  },
+  "sidebar.academySidebar.category.User Interface": {
+    "message": "ユーザーインターフェース",
+    "description": "サイドバー academySidebar のカテゴリ ユーザーインターフェースのラベル"
+  },
+  "sidebar.academySidebar.category.User Interface.link.generated-index.description": {
+    "message": "ユーザーインターフェースの仕組み、フォームの構築、データ管理について説明します。",
+    "description": "サイドバー academySidebar のカテゴリ ユーザーインターフェースの generated-index ページの説明"
+  },
+  "sidebar.academySidebar.category.Explore": {
+    "message": "探索",
+    "description": "サイドバー academySidebar のカテゴリ 探索のラベル"
+  },
+  "sidebar.academySidebar.category.Explore.link.generated-index.description": {
+    "message": "機能と概念の概要をいくつか紹介します。",
+    "description": "サイドバー academySidebar のカテゴリ 探索の generated-index ページの説明"
+  },
+  "sidebar.academySidebar.category.Understand": {
+    "message": "理解",
+    "description": "サイドバー academySidebar のカテゴリ 探索のラベル"
+  },
+  "sidebar.academySidebar.category.Understand.link.generated-index.description": {
+    "message": "プラットフォームの全般的な適用性と戦略的ポテンシャル。",
+    "description": "サイドバー academySidebar のカテゴリ 探索の generated-index ページの説明"
+  },
+  "sidebar.academySidebar.category.Server Backend": {
+    "message": "サーバーバックエンド",
+    "description": "サイドバー academySidebar のカテゴリ サーバーのラベル"
+  },
+  "sidebar.academySidebar.category.Server Backend.link.generated-index.description": {
+    "message": "多言語ローコード開発に統合されたバックエンドに関するチュートリアル。",
+    "description": "サイドバー academySidebar のカテゴリ サーバーの generated-index ページの説明"
+  },
+  "sidebar.academySidebar.category.Database": {
+    "message": "データベース",
+    "description": "サイドバー academySidebar のカテゴリ データベースのラベル"
+  },
+  "sidebar.academySidebar.category.Database.link.generated-index.description": {
+    "message": "データベース管理のチュートリアル。",
+    "description": "サイドバー academySidebar のカテゴリ データベースの generated-index ページの説明"
+  },
+  "sidebar.academySidebar.category.Service": {
+    "message": "サービス",
+    "description": "サイドバー academySidebar のカテゴリ サービスのラベル"
+  },
+  "sidebar.academySidebar.category.Service.link.generated-index.description": {
+    "message": "サービスで使用するリソースのチュートリアル。",
+    "description": "サイドバー academySidebar のカテゴリ サービスの generated-index ページの説明"
+  },
+  "sidebar.academySidebar.category.Java Core": {
+    "message": "Java Core",
+    "description": "The label for category Java Core in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Java Core.link.generated-index.description": {
+    "message": "多言語ローコード開発に統合されたバックエンドに関するチュートリアル。",
+    "description": "The generated-index page description for category Java Core in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Website Frontend": {
+    "message": "ウェブサイトフロントエンド",
+    "description": "サイドバー academySidebar のカテゴリ ウェブサイトのラベル"
+  },
+  "sidebar.academySidebar.category.Website Frontend.link.generated-index.description": {
+    "message": "高度なフロントエンド開発と統合。",
+    "description": "サイドバー academySidebar のカテゴリ ウェブサイトの generated-index ページの説明"
+  },
+  "sidebar.librarySidebar.category.App Structure": {
+    "message": "アプリケーション構造",
+    "description": "サイドバー librarySidebar のカテゴリ アプリフォルダのラベル"
+  },
+  "sidebar.librarySidebar.category.App Structure.link.generated-index.description": {
+    "message": "アプリケーションのフォルダーとファイル構造の詳細。",
+    "description": "サイドバー librarySidebar のカテゴリ アプリフォルダの generated-index ページの説明"
+  },
+  "sidebar.librarySidebar.category.Resources": {
+    "message": "リソース",
+    "description": "サイドバー librarySidebar のカテゴリ リソースのラベル"
+  },
+  "sidebar.librarySidebar.category.Resources.link.generated-index.description": {
+    "message": "利用可能なすべてのローコードリソース。",
+    "description": "サイドバー librarySidebar のカテゴリ リソースの generated-index ページの説明"
+  },
+  "sidebar.librarySidebar.category.Objects": {
+    "message": "オブジェクト",
+    "description": "サイドバー librarySidebar のカテゴリ オブジェクトのラベル"
+  },
+  "sidebar.librarySidebar.category.Objects.link.generated-index.description": {
+    "message": "利用可能な主要なローコードオブジェクト。",
+    "description": "サイドバー librarySidebar のカテゴリ オブジェクトの generated-index ページの説明"
+  },
+  "sidebar.academySidebar.category.CLUAR": {
+    "message": "CLUAR",
+    "description": "サイドバー academySidebar のカテゴリ CLUAR のラベル"
+  },
+  "sidebar.academySidebar.category.CLUAR.link.generated-index.description": {
+    "message": "多言語のコンテンツ管理とウェブサイト向けのすぐに使えるソリューション。",
+    "description": "サイドバー academySidebar のカテゴリ CLUAR の generated-index ページの説明"
+  },
+  "sidebar.academySidebar.category.Components": {
+    "message": "コンポーネント",
+    "description": "サイドバー academySidebar のカテゴリ コンポーネントのラベル"
+  },
+  "sidebar.academySidebar.category.Components.link.generated-index.description": {
+    "message": "CLUAR のコンテンツコンポーネント — バナー、コンテンツ、リスト、スライダー、機能 — のチュートリアル。",
+    "description": "サイドバー academySidebar のカテゴリ コンポーネントの generated-index ページの説明"
+  },
+  "sidebar.academySidebar.category.Pages": {
+    "message": "ページ",
+    "description": "サイドバー academySidebar のカテゴリ ページのラベル"
+  },
+  "sidebar.academySidebar.category.Pages.link.generated-index.description": {
+    "message": "CLUAR のページエンティティ — フィールド、バージョン管理、公開、複製 — のチュートリアル。",
+    "description": "サイドバー academySidebar のカテゴリ ページの generated-index ページの説明"
+  }
+}

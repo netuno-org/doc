@@ -1,0 +1,379 @@
+---
+id: ftp
+title: FTP 客户端
+sidebar_label: FTP 客户端
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+上传和下载文件，管理远程文件夹。
+
+## 简介
+
+Netuno 在其低代码框架中集成了 FTP 客户端，支持连接服务器、发送和接收文件、修改文件夹以及执行其他远程操作。
+
+支持多个并发连接，并支持 FTPS。
+
+这得益于开源 Java 实现 [Apache Commons Net](https://github.com/apache/commons-net)，它使 Netuno 能够通过 `_ftp` 资源在所有 _脚本_ 语言中提供这些功能。
+
+> 详细了解 Netuno 的 [FTP](/docs/library/resources/ftp) 资源。
+
+## 配置
+
+第一步是配置 Netuno 用于建立连接的 FTP 访问数据。
+
+在正在开发的应用中，找到环境配置文件。在本示例中，我们将使用位于以下位置的开发环境文件：
+
+- `config/_development.json`
+
+检查其中是否尚未包含 FTP 配置；如果尚不存在，则在配置文件（JSON 格式）末尾添加 FTP 配置参数：
+
+```json title="config/_development.json"
+{
+  ...
+  "ftp": {
+    "default": {
+      "enabled": true,
+      "host": "my.server.net",
+      "port": 21,
+      "username": "temp",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+保存更改后，只需重启 Netuno 即可使配置更改生效。这些是连接的默认配置，正如名称 `default` 所示。
+
+可以添加更多 FTP 连接配置，但只能将其中一个定义为默认。
+
+要添加更多 FTP 连接配置，只需重复默认配置块，并将名称 `default` 替换为您选择的其他名称，见示例：
+
+```json title="config/_development.json"
+{
+  ...
+  "ftp": {
+    "default": {
+      "enabled": true,
+      "host": "my.server.net",
+      "port": 22,
+      "username": "temp",
+      "password": "$eCr37"
+    },
+    "其他": {
+      "enabled": true,
+      "host": "my.other-server.net",
+      "port": 22,
+      "username": "temp",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+与上述示例类似的配置将允许在代码中按以下方式调用时使用默认账户：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ftp = _ftp.init()
+            `
+        },
+    ]}
+/>
+
+要使用 `其他` 配置，只需将配置名称作为参数添加到 `_ftp.init()` 函数，如下所示：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ftpOther = _ftp.init("其他")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ftpOther = _ftp.init("其他")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftpOther = _ftp.init("其他")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ftpOther = _ftp.init("其他")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ftpOther = _ftp.init("其他")
+            `
+        },
+    ]}
+/>
+
+> 如果不将配置名称作为参数添加，则始终使用默认账户。
+
+## 连接
+
+执行任何操作之前，需要先启动 FTP 连接：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.connect()
+            `
+        },
+    ]}
+/>
+
+## 工作目录
+
+在 FTP 中执行操作时，需要定义要使用的文件夹。
+
+通过定义工作目录，我们就能以此基础文件夹为起点执行各种操作。
+
+要更改工作目录：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.changeWorkingDirectory("我的/基础/文件夹")
+            `
+        },
+    ]}
+/>
+
+现在任何操作都将在此文件夹中或从此文件夹开始执行。
+
+## 创建和删除文件夹
+
+创建文件夹时，只需指明该文件夹的路径：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.createDirectory("临时文件夹")
+                ftp.createDirectory("临时文件夹/子文件夹")
+            `
+        },
+    ]}
+/>
+
+要删除或移除文件夹：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.deleteDirectory("临时文件夹/子文件夹")
+                ftp.deleteDirectory("临时文件夹")
+            `
+        },
+    ]}
+/>
+
+## 重命名
+
+可以重命名文件或文件夹，先传入旧路径，再传入新路径：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.rename("旧名称", "新名称")
+            `
+        },
+    ]}
+/>
+
+## 上传文件
+
+要上传文本文件：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.uploadText("我的文件.txt", "你好 FTP！这是我的内容...")
+            `
+        },
+    ]}
+/>
+
+## 接收文件
+
+要获取文本文件：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fileContent = ftp.downloadText("我的文件.txt")
+                _out.println(fileContent)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                fileContent = ftp.downloadText("我的文件.txt")
+                _out.println(fileContent)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fileContent = ftp.downloadText("我的文件.txt")
+                _out.println(fileContent)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val fileContent = ftp.downloadText("我的文件.txt")
+                _out.println(fileContent)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def fileContent = ftp.downloadText("我的文件.txt")
+                _out.println(fileContent)
+            `
+        },
+    ]}
+/>
+
+## 列出文件夹中的项目
+
+列出文件夹的全部内容：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const i of ftp.list("路径/文件夹")) {
+                    if (i.isDirectory()) {
+                        _out.print("文件夹： ")
+                    } else if (i.isFile()) {
+                        _out.print("文件： ")
+                    } else {
+                        _out.print("其他： ")
+                    }
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for i in ftp.list("路径/文件夹"):
+                    if i.isDirectory():
+                        _out.print("文件夹： ")
+                    elif i.isFile():
+                        _out.print("文件： ")
+                    else:
+                        _out.print("其他： ")
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftp.list("路径/文件夹").each do |i|
+                    if i.isDirectory()
+                        _out.print("文件夹： ")
+                    elsif i.isFile()
+                        _out.print("文件： ")
+                    else
+                        _out.print("其他： ")
+                    end
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                ftp.list("路径/文件夹").forEach {
+                    if (it.isDirectory()) {
+                        _out.print("文件夹： ")
+                    } else if (it.isFile()) {
+                        _out.print("文件： ")
+                    } else {
+                        _out.print("其他： ")
+                    }
+                    _out.println(it.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (i in ftp.list("路径/文件夹")) {
+                    if (i.isDirectory()) {
+                        _out.print("文件夹： ")
+                    } else if (i.isFile()) {
+                        _out.print("文件： ")
+                    } else {
+                        _out.print("其他： ")
+                    }
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+    ]}
+/>
+
+> 返回 [FTPFile](/docs/library/objects/FTPFile) 类型的对象列表。

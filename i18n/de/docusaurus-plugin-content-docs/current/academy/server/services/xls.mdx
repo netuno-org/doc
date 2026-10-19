@@ -1,0 +1,1002 @@
+---
+id: xls
+title: XLS - Excel
+sidebar_label: XLS - Excel
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Benutzerdefinierte Excel-Dateien verarbeiten.
+
+## Einführung
+
+Netuno erzeugt EXCEL-Dateien, die mit LibreOffice, OpenOffice, Microsoft Office, Google Drive usw. kompatibel sind, über die Funktion [XLS](/docs/library/resources/xls), die eine Low-Code-Abstraktion von [Apache POI](https://poi.apache.org/) für die verschiedenen von Netuno unterstützten Programmiersprachen ermöglicht.
+
+Es können sowohl XLSX-, XLS- als auch ODS-Dateien erzeugt werden.
+
+Die mit Netuno gelieferte Anwendung **demo** (Demo-Anwendung) enthält zahlreiche Beispiele möglicher Codeimplementierungen in verschiedenen Sprachen, einschließlich der Demonstration des Exports von Tabellen über den Dienst `export-excel`, der sich hier befindet:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/export-excel`
+]} />
+
+## Initialisierung
+
+Um die XLS-Funktion zu initialisieren:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.create()
+            `
+        },
+    ]}
+/>
+
+Erstellt das Objekt, das den Kontext der neuen zu erstellenden Datei mit einem leeren Arbeitsblatt enthält.
+
+## Formatierung
+
+Die Definition von visuellen Formatierungsstilen, also Formate für Datumsangaben, Uhrzeiten, Geldbeträge und weitere, muss vor der Definition der Zellwerte erfolgen, denn beim Festlegen der Zellwerte kann der jeweilige Formatierungsstil zugeordnet werden.
+
+Daher werden die Formatierungen, wie im Beispiel der Anwendung `demo` gezeigt, gleich zu Beginn des Codes definiert.
+
+Zum Formatieren von Datumsangaben:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilDatum = excel.cellStyleFormat("dd/mm/yy")
+            `
+        },
+    ]}
+/>
+
+Zum Formatieren von Uhrzeiten:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilUhrzeit = excel.cellStyleFormat("hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+Zum Formatieren von Datumsangaben mit Uhrzeiten:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilDatumUhrzeit = excel.cellStyleFormat("dd/mm/yyyy hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+Zum Formatieren von Geldbeträgen in **Euro**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilGeldEuro = excel.cellStyleFormat("€#,##0.00;\\-€#,##0.00")
+            `
+        },
+    ]}
+/>
+
+Zum Formatieren von Geldbeträgen in **brasilianischen Real**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilGeldReal = excel.cellStyleFormat("R$#,##0.00;\\-R$#,##0.00")
+            `
+        },
+    ]}
+/>
+
+Zum Formatieren von Werten in **Prozent**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilProzent = excel.cellStyleFormat("0.00%")
+            `
+        },
+    ]}
+/>
+
+## Darstellung
+
+Die Definition von visuellen Darstellungsstilen, also das Aussehen von Zellen wie Farben, Schriftart, Rahmen, Ausrichtung und weitere, muss vor der Definition der Zellwerte erfolgen, denn beim Festlegen der Zellwerte kann der jeweilige Darstellungsstil zugeordnet werden.
+
+Daher werden die Darstellungen, wie im Beispiel der Anwendung `demo` gezeigt, gleich zu Beginn des Codes definiert.
+
+Beispiel für die Definition von Farben und Ausrichtung:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilKopf = excel.cellStyle()
+                stilKopf.setFillPattern(_xls.fillPattern("solid-foreground"))
+                stilKopf.setFillBackgroundColor(excel.color("black"))
+                stilKopf.setAlignment(_xls.horizontalAlignment("center"))
+            `
+        },
+    ]}
+/>
+
+> Dokumentation mit allen Methoden des Objekts <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Stile in Apache POI</a>.
+
+Definition des Rahmenstils:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stilDaten = excel.cellStyle()
+                stilDaten.setBorderBottom(_xls.borderStyle("thin"))
+                stilDaten.setBorderTop(_xls.borderStyle("thin"))
+                stilDaten.setBorderLeft(_xls.borderStyle("thin"))
+                stilDaten.setBorderRight(_xls.borderStyle("thin"))
+            `
+        },
+    ]}
+/>
+
+> Dokumentation mit allen Methoden des Objekts <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Stile in Apache POI</a>.
+
+Erstellt einen neuen Schriftstil für den Text und ordnet die Schriftdefinitionen einem bereits vorhandenen Zellstil zu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const schriftTitel = excel.font()
+                schriftTitel.setBold(true)
+                schriftTitel.setFontHeightInPoints(14)
+                schriftTitel.setColor(excel.color("yellow"))
+                // Definiert die Schriftart von stilKopf
+                stilKopf.setFont(schriftTitel)
+            `
+        },
+    ]}
+/>
+
+> Dokumentation mit allen Methoden des Objekts <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFFont.html" target="_blank">Schriftart in Apache POI</a>.
+
+## Bild
+
+Um ein Bild in die Tabelle einzufügen, das sich unter `storage/samples/export-excel/logo.png` innerhalb der Anwendung befindet:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _storage.filesystem("server", "samples/export-excel", "logo.png"),
+                    1, // Spaltennummer
+                    1  // Zeilennummer
+                ).resize(2.3)
+            `
+        },
+    ]}
+/>
+
+Um ein Bild einzufügen, das sich in der Anwendung unter `public/images/logo.png` befindet:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _app.file("public/images/logo.png"),
+                    10, // Spaltennummer
+                    1  // Zeilennummer
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+> Dokumentation mit allen Methoden des Objekts <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/ss/usermodel/Picture.html" target="_blank">Bild in Apache POI</a>.
+
+## Zellen zusammenführen
+
+Um Zellen in einem Bereich zusammenzuführen, verwenden wir die Methode `mergedRegion`.
+
+Die Reihenfolge der Parameter ist:
+
+1. Startzeile
+2. Startspalte
+3. Endzeile
+4. Endspalte
+
+> Die numerischen Positionsreferenzen beginnen immer bei **null**.
+
+In diesem Beispiel unten werden alle Zellen von Spalte 10 bis Spalte 15 in Zeile 3 zusammengeführt:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.mergedRegion(2, 9, 2, 14)
+            `
+        },
+    ]}
+/>
+
+## Zellen
+
+Um das Objekt zu erhalten, das eine Zelle repräsentiert:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Ruft die Zelle in Spalte B und Zeile 2 ab:
+                const zelle = excel.cell(1, 1)
+            `
+        },
+    ]}
+/>
+
+> Die numerischen Positionsreferenzen beginnen immer bei **null**.
+
+Beispiel, wie die Formel der Zelle im Log ausgegeben wird:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Gibt die Formel von Zeile 2 und Spalte B im Log aus.
+                _log.info(
+                    "Zellformel B2: "+ excel.cell(1, 1).getCellFormula()
+                )
+            `
+        },
+    ]}
+/>
+
+Beispiel, wie der Textwert einer Zelle abgerufen wird:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Gibt den Textwert der Zelle in Zeile 2 und Spalte B im Log aus.
+                _log.info(
+                    "Zellwert B2: "+ excel.cell(1, 1).getStringCellValue()
+                )
+            `
+        },
+    ]}
+/>
+
+> Dokumentation mit allen Methoden des Objekts <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCell.html" target="_blank">Zelle in Apache POI</a>.
+
+## Zeilen
+
+Um das Objekt zu erhalten, das eine Zeile repräsentiert:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Ruft das Objekt ab, das Zeile 2 repräsentiert.
+                const zeile = excel.row(1)
+            `
+        },
+    ]}
+/>
+
+> Die numerischen Positionsreferenzen beginnen immer bei **null**.
+
+Im obigen Beispiel wird, falls die Zeile nicht existiert, automatisch eine neue Zeile erstellt.
+
+> Dokumentation mit allen Methoden des Objekts <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFRow.html" target="_blank">Zeile in Apache POI</a>.
+
+## Tabellarische Daten einfügen
+
+Wir können eine Datentabelle mit der Methode `addDataTable` einfügen.
+
+Da die ersten beiden Parameter die Position definieren, an der die Datentabelle eingefügt werden soll, sind sie die Zeilen- und Spaltennummern.
+
+> Beachten Sie, dass die Positionierung im Code von Zeilen und Spalten immer bei **null** beginnt.
+>
+> Das heißt, Zeile 1 ist Position `0` und Spalte A ist ebenfalls Position `0`.
+
+Als Nächstes übergeben wir eine Liste von Zeilen, wobei jede Zeile eine weitere Liste für die Spalten enthält, und erst dann fügen wir eine Map mit dem Wert der Zelle hinzu.
+
+Vollständiges Beispiel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list() // Zeilen
+                        .add(
+                            _val.list() // Spalte
+                                .add(
+                                    _val.map() // Zelle
+                                        .set("value", "Name")
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "Alter")
+                                )
+                        )
+                        .add( // Weitere Zeile
+                            _val.list()
+                                .add( // Erste Spalte
+                                    _val.map()
+                                        .set("value", "Maria")
+                                )
+                                .add( // Zweite Spalte
+                                    _val.map()
+                                        .set("value", 26)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Darstellung
+
+In der Map der Zellen können wir die bereits erstellten Stile zuordnen, indem wir beispielsweise die im Abschnitt Darstellung und Formatierung zuvor definierten Stile verwenden.
+
+Im Folgenden ein Beispiel, wie die Stile den Zellen zugeordnet werden:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map()
+                                        .set("value", "Name")
+                                        .set("style", stilKopf)
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "Alter")
+                                        .set("style", stilKopf)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Formeln
+
+Zum Einfügen von Formeln verwenden wir den Schlüssel `formula` in der Map der Zelldefinitionen.
+
+In diesem Beispiel wird in der letzten Zelle die Summe aller Werte der anderen Zellen berechnet:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Gesamt")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+Um den Buchstaben der Spalte aus der Spaltennummer zu erhalten, kann die Methode `columnReference` verwendet werden, was bei der Definition der Formeln helfen kann. Dieselbe Methode kann auch verwendet werden, um die Spaltennummer aus dem Referenzbuchstaben zu erhalten, zum Beispiel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, _xls.columnReference('B'),
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Gesamt")
+                                )
+                                .add(
+                                    _val.map().set(
+                                        "formula",
+                                        "SUM("+ _xls.columnReference(1) +"7:"+ _xls.columnReference(2) +"8)"
+                                )
+                            )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+## Arbeitsblätter
+
+Um ein neues Arbeitsblatt (_sheet_) innerhalb des Dokuments selbst zu erstellen, beachten Sie folgendes Beispiel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const neuesArbeitsblatt = excel.createSheet("Neues Arbeitsblatt")
+            `
+        },
+    ]}
+/>
+
+> In den Methoden zur Manipulation von Zellen, Bildern und Daten kann im ersten Parameter die Referenz des Arbeitsblattobjekts hinzugefügt werden.
+>
+> Je nachdem, welches Arbeitsblatt aktiv ist, ist es möglich, das aktive Arbeitsblatt mit der Methode [activeSheet](/docs/library/resources/xls#activesheet) zu ändern.
+
+Beispiel, wie ein Bild in das neue Arbeitsblatt eingefügt wird:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    neuesArbeitsblatt,
+                    _app.file("public/images/logo.png"),
+                    10, // Spaltennummer
+                    1  // Zeilennummer
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+Beispiel, wie eine Datentabelle in das neue Arbeitsblatt eingefügt wird:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    neuesArbeitsblatt,
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Gesamt")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Aktivieren
+
+Um zu vermeiden, dass in den Methoden ständig angegeben werden muss, welches Arbeitsblatt verarbeitet werden soll, wie in den obigen Beispielen, kann alternativ angegeben werden, welches Arbeitsblatt aktiv ist.
+
+> Alle Methoden zur Manipulation von Zellen, Bildern und Daten verwenden das aktivierte Arbeitsblatt, wenn **kein** bestimmtes Arbeitsblatt angegeben wird.
+
+Sehen Sie zwei Möglichkeiten, ein bestimmtes Arbeitsblatt zu aktivieren, zuerst mit der Objektreferenz und dann mit dem Index des Arbeitsblatts:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.activeSheet(meinArbeitsblatt) // Objektreferenz des Arbeitsblatts.
+                excel.activeSheet(1) // Index des Arbeitsblatts, das aktiviert werden soll.
+            `
+        },
+    ]}
+/>
+
+### Nützliche Ressourcen
+
+Beispiele für weitere nützliche Methoden bei der Manipulation von Arbeitsblättern.
+
+Ein Arbeitsblatt anhand des Namens abrufen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Ruft das Arbeitsblatt anhand seines Namens ab.
+                const meinArbeitsblatt = excel.getSheet("Name des Arbeitsblatts")
+            `
+        },
+    ]}
+/>
+
+Ein Arbeitsblatt anhand seines Index abrufen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Ruft das Arbeitsblatt anhand seiner Nummer ab.
+                const meinArbeitsblatt = excel.getSheet(1)
+            `
+        },
+    ]}
+/>
+
+Um die Gesamtzahl der Arbeitsblätter zu erhalten:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Gesamtzahl der Arbeitsblätter.
+                const anzahlArbeitsblaetter = excel.getNumberOfSheets()
+            `
+        },
+    ]}
+/>
+
+Um alle im Dokument vorhandenen Arbeitsblätter aufzulisten.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Listet alle Arbeitsblätter auf.
+                const alleArbeitsblaetter = excel.getAllSheets()
+                for (const sheet of alleArbeitsblaetter) {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                # Listet alle Arbeitsblätter auf.
+                alleArbeitsblaetter = excel.getAllSheets()
+                for sheet in alleArbeitsblaetter:
+                    ...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                # Listet alle Arbeitsblätter auf.
+                alleArbeitsblaetter = excel.getAllSheets()
+                alleArbeitsblaetter.each do |sheet|
+                    ...
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                // Listet alle Arbeitsblätter auf.
+                val alleArbeitsblaetter = excel.getAllSheets()
+                alleArbeitsblaetter.forEach {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                // Listet alle Arbeitsblätter auf.
+                def alleArbeitsblaetter = excel.getAllSheets()
+                for (sheet in alleArbeitsblaetter) {
+                    ...
+                }
+            `
+        },
+    ]}
+/>
+
+> Dokumentation mit allen Methoden des Objekts <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFSheet.html" target="_blank">Arbeitsblatt in Apache POI</a>.
+
+## Datei erzeugen
+
+In den Methoden `save` und `output` wird die Binärdatei der endgültigen Datei erzeugt.
+
+Sendet die erzeugte Datei als Datenausgabe (`output`) des Dienstes:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.output("datei.xlsx")
+            `
+        },
+    ]}
+/>
+
+Um die erzeugte Datei im Ordner `storage/filesystem` der Anwendung zu speichern:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_storage.filesystem("server", "datei.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Um die erzeugte Datei im Ordner `/tmp` aus dem Dateisystem der Festplatte zu speichern:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_os.file("/tmp/datei.xlsx"))
+            `
+        },
+    ]}
+/>
+
+## Datei bearbeiten
+
+Wir können Dateien bearbeiten, indem wir sie öffnen, die erforderlichen Änderungen vornehmen und anschließend die neue bearbeitete Datei speichern.
+
+Nachfolgend einige Beispiele, wie Dateien geöffnet werden können.
+
+Eine Datei im Stammverzeichnis der Anwendung öffnen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_app.file("datei.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Um die im Ordner `storage/filesystem` der Anwendung erzeugte Datei zu öffnen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_storage.filesystem("server", "datei.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Und außerdem, um die Datei im Ordner `/tmp` aus dem Dateisystem der Festplatte zu öffnen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_os.file("/tmp/datei.xlsx"))
+            `
+        },
+    ]}
+/>
+
+In den obigen Beispielen enthält die Konstante `excel` das Bearbeitungsobjekt mit dem Kontext der jeweiligen Datei, sodass jede Art von Manipulation möglich ist.
+
+Wenn Sie die Änderungen abgeschlossen haben, erzeugen Sie die neue Datei.
+
+> Es ist nicht möglich, dieselbe geöffnete Datei direkt zu ändern; es ist erforderlich, eine neue Datei mit einem anderen Pfad zu erzeugen.
+
+Um dieselbe Datei direkt zu ändern, kann dies mit dem `inputStream` erfolgen.
+
+Nachfolgend ein Beispiel, wie der Wert einer Zelle geändert wird:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dateiEingabe = _app.file("datei.xlsx").inputStream()
+                const excel = _xls.open(dateiEingabe)
+
+                excel.setCellData(
+                    10, 1,
+                    _val.map()
+                        .set(
+                            "value",
+                            excel.getCellData(10, 1).getInt("value") + 10
+                        )
+                )
+
+                dateiEingabe.close() // Schließt die geöffnete Datei.
+                excel.save(_app.file("datei.xlsx")) // Speichert die neue Version.
+                `
+        },
+    ]}
+/>
+
+## Datei lesen
+
+Die Extraktion von Daten aus Excel-Dateien erfolgt mit der Methode `read`.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const daten = _xls.read(_app.file("datei.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Die Daten werden in einer Struktur von Objekten vom Typ Values mit Listen für Arbeitsblätter, Zeilen und Spalten sowie Maps (Schlüssel und Wert) für die Zellen abgerufen.
+
+Um alle Daten anzuzeigen, können wir sie als Datenausgabe des Dienstes ausgeben:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.json(daten)
+            `
+        },
+    ]}
+/>
+
+Um die Interaktion durchzuführen, müssen wir bedenken, dass die Datenstruktur in folgender Reihenfolge organisiert ist:
+
+1. `sheets` - Arbeitsblätter
+2. `rows` - Zeilen
+3. `columns` - Spalten
+
+Beispiel einer vollständigen Interaktion:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const arbeitsblatt of daten.getValues("sheets")) {
+                    _out.println(\`<h4>Arbeitsblatt: \${arbeitsblatt.getInt("index")} - \${arbeitsblatt.getString("name")}</h4>\`)
+                    for (const zeile of arbeitsblatt.getValues("rows")) {
+                        _out.println(\`<h4>Zeile: \${zeile.getInt("row")}</h4>\`)
+                        _out.println("<p>")
+                        for (const spalte of zeile.getValues("columns")) {
+                            _out.print(\`\${spalte.getInt("row")}:\${spalte.getInt("column")}\`)
+                            _out.print(\` # \${spalte.getString("address")}\`)
+                            _out.print(\` # \${spalte.getString("type")}\`)
+                            _out.print(\` # \${spalte.getString("value")}\`)
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for arbeitsblatt in daten.getValues("sheets"):
+                    _out.println(f"<h4>Arbeitsblatt: {arbeitsblatt.getInt('index')} - {arbeitsblatt.getString('name')}</h4>")
+                    for zeile in arbeitsblatt.getValues("rows"):
+                        _out.println(f"<h4>Zeile: {zeile.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for spalte in zeile.getValues("columns"):
+                            _out.print(f"{spalte.getInt('row')}:{spalte.getInt('column')}")
+                            _out.print(f" # {spalte.getString('address')}")
+                            _out.print(f" # {spalte.getString('type')}")
+                            _out.print(f" # {spalte.getString('value')}")
+                            _out.println("<br>")
+                        _out.println("</p>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                daten.getValues("sheets").each do |arbeitsblatt|
+                    _out.println("<h4>Arbeitsblatt: #{arbeitsblatt.getInt("index")} - #{arbeitsblatt.getString("name")}</h4>")
+                    arbeitsblatt.getValues("rows").each do |zeile|
+                        _out.println("<h4>Zeile: #{zeile.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        zeile.getValues("columns").each do |spalte|
+                            _out.print("#{spalte.getInt("row")}:#{spalte.getInt("column")}")
+                            _out.print(" # #{spalte.getString("address")}")
+                            _out.print(" # #{spalte.getString("type")}")
+                            _out.print(" # #{spalte.getString("value")}")
+                            _out.println("<br>")
+                        end
+                        _out.println("</p>")
+                    end
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                daten.getValues("sheets").forEach {
+                    val arbeitsblatt = it
+                    _out.println("<h4>Arbeitsblatt: \${arbeitsblatt.getInt("index")} - \${arbeitsblatt.getString("name")}</h4>")
+                    arbeitsblatt.getValues("rows").forEach {
+                        val zeile = it
+                        _out.println("<h4>Zeile: \${zeile.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        zeile.getValues("columns").forEach {
+                            val spalte = it
+                            _out.print("\${spalte.getInt("row")}:\${spalte.getInt("column")}")
+                            _out.print(" # \${spalte.getString("address")}")
+                            _out.print(" # \${spalte.getString("type")}")
+                            _out.print(" # \${spalte.getString("value")}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (arbeitsblatt in daten.getValues("sheets")) {
+                    _out.println("<h4>Arbeitsblatt: \${arbeitsblatt.getInt('index')} - \${arbeitsblatt.getString('name')}</h4>")
+                    for (zeile in arbeitsblatt.getValues("rows")) {
+                        _out.println("<h4>Zeile: \${zeile.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for (spalte in zeile.getValues("columns")) {
+                            _out.print("\${spalte.getInt('row')}:\${spalte.getInt('column')}")
+                            _out.print(" # \${spalte.getString('address')}")
+                            _out.print(" # \${spalte.getString('type')}")
+                            _out.print(" # \${spalte.getString('value')}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+    ]}
+/>
+
+Der Zelltyp wird über folgenden Code abgerufen:
+
+- `spalte.getString("type")`
+
+Und die unterstützten Typen sind:
+
+- `string` - Textinhalt.
+- `numeric` - Numerischer Inhalt oder Datum und/oder Uhrzeit.
+- `boolean` - Wahr oder falsch.
+- `blank` - Leere Zelle.
+- `formula` - Zelle, die eine Formel enthält.
+- `error` - Fehler bei der Verarbeitung der Zelle.
+
+### Zusätzliche Parameter
+
+Für jeden Zelltyp gibt es einige zusätzliche Parameter.
+
+`string` - Zelltyp mit textlichem Inhalt.
+
+- `value` - Text der Zelle.
+- `richValue` - Formatierungen der Zelle.
+
+`numeric` - Zelltyp mit numerischem Inhalt oder Datumsangaben und außerdem Uhrzeiten.
+
+- `value` - Wert des numerischen Inhalts der Zelle.
+  
+Im Fall von Datumsangaben und Uhrzeiten gibt es diese zusätzlichen Parameter:
+
+- `localDateTime` - Objekt vom Typ Java Time LocalDateTime, das den Datums- und Uhrzeitwert der Zelle repräsentiert.
+- `localDate` - Objekt vom Typ Java Time LocalDate, das den Datumswert der Zelle repräsentiert.
+- `localTime` - Objekt vom Typ Java Time LocalTime, das den Uhrzeitwert der Zelle repräsentiert.
+- `instant` - Objekt vom Typ Java Time Instant, das den Datums- und/oder Uhrzeitwert der Zelle repräsentiert.
+- `date` - Date-Objekt von Java, das den Datums- und/oder Uhrzeitwert der Zelle repräsentiert.
+
+`boolean` - Zelltyp mit booleschem Inhalt, also wahr oder falsch.
+
+- `value` - Wert vom Typ _boolean_, `true` oder `false`.
+
+`blank` - Zelltyp ohne Inhalt, enthält daher keine zusätzlichen Parameter.
+
+`formula` - Zelltyp, der Berechnungsformeln enthält.
+
+- `value` - Endgültiger Wert, der sich aus der Berechnung ergibt.
+- `formula` - Enthält den Ausdruck der für die Berechnung verwendeten Formel.
+
+`error` - Zelltyp, der einen Fehler enthält.
+
+- `value` - Byte-Wert des erzeugten Fehlers.
+- `code` - Falls Fehler bei der Formelberechnung auftreten, wird hier der Code des aufgetretenen Fehlers angegeben.
+
+## Videos
+
+Nachfolgend einige Beispielvideos zur programmatischen Erzeugung von Excel-/XLSX-Dateien:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/nTnoqEpLghQ?si=8engICqRqNFUPi_i" title="YouTube-Videoplayer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

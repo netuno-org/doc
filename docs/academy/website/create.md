@@ -1,67 +1,64 @@
 ---
+sidebar_position: 2
 id: create
-title: React Create
-sidebar_label: React Create
+title: Create with React
+sidebar_label: Create with React
 ---
 
-This creation process can be applied in other contexts, for example to create any type of React project; in this case, make the necessary name adaptations and specify the folder where the commands are executed.
+This creation process can be applied in other contexts, for example to create any type of React project; in this case, make the necessary adjustments to the name and the folder where the commands are executed.
 
 The basic understanding is that the web layer will be created, that is, the frontend of our Netuno application.
 
-Therefore, it is assumed that a `website` will be created within the Netuno application, the default name for the frontend layer, but it can be any other desired name.
+Therefore, it is assumed that `website` will be created inside the Netuno application, the default name for the frontend layer, but it can be any other desired name.
 
 ## Prerequisites
 
-Netuno must be installed:
+You must have Netuno installed:
 
 - [Netuno Installation.](/docs/get-started/installation)
 
-Due to better performance and other advantages, Bun must be installed:
+Due to better performance, among other advantages, Bun should be installed:
 
 - [Install Bun.](/docs/academy/website/bun)
 
 ## Creation
 
-To create a React application within a Netuno application, we usually call it a `website`.
+To create a React application inside a Netuno application, we usually call it `website`.
 
-Then, with the **terminal** inside the **root of your Netuno application**, which is usually located in the folder:
+So, with the **terminal** inside the **root of your Netuno application**, which is usually located inside the folder:
 
 - `netuno/apps/MY_APP`
 
 > Where `MY_APP` is the name of the Netuno application.
 
-Execute the command:
+Run the command:
 
 ```shell
 bun create vite
 ```
 
-When asked: `Ok to proceed? (y)`
+Then, at the question: `Project name:`
 
-Type `y` and press the [ENTER] key.
+Type `website` and press the `ENTER` key.
 
-Next, with the question: `Project name: ›`
+Next comes the question: `Select a framework:`
 
-Type `website` and press the [ENTER] key.
+Use the keyboard arrows and press the down arrow key until the `React` option is selected, then press the `ENTER` key.
 
-Next, comes the question: `Select a framework:`
+Finally, the following question: `Select a variant:`
 
-Use the arrow keys on your keyboard, and press the down key until you select the `React` option and press the [ENTER] key.
+Use the keyboard arrows and press the down arrow key until the `JavaScript` option is selected, then press the `ENTER` key.
 
-To finish, the following question: `Select a variant:`
+This command will create a new directory named `📂 website` containing the React frontend.
 
-Use the arrow keys on your keyboard, and press the down key until you select the `JavaScript` option and press the [ENTER] key.
-
-This command will create a new directory called `📂 website` where the React application will be contained.
-
-After creating the React application, run the following command to install the dependencies:
+After creating the React frontend, run the following to install the dependencies:
 
 ```shell
 cd website
 bun install
 ```
 
-Open your Netuno application folder in your preferred editor (such as VSCode, WebStorm, etc.), and enter the `website` folder that was created.
+Open your Netuno application folder in your preferred editor (such as VSCode, WebStorm, among others), and enter the `website` folder that was created.
 
 ## Run
 
@@ -71,25 +68,25 @@ Now you can start the React frontend server using the command:
 bun run dev
 ```
 
-This will make the frontend available at the address [http://localhost:5173/](http://localhost:5173/), normally or 
-another address with a different port number may appear in the terminal, in any case just open the address shown 
-in the terminal in your browser.
+This will make the frontend available at [http://localhost:5173/](http://localhost:5173/); usually, another address with a different port number may appear in the terminal. In any case, just open the address shown in the terminal in your browser.
 
-> To end the React application at any time, in the terminal, simply press `CTRL+C` simultaneously.
+> To stop execution in the terminal, press the `CTRL` and `C` keys simultaneously.
 
 ## Installing Dependencies
 
-We strongly recommend that you install the following NPM packages, as they are very useful for developing React applications with Netuno (click on each link to get more information about each one):
+If you are running the frontend server in the terminal, that is, `bun run dev`, it is recommended to stop it by pressing the `CTRL` and `C` keys simultaneously.
 
-* [react-router](https://www.npmjs.com/package/react-router-dom)
+We strongly recommend installing the following NPM packages, as they are very useful for developing React applications with Netuno (click each link for more information about each one):
+
+* [react-router](https://www.npmjs.com/package/react-router)
 * [antd](https://www.npmjs.com/package/antd)
 * [@ant-design/icons](https://www.npmjs.com/package/@ant-design/icons)
 * [less](https://www.npmjs.com/package/less)
 * [@netuno/service-client](https://www.npmjs.com/package/@netuno/service-client)
 
-To install the packages listed above, simply run the following set of commands in the terminal:
+To install the packages listed above, just run the following set of commands in the terminal:
 
-```
+```shell
 bun add react-router
 bun add antd
 bun add @ant-design/icons
@@ -99,63 +96,63 @@ bun add @netuno/service-client
 
 Alternatively, you can also install all packages at once:
 
-```
+```shell
 bun add react-router antd @ant-design/icons less @netuno/service-client
 ```
 
 ## Configurations
 
-After running the commands above, you can force a default port address, go to `📂 website/vite.config.js` and add the `server` configuration as follows:
+After running the commands above, you can force a default port address; go to `📂 website/vite.config.js` and add the `server` configuration as follows:
 
 ```javascript title="website/vite.config.js"
 export default defineConfig({
-    server: {
-        port: 3000,
-        strictPort: true
-    },
-    plugins: [
-        react()
-    ]
+  server: {
+    port: 3000,
+    strictPort: true
+  },
+  plugins: [
+    react()
+  ]
 })
 ```
 
-Now when starting with the command `bun run dev` it will always use the port `3000`.
+Now, when starting with the `bun run dev` command, it will always use port `3000`.
 
 ### Less
 
-Change all `.css` files that are in `website/src` to the `.less` extension.
+Change all `.css` files in `website/src` to the `.less` extension.
 
-> Don't forget to make this change in the JSX code in the lines that `import` the `.css` files, change to `.less`.
+> Do not forget to make this change in the JSX code on the lines that `import` the `.css` files, changing them to `.less`.
 
-LESS allows for a more structured and modern CSS development.
+LESS allows more structured and modern CSS development.
 
-### Customizing the Ant.Design Theme
+### Ant.Design Theme Customization
 
-To customize the colors of Ant.Design use the `ConfigProvider` component in `App.jsx`.
+To customize Ant.Design colors, use the `ConfigProvider` component in `App.jsx`.
 
 For example:
 
-```jsx
+```jsx title="website/src/App.jsx"
 import { ConfigProvider, Button } from 'antd';
 ...
 function App() {
     ...
     return (
         <ConfigProvider theme={{ token: { colorPrimary: '#00b96b' } }}>
-        ...
+            ...
             <Button type="primary">My Button with Custom Color</Button>
-        ...
+            ...
         </ConfigProvider>
     );
 }
 ...
 ```
 
-This way you can adjust any Ant.Design styling configuration.
+This way, you can adjust any Ant.Design styling configuration.
 
 ### Dark Theme
 
-It is also possible to use the dark theme of Ant.Design, to do this simply import the `theme` that contains the dark mode and apply it to the `ConfigProvider`:
+You can also use the Ant.Design dark theme; for this, just import `theme`, which contains dark mode, and apply it to `ConfigProvider`:
 
 ```jsx
 import { ConfigProvider, Button, theme } from 'antd';
@@ -175,11 +172,11 @@ import { ConfigProvider, Button, theme } from 'antd';
 
 ### Restyle
 
-Note that in the `ConfigProvider` parameterizations above, it is possible to easily change the Ant.Design style, more about Ant.Design customization:
+Note that in the `ConfigProvider` settings above, you can easily change the Ant.Design style; more about Ant.Design customization:
 
 - [Customize Theme](https://ant.design/docs/react/customize-theme)
 
-In each Ant.Design component there are possible Design Token configurations, for example in Buttons:
+Each Ant.Design component has possible Design Token settings, for example in Buttons:
 
 - [Button - Design Token](https://ant.design/components/button#design-token)
 
@@ -204,11 +201,11 @@ In each Ant.Design component there are possible Design Token configurations, for
 </ConfigProvider>
 ```
 
-## Automatically start your React application with Netuno
+## Automatic Frontend Startup with Netuno
 
-Netuno allows you to start your React application together with the Netuno application server process.
+Netuno allows you to start the React application together with the Netuno application server process.
 
-> All the React application compilation messages will be integrated into the same terminal as the Netuno application.
+> All compilation messages from the React application will be integrated into the same terminal as the Netuno application.
 
 To do this, simply add the following to the Netuno application's `commands` configuration in `📂 config/_development.json`:
 
@@ -228,25 +225,23 @@ To do this, simply add the following to the Netuno application's `commands` conf
 }
 ```
 
-> Whenever you edit the Netuno application's configuration files, you must restart the server so that
-> the new changes can be applied.
+> Whenever you edit Netuno application configuration files, you must restart the server so that it can apply the new changes.
 
-Finally, start/restart the server with your Netuno application to verify its functionality.
+Finally, start/restart the server with your Netuno application to verify that it works.
 
-And now everything will be integrated into a single centralized terminal, thus avoiding having multiple scattered
-terminals.
-
-More information:
+And now everything will be integrated into a single centralized terminal, thus avoiding having several scattered terminals; more about:
 
 - [Centralized Terminal](/docs/academy/explore/centralized-terminal)
 
 ## CORS (Cross-Origin Resource Sharing) Configuration
 
-To configure CORS to avoid possible errors between the React application and the Netuno application communicating through services, go to:
+To configure CORS and avoid possible errors in communication between the frontend and Netuno application services, edit the application configuration in:
 
 - `📂 config/_development.json`
 
-Check if the `cors` configuration already exists or add this example:
+Check whether the `cors` configuration already exists, and if there is a `*` in `origins`, then it works well for development and can remain as is.
+
+If there is no `cors` configuration, then add it based on this example, and the address must be the same as the frontend address:
 
 ```json title="config/_development.json"
 {
@@ -261,26 +256,27 @@ Check if the `cors` configuration already exists or add this example:
 }
 ```
 
-> If `origins` contains a `*`, it means that any front-end address will be supported, for example:
+> If `origins` contains a `*`, it means that any frontend address will be supported, for example:
 > - `"origins": [ "*" ]`
+> We usually use `*` in development.
 
-With this configuration implemented, you can create the services you want without encountering CORS errors.
+Once the configuration is implemented, you can integrate the API services you want with the frontend without CORS security issues.
 
 > More about [CORS](/docs/academy/server/services/cors)
 
 ## Environment Variables
 
-You can define the environment variables by creating the `website/.env` file, with the variable definitions, for example:
+You can define environment variable configuration by creating the `website/.env` file with the variable definitions, for example:
 
 ```
 NODE_ENV=development
 ```
 
-Or by configuring the Netuno application, for example in:
+Or through the Netuno application configuration, for example in:
 
 - `📂 config/_development.json`
 
-And defining the environment variables in the command configuration in the `env` parameterization, for example:
+And by defining the environment variables in the command configuration under the `env` parameter, for example:
 
 ```json title="config/_development.json"
 {

@@ -1,0 +1,186 @@
+---
+id: resource 
+title: Polyglot low-code-resource 
+sidebar_label: Resource 
+sidebar_position: 5
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+In deze tutorial maken we een native resource voor Netuno. Dit betekent dat we een Java-klasse maken die in de basismap van Netuno komt te staan en die door elke applicatie in de map `apps` kan worden gebruikt met de syntaxis `_foo.methodName(ars)`.
+
+Het voorbeeld dat we maken, in navolging van de vorige tutorials, is de resource `_berekening`, een voorbeeldresource om eenvoudige rekenkundige bewerkingen uit te voeren.
+
+Om te beginnen moet eerst de mapstructuur van het project worden aangemaakt. In dit voorbeeld gaan we ervan uit dat het project wordt aangemaakt in een map met de naam `Berekening`. Dan moet je de mapstructuur aanmaken die de packagenaam weerspiegelt (in ons voorbeeld `org.netuno.addon.berekening`). Onze mapstructuur wordt dus:
+
+- `Berekening/src/main/java/org/netuno/addon/berekening/resource/`
+
+Binnen deze structuur maken we een Java-klasse met de naam `BerekeningResource`, die onze aangepaste native resource definieert.
+
+- ` Berekening/src/main/java/org/netuno/addon/berekening/resource/BerekeningResource.java`
+
+De package die in de klasse wordt gedefinieerd, is dan:
+
+```java
+package org.netuno.addon.berekening.resource;
+```
+
+Om ervoor te zorgen dat de klasse een aangepaste native resource definieert, moet deze klasse geannoteerd worden met de annotatie `org.netuno.tritao.ResourceBase`. De parameter `name` is de naam van de resource, die kan worden benaderd met een underscore (`_`) vóór de naam (in ons geval `_berekening`). De eenvoudigste manier om de resource te maken is door de klasse `org.netuno.tritao.resource.ResourceBase` uit te breiden:
+
+```java
+package org.netuno.addon.berekening.resource;
+
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "berekening")
+public class BerekeningResource extends ResourceBase {
+    // ...
+}
+```
+
+Door de klasse `ResourceBase` uit te breiden, hoeven we de resource niet te initialiseren; we hoeven alleen `super` met de juiste argumenten aan te roepen:
+
+```java
+package org.netuno.addon.berekening.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "berekening")
+public class BerekeningResource extends ResourceBase {
+    // ...
+    public BerekeningResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+}
+```
+
+De functie `init` is verplicht, en daarin initialiseren we de resource door de constructor van onze klasse aan te roepen met de getters van de bovenliggende klasse:
+
+```java
+package org.netuno.addon.berekening.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "berekening")
+public class BerekeningResource extends ResourceBase {
+    // ...
+    public BerekeningResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public BerekeningResource init() {
+        return new BerekeningResource(getProteu(), getHili());
+    }
+}
+```
+
+Daarna definiëren we onze eigen velden en functies:
+
+```java
+package org.netuno.addon.berekening.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "berekening")
+public class BerekeningResource extends ResourceBase {
+    public double waarde = 0;
+
+    public BerekeningResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public BerekeningResource init() {
+        return new BerekeningResource(getProteu(), getHili());
+    }
+
+    public BerekeningResource instellen(double v) {
+        waarde = v;
+        return this;
+    }
+
+    public BerekeningResource optellen(double v) {
+        waarde += v;
+        return this;
+    }
+
+    public BerekeningResource aftrekken(double v) {
+        waarde -= v;
+        return this;
+    }
+
+    public double ophalen() {
+        return waarde;
+    }
+}
+```
+
+Nu hoef je alleen nog de klasse te compileren en ervoor te zorgen dat het bestand `BerekeningResource.class` in de map staat:
+
+- `netuno/core/web/WEB-INF/classes/org/netuno/addon/berekening/resource/`
+
+Of een JAR-bestand te maken en ervoor te zorgen dat het in de map staat:
+
+- `netuno/lib/`
+
+Laten we een testapplicatie maken om deze resource te gebruiken:
+
+```bash
+./netuno app name=berekening
+```
+
+We maken in deze applicatie ook een service om de resource te gebruiken.
+In het voorbeeld maken we het bestand `netuno/apps/berekening/server/services/berekening-test.js`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _berekening.instellen(10);
+
+                _berekening.optellen(120);
+
+                _out.println(_berekening.ophalen());
+            `
+        },
+    ]}
+/>
+
+Laten we onze applicatie starten:
+
+```bash
+./netuno server app=berekening
+```
+
+En nu, wanneer we een aanroep naar deze service doen:
+
+- `http://localhost:9000/services/berekening-test`
+
+Dan retourneert deze de waarde `130`.
+
+Om een resource in Java-code te gebruiken, bieden sommige klassen zoals `org.netuno.tritao.Web`
+en `org.netuno.tritao.event.EventBase` de functie `resource`, die deze resource initialiseert.
+In de klasse waarin je de resource `berekening` wilt gebruiken, doe je:
+
+```java
+import org.netuno.addon.berekening.resource.BerekeningResource;
+
+// ...
+    BerekeningResource berekening = resource(BerekeningResource.class);
+    berekening.instellen(10);
+    berekening.optellen(120);
+    System.out.println(berekening.ophalen());
+// ...
+```
+
+Je kunt de volledige bestanden van het project bekijken via deze [link](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/resource).

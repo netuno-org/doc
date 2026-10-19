@@ -1,0 +1,248 @@
+---
+sidebar_position: 2
+id: advanced
+title: Geavanceerde Installatie
+sidebar_label: Geavanceerde Installatie
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Geavanceerde Installatie
+
+Als er een probleem is met de snelle installatie via script, of als je een beter begrip wilt krijgen van hoe de installatie van Netuno werkt, of om welke andere reden dan ook, kun je de handmatige installatie uitvoeren.
+
+Kies de gewenste versie. De selectie die hier wordt gemaakt, is van toepassing op alle opdrachtblokken op deze pagina.
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Stabiele Versie" default>
+
+De **Stabiele Versie** is de goedgekeurde editie van Netuno. Deze is aan strenge tests onderworpen en is volledig klaar voor gebruik in productieomgevingen.
+
+</TabItem>
+  <TabItem value="testing" label="Versie In Test">
+
+:::danger NIET GEBRUIKEN IN PRODUCTIE
+De **Versie in Test** bevat de meest recente functionaliteiten en de implementaties die nog in ontwikkeling zijn. Omdat deze experimenteel is, kan deze instabiliteit vertonen. We raden het gebruik ervan alleen aan om nieuwe functionaliteiten te leren kennen, tests uit te voeren of bij te dragen aan het ecosysteem van het platform.
+:::
+
+  </TabItem>
+</Tabs>
+
+## Vereisten
+
+Controleer voordat je begint wat er op je computer geïnstalleerd moet zijn:
+
+- **Java** *(Alleen voor het installatieprogramma)*
+
+Het is noodzakelijk dat **Java** vooraf op je besturingssysteem is geïnstalleerd. Het wordt **uitsluitend** gebruikt om het initiële installatiescript van Netuno uit te voeren.
+
+- **GraalVM** *(Automatische Installatie)*
+
+Tijdens de installatie wordt de **GraalVM**-engine automatisch gedownload en geconfigureerd binnen de map van Netuno zelf. Vanaf dat moment wordt de geïsoleerde Java van GraalVM gebruikt om het platform uit te voeren, wat stabiliteit en hoge prestaties garandeert zonder de globale configuraties van je machine te beïnvloeden.
+
+Wil je meer weten over de technologie, ga dan naar: [GraalVM](https://www.graalvm.org/).
+
+:::info Frontend-vereisten zijn optioneel
+De installatie van frontend-tools (zoals Node.js, NPM of Yarn) is volledig optioneel. Je hoeft ze alleen te configureren als je doel is om geavanceerde interfaces in full-stackmodus te ontwikkelen.
+:::
+
+### Backend - Java
+
+Deze stap zorgt ervoor dat de omgeving klaar is om het installatieprogramma van het platform uit te voeren. Het is noodzakelijk dat **Java versie 11 of hoger** is geïnstalleerd.
+
+Controleer of Java al is geïnstalleerd door de onderstaande opdracht in de terminal uit te voeren:
+
+```bash
+java -version
+```
+
+Als het niet is geïnstalleerd, raden we de installatie van **open source Java** aan:
+
+- Windows en macOS: [Java OpenJDK Eclipse Temurin](https://adoptium.net/pt-BR)
+
+- Linux (Ubuntu / Debian):
+
+```bash
+apt install default-jdk-headless
+```
+
+### Frontend - Bun
+
+Voor het ontwikkelen van gebruikersinterfaces (UI / Frontend) raden we het gebruik van **Bun** aan, de officiële standaardtool van het Netuno-ecosysteem voor het compileren van frontend.
+
+#### Waarom Bun gebruiken?
+
+**Bun** is een moderne en sterk geoptimaliseerde alternatief voor Node.js. Het onderscheidt zich in de Netuno-omgeving door het bieden van:
+
+- **Hoge Prestaties:** Uitvoering en installatie van afhankelijkheden merkbaar sneller.
+- **Productiviteit:** Betere prestaties in de dagelijkse workflow van interfaceontwikkeling.
+- **Native Integratie:** Alle voorbeeldprojecten en templates van Netuno zijn al vooraf geconfigureerd om met Bun te werken.
+
+Ga naar de handleiding: [Installatie van Bun](/docs/academy/website/bun)
+
+Netuno beperkt je technologische keuzes niet. Als je dat liever hebt, **is het mogelijk om Node.js met NPM, PNPM, Yarn** of een andere pakketbeheerder te gebruiken. De keuze van de frontend-stack ligt volledig bij jou.
+
+:::tip HOUD DE TOOLS ACTUEEL
+Ongeacht de gekozen technologie, gebruik altijd de meest recente versies om compatibiliteit, veiligheid en prestaties te garanderen.
+:::
+
+## Linux of macOS
+
+De meeste Linux-distributies en macOS bevatten standaard al **cURL** of **Wget**. Controleer welke beschikbaar is:
+
+```bash
+curl --version
+```
+```bash
+wget --version
+```
+
+Volg de onderstaande stappen:
+
+**1. Maak de map aan en ga ernaar toe:**
+
+```bash
+mkdir -p netuno && cd netuno
+```
+
+**2. Download het installatieprogramma** (kies slechts één methode):
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Stabiele Versie" default>
+
+**Met cURL:**
+```bash
+curl -L https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -o netuno-setup.jar
+```
+
+**Met Wget:**
+```bash
+wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -O netuno-setup.jar
+```
+
+  </TabItem>
+  <TabItem value="testing" label="Versie In Test">
+
+**Met cURL:**
+```bash
+curl -L https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -o netuno-setup.jar
+```
+
+**Met Wget:**
+```bash
+wget https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -O netuno-setup.jar
+```
+
+  </TabItem>
+</Tabs>
+
+**3. Voer de installatie uit:**
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Stabiele Versie" default>
+
+```bash
+java -jar netuno-setup.jar install
+```
+
+  </TabItem>
+  <TabItem value="testing" label="Versie In Test">
+
+```bash
+java -jar netuno-setup.jar install version=testing
+```
+
+  </TabItem>
+</Tabs>
+
+:::caution LET OP
+macOS heeft een ingebouwd beveiligingsmechanisme (Gatekeeper) dat applicaties die via de terminal zijn gedownload kan blokkeren.
+:::
+
+Voer op **macOS**, om te garanderen dat Netuno zonder permissiefouten werkt, de onderstaande opdracht onmiddellijk na stap 3 uit, nog steeds in de map `netuno`.
+
+```bash
+sudo xattr -r -d com.apple.quarantine .
+```
+
+Het systeem vraagt om het beheerderswachtwoord van je Mac om te bevestigen.
+
+## Windows
+
+We gebruiken **PowerShell** om de download en de installatie uit te voeren. Open PowerShell via het Startmenu door `powershell` te typen.
+
+**1. Maak de map aan, ga ernaar toe en download het installatieprogramma**. Kopieer het volledige blok en druk op Enter:
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Stabiele Versie" default>
+
+```powershell
+md netuno; cd netuno
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar" -OutFile "netuno-setup.jar"
+```
+
+  </TabItem>
+  <TabItem value="testing" label="Versie In Test">
+
+```powershell
+md netuno; cd netuno
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar" -OutFile "netuno-setup.jar"
+```
+
+  </TabItem>
+</Tabs>
+
+**2. Voer de installatie uit:**
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="Stabiele Versie" default>
+
+```powershell
+java -jar netuno-setup.jar install
+```
+
+  </TabItem>
+  <TabItem value="testing" label="Versie In Test">
+
+```powershell
+java -jar netuno-setup.jar install version=testing
+```
+
+  </TabItem>
+</Tabs>
+
+:::caution LET OP
+De standaardinstallatie vereist meestal geen verhoogde privileges. Als je echter een melding "Toegang Geweigerd" krijgt, sluit PowerShell dan, open het opnieuw als **Administrator** en voer de opdracht opnieuw uit.
+:::
+
+## Opnieuw Beginnen van Nul
+
+Om de omgeving op te schonen en opnieuw vanaf nul te beginnen:
+
+**1. Ga één niveau omhoog in de terminal:**
+
+```bash
+cd ..
+```
+
+**2. Verwijder de mislukte map:**
+
+<Tabs groupId="os">
+  <TabItem value="linux-mac" label="Linux of macOS" default>
+
+```bash
+rm -rf netuno
+```
+
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+
+```powershell
+rmdir /s /q netuno
+```
+
+  </TabItem>
+</Tabs>
+
+**3. Start de installatie opnieuw**.

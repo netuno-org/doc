@@ -1,0 +1,254 @@
+---
+sidebar_position: 6
+id: service
+title: Servicio
+description: Aprenda a crear servicios web y API REST en Netuno, integrar datos entre sistemas y proporcionar datos dinámicos al frontend de forma asíncrona.
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Con Netuno es posible crear **_servicios web_** y construir cualquier tipo de **APIs <a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a> complejas** para la integración de datos entre sistemas.
+
+:::info ¿Qué es un servicio web?
+Un servicio web permite que los sistemas intercambien información en línea de forma estandarizada. En Netuno, cada archivo dentro de `server/services/` se convierte automáticamente en un endpoint accesible vía HTTP.
+:::
+
+## ¿Por qué usar servicios web?
+
+El uso de servicios asíncronos aporta beneficios claros para la experiencia del usuario:
+
+- **Carga más rápida:** el servidor entrega la estructura visual de la página de inmediato, sin esperar el procesamiento de todos los datos.
+- **Datos dinámicos bajo demanda:** el frontend solicita solo los datos necesarios, cuando es necesario.
+- **Integración entre sistemas:** un servicio creado en Netuno puede ser consumido por cualquier aplicación externa (móvil, otro sistema web, etc.).
+- **Mejor experiencia de usuario:** el usuario no necesita esperar el procesamiento completo de la página antes de ver algo en pantalla.
+
+## Requisitos previos
+
+Antes de comenzar, asegúrese de que:
+
+- Netuno está instalado y en ejecución local.
+- La aplicación `demo` se ha creado tal como se describe en [Crear aplicación](../app-create).
+- Hay datos registrados en **Tareas** y relacionados con **Registros** (necesario para que el retorno no esté vacío).
+
+## Configurar el editor de código
+
+Para crear y editar servicios en Netuno, utilice un editor de código de su preferencia. Recomendamos **[Visual Studio Code](https://code.visualstudio.com/download)** por ser gratuito, ligero y altamente intuitivo, pero cualquier editor compatible con JavaScript/Python/Groovy funcionará normalmente.
+
+## Abrir la Aplicación Demo {#abrir-a-aplicacao-demo}
+
+1. Abra **Visual Studio Code**.
+2. Haga clic en el icono de **Archivos** del panel lateral izquierdo.
+3. Seleccione **Abrir carpeta** (Archivo > Abrir carpeta).
+4. Navegue hasta la carpeta de instalación de Netuno.
+5. Seleccione el directorio: **`apps/demo`**
+6. Haga clic en **Abrir**.
+
+La estructura de carpetas de la aplicación `demo` se cargará en el panel izquierdo.
+
+## Crear el servicio
+
+Los servicios se procesan en el lado del **servidor**. Para crear un nuevo servicio:
+
+1. En el panel de archivos, expanda la estructura hasta encontrar la carpeta `server/services/`.
+2. Haga clic con el **botón derecho** sobre la carpeta `services`.
+3. Seleccione **Nuevo archivo** (`Nuevo archivo`).
+4. Asigne un nombre al archivo según el lenguaje que desee usar:
+
+<PolyglotPath files={[
+    'server/services/trabajadores'
+]} />
+
+
+<PolyglotCode
+    file="server/services/trabajadores"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                /**
+                *** Transforma los datos de la consulta en salida JSON.
+                */
+                const dbRegistros = _db.query(\`
+                    SELECT DISTINCT
+                        trabajador.nombre, SUM(DATEDIFF(HOUR, registro.inicio, registro.fin)) AS total
+                    FROM trabajador INNER JOIN registro
+                        ON trabajador.id = registro.trabajador_id
+                    WHERE trabajador.activo = true AND registro.activo = true
+                    GROUP BY trabajador.nombre
+                    ORDER BY total ASC
+                \`);
+
+                const lista = _val.list();
+
+                for (const dbRegistro of dbRegistros) {
+                    lista.add(
+                        _val.map()
+                            .set("nombre", dbRegistro.getString("nombre"))
+                            .set("total", dbRegistro.getInt("total"))
+                    );
+                }
+
+                _out.json(lista);
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                #
+                # Transforma los datos de la consulta en salida JSON.
+                #
+                dbRegistros = _db.query(
+                    """SELECT DISTINCT
+                        trabajador.nombre, SUM(DATEDIFF(HOUR, registro.inicio, registro.fin)) AS total
+                    FROM trabajador INNER JOIN registro
+                        ON trabajador.id = registro.trabajador_id
+                    WHERE trabajador.activo = true AND registro.activo = true
+                    GROUP BY trabajador.nombre
+                    ORDER BY total ASC"""
+                )
+
+                lista = _val.list()
+
+                for dbRegistro in dbRegistros:
+                    lista.add(
+                        _val.map()
+                            .set("nombre", dbRegistro.getString("nombre"))
+                            .set("total", dbRegistro.getInt("total"))
+                    )
+
+                _out.json(lista)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                #
+                # Transforma los datos de la consulta en salida JSON.
+                #
+                dbRegistros = _db.query(%{
+                    SELECT DISTINCT
+                        trabajador.nombre, SUM(DATEDIFF(HOUR, registro.inicio, registro.fin)) AS total
+                    FROM trabajador INNER JOIN registro
+                        ON trabajador.id = registro.trabajador_id
+                    WHERE trabajador.activo = true AND registro.activo = true
+                    GROUP BY trabajador.nombre
+                    ORDER BY total ASC
+                })
+
+                lista = _val.list()
+
+                dbRegistros.each do |dbRegistro|
+                    lista.add(
+                        _val.map()
+                            .set("nombre", dbRegistro.getString("nombre"))
+                            .set("total", dbRegistro.getInt("total"))
+                    )
+                end
+
+                _out.json(lista)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                /**
+                *** Transforma los datos de la consulta en salida JSON.
+                */
+                val dbRegistros = _db.query(
+                    """SELECT DISTINCT
+                        trabajador.nombre, SUM(DATEDIFF(HOUR, registro.inicio, registro.fin)) AS total
+                    FROM trabajador INNER JOIN registro
+                        ON trabajador.id = registro.trabajador_id
+                    WHERE trabajador.activo = true AND registro.activo = true
+                    GROUP BY trabajador.nombre
+                    ORDER BY total ASC"""
+                );
+
+                val lista = _val.list();
+
+                dbRegistros.forEach {
+                    lista.add(
+                        _val.map()
+                            .set("nombre", it.getString("nombre"))
+                            .set("total", it.getInt("total"))
+                    );
+                }
+
+                _out.json(lista);
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                /**
+                *** Transforma los datos de la consulta en salida JSON.
+                */
+                def dbRegistros = _db.query("""\\
+                    SELECT DISTINCT
+                        trabajador.nombre, SUM(DATEDIFF(HOUR, registro.inicio, registro.fin)) AS total
+                    FROM trabajador INNER JOIN registro
+                        ON trabajador.id = registro.trabajador_id
+                    WHERE trabajador.activo = true AND registro.activo = true
+                    GROUP BY trabajador.nombre
+                    ORDER BY total ASC
+                """);
+
+                def lista = _val.list();
+
+                for (dbRegistro in dbRegistros) {
+                    lista.add(
+                        _val.map()
+                            .set("nombre", dbRegistro.getString("nombre"))
+                            .set("total", dbRegistro.getInt("total"))
+                    );
+                }
+
+                _out.json(lista);
+            `
+        },
+    ]}
+/>
+
+Implemente el servicio añadiendo el código siguiente al archivo creado. Este servicio consulta la base de datos y devuelve una lista de trabajadores con el total de horas registradas, en formato **JSON**.
+
+### Entendiendo el código
+
+| Objeto/Método | Descripción |
+|---|---|
+| `_db.query()` | Ejecuta una consulta SQL y devuelve una lista de objetos en formato clave-valor (columna → dato). |
+| `_val.list()` | Crea una lista mutable para acumular los resultados. |
+| `_val.map()` | Crea un objeto de mapeo (clave-valor) para cada fila de resultado. |
+| `_out.json()` | Serializa el objeto a JSON y envía la respuesta a las solicitudes HTTP. |
+
+:::warning Datos necesarios
+Asegúrese de que hay datos registrados en **Tareas** y vinculados a **Registros**. De lo contrario, el endpoint devolverá una lista vacía `[]`.
+:::
+
+## Ejecutar y probar el servicio
+
+Con Netuno en ejecución, acceda al endpoint en el navegador:
+
+:::tip Consejo para visualizar el JSON
+Recomendamos **[Firefox](https://www.mozilla.org/)** para probar endpoints directamente en el navegador, ya que formatea y muestra la respuesta JSON de forma legible con resaltado de sintaxis. Alternativamente, use extensiones como **JSON Viewer** en Chrome o herramientas como **[Postman](https://www.postman.com/)** para pruebas más avanzadas.
+:::
+
+El retorno esperado será un JSON similar a:
+
+```json
+[
+  { "nombre": "Ana Silva", "total": 12 },
+  { "nombre": "Carlos Mendes", "total": 28 },
+  { "nombre": "Juan Costa", "total": 45 }
+]
+```
+
+## Próximos pasos
+
+Ahora que su servicio está funcionando, puede:
+
+- 📄 **[Interfaz y diseño](./ui)** — integrar este servicio en el frontend de la aplicación.
+- 📚 **[Biblioteca de servicios](../../library/overview)** — explorar los objetos `_db`, `_val`, `_out` y otros disponibles en Netuno.
+- 🔗 Añadir **autenticación** y **control de acceso** a su servicio.
+
+___

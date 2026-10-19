@@ -1,0 +1,58 @@
+{
+  "link.title.Open Source": {
+    "message": "Open Source",
+    "description": "De titel van de kolom met voettekstlinks met titel=Open Source in de voettekst"
+  },
+  "link.title.Community": {
+    "message": "Community",
+    "description": "De titel van de kolom met voettekstlinks met titel=Community in de voettekst"
+  },
+  "link.title.More": {
+    "message": "Meer",
+    "description": "De titel van de kolom met voettekstlinks met titel=Meer in de voettekst"
+  },
+  "link.item.label.Installation": {
+    "message": "Installatie",
+    "description": "De tekst van de voettekstlink met label=Installatie die verwijst naar /docs/get-started/installation"
+  },
+  "link.item.label.Releases": {
+    "message": "Releases",
+    "description": "De tekst van de voettekstlink met label=Releases die verwijst naar https://github.com/netuno-org/platform/releases"
+  },
+  "link.item.label.Documentation": {
+    "message": "Documentatie",
+    "description": "De tekst van de voettekstlink met label=Documentatie die verwijst naar https://github.com/netuno-org/doc"
+  },
+  "link.item.label.YouTube": {
+    "message": "YouTube",
+    "description": "De tekst van de voettekstlink met label=YouTube die verwijst naar https://www.youtube.com/channel/UCYY1Nz6T2NJtP29vba2fqkg"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "De tekst van de voettekstlink met label=Discord die verwijst naar https://discord.gg/4sfXG6YWFu"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "De tekst van de voettekstlink met label=LinkedIn die verwijst naar https://www.linkedin.com/company/netuno-org/"
+  },
+  "link.item.label.Instagram": {
+    "message": "Instagram",
+    "description": "De tekst van de voettekstlink met label=Instagram die verwijst naar https://www.instagram.com/netuno_org/"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "De tekst van de voettekstlink met label=GitHub die verwijst naar https://github.com/netuno-org/"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "De tekst van de voettekstlink met label=Twitter die verwijst naar https://twitter.com/netuno_org"
+  },
+  "link.item.label.Facebook": {
+    "message": "Facebook",
+    "description": "De tekst van de voettekstlink met label=Facebook die verwijst naar https://www.facebook.com/netuno.org/"
+  },
+  "copyright": {
+    "message": "Auteursrecht © 2025 <a target=\"_blank\" href=\"https://www.sitana.pt/pt\">Sitana</a>",
+    "description": "De auteursrechtvermelding in de voettekst"
+  }
+}

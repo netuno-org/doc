@@ -1,0 +1,1093 @@
+---
+id: upload
+title: Încărcare
+sidebar_label: Încărcare
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Trimiterea fișierelor către API și salvarea în folder sau în baza de date.
+
+## Introducere
+
+Când trebuie să trimitem fișiere către serviciile API REST, avem mai multe modalități
+de a realiza acest lucru în Netuno.
+
+De obicei fișierele sunt trimise în corpul cererii HTTP structurate în format
+multipart; este procedura cea mai comună în frontend, de exemplu când completăm un
+formular și există acel câmp pentru alegerea unui fișier.
+
+Alternativ, putem trimite octeții fișierelor codificați în Base64 ca valoare
+într-un obiect JSON, atunci când dorim un API REST 100% JSON.
+
+## Fișiere
+
+Prin `_req.file` putem transmite numele câmpului și astfel obținem obiectul fișierului
+care a fost trimis, vedeți cum:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fisierulMeu = _req.file("fisier");
+            `
+        },
+    ]}
+/>
+
+Adică `_req` conține toate datele primite în corpul cererii HTTP.
+
+Iar prin metoda `file` permite obținerea obiectului care reprezintă fișierul care a
+fost trimis.
+
+Valoarea obținută poate fi `null` dacă nu există niciun fișier.
+
+## Imagini
+
+Când primim imagini, este comun să fie nevoie de redimensionarea lor, pentru a garanta
+uniformitate și pentru a reduce spațiul ocupat de imagini.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fisierulMeu = _req.getFile("imagine");
+                if (fisierulMeu != null
+                    && (fisierulMeu.isExtension("jpeg")
+                        || fisierulMeu.isExtension("jpg")
+                        || fisierulMeu.isExtension("png")
+                    )) {
+                    const imagineaMea = _image.init(fisierulMeu)
+                        .resize(200, 200)
+                        .file(fisierulMeu.baseName() +".jpg", "jpeg");
+                    _header.contentTypeJPG();
+                    _out.copy(imagineaMea);
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                fisierul_meu = _req.getFile("imagine")
+                if fisierul_meu is not None and (
+                    fisierul_meu.isExtension("jpeg")
+                    or fisierul_meu.isExtension("jpg")
+                    or fisierul_meu.isExtension("png")):
+                    imaginea_mea = (
+                        _image.init(fisierul_meu)
+                            .resize(200, 200)
+                            .file(fisierul_meu.baseName() +".jpg", "jpeg")
+                    )
+                    _header.contentTypeJPG()
+                    _out.copy(imaginea_mea)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fisierul_meu = _req.getFile("imagine")
+                if !fisierul_meu.nil? && (
+                    fisierul_meu.isExtension("jpeg") ||
+                    fisierul_meu.isExtension("jpg") ||
+                    fisierul_meu.isExtension("png")
+                )
+                    imaginea_mea = _image.init(fisierul_meu)
+                        .resize(200, 200)
+                        .file(fisierul_meu.baseName() +".jpg", "jpeg")
+                    _header.contentTypeJPG()
+                    _out.copy(imaginea_mea)
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val fisierulMeu = _req.getFile("imagine")
+                if (fisierulMeu != null
+                    && (fisierulMeu.isExtension("jpeg")
+                        || fisierulMeu.isExtension("jpg")
+                        || fisierulMeu.isExtension("png")
+                    )) {
+                    val imagineaMea = _image.init(fisierulMeu.input())
+                        .resize(200, 200)
+                        .file(fisierulMeu.baseName() +".jpg", "jpeg")
+                    _header.contentTypeJPG()
+                    _out.copy(imagineaMea.input())
+                }
+            `
+        }
+    ]}
+/>
+
+Cu resursa de programare low-code poliglotă [Image](/docs/library/resources/image),
+putem manipula imagini, decupa, redimensiona, crea altele noi etc.
+
+## Cum Base64 în JSON
+
+Pentru a încărca un fișier în JSON trimis către serviciu, putem defini o proprietate cu valoarea:
+
+`data:image/png;base64,...`
+
+Unde în `...` urmează secvența octeților fișierului codificați în Base64.
+
+Tipul fișierului apare după `data`, de exemplu:
+
+- PNG: `image/png`.
+- JPG: `image/jpeg`
+- TXT: `text/plain`
+- PDF: `application/pdf`
+- XLSX: `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
+
+Vedeți exemplul unui fișier imagine PNG mic trimis în JSON către un serviciu:
+
+```json
+{
+  "fisier": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAFIGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpDb2xvclNwYWNlPSIxIgogICBleGlmOlBpeGVsWERpbWVuc2lvbj0iMyIKICAgZXhpZjpQaXhlbFlEaW1lbnNpb249IjMiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMyIKICAgdGlmZjpJbWFnZVdpZHRoPSIzIgogICB0aWZmOlJlc29sdXRpb25Vbml0PSIyIgogICB0aWZmOlhSZXNvbHV0aW9uPSI3Mi8xIgogICB0aWZmOllSZXNvbHV0aW9uPSI3Mi8xIgogICB4bXA6TWV0YWRhdGFEYXRlPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMTItMjlUMTk6MTI6MjdaIj4KICAgPHhtcE1NOkhpc3Rvcnk+CiAgICA8cmRmOlNlcT4KICAgICA8cmRmOmxpCiAgICAgIHhtcE1NOmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHhtcE1NOnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IERlc2lnbmVyIDEuMTAuNSIKICAgICAgeG1wTU06d2hlbj0iMjAyNS0wMi0yM1QyMjoxNDozM1oiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IDMuMC4xIgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+UGhcxwAAAYFpQ0NQc1JHQiBJRUM2MTk2Ni0yLjEAACiRdZG7SwNBEIe/JEqCRhS0sFAIEq3iG4I2ggmigkiIEXw1yZmHkMdxlyDBVrANKIg2vgr9C7QVrAVBUQSx1lbRRuWc84QEMbPMzre/3Rl2Z8EeSSsZvaYPMtm8Fh4PeObmFzzOZ9y004yL3qiiq6Oh0BRV7f0Wmxmvu81a1c/9a/XLcV0Bm0t4RFG1vPCE8NRqXjV5S7hFSUWXhU+EfZpcUPjG1GMWP5mctPjTZC0SDoK9SdiTrOBYBSspLSMsL8ebSReU3/uYL3HHs7MzEjvE29AJM04AD5OMEcRPP8My++lmgB5ZUSW/7yd/mpzkKjKrFNFYIUmKPD5RC1I9LjEhelxGmqLZ/7991RODA1Z1dwBqHw3jtROcm/BVMoyPA8P4OgTHA5xny/m5fRh6E71U1rx70LgOpxdlLbYNZxvQeq9GteiP5BC3JxLwcgwN89B8BXWLVs9+9zm6g8iafNUl7OxCl5xvXPoGe8Rn71E5kqUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAySURBVAiZAScA2P8BJYrEogr//l3h5+qlBP4HCF3n/AAA/wP7WwLu7PKk+eHWAPzWyKSmfRbbIj23ZQAAAABJRU5ErkJggg=="
+}
+```
+
+Putem obține fișierul trimis astfel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fisierulMeu = _req.getFile("fisier");
+                if (fisierulMeu != null) {
+                    _out.json(
+                        _val.map()
+                            .set("result", true)
+                            .set("name", fisierulMeu.name())
+                            .set("sizeBytes", fisierulMeu.size())
+                            .set("sizeKB", fisierulMeu.sizeKB())
+                            .set("sizeMB", fisierulMeu.sizeMB())
+                            .set("sizeGB", fisierulMeu.sizeGB())
+                    );
+                } else {
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                fisierulMeu = _req.getFile("fisier")
+                if fisierulMeu is not None:
+                    _out.json(
+                        _val.map()
+                            .set("result", True)
+                            .set("name", fisierulMeu.name())
+                            .set("sizeBytes", fisierulMeu.size())
+                            .set("sizeKB", fisierulMeu.sizeKB())
+                            .set("sizeMB", fisierulMeu.sizeMB())
+                            .set("sizeGB", fisierulMeu.sizeGB())
+                    )
+                else:
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fisierul_meu = _req.getFile("fisier")
+                if fisierul_meu.nil?
+                    _out.json(
+                        _val.map()
+                            .set("result", true)
+                            .set("name", fisierul_meu.name())
+                            .set("sizeBytes", fisierul_meu.size())
+                            .set("sizeKB", fisierul_meu.sizeKB())
+                            .set("sizeMB", fisierul_meu.sizeMB())
+                            .set("sizeGB", fisierul_meu.sizeGB())
+                    )
+                else
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                    )
+                end
+            `
+        },
+    ]}
+/>
+
+Exemplu de ieșire generată de serviciul de mai sus:
+
+```json
+{
+  "name": "fisier.png",
+  "result": true,
+  "size": 1849,
+  "sizeKB": 1
+}
+```
+
+### Obiect
+
+Dacă fișierul se află într-o structură internă a JSON, în subobiect:
+
+```json
+{
+  "persoana": {
+    "fisier": "data:image/png;base64,..."
+  }
+}
+```
+
+Poate fi obținut astfel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fisierulMeu = _req.getValues("persoana").getFile("avatar");
+            `
+        },
+    ]}
+/>
+
+### Array
+
+Dacă fișierul se află într-o structură internă a JSON, într-un array:
+
+```json
+{
+  "fisiere": [
+    "data:image/png;base64,..."
+  ]
+}
+```
+
+Poate fi obținut astfel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fisierulMeu = _req.getValues("fisiere").getFile(0);
+            `
+        },
+    ]}
+/>
+
+## OpenAPI
+
+Netuno suportă integrarea cu OpenAPI și folosește definiția OpenAPI pentru a valida cererea HTTP.
+
+> Mai multe despre [OpenAPI în Netuno](/docs/academy/server/services/openapi).
+
+Cu tipul `file`, Netuno validează dacă valoarea începe cu formatul de fișier în JSON, de exemplu:
+
+- `data:image/png;base64,...`
+
+Pentru a valida dacă se primește un fișier într-o proprietate a obiectului JSON:
+
+```json title="post.in.json"
+{
+  "summary": "Încărcare de fișier",
+  "description": "Serviciu care primește un fișier în obiectul JSON.",
+  "type": "object",
+  "properties": {
+    "fisier": {
+      "type": "file"
+    }
+  },
+  "required": [
+    "fisier"
+  ]
+}
+```
+
+Pentru a valida dacă se primește o listă de fișiere într-un array în JSON:
+
+```json title="post.in.json"
+{
+  "summary": "Încărcare de fișiere",
+  "description": "Serviciu care primește o listă de fișiere într-un array în JSON.",
+  "properties": {
+    "fisiere": {
+      "type": "array",
+      "items": {
+        "type": "file"
+      }
+    }
+  },
+  "required": [
+    "fisiere"
+  ]
+}
+```
+
+## Salvarea fișierului
+
+De obicei, când primim un fișier în serviciu, trebuie să îl salvăm, de exemplu:
+
+- **Baza de date**: Fișier asociat unei înregistrări, cum ar fi a unui utilizator.
+- **Storage**: Folder intern al aplicației folosit pentru gestionarea fișierelor în general.
+- **Folder**: Plasarea fișierului într-un folder oarecare al sistemului.
+
+### Baza de date
+
+În gestionarea câmpurilor formularelor, Netuno suportă tipul `image` și `file`, adică:
+
+- **Image**: Fișiere imagine în general, JPG și PNG.
+- **File**: Orice tip de fișier.
+
+Imaginați-vă că există un câmp de Imagine în formularul Produs; putem salva fișierul trimis prin upload
+astfel:
+
+#### Exemplu folosind DB Form:
+
+Observați utilizarea `_db.form`:
+
+<PolyglotCode
+    file="services/produs/imagine/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const produsUid = _req.getString("uid");
+                const produsImagine = _req.getFile("imagine");
+
+                if (produsImagine == null) {
+                    _header.status(400);
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "imagine-obligatorie")
+                    );
+                    _exec.stop();
+                }
+
+                const dbRezultat = _db.form("produs")
+                    .set("imagine", produsImagine)
+                    .where(_db.where("uid").equals(produsUid))
+                    .update();
+
+                if (dbRezultat.getInt("produs") == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("result", true)
+                    );
+                } else {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "uid-produs-nu-exista")
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                produsUid = _req.getString("uid")
+                produsImagine = _req.getFile("imagine")
+
+                if produsImagine is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                            .set("error", "imagine-obligatorie")
+                    )
+                    _exec.stop()
+
+                dbRezultat = (
+                    _db.form("produs")
+                        .set("imagine", produsImagine)
+                        .where(_db.where("uid").equals(produsUid))
+                        .update()
+                )
+
+                if dbRezultat.getInt("produs") == 1:
+                    _out.json(
+                        _val.map()
+                            .set("result", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                            .set("error", "uid-produs-nu-exista")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                produs_uid = _req.getString("uid")
+                produs_imagine = _req.getFile("imagine")
+
+                if produs_imagine.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("result", false)
+                      .set("error", "imagine-obligatorie")
+                  )
+                  _exec.stop
+                end
+
+                db_rezultat = _db.form("produs")
+                  .set("imagine", produs_imagine)
+                  .where(_db.where("uid").equals(produs_uid))
+                  .update()
+
+                if db_rezultat.getInt("produs") == 1
+                  _out.json(
+                    _val.map()
+                      .set("result", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("result", false)
+                      .set("error", "uid-produs-nu-exista")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### Exemplu folosind update clasic:
+
+Observați utilizarea `_db.update`:
+
+<PolyglotCode
+    file="services/produs/imagine/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const produsUid = _req.getString("uid");
+                const produsImagine = _req.getFile("imagine");
+
+                if (produsImagine == null) {
+                    _header.status(400);
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "imagine-obligatorie")
+                    );
+                    _exec.stop();
+                }
+
+                const dbRezultat = _db.update(
+                    "produs",
+                    produsUid,
+                    _val.map()
+                        .set("imagine", produsImagine)
+                );
+
+                if (dbRezultat == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("result", true)
+                    );
+                } else {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "uid-produs-nu-exista")
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                produsUid = _req.getString("uid")
+                produsImagine = _req.getFile("imagine")
+
+                if produsImagine is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                            .set("error", "imagine-obligatorie")
+                    )
+                    _exec.stop()
+
+                dbRezultat = (
+                    _db.update(
+                        "produs",
+                        produsUid,
+                        _val.map()
+                            .set("imagine", produsImagine)
+                    )
+                )
+
+                if dbRezultat == 1:
+                    _out.json(
+                        _val.map()
+                            .set("result", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                            .set("error", "uid-produs-nu-exista")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                produs_uid = _req.getString("uid")
+                produs_imagine = _req.getFile("imagine")
+
+                if produs_imagine.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("result", false)
+                      .set("error", "imagine-obligatorie")
+                  )
+                  _exec.stop
+                end
+
+                db_rezultat = _db.update(
+                  "produs",
+                  produs_uid,
+                  _val.map()
+                    .set("imagine", produs_imagine)
+                )
+
+                if db_rezultat == 1
+                  _out.json(
+                    _val.map()
+                      .set("result", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("result", false)
+                      .set("error", "uid-produs-nu-exista")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### Descărcarea fișierului din baza de date
+
+Pentru a prezenta fișierul stocat, trebuie să creăm un serviciu care furnizează octeții fișierului.
+
+Deoarece fișierele salvate în baza de date, ca în exemplul de mai sus, fișierul în sine este plasat în storage-ul
+aplicației, iar în baza de date este stocat doar numele final al fișierului.
+
+> Storage-ul aplicației este un folder destinat stocării și organizării structurilor de fișiere generice.
+
+Prin urmare, în exemplul de mai sus, fișierele din baza de date ale formularului `Produs` și ale câmpului `Imagine` sunt
+stocate în:
+
+- `storage/database/produs/imagine/*`
+
+> Netuno gestionează automat numele fișierului stocat pentru a evita nume de fișiere repetate.
+
+Pentru a obține fișierul, se poate crea un serviciu care prezintă fișierul imagine al produsului, de exemplu:
+
+<PolyglotCode
+    file="services/produs/imagine/get"
+    codes={[
+    {
+        lang: 'javascript',
+        code: `
+            const produsUid = _req.getString("uid");
+
+            // DB Form:
+            const dbProdus = _db.form("produs")
+                .where(_db.where("uid").equals(produsUid))
+                .first();
+            // Alternativă cu DB clasic:
+            // const dbProdus = _db.get("produs", produsUid)
+
+            if (dbProdus == null) {
+                _header.status(404);
+                _out.json(
+                    _val.map()
+                        .set("result", false)
+                        .set("error", "produs-negasit")
+                );
+                _exec.stop();
+            }
+
+            const dbProdusImagineNume = dbProdus.getString("imagine");
+
+            const storageProdusImagineFisier = _storage.database(
+                "produs",
+                "imagine",
+                dbProdusImagineNume
+            );
+
+            if (storageProdusImagineFisier.extension() == "jpg" || storageProdusImagineFisier.extension() == "jpeg") {
+                _header.contentTypeJPG();
+            } else {
+                _header.contentTypePNG();
+            }
+
+            _header.noCache();
+
+            _out.copy(storageProdusImagineFisier.inputStream());
+        `
+    },
+    {
+        lang: 'python',
+        code: `
+            produsUid = _req.getString("uid")
+
+            # DB Form:
+            dbProdus = (
+                _db.form("produs")
+                    .where(_db.where("uid").equals(produsUid))
+                    .first()
+            )
+            # Alternativă cu DB clasic:
+            # dbProdus = _db.get("produs", produsUid)
+
+            if dbProdus is None:
+                _header.status(404)
+                _out.json(
+                    _val.map()
+                        .set("result", False)
+                        .set("error", "produs-negasit")
+                )
+                _exec.stop()
+
+            dbProdusImagineNume = dbProdus.getString("imagine")
+
+            storageProdusImagineFisier = _storage.database(
+                "produs",
+                "imagine",
+                dbProdusImagineNume
+            )
+
+            if storageProdusImagineFisier.extension() == "jpg" or storageProdusImagineFisier.extension() == "jpeg":
+                _header.contentTypeJPG()
+            else:
+                _header.contentTypePNG()
+
+            _header.noCache()
+
+            _out.copy(storageProdusImagineFisier.inputStream())
+        `
+    },
+    {
+        lang: 'ruby',
+        code: `
+            produsUid = _req.getString("uid")
+
+            # DB Form:
+            dbProdus = _db.form("produs")
+                .where(_db.where("uid").equals(produsUid))
+                .first()
+            # Alternativă cu DB clasic:
+            # dbProdus = _db.get("produs", produsUid)
+
+            if dbProdus.nil?
+                _header.status(404)
+                _out.json(
+                    _val.map()
+                        .set("result", false)
+                        .set("error", "produs-negasit")
+                )
+                _exec.stop()
+            end
+
+            dbProdusImagineNume = dbProdus.getString("imagine")
+
+            storageProdusImagineFisier = _storage.database(
+                "produs",
+                "imagine",
+                dbProdusImagineNume
+            )
+
+            if storageProdusImagineFisier.extension() == "jpg" || storageProdusImagineFisier.extension() == "jpeg"
+                _header.contentTypeJPG()
+            else
+                _header.contentTypePNG()
+            end
+
+            _header.noCache()
+
+            _out.copy(storageProdusImagineFisier.inputStream())
+        `
+    },
+]}
+/>
+
+Observați că resursa `_storage` ([Storage](/docs/library/resources/storage)) este utilizată pentru a obține fișierul:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _storage.database(
+                    "produs", // Numele formularului/tabelului.
+                    "imagine", // Numele câmpului/coloanei.
+                    dbProdusImagineNume // Numele fișierului.
+                );
+            `
+        },
+    ]}
+/>
+
+În baza de date este stocat doar numele fișierului, iar prin `_storage.database` putem
+obține fișierul în sine.
+
+### Storage
+
+Putem salva un fișier direct în `storage`-ul aplicației.
+
+Pentru a nu se amesteca cu fișierele din baza de date, trebuie să folosim folderul `filesystem`, care are
+scopul de a stoca fișiere generice ce nu sunt asociate în baza de date.
+
+Pentru a primi fișierul, în acest exemplu este demonstrat cum un fișier trimis în serviciul
+ `POST` este stocat direct în storage:
+
+<PolyglotCode
+    file="services/fisier/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fisier = _req.getFile("fisier");
+                _storage.filesystem("server", "upload").ensurePath();
+                fisier.save(_storage.filesystem("server", "upload", fisier.name()));
+            `
+        },
+    ]}
+/>
+
+Fișierul este stocat în folderul `storage` al aplicației, în:
+
+- `storage/filesystem/server/upload/*`
+
+> Resursa [Storage](/docs/library/resources/storage) este utilizată pentru a obține calea folderului și a fișierului:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _storage.filesystem(
+                    "server", // Numele subfolderului din filesystem.
+                    "upload", // Numele sau calea subfolderului intern.
+                    fisier.name() // Numele final al fișierului.
+                );
+            `
+        },
+    ]}
+/>
+
+> Vedeți mai multe în documentația [Storage](/docs/library/resources/storage).
+
+Pentru a descărca fișierul, în acest exemplu este demonstrat cum octeții fișierului
+pot fi obținuți prin serviciul `GET`:
+
+<PolyglotCode
+    file="services/fisier/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fisierNume = _req.getString("fisier");
+
+                const fisier = _storage.filesystem(
+                    "server",
+                    "upload",
+                    fisierNume
+                ).file();
+
+                if (fisier.exists() == false) {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "fisier-nu-exista")
+                    );
+                    _exec.stop();
+                }
+
+                _header.downloadFile(fisier.name());
+                _out.copy(fisier.input());
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                fisierNume = _req.getString("fisier")
+
+                fisier = _storage.filesystem(
+                    "server",
+                    "upload",
+                    fisierNume
+                ).file()
+
+                if fisier.exists() == False:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                            .set("error", "fisier-nu-exista")
+                    )
+                    _exec.stop()
+
+                _header.downloadFile(fisier.name())
+                _out.copy(fisier.input())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fisier_nume = _req.getString("fisier")
+
+                fisier = _storage.filesystem(
+                    "server",
+                    "upload",
+                    fisier_nume
+                ).file()
+
+                if fisier.exists() == false
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "fisier-nu-exista")
+                    )
+                    _exec.stop()
+                end
+
+                _header.downloadFile(fisier.name())
+                _out.copy(fisier.input())
+            `
+        },
+    ]}
+/>
+
+### Folder
+
+Putem salva un fișier direct în orice folder al computerului.
+
+Există două resurse foarte utile în aceste cazuri:
+
+- `_app` - Putem obține orice folder sau fișier din aplicație.
+- `_os` - Putem obține orice folder sau fișier din computer.
+
+> Vedeți documentația resurselor respective [App](/docs/library/resources/app) și [OS](/docs/library/resources/os);
+> ambele resurse au metodele `folder` și `file`, care permit indicarea căii folderului sau a fișierului,
+> respectiv.
+
+Pentru a primi fișierul, în acest exemplu este demonstrat cum un fișier trimis în serviciul
+`POST` este stocat direct într-un folder din aplicație:
+
+<PolyglotCode
+    file="services/fisier/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fisier = _req.getFile("fisier");
+                const folder = _app.folder("temp");
+                if (folder.exists() == false) {
+                    folder.mkdir();
+                }
+                fisier.save(_app.file(\`temp/\${fisier.name()}\`));
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                fisier = _req.getFile("fisier")
+                folder = _app.folder("temp")
+                if folder.exists() == False:
+                    folder.mkdir()
+
+                fisier.save(_app.file(f"temp/{fisier.name()}"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fisier = _req.getFile("fisier")
+                folder = _app.folder("temp")
+                if folder.exists() == false
+                    folder.mkdir()
+                end
+                fisier.save(_app.file("temp/#{fisier.name()}"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val fisier = _req.getFile("fisier")
+                val folder = _app.folder("temp")
+                if (folder.exists() == false) {
+                    folder.mkdir()
+                }
+                fisier.save(_app.file("temp/\${fisier.name()}"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                final fisier = _req.getFile("fisier")
+                final folder = _app.folder("temp")
+                if (folder.exists() == false) {
+                    folder.mkdir()
+                }
+                fisier.save(_app.file("temp/\${fisier.name()}"))
+            `
+        },
+    ]}
+/>
+
+Codul de mai sus va crea folderul `temp` în aplicație și va salva fișierul primit
+în acest folder.
+
+Pentru a descărca fișierul, în acest exemplu este demonstrat cum octeții fișierului
+pot fi obținuți prin serviciul `GET`:
+
+<PolyglotCode
+    file="services/fisier/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fisierNume = _req.getString("fisier");
+                const fisier = _app.file(\`temp/\${fisierNume}\`);
+
+                if (fisier.exists() == false) {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "fisier-nu-exista")
+                    );
+                    _exec.stop();
+                }
+
+                _header.downloadFile(fisier.name());
+                _out.copy(fisier.input());
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                fisierNume = _req.getString("fisier")
+                fisier = _app.file(f"temp/{fisierNume}")
+
+                if fisier.exists() == False:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", False)
+                            .set("error", "fisier-nu-exista")
+                    )
+                    _exec.stop()
+
+                _header.downloadFile(fisier.name())
+                _out.copy(fisier.input())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fisier_nume = _req.getString("fisier")
+                fisier = _app.file("temp/#{fisier_nume}")
+
+                if fisier.exists() == false
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "fisier-nu-exista")
+                    )
+                    _exec.stop()
+                end
+
+                _header.downloadFile(fisier.name())
+                _out.copy(fisier.input())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val fisierNume = _req.getString("fisier")
+                val fisier = _app.file("temp/\${fisierNume}")
+
+                if (fisier.exists() == false) {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "fisier-nu-exista")
+                    )
+                    _exec.stop()
+                }
+
+                _header.downloadFile(fisier.name())
+                _out.copy(fisier.input())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                final fisierNume = _req.getString("fisier")
+                final fisier = _app.file("temp/\${fisierNume}")
+
+                if (fisier.exists() == false) {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("result", false)
+                            .set("error", "fisier-nu-exista")
+                    )
+                    _exec.stop()
+                }
+
+                _header.downloadFile(fisier.name())
+                _out.copy(fisier.input())
+            `
+        },
+    ]}
+/>
+
+## Concluzie
+
+După cum se poate observa, putem integra încărcarea fișierelor în serviciile API REST, inclusiv integrat cu
+OpenAPI.
+
+Putem salva fișierul în baza de date, în folderul `storage` al aplicației sau în orice folder al
+computerului.
+
+Vedeți documentația resurselor utilizate în acest tutorial care permit manipularea fișierelor:
+
+- [Storage](/docs/library/resources/storage)
+- [App](/docs/library/resources/app)
+- [OS](/docs/library/resources/os)
+
+În baza de date putem salva imagini în câmpuri de tip `image` și putem salva orice tip de fișier în
+câmpuri de tip `file`; modul în care salvăm sau obținem fișierele este același în orice caz, fie imagine, fie
+fișier generic.

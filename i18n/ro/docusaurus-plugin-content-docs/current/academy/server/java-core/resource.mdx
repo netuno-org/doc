@@ -1,0 +1,186 @@
+---
+id: resource 
+title: Resursă Poliglotă Low-Code 
+sidebar_label: Resursă 
+sidebar_position: 5
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+În acest tutorial vom crea o resursă nativă pentru Netuno. Aceasta înseamnă că vom crea o clasă Java care va sta în directorul de bază al Netuno și care va putea fi folosită de orice aplicație din folderul `apps`, utilizând sintaxa `_exemplu.numeMetoda(argumente)`.
+
+Exemplul pe care îl vom crea, urmând tutorialele anterioare, este resursa `_calcul`, care este o resursă de exemplu pentru executarea operațiilor aritmetice simple.
+
+Pentru a începe, mai întâi este necesar să creați structura de foldere a proiectului. În acest exemplu vom considera că proiectul va fi creat într-un folder numit `Calcul`. Așadar, este necesar să creați structura de foldere care oglindește numele pachetului (în exemplul nostru, `org.netuno.addon.calcul`). Prin urmare, structura noastră de foldere va fi:
+
+- `Calcul/src/main/java/org/netuno/addon/calcul/resource/`
+
+În interiorul acestei structuri vom crea o clasă Java numită `ResursaCalcul`, care va defini resursa noastră nativă personalizată.
+
+- ` Calcul/src/main/java/org/netuno/addon/calcul/resource/ResursaCalcul.java`
+
+Atunci pachetul definit în cadrul clasei va fi:
+
+```java
+package org.netuno.addon.calcul.resource;
+```
+
+Pentru ca clasa să definească o resursă nativă personalizată, această clasă trebuie adnotată cu adnotarea `org.netuno.tritao.ResourceBase`. Parametrul `name` va fi numele resursei care poate fi accesat cu un underscore (`_`) înainte de nume (în cazul nostru, `_calcul`). Cea mai simplă modalitate de a crea resursa este extinderea clasei `org.netuno.tritao.resource.ResourceBase`:
+
+```java
+package org.netuno.addon.calcul.resource;
+
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "calcul")
+public class ResursaCalcul extends ResourceBase {
+    // ...
+}
+```
+
+Extinderea clasei `ResourceBase` ne scutește de a inițializa resursa, fiind suficient să apelăm `super` cu argumentele corecte:
+
+```java
+package org.netuno.addon.calcul.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "calcul")
+public class ResursaCalcul extends ResourceBase {
+    // ...
+    public ResursaCalcul(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+}
+```
+
+Funcția `init` este obligatorie, iar în interiorul ei vom inițializa resursa apelând constructorul clasei noastre cu getter-ele clasei părinte:
+
+```java
+package org.netuno.addon.calcul.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "calcul")
+public class ResursaCalcul extends ResourceBase {
+    // ...
+    public ResursaCalcul(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public ResursaCalcul init() {
+        return new ResursaCalcul(getProteu(), getHili());
+    }
+}
+```
+
+După aceea vom defini propriile noastre câmpuri și funcții:
+
+```java
+package org.netuno.addon.calcul.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "calcul")
+public class ResursaCalcul extends ResourceBase {
+    public double valoare = 0;
+
+    public ResursaCalcul(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public ResursaCalcul init() {
+        return new ResursaCalcul(getProteu(), getHili());
+    }
+
+    public ResursaCalcul seteaza(double v) {
+        valoare = v;
+        return this;
+    }
+
+    public ResursaCalcul adauga(double v) {
+        valoare += v;
+        return this;
+    }
+
+    public ResursaCalcul scade(double v) {
+        valoare -= v;
+        return this;
+    }
+
+    public double obtine() {
+        return valoare;
+    }
+}
+```
+
+Acum trebuie doar să compilați clasa, asigurându-vă că fișierul `ResursaCalcul.class` se află în folderul:
+
+- `netuno/core/web/WEB-INF/classes/org/netuno/addon/calcul/resource/`
+
+Sau să produceți un fișier JAR, asigurându-vă că acesta se află în folderul:
+
+- `netuno/lib/`
+
+Vom crea o aplicație de test pentru a folosi această resursă:
+
+```bash
+./netuno app name=calcul
+```
+
+Vom crea, de asemenea, un serviciu în această aplicație pentru a folosi resursa.
+În exemplu, vom crea fișierul `netuno/apps/calcul/server/services/calcul-test.js`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _calcul.seteaza(10);
+
+                _calcul.adauga(120);
+
+                _out.println(_calcul.obtine());
+            `
+        },
+    ]}
+/>
+
+Vom porni aplicația noastră:
+
+```bash
+./netuno server app=calcul
+```
+
+Și acum, când facem un apel către acest serviciu:
+
+- `http://localhost:9000/services/calcul-test`
+
+Acesta va returna valoarea `130`.
+
+Pentru a folosi o resursă în codul Java, unele clase precum `org.netuno.tritao.Web`
+și `org.netuno.tritao.event.EventBase` oferă funcția `resource`, care inițializează această resursă.
+În clasa în care doriți să folosiți resursa `calcul`, faceți:
+
+```java
+import org.netuno.addon.calcul.resource.ResursaCalcul;
+
+// ...
+    ResursaCalcul calcul = resource(ResursaCalcul.class);
+    calcul.seteaza(10);
+    calcul.adauga(120);
+    System.out.println(calcul.obtine());
+// ...
+```
+
+Puteți vedea fișierele complete ale proiectului la acest [link](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/resource).

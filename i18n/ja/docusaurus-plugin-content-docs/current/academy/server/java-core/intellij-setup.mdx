@@ -1,0 +1,217 @@
+---
+id: setup
+title: IntelliJ IDEA によるプロジェクト設定
+sidebar_label: IntelliJ での設定
+sidebar_position: 2
+---
+
+import Image from "@site/src/components/Image";
+
+## 前提条件
+
+この例では、<a href="https://www.jetbrains.com/idea/download/" target="_blank">IntelliJ IDEA Community Edition IDE</a> を使用します。このリンク先では、Community 版が Ultimate 版のすぐ下にあります。
+
+代わりに、Java 専用の別の IDE（たとえば Eclipse や NetBeans）を使用することもできます。同様の設定を行えば問題ありません。
+
+Netuno プラットフォームをインストールしてください。Java プロジェクトは、事前にインストールされた Netuno プラットフォームと統合されます。
+
+## プロジェクトの作成
+
+IntelliJ IDEA Community を開いたら、新しいプロジェクトを作成します。`New Project` ボタンをクリックしてください。
+
+左側で `Java` オプションを選択し、プロジェクト名の `Name:` フィールドには、この例では `Keisan` を使用します。
+
+`Location:` で、ファイル内のプロジェクトの保存場所を選択します。
+
+`Build system:` は `IntelliJ` のままで問題ありません。
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/01.png").default} />
+
+`JDK` では、Netuno に同梱されている `GraalVM` を選択します。`Add JDK from Disk...` オプションを使用して追加し、Netuno プラットフォームがインストールされている場所まで移動して、次のフォルダを選択します:
+
+- `netuno/core/graalvm`
+
+これはプロジェクトで使用することを推奨する GraalVM の JDK であり、プロジェクトの実行とデバッグを確実に行えるようにします。
+
+## プロジェクト設定
+
+左側に表示されるプロジェクトファイルのうち、プロジェクト名（この場合は `Keisan`）が表示されている最初の項目を右クリックしてオプションメニューを開き、`Open Module Settings` を選択します。
+
+開いたウィンドウの左側で `Modules` が選択され、右側に 3 つのタブが表示されます:
+
+1. Sources
+2. Paths
+3. Dependencies
+
+### パス
+
+`Paths` タブでは、`Compiler Output` で 2 番目のオプションを選択します:
+
+- `Use module compile output path`
+
+そして、インストールされた Netuno プラットフォームにある `netuno/core/web/WEB-INF/classes` フォルダを選択します。`Output path:` と `Test output path:` の両方に同じパスを指定してください。
+
+> `netuno/core/web/WEB-INF` 内の `classes` フォルダはデフォルトでは存在しないため、作成する必要があります。
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/02.png").default} />
+
+### 依存関係
+
+`Dependencies` タブで、一覧オプションの枠の上にある `+` ボタンをクリックします。
+
+表示されるオプションのうち、最初の `1 Jars or Directories...` をクリックします。
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/03.png").default} />
+
+インストールされた Netuno プラットフォームの場所に移動し、すべての依存関係を追加します:
+
+1. `netuno/netuno.jar` - プラットフォームのルートにあります。
+2. `netuno/core/lib` - すべてのファイルを選択して追加します。
+3. `netuno/core/web/WEB-INF/lib` - すべてのファイルを選択して追加します。
+
+`Detected Roots` と `Choose Roots` のウィンドウが表示された場合は、選択されているすべてのオプションを**オフ**にして `OK` をクリックします。
+
+ファイル一覧で、最初から最後までの JAR が追加されていることを確認してください。キーボードのショートカットキーで全ファイルを選択しようとしてもうまくいかないため、最初の JAR を選択し、Shift キーを押しながら最後の JAR をクリックして範囲選択してください。この方法なら IntelliJ がすべてを正しく読み込めます。
+
+> すべての依存関係が正しく追加されていることを確認してください。各フォルダの最初と最後の JAR が一覧に含まれているか確認します。
+
+これで、Netuno の Java エコシステム全体がプロジェクトに関連付けられます。
+
+### アーティファクト
+
+ここではプロジェクトの JAR ファイルを生成できます。これにより、他のコンピュータにある他の Netuno インスタンスへコードを配布しやすくなります。
+
+`Open Module Settings` で表示されるウィンドウの左側メニューにある `Artifacts` オプションで、利用可能な `+` ボタンをクリックし、次に `JAR` オプション、最後に `Empty` オプションをクリックします。
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/04.png").default} />
+
+`Name:` フィールドにはプロジェクト名を入力します。たとえば `keisan` です。
+
+その下の `Output Layout` で `+` ボタンをクリックし、`Module Output` オプションを選択します。表示されるオプションウィンドウでこのプロジェクトを選択し、`OK` をクリックします。
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/05.png").default} />
+
+`Apply` または `OK` をクリックしてプロジェクト設定ウィンドウを閉じます。
+
+### アーティファクトの生成
+
+アーティファクトを生成するには、IntelliJ のグローバルメニューで `Build` > `Build Artifacts...` オプションに進みます。
+
+該当するプロジェクトのオプションを選択し、`Build` をクリックします。
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/06.png").default} />
+
+左側のファイル一覧に、`out` フォルダ内に生成されたファイルが表示されます。この例では次のようになります:
+
+- `out/artifacts/keisan/keisan.jar`
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/07.png").default} />
+
+### アーティファクトの公開
+
+作成された JAR ファイルは配布でき、他の任意の Netuno プラットフォームに配置できます。
+
+ただし、開発を行っているプラットフォームにはプロジェクトの JAR を含めることはできません。コードはすでに次の場所に公開されているためです:
+
+- `netuno/core/web/WEB-INF/classes`
+
+そのため、開発に使用しておらず、クラスが存在しない他のプラットフォームでは JAR ファイルを使用します。
+
+インストールされた任意の Netuno プラットフォームでは、この JAR を Netuno のルートにある `lib` フォルダに配置する必要があります:
+
+- `netuno/lib`
+
+このフォルダはデフォルトでは存在しないため、必要に応じて作成してください。
+
+このフォルダにあるすべての JAR は、Netuno プラットフォームで自動的に読み込まれます。
+
+## コードのパッケージ
+
+Java の標準として、コードには常に `package` が必要です。
+
+`package` は Netuno のグローバル設定ファイルに登録する必要があります:
+
+- `netuno/config.js`
+
+ファイルの末尾に次のコードを追加します:
+
+```javascript
+config.packagesScan.add("my.project.java")
+```
+
+この方法でパッケージを設定に追加しない場合、プロジェクトは読み込まれません。
+
+Netuno は事前に追加されたパッケージ内でのみリソースとサービスを検索するためです。
+
+設定にパッケージを登録する代わりの方法として、`org.netuno` で始まる Java パッケージを使用できます。
+
+Netuno は `org.netuno` で始まるパッケージ内のリソースとサービスを自動的に検索します。
+
+> 接頭辞 `org.netuno.addon` の使用をお勧めします。
+
+たとえば、`org.netuno.addon.keisan` を使用できます。
+
+`org.netuno.addon` というパッケージ接頭辞は、外部から追加された機能であり、Netuno 自体の一部ではないことを示します。
+
+したがって、Netuno と連携するすべての Java コードは、次の場所で定義および構築する必要があります:
+
+- `org.netuno.addon.my.project`
+
+`org.netuno.addon` の後にプロジェクトの識別子を追加します。
+
+
+## 実行
+
+プロジェクトを実行するには、新しい実行構成を作成する必要があります。
+
+上部のツールバーには `Run` と `Debug` のボタンがあります。
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/08.png").default} />
+
+実行用の矢印ボタンの前にある、下向き矢印記号付きの Current File オプションをクリックします。
+
+次に `Edit configurations...` をクリックします。
+
+開いたウィンドウで左上の `+` ボタンをクリックし、`Application` オプションを選択します。
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/09.png").default} />
+
+`Name:` に `Netuno` を、`Main class` フィールドに `org.netuno.cli.Main` を入力します。
+
+`Program arguments` に、アプリケーションを指定した Netuno サーバーの起動命令を入力します。この例では、事前に `keisan` という名前のアプリケーションを作成しています:
+
+`server app=keisan`
+
+> アプリは事前に作成する必要があります。Netuno では次のコマンドを使用します: `./netuno app`
+
+`Working directory:` には Netuno のルートフォルダを指定します。完全なパスを指定することが非常に重要です。
+
+次のようになります:
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/10.png").default} />
+
+あとは `Apply` と `OK` をクリックします。
+
+これでプロジェクトを実行したり、デバッグしたりできます。
+
+<Image src={require("/static/docs/assets/academy/server/java-core/setup/11.png").default} />
+
+## 結論
+
+Netuno のコアに新しい動作を追加するための、新しい Java プロジェクトの作成方法を説明しました。
+
+また、JAR ファイルを生成するためのベストプラクティスと、`netuno/lib` フォルダに配布する方法についても説明しました。
+
+Netuno で任意の種類の機能を作成するために、あらゆる Java プログラミング技法とライブラリを使用できます。
+
+特に、サポートされているすべてのスクリプト言語で利用できるローコードプログラミングリソースを作成できます。たとえば:
+
+- JavaScript
+- Python
+- Ruby
+- Kotlin
+- Groovy
+
+次のチュートリアルでは、最初のローコードプログラミングリソースを作成する方法を説明します。
+
+また、Netuno で設定されているすべてのアプリケーションで利用できる、最初のマルチアプリケーション Web サービスを作成する方法も説明します。

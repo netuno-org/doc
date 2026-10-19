@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Netuno",
+    "description": "导航栏中的标题"
+  },
+  "logo.alt": {
+    "message": "Netuno 文档",
+    "description": "导航栏徽标的替代文本"
+  },
+  "item.label.Get Started": {
+    "message": "开始使用",
+    "description": "标签为“开始使用”的导航栏项"
+  },
+  "item.label.Academy": {
+    "message": "学院",
+    "description": "标签为“学院”的导航栏项"
+  },
+  "item.label.Library": {
+    "message": "资源库",
+    "description": "标签为“资源库”的导航栏项"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "标签为“GitHub”的导航栏项"
+  }
+}

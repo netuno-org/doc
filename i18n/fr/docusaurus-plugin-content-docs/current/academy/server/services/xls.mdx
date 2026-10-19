@@ -1,0 +1,1002 @@
+---
+id: xls
+title: XLS - Excel
+sidebar_label: XLS - Excel
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Traiter des fichiers Excel personnalisés.
+
+## Introduction
+
+Netuno génère des fichiers EXCEL compatibles avec LibreOffice, OpenOffice, Microsoft Office, Google Drive, etc., grâce à la ressource [XLS](/docs/library/resources/xls) qui permet une abstraction low-code d'[Apache POI](https://poi.apache.org/) pour les différents langages de programmation supportés par Netuno.
+
+Nous pouvons générer des fichiers XLSX, XLS ou ODS.
+
+L'application fournie avec Netuno nommée **démo** (application de démonstration) contient de nombreux exemples des implémentations de code possibles dans différents langages, y compris la démonstration de l'exportation de feuilles via le service `export-excel` qui se trouve dans :
+
+<PolyglotPath files={[
+    `netuno/apps/démo/server/services/exemples/%lang%/export-excel`
+]} />
+
+## Initialisation
+
+Pour initialiser la ressource XLS :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.create()
+            `
+        },
+    ]}
+/>
+
+Crée l'objet qui contient le contexte du nouveau fichier qui sera construit, avec une feuille de calcul vide.
+
+## Formatage
+
+La définition des styles de formatage visuel, c'est-à-dire le format des dates, heures, monnaie, entre autres, doit être faite avant la définition des valeurs des cellules, car en définissant les valeurs des cellules, il est possible d'associer son style de formatage.
+
+Ainsi, comme le montre l'exemple fourni dans l'application `démo`, les formatages sont définis dès le début du code.
+
+Pour formater les dates :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleDate = excel.cellStyleFormat("dd/mm/yy")
+            `
+        },
+    ]}
+/>
+
+Pour formater les horaires :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleHeure = excel.cellStyleFormat("hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+Pour formater les dates avec horaires :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleDateHeure = excel.cellStyleFormat("dd/mm/yyyy hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+Pour formater les valeurs monétaires en **euro** :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleMonnaieEuro = excel.cellStyleFormat("€#,##0.00;\\-€#,##0.00")
+            `
+        },
+    ]}
+/>
+
+Pour formater les valeurs monétaires en **réaux** :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleMonnaieReal = excel.cellStyleFormat("R$#,##0.00;\\-R$#,##0.00")
+            `
+        },
+    ]}
+/>
+
+Pour formater les valeurs en **pourcentage** :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stylePourcentage = excel.cellStyleFormat("0.00%")
+            `
+        },
+    ]}
+/>
+
+## Apparence
+
+La définition des styles d'apparence visuelle, c'est-à-dire l'apparence des cellules comme les couleurs, la police, les bordures, l'alignement, entre autres, doit être faite avant la définition des valeurs des cellules, car en définissant les valeurs des cellules, il est possible d'associer son style d'apparence.
+
+Ainsi, comme le montre l'exemple fourni dans l'application `démo`, les apparences sont définies dès le début du code.
+
+Exemple pour la définition des couleurs et de l'alignement :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleEnTete = excel.cellStyle()
+                styleEnTete.setFillPattern(_xls.fillPattern("solid-foreground"))
+                styleEnTete.setFillBackgroundColor(excel.color("black"))
+                styleEnTete.setAlignment(_xls.horizontalAlignment("center"))
+            `
+        },
+    ]}
+/>
+
+> Documentation avec toutes les méthodes de l'objet <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Styles dans Apache POI</a>.
+
+Définition du style des bordures :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleDonnees = excel.cellStyle()
+                styleDonnees.setBorderBottom(_xls.borderStyle("thin"))
+                styleDonnees.setBorderTop(_xls.borderStyle("thin"))
+                styleDonnees.setBorderLeft(_xls.borderStyle("thin"))
+                styleDonnees.setBorderRight(_xls.borderStyle("thin"))
+            `
+        },
+    ]}
+/>
+
+> Documentation avec toutes les méthodes de l'objet <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Styles dans Apache POI</a>.
+
+Crée un nouveau style de police pour le texte, associe les définitions de la police à un style de cellule existant :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const policeTitre = excel.font()
+                policeTitre.setBold(true)
+                policeTitre.setFontHeightInPoints(14)
+                policeTitre.setColor(excel.color("yellow"))
+                // Définit la police du styleEnTete
+                styleEnTete.setFont(policeTitre)
+            `
+        },
+    ]}
+/>
+
+> Documentation avec toutes les méthodes de l'objet <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFFont.html" target="_blank">Police dans Apache POI</a>.
+
+## Image
+
+Pour insérer une image dans la feuille qui se trouve dans `storage/exemples/export-excel/logo.png` en interne dans l'application :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _storage.filesystem("server", "exemples/export-excel", "logo.png"),
+                    1, // Numéro de la colonne
+                    1  // Numéro de la ligne
+                ).resize(2.3)
+            `
+        },
+    ]}
+/>
+
+Pour insérer une image qui se trouve dans l'application dans `public/images/logo.png` :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _app.file("public/images/logo.png"),
+                    10, // Numéro de la colonne
+                    1  // Numéro de la ligne
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+> Documentation avec toutes les méthodes de l'objet <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/ss/usermodel/Picture.html" target="_blank">Image dans Apache POI</a>.
+
+## Fusionner les cellules
+
+Pour fusionner des cellules dans une région, nous utilisons la méthode `mergedRegion`.
+
+L'ordre des paramètres est :
+
+1. Ligne de début
+2. Colonne de début
+3. Ligne de fin
+4. Colonne de fin
+
+> Les références numériques de positionnement commencent toujours à **zéro**.
+
+Dans cet exemple ci-dessous, toutes les cellules de la colonne 10 à la colonne 15 qui se trouvent sur la ligne 3 seront fusionnées :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.mergedRegion(2, 9, 2, 14)
+            `
+        },
+    ]}
+/>
+
+## Cellules
+
+Pour obtenir l'objet qui représente une cellule :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Obtient la cellule qui se trouve dans la colonne B et à la ligne 2 :
+                const cellule = excel.cell(1, 1)
+            `
+        },
+    ]}
+/>
+
+> Les références numériques de positionnement commencent toujours à **zéro**.
+
+Exemple de comment afficher dans le log la formule de la cellule :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Affiche la formule de la ligne 2 et de la colonne B.
+                _log.info(
+                    "Formule cellule B2 : " + excel.cell(1, 1).getCellFormula()
+                )
+            `
+        },
+    ]}
+/>
+
+Exemple de comment obtenir la valeur texte d'une cellule :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Affiche la valeur texte de la cellule de la ligne 2 et colonne B.
+                _log.info(
+                    "Valeur cellule B2 : " + excel.cell(1, 1).getStringCellValue()
+                )
+            `
+        },
+    ]}
+/>
+
+> Documentation avec toutes les méthodes de l'objet <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCell.html" target="_blank">Cellule dans Apache POI</a>.
+
+## Lignes
+
+Pour obtenir l'objet qui représente une ligne :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Obtient l'objet qui représente la ligne 2.
+                const ligne = excel.row(1)
+            `
+        },
+    ]}
+/>
+
+> Les références numériques de positionnement commencent toujours à **zéro**.
+
+Dans l'exemple ci-dessus, si la ligne n'existe pas, une nouvelle ligne sera créée automatiquement.
+
+> Documentation avec toutes les méthodes de l'objet <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFRow.html" target="_blank">Ligne dans Apache POI</a>.
+
+## Insérer des données tabulaires
+
+Nous pouvons insérer un tableau de données en utilisant la méthode `addDataTable`.
+
+Comme les deux premiers paramètres définissent la position où le tableau de données doit être inséré, ce sont les numéros des lignes et des colonnes.
+
+> Attention, le positionnement des lignes et des colonnes dans le code commence toujours à partir de **zéro**.
+>
+> C'est-à-dire, la ligne 1 est la position `0` et la colonne A est également la position `0`.
+
+Ensuite, nous passons une liste de lignes, où chaque ligne contient une autre liste pour les colonnes, puis nous ajoutons une map avec la valeur de la cellule.
+
+Exemple complet :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list() // Lignes
+                        .add(
+                            _val.list() // Colonne
+                                .add(
+                                    _val.map() // Cellule
+                                        .set("value", "Nom")
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "Âge")
+                                )
+                        )
+                        .add( // Une autre ligne
+                            _val.list()
+                                .add( // Première colonne
+                                    _val.map()
+                                        .set("value", "Marie")
+                                )
+                                .add( // Deuxième colonne
+                                    _val.map()
+                                        .set("value", 26)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Apparence
+
+Dans la map des cellules, nous pouvons associer les styles déjà créés, en utilisant par exemple les styles définis dans la section de l'apparence et du formatage que nous avons vus précédemment.
+
+Voici l'exemple de comment associer les styles dans les cellules :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map()
+                                        .set("value", "Nom")
+                                        .set("style", styleEnTete)
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "Âge")
+                                        .set("style", styleEnTete)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Formules
+
+Pour insérer des formules, nous utilisons la clé `formula` dans la map de définitions de la cellule.
+
+Dans cet exemple, la somme de toutes les valeurs des autres cellules sera effectuée dans la dernière cellule :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Total")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+Pour obtenir la lettre de la colonne à partir du numéro de la colonne, la méthode `columnReference` peut être utilisée, ce qui peut aider dans la définition des formules. La même méthode peut également être utilisée pour obtenir le numéro de la colonne à partir de la lettre de référence, par exemple :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, _xls.columnReference('B'),
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Total")
+                                )
+                                .add(
+                                    _val.map().set(
+                                        "formula",
+                                        "SUM("+ _xls.columnReference(1) +"7:"+ _xls.columnReference(2) +"8)"
+                                )
+                            )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+## Feuilles
+
+Pour créer une nouvelle feuille de calcul (_sheet_) dans le document lui-même, observez l'exemple suivant :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nouvelleFeuille = excel.createSheet("Nouvelle Feuille")
+            `
+        },
+    ]}
+/>
+
+> Dans les méthodes de manipulation de cellules, d'images et de données, la référence de l'objet de la feuille peut être ajoutée comme premier paramètre.
+>
+> Selon la feuille active, il est possible de modifier la feuille active avec la méthode [activeSheet](/docs/library/resources/xls#activesheet).
+
+Exemple de comment insérer une image dans la nouvelle feuille :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    nouvelleFeuille,
+                    _app.file("public/images/logo.png"),
+                    10, // Numéro de la colonne
+                    1  // Numéro de la ligne
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+Exemple de comment insérer un tableau de données dans la nouvelle feuille :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    nouvelleFeuille,
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Total")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Activer
+
+Ainsi, pour éviter de devoir constamment indiquer dans les méthodes quelle feuille doit être traitée, comme dans les exemples ci-dessus, en alternative, il est possible d'indiquer quelle est la feuille active.
+
+> Toutes les méthodes de manipulation de cellules, d'images et de données utilisent la feuille activée quand **aucune** feuille spécifique n'est indiquée.
+
+Voyez deux façons d'activer une feuille spécifique, d'abord avec la référence de l'objet puis avec l'index de la feuille :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.activeSheet(maFeuille) // Objet de référence de la feuille.
+                excel.activeSheet(1) // Indice de la feuille qui sera activée.
+            `
+        },
+    ]}
+/>
+
+### Ressources utiles
+
+Exemples d'autres méthodes utiles dans la manipulation de feuilles.
+
+Obtenir une feuille par son nom :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Obtient la feuille à partir de son nom.
+                const maFeuille = excel.getSheet("Nom de la Feuille")
+            `
+        },
+    ]}
+/>
+
+Obtenir une feuille par son index :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Obtient la feuille à partir de son numéro.
+                const maFeuille = excel.getSheet(1)
+            `
+        },
+    ]}
+/>
+
+Pour obtenir le nombre total de feuilles :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Nombre total de feuilles.
+                const totalFeuilles = excel.getNumberOfSheets()
+            `
+        },
+    ]}
+/>
+
+Pour lister toutes les feuilles existantes dans le document.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Liste toutes les feuilles.
+                const toutesFeuilles = excel.getAllSheets()
+                for (const feuille of toutesFeuilles) {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                # Liste toutes les feuilles.
+                toutesFeuilles = excel.getAllSheets()
+                for feuille in toutesFeuilles:
+                    ...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                # Liste toutes les feuilles.
+                toutesFeuilles = excel.getAllSheets()
+                toutesFeuilles.each do |feuille|
+                    ...
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                // Liste toutes les feuilles.
+                val toutesFeuilles = excel.getAllSheets()
+                toutesFeuilles.forEach {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                // Liste toutes les feuilles.
+                def toutesFeuilles = excel.getAllSheets()
+                for (feuille in toutesFeuilles) {
+                    ...
+                }
+            `
+        },
+    ]}
+/>
+
+> Documentation avec toutes les méthodes de l'objet <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFSheet.html" target="_blank">Feuille dans Apache POI</a>.
+
+## Générer le fichier
+
+Dans les méthodes `save` et `output`, le binaire du fichier final est généré.
+
+Envoie le fichier généré comme sortie de données (`output`) du service :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.output("fichier.xlsx")
+            `
+        },
+    ]}
+/>
+
+Pour enregistrer le fichier généré dans le dossier `storage/filesystem` de l'application :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_storage.filesystem("server", "fichier.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Pour sauvegarder le fichier généré dans le dossier `/tmp` à partir du système de fichiers du disque dur :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_os.file("/tmp/fichier.xlsx"))
+            `
+        },
+    ]}
+/>
+
+## Modifier le fichier
+
+Nous pouvons modifier des fichiers en les ouvrant, en effectuant les modifications nécessaires, puis en enregistrant le nouveau fichier modifié.
+
+Voici ci-dessous quelques exemples de comment il est possible d'ouvrir des fichiers.
+
+Ouvrir un fichier à la racine de l'application :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_app.file("fichier.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Pour ouvrir le fichier généré dans le dossier `storage/filesystem` de l'application :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_storage.filesystem("server", "fichier.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Et aussi pour ouvrir le fichier dans le dossier `/tmp` à partir du système de fichiers du disque dur :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_os.file("/tmp/fichier.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Dans les exemples ci-dessus, la constante `excel` contiendra l'objet d'édition avec le contexte du fichier respectif, ainsi il est possible de faire tout type de manipulation.
+
+Lorsque vous terminez les modifications, effectuez la génération du nouveau fichier.
+
+> Il n'est pas possible de modifier directement le même fichier ouvert, il est nécessaire de générer un nouveau fichier avec un chemin différent.
+
+Pour modifier directement le même fichier, cela peut être fait en utilisant le `inputStream`.
+
+Voici un exemple de comment modifier la valeur d'une cellule :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fichierEntree = _app.file("fichier.xlsx").inputStream()
+                const excel = _xls.open(fichierEntree)
+
+                excel.setCellData(
+                    10, 1,
+                    _val.map()
+                        .set(
+                            "value",
+                            excel.getCellData(10, 1).getInt("value") + 10
+                        )
+                )
+
+                fichierEntree.close() // Ferme le fichier ouvert.
+                excel.save(_app.file("fichier.xlsx")) // Enregistre la nouvelle version.
+                `
+        },
+    ]}
+/>
+
+## Lire le fichier
+
+L'extraction de données de fichiers Excel se fait avec la méthode `read`.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const donnees = _xls.read(_app.file("fichier.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Les données sont obtenues dans une structure d'objets de type Values contenant des Listes, pour les feuilles, lignes et colonnes, et des Maps (clé et valeur) pour les cellules.
+
+Pour visualiser toutes les données, nous pouvons les placer comme sortie de données du service :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.json(donnees)
+            `
+        },
+    ]}
+/>
+
+Pour réaliser l'interaction, nous devons garder à l'esprit que la structure des données est organisée dans l'ordre suivant :
+
+1. `sheets` - Feuilles
+2. `rows` - Lignes
+3. `columns` - Colonnes
+
+Exemple d'une interaction complète :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const feuille of donnees.getValues("sheets")) {
+                    _out.println(\`<h4>Feuille : \${feuille.getInt("index")} - \${feuille.getString("name")}</h4>\`)
+                    for (const ligne of feuille.getValues("rows")) {
+                        _out.println(\`<h4>Ligne : \${ligne.getInt("row")}</h4>\`)
+                        _out.println("<p>")
+                        for (const colonne of ligne.getValues("columns")) {
+                            _out.print(\`\${colonne.getInt("row")}:\${colonne.getInt("column")}\`)
+                            _out.print(\` # \${colonne.getString("address")}\`)
+                            _out.print(\` # \${colonne.getString("type")}\`)
+                            _out.print(\` # \${colonne.getString("value")}\`)
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for feuille in donnees.getValues("sheets"):
+                    _out.println(f"<h4>Feuille : {feuille.getInt('index')} - {feuille.getString('name')}</h4>")
+                    for ligne in feuille.getValues("rows"):
+                        _out.println(f"<h4>Ligne : {ligne.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for colonne in ligne.getValues("columns"):
+                            _out.print(f"{colonne.getInt('row')}:{colonne.getInt('column')}")
+                            _out.print(f" # {colonne.getString('address')}")
+                            _out.print(f" # {colonne.getString('type')}")
+                            _out.print(f" # {colonne.getString('value')}")
+                            _out.println("<br>")
+                        _out.println("</p>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                donnees.getValues("sheets").each do |feuille|
+                    _out.println("<h4>Feuille : #{feuille.getInt("index")} - #{feuille.getString("name")}</h4>")
+                    feuille.getValues("rows").each do |ligne|
+                        _out.println("<h4>Ligne : #{ligne.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        ligne.getValues("columns").each do |colonne|
+                            _out.print("#{colonne.getInt("row")}:#{colonne.getInt("column")}")
+                            _out.print(" # #{colonne.getString("address")}")
+                            _out.print(" # #{colonne.getString("type")}")
+                            _out.print(" # #{colonne.getString("value")}")
+                            _out.println("<br>")
+                        end
+                        _out.println("</p>")
+                    end
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                donnees.getValues("sheets").forEach {
+                    val feuille = it
+                    _out.println("<h4>Feuille : \${feuille.getInt("index")} - \${feuille.getString("name")}</h4>")
+                    feuille.getValues("rows").forEach {
+                        val ligne = it
+                        _out.println("<h4>Ligne : \${ligne.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        ligne.getValues("columns").forEach {
+                            val colonne = it
+                            _out.print("\${colonne.getInt("row")}:\${colonne.getInt("column")}")
+                            _out.print(" # \${colonne.getString("address")}")
+                            _out.print(" # \${colonne.getString("type")}")
+                            _out.print(" # \${colonne.getString("value")}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (feuille in donnees.getValues("sheets")) {
+                    _out.println("<h4>Feuille : \${feuille.getInt('index')} - \${feuille.getString('name')}</h4>")
+                    for (ligne in feuille.getValues("rows")) {
+                        _out.println("<h4>Ligne : \${ligne.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for (colonne in ligne.getValues("columns")) {
+                            _out.print("\${colonne.getInt('row')}:\${colonne.getInt('column')}")
+                            _out.print(" # \${colonne.getString('address')}")
+                            _out.print(" # \${colonne.getString('type')}")
+                            _out.print(" # \${colonne.getString('value')}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+    ]}
+/>
+
+Le type de la cellule est obtenu via le code :
+
+- `colonne.getString("type")`
+
+Et les types supportés sont :
+
+- `string` - Contenu textuel.
+- `numeric` - Contenu numérique ou de date et/ou heure.
+- `boolean` - Vrai ou faux.
+- `blank` - Cellule vide.
+- `formula` - Cellule qui contient une formule.
+- `error` - Erreur lors du traitement de la cellule.
+
+### Paramètres supplémentaires
+
+Pour chaque type de cellule, nous avons quelques paramètres supplémentaires.
+
+`string` - Type de cellule avec contenu textuel.
+
+- `value` - Texte de la cellule.
+- `richValue` - Formatages de la cellule.
+
+`numeric` - Type de cellule avec contenu numérique, ou dates et aussi heures.
+
+- `value` - Valeur du contenu numérique de la cellule.
+  
+Dans le cas de dates et heures, nous avons ces paramètres supplémentaires :
+
+- `localDateTime` - Objet Java Time LocalDateTime qui représente la valeur de date et heure de la cellule.
+- `localDate` - Objet Java Time LocalDate qui représente la valeur de date de la cellule.
+- `localTime` - Objet Java Time LocalTime qui représente la valeur d'heure de la cellule.
+- `instant` - Objet Java Time Instant qui représente la valeur de date et/ou heure de la cellule.
+- `date` - Objet Date de Java qui représente la valeur de date et/ou heure de la cellule.
+
+`boolean` - Type de cellule avec contenu booléen, c'est-à-dire vrai ou faux.
+
+- `value` - Valeur de type _boolean_, `true` ou `false`.
+
+`blank` - Type de cellule sans contenu, donc ne contient pas de paramètres supplémentaires.
+
+`formula` - Type de cellule qui contient des formules de calcul.
+
+- `value` - Valeur finale résultant du calcul.
+- `formula` - Contient l'expression de la formule utilisée pour le calcul.
+
+`error` - Type de cellule qui contient une erreur.
+
+- `value` - Valeur en octet de l'erreur générée.
+- `code` - En cas d'erreurs dans le calcul de la formule, fournit ici le code de l'erreur survenue.
+
+## Vidéos
+
+Voici quelques vidéos illustrant comment générer des fichiers Excel/XLSX par programmation :
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/nTnoqEpLghQ?si=8engICqRqNFUPi_i" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

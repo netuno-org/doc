@@ -1,21 +1,21 @@
 ---
 sidebar_position: 2
 id: config
-title: Config
+title: Configuration
 ---
 
 # Configure the Application
 
-This guide presents the initial steps to configure the Demo application language, the database, and enable automatic commands executed with the server.
+This guide presents the initial steps to configure the Demo application's language and database, and to enable automatic commands executed with the server.
 
 All changes are made in the `_development.json` configuration file of the **Demo** application, located in the /apps/demo/**config** folder.
 
-## Prerequisites
+### Prerequisites
 
-Before editing the configuration, confirm the following:
+Before editing the configuration, confirm these points:
 
 - The Demo application has already been created and initialized.
-- You are in the root of the Netuno project.
+- You are at the root of the Netuno project.
 - A code editor is open at `/apps/demo/config/development.json`.
 - You will be able to restart the server after saving the changes.
 
@@ -23,12 +23,12 @@ Before editing the configuration, confirm the following:
 
 ### 1. Application
 
-In the configuration file, locate the `language` and `locale` fields to change the application language.
+In the configuration file, locate the `language` and `locale` fields to change the application's language.
 
-```json  title="/apps/demo/config/development.json"
+```json title="/apps/demo/config/development.json"
 {
-  "language": "en_US",
-  "locale": "en_US",
+  "language": "pt_PT",
+  "locale": "pt_PT",
 }
 ```
 
@@ -47,7 +47,7 @@ Change the **"name"** field to define the corresponding database:
 - `demo_en`: English database.
 
 ```json title="/apps/demo/config/development.json"
- {
+{
  ...
 "db": {
         "default": {
@@ -55,7 +55,7 @@ Change the **"name"** field to define the corresponding database:
             "engine": "h2",
             "port": "",
             "host": "",
-            "name": "demo_en",
+            "name": "demo_pt",
             "username": "sa"
         }
     },
@@ -65,13 +65,13 @@ Change the **"name"** field to define the corresponding database:
 
 ### 3. Enable Multiple Commands
 
-Netuno allows multiple commands to run simultaneously during server startup, displaying their outputs in the same console.
+Netuno allows executing multiple commands simultaneously at server startup, displaying the outputs in the same console.
 
-By default, the **Demo** application includes the `bun run watch` command configured but disabled. This command automatically compiles any changes made to the backoffice code files.
+By default, the **Demo** application ships with the `bun run watch` command configured but disabled. This command automatically compiles any change made to the backoffice code files.
 
-To enable it, locate the **"commands"** array and change the value of the **enabled** field from false to **true**.
-
-```json  title="/apps/demo/config/development.json"
+To enable it, locate it in the **"commands"** array and change the **enabled** field value from false to **true**.
+ 
+```json title="/apps/demo/config/development.json"
 "commands": [
         {
             "enabled": true,
@@ -81,25 +81,27 @@ To enable it, locate the **"commands"** array and change the value of the **enab
     ],
 ```
 
-### Parameters of the "commands" Object
+### "commands" Object Parameters
 
-- `enabled`: enables (true) or disables (false) automatic command execution.
-- `path`: defines the application path (folder) where the command will run.
+- `enabled`: activates (true) or deactivates (false) the automatic execution of the command.
+- `path`: defines the path (folder) of the application where the command will be executed.
 - `command`: defines the command that will be executed in the terminal.
 
-:::tip 
+:::tip
 You can add other commands inside the `"commands"` array, as long as you keep the same object structure.
 :::
 
+
 After saving the configuration file, restart the Netuno server to apply the changes.
+
 
 ## Expected Result
 
-After restarting the server, confirm the following:
+After restarting the server, confirm the following points:
 
-- The Demo application is using the configured language.
-- The console shows the execution of the `bun run watch` command, if it is enabled.
+- The Demo application is in the configured language.
+- The console displays the execution of the `bun run watch` command, if it is enabled.
 
 ## Next Steps
 
-Proceed to the next **Form** step to explore and modify the demo application.
+Proceed to the next **Form** step to explore and modify the demonstration application.

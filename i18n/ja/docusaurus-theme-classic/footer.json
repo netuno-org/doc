@@ -1,0 +1,58 @@
+{
+  "link.title.Open Source": {
+    "message": "オープンソース",
+    "description": "フッター内の title=Open Source のフッターリンク列のタイトル"
+  },
+  "link.title.Community": {
+    "message": "コミュニティ",
+    "description": "フッター内の title=Community のフッターリンク列のタイトル"
+  },
+  "link.title.More": {
+    "message": "その他",
+    "description": "フッター内の title=More のフッターリンク列のタイトル"
+  },
+  "link.item.label.Installation": {
+    "message": "インストール",
+    "description": "label=Installation のフッターリンクのラベル（/docs/get-started/installation へのリンク）"
+  },
+  "link.item.label.Releases": {
+    "message": "リリース",
+    "description": "label=Releases のフッターリンクのラベル（https://github.com/netuno-org/platform/releases へのリンク）"
+  },
+  "link.item.label.Documentation": {
+    "message": "ドキュメント",
+    "description": "label=Documentation のフッターリンクのラベル（https://github.com/netuno-org/doc へのリンク）"
+  },
+  "link.item.label.YouTube": {
+    "message": "YouTube",
+    "description": "label=YouTube のフッターリンクのラベル（https://www.youtube.com/channel/UCYY1Nz6T2NJtP29vba2fqkg へのリンク）"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "label=Discord のフッターリンクのラベル（https://discord.gg/4sfXG6YWFu へのリンク）"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "label=LinkedIn のフッターリンクのラベル（https://www.linkedin.com/company/netuno-org/ へのリンク）"
+  },
+  "link.item.label.Instagram": {
+    "message": "Instagram",
+    "description": "label=Instagram のフッターリンクのラベル（https://www.instagram.com/netuno_org/ へのリンク）"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "label=GitHub のフッターリンクのラベル（https://github.com/netuno-org/ へのリンク）"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "label=Twitter のフッターリンクのラベル（https://twitter.com/netuno_org へのリンク）"
+  },
+  "link.item.label.Facebook": {
+    "message": "Facebook",
+    "description": "label=Facebook のフッターリンクのラベル（https://www.facebook.com/netuno.org/ へのリンク）"
+  },
+  "copyright": {
+    "message": "Copyright © 2025 <a target=\"_blank\" href=\"https://www.sitana.pt/pt\">Sitana</a>",
+    "description": "フッターの著作権表示"
+  }
+}

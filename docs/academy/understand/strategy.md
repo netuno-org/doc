@@ -4,76 +4,74 @@ id: strategy
 title: Strategy
 ---
 
-In this section the user will find explanations and examples on how _Netuno_ can be applied into the projects.
+Find here explanations and examples of how Netuno can be applied to different types of projects.
 
-Considering that _Netuno_ allows the developement in any type of `web-based project` such as **REST API**, **Backoffice**, **Data Integration**, **Websites**, **Portals**, **Intranet**, integration with mobile applications and others.
+It is important to keep in mind that Netuno allows virtually any type of web-based project to be carried out, such as REST API, backoffice, data integration, websites, portals, intranet, integration with mobile applications, among many others.
 
-Over time _Netuno_ has been developed as a result of aggregate strong and reliable technologies, building a consistent environment from the programmer to the end-user. Consequently, these aggregations tend to bring great benefits in many technical challenges by implementing web-based solutions.
+Over time, Netuno has been developed as the result of an aggregate of robust and reliable technologies, creating a consistent environment from the developer to the end user.
+However, these aggregations of technologies tend to bring great benefits in the various technical challenges of implementing web-based solutions.
 
-Is important to highlight that reducing implementation time will allow you to focus on what really matters, for example, implementation issues having as a consequence in the final result quality increased.
+The benefit of reducing implementation time stands out, since it allows focusing on the truly important aspects of the implementation, resulting in an increase in the quality of the final solution.
 
 ![Netuno & Web Solutions](/docs/assets/business/overview.svg "Netuno & Web Solutions.")
 
-Benefits as this come from Excellence and High Standard Platforms.
+Only a mature platform with tangible results, such as Netuno, can offer this type of benefit.
 
-_Netuno_ advantages are to ensure that:
+In practice, the advantages of Netuno ensure that projects have lower costs, given that development time will be shorter; higher quality, since the developer will have more time to focus on the most relevant issues; greater confidence in the solution on the part of the stakeholders; consequently, the demands of short-duration projects will also increase.
 
-- Projects have lower costs, as will reduce development time; 
-- Higher Quality, as our programmers will have more time to focus to solve important issues;
-- Greater confidence in the solution by stakeholders; consequently it will also increase the demand for short-term projects.
+Discover these and other advantages you can obtain by using Netuno in your projects.
 
-As you discover this advantages you will notice using _Netuno_ with the most challenging projects.
+We will help you extract the potential of Netuno in the different types of challenges.
 
-It is up to you to use Netuno to solve your challenges, knowing that we are here to help you in whatever is necessary through our social networks and forum.
+It is up to you to use Netuno to solve your challenges, knowing that we are here to help with whatever is needed through our direct contacts, social networks and forum.
 
-Enjoy this powerful Web Development Tool that will make your life easier in many ways during the project development process.
+Enjoy a powerful web development tool that will make many things easier for you in the project development process.
 
+Netuno is a server with frameworks, with a backoffice both to assist development and to carry out the administration and manipulation of data online, and all of this available in a multi-application way. Additionally, it provides support for multiple databases and multiple programming languages.
 
-Netuno is a server with a framework that has a backoffice both to assist the development and to perform the administration and manipulation of data online, all this available multi-applicationally. Additionally, it provides support for multiple databases and multiple programming languages.
+For these and other reasons, it is characterized as a platform, especially for deploying web-based projects with the best and most recent technologies.
 
-For these and other reasons it is characterized as a platform, especially for the implementation of web-based projects with the best and latest technologies.
+![Netuno is the launch platform for Web projects](/docs/assets/business/introduction.jpg "Netuno is the launch platform for Web projects.")
 
-![Netuno is the platform for launching Web projects](/docs/assets/business/introduction.jpg "Netuno is the platform for launching Web projects.")
+Thus, the scenarios in which Netuno can be used are many, but gradually, by using Netuno in projects here and there, you will begin to discover how much Netuno helps to solve problems with various levels of complexity, where there are no limits.
 
-The scenarios where Netuno can be used are many, but slowly using Netuno in projects here and there will begin to discover how much Netuno helps solve problems and complexity.
+Netuno is being used in various types of projects, such as:
 
-Netuno is being used in various fields, such as:
-
-- In industry with the collection of manufacturing information.
-- In accounting with the management of processes and tasks.
+- In industry, with the collection of manufacturing information.
+- In accounting, with the management of processes and tasks.
 - In the control of servers and virtual machines.
-- In the control of hosting and mails services.
+- In the control of hosting and mail services.
 - In the management and sharing of passwords.
-- In integration with SAP.
+- In integrations with SAP.
 - In integration with BPM.
-- As backoffice of mobile applications for Android and iOS.
-- As auxiliary backoffice and orchestration of portals and online stores.
+- As a backoffice for mobile applications for Android and iOS.
+- As an auxiliary backoffice and orchestration for portals and online stores.
 - In alarm systems.
-- In the generation of reports.
+- In report generation.
 - And much more...
 
-> The Netuno platform is free, [start now](/docs/get-started/installation).
+> Did you know that Netuno is free and open source? [Get started now](/docs/get-started/installation).
 
-With the automatic data management interface that supports user and group profiles, it is possible to use Netuno as a backoffice but also as an application interface for the end user, because it quickly allows you to create an experimental prototype of the project and start testing and filing your data structure to provide a strong foundation for the programming that will be carried out.
+With the automatic data management interface that supports user profiles and groups, it is possible to use Netuno as a backoffice, but also as an application interface for the end user, since it quickly allows you to create an experimental prototype of the project, start testing and refining its data structure to provide a strong foundation for the programming that will be carried out.
 
-With the low-code REST API construction and OpenAPI 3.0 support it allows easy integration with other systems, mobile applications, portals and online stores.
+With the construction of low-code REST APIs and support for OpenAPI 3.0, it complies with the most current standards in integration with other systems, mobile applications, portals and online stores.
 
-With the generation of applications with the frontend already integrated with ReactJS and Ant.Design it is possible to develop modern, intuitive and responsive interfaces for the end user.
+With the generation of applications with the frontend already integrated with ReactJS and Ant.Design, it is possible to develop modern, intuitive and responsive interfaces for the end user.
 
-It integrates the NPM + WebPack execution with the server and thus, in a single output, allows to understand what happens and quickly visualize the problems both at backend and frontend areas.
+It integrates the execution of NPM + WebPack with the server, and thus, in a single output, allows you to understand what is happening and quickly visualize problems both at the backend and frontend level.
 
-The Netuno framework is vast allowing the rapid development of the main requirements most used in development and supports integration with any external library in Java, Kotlin, command line, APIs, among others.
+Netuno's framework is vast, allowing the rapid development of the main requirements most used in development, and it supports integrating any external library in Java, Kotlin, command line, APIs, among others.
 
-It supports configurations by environments of development, testing and production, automatically generates the construction of the database via code and allows it to be customized, allows the extension of the forms generated automatically through components and actions to measure, generates the visualization in diagram of the database, allows the execution of queries in the database via browser, among many other features.
+It supports configurations for development, testing and production environments, automatically generates the construction of the database via code and allows it to be customized, allows extending the automatically generated forms through custom components and actions, generates the diagram visualization of the database, allows the execution of queries in the database via the browser, among many other features.
 
-The Netuno server is prepared to provide applications associated with web domains and customize the endpoints (addresses).
+The Netuno server is prepared to make applications associated with web domains available and to customize the endpoints (addresses).
 
-Conquer new challenges through the advantages that Netuno offers, gain time and save money in project development.
+Conquer new challenges through the advantages that Netuno offers, save time and save money in project development.
 
-![Netuno is the platform for launching Web projects](/docs/assets/business/introduction-conquest.jpg "Netuno is the platform for launching Web projects.")
+![Netuno is the launch platform for Web projects](/docs/assets/business/introduction-conquest.jpg "Netuno is the launch platform for Web projects.")
 
-[Start now](/docs/get-started/installation) explore Netuno and enjoy these and other advantages you will discover.
+[Get started now](/docs/get-started/installation) exploring Netuno and enjoy these and other advantages that you will discover.
 
-You can also collaborate with us when requesting new features you need or report unwanted situations.
+You can also collaborate with us by requesting new features that you need or reporting unwanted situations.
 
-Become part of our community and let's do great projects together.
+Come be part of our community and let's carry out great projects together.
