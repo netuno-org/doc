@@ -4,7 +4,7 @@ id: introduction
 title: Introduction
 ---
 
-Cette section contient la grande majorité de la logique back-end concernant Netuno. Vous y trouverez des définitions, des explications et des extraits de code qui vous aideront à parcourir une logique fonctionnelle sur la façon de construire votre site Web à partir de Netuno.
+Cette section contient la grande majorité de la logique back-end sur Netuno. Vous y trouverez des définitions, des explications et des extraits de code qui vous aideront à parcourir une logique fonctionnelle sur la façon de construire votre site Web à partir de Netuno.
 
 > La plateforme Netuno est gratuite, [commencez dès maintenant](/docs/get-started/installation).
 
@@ -16,7 +16,7 @@ Découvrez comment explorer le développement sur Netuno :
 
 ## Objets
 
-Cette section contient les informations sur les objets de Netuno, notamment Values.
+Cette section contient les informations sur les Objets de Netuno, notamment Values.
 
 * [Values](/docs/library/objects/Values)
 

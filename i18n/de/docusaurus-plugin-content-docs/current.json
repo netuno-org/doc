@@ -1,0 +1,118 @@
+{
+  "version.label": {
+    "message": "Nächste",
+    "description": "The label for version current"
+  },
+  "sidebar.academySidebar.category.Demonstration": {
+    "message": "Demonstration",
+    "description": "The label for category App Demo in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Demonstration.link.generated-index.description": {
+    "message": "Machen Sie eine Entwicklungstour, indem Sie die Standard-Demozuwendung ändern.",
+    "description": "The generated-index page description for category App Demo in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.User Interface": {
+    "message": "Benutzeroberfläche",
+    "description": "The label for category User Interface in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.User Interface.link.generated-index.description": {
+    "message": "Wie die Benutzeroberfläche, die Formularerstellung und die Datenverwaltung funktionieren.",
+    "description": "The generated-index page description for category User Interface in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Explore": {
+    "message": "Entdecken",
+    "description": "The label for category Explore in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Explore.link.generated-index.description": {
+    "message": "Entdecken Sie einige Funktionen und allgemeine Konzepte.",
+    "description": "The generated-index page description for category Explore in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Understand": {
+    "message": "Verstehen",
+    "description": "The label for category Explore in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Understand.link.generated-index.description": {
+    "message": "Allgemeine Anwendbarkeit der Plattform, strategisches Potenzial.",
+    "description": "The generated-index page description for category Explore in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Server Backend": {
+    "message": "Server-Backend",
+    "description": "The label for category Server in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Server Backend.link.generated-index.description": {
+    "message": "Tutorials zum in die polyglotte Low-Code-Entwicklung integrierten Backend.",
+    "description": "The generated-index page description for category Server in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Database": {
+    "message": "Datenbank",
+    "description": "The label for category Database in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Database.link.generated-index.description": {
+    "message": "Tutorials zur Datenbankverwaltung.",
+    "description": "The generated-index page description for category Database in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Service": {
+    "message": "Dienst",
+    "description": "The label for category Service in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Service.link.generated-index.description": {
+    "message": "Tutorials zu in Diensten verwendeten Ressourcen.",
+    "description": "The generated-index page description for category Service in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Website Frontend": {
+    "message": "Website-Frontend",
+    "description": "The label for category Website in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Website - Frontend.link.generated-index.description": {
+    "message": "Fortgeschrittene Frontend-Entwicklung und Integrationen.",
+    "description": "The generated-index page description for category Website in sidebar academySidebar"
+  },
+  "sidebar.librarySidebar.category.App Structure": {
+    "message": "App-Struktur",
+    "description": "The label for category App Folders in sidebar librarySidebar"
+  },
+  "sidebar.librarySidebar.category.App Structure.link.generated-index.description": {
+    "message": "Die Ordner- und Dateistruktur der Anwendungen im Detail.",
+    "description": "The generated-index page description for category App Folders in sidebar librarySidebar"
+  },
+  "sidebar.librarySidebar.category.Resources": {
+    "message": "Ressourcen",
+    "description": "The label for category Resources in sidebar librarySidebar"
+  },
+  "sidebar.librarySidebar.category.Resources.link.generated-index.description": {
+    "message": "Alle verfügbaren Low-Code-Ressourcen.",
+    "description": "The generated-index page description for category Resources in sidebar librarySidebar"
+  },
+  "sidebar.librarySidebar.category.Objects": {
+    "message": "Objekte",
+    "description": "The label for category Objects in sidebar librarySidebar"
+  },
+  "sidebar.librarySidebar.category.Objects.link.generated-index.description": {
+    "message": "Wichtigste verfügbare Low-Code-Objekte.",
+    "description": "The generated-index page description for category Objects in sidebar librarySidebar"
+  },
+  "sidebar.academySidebar.category.CLUAR": {
+    "message": "CLUAR",
+    "description": "The label for category CLUAR in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.CLUAR.link.generated-index.description": {
+    "message": "Eine gebrauchsfertige Lösung für Content-Management und mehrsprachige Websites.",
+    "description": "The generated-index page description for category CLUAR in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Components": {
+    "message": "Komponenten",
+    "description": "The label for category Components in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Components.link.generated-index.description": {
+    "message": "Tutorials zu den CLUAR-Inhaltskomponenten — Banner, Inhalt, Auflistung, Slider und Funktionalität.",
+    "description": "The generated-index page description for category Components in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Pages": {
+    "message": "Seiten",
+    "description": "The label for category Pages in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Pages.link.generated-index.description": {
+    "message": "Tutorials zur Entität Seite in CLUAR — Felder, Versionierung, Veröffentlichung und Klonierung.",
+    "description": "The generated-index page description for category Pages in sidebar academySidebar"
+  }
+}

@@ -16,21 +16,21 @@ Para dar inicio a este tutorial, el primer paso es iniciar el servidor de la apl
 
 Abra el terminal de su sistema operativo y navegue hasta la carpeta raíz donde está instalada la plataforma Netuno (por ejemplo, `📁 /netuno`).
 
-Ejecute el comando a continuación para iniciar el servidor:
+Ejecute el comando siguiente para iniciar el servidor:
 
 ```bash
 ./netuno server
 ```
 
 :::info Alternativa de inicialización
-Si el comando principal no funciona o la aplicación Demo no se carga por defecto, fuerce la inicialización especificando el parámetro de la aplicación:
+Si el comando principal no funciona o la aplicación Demo no se carga de forma predeterminada, fuerce la inicialización especificando el parámetro de la aplicación:
 :::
 
 ```bash
 ./netuno server app=demo
 ```
 
-### Elija el Editor de Código
+### Elija el editor de código
 Puede utilizar el editor de código de su preferencia para desarrollar tanto el backend como el frontend de su aplicación.
 
 Si aún no tiene uno, recomendamos las siguientes opciones gratuitas y de código abierto:
@@ -47,4 +47,4 @@ Esta carpeta contiene todos los archivos y configuraciones de la nueva aplicaci�
 
 ### Próximos pasos
 
-Con el servidor en ejecución y los archivos abiertos en el editor de código, el entorno está listo. Avance a la siguiente etapa del tutorial para comenzar a explorar y modificar la aplicación.
+Con el servidor en ejecución y los archivos abiertos en el editor de código, el entorno está listo. Avance a la siguiente etapa del tutorial para empezar a explorar y modificar la aplicación.

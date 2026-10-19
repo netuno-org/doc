@@ -7,7 +7,7 @@ sidebar_label: Serveur, Commandes & Astuces
 
 # Commandes du Serveur
 
-Référence des principales commandes de Netuno. Exécutez-les dans le **terminal**, depuis le dossier où Netuno est installé.
+Référence des principales commandes de Netuno. Exécutez-les dans le **terminal**, à partir du dossier où Netuno est installé.
 
 :::tip
 Vous ne savez pas comment accéder au dossier de Netuno ? Consultez le guide d'[Installation](/docs/get-started/installation).
@@ -25,12 +25,12 @@ Démarre le serveur avec l'application de `démonstration`.
 
 ---
 
-## Démarrer le serveur sur l'APP
+## Démarrer le serveur dans l'APP
 
-Démarre le serveur avec l'application spécifique définie par le paramètre `app`. Si aucune n'est définie, l'application de démonstration sera démarrée.
+Démarre le serveur avec l'application spécifiée définie par le paramètre `app`. Si aucune n'est définie, l'application de démonstration sera démarrée.
 
 ```bash
-./netuno server app=NOM_APPLICATION
+./netuno server app=APP_NAME
 ```
 
 ---
@@ -65,9 +65,9 @@ Présente les informations de performance les plus récentes, stockées dans `lo
 
 ---
 
-## Mise à jour vers la Version Stable
+## Mise à jour vers la version stable
 
-Met à jour Netuno vers la dernière version stable.
+Met à jour Netuno vers la version stable la plus récente.
 
 ```bash
 ./install-stable
@@ -75,9 +75,9 @@ Met à jour Netuno vers la dernière version stable.
 
 ---
 
-## Mise à jour vers la Version en Test
+## Mise à jour vers la version en test
 
-Met à jour Netuno vers la dernière version en développement.
+Met à jour Netuno vers la version la plus récente en développement.
 
 ```bash
 ./install-testing

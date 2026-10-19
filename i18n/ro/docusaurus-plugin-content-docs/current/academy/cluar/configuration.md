@@ -5,7 +5,7 @@ title: Configurare
 sidebar_label: Configurare
 ---
 
-> Procesul de mai jos este orientat pentru medii de dezvoltare Linux.
+> Procesul de mai jos este destinat mediilor de dezvoltare Linux.
 
 ## 1. Numele aplicației
 
@@ -27,17 +27,17 @@ cp config/sample.json config/_production.json
 
 Apoi, modifică proprietatea `name` din rădăcina JSON-ului la numele aplicației ales la pasul 1.
 
-> Fișierele `config/_development.js` și `config/_production.js` există deja în proiect și servesc pentru configurații dinamice/programatice — de obicei nu este nevoie să le modifici; cel care se editează este `.json`-ul corespunzător.
+> Fișierele `config/_development.js` și `config/_production.js` există deja în proiect și servesc pentru configurații dinamice/programatice — de obicei nu trebuie să le atingi; ceea ce se editează este `.json`-ul corespunzător.
 
 ## 3. Baza de date
 
-CLUAR are nevoie de o conexiune la o bază de date PostgreSQL. [Învață să configurezi aici](https://doc.netuno.org/pt/docs/academy/server/database/psql/).
+CLUAR are nevoie de o conexiune la o bază de date PostgreSQL. [Învață cum să configurezi aici](https://doc.netuno.org/pt/docs/academy/server/database/psql/).
 
-În `config/_development.json` (sau `_production.json`), localizează `db.default` și înlocuiește cu datele bazei tale de date:
+În `config/_development.json` (sau `_production.json`), găsește `db.default` și înlocuiește cu datele bazei tale de date:
 
 ```json
 "db": {"default": {
-    "password": "Parola-BD-SeCr3t-Aici",
+    "password": "ParolaTa-DB-SeCr3t-Aici",
     "engine": "pg",
     "port": "5432",
     "host": "localhost",
@@ -54,7 +54,7 @@ CLUAR are nevoie de o conexiune la o bază de date PostgreSQL. [Învață să co
 "auth": {
     "jwt": {
         "enabled": true,
-        "secret": "SecretulAcestaAre32Caractere!!!!",
+        "secret": "AcestSecretAreExact32Caractere!!",
         "expires": {
             "access": 1440,
             "refresh": 1440
@@ -63,11 +63,11 @@ CLUAR are nevoie de o conexiune la o bază de date PostgreSQL. [Învață să co
 }
 ```
 
-> Se recomandă generarea secretului cu un [instrument de generare de cod aleatoriu](https://www.random.org/passwords/).
+> Se recomandă generarea secretului cu un [instrument de generare a codului aleatoriu](https://www.random.org/passwords/).
 
 ## 5. Altcha (alternativă la reCAPTCHA)
 
-CLUAR acceptă [Altcha](https://altcha.org/) — o alternativă la Google reCAPTCHA bazată pe proof-of-work (*proof-of-work*), fără a depinde de servicii externe și fără a colecta date despre vizitator. Este folosit la autentificare și la înregistrarea utilizatorilor.
+CLUAR suportă [Altcha](https://altcha.org/) — o alternativă la Google reCAPTCHA bazată pe dovada muncii (*proof-of-work*), fără a depinde de servicii externe și fără a colecta datele vizitatorului. Este folosit la autentificare și la înregistrarea utilizatorilor.
 
 Există două comutatoare, în locuri diferite din `.json`:
 
@@ -82,7 +82,7 @@ Există două comutatoare, în locuri diferite din `.json`:
 }
 ```
 
-- `auth.altcha.enabled` — activează verificarea Altcha pe partea de server (Netuno). Fără aceasta setată la `true`, Altcha nu este validat, chiar dacă apare pe site.
+- `auth.altcha.enabled` — activează verificarea Altcha pe partea serverului (Netuno). Fără aceasta setată la `true`, Altcha nu este validat, chiar dacă apare pe site.
 - `auth.altcha.admin.enabled` — activează Altcha și la autentificarea în **backoffice-ul Netuno** (portul `9000`), separat de autentificarea pe site.
 
 ```json
@@ -102,7 +102,7 @@ Există două comutatoare, în locuri diferite din `.json`:
 }
 ```
 
-- `settings.cluar.website.auth.altcha` — oglindește aceeași opțiune pe partea de site: controlează dacă widgetul Altcha este afișat în formularul de autentificare/înregistrare al site-ului.
+- `settings.cluar.website.auth.altcha` — oglindește aceeași opțiune pe partea site-ului: controlează dacă widgetul Altcha este afișat în formularul de autentificare/înregistrare al site-ului.
 
 > Pentru ca Altcha să funcționeze, activează `enabled: true` **pe ambele părți** — serverul trebuie să valideze, iar site-ul trebuie să afișeze widgetul.
 
@@ -115,7 +115,7 @@ Există două comutatoare, în locuri diferite din `.json`:
     "cluar": {
         "website": {
             "url": "http://localhost:3000",
-            "name": "Nume site",
+            "name": "Numele site-ului",
             "analytics": null,
             "mapbox": {
                 "dark": false,
@@ -136,10 +136,10 @@ Există două comutatoare, în locuri diferite din `.json`:
 }
 ```
 
-- `website.url` — URL-ul pe care va rula site-ul.
+- `website.url` — URL-ul unde va rula site-ul.
 - `website.name` — numele site-ului.
 - `website.services.api` — URL-ul API-ului de servicii Netuno, consumat de site.
-- `website.auth.providers` — activează/dezactivează metode de autentificare socială (Discord, Facebook, GitHub, Google).
+- `website.auth.providers` — activează/dezactivează metodele de autentificare socială (Discord, Facebook, GitHub, Google).
 - `uglifyjs` — controlează dacă codul site-ului este minificat.
 
 ## 7. Pornirea automată a site-ului (opțional)
@@ -157,8 +157,8 @@ Site-ul poate porni automat împreună cu serverul Netuno, prin lista `commands`
 ]
 ```
 
-Este suficient să pui `enabled` ca `true` în intrarea cu `"path": "website"`. Astfel, când rulezi `./netuno server app=cluar`, site-ul pornește împreună fără să fie nevoie să îl pornești manual într-un alt terminal.
+Este suficient să setezi `enabled` la `true` în intrarea cu `"path": "website"`. Astfel, la rularea `./netuno server app=cluar`, site-ul pornește împreună fără a fi nevoie să îl inițiezi manual într-un alt terminal.
 
-## Următorul pas
+## Pasul următor
 
-Cu aplicația configurată, continuă cu [Execuție](/docs/academy/cluar/execution).
+Cu aplicația configurată, continuă la [Execuție](/docs/academy/cluar/execution).

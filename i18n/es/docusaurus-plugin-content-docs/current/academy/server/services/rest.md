@@ -6,13 +6,13 @@ sidebar_label: REST - Servicios Web
 
 ## Introducción
 
-Las peticiones REST son direcciones en línea que devuelven información de datos procesados en el servidor, que contiene la lógica de negocio de los datos que exigen seguridad y fiabilidad, con integración de la base de datos.
+Las peticiones REST son direcciones en línea que devuelven información de datos procesados en el servidor, que contiene la lógica de negocio de los datos que requieren seguridad y fiabilidad, con integración de la base de datos.
 
 > Más sobre <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/REST" target="_blank">REST</a>
 
-La construcción de la API REST se basa en los Servicios de Netuno.
+La construcción de la API REST se realiza a partir de los Servicios de Netuno.
 
-## TODOS
+## ALL
 
 Para crear un servicio en Netuno que responda a cualquier tipo de método HTTP:
 
@@ -24,7 +24,7 @@ En el navegador, este servicio se ejecutará para todos los tipos de peticiones 
 
 ## GET
 
-Las direcciones de tipo GET se utilizan normalmente para operaciones de listado o de obtención de datos.
+Las direcciones de tipo GET se utilizan normalmente para operaciones de listado u obtención de datos.
 
 Para crear un servicio en Netuno que responda solo al tipo de método GET, utilice una de estas formas:
 
@@ -76,7 +76,7 @@ Este servicio se ejecutará solo para el tipo de petición DELETE en la direcci�
 
 ## OPTIONS
 
-En la integración con el frontend, durante el proceso de validación del CORS, el navegador realiza la llamada de tipo OPTIONS.
+En la integración con el frontend, durante el proceso de validación de CORS, el navegador realiza la llamada de tipo OPTIONS.
 
 > Más sobre <a href="https://pt.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank">CORS</a>.
 
@@ -99,7 +99,7 @@ Este servicio se ejecutará para el tipo de petición OPTIONS en la dirección:
 
 ## Clientes y Ejecución de Pruebas
 
-Para ejecutar pruebas a los servicios con el tipo de método específico, puede utilizar programas propios que realizan pruebas sobre API REST, como:
+Para ejecutar pruebas de los servicios con el tipo de método específico, puede utilizar programas propios que realizan pruebas sobre API REST, como:
 
 - <a href="https://www.postman.com/" target="_blank">Postman</a>
 - <a href="https://insomnia.rest/" target="_blank">Insominia</a>
@@ -128,7 +128,7 @@ Otra forma de enviar parámetros:
 curl -X POST -d 'nombre=Prueba' -d 'email=email@ejemplo.com' http://localhost:9000/services/guardar
 ```
 
-Puede concatenarse de la siguiente forma:
+Se puede concatenar de la siguiente forma:
 
 ```
 curl -X POST -d 'nombre=Prueba&email=email@ejemplo.com' http://localhost:9000/services/guardar
@@ -148,7 +148,7 @@ curl -X POST -H "Content-Type: application/json" \
 
 > El `-H` define la parametrización de la cabecera (_HEADER_)
 
-### Subida
+### Subida de archivos
 
 Para realizar la subida de archivos:
 
@@ -156,9 +156,9 @@ Para realizar la subida de archivos:
 curl -X POST -F 'imagen=@/home/usuario/archivo.jpg' http://localhost:9000/services/guardar
 ```
 
-## Cliente de Servicio - NPM
+## Cliente de servicio - NPM
 
-Para realizar fácilmente la integración con el frontend, se proporciona el módulo NPM:
+Para realizar fácilmente la integración con el frontend, se proporciona el módulo de NPM:
 
 - [@netuno/service-client](https://www.npmjs.com/package/@netuno/service-client)
 
@@ -178,22 +178,22 @@ Podrá ejecutar servicios integrados con el frontend, como por ejemplo:
   _service({
       url: "/services/mi-servicio",
       method: 'POST',
-      data: { param1: "1", param2: "2" },
+      data: { parametro1: "1", parametro2: "2" },
       success: (respuesta) => {
           if (respuesta.json) {
-              console.log("Respuesta del Servicio", respuesta.json);
+              console.log("Respuesta del servicio", respuesta.json);
           }
       },
       fail: (e) => {
-          console.log("Error del Servicio", e);
+          console.log("Error del servicio", e);
       }
   });
 ```
 
 ## Conclusión
 
-Se admite restringir los servicios únicamente al tipo de método HTTP deseado.
+Se admite restringir los servicios solo al tipo de método HTTP deseado.
 
-Para integrar con el frontend se puede hacer en el nivel más bajo utilizando `fetch`.
+Para integrar con el frontend se puede hacer al nivel más bajo utilizando `fetch`.
 
 Para agilizar y estandarizar la implementación se proporciona el módulo NPM [@netuno/service-client](https://www.npmjs.com/package/@netuno/service-client).

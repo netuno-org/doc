@@ -11,9 +11,9 @@ Procesar archivos PDF personalizados.
 
 ## Introducción
 
-Netuno genera archivos CSV a través del recurso [CSV](/docs/library/resources/csv) que permite una abstracción low-code de [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/) para los diversos lenguajes de programación soportados por Netuno.
+Netuno genera archivos CSV mediante el recurso [CSV](/docs/library/resources/csv), que permite una abstracción low-code de [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/) para los distintos lenguajes de programación compatibles con Netuno.
 
-La aplicación que viene con Netuno denominada **demo** (aplicación de demostración) contiene bastantes ejemplos de las posibles implementaciones de código en varios lenguajes, incluyendo la demostración de la exportación a CSV a través del servicio `csv` que se localiza en:
+La aplicación que viene con Netuno denominada **demo** (aplicación de demostración) contiene bastantes ejemplos de las posibles implementaciones de código en varios lenguajes, incluida la demostración de la exportación a CSV mediante el servicio `csv` que se encuentra en:
 
 <PolyglotPath files={[
     `netuno/apps/demo/server/services/samples/%lang%/csv`
@@ -22,7 +22,7 @@ La aplicación que viene con Netuno denominada **demo** (aplicación de demostra
 ## Crear un archivo CSV
 
 Para crear un archivo CSV primero es necesario inicializar un `CSVPrinter` de `Apache Commons CSV`.
-Para eso necesitamos pasar el nombre de la carpeta y el nombre del archivo, así como el formato del CSV.
+Para ello necesitamos pasar el nombre de la carpeta y el nombre del archivo, así como el formato del CSV.
 En el ejemplo, vamos a generar el archivo dentro del `storage` de la aplicación:
 
 <PolyglotCode
@@ -30,7 +30,7 @@ En el ejemplo, vamos a generar el archivo dentro del `storage` de la aplicación
         {
             lang: 'javascript',
             code: `
-                const impresorCsv = _csv.printer(
+                const impresoraCsv = _csv.printer(
                   _storage.filesystem("server", "datos.csv"),
                   _csv.format("EXCEL")
                 )
@@ -39,7 +39,7 @@ En el ejemplo, vamos a generar el archivo dentro del `storage` de la aplicación
         {
             lang: 'python',
             code: `
-                impresor_csv = _csv.printer(
+                impresora_csv = _csv.printer(
                     _storage.filesystem("server", "datos.csv"),
                     _csv.format("EXCEL")
                 )
@@ -48,7 +48,7 @@ En el ejemplo, vamos a generar el archivo dentro del `storage` de la aplicación
         {
             lang: 'ruby',
             code: `
-                impresor_csv = _csv.printer(
+                impresora_csv = _csv.printer(
                     _storage.filesystem("server", "datos.csv"),
                     _csv.format("EXCEL")
                 )
@@ -57,7 +57,7 @@ En el ejemplo, vamos a generar el archivo dentro del `storage` de la aplicación
         {
             lang: 'kotlin',
             code: `
-                val impresorCsv = _csv.printer(
+                val impresoraCsv = _csv.printer(
                     _storage.filesystem("server", "datos.csv"),
                     _csv.format("EXCEL")
                 )
@@ -66,7 +66,7 @@ En el ejemplo, vamos a generar el archivo dentro del `storage` de la aplicación
         {
             lang: 'groovy',
             code: `
-                def impresorCsv = _csv.printer(
+                def impresoraCsv = _csv.printer(
                     _storage.filesystem("server", "datos.csv"),
                     _csv.format("EXCEL")
                 )
@@ -75,19 +75,19 @@ En el ejemplo, vamos a generar el archivo dentro del `storage` de la aplicación
     ]}
 />
 
-Los formatos soportados están descritos [aquí](https://doc.netuno.org/pt/docs/library/resources/csv/#format).
+Los formatos compatibles se describen [aquí](https://doc.netuno.org/pt/docs/library/resources/csv/#format).
 
 ### Escribiendo
 
-Para escribir una línea en el archivo CSV:
+Para escribir líneas en el archivo CSV:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                impresorCsv.printRecord("id", "nombreUsuario", "nombre", "apellido", "fechaNacimiento")
-                impresorCsv.printRecord(1, "juan73", "Juan", "Pérez", 123)
+                impresoraCsv.printRecord("id", "nombreUsuario", "nombre", "apellido", "fechaNacimiento")
+                impresoraCsv.printRecord(1, "juan73", "Juan", "Pérez", 123)
             `
         }
     ]}
@@ -102,7 +102,7 @@ Al final es necesario cerrar el `CSVPrinter`:
         {
             lang: 'javascript',
             code: `
-                impresorCsv.close()
+                impresoraCsv.close()
             `
         }
     ]}
@@ -112,7 +112,7 @@ Al final es necesario cerrar el `CSVPrinter`:
 ## Leer un archivo CSV
 
 Para leer un archivo CSV primero es necesario inicializar un `CSVParser` de `Apache Commons CSV`.
-Para eso necesitamos pasar el nombre de la carpeta y el nombre del archivo.
+Para ello necesitamos pasar el nombre de la carpeta y el nombre del archivo.
 En el ejemplo, vamos a leer el archivo dentro del `storage` de la aplicación:
 
 <PolyglotCode
@@ -145,16 +145,16 @@ Ahora es posible iterar sobre los `CSVRecord` de `Apache Commons CSV`, que repre
             lang: 'python',
             code: `
                 for registro in analizador_csv:
-                    columna_uno = registro.get(0)
-                    columna_dos = registro.get(1)
+                    columnaUno = registro.get(0)
+                    columnaDos = registro.get(1)
             `
         },
         {
             lang: 'ruby',
             code: `
                 analizador_csv.each do |registro|
-                    columna_uno = registro.get(0)
-                    columna_dos = registro.get(1)
+                    columnaUno = registro.get(0)
+                    columnaDos = registro.get(1)
                 end
             `
         },

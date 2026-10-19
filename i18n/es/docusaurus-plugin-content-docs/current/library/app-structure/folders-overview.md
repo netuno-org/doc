@@ -9,14 +9,13 @@ Explore y conozca las carpetas y archivos de las aplicaciones.
 
 ## Estructura
 
-A partir de la raíz donde se instala Netuno, podemos encontrar la carpeta `📂 apps`.
+Desde la raíz de instalación de Netuno, podemos encontrar la carpeta `📂 apps`.
 
 Dentro de la carpeta `📂 apps` es donde se encuentran todas las aplicaciones disponibles en la plataforma Netuno.
 
-Hay aplicaciones que pueden crearse localmente, mientras que otras pueden ser externas, por ejemplo aplicaciones que 
-son clones de repositorios de GIT. 
+Hay aplicaciones que se pueden crear localmente, mientras que otras pueden ser externas, por ejemplo, aplicaciones que son clones de repositorios de GIT.
 
-Vea a partir de la raíz de Netuno la estructura completa de una aplicación recién creada:
+Vea desde la raíz de Netuno la estructura completa de una aplicación recién creada:
 
 <pre class="doc-structure__tree">
 <span>./<b>netuno</b>/</span>
@@ -50,22 +49,20 @@ Vea a partir de la raíz de Netuno la estructura completa de una aplicación rec
 
 > En la carpeta `apps` se encuentran todas las aplicaciones disponibles en Netuno.
 
-Inicialmente, en esta carpeta ya existe la aplicación `demo`, que como su nombre indica se trata de una **demo**_stración_ de 
-funcionalidades de Netuno.
+Inicialmente, en esta carpeta ya existe la aplicación `demo`, que, como su nombre indica, se trata de una **demo**_stración_ de funcionalidades de Netuno.
  
-Cuando se crea una nueva aplicación, se añade una nueva carpeta que contiene la misma jerarquía de subcarpetas, como se ha 
-presentado anteriormente. 
+Cuando se crea una nueva aplicación, se añade una nueva carpeta que contiene la misma jerarquía de subcarpetas, como se ha mostrado anteriormente. 
 
 ## Carpetas principales
 
-Dentro de la carpeta de la aplicación tenemos las principales carpetas, donde cada una de ellas tiene una finalidad específica.
+Dentro de la carpeta de la aplicación tenemos las carpetas principales, donde cada una de ellas tiene una finalidad específica.
 
-Las principales carpetas son:
+Las carpetas principales son:
 
-- [📂 config](config) - Configuraciones generales;
-- [📂 dbs](dbs) - Cosas relacionadas con bases de datos;
+- [📂 config](config) - Configuración general;
+- [📂 dbs](dbs) - Cosas relacionadas con la base de datos;
 - [📂 docs](docs) - Documentación y otros documentos en general;
 - [📂 public](public) - Contenido público disponible directamente a través de URL, como imágenes, JavaScript y CSS;
-- [📂 server](server) - Código de backend, como servicios, jobs, templates, reports, y toda la API en general.
-- [📂 storage](storage) - Organización de archivos que están relacionados con datos o que se utilizan en código.
+- [📂 server](server) - Código de backend, como servicios, jobs, templates, reports y toda la API en general.
+- [📂 storage](storage) - Organización de archivos que están relacionados con datos o que se utilizan en el código.
 - [📂 ui](ui) - Interfaz de usuario del backoffice, código de frontend como dashboards y otras funcionalidades.

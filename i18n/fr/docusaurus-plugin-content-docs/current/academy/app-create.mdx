@@ -7,12 +7,12 @@ title: Créer une application
 import PolyglotCode from "@site/src/components/PolyglotCode";
 import PolyglotPath from "@site/src/components/PolyglotPath";
 
-Ce guide offre un aperçu de la configuration initiale, en abordant le frontend, la base de données et le service d'API.
+Ce guide offre un aperçu de la configuration initiale, en abordant le frontend, la base de données et le service API.
 Nous allons créer une nouvelle application fullstack de manière rapide et pratique.
 
 ## Introduction
 
-Bien que la plateforme soit polyglotte et prenne en charge plusieurs langages de programmation, nous nous concentrerons exclusivement sur l'utilisation de JavaScript dans ce tutoriel. Par conséquent, nous créerons une application pratique composée d'un formulaire affiché dans une fenêtre modale (pop-up) avec la fonctionnalité d'exportation de données vers PDF.
+Bien que la plateforme soit polyglotte et prenne en charge plusieurs langages de programmation, nous nous concentrerons exclusivement sur l'utilisation de JavaScript dans ce tutoriel. En conséquence, nous créerons une application pratique composée d'un formulaire affiché dans une fenêtre modale (pop-up) avec la fonctionnalité d'exportation de données vers PDF.
 
 #### Prérequis
 
@@ -20,7 +20,7 @@ Avant de commencer, assurez-vous de disposer de :
 
 - La plateforme Netuno préalablement installée sur votre machine. En cas de doute sur cette étape, consultez le guide [Installation de la plateforme](/docs/get-started/installation).
 
-- L'accès au terminal ou à l'invite de commande de l'environnement de développement.
+- Un accès au terminal ou à l'invite de commande de l'environnement de développement.
 
 ## Créer une nouvelle application
 
@@ -43,7 +43,7 @@ Il est possible de définir le nom de l'application directement lors de l'exécu
 ```
 
 :::info Bonnes pratiques de nommage
-Lorsque vous définissez le nom de votre application, évitez d'utiliser des espaces, des accents ou des caractères spéciaux. Préférez l'utilisation de lettres minuscules séparées par des tirets ou des underscores (exemple : **app-ventes** ou **gestion_rh**) pour maintenir la compatibilité avec les URL et les dossiers du système.
+Lors de la définition du nom de votre application, évitez d'utiliser des espaces, des accents ou des caractères spéciaux. Préférez l'utilisation de lettres minuscules séparées par des tirets ou des underscores (exemple : **app-ventes** ou **gestion_rh**) pour maintenir la compatibilité avec les URL et les dossiers du système.
 :::
 
 ## Configuration initiale
@@ -58,9 +58,9 @@ L'assistant en ligne de commande posera quelques questions pour configurer votre
 
 **Recommandation de base de données pour les débutants**
 
-Pendant le pas à pas, lorsqu'il vous sera demandé le type de base de données, nous recommandons de choisir l'option **H2 Database**.
+Pendant le pas-à-pas, lorsqu'il vous sera demandé le type de base de données, nous recommandons de choisir l'option **H2 Database**.
 
-H2 Database est une base de données embarquée déjà intégrée au serveur Netuno. Son grand avantage est qu'elle ne nécessite pas l'installation ou la configuration de serveurs externes (comme PostgreSQL ou MySQL), ce qui rend les développements initiaux et les tests beaucoup plus pratiques et rapides.
+H2 Database est une base de données embarquée déjà intégrée au serveur Netuno. Le grand avantage est qu'elle ne nécessite ni installation ni configuration de serveurs externes (comme PostgreSQL ou MySQL), ce qui rend les développements initiaux et les tests beaucoup plus pratiques et rapides.
 :::
 
 ### Commande pour démarrer le serveur
@@ -73,12 +73,12 @@ Exécutez la commande ci-dessous dans votre terminal et attendez l'initialisatio
 ./netuno server app=mon_application
 ```
 
-En passant le paramètre **app=mon_application**, le serveur comprend que ce sera l'application par défaut à exécuter dans cette instance. Une fois le serveur en marche, vous pouvez déjà commencer à éditer votre projet.
+En passant le paramètre **app=mon_application**, le serveur comprend que ce sera l'application par défaut à exécuter dans cette instance. Une fois le serveur en cours d'exécution, vous pouvez déjà commencer à modifier votre projet.
 
 Tous les fichiers et codes source de votre application sont stockés et organisés dans le dossier `📂 apps/monapp`.
 
 :::info Identifiants d'accès (Backoffice)
-Lors de votre premier accès à l'interface d'administration **Backoffice** de votre application, le système demandera une authentification. Pour les environnements de développement locaux, utilisez les identifiants par défaut suivants :
+Lors de la première connexion à l'interface d'administration **Backoffice** de votre application, le système demandera une authentification. Pour les environnements de développement locaux, utilisez les identifiants par défaut suivants :
 
 **Utilisateur :** dev
 
@@ -87,15 +87,16 @@ Lors de votre premier accès à l'interface d'administration **Backoffice** de v
 *Nous recommandons de modifier ces identifiants lorsque vous déplacez votre application vers un environnement de production.*
 :::
 
+
 ### Éditeur de code
 
 Pour garantir la meilleure expérience de développement, nous suggérons l'utilisation d'éditeurs de code modernes, légers et disposant d'un bon écosystème d'extensions.
 
 Si vous n'avez pas encore d'éditeur préféré, nous recommandons les options gratuites suivantes, largement utilisées par la communauté :
 
-- VS Codium : <a href="https://vscodium.com/" target="_blank">vscodium.com</a>
-- VS Code : <a href="https://vscodium.com/" target="_blank">code.visualstudio.com</a>
-- WebStorm : <a href="https://www.jetbrains.com/webstorm/" target="_blank">jetbrains.com/webstorm</a>
+- VS Codium: <a href="https://vscodium.com/" target="_blank">vscodium.com</a>
+- VS Code: <a href="https://vscodium.com/" target="_blank">code.visualstudio.com</a>
+- WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">jetbrains.com/webstorm</a>
 
 > Remarque : Si vous préférez des outils plus robustes et que cela ne vous dérange pas d'investir dans des licences, WebStorm de JetBrains est une excellente option premium.
 
@@ -118,9 +119,9 @@ Avec les connaissances initiales de Netuno consolidées, nous appliquerons ces c
 L'objectif pratique est d'ajouter deux nouveaux composants interactifs dans l'interface :
 
 * Un bouton chargé de charger et d'afficher le formulaire de clients dans une fenêtre flottante (Modale).
-* Un bouton dédié à générer et exporter la liste des clients enregistrés dans un fichier PDF.
+* Un bouton dédié à la génération et à l'exportation de la liste des clients enregistrés dans un fichier PDF.
 
-Pour atteindre ce résultat avec organisation et clarté, nous avons divisé le développement en une séquence logique d'étapes. Nous suivrons ce parcours :
+Pour atteindre ce résultat avec organisation et clarté, nous divisons le développement en une séquence logique d'étapes. Nous suivrons ce plan :
 
 - **Cartographie de l'interface** : Analyser la structure des dossiers de l'application pour localiser où le HTML principal du tableau de bord est défini.
 
@@ -136,7 +137,7 @@ Commençons !
 
 ## Modèle de tableau de bord
 
-Naviguez jusqu'au dossier `server/templates` et ouvrez le fichier responsable de fournir le HTML de l'écran de tableau de bord.
+Naviguez jusqu'au dossier `server/templates` et ouvrez le fichier responsable de fournir le HTML de l'écran du tableau de bord.
 
 ```plaintext
 server/templates/dashboard.html
@@ -155,15 +156,18 @@ Pour modifier le comportement du tableau de bord ou ajouter de nouveaux composan
 
 C'est dans ce dossier `📂 ui/` que vous trouverez les composants du tableau de bord et pourrez développer les nouvelles fonctionnalités visuelles de votre application.
 
+
 ## Créer un formulaire
 
-Dans cette étape, nous allons créer la structure de base de données nécessaire pour ce tutoriel : un formulaire appelé **Client** contenant un champ texte appelé **Nom**.
+Dans cette étape, nous allons créer la structure de base de données nécessaire à ce tutoriel : un formulaire appelé **Client** contenant un champ texte appelé **Nom**.
 
 * Dans le Backoffice, accédez à la zone de développement en cliquant sur le bouton **Construire** (coin supérieur droit).
+
 * Dans le menu latéral, naviguez jusqu'à **Gestion > Formulaires** et créez le nouveau formulaire avec le **Titre :** Client.
+
 * Cliquez sur **Enregistrer**.
 
-Le nom de la table sera automatiquement rempli avec **client** (gardez en minuscules, comme recommandé pour les bases de données).
+Le nom de la table sera automatiquement rempli avec **client** (conservez en minuscules, comme recommandé pour les bases de données).
 
 :::info Consultez le guide
 En cas de doute sur les configurations avancées de cet écran, consultez la documentation complète dans **[Formulaires](/docs/academy/ui/forms)**.
@@ -175,8 +179,9 @@ Une fois le formulaire créé, il apparaîtra dans le menu latéral gauche dans 
 * Cliquez sur **Client** pour ajouter une nouvelle colonne :
 * Saisissez le texte **« Nom »** dans le Titre du champ.
 * Sélectionnez le type de données **« text »** dans le champ **Type**.
-* Cochez les options **Autoriser le filtrage** (pour activer la recherche) et **Afficher dans le résultat** (pour apparaître dans le tableau).
+* Cochez les options **Autoriser le filtre** (pour activer la recherche) et **Afficher dans le résultat** (pour apparaître dans la table).
 * Cliquez sur **Enregistrer**.
+
 
 :::info Consultez le guide
 Pour comprendre tous les types de données disponibles et leurs propriétés, accédez à la documentation détaillée dans **[Champs](/docs/academy/ui/fields)**.
@@ -186,19 +191,20 @@ Pour comprendre tous les types de données disponibles et leurs propriétés, ac
 Pour que nous puissions tester l'exportation PDF dans les prochaines étapes, nous avons besoin de données réelles dans le système.
 
 * Cliquez sur le bouton **Visualiser** (coin supérieur droit) pour revenir au Backoffice d'utilisation de l'application.
-* Accédez au menu **Client** récemment créé sur le côté.
+* Accédez au menu **Client** récemment créé dans la barre latérale.
 * Utilisez le bouton **+ Ajouter** pour enregistrer quelques clients de test dans le système.
 * Cliquez sur **Enregistrer**.
 
+
 ## Consulter la base de données
 
-Netuno offre un outil intégré qui permet d'exécuter des commandes SQL directement dans la base de données de votre application. Cela devient essentiel pour effectuer des requêtes rapides, valider des informations ou manipuler les données du système de manière agile.
+Netuno propose un outil intégré qui permet d'exécuter des commandes SQL directement dans la base de données de votre application. Il devient essentiel pour effectuer des requêtes rapides, valider des informations ou manipuler les données du système de manière agile.
 
 Pour accéder à l'interface de requêtes et exécuter vos commandes, suivez les étapes ci-dessous :
 
 * Dans l'interface principale, accédez à la zone de développement en cliquant sur le bouton **Construire**.
 * Dans le menu latéral de navigation, localisez la section **Gestion**.
-* Cliquez sur l'option **Requête** pour ouvrir la console de base de données.
+* Cliquez sur l'option **Query** pour ouvrir la console de base de données.
 * Dans l'éditeur de texte qui apparaîtra à l'écran, saisissez la commande SQL que vous souhaitez exécuter.
 * Confirmez l'exécution de la commande.
 
@@ -208,21 +214,21 @@ Exécutez la commande ci-dessous pour consulter les clients enregistrés :
 SELECT * FROM client
 ```
 
-Lorsque vous aurez terminé les requêtes et que vous souhaiterez revenir à l'interface utilisateur du système (backoffice), il vous suffira de cliquer sur le bouton **Visualiser**.
+Lorsque vous avez terminé les requêtes et souhaitez revenir à l'interface utilisateur du système (backoffice), il vous suffit de cliquer sur le bouton **Visualiser**.
 
 ## Ajouter des boutons avec React
 
 Dans cette étape, nous allons configurer le fichier principal du panneau **tableau de bord** pour afficher deux nouveaux boutons.
 
-Dans l'architecture d'interface, nous utilisons le concept de **Conteneurs** pour définir des zones étendues du système, qui englobent des fonctionnalités plus importantes et regroupent plusieurs composants plus petits.
+Dans l'architecture d'interface, nous utilisons le concept de **Containers** pour définir des zones étendues du système, qui englobent des fonctionnalités plus importantes et regroupent plusieurs composants plus petits.
 
-- Dans votre éditeur de code, naviguez jusqu'au dossier des conteneurs dans `📂 ui/src/containers`.
+- Dans votre éditeur de code, naviguez jusqu'au dossier des containers dans `📂 ui/src/containers`.
 
-- Localisez et ouvrez le fichier principal du tableau de bord : `📂 ConteneurTableauDeBord/index.jsx`.
+- Localisez et ouvrez le fichier principal du tableau de bord : `📂 DashboardContainer/index.jsx`.
 
 - Insérez le code d'importation et de rendu des composants comme dans l'exemple ci-dessous.
 
-```javascript title="ui/src/containers/ConteneurTableauDeBord/index.jsx"
+```javascript title="ui/src/containers/DashboardContainer/index.jsx"
 import { Space } from 'antd';
 
 import BoutonClientModal from '../../components/BoutonClientModal';
@@ -230,7 +236,7 @@ import BoutonPDF from '../../components/BoutonPDF';
 
 import "./index.less";
 
-function ConteneurTableauDeBord() {
+function DashboardContainer() {
     return (
         <div className="mon-tableau-de-bord">
             <Space>
@@ -241,13 +247,13 @@ function ConteneurTableauDeBord() {
     );
 }
 
-export default ConteneurTableauDeBord;
+export default DashboardContainer;
 ```
 
-Notez que ces fichiers de boutons n'existent pas encore physiquement dans votre projet. Comme ce sont des composants plus petits et réutilisables, nous les créerons dans le dossier des composants dédiés.
+Notez que ces fichiers de boutons n'existent pas encore physiquement dans votre projet. Comme il s'agit de composants plus petits et réutilisables, nous les créerons dans le dossier des composants dédiés.
 
 :::tip Organisation de l'architecture
-Maintenez toujours la séparation entre **Conteneurs** (zones de portée étendue, comme des pages entières ou des tableaux de bord) et **Composants** (éléments d'interface isolés, comme des boutons et des modales). Cela rend votre code dans Netuno beaucoup plus propre, plus facile à maintenir et évolutif.
+Maintenez toujours la séparation entre **Containers** (zones de portée étendue, comme des pages entières ou des tableaux de bord) et **Components** (éléments d'interface isolés, comme des boutons et des modales). Cela rend votre code dans Netuno beaucoup plus propre, facile à maintenir et évolutif.
 :::
 
 ### Bouton pour formulaire
@@ -276,16 +282,16 @@ function BoutonClientModal() {
 
                 form.on('netuno:save', () => {
                     netuno.modal.hide(modal)
-                    console.log('Client enregistré.');
+                    console.log("Sauvegarde d'un client.");
                 });
 
                 form.on('netuno:delete', () => {
                     netuno.modal.hide(modal)
-                    console.log('Client supprimé.');
+                    console.log("Suppression d'un client");
                 });
 
                 form.on('netuno:back', () => {
-                    console.log('Clic sur retour.');
+                    console.log("Clic sur retour");
                 });
 
                 netuno.loadForm(form);
@@ -296,7 +302,7 @@ function BoutonClientModal() {
     return (
         <div>
             <Button type="primary" onClick={ onClick }>
-                Ouvrir le formulaire du client
+                Ouvrir le formulaire client
             </Button>
         </div>
     );
@@ -306,7 +312,7 @@ export default BoutonClientModal;
 ```
 
 #### Comprendre le code
-La magie de ce composant se produit dans la fonction onClick, qui utilise les outils d'interface globaux de Netuno :
+La magie de ce composant se produit à l'intérieur de la fonction onClick, qui utilise les outils globaux d'interface de Netuno :
 
 - **netuno.modal.create()** : Cette méthode est responsable de l'instanciation de la fenêtre modale à l'écran et de la liaison du formulaire souhaité à celle-ci (dans ce cas, le formulaire appelé client).
 
@@ -315,12 +321,12 @@ La magie de ce composant se produit dans la fonction onClick, qui utilise les ou
 - **netuno.modal.hide() / show()** : Méthodes utilisées pour masquer la modale après une action réussie ou l'afficher dès que le formulaire est chargé.
 
 :::info Intégration terminée
-Maintenant que le composant **BoutonClientModal** a été créé avec succès, l'importation que nous avons faite précédemment dans votre **ConteneurTableauDeBord** fonctionnera sans erreurs, et le bouton devrait déjà être rendu à l'écran !
+Maintenant que le composant **BoutonClientModal** a été créé avec succès, l'importation que nous avons faite précédemment dans votre **DashboardContainer** fonctionnera sans erreur, et le bouton devrait déjà être rendu à l'écran !
 :::
 
-### Bouton pour exporter PDF
+### Bouton pour exporter en PDF
 
-Dans cette étape, nous créerons le deuxième bouton du tableau de bord : le bouton pour exporter PDF.
+Dans cette étape, nous créerons le deuxième bouton du tableau de bord : le bouton pour exporter en PDF.
 
 La fonction principale de ce composant dans l'interface est d'agir comme un déclencheur, c'est-à-dire qu'au clic, il effectuera une requête vers un service backend, responsable du traitement des données du système et de la génération du fichier PDF contenant la liste des clients enregistrés.
 
@@ -342,7 +348,7 @@ function BoutonPDF() {
                 type="primary"
                 href="/services/client/exporte-pdf"
                 target="blank">
-                Exporter PDF
+                Exporter en PDF
             </Button>
         </div>
     );
@@ -351,17 +357,17 @@ function BoutonPDF() {
 export default BoutonPDF;
 ```
 
-Avec la création du composant BoutonPDF, les deux boutons déclarés dans votre ConteneurTableauDeBord sont prêts.
+Avec la création du composant BoutonPDF, les deux boutons déclarés dans votre DashboardContainer sont prêts.
 
 :::tip Prochaines étapes
 La structure visuelle et les composants sont terminés. Compilez le frontend pour tester le rendu de l'interface.
 
-La construction du service backend qui générera effectivement le PDF sera abordée à l'étape suivante.
+La construction du service backend qui générera effectivement le PDF sera abordée dans la prochaine étape.
 :::
 
 ## Compiler le frontend
 
-Les navigateurs internet ne comprennent pas nativement le code écrit en React, les fichiers `.jsx` ou `.tsx` et les préprocesseurs CSS comme `.less`. Pour que votre interface fonctionne correctement, il est nécessaire de passer par un processus de compilation (build). Ce processus traduit, empaquette et optimise tout votre code en fichiers statiques finaux (JavaScript et CSS standard) que le navigateur peut traiter avec une efficacité maximale.
+Les navigateurs web ne comprennent pas nativement les codes écrits en React, les fichiers `.jsx` ou `.tsx` et les préprocesseurs CSS comme `.less`. Pour que votre interface fonctionne correctement, il est nécessaire de passer par un processus de compilation (build). Ce processus traduit, empaquette et optimise tout votre code en fichiers statiques finaux (JavaScript et CSS standard) que le navigateur peut traiter avec une efficacité maximale.
 
 #### Prérequis
 
@@ -379,7 +385,7 @@ Exécutez les commandes dans le dossier de l'interface de votre application : `�
 
 ### Compilation de production
 
-Effectue la compilation complète et optimisée des fichiers. C'est la commande idéale lorsque vous terminez le développement d'un écran ou d'un composant et que vous souhaitez générer les fichiers finaux légers et avec de meilleures performances.
+Effectue la compilation complète et optimisée des fichiers. C'est la commande idéale lorsque vous terminez le développement d'un écran ou d'un composant et souhaitez générer les fichiers finaux légers et avec de meilleures performances.
 
 ```bash
 bun run build
@@ -394,17 +400,17 @@ bun run watch
 ```
 Indépendamment de la commande utilisée **build** ou **watch**, les modifications n'apparaissent pas instantanément à l'écran de l'utilisateur. Actualisez la page du backoffice dans votre navigateur pour charger les nouveaux fichiers générés.
 
-:::tip Suivi des erreurs et débogage
+:::tip Surveillance des erreurs et débogage
 Pendant le développement, des erreurs peuvent survenir à deux étapes différentes. Sachez où les chercher :
 
 - **Erreurs de compilation** : Les erreurs de syntaxe dans le code React ou les variables non déclarées seront présentées directement dans votre terminal, où la commande **bun** est en cours d'exécution.
 
-- **Erreurs d'exécution** : Les défaillances qui se produisent pendant l'utilisation de l'application seront présentées dans la console du navigateur. Rappelez-vous toujours d'inspecter la page pour vérifier s'il y a une alerte ou une erreur.
+- **Erreurs d'exécution** : Les erreurs qui se produisent pendant l'utilisation de l'application seront présentées dans la console du navigateur. Rappelez-vous toujours d'inspecter la page pour vérifier s'il y a une alerte ou une erreur.
 :::
 
 ### Compilation intégrée
 
-La fonctionnalité de compilation intégrée permet d'exécuter automatiquement des commandes de terminal en même temps que le démarrage du serveur. Cela optimise le flux de travail en consolidant tous les logs et suivis dans un seul terminal central.
+La fonctionnalité de compilation intégrée permet d'exécuter automatiquement des commandes de terminal en même temps que l'initialisation du serveur. Cela optimise le flux de travail en consolidant tous les logs et surveillances dans un seul terminal central.
 
 Pour activer la compilation intégrée, il est nécessaire de modifier les configurations de développement de votre application :
 
@@ -418,7 +424,7 @@ Pour activer la compilation intégrée, il est nécessaire de modifier les confi
 
 - Enregistrez le fichier.
 
-Votre fichier `_development.json` devrait avoir une structure similaire à celle-ci :
+Votre fichier `_development.json` devra avoir une structure similaire à celle-ci :
 
 ```json title="config/_development.json"
   ...
@@ -433,7 +439,7 @@ Votre fichier `_development.json` devrait avoir une structure similaire à celle
 
 Pour que Netuno lise le fichier mis à jour et applique la nouvelle configuration, il est nécessaire de redémarrer le serveur :
 
-- Allez dans le terminal où le serveur Netuno est en cours d'exécution.
+- Allez jusqu'au terminal où le serveur Netuno est en cours d'exécution.
 
 - Arrêtez le processus en appuyant simultanément sur les touches CTRL + C.
 
@@ -444,20 +450,21 @@ Pour que Netuno lise le fichier mis à jour et applique la nouvelle configuratio
 ```
 
 :::tip Terminal unique
-Après avoir redémarré le serveur, observez les logs dans le terminal. Vous remarquerez que Netuno exécute maintenant automatiquement les commandes de compilation du frontend **bun run watch** en arrière-plan. Désormais, tout fonctionne de manière intégrée dans la même fenêtre.
+Après avoir redémarré le serveur, observez les logs dans le terminal. Vous remarquerez que Netuno exécute maintenant automatiquement les commandes de compilation du frontend **bun run watch** en arrière-plan. Désormais, tout fonctionne intégré dans la même fenêtre.
 :::
 
-## Service d'API pour générer un PDF
+## Service API pour générer un PDF
 
-À l'étape précédente, nous avons configuré le bouton **Exporter PDF** dans le frontend avec l'attribut « **href** » pointant vers l'adresse `services/client/exporte-pdf`. Cependant, si vous cliquez dessus maintenant, rien ne se passera. Cela est dû au fait que le service d'API responsable de la génération du fichier n'existe pas encore.
+Dans l'étape précédente, nous avons configuré le bouton **Exporter en PDF** dans le frontend avec l'attribut « **href** » pointant vers l'adresse `services/client/exporte-pdf`. Cependant, si vous cliquez dessus maintenant, rien ne se passera. Cela se produit parce que le service API responsable de la génération du fichier n'existe pas encore.
 
 Tout le développement de l'API se déroule dans le dossier `📂 server`.
-Dans cette section, nous créerons le script qui recherche les enregistrements dans la base de données et construit visuellement le document PDF.
+Dans cette section, nous créerons le script qui récupère les enregistrements dans la base de données et construit visuellement le document PDF.
 
 #### Prérequis
 
-- Avoir créé le composant BoutonPDF dans le frontend en pointant vers l'URL correcte.
+- Avoir créé le composant BoutonPDF dans le frontend pointant vers l'URL correcte.
 - Avoir le serveur Netuno en cours d'exécution.
+
 
 Netuno route automatiquement les URL de votre API en fonction de la structure des dossiers dans **server/services/**. Pour créer le service, suivez les étapes :
 
@@ -465,7 +472,7 @@ Netuno route automatiquement les URL de votre API en fonction de la structure de
 
 - Dans ce dossier, créez un fichier appelé `exporte-pdf.js`.
 
-> Netuno est polyglotte. Nous utiliserons JavaScript dans cet exemple, utilisez l'extension correspondant à votre langage préféré.
+> Netuno est polyglotte. Nous utiliserons JavaScript dans cet exemple, utilisez l'extension correspondant au langage de votre choix.
 
 Ouvrez le fichier et insérez le code ci-dessous pour générer la structure de votre PDF :
 
@@ -608,48 +615,49 @@ Ouvrez le fichier et insérez le code ci-dessous pour générer la structure de 
     ]}
 />
 
+
 #### Comprendre le code
 
-- **_header.contentType("pdf")** : Indique au navigateur que la réponse de cette requête n'est pas un texte ou un JSON ordinaire, mais un fichier PDF.
+- **_header.contentType("pdf")** : Informe au navigateur que la réponse de cette requête n'est pas un texte ou du JSON ordinaire, mais un fichier PDF.
 
 - **_pdf** : C'est la ressource native de Netuno pour la manipulation de PDF. Avec elle, nous définissons la taille de la page (A5), créons des paragraphes, ajustons les tailles de police (setFontSize) et les couleurs (setFontColor).
 
-- **_db.form("client").all()** : Consulte la base de données et retourne tous les enregistrements sauvegardés dans le formulaire « client ». La boucle de répétition (for) parcourt chacun de ces clients et extrait l'information du champ « nom » pour l'imprimer dans le document.
+- **_db.form("client").all()** : Interroge la base de données et retourne tous les enregistrements enregistrés dans le formulaire « client ». La boucle de répétition (for) parcourt chacun de ces clients et extrait l'information du champ « nom » pour l'imprimer dans le document.
 
 - **pdfDocument.close()** : Finalise la construction du document et l'envoie comme réponse.
 
 #### Validation et tests
 
-Il n'est pas nécessaire de cliquer sur le bouton du tableau de bord chaque fois que vous souhaitez tester votre service. Comme il s'agit d'une requête simple (GET), vous pourrez valider l'exécution en accédant à l'URL de l'API directement via le navigateur.
+Il n'est pas nécessaire de cliquer sur le bouton du tableau de bord chaque fois que vous souhaitez tester votre service. Comme il s'agit d'une requête simple (GET), vous pourrez valider l'exécution en accédant directement à l'URL de l'API depuis le navigateur.
 
 Pour cet exemple, accédez à l'adresse suivante :
 http://localhost:9000/services/client/exporte-pdf
 
-Si le fichier PDF est généré et affiché à l'écran contenant la liste des clients, le service fonctionne parfaitement ! Par conséquent, le bouton Exporter PDF dans votre tableau de bord se mettra à fonctionner automatiquement.
+Si le fichier PDF est généré et affiché à l'écran contenant la liste des clients, le service fonctionne parfaitement ! Par conséquent, le bouton Exporter en PDF dans votre tableau de bord fonctionnera automatiquement.
 
-:::tip Suivi des erreurs dans le backend
-Si la page reste blanche ou renvoie un message d'erreur lors de l'accès à l'URL, vérifiez immédiatement le terminal où le serveur Netuno est en cours d'exécution. Contrairement au frontend, dont les erreurs apparaissent dans la console du navigateur, toute défaillance d'exécution dans les scripts du dossier server sera affichée en détail dans le terminal du serveur backend.
+:::tip Traçage des erreurs dans le backend
+Si la page reste blanche ou renvoie un message d'erreur lors de l'accès à l'URL, vérifiez immédiatement le terminal où le serveur Netuno est en cours d'exécution. Contrairement au frontend, dont les erreurs apparaissent dans la console du navigateur, toute erreur d'exécution dans les scripts du dossier server sera affichée en détail dans le terminal du serveur backend.
 :::
 
 ## Conclusion
 
-Dans ce tutoriel, vous avez suivi un parcours pratique de développement fullstack utilisant Netuno.
+Dans ce tutoriel, vous avez suivi un parcours pratique de développement fullstack avec Netuno.
 
-L'objectif principal était de démontrer comment la plateforme intègre la construction d'interfaces visuelles avec la robustesse du serveur, en mettant toujours l'accent sur une haute productivité.
+L'objectif principal était de démontrer comment la plateforme intègre la construction d'interfaces visuelles avec la robustesse du serveur, en se concentrant toujours sur une haute productivité.
 
 Récapitulons les étapes terminées :
 
-- **Développement Frontend** : vous avez personnalisé le tableau de bord en React, en créant des composants d'interface et des boutons interactifs de manière modulaire.
+- **Développement frontend** : vous avez personnalisé le tableau de bord en React, en créant des composants d'interface et des boutons interactifs de manière modulaire.
 
-- **Gestion et structure des données** : vous avez vu combien il est rapide de créer des formulaires et des champs dans le panneau pour enregistrer et manipuler des informations sans avoir à écrire de routines de persistance complexes.
+- **Gestion et structure de données** : vous avez vu à quel point il est rapide de créer des formulaires et des champs dans le panneau pour enregistrer et manipuler des informations sans avoir à écrire de routines complexes de persistance.
 
-- **Requêtes directes** : Vous avez utilisé la fonctionnalité de requête pour exécuter des commandes SQL de manière agile, en testant la base de données.
+- **Requêtes directes** : Vous avez utilisé la fonctionnalité Query pour exécuter des commandes SQL de manière agile, en testant la base de données.
 
-- **Création d'API dans le backend** : Vous avez développé un service pour la génération de PDF et avez observé l'un des grands avantages de Netuno : la mise à jour à chaud (hot-reload). Vous n'avez pas besoin de redémarrer le serveur à chaque modification du code backend, ce qui accélère immensément la programmation.
+- **Création d'API dans le backend** : Vous avez développé un service pour la génération de PDF et observé l'un des grands avantages de Netuno : la mise à jour à chaud (hot-reload). Vous n'avez pas besoin de redémarrer le serveur à chaque modification du code backend, ce qui accélère immensément la programmation.
 
-- **Environnement optimisé** : Vous avez configuré la compilation intégrée, en centralisant les processus du frontend et du backend dans un seul terminal pour rester concentré et éviter les distractions.
+- **Environnement optimisé** : Vous avez configuré la compilation intégrée, en centralisant les processus du frontend et du backend dans un seul terminal pour maintenir la concentration et éviter les distractions.
 
-La plateforme a été conçue dès son essence pour optimiser et accélérer le développement de logiciels. Maintenant que vous comprenez le flux de base d'intégration entre low-code et code personnalisé, vous êtes prêt à construire des applications beaucoup plus complexes et évolutives.
+La plateforme a été conçue dès son essence pour optimiser et accélérer le développement logiciel. Maintenant que vous comprenez le flux de base d'intégration entre low-code et code personnalisé, vous êtes prêt à construire des applications beaucoup plus complexes et évolutives.
 
 Continuez à explorer les prochaines sections de la documentation pour maîtriser de nouvelles fonctionnalités.
 

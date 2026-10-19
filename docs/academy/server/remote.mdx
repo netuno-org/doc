@@ -1,85 +1,542 @@
 ---
 id: remote
-title: Remote
+title: Remote - HTTP Client
 ---
 
-## How to make HTTP calls
+import PolyglotCode from "@site/src/components/PolyglotCode";
 
-### Introduction
+## Introduction
 
-Many times in our applications we need to make HTTP requests to external services. This can be done using **_remote**.
+Often in our applications, we need to make HTTP requests to external services. This can be done using the `_remote` resource.
 
-### HTTP Calls
+To make HTTP calls internally to other services or internal servers on the computer, or to call a service on the internet, using the Remote resource is essential.
 
-#### Starting the request
+> See the documentation for the [Remote](/docs/library/resources/remote) resource.
 
-In order to make an HTTP call, we must first initiate it. To do this, we will use the _remote init method and then save the result of this operation in a variable called remote so that we can reference the request:
+We can even send and receive data in JSON and upload or download files.
 
-```js
-const remote = _remote.init();
+## Initialization
+
+To make an HTTP call, we must first initialize it. To do this, we will use the init method of _remote and then store the result of this operation in a variable called remote so that we can reference the request:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Supports sending HTTP Parameters
+                const simpleRemote = _remote.init();
+                // Supports sending JSON:
+                const jsonRemote = _remote.init().asJSON();
+            `
+        },
+    ]}
+/>
+
+## Configuration
+
+We can also define global settings in the application; note this complete example:
+
+```json
+  ...
+  "remote": { 
+    "example-basic-auth": {
+      "url": "https://example.com/api/rest/example",
+      "form": true,
+      "authorization": {
+        "username": "admin",
+        "password": "pass"
+      },
+      "data": {
+        "param1": "value 1...",
+        "param2": "value 2..."
+      }
+    },
+    "example-auth-token": {
+      "urlPrefix": "https://example.com/api",
+      "json": true,
+      "authorization": "Bearer AUTH-TOKEN-HERE",
+      "connectTimeout": 5000,
+      "readTimeout": 60000,
+    }
+  },
+  ...
 ```
 
-#### Indicating the request method
+We can configure a URL prefix (`urlPrefix`) or the full URL (`url`).
 
-We do not need to explicitly indicate the HTTP method in the call header, for this our call reference has a function for each HTTP method:
+We can define whether the request should by default send data as a form or JSON.
+
+It supports sending basic authorization with username and password or token.
+
+And it is possible to define the default data that will be sent (`data`), as well as the connection (`connectTimeout`) and read (`readTimeout`) timeouts.
+
+### How to Use
+
+To use the Remote resource with the settings defined in the application, simply initialize the resource with the configuration key, for example:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const response = _remote.init("example-basic-auth").post();
+            `
+        },
+    ]}
+/>
+
+And if the prefix URL is defined:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init("example-auth-token");
+                const response = remote.post(
+                  "/services/load-data",
+                  _val.map()
+                    .set("param1", "value 1")
+                    .set("param2", "value 2")
+                );
+            `
+        },
+    ]}
+/>
+
+## HTTP Request
+
+See how we can start an HTTP request using the [Remote](/docs/library/resources/remote) resource.
+
+### Send JSON
+
+To send data in JSON format, we need to signal the content type as JSON:
+
+The simple way to do this is by using the `asJSON()` method, for example:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init().asJSON();
+                remote.setURL("http://example.com/save");
+                const response = remote.post(
+                  _val.map()
+                    .set("data", "example")
+                    .set("json", true)
+                );
+            `
+        },
+    ]}
+/>
+
+This way data will be sent as JSON for POST and PUT HTTP methods, but for GET and DELETE data is always sent in the query string because the HTTP protocol does not support a body with data for these methods.
+
+### HTTP Methods
+
+We do not need to explicitly indicate the HTTP method in the request header; for this, our request reference has its own function for each type of HTTP method:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init();
+
+                remote.setURL("http://example.com");
+
+                remote.get(); // for GET calls
+                remote.post(); // for POST calls
+                remote.put(); // for PUT calls
+                remote.delete(); // for DELETE calls
+            `
+        },
+    ]}
+/>
+
+#### HTTP Header
+
+To configure HTTP header parameters, we can set the keys with the `getHeader()` method, for example:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init();
+
+                remote.getHeader().set("KEY", "VALUE");
+            `
+        },
+    ]}
+/>
+
+#### Request URL
+
+To indicate the request URL, simply pass it as the first parameter of the functions for the respective HTTP methods:
 
 ```js
-const remote = _remote.init();
+const remote = _remote.init().asJSON()
 
-remote.post(); // for POST calls
-remote.get(); // for GET calls
-remote.put(); // for PUT calls
-remote.delete(); // for DELETE calls
-```
-
-#### Editing HTTP Headers
-
-```js
-const remote = _remote.init();
-remote.getHeader().set("KEY", "VALUE");
-```
-
-#### Indicating the request URL
-
-To indicate the request URL, we simply need to pass it as the function's first parameter:
-
-```js
-const remote = _remote.init();
-
-remote.post("http://example.com"); // for POST calls
-remote.get("http://example.com"); // for GET calls
-remote.put("http://example.com"); // for PUT calls
-remote.delete("http://example.com"); // for DELETE calls
+remote.get("http://example.com") // for GET calls
+remote.post("http://example.com") // for POST calls
+remote.put("http://example.com") // for PUT calls
+remote.delete("http://example.com") // for DELETE calls
 ```
 
 #### Adding data to the request
 
-If you need to add data to the body of the call, simply pass it as the function's second parameter:
+If you need to add data to the request body, simply pass it as the second parameter of the function for the respective method:
 
-```js
-const remote = _remote.init();
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init().asJSON();
 
-remote.post("http://example.com", {"user_id": 1}); // for POST calls
-remote.get("http://example.com", {"user_id": 1}); // for GET calls
-remote.put("http://example.com", {"user_id": 1}); // for PUT calls
-remote.delete("http://example.com", {"user_id": 1}); // for DELETE calls
-```
+                remote.get("http://example.com", _val.map().set("user_id", 1)); // for GET calls
+                remote.post("http://example.com", _val.map().set("user_id", 1)); // for POST calls
+                remote.put("http://example.com", _val.map().set("user_id", 1)); // for PUT calls
+                remote.delete("http://example.com", _val.map().set("user_id", 1)); // for DELETE calls
+            `
+        },
+    ]}
+/>
 
-#### Reading the request response
+## Response
 
-After receiving the request response we can read its data using the **content** method:
+After receiving the response from the request, we can read its data using the `json` or `content` method:
 
-```js
-const remote = _remote.init();
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init().asJSON();
 
-const response = remote.post("http://example.com", {"user_id": 1}); // for POST calls
-const response = remote.get("http://example.com", {"user_id": 1}); // for GET calls
-const response = remote.put("http://example.com", {"user_id": 1}); // for PUT calls
-const response = remote.delete("http://example.com", {"user_id": 1}); // for POST calls
+                const response = remote.post(
+                  "http://example.com",
+                  _val.map().set("user_id", 1)
+                );
 
-if (response.ok()) {
-    _log.info("response", response.content());
-} else {
-    _log.info("failed "+ response.statusCode(), response.content());
-}
-```
+                if (response.ok()) {
+                  _log.info("Response in JSON", response.json());
+                } else {
+                  _log.info("Failed with status: "+ response.statusCode(), response.content());
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                remote = _remote.init().asJSON()
+
+                response = remote.post(
+                    "http://example.com",
+                    _val.map().set("user_id", 1)
+                )
+
+                if response.ok():
+                    _log.info("Response in JSON", response.json())
+                else:
+                    _log.info(
+                        f"Failed with status: {response.statusCode()}",
+                        response.content()
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                remote = _remote.init().asJSON()
+
+                response = remote.post(
+                    "http://example.com",
+                    _val.map().set("user_id", 1)
+                )
+
+                if response.ok()
+                    _log.info("Response in JSON", response.json())
+                else
+                    _log.info(
+                        "Failed with status: #{response.statusCode()}",
+                        response.content()
+                    )
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val remote = _remote.init().asJSON()
+
+                val response = remote.post(
+                    "http://example.com",
+                    _val.map().set("user_id", 1)
+                )
+
+                if (response.ok()) {
+                    _log.info("Response in JSON", response.json())
+                } else {
+                    _log.info(
+                        "Failed with status: \${response.statusCode()}",
+                        response.content()
+                    )
+                }
+            `
+        },
+    ]}
+/>
+
+In the response, with the `json()` function we get the array or object provided as Values, and with the `content()` function we get raw text content or the HTML, and the received status code number comes in `statusCode()`, while `ok()` returns a boolean value that is true if the status code is within the 200 to 299 range.
+
+## Download
+
+To download files, we use remote with `asBinary()` to indicate that it should be a binary transfer.
+
+See this complete service example:
+
+<PolyglotCode
+    file="server/services/file-download"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const download = _remote.asBinary()
+                  .get('https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png');
+
+                if (!download.ok()) {
+                  _log.error(\`File download status: \${download.statusCode()}\\n\${download.toString()}\`);
+                  _header.status(500);
+                  _out.json({result: false, error: 'file-download-failed'});
+                  _exec.stop();
+                }
+
+                const file = download.file();
+                _log.info(\`Downloaded file name: \${file.name()}\`);
+
+                file.save(_app.file(\`storage/filesystem/server/\${file.name()}\`));
+                file.save(_storage.filesystem("server", "other.png").file());
+                file.save(_os.file("/tmp/download.png"));
+                _out.json({result: true});
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                download = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                if not download.ok():
+                    _log.error(f"File download status: {download.statusCode()}\\n{download.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("result", False).set("error", "file-download-failed"))
+                    _exec.stop()
+
+                file = download.file()
+                _log.info(f"Downloaded file name: {file.name()}")
+
+                file.save(_app.file(f"storage/filesystem/server/{file.name()}"))
+                file.save(_storage.filesystem("server", "other.png").file())
+                file.save(_os.file("/tmp/download.png"))
+                _out.json(_val.map().set("result", True))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                download = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                unless download.ok()
+                    _log.error("File download status: #{download.statusCode()}\\n#{download.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("result", false).set("error", "file-download-failed"))
+                    _exec.stop()
+                end
+
+                file = download.file()
+                _log.info("Downloaded file name: #{file.name()}")
+
+                file.save(_app.file("storage/filesystem/server/#{file.name()}"))
+                file.save(_storage.filesystem("server", "other.png").file())
+                file.save(_os.file("/tmp/download.png"))
+                _out.json(_val.map().set("result", true))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val download = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                if (!download.ok()) {
+                    _log.error("File download status: \${download.statusCode()}\\n\${download.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("result", false).set("error", "file-download-failed"))
+                    _exec.stop()
+                }
+
+                file = download.file()
+                _log.info("Downloaded file name: \${file.name()}")
+
+                file.save(_app.file("storage/filesystem/server/\${file.name()}"))
+                file.save(_storage.filesystem("server", "other.png").file())
+                file.save(_os.file("/tmp/download.png"))
+                _out.json(_val.map().set("result", true))
+            `
+        },
+    ]}
+/>
+
+> `file.save` is used 3 times on purpose; to learn more about `_app.file`, `_storage`, and `_os.file`,
+> see the tutorial on [File and Folder Manipulation](/docs/academy/server/files-manipulation).
+
+## Upload
+
+To send a file structured as a form in multipart format, we use `asMultipartFormData()`.
+
+See the complete example of a service:
+
+<PolyglotCode
+    file="server/services/file-upload"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const file = _app.file("public/images/logo.png");
+
+                const upload = _remote.asMultipartFormData()
+                  .post(
+                    'http://localhost:9000/services/file-receiver',
+                    _val.map()
+                      .set("file", file)
+                  );
+
+                if (upload.ok()) {
+                  _log.info(\`Successfully uploaded: \${file.name()}\`);
+                  _out.json({result: true});
+                } else {
+                  _log.error(\`File upload status: \${upload.statusCode()}\\n\${upload.toString()}\`);
+                  _header.status(500);
+                  _out.json({result: false, error: 'file-upload-failed'});
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                file = _app.file("public/images/logo.png")
+
+                upload = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("file", file)
+                );
+
+                if upload.ok():
+                    _log.info(f"Successfully uploaded: {file.name()}")
+                    _out.json(_val.map().set("result", True))
+                else:
+                    _log.error(f"File upload status: {upload.statusCode()}\\n{upload.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("result", False).set("error", "file-upload-failed"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                file = _app.file("public/images/logo.png")
+
+                upload = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("file", file)
+                );
+
+                if upload.ok()
+                    _log.info("Successfully uploaded: #{file.name()}")
+                    _out.json(_val.map().set("result", true))
+                else
+                    _log.error("File upload status: #{upload.statusCode()}\\n#{upload.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("result", false).set("error", "file-upload-failed"))
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val file = _app.file("public/images/logo.png")
+
+                val upload = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("file", file)
+                );
+
+                if (upload.ok()) {
+                    _log.info("Successfully uploaded: \${file.name()}")
+                    _out.json(_val.map().set("result", true))
+                } else {
+                    _log.error("File upload status: \${upload.statusCode()}\\n\${upload.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("result", false).set("error", "file-upload-failed"))
+                }
+            `
+        }
+    ]}
+/>
+
+Notice that in the example above the file is sent to another service; see how this other service that receives the file can be implemented in Netuno:
+
+<PolyglotCode
+    file="server/services/file-receiver"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const file = _req.getFile("file");
+                _log.info(\`Received file name: \${file.name()}\`);
+                file.save(_storage.filesystem("server", "received.png").file());
+                _out.json({result: true});
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                file = _req.getFile("file")
+                _log.info(f"Received file name: {file.name()}")
+                file.save(_storage.filesystem("server", "received.png").file())
+                _out.json(_val.map().set("result", True))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                file = _req.getFile("file")
+                _log.info("Received file name: #{file.name()}")
+                file.save(_storage.filesystem("server", "received.png").file())
+                _out.json(_val.map().set("result", true))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val file = _req.getFile("file")
+                _log.info("Received file name: \${file.name()}")
+                file.save(_storage.filesystem("server", "received.png").file())
+                _out.json(_val.map().set("result", true))
+            `
+        }
+    ]}
+/>
+
+## Conclusion
+
+With the [Remote](/docs/library/resources/remote) resource we can integrate external APIs, and we can export, import, or synchronize data.
+
+We can even integrate services implemented in other technologies, which allows performing specific operations provided by other languages.

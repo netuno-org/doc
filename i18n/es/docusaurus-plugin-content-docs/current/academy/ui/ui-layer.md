@@ -1,33 +1,37 @@
 ---
 sidebar_position: 8
 id: ui-layer
-title: Capa de UI
-sidebar_label: Capa de UI
+title: Capa UI
+sidebar_label: Capa UI
 ---
 
-Instalación y compilación del dashboard e interfaz general de las aplicaciones.
+Instalación y compilación del panel de control y la interfaz general de las aplicaciones.
 
 ## Contexto
 
-Las aplicaciones Netuno ya traen configuradas, por defecto, un conjunto de tecnologías avanzadas orientadas al front-end, siendo algunas de ellas [React](https://react.dev/), [Vite](https://vite.dev/), [Less](https://lesscss.org/) y [Ant.Design](https://ant.design/).
+Las aplicaciones Netuno ya traen configuradas, por defecto, un conjunto de tecnologías avanzadas orientadas al 
+front-end, siendo algunas de ellas [React](https://react.dev/), [Vite](https://vite.dev/), [Less](https://lesscss.org/) 
+y [Ant.Design](https://ant.design/).
 
-Dentro de las aplicaciones hay la carpeta `📁 ui` (_user interface_, interfaz de usuario), que es donde desarrollamos los dashboards y otros componentes de front-end.
+Dentro de las aplicaciones está la carpeta `📁 ui` (_interfaz de usuario_), que es donde desarrollamos los
+paneles de control y otros componentes de front-end.
 
 ## Antes de empezar
 
-Asegúrese de que tiene instalado [Bun](https://bun.sh/), que es un requisito previo; más sobre cómo:
+Asegúrate de tener instalado [Bun](https://bun.sh/), que es un requisito previo; más información sobre cómo:
 
 - [Instalar Bun](/docs/academy/website/bun)
 
 ## Instalar los módulos de dependencia
 
-Para instalar todas las dependencias que vienen por defecto, entre en la carpeta `📁 ui` (_user interface_) dentro de su aplicación en desarrollo, por ejemplo:
+Para instalar todas las dependencias que vienen por defecto, entra en la carpeta `📁 ui` (_interfaz de usuario_) dentro de tu 
+aplicación en desarrollo, por ejemplo:
 
 ```shell
 cd apps/mi_app/ui/
 ```
 
-Ejecute el comando de instalación de los módulos de dependencia:
+Ejecuta el comando de instalación de los módulos de dependencia:
 
 ```shell
 bun install
@@ -37,27 +41,28 @@ bun install
 
 ## Compilación automática
 
-Entre en la carpeta `📁 ui` (_user interface_) de su aplicación en desarrollo, por ejemplo:
+Entra en la carpeta `📁 ui` (_interfaz de usuario_) de tu aplicación en desarrollo, por ejemplo:
 
 ```shell
 cd apps/mi_app/ui/
 ```
 
-Para compilar el front-end automáticamente en cada cambio de código, ejecute:
+Para compilar el front-end automáticamente en cada cambio de código, ejecuta:
 
 ```shell
 bun run watch
 ```
 
-> Asegúrese de que tiene [Bun](https://bun.sh/) instalado.
+> Asegúrate de tener [Bun](https://bun.sh/) instalado.
  
 ## Integración automática del front-end con Netuno
 
-Netuno le permite iniciar la UI junto con el proceso del servidor de la aplicación Netuno.
+Netuno te permite iniciar la UI junto con el proceso de servidor de la aplicación Netuno.
 
 > Todos los mensajes de compilación de React estarán integrados en el mismo terminal que la aplicación Netuno.
 
-Para ello, basta con activar la configuración en los `commands` de la aplicación Netuno en `📂 config/_development.json`, es decir, en el `command` con el `path` de `ui` poner el `enabled` en `true`, de la siguiente forma:
+Para ello, basta con activar la configuración en los `commands` de la aplicación Netuno en `📂 config/_development.json`,
+es decir, en el `command` con el `path` de `ui`, poner `enabled` en `true`, de la siguiente forma:
 
 ```json title="config/_development.json"
 {
@@ -73,19 +78,23 @@ Para ello, basta con activar la configuración en los `commands` de la aplicaci�
 }
 ```
 
-> Siempre que edite archivos de configuración de la aplicación Netuno es necesario reiniciar el servidor para que pueda asumir los nuevos cambios.
+> Siempre que edites archivos de configuración de la aplicación Netuno es necesario reiniciar el servidor para que pueda 
+> aplicar los nuevos cambios.
 
-Por último, inicie/reinicie el servidor con su aplicación Netuno para comprobar su funcionamiento.
+Por último, inicia/reinicia el servidor con tu aplicación Netuno para comprobar su funcionamiento.
 
-Y ahora todo quedará integrado en un solo terminal centralizado, evitando así tener varios terminales dispersos, más sobre:
+Y ahora todo quedará integrado en un único terminal centralizado, evitando así tener varios terminales
+dispersos; más sobre:
 
 - [Terminal centralizado](/docs/academy/explore/centralized-terminal)
 
 ## Otras tecnologías de front-end
 
-Dentro de la carpeta `📁 ui` es posible configurar cualquier tecnología de front-end, o incluir cualquier nuevo módulo de dependencia que sea necesario.
+Dentro de la carpeta `📁 ui` es posible configurar cualquier tecnología de front-end, o incluir cualquier nuevo módulo de 
+dependencia que sea necesario.
 
-Si no quiere utilizar ninguna de las tecnologías estándar, puede sustituirla por cualquier otra, adaptando especialmente los archivos:
+Si no quieres utilizar ninguna de las tecnologías estándar, puedes sustituirla por cualquier otra, especialmente
+adaptando los archivos:
 
 - `package.json`
 - `vite.config.js`

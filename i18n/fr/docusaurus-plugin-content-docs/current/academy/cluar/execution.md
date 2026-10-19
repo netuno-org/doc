@@ -21,8 +21,8 @@ Cela démarre le back-end et le front-end simultanément.
 
 Par défaut :
 
-- Le back-office de Netuno est disponible à l'adresse [http://localhost:9000/](http://localhost:9000/)
-- L'OpenAPI des services est disponible à l'adresse [http://localhost:9000/services/_openapi](http://localhost:9000/services/_openapi)
+- Le backoffice de Netuno est disponible à [http://localhost:9000/](http://localhost:9000/)
+- L'OpenAPI des services se trouve à [http://localhost:9000/services/_openapi](http://localhost:9000/services/_openapi)
 
 ## Démarrer le site web
 
@@ -33,13 +33,13 @@ cd website
 bun run dev
 ```
 
-Par défaut, le site web est disponible à l'adresse [http://localhost:3000/](http://localhost:3000/)
+Par défaut, le site web est disponible à [http://localhost:3000/](http://localhost:3000/)
 
-> Il est possible de faire démarrer automatiquement le site web avec le serveur Netuno, en activant la commande correspondante dans `config/_development.json` — voir [Configuration](/docs/academy/cluar/configuration#7-arranque-automático-do-website-opcional).
+> Il est possible de faire démarrer automatiquement le site web en même temps que le serveur Netuno, en activant la commande correspondante dans `config/_development.json` — voir [Configuration](/docs/academy/cluar/configuration#7-démarrage-automatique-du-site-web-facultatif).
 
 ## Résolution de problèmes
 
-### Erreur de version GLIBC lors de l'exécution de `bun run dev`
+### Erreur de version de GLIBC lors de l'exécution de `bun run dev`
 
 Si une erreur comme celle-ci apparaît lors du démarrage du site web :
 
@@ -69,6 +69,6 @@ bun pm trust --all
 bun run dev
 ```
 
-## Prochaine étape
+## Étape suivante
 
 Une fois le projet en cours d'exécution, explorez les [Langues](/docs/academy/cluar/languages) ou le [modèle de Pages](/docs/academy/cluar/pages/overview).

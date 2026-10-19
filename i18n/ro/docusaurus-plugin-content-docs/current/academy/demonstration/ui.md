@@ -1,24 +1,24 @@
 ---
 sidebar_position: 7
 id: ui
-title: Interfață și Design
+title: Interfață & Design
 ---
 
 ## Introducere
 
-Dezvoltarea frontend-ului, adică ceea ce este procesat vizual de browser, se realizează în folderul **ui**.
+Dezvoltarea frontend-ului, adică ceea ce este procesat vizual de browser, este realizată în folderul **ui**.
 
-În mod implicit, în acest folder se află mediul de dezvoltare dezvoltat în <a href="https://reactjs.org/" target="_blank">ReactJS</a> cu <a href="https://ant.design/" target="_blank">Ant.Design</a> și <a href="http://lesscss.org/" target="_blank">Less</a>, compilat folosind <a href="https://vite.dev/" target="_blank">Vite</a>.
+În mod implicit, în acest folder se află mediul de dezvoltare creat în <a href="https://reactjs.org/" target="_blank">ReactJS</a> cu <a href="https://ant.design/" target="_blank">Ant.Design</a> și <a href="http://lesscss.org/" target="_blank">Less</a>, compilat folosind <a href="https://vite.dev/" target="_blank">Vite</a>.
 
-Deși mediul implicit este configurat pentru aceste tehnologii, deoarece sunt destul de utilizate în ziua de azi, nu este limitat la acestea.
+Deși mediul implicit este configurat pentru aceste tehnologii, întrucât sunt foarte utilizate în prezent, nu este limitat la ele.
 
-Dacă intenționați să utilizați altă tehnologie precum **VueJS**, **MaterialUI**, **Sass**, **Bootstrap**, **TypeScript**, etc... este suficient să modificați în folderul `📂 ui` configurațiile din `📂 package.json` și `📂 vite.config.js` pentru tehnologiile pe care le preferați.
+Dacă doriți să utilizați altă tehnologie precum **VueJS**, **MaterialUI**, **Sass**, **Bootstrap**, **TypeScript** etc., este suficient să modificați în folderul `📂 ui` configurațiile din `📂 package.json` și `📂 vite.config.js` pentru tehnologiile pe care le preferați.
 
 > Mai multe despre [terminalul integrat și centralizat](/docs/academy/explore/centralized-terminal).
 
 ## Cerințe preliminare
 
-Înainte de a începe este important să vă asigurați că aveți [Bun](https://bun.sh/) instalat.
+Înainte de a începe, este important să vă asigurați că aveți [Bun](https://bun.sh/) instalat.
 
 > Vedeți cum să [instalați Bun](/docs/academy/website/bun).
 
@@ -28,25 +28,25 @@ Pentru a înțelege mai bine cum funcționează interfața de utilizare, recoman
 
 ## Extinderea serviciului
 
-După ce a fost creat serviciul **lucratori** în `📂 server/services/lucratori.js` prin Visual Studio Code care pune la dispoziție informația în <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> la adresa:
+După ce a fost creat serviciul **lucratori** în `📂 server/services/lucratori.js` prin Visual Studio Code, care pune la dispoziție informația în <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> la adresa:
 
 * <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/lucratori</a>
 
-Următorul pas este să îl extindem pentru a prezenta datele în interfața browserului.
+Următorul pas este să îl extindeți pentru a prezenta datele în interfața browserului.
 
-Cu aceste date le vom prezenta într-un tabel și un grafic.
+Cu aceste date le vom prezenta într-un tabel și într-un grafic.
 
 Presupunând că aveți Visual Studio Code sau alt editor de text deschis cu aplicația **Demo**.
 
 Deschideți următorul fișier în editor:
 
-`📂 ui/src/containers/ContainerPanou/index.jsx`
+`📂 ui/src/containers/DashboardContainer/index.jsx`
 
 Vom modifica acest cod deja existent.
 
-### Pregătirea `state`
+### Pregătiți `state`
 
-Chiar la începutul componentei `ContainerPanou` în interiorul `function` se află definiția _state_-ului său.
+Chiar la începutul componentei `DashboardContainer`, în interiorul `function`, se află definiția _state_-ului său.
 
 Adăugați o nouă intrare pentru a stoca datele lucrătorilor după cum urmează:
 
@@ -56,11 +56,11 @@ Adăugați o nouă intrare pentru a stoca datele lucrătorilor după cum urmeaz�
             const [incarcare, setIncarcare] = useState(false);
 ```
 
-Adică, adăugați noua linie de stare `const [lucratori, setLucratori] = useState([]);`.
+Adică, adăugați noua linie `const [lucratori, setLucratori] = useState([]);` de stare.
 
-### Crearea funcției `incarcaLucratori`
+### Creați funcția `incarcaLucratori`
 
-Mai jos observați că există o funcție numită `incarcaLucratori`, această funcție realizează obținerea datelor lucrătorilor care apar în dashboard în prezent.
+Mai jos observați că există o funcție numită `incarcaLucratori`; această funcție obține datele lucrătorilor care apar în prezent în dashboard.
 
 > Această funcție este folosită pentru a încărca datele lucrătorilor.
 
@@ -68,7 +68,7 @@ Introduceți codul de mai jos:
 
 ```jsx
     /**
-    *** 🚀 Încarcă datele Lucrătorilor.
+    *** 🚀 Încarcă datele lucrătorilor.
     ***    Prin executarea serviciului:
     **     http://localhost:9000/services/lucratori
     */
@@ -83,14 +83,14 @@ Introduceți codul de mai jos:
             },
             fail: (e) => {
                 setIncarcare(false);
-                console.error('Eroare în serviciul Lucrătorilor.', e);
+                console.error('Eroare în serviciul Lucrători.', e);
                 message.error(intl.formatMessage({ id: `${messages}.eroare_incarcare` }));
             }
         });
     };
 ```
 
-Ceea ce face acest cod de mai sus este să transmită datele **lucrătorilor** către _state_-ul componentei în <a href="https://reactjs.org/" target="_blank">ReactJS</a>, aceasta prin executarea serviciului **lucratori** care, la primirea datelor în <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a>, le stochează în _state_ prin executarea `setLucratori`.
+Ceea ce face codul de mai sus este să transmită datele **lucrătorilor** către _state_-ul componentei în <a href="https://reactjs.org/" target="_blank">ReactJS</a>, prin executarea serviciului **lucratori** care, la primirea datelor în <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a>, le stochează în _state_ prin executarea `setLucratori`.
 
 Codul final ar trebui să fie structurat astfel:
 
@@ -110,11 +110,11 @@ Codul final ar trebui să fie structurat astfel:
 
 > Unde `...` sunt diferitele linii de cod omise din blocurile respective.
 
-### Executarea hook-ului `useEffect`
+### Executați hook-ul `useEffect`
 
-Acum lipsește executarea hook-ului nostru `useEffect` când componenta este "montată", acest hook este executat când componenta este construită în prezentarea vizuală a browserului.
+Acum mai rămâne să executăm hook-ul nostru `useEffect` când componenta este „montată”; acest hook este executat când componenta este construită în prezentarea vizuală a browserului.
 
-Pentru aceasta este suficient, puțin mai sus, să adăugați linia de cod `incarcaLucratori();` în interiorul hook-ului `useEffect` astfel:
+Pentru aceasta, este suficient să adăugați, puțin mai sus, linia de cod `incarcaLucratori();` în interiorul hook-ului `useEffect` astfel:
 
 ```jsx
     useEffect(() => {
@@ -122,11 +122,11 @@ Pentru aceasta este suficient, puțin mai sus, să adăugați linia de cod `inca
     }, []);
 ```
 
-Această nouă linie de cod va apela funcția care execută serviciul <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/lucratori</a>, care a fost creat anterior, pentru a obține datele în JSON și a le păstra în `state` (_stare_) componentei pentru a fi prezentate în return (_vizualizare_).
+Această nouă linie de cod va apela funcția care execută serviciul <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/lucratori</a>, creat anterior, pentru a obține datele în JSON și a le păstra în `state` (_stare_) al componentei pentru a fi prezentate în return (_vizualizare_).
 
 ### Compilare
 
-**Salvați** fișierul și imediat după aceea observați că în **terminalul** unde aveți Netuno în execuție va apărea rezultatul noii compilări a **ui**, cu linii noi ale rezultatului compilării <a href="https://reactjs.org/" target="_blank">ReactJS</a> + <a href="https://vite.dev/" target="_blank">Vite</a>.
+**Salvați** fișierul și imediat după aceea observați că în **terminalul** în care rulează Netuno va apărea rezultatul noii compilări a **ui**, cu linii noi din rezultatul compilării <a href="https://reactjs.org/" target="_blank">ReactJS</a> + <a href="https://vite.dev/" target="_blank">Vite</a>.
 
 Rezultatul așteptat în **terminal** ar trebui să fie similar cu următorul:
 
@@ -153,27 +153,27 @@ built in 2128ms.
 
 Dacă există vreo eroare la compilare, atunci va apărea în **terminal** indicarea problemei.
 
-Până aici am realizat consumul serviciului nostru **lucratori** în care datele obținute rămân stocate în `state`-ul componentei `ContainerPanou` care astfel devine disponibil pentru a fi utilizat în `return`.
+Până aici am realizat consumul serviciului nostru **lucratori**, în care datele obținute rămân stocate în `state`-ul componentei `DashboardContainer`, care astfel devine disponibil pentru a fi utilizat în `return`.
 
 ## Afișarea datelor
 
-Lipsește prezentarea datelor vizual în interfața pe care utilizatorul o vede în browser.
+Mai rămâne să prezentăm datele vizual în interfața pe care utilizatorul o vede în browser.
 
 Pentru a prezenta datele în browser trebuie să modificăm `return`-ul, care procesează aspectul vizual al componentelor în <a href="https://reactjs.org/" target="_blank">ReactJS</a>.
 
-La sfârșitul codului din `ContainerPanou` veți găsi: `return ( ... );`
+La sfârșitul codului din `DashboardContainer` veți găsi: `return ( ... );`
 
-Să îl modificăm adăugând doar încă o linie de cod pentru a conține încă o componentă `VizualizareDate` care va prezenta datele referitoare la **lucrători**, codul ar trebui să fie după cum urmează:
+Să îl modificăm adăugând doar încă o linie de cod pentru a conține încă o componentă `DataVisualization` care va prezenta datele referitoare la **lucratori**; codul ar trebui să devină astfel:
 
 ```jsx
-    // 🔍 Căutați în codul existent:
+    // 🔍 Căutați în codul existent după:
     return (
     <div ref={ref}>
       { incarcare == false ?
-        <VizualizareDate data={lucratori} />
+        <DataVisualization data={lucratori} />
         : <Spin/>
       }
-      <ListaServicii />
+      <ListServices />
     </div>
   );
 ```
@@ -181,10 +181,10 @@ Să îl modificăm adăugând doar încă o linie de cod pentru a conține înc�
 Observați că doar linia de mai jos trebuie adăugată:
 
 ```jsx
-<VizualizareDate data={lucratori} />
+<DataVisualization data={lucratori} />
 ```
 
-Astfel `VizualizareDate` va primi datele obținute prin serviciul **lucratori** via JSON care au rămas stocate în `state`.
+Astfel, `DataVisualization` va primi datele obținute prin serviciul **lucratori** prin JSON, care au rămas stocate în `state`.
 
 ### Compilare finală
 
@@ -192,11 +192,11 @@ Astfel `VizualizareDate` va primi datele obținute prin serviciul **lucratori** 
 
 Asigurați-vă că în output-ul **terminalului** nu există erori.
 
-Acum actualizați pagina în browser și ar trebui să vedeți rezultatul final, sau alternativ, faceți clic pe linkul de mai jos:
+Acum actualizați pagina în browser și ar trebui să vedeți rezultatul final sau, alternativ, faceți clic pe linkul de mai jos:
 
 * <a href="http://localhost:9000" target="_blank">http://localhost:9000</a>
 
-> Dacă dashboard-ul apare gol, înseamnă că există erori în cod.
+> Dacă dashboardul apare gol, înseamnă că există erori în cod.
 >
 > Verificați în consola **browserului** din **instrumentele pentru dezvoltatori** dacă există erori.
 

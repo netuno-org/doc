@@ -5,7 +5,7 @@ title: Funcționalitate
 sidebar_label: Funcționalitate
 ---
 
-Funcționalitățile concrete disponibile pentru a fi incluse într-o pagină, cum ar fi formulare și hărți.
+Funcționalitățile concrete disponibile pentru a fi incluse într-o pagină, cum ar fi formularele și hărțile.
 
 ## Introducere
 
@@ -15,24 +15,24 @@ Urmează același mecanism comun tuturor componentelor, descris în [Prezentare 
 
 ## Câmpuri
 
-Pe lângă [câmpurile comune](/docs/academy/cluar/components/overview#campos-comuns) (Tip, Ordine, Mod de editare, Inversare fundal, Acțiuni), Funcționalitatea are:
+Pe lângă [câmpurile comune](/docs/academy/cluar/components/overview#câmpuri-comune) (Tip, Ordine, Mod de editare, Inversare fundal, Acțiuni), Funcționalitatea are:
 
 | Câmp | Descriere |
 |---|---|
 | **Titlu** (`title`) | Titlul blocului. |
 | **Conținut** (`content` / `html_content`) | Textul blocului. |
-| **Imagine** (`image`) | Imagine asociată (nu toate tipurile o folosesc). |
+| **Imagine** (`image`) | Imaginea asociată (nu toate tipurile o folosesc). |
 
 ## Tipuri disponibile
 
 ### Formular de contact (`ContactForm`)
 
-Prezintă un formular de contact (nume, e-mail, mesaj), protejat prin reCAPTCHA. La trimitere, trimite datele către serviciul `contact` de pe server, care le salvează în entitatea `contact` (vizibilă în backoffice) și permite configurarea alertelor prin e-mail.
+Afișează un formular de contact (nume, e-mail, mesaj), protejat prin reCAPTCHA. La trimitere, datele sunt enviate către serviciul `contact` de pe server, care le salvează în entitatea `contact` (vizibilă în backoffice) și permite configurarea alertelor prin e-mail.
 
 ### Hartă de contact (`ContactMap`)
 
-Prezintă o hartă interactivă, folosind [Mapbox](https://www.mapbox.com/). Folosește configurația `settings.cluar.website.mapbox` (vezi [Configurare](/docs/academy/cluar/configuration)) — și anume `accessToken` (obligatoriu pentru ca harta să funcționeze) și opțiunea `dark` (temă deschisă sau întunecată a hărții).
+Afișează o hartă interactivă, folosind [Mapbox](https://www.mapbox.com/). Folosește configurația `settings.cluar.website.mapbox` (vezi [Configurare](/docs/academy/cluar/configuration)) — în special `accessToken` (obligatoriu pentru ca harta să funcționeze) și opțiunea `dark` (tema deschisă sau închisă a hărții).
 
 ## Pasul următor
 
-Cu cele 5 componente explicate, treci la [Acțiuni](/docs/academy/cluar/actions), care pot fi asociate majorității dintre ele.
+După ce ați explorat cele 5 componente, treceți la [Acțiuni](/docs/academy/cluar/actions), care pot fi asociate majorității dintre ele.

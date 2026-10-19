@@ -5,9 +5,9 @@ title: Server, Comenzi & Sfaturi
 sidebar_label: Server, Comenzi & Sfaturi
 ---
 
-# Comenzi server
+# Comenzile serverului
 
-Referință pentru principalele comenzi Netuno. Executați-le în **terminal**, din folderul unde Netuno este instalat.
+Referință pentru principalele comenzi Netuno. Executați-le în **terminal**, din folderul în care Netuno este instalat.
 
 :::tip
 Nu știți cum să ajungeți în folderul Netuno? Consultați ghidul de [Instalare](/docs/get-started/installation).
@@ -27,10 +27,10 @@ Pornește serverul cu aplicația de `demonstrație`.
 
 ## Pornirea serverului în aplicație
 
-Pornește serverul cu aplicația specifică definită de parametrul `app`. Dacă nu este definită niciuna, va fi pornită aplicația demonstrativă.
+Pornește serverul cu aplicația specifică definită de parametrul `app`. Dacă nu este definită niciuna, va fi pornită aplicația de demonstrație.
 
 ```bash
-./netuno server app=NUME_APP
+./netuno server app=NUME_APLICATIE
 ```
 
 ---
@@ -45,9 +45,9 @@ Creează o aplicație nouă de la zero, solicitând informații și configurați
 
 ---
 
-## Listare comenzi
+## Listarea comenzilor
 
-Listează toate comenzile și parametrizările disponibile cu descrierile respective.
+Listează toate comenzile și parametrizările disponibile, împreună cu descrierile respective.
 
 ```bash
 ./netuno help
@@ -57,7 +57,7 @@ Listează toate comenzile și parametrizările disponibile cu descrierile respec
 
 ## Statistici de performanță
 
-Afișează cele mai recente informații de performanță, stocate în `logs/stats-*`.
+Prezintă cele mai recente informații de performanță, stocate în `logs/stats-*`.
 
 ```bash
 ./netuno stats

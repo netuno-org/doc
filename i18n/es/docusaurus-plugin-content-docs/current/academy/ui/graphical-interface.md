@@ -13,21 +13,21 @@ Este es el entorno frontend donde los usuarios interactúan con la parte visual 
 
 #### 1 - Construir
 
-Este botón permite que usted acceda al modo de desarrollo de la aplicación.
+Este botón le permite acceder al modo de desarrollo de la aplicación.
 
 #### 2 - Menú desplegable
 
-Permite seleccionar opciones para gestionar su sesión, tales como cerrar sesión, cambiar la contraseña de su cuenta y consultar datos de su usuario y grupos.
+ Permite seleccionar opciones para gestionar su sesión, tales como cerrar sesión, cambiar la contraseña de su cuenta y consultar datos de su usuario y grupos.
 
 #### 3 - Mi área de trabajo
 
 Esta es el área central, donde se muestra su aplicación web frontend, programada en la carpeta `public`.
 
-#### 4 - Tablas y formularios
+#### 4 - Tablas formularios
 
 En esta área, usted encuentra el acceso a todas las tablas de datos. Haga clic para visualizar, añadir, editar o eliminar datos directamente a través de formularios.
 
-![vista-es.png](/docs/assets/academy/ui/get-to-know/view-pt.png)
+![view-pt.png](/docs/assets/academy/ui/get-to-know/view-pt.png)
 
 ### Construir
 
@@ -43,11 +43,11 @@ Permite salir de la aplicación.
 
 #### 3 -  Mi área de trabajo
 
-Esta es el área central, donde se muestra su aplicación web frontend, programada en la carpeta `public`.
+Esta es el área central, donde se muestra su aplicación web frontend, programada en la carpeta `public`. 
 
 #### 4 - Gestión
 
-Esta sección permite gestionar formularios, informes, consultas y diagramas.
+Esta sección permite gestionar formularios, informes, query y diagramas.
 
 #### 5 - Depurar
 
@@ -55,5 +55,5 @@ Esta sección posibilita la monitorización y la inspección del comportamiento 
 
 #### 6 - Gestión de campos
 
-Esta sección permite la gestión de la estructura de sus tablas de datos. Usted puede añadir, editar o eliminar campos y definir el tipo de dato (texto, número, fecha, etc.) para cada uno.
-![construccion-es.png](/docs/assets/academy/ui/get-to-know/construction-pt.png)
+Esta sección permite la gestión de la estructura de sus tablas de datos. Puede añadir, editar o eliminar campos y definir el tipo de dato (texto, número, fecha, etc.) para cada uno.
+![construction-pt.png](/docs/assets/academy/ui/get-to-know/construction-pt.png)

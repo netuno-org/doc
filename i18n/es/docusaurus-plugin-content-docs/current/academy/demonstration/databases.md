@@ -1,10 +1,10 @@
 ---
 sidebar_position: 4
 id: databases
-title: Base de datos
+title: Base de Datos
 ---
 
-# Base de datos
+# Base de Datos
 
 En esta etapa, vamos a explorar la **base de datos** creada automáticamente a partir del formulario **Tarea** definido anteriormente.
 
@@ -17,10 +17,10 @@ Los **nombres técnicos** de los campos (por ejemplo, `tarea`, `nombre`, `tarea_
 En esta sección vamos a ejecutar consultas directamente en la base de datos usando la interfaz de gestión de Netuno.
 
 1. Acceda al entorno **Construir**.
-2. En el menú, haga clic en **Gestión > Consulta**.
-3. En el editor de consultas, pegue y ejecute los comandos a continuación.
+2. En el menú, haga clic en **Gestión > Query**.
+3. En el editor de query, pegue y ejecute los comandos de abajo.
 
-### Consultas simples
+### Consultas Simples
 
 Liste solo el nombre de las tareas:
 
@@ -51,9 +51,9 @@ FROM trabajador;
 ```
 
 Al hacer clic en **Ejecutar**, Netuno genera una tabla de resultados para **cada** comando separado por punto y coma (`;`).  
-Esto es útil cuando se desea ejecutar varias consultas de una sola vez.
+Esto es útil cuando quiere ejecutar varias consultas de una sola vez.
 
-### Consulta con relaciones
+### Consulta con Relaciones
 
 Ahora, ejecute una consulta que relaciona todas las tablas:
 
@@ -70,7 +70,7 @@ INNER JOIN trabajador
   ON trabajador.id = registro.trabajador_id;
 ```
 
-Esta consulta devuelve:
+Esta query devuelve:
 
 - El nombre de la tarea.
 - El inicio y el fin de cada registro.
@@ -92,9 +92,9 @@ En el Diagrama puede:
 
 Estas acciones están disponibles en botones del lado derecho del panel del diagrama.
 
-Netuno crea automáticamente las líneas con flechas de relación a partir de la configuración de **Enlaces** en los campos (por ejemplo, campos de tipo `select` que apuntan a otras tablas).
+Netuno crea automáticamente las líneas con flechas de relación a partir de la configuración de **Links** en los campos (por ejemplo, campos de tipo `select` que apuntan a otras tablas).
 
-## Buenas prácticas
+## Buenas Prácticas
 
 Al modelar su base de datos en Netuno, siga estas buenas prácticas:
 
@@ -107,13 +107,13 @@ Evitar el plural ayuda a:
 
 - Mantener los nombres más cortos y legibles.
 - Reducir ambigüedades al escribir consultas.
-- Facilitar la lectura en los formularios y en los diagramas, especialmente cuando hay múltiples relaciones.
+- Facilitar la lectura en los formularios y en los diagramas, principalmente cuando hay múltiples relaciones.
 
-:::tip Convención de nomenclatura
-Como norma, use siempre **nombres en singular** para formularios, tablas y campos.  
+:::tip Patrón de nomenclatura
+Como patrón, use siempre **nombres en singular** para formularios, tablas y campos.  
 Ejemplos: `tarea`, `registro`, `trabajador`, `tarea_id`, `trabajador_id`.
 :::
 
-## Próximo paso
+## Siguiente Paso
 
-Avance a la siguiente etapa de **Relacionar datos** para continuar con la aplicación de demostración.
+Avance a la siguiente etapa de **Relacionar Datos** para continuar con la aplicación de demostración.

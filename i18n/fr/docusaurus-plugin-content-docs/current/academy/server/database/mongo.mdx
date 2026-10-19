@@ -9,13 +9,13 @@ import PolyglotPath from "@site/src/components/PolyglotPath";
 
 ## Introduction
 
-<a href="https://www.mongodb.com/" target="_blank">MongoDB</a> est une base de données NoSQL orientée documents. Au lieu de tables et de lignes, les données sont stockées dans des documents au format similaire à JSON, ce qui permet une grande flexibilité dans le modèle de données.
+<a href="https://www.mongodb.com/" target="_blank">MongoDB</a> est une base de données NoSQL orientée documents. Au lieu de tableaux et de lignes, les données sont stockées dans des documents au format similaire à JSON, ce qui permet une grande flexibilité dans le modèle de données.
 
-Netuno offre la ressource [_mongo](/docs/library/resources/mongo) pour l'intégration avec MongoDB, avec une abstraction low-code sur le client officiel MongoDB pour Java, disponible pour les différents langages de programmation supportés par Netuno : **JavaScript, Python, Ruby, Kotlin et Groovy**.
+Netuno offre la ressource [_mongo](/docs/library/resources/mongo) pour l'intégration avec MongoDB, avec une abstraction low-code au-dessus du client officiel MongoDB pour Java, disponible pour les différents langages de programmation pris en charge par Netuno : **JavaScript, Python, Ruby, Kotlin et Groovy**.
 
 > Avant de continuer, il est recommandé de savoir comment créer des services dans Netuno, consultez le tutoriel [REST - Services Web](/docs/academy/server/services/rest).
 
-Un exemple d'implémentation des opérations présentées ici est disponible dans le service d'exemple `mongo.js` qui se trouve à :
+Un exemple d'implémentation des opérations présentées ici est disponible dans le service d'exemple `mongo.js` qui se trouve dans :
 
 <PolyglotPath files={[
     `apps/demo/server/services/samples/javascript/mongo`
@@ -25,19 +25,19 @@ Un exemple d'implémentation des opérations présentées ici est disponible dan
 
 ### Avec Docker
 
-En supposant que vous avez Docker installé, il suffit de télécharger l'image MongoDB et de démarrer un nouveau conteneur :
+En supposant que Docker soit installé, il suffit de télécharger l'image MongoDB et de démarrer un nouveau conteneur :
 
 ```shell
 docker pull mongo
 docker run -d --name mongo -p 27017:27017 mongo
 ```
 
-Ainsi, MongoDB est accessible à l'adresse `localhost:27017` sans authentification.
+De cette façon, MongoDB est accessible à l'adresse `localhost:27017` sans authentification.
 
 Pour créer l'utilisateur de la base de données conformément à la configuration de l'application, exécutez :
 
 ```shell
-docker exec -it mongo mongosh produits_db --eval 'db.createUser({ user: "utilisateur_produits", pwd: "12345678", roles: [{ role: "readWrite", db: "produits_db" }] })'
+docker exec -it mongo mongosh produits_db --eval 'db.createUser({ user: "produits_user", pwd: "12345678", roles: [{ role: "readWrite", db: "produits_db" }] })'
 ```
 
 ### Avec Ubuntu
@@ -80,9 +80,9 @@ Dans le fichier de configuration, ajoutez le bloc `mongo`, où chaque clé ident
 {
     ...
     "mongo": {
-        "magasin": "mongodb://utilisateur_magasin:12345678@localhost/magasin_db",
+        "magasin": "mongodb://magasin_user:12345678@localhost/magasin_db",
         "produits": {
-            "username": "utilisateur_produits",
+            "username": "produits_user",
             "password": "12345678",
             "host": "127.0.0.1",
             "port": "27017",
@@ -95,7 +95,7 @@ Dans le fichier de configuration, ajoutez le bloc `mongo`, où chaque clé ident
 
 Une connexion peut être définie de deux manières :
 
-- **Comme URL de connexion** — la valeur est simplement une chaîne, par exemple `"mongodb://utilisateur_magasin:12345678@localhost/magasin_db"`.
+- **Comme URL de connexion** — la valeur est simplement une chaîne, par exemple `"mongodb://magasin_user:12345678@localhost/magasin_db"`.
 - **Comme objet de configuration** — avec les champs :
   - `url` — s'il est défini, il est utilisé directement comme URL de connexion, en ignorant les autres champs.
   - `protocol` — le protocole de la connexion, par défaut `mongodb`.
@@ -105,7 +105,7 @@ Une connexion peut être définie de deux manières :
   - `database` — le nom de la base de données, par défaut le nom de la clé de connexion.
   - `params` — paramètres supplémentaires de la connexion ajoutés à l'URL, par exemple `{ "authSource": "admin" }`. Ils ne sont appliqués que lorsque l'URL est construite à partir des champs de l'objet.
 
-> La connexion ne doit pas être la base de données principale de l'application. Contrairement à la configuration `db`, le bloc `mongo` est indépendant et permet plusieurs connexions simultanées.
+> La connexion n'a pas besoin d'être la base de données principale de l'application. Contrairement à la configuration `db`, le bloc `mongo` est indépendant et permet plusieurs connexions simultanées.
 
 ## Initialiser la connexion
 
@@ -300,7 +300,7 @@ Vous pouvez renommer une collection avec `renameCollection()`, en passant le nom
             code: `
                 collection.renameCollection("produits_db.produit_archive")
 
-                collection.renameCollection("archive_db", "produit_archive")
+                collection.renameCollection("archives_db", "produit_archive")
             `
         }
     ]}
@@ -402,7 +402,7 @@ Les documents peuvent contenir des structures imbriquées, comme des listes et d
                 collection.insertOne(
                     _val.map()
                         .set("nom", "Tablette")
-                        .set("tags",
+                        .set("etiquettes",
                             _val.list()
                                 .add("promo")
                                 .add("nouveau")
@@ -517,7 +517,7 @@ Avec `insertMany()`, insérez plusieurs documents en une seule fois, en recevant
     ]}
 />
 
-## Interroger des documents
+## Consulter des documents
 
 La méthode `find()` renvoie un [MongoFindIterable](/docs/library/objects/MongoFindIterable), à partir duquel vous obtenez les documents avec `all()` (tous) ou `first()` (le premier, ou `null` s'il n'y en a aucun).
 
@@ -528,31 +528,31 @@ Pour obtenir tous les documents de la collection :
         {
             lang: 'javascript',
             code: `
-                const docs = collection.find().all()
+                const documents = collection.find().all()
             `
         },
         {
             lang: 'python',
             code: `
-                docs = collection.find().all()
+                documents = collection.find().all()
             `
         },
         {
             lang: 'ruby',
             code: `
-                docs = collection.find().all()
+                documents = collection.find().all()
             `
         },
         {
             lang: 'kotlin',
             code: `
-                val docs = collection.find().all()
+                val documents = collection.find().all()
             `
         },
         {
             lang: 'groovy',
             code: `
-                def docs = collection.find().all()
+                def documents = collection.find().all()
             `
         }
     ]}
@@ -565,7 +565,7 @@ Pour interroger avec un filtre, utilisez la factory [_mongo.filters()](/docs/lib
         {
             lang: 'javascript',
             code: `
-                const docs = collection.find(
+                const documents = collection.find(
                     _mongo.filters().eq("nom", "Ordinateur portable")
                 ).all()
             `
@@ -573,7 +573,7 @@ Pour interroger avec un filtre, utilisez la factory [_mongo.filters()](/docs/lib
         {
             lang: 'python',
             code: `
-                docs = collection.find(
+                documents = collection.find(
                     _mongo.filters().eq("nom", "Ordinateur portable")
                 ).all()
             `
@@ -581,7 +581,7 @@ Pour interroger avec un filtre, utilisez la factory [_mongo.filters()](/docs/lib
         {
             lang: 'ruby',
             code: `
-                docs = collection.find(
+                documents = collection.find(
                     _mongo.filters().eq("nom", "Ordinateur portable")
                 ).all()
             `
@@ -589,7 +589,7 @@ Pour interroger avec un filtre, utilisez la factory [_mongo.filters()](/docs/lib
         {
             lang: 'kotlin',
             code: `
-                val docs = collection.find(
+                val documents = collection.find(
                     _mongo.filters().eq("nom", "Ordinateur portable")
                 ).all()
             `
@@ -597,7 +597,7 @@ Pour interroger avec un filtre, utilisez la factory [_mongo.filters()](/docs/lib
         {
             lang: 'groovy',
             code: `
-                def docs = collection.find(
+                def documents = collection.find(
                     _mongo.filters().eq("nom", "Ordinateur portable")
                 ).all()
             `
@@ -607,7 +607,7 @@ Pour interroger avec un filtre, utilisez la factory [_mongo.filters()](/docs/lib
 
 ### Filtres
 
-La factory `_mongo.filters()` propose les principaux opérateurs de requête de MongoDB :
+La factory `_mongo.filters()` offre les principaux opérateurs de requête MongoDB :
 
 | Opérateur | Description |
 |---|---|
@@ -628,7 +628,7 @@ La factory `_mongo.filters()` propose les principaux opérateurs de requête de 
 | `type("champ", "type")` | Le champ est du type spécifié. |
 | `mod("champ", diviseur, reste)` | Le reste de la division du champ par le diviseur est égal à la valeur. |
 | `where("expression")` | Correspond aux documents qui satisfont une expression JavaScript, par exemple `"this.prix > 100"`. |
-| `size("champ", n)` | Le champ de tableau a exactement `n` éléments. |
+| `size("champ", n)` | Le champ tableau a exactement `n` éléments. |
 
 Par exemple, pour obtenir les produits avec un prix supérieur à 50 et une quantité inférieure à 30 :
 
@@ -637,7 +637,7 @@ Par exemple, pour obtenir les produits avec un prix supérieur à 50 et une quan
         {
             lang: 'javascript',
             code: `
-                const docs = collection.find(
+                const documents = collection.find(
                     _mongo.filters().and(
                         _mongo.filters().gt("prix", 50),
                         _mongo.filters().lt("quantite", 30)
@@ -648,7 +648,7 @@ Par exemple, pour obtenir les produits avec un prix supérieur à 50 et une quan
         {
             lang: 'python',
             code: `
-                docs = collection.find(
+                documents = collection.find(
                     _mongo.filters().and(
                         _mongo.filters().gt("prix", 50),
                         _mongo.filters().lt("quantite", 30)
@@ -659,7 +659,7 @@ Par exemple, pour obtenir les produits avec un prix supérieur à 50 et une quan
         {
             lang: 'ruby',
             code: `
-                docs = collection.find(
+                documents = collection.find(
                     _mongo.filters().and(
                         _mongo.filters().gt("prix", 50),
                         _mongo.filters().lt("quantite", 30)
@@ -670,7 +670,7 @@ Par exemple, pour obtenir les produits avec un prix supérieur à 50 et une quan
         {
             lang: 'kotlin',
             code: `
-                val docs = collection.find(
+                val documents = collection.find(
                     _mongo.filters().and(
                         _mongo.filters().gt("prix", 50),
                         _mongo.filters().lt("quantite", 30)
@@ -681,7 +681,7 @@ Par exemple, pour obtenir les produits avec un prix supérieur à 50 et une quan
         {
             lang: 'groovy',
             code: `
-                def docs = collection.find(
+                def documents = collection.find(
                     _mongo.filters().and(
                         _mongo.filters().gt("prix", 50),
                         _mongo.filters().lt("quantite", 30)
@@ -699,7 +699,7 @@ Ou pour obtenir les produits dont le nom correspond à une expression régulièr
         {
             lang: 'javascript',
             code: `
-                const docs = collection.find(
+                const documents = collection.find(
                     _mongo.filters().regex("nom", "^[LS]")
                 ).all()
             `
@@ -707,7 +707,7 @@ Ou pour obtenir les produits dont le nom correspond à une expression régulièr
         {
             lang: 'python',
             code: `
-                docs = collection.find(
+                documents = collection.find(
                     _mongo.filters().regex("nom", "^[LS]")
                 ).all()
             `
@@ -715,7 +715,7 @@ Ou pour obtenir les produits dont le nom correspond à une expression régulièr
         {
             lang: 'ruby',
             code: `
-                docs = collection.find(
+                documents = collection.find(
                     _mongo.filters().regex("nom", "^[LS]")
                 ).all()
             `
@@ -723,7 +723,7 @@ Ou pour obtenir les produits dont le nom correspond à une expression régulièr
         {
             lang: 'kotlin',
             code: `
-                val docs = collection.find(
+                val documents = collection.find(
                     _mongo.filters().regex("nom", "^[LS]")
                 ).all()
             `
@@ -731,7 +731,7 @@ Ou pour obtenir les produits dont le nom correspond à une expression régulièr
         {
             lang: 'groovy',
             code: `
-                def docs = collection.find(
+                def documents = collection.find(
                     _mongo.filters().regex("nom", "^[LS]")
                 ).all()
             `
@@ -748,39 +748,39 @@ Avec le résultat de la requête, vous pouvez parcourir tous les documents trouv
         {
             lang: 'javascript',
             code: `
-                for (const doc of collection.find().all()) {
-                    _out.println(doc.getString("nom"))
+                for (const document of collection.find().all()) {
+                    _out.println(document.getString("nom"))
                 }
             `
         },
         {
             lang: 'python',
             code: `
-                for doc in collection.find().all():
-                    _out.println(doc.getString("nom"))
+                for document in collection.find().all():
+                    _out.println(document.getString("nom"))
             `
         },
         {
             lang: 'ruby',
             code: `
-                collection.find().all().each do |doc|
-                    _out.println(doc.getString("nom"))
+                collection.find().all().each do |document|
+                    _out.println(document.getString("nom"))
                 end
             `
         },
         {
             lang: 'kotlin',
             code: `
-                for (doc in collection.find().all()) {
-                    _out.println(doc.getString("nom"))
+                for (document in collection.find().all()) {
+                    _out.println(document.getString("nom"))
                 }
             `
         },
         {
             lang: 'groovy',
             code: `
-                for (doc in collection.find().all()) {
-                    _out.println(doc.getString("nom"))
+                for (document in collection.find().all()) {
+                    _out.println(document.getString("nom"))
                 }
             `
         }
@@ -794,8 +794,8 @@ Vous pouvez également parcourir les résultats avec `forEach()` en passant une 
         {
             lang: 'javascript',
             code: `
-                collection.find().forEach((doc) =>
-                    _out.println(doc.getString("nom"))
+                collection.find().forEach((document) =>
+                    _out.println(document.getString("nom"))
                 )
             `
         },
@@ -803,31 +803,31 @@ Vous pouvez également parcourir les résultats avec `forEach()` en passant une 
             lang: 'python',
             code: `
                 collection.find().forEach(
-                    lambda doc: _out.println(doc.getString("nom"))
+                    lambda document: _out.println(document.getString("nom"))
                 )
             `
         },
         {
             lang: 'ruby',
             code: `
-                collection.find().forEach do |doc|
-                    _out.println(doc.getString("nom"))
+                collection.find().forEach do |document|
+                    _out.println(document.getString("nom"))
                 end
             `
         },
         {
             lang: 'kotlin',
             code: `
-                collection.find().forEach { doc ->
-                    _out.println(doc.getString("nom"))
+                collection.find().forEach { document ->
+                    _out.println(document.getString("nom"))
                 }
             `
         },
         {
             lang: 'groovy',
             code: `
-                collection.find().forEach { doc ->
-                    _out.println(doc.getString("nom"))
+                collection.find().forEach { document ->
+                    _out.println(document.getString("nom"))
                 }
             `
         }
@@ -843,7 +843,7 @@ Avec la factory `_mongo.sorts()`, vous définissez l'ordre des résultats, de ma
         {
             lang: 'javascript',
             code: `
-                const docs = collection.find().sort(
+                const documents = collection.find().sort(
                     _mongo.sorts().descending("prix")
                 ).all()
             `
@@ -851,7 +851,7 @@ Avec la factory `_mongo.sorts()`, vous définissez l'ordre des résultats, de ma
         {
             lang: 'python',
             code: `
-                docs = collection.find().sort(
+                documents = collection.find().sort(
                     _mongo.sorts().descending("prix")
                 ).all()
             `
@@ -859,7 +859,7 @@ Avec la factory `_mongo.sorts()`, vous définissez l'ordre des résultats, de ma
         {
             lang: 'ruby',
             code: `
-                docs = collection.find().sort(
+                documents = collection.find().sort(
                     _mongo.sorts().descending("prix")
                 ).all()
             `
@@ -867,7 +867,7 @@ Avec la factory `_mongo.sorts()`, vous définissez l'ordre des résultats, de ma
         {
             lang: 'kotlin',
             code: `
-                val docs = collection.find().sort(
+                val documents = collection.find().sort(
                     _mongo.sorts().descending("prix")
                 ).all()
             `
@@ -875,7 +875,7 @@ Avec la factory `_mongo.sorts()`, vous définissez l'ordre des résultats, de ma
         {
             lang: 'groovy',
             code: `
-                def docs = collection.find().sort(
+                def documents = collection.find().sort(
                     _mongo.sorts().descending("prix")
                 ).all()
             `
@@ -890,7 +890,7 @@ Pour trier par plusieurs champs, utilisez `orderBy()` :
         {
             lang: 'javascript',
             code: `
-                const docs = collection.find().sort(
+                const documents = collection.find().sort(
                     _mongo.sorts().orderBy(
                         _mongo.sorts().descending("prix"),
                         _mongo.sorts().ascending("quantite")
@@ -901,7 +901,7 @@ Pour trier par plusieurs champs, utilisez `orderBy()` :
         {
             lang: 'python',
             code: `
-                docs = collection.find().sort(
+                documents = collection.find().sort(
                     _mongo.sorts().orderBy(
                         _mongo.sorts().descending("prix"),
                         _mongo.sorts().ascending("quantite")
@@ -912,7 +912,7 @@ Pour trier par plusieurs champs, utilisez `orderBy()` :
         {
             lang: 'ruby',
             code: `
-                docs = collection.find().sort(
+                documents = collection.find().sort(
                     _mongo.sorts().orderBy(
                         _mongo.sorts().descending("prix"),
                         _mongo.sorts().ascending("quantite")
@@ -923,7 +923,7 @@ Pour trier par plusieurs champs, utilisez `orderBy()` :
         {
             lang: 'kotlin',
             code: `
-                val docs = collection.find().sort(
+                val documents = collection.find().sort(
                     _mongo.sorts().orderBy(
                         _mongo.sorts().descending("prix"),
                         _mongo.sorts().ascending("quantite")
@@ -934,7 +934,7 @@ Pour trier par plusieurs champs, utilisez `orderBy()` :
         {
             lang: 'groovy',
             code: `
-                def docs = collection.find().sort(
+                def documents = collection.find().sort(
                     _mongo.sorts().orderBy(
                         _mongo.sorts().descending("prix"),
                         _mongo.sorts().ascending("quantite")
@@ -954,7 +954,7 @@ Avec la factory `_mongo.projections()`, vous limitez les champs renvoyés dans l
         {
             lang: 'javascript',
             code: `
-                const docs = collection.find().projection(
+                const documents = collection.find().projection(
                     _mongo.projections().include("nom", "quantite")
                 ).all()
             `
@@ -962,7 +962,7 @@ Avec la factory `_mongo.projections()`, vous limitez les champs renvoyés dans l
         {
             lang: 'python',
             code: `
-                docs = collection.find().projection(
+                documents = collection.find().projection(
                     _mongo.projections().include("nom", "quantite")
                 ).all()
             `
@@ -970,7 +970,7 @@ Avec la factory `_mongo.projections()`, vous limitez les champs renvoyés dans l
         {
             lang: 'ruby',
             code: `
-                docs = collection.find().projection(
+                documents = collection.find().projection(
                     _mongo.projections().include("nom", "quantite")
                 ).all()
             `
@@ -978,7 +978,7 @@ Avec la factory `_mongo.projections()`, vous limitez les champs renvoyés dans l
         {
             lang: 'kotlin',
             code: `
-                val docs = collection.find().projection(
+                val documents = collection.find().projection(
                     _mongo.projections().include("nom", "quantite")
                 ).all()
             `
@@ -986,7 +986,7 @@ Avec la factory `_mongo.projections()`, vous limitez les champs renvoyés dans l
         {
             lang: 'groovy',
             code: `
-                def docs = collection.find().projection(
+                def documents = collection.find().projection(
                     _mongo.projections().include("nom", "quantite")
                 ).all()
             `
@@ -1001,7 +1001,7 @@ Pour combiner plusieurs projections :
         {
             lang: 'javascript',
             code: `
-                const docs = collection.find().projection(
+                const documents = collection.find().projection(
                     _mongo.projections().fields(
                         _mongo.projections().include("nom", "quantite"),
                         _mongo.projections().excludeId()
@@ -1012,7 +1012,7 @@ Pour combiner plusieurs projections :
         {
             lang: 'python',
             code: `
-                docs = collection.find().projection(
+                documents = collection.find().projection(
                     _mongo.projections().fields(
                         _mongo.projections().include("nom", "quantite"),
                         _mongo.projections().excludeId()
@@ -1023,7 +1023,7 @@ Pour combiner plusieurs projections :
         {
             lang: 'ruby',
             code: `
-                docs = collection.find().projection(
+                documents = collection.find().projection(
                     _mongo.projections().fields(
                         _mongo.projections().include("nom", "quantite"),
                         _mongo.projections().excludeId()
@@ -1034,7 +1034,7 @@ Pour combiner plusieurs projections :
         {
             lang: 'kotlin',
             code: `
-                val docs = collection.find().projection(
+                val documents = collection.find().projection(
                     _mongo.projections().fields(
                         _mongo.projections().include("nom", "quantite"),
                         _mongo.projections().excludeId()
@@ -1045,7 +1045,7 @@ Pour combiner plusieurs projections :
         {
             lang: 'groovy',
             code: `
-                def docs = collection.find().projection(
+                def documents = collection.find().projection(
                     _mongo.projections().fields(
                         _mongo.projections().include("nom", "quantite"),
                         _mongo.projections().excludeId()
@@ -1064,9 +1064,9 @@ Les types de projection disponibles sont les suivants :
 | `exclude("champ", ...)` | Exclut les champs spécifiés. |
 | `excludeId()` | Exclut le champ `_id`. |
 | `fields(projection1, ...)` | Combine des projections. |
-| `slice("champ", n)` | Inclut uniquement les `n` premiers éléments du champ de tableau. |
-| `slice("champ", saut, n)` | Inclut `n` éléments du champ de tableau, à partir d'après les premiers `saut` éléments. |
-| `elemMatch("champ")` | Inclut uniquement le premier élément du champ de tableau. |
+| `slice("champ", n)` | Inclut uniquement les `n` premiers éléments du champ tableau. |
+| `slice("champ", saut, n)` | Inclut `n` éléments du champ tableau, à partir d'après les premiers `saut` éléments. |
+| `elemMatch("champ")` | Inclut uniquement le premier élément du champ tableau. |
 | `elemMatch("champ", filtre)` | Inclut uniquement le premier élément du tableau qui correspond au filtre. |
 | `computed("champ", expression)` | Ajoute un champ calculé basé sur une expression d'agrégation. |
 
@@ -1079,7 +1079,7 @@ Avec `limit()` et `skip()`, vous contrôlez la quantité de résultats renvoyés
         {
             lang: 'javascript',
             code: `
-                const docs = collection.find()
+                const documents = collection.find()
                     .skip(1)
                     .limit(2)
                     .all()
@@ -1088,7 +1088,7 @@ Avec `limit()` et `skip()`, vous contrôlez la quantité de résultats renvoyés
         {
             lang: 'python',
             code: `
-                docs = collection.find()
+                documents = collection.find()
                     .skip(1)
                     .limit(2)
                     .all()
@@ -1097,7 +1097,7 @@ Avec `limit()` et `skip()`, vous contrôlez la quantité de résultats renvoyés
         {
             lang: 'ruby',
             code: `
-                docs = collection.find()
+                documents = collection.find()
                     .skip(1)
                     .limit(2)
                     .all()
@@ -1106,7 +1106,7 @@ Avec `limit()` et `skip()`, vous contrôlez la quantité de résultats renvoyés
         {
             lang: 'kotlin',
             code: `
-                val docs = collection.find()
+                val documents = collection.find()
                     .skip(1)
                     .limit(2)
                     .all()
@@ -1115,7 +1115,7 @@ Avec `limit()` et `skip()`, vous contrôlez la quantité de résultats renvoyés
         {
             lang: 'groovy',
             code: `
-                def docs = collection.find()
+                def documents = collection.find()
                     .skip(1)
                     .limit(2)
                     .all()
@@ -1126,7 +1126,7 @@ Avec `limit()` et `skip()`, vous contrôlez la quantité de résultats renvoyés
 
 ## Mettre à jour des documents
 
-Avec la factory `_mongo.updates()`, vous définissez les modifications à appliquer, et avec `updateOne()` ou `updateMany()`, vous appliquez les modifications aux documents qui correspondent au filtre :
+Avec la factory `_mongo.updates()`, vous définissez les modifications à appliquer, et avec `updateOne()` ou `updateMany()` vous appliquez les modifications aux documents qui correspondent au filtre :
 
 <PolyglotCode
     codes={[
@@ -1140,14 +1140,14 @@ Avec la factory `_mongo.updates()`, vous définissez les modifications à appliq
 
                 collection.updateMany(
                     _mongo.filters().eq("categorie", "ordinateurs"),
-                    _mongo.updates().set("categorie", "vedette")
+                    _mongo.updates().set("categorie", "en_vedette")
                 )
             `
         }
     ]}
 />
 
-La factory `_mongo.updates()` propose les opérateurs de mise à jour :
+La factory `_mongo.updates()` offre les opérateurs de mise à jour :
 
 | Opérateur | Description |
 |---|---|
@@ -1164,79 +1164,79 @@ Pour appliquer plusieurs modifications en une seule fois, utilisez `combine()` :
         {
             lang: 'javascript',
             code: `
-                const combinaison = _mongo.updates().combine(
+                const miseAJour = _mongo.updates().combine(
                     _mongo.updates().set("quantite", 42),
                     _mongo.updates().rename("autre", "plus")
                 )
 
                 collection.updateOne(
                     _mongo.filters().eq("nom", "Ordinateur portable"),
-                    combinaison
+                    miseAJour
                 )
             `
         },
         {
             lang: 'python',
             code: `
-                combinaison = _mongo.updates().combine(
+                miseAJour = _mongo.updates().combine(
                     _mongo.updates().set("quantite", 42),
                     _mongo.updates().rename("autre", "plus")
                 )
 
                 collection.updateOne(
                     _mongo.filters().eq("nom", "Ordinateur portable"),
-                    combinaison
+                    miseAJour
                 )
             `
         },
         {
             lang: 'ruby',
             code: `
-                combinaison = _mongo.updates().combine(
+                miseAJour = _mongo.updates().combine(
                     _mongo.updates().set("quantite", 42),
                     _mongo.updates().rename("autre", "plus")
                 )
 
                 collection.updateOne(
                     _mongo.filters().eq("nom", "Ordinateur portable"),
-                    combinaison
+                    miseAJour
                 )
             `
         },
         {
             lang: 'kotlin',
             code: `
-                val combinaison = _mongo.updates().combine(
+                val miseAJour = _mongo.updates().combine(
                     _mongo.updates().set("quantite", 42),
                     _mongo.updates().rename("autre", "plus")
                 )
 
                 collection.updateOne(
                     _mongo.filters().eq("nom", "Ordinateur portable"),
-                    combinaison
+                    miseAJour
                 )
             `
         },
         {
             lang: 'groovy',
             code: `
-                def combinaison = _mongo.updates().combine(
+                def miseAJour = _mongo.updates().combine(
                     _mongo.updates().set("quantite", 42),
                     _mongo.updates().rename("autre", "plus")
                 )
 
                 collection.updateOne(
                     _mongo.filters().eq("nom", "Ordinateur portable"),
-                    combinaison
+                    miseAJour
                 )
             `
         }
     ]}
 />
 
-### Trouver et mettre à jour
+### Rechercher et mettre à jour
 
-Avec `findOneAndUpdate()`, trouvez et mettez à jour un document de manière atomique, en renvoyant le document original (ou `null` s'il n'y en a aucun) :
+Avec `findOneAndUpdate()`, recherchez et mettez à jour un document de manière atomique, en renvoyant le document original (ou `null` s'il n'y en a aucun) :
 
 <PolyglotCode
     codes={[
@@ -1303,14 +1303,14 @@ Avec `replaceOne()`, remplacez le document entier (contrairement aux mises à jo
                         .set("nom", "Ordinateur portable")
                         .set("quantite", 50)
                         .set("prix", 150)
-                        .set("categorie", "vedette")
+                        .set("categorie", "en_vedette")
                 )
             `
         }
     ]}
 />
 
-Pour trouver et remplacer de manière atomique, en renvoyant l'ancien document, utilisez `findOneAndReplace()` :
+Pour rechercher et remplacer de manière atomique, en renvoyant l'ancien document, utilisez `findOneAndReplace()` :
 
 <PolyglotCode
     codes={[
@@ -1393,7 +1393,7 @@ Avec `deleteOne()` et `deleteMany()`, supprimez les documents qui correspondent 
     ]}
 />
 
-Pour trouver et supprimer un document de manière atomique, en renvoyant le document supprimé, utilisez `findOneAndDelete()` :
+Pour rechercher et supprimer un document de manière atomique, en renvoyant le document supprimé, utilisez `findOneAndDelete()` :
 
 <PolyglotCode
     codes={[
@@ -1453,7 +1453,7 @@ Pour supprimer tous les documents de la collection, passez un filtre vide à l'a
     ]}
 />
 
-## Compter les documents
+## Compter des documents
 
 Avec `countDocuments()`, obtenez le nombre de documents de la collection, éventuellement avec un filtre. `estimatedDocumentCount()` est plus rapide car il utilise les métadonnées de la collection, mais sans filtre :
 
@@ -1553,7 +1553,7 @@ Vous pouvez indiquer à MongoDB quel index utiliser dans une requête, avec `hin
         {
             lang: 'javascript',
             code: `
-                const docs = collection.find().hint(
+                const documents = collection.find().hint(
                     _mongo.valToDoc(
                         _val.map().set("quantite", 1)
                     )
@@ -1563,7 +1563,7 @@ Vous pouvez indiquer à MongoDB quel index utiliser dans une requête, avec `hin
         {
             lang: 'python',
             code: `
-                docs = collection.find().hint(
+                documents = collection.find().hint(
                     _mongo.valToDoc(
                         _val.map().set("quantite", 1)
                     )
@@ -1573,7 +1573,7 @@ Vous pouvez indiquer à MongoDB quel index utiliser dans une requête, avec `hin
         {
             lang: 'ruby',
             code: `
-                docs = collection.find().hint(
+                documents = collection.find().hint(
                     _mongo.valToDoc(
                         _val.map().set("quantite", 1)
                     )
@@ -1583,7 +1583,7 @@ Vous pouvez indiquer à MongoDB quel index utiliser dans une requête, avec `hin
         {
             lang: 'kotlin',
             code: `
-                val docs = collection.find().hint(
+                val documents = collection.find().hint(
                     _mongo.valToDoc(
                         _val.map().set("quantite", 1)
                     )
@@ -1593,7 +1593,7 @@ Vous pouvez indiquer à MongoDB quel index utiliser dans une requête, avec `hin
         {
             lang: 'groovy',
             code: `
-                def docs = collection.find().hint(
+                def documents = collection.find().hint(
                     _mongo.valToDoc(
                         _val.map().set("quantite", 1)
                     )
@@ -1610,7 +1610,7 @@ Avec `min()` et `max()`, vous limitez la plage de valeurs de l'index parcourues 
         {
             lang: 'javascript',
             code: `
-                const docs = collection.find()
+                const documents = collection.find()
                     .min(
                         _mongo.valToDoc(
                             _val.map().set("quantite", 10)
@@ -1627,7 +1627,7 @@ Avec `min()` et `max()`, vous limitez la plage de valeurs de l'index parcourues 
         {
             lang: 'python',
             code: `
-                docs = collection.find()
+                documents = collection.find()
                     .min(
                         _mongo.valToDoc(
                             _val.map().set("quantite", 10)
@@ -1644,7 +1644,7 @@ Avec `min()` et `max()`, vous limitez la plage de valeurs de l'index parcourues 
         {
             lang: 'ruby',
             code: `
-                docs = collection.find()
+                documents = collection.find()
                     .min(
                         _mongo.valToDoc(
                             _val.map().set("quantite", 10)
@@ -1661,7 +1661,7 @@ Avec `min()` et `max()`, vous limitez la plage de valeurs de l'index parcourues 
         {
             lang: 'kotlin',
             code: `
-                val docs = collection.find()
+                val documents = collection.find()
                     .min(
                         _mongo.valToDoc(
                             _val.map().set("quantite", 10)
@@ -1678,7 +1678,7 @@ Avec `min()` et `max()`, vous limitez la plage de valeurs de l'index parcourues 
         {
             lang: 'groovy',
             code: `
-                def docs = collection.find()
+                def documents = collection.find()
                     .min(
                         _mongo.valToDoc(
                             _val.map().set("quantite", 10)
@@ -1706,7 +1706,7 @@ Par exemple, pour regrouper les produits par catégorie et additionner le prix d
         {
             lang: 'javascript',
             code: `
-                const docs = collection.aggregate(
+                const documents = collection.aggregate(
                     _mongo.aggregates().match(
                         _mongo.filters().eq("categorie", "ordinateurs")
                     ),
@@ -1723,7 +1723,7 @@ Par exemple, pour regrouper les produits par catégorie et additionner le prix d
         {
             lang: 'python',
             code: `
-                docs = collection.aggregate(
+                documents = collection.aggregate(
                     _mongo.aggregates().match(
                         _mongo.filters().eq("categorie", "ordinateurs")
                     ),
@@ -1740,7 +1740,7 @@ Par exemple, pour regrouper les produits par catégorie et additionner le prix d
         {
             lang: 'ruby',
             code: `
-                docs = collection.aggregate(
+                documents = collection.aggregate(
                     _mongo.aggregates().match(
                         _mongo.filters().eq("categorie", "ordinateurs")
                     ),
@@ -1757,7 +1757,7 @@ Par exemple, pour regrouper les produits par catégorie et additionner le prix d
         {
             lang: 'kotlin',
             code: `
-                val docs = collection.aggregate(
+                val documents = collection.aggregate(
                     _mongo.aggregates().match(
                         _mongo.filters().eq("categorie", "ordinateurs")
                     ),
@@ -1774,7 +1774,7 @@ Par exemple, pour regrouper les produits par catégorie et additionner le prix d
         {
             lang: 'groovy',
             code: `
-                def docs = collection.aggregate(
+                def documents = collection.aggregate(
                     _mongo.aggregates().match(
                         _mongo.filters().eq("categorie", "ordinateurs")
                     ),
@@ -1802,7 +1802,7 @@ Les étapes d'agrégation disponibles sont les suivantes :
 | `limit(n)` | Limite aux `n` premiers documents. |
 | `skip(n)` | Saute les `n` premiers documents. |
 | `count()` | Compte le nombre de documents. |
-| `lookup("collection", "champLocal", "champEtranger", "comme")` | Exécute une jointure avec une autre collection. |
+| `lookup("collection", "champLocal", "champEtranger", "comme")` | Effectue une jointure avec une autre collection. |
 
 Et les accumulateurs les plus utilisés :
 
@@ -1828,51 +1828,51 @@ Il est parfois nécessaire de convertir entre les objets `_val` de Netuno et les
         {
             lang: 'javascript',
             code: `
-                const doc = _mongo.valToDoc(
+                const document = _mongo.valToDoc(
                     _val.map().set("nom", "Ordinateur portable")
                 )
 
-                const valeurs = _mongo.docToVal(doc)
+                const valeurs = _mongo.docToVal(document)
             `
         },
         {
             lang: 'python',
             code: `
-                doc = _mongo.valToDoc(
+                document = _mongo.valToDoc(
                     _val.map().set("nom", "Ordinateur portable")
                 )
 
-                valeurs = _mongo.docToVal(doc)
+                valeurs = _mongo.docToVal(document)
             `
         },
         {
             lang: 'ruby',
             code: `
-                doc = _mongo.valToDoc(
+                document = _mongo.valToDoc(
                     _val.map().set("nom", "Ordinateur portable")
                 )
 
-                valeurs = _mongo.docToVal(doc)
+                valeurs = _mongo.docToVal(document)
             `
         },
         {
             lang: 'kotlin',
             code: `
-                val doc = _mongo.valToDoc(
+                val document = _mongo.valToDoc(
                     _val.map().set("nom", "Ordinateur portable")
                 )
 
-                val valeurs = _mongo.docToVal(doc)
+                val valeurs = _mongo.docToVal(document)
             `
         },
         {
             lang: 'groovy',
             code: `
-                def doc = _mongo.valToDoc(
+                def document = _mongo.valToDoc(
                     _val.map().set("nom", "Ordinateur portable")
                 )
 
-                def valeurs = _mongo.docToVal(doc)
+                def valeurs = _mongo.docToVal(document)
             `
         }
     ]}
@@ -1943,7 +1943,7 @@ Les factories d'options disponibles sont : `insertOneOptions()`, `insertManyOpti
 
 ## Fermer la connexion
 
-À la fin, il est de bonne pratique de fermer la connexion à MongoDB :
+En terminant, il est de bonne pratique de fermer la connexion à MongoDB :
 
 <PolyglotCode
     codes={[
@@ -1958,7 +1958,7 @@ Les factories d'options disponibles sont : `insertOneOptions()`, `insertManyOpti
 
 ## Conclusion
 
-Avec la ressource `_mongo`, Netuno offre une abstraction low-code et polyglotte sur le client officiel MongoDB pour Java, permettant de travailler avec des documents, filtres, tris, projections, mises à jour, index et agrégations en JavaScript, Python, Ruby, Kotlin et Groovy.
+Avec la ressource `_mongo`, Netuno offre une abstraction low-code et polyglotte au-dessus du client officiel MongoDB pour Java, permettant de travailler avec des documents, filtres, tris, projections, mises à jour, index et agrégations en JavaScript, Python, Ruby, Kotlin et Groovy.
 
 Pour plus de détails sur toutes les méthodes disponibles, consultez la documentation de la ressource [_mongo](/docs/library/resources/mongo) et de la classe [MongoCollection](/docs/library/objects/MongoCollection).
 

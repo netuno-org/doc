@@ -10,28 +10,28 @@ Run commands on the server and transfer files.
 
 ## Introduction
 
-Netuno has an SSH client integrated into its low-code framework, which allows you to connect to servers, execute
-commands, send and receive files, modify folders, and perform other remote operations.
+Netuno has a SSH client integrated into its low-code framework, which allows connecting to servers, running
+commands, sending and receiving files, modifying folders, among other remote operations.
 
 It supports multiple simultaneous connections, as well as SCP and SFTP.
 
-This, thanks to the Java and open-source implementation
-<a target="_blank" href="https://github.com/hierynomus/sshj/tree/master">SSHJ</a>, is what allows Netuno
-to provide these features to all scripting languages through the `_ssh` feature.
+This is thanks to the open-source Java implementation
+<a target="_blank" href="https://github.com/hierynomus/sshj/tree/master">SSHJ</a>, which is what allows Netuno
+to provide these features to all script languages through the `_ssh` resource.
 
-> More about Netuno's [SSH](/docs/library/resources/ssh) feature.
+> More about Netuno's [SSH](/docs/library/resources/ssh) resource.
 
 ## Configuration
 
-The first step will be to configure the SSH access data that Netuno will use to connect.
+The first step is to configure the SSH access data that Netuno will use to perform the connection.
 
 Navigate within the application you are developing to the environment configuration file. In this example,
 we will use the development file, located at:
 
 - `config/_development.json`
 
-Check for SSH configuration settings. If not, add the SSH configuration parameters at the end of the
-configuration file (in JSON format), for example:
+Check if there are settings for SSH; if none exist, then at the end of the configuration file (in JSON format)
+add the SSH configuration parameters, for example:
 
 ```json
 {
@@ -49,13 +49,13 @@ configuration file (in JSON format), for example:
 }
 ```
 
-After saving your changes, simply restart Netuno to apply the configuration changes. These are the default
-settings for the connection, as the `default` key name indicates.
+After saving the changes, just restart Netuno to apply the configuration changes. These being the
+default settings for the connection, as the key name `default` indicates.
 
-You can add additional SSH connection configurations using other keys in the JSON.
+You can add more SSH connection configurations with other keys in the JSON.
 
-To add additional SSH connection configurations, simply repeat the default configuration block and replace
-the `default` key with one of your choice, for example:
+To add more SSH connection settings just repeat the default configuration block and change the `default`
+key to another of your choice, for example:
 
 ```json
 {
@@ -70,7 +70,7 @@ the `default` key with one of your choice, for example:
     },
     "other": {
       "enabled": true,
-      "host": "other.server.net",
+      "host": "my.other-server.net",
       "port": 22,
       "username": "root",
       "password": "$eCr37"
@@ -80,7 +80,7 @@ the `default` key with one of your choice, for example:
 }
 ```
 
-The above configuration allows you to use the `default` account when coded as follows:
+The configuration above allows using the `default` account when coded as follows:
 
 <PolyglotCode
     codes={[
@@ -93,8 +93,8 @@ The above configuration allows you to use the `default` account when coded as fo
     ]}
 />
 
-To use the `other` configuration, simply add the configuration key as a parameter to the `_ssh.init()`
-function, as follows:
+To use the `other` configuration simply add the configuration key as a parameter of the
+`_ssh.init()` function, as follows:
 
 <PolyglotCode
     codes={[
@@ -111,7 +111,7 @@ function, as follows:
 
 ## Connection
 
-Before doing anything, you need to start the SSH connection:
+Before doing anything you need to start the SSH connection:
 
 <PolyglotCode
     codes={[
@@ -126,7 +126,7 @@ Before doing anything, you need to start the SSH connection:
 
 ## Commands
 
-To run commands, you need to start a command session:
+To run commands you need to start a command session:
 
 <PolyglotCode
     codes={[
@@ -139,8 +139,8 @@ To run commands, you need to start a command session:
     ]}
 />
 
-When executing a command, an object is provided that contains the execution status and the respective output,
-for example:
+When running a command an object is provided that contains the execution state and the respective data
+output, for example:
 
 <PolyglotCode
     codes={[
@@ -149,11 +149,11 @@ for example:
             code: `
                 const sshCommandResult = sshSession.exec("ls -rato")
                 if (sshCommandResult.ok) {
-                    _out.println("Successfully executed:")
-                    _out.println(sshCommandResult.output)
+                    _out.println("Executed successfully:")
+                    _out.println(sshCommandResult.output())
                 } else {
                     _out.println("The command failed:")
-                    _out.println(sshCommandResult.error)
+                    _out.println(sshCommandResult.error())
                 }
             `
         },
@@ -162,11 +162,11 @@ for example:
             code: `
                 sshCommandResult = sshSession.exec("ls -rato")
                 if sshCommandResult.ok:
-                    _out.println("Successfully executed:")
-                    _out.println(sshCommandResult.output)
+                    _out.println("Executed successfully:")
+                    _out.println(sshCommandResult.output())
                 else:
                     _out.println("The command failed:")
-                    _out.println(sshCommandResult.error)
+                    _out.println(sshCommandResult.error())
             `
         },
         {
@@ -174,18 +174,18 @@ for example:
             code: `
                 sshCommandResult = sshSession.exec("ls -rato")
                 if sshCommandResult.ok
-                    _out.println("Successfully executed:")
-                    _out.println(sshCommandResult.output)
+                    _out.println("Executed successfully:")
+                    _out.println(sshCommandResult.output())
                 else
                     _out.println("The command failed:")
-                    _out.println(sshCommandResult.error)
+                    _out.println(sshCommandResult.error())
                 end
             `
         },
     ]}
 />
 
-> The object returned by the command is [SSHExecResult](/docs/library/objects/SSHExecResult).
+> The object returned by the command is the [SSHExecResult](/docs/library/objects/SSHExecResult).
 
 Remember to always close the session:
 
@@ -202,9 +202,9 @@ Remember to always close the session:
 
 ## SCP
 
-Using SCP, we can send and receive files.
+Through SCP we can send and receive files.
 
-To create a text file from a string and download the contents of the created file, see the example:
+To create a text file from a string and download the content of the created file, see the example:
 
 <PolyglotCode
     codes={[
@@ -212,9 +212,9 @@ To create a text file from a string and download the contents of the created fil
             lang: 'javascript',
             code: `
                 const sshSCP = ssh.initSCP()
-                // Create the text file.
+                // Creates the text file.
                 sshSCP.uploadText("hello.txt", "Hello! My content here...")
-                // Download and print the contents of the file.
+                // Downloads and prints the file content.
                 _out.println(sshSCP.downloadText("hello.txt"))
                 sshSCP.close()
             `
@@ -222,7 +222,7 @@ To create a text file from a string and download the contents of the created fil
     ]}
 />
 
-To upload existing files in the application:
+To perform the upload of files that exist in the application:
 
 <PolyglotCode
     codes={[
@@ -230,9 +230,9 @@ To upload existing files in the application:
             lang: 'javascript',
             code: `
                 const sshSCP = ssh.initSCP()
-                // Sends a file that is in storage/filesystem.
+                // Uploads a file that is in storage/filesystem.
                 sshSCP.upload("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
-                // Upload a file that is in the application root.
+                // Uploads a file that is in the application root.
                 sshSCP.upload("document.pdf", _app.file("document.pdf"))
                 sshSCP.close()
             `
@@ -250,7 +250,7 @@ To download files from the server to the application:
                 const sshSCP = ssh.initSCP()
                 // Downloads the file to storage/filesystem.
                 sshSCP.download("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
-                // Download the file to the application root.
+                // Downloads the file to the application root.
                 sshSCP.download("document.pdf", _app.file("document.pdf"))
                 sshSCP.close()
             `
@@ -260,8 +260,8 @@ To download files from the server to the application:
 
 ## SFTP
 
-SFTP is a way to transfer and manipulate files and folders that supports the same functionality as FTP, but
-using SSH.
+SFTP is a way of transferring and manipulating files and folders that supports the same features
+as FTP, but using SSH.
 
 To start a new SFTP session:
 
@@ -276,7 +276,7 @@ To start a new SFTP session:
     ]}
 />
 
-> Starts the [SSH SFTP](/docs/library/objects/SSHSFTP) object, which is the session client.
+> Initializes the [SSHSFTP](/docs/library/objects/SSHSFTP) object which is the session client.
 
 Create a new folder remotely:
 
@@ -298,40 +298,40 @@ Creates or replaces the remote file with the passed text content:
         {
             lang: 'javascript',
             code: `
-                sftp.uploadText("path/file.txt", "My content!")
+                sftp.uploadText("folder/file.txt", "My content!")
             `
         },
     ]}
 />
 
-Gets the text contents of a remote file:
+Gets the text content of a remote file:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const contentRemoteFile = sftp.downloadText("path/file.txt"))
-                _out.println(contentRemoteFile)
+                const remoteFileContent = sftp.downloadText("folder/file.txt"))
+                _out.println(remoteFileContent)
             `
         },
     ]}
 />
 
-Permanently delete a remote file:
+Permanently deletes a remote file:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                sftp.deleteFile("path/file.txt")
+                sftp.deleteFile("folder/file.txt")
             `
         },
     ]}
 />
 
-Permanently delete the remote folder:
+Permanently deletes the remote folder:
 
 <PolyglotCode
     codes={[
@@ -344,7 +344,7 @@ Permanently delete the remote folder:
     ]}
 />
 
-List all the contents of a folder:
+Lists all the contents of a folder:
 
 <PolyglotCode
     codes={[
@@ -353,7 +353,7 @@ List all the contents of a folder:
             code: `
                 for (const i of sftp.list("path/folder")) {
                     if (i.directory) {
-                        _out.print("Directory: ")
+                        _out.print("Folder: ")
                     } else if (i.regularFile) {
                         _out.print("File: ")
                     } else {
@@ -369,7 +369,7 @@ List all the contents of a folder:
             code: `
                 for i in sftp.list("path/folder":
                     if i.directory:
-                        _out.print("Directory: ")
+                        _out.print("Folder: ")
                     elif i.regularFile:
                         _out.print("File: ")
                     else:
@@ -384,7 +384,7 @@ List all the contents of a folder:
             code: `
                 sftp.list("path/folder").each do |i|
                     if i.directory
-                        _out.print("Directory: ")
+                        _out.print("Folder: ")
                     elsif i.regularFile
                         _out.print("File: ")
                     else
@@ -400,7 +400,7 @@ List all the contents of a folder:
             code: `
                 sftp.list("path/folder").forEach {
                     if (it.directory) {
-                        _out.print("Directory: ")
+                        _out.print("Folder: ")
                     } else if (it.regularFile) {
                         _out.print("File: ")
                     } else {
@@ -416,7 +416,7 @@ List all the contents of a folder:
             code: `
                 for (i in sftp.list("path/folder")) {
                     if (i.directory) {
-                        _out.print("Directory: ")
+                        _out.print("Folder: ")
                     } else if (i.regularFile) {
                         _out.print("File: ")
                     } else {
@@ -432,16 +432,16 @@ List all the contents of a folder:
 
 > Returns a list of objects of type [SSHFile](/docs/library/objects/SSHFile).
 
-To upload existing files in the application:
+To perform the upload of files that exist in the application:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                // Sends a file that is in storage/filesystem.
+                // Uploads a file that is in storage/filesystem.
                 sftp.upload("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
-                // Upload a file that is in the application root.
+                // Uploads a file that is in the application root.
                 sftp.upload("document.pdf", _app.file("document.pdf"))
             `
         },
@@ -457,7 +457,7 @@ To download files from the server to the application:
             code: `
                 // Downloads the file to storage/filesystem.
                 sftp.download("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
-                // Download the file to the application root.
+                // Downloads the file to the application root.
                 sftp.download("document.pdf", _app.file("document.pdf"))
             `
         },

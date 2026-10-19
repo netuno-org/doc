@@ -1,34 +1,34 @@
 ---
 sidebar_position: 7
 id: ui
-title: Interfaz y Diseño
+title: Interfaz y diseño
 ---
 
 ## Introducción
 
-El desarrollo del frontend, es decir, lo que es procesado visualmente por el navegador, se realiza dentro de la carpeta **ui**.
+El desarrollo del frontend, es decir, lo que el navegador procesa visualmente, se realiza dentro de la carpeta **ui**.
 
 Por defecto, en esta carpeta se encuentra el entorno de desarrollo desarrollado en <a href="https://reactjs.org/" target="_blank">ReactJS</a> con <a href="https://ant.design/" target="_blank">Ant.Design</a> y <a href="http://lesscss.org/" target="_blank">Less</a>, compilado utilizando <a href="https://vite.dev/" target="_blank">Vite</a>.
 
-Aunque el entorno por defecto se encuentre configurado para estas tecnologías, dado que son bastante utilizadas hoy en día, no se encuentra limitado a las mismas.
+Aunque el entorno estándar está configurado para estas tecnologías, dado que son bastante utilizadas hoy en día, no está limitado a ellas.
 
-Si desea utilizar otra tecnología como **VueJS**, **MaterialUI**, **Sass**, **Bootstrap**, **TypeScript**, etc... basta con alterar dentro de la carpeta `📂 ui` las configuraciones de `📂 package.json` y de `📂 vite.config.js` para las tecnologías que prefiera.
+Si desea utilizar otra tecnología como **VueJS**, **MaterialUI**, **Sass**, **Bootstrap**, **TypeScript**, etc... basta con cambiar dentro de la carpeta `📂 ui` las configuraciones de `📂 package.json` y `📂 vite.config.js` por las tecnologías que prefiera.
 
 > Más sobre el [terminal integrado y centralizado](/docs/academy/explore/centralized-terminal).
 
 ## Requisitos previos
 
-Antes de comenzar es importante asegurarse de que tiene [Bun](https://bun.sh/) instalado.
+Antes de empezar es importante asegurarse de que tiene [Bun](https://bun.sh/) instalado.
 
 > Vea cómo [instalar Bun](/docs/academy/website/bun).
 
-Para entender mejor cómo funciona la interfaz de utilización, recomendamos:
+Para entender mejor cómo funciona la interfaz de utilización recomendamos:
 
-- [Más sobre la Capa UI de front-end.](/docs/academy/ui/ui-layer)
+- [Más sobre la capa UI de front-end.](/docs/academy/ui/ui-layer)
 
-## Expandir el Servicio
+## Expandir el servicio
 
-Después de haber sido creado el servicio **trabajadores** en `📂 server/services/trabajadores.js` a través de Visual Studio Code que pone a disposición la información en <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> en la dirección:
+Una vez creado el servicio **trabajadores** en `📂 server/services/trabajadores.js` a través de Visual Studio Code que proporciona la información en <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> en la dirección:
 
 * <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/trabajadores</a>
 
@@ -40,31 +40,31 @@ Asumiendo que tiene Visual Studio Code u otro editor de texto abierto con la apl
 
 Abra el siguiente archivo en el editor:
 
-`📂 ui/src/containers/ContenedorPanel/index.jsx`
+`📂 ui/src/containers/DashboardContainer/index.jsx`
 
 Vamos a modificar este código ya existente.
 
-### Preparar el `estado`
+### Preparar el `state`
 
-Justo al principio del componente `ContenedorPanel` dentro de la `function` está la definición de su _estado_.
+Justo al inicio del componente `DashboardContainer` dentro de la `function` está la definición de su _state_.
 
 Añada una nueva entrada para guardar los datos de los trabajadores de la siguiente forma:
 
 ```jsx
             // 👇 Añada las nuevas líneas de código a continuación:
             const [trabajadores, setTrabajadores] = useState([]);
-            const [cargando, setCargando] = useState(false);
+            const [cargar, setCargar] = useState(false);
 ```
 
 Es decir, añada la nueva línea `const [trabajadores, setTrabajadores] = useState([]);` de estado.
 
-### Crear función `cargarTrabajadores`
+### Crear la función `cargarTrabajadores`
 
-Más abajo observe que existe una función llamada `cargarTrabajadores`, esta función realiza la obtención de los datos de los trabajadores que aparecen en el panel actualmente.
+Más abajo observe que existe una función llamada `cargarTrabajadores`, esta función realiza la obtención de los datos de los trabajadores que aparecen actualmente en el panel.
 
-> Esta función se usa para cargar los datos de los trabajadores.
+> Esta función se utiliza para cargar los datos de los trabajadores.
 
-Inserte el código a continuación:
+Introduzca el código siguiente:
 
 ```jsx
     /**
@@ -74,25 +74,25 @@ Inserte el código a continuación:
     */
     const cargarTrabajadores = () => {
         setTrabajadores([]);
-        setCargando(true);
+        setCargar(true);
         _service({
             url: intl.locale.indexOf('es') == 0 ? '/services/trabajadores' : '/services/workers',
             success: (response) => {
                 setTrabajadores(response.json);
-                setCargando(false);
+                setCargar(false);
             },
             fail: (e) => {
-                setCargando(false);
-                console.error('Fallo en el servicio de los Trabajadores.', e);
+                setCargar(false);
+                console.error('Fallo en el servicio de Trabajadores.', e);
                 message.error(intl.formatMessage({ id: `${messages}.loading_error` }));
             }
         });
     };
 ```
 
-Lo que este código anterior hace es pasar los datos de los **trabajadores** al _estado_ del componente en <a href="https://reactjs.org/" target="_blank">ReactJS</a>, esto a través de la ejecución del servicio **trabajadores** que, al recibir los datos en <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> , los almacena en el _estado_ a través de la ejecución de `setTrabajadores`.
+Lo que este código anterior hace es pasar los datos de los **trabajadores** al _state_ del componente en <a href="https://reactjs.org/" target="_blank">ReactJS</a>, esto a través de la ejecución del servicio **trabajadores** que, al recibir los datos en <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a>, almacena los mismos en el _state_ mediante la ejecución de `setTrabajadores`.
 
-El código final deberá quedar estructurado de esta forma:
+El código final debería quedar estructurado de esta forma:
 
 ```jsx
     useEffect(() => {
@@ -112,9 +112,9 @@ El código final deberá quedar estructurado de esta forma:
 
 ### Ejecutar el hook `useEffect`
 
-Ahora falta ejecutar nuestro hook `useEffect` cuando el componente es "montado", este hook se ejecuta cuando el componente es construido en la presentación visual del navegador.
+Ahora falta ejecutar nuestro hook `useEffect` cuando el componente se "monta", este hook se ejecuta cuando el componente se construye en la presentación visual del navegador.
 
-Para esto basta, un poco más arriba, añadir la línea de código `cargarTrabajadores();` dentro del hook `useEffect` de esta forma:
+Para esto basta con, un poco más arriba, añadir la línea de código `cargarTrabajadores();` dentro del hook `useEffect` de esta forma:
 
 ```jsx
     useEffect(() => {
@@ -122,13 +122,13 @@ Para esto basta, un poco más arriba, añadir la línea de código `cargarTrabaj
     }, []);
 ```
 
-Esta nueva línea de código va a llamar a la función que ejecuta el servicio <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/trabajadores</a>, que fue creado anteriormente, para obtener los datos en JSON y guardarlos en el `estado` (_estado_) del componente para ser presentados en el return (_visualización_).
+Esta nueva línea de código va a llamar a la función que ejecuta el servicio <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/trabajadores</a>, que se creó anteriormente, para obtener los datos en JSON y guardarlos en el `state` (_estado_) del componente para que se presenten en el return (_visualización_).
 
 ### Compilación
 
-**Guarde** el archivo y justo después observe que en el **terminal** donde tiene Netuno en ejecución aparecerá el resultado de la nueva compilación de **ui**, con nuevas líneas del resultado de compilación de <a href="https://reactjs.org/" target="_blank">ReactJS</a> + <a href="https://vite.dev/" target="_blank">Vite</a>.
+**Guarde** el archivo y a continuación observe que en el **terminal** donde tiene Netuno en ejecución aparecerá el resultado de la nueva compilación del **ui**, con nuevas líneas del resultado de compilación de <a href="https://reactjs.org/" target="_blank">ReactJS</a> + <a href="https://vite.dev/" target="_blank">Vite</a>.
 
-La salida esperada en el **terminal** deberá ser algo similar a lo siguiente:
+La salida esperada en el **terminal** debería ser algo similar a lo siguiente:
 
 ```
 > ui@1.0.0 watch netuno/apps/demo/ui
@@ -151,57 +151,57 @@ computing gzip size...
 built in 2128ms.
 ```
 
-Si hay algún error en la compilación, aparecerá en el **terminal** la indicación del problema.
+Caso haya algún error en la compilación, entonces aparecerá en el **terminal** la indicación del problema.
 
-Hasta aquí hemos realizado el consumo de nuestro servicio **trabajadores** en el que los datos obtenidos quedan guardados en el `estado` del componente `ContenedorPanel` que así queda disponible para ser utilizado en el `return`.
+Hasta aquí hemos realizado el consumo de nuestro servicio **trabajadores** en el que los datos obtenidos quedan guardados en el `state` del componente `DashboardContainer`, que así queda disponible para ser utilizado en el `return`.
 
-## Presentar los Datos
+## Presentar los datos
 
 Falta presentar los datos visualmente en la interfaz que el usuario ve en el navegador.
 
 Para presentar los datos en el navegador tenemos que modificar el `return`, que procesa el aspecto visual de los componentes en <a href="https://reactjs.org/" target="_blank">ReactJS</a>.
 
-Al final del código de `ContenedorPanel` encontrará el: `return ( ... );`
+Al final del código de `DashboardContainer` encontrará el: `return ( ... );`
 
-Vamos a modificarlo añadiendo solo una línea de código más para contener un componente `VisualizacionDatos` que va a presentar los datos referentes a los **trabajadores**, el código deberá quedar de la siguiente forma:
+Vamos a modificarlo añadiendo solo una línea más de código para contener un componente más `DataVisualization` que presentará los datos referentes a los **trabajadores**, el código debería quedar de la siguiente forma:
 
 ```jsx
     // 🔍 Busque en el código existente por:
     return (
     <div ref={ref}>
-      { cargando == false ?
-        <VisualizacionDatos data={trabajadores} />
+      { cargar == false ?
+        <DataVisualization data={trabajadores} />
         : <Spin/>
       }
-      <ListaServicios />
+      <ListServices />
     </div>
   );
 ```
 
-Observe que solo la línea de abajo es la que debe ser añadida:
+Observe que solo debe añadirse la línea siguiente:
 
 ```jsx
-<VisualizacionDatos data={trabajadores} />
+<DataVisualization data={trabajadores} />
 ```
 
-Así el `VisualizacionDatos` va a recibir los datos obtenidos a través del servicio **trabajadores** vía JSON que quedaron guardados en el `estado`.
+Así el `DataVisualization` recibirá los datos obtenidos a través del servicio **trabajadores** vía JSON que quedaron guardados en el `state`.
 
-### Compilación Final
+### Compilación final
 
-**Guarde** el archivo con todas las modificaciones realizadas hasta aquí.
+**Guarde** el archivo con todos los cambios realizados hasta aquí.
 
 Asegúrese de que en la salida del **terminal** no existen errores.
 
-Ahora actualice la página en el navegador y deberá ver el resultado final, o alternativamente, haga clic en el enlace de abajo:
+Ahora actualice la página en el navegador y debería ver el resultado final, o alternativamente, haga clic en el enlace siguiente:
 
 * <a href="http://localhost:9000" target="_blank">http://localhost:9000</a>
 
-> Si el panel aparece en blanco quiere decir que hay errores en el código.
+> Si el panel aparece en blanco significa que hay errores en el código.
 >
-> Verifique en la consola del **navegador** en las **herramientas del programador** si hay errores.
+> Verifique en la consola del **navegador** en las **herramientas del desarrollador** si hay errores.
 
 ## Saber más 👇
 
 Introducción rápida a <a href="https://reactjs.org/" target="_blank">ReactJS</a>:
 
-* <a href="https://medium.com/rocketseat/um-guia-para-iniciantes-no-react-js-80e1ac357649" target="_blank">Una Guía Para Principiantes en ReactJS.</a>
+* <a href="https://medium.com/rocketseat/um-guia-para-iniciantes-no-react-js-80e1ac357649" target="_blank">Una guía para principiantes en ReactJS.</a>

@@ -5,13 +5,13 @@ sidebar_label: Evento
 sidebar_position: 6
 ---
 
-Netuno permite que inyectes eventos durante alguna fase de su ejecución.
-Por ejemplo, podemos inyectar un evento que se ejecuta justo antes de que el setup construya la base de datos
+Netuno permite inyectar eventos durante alguna fase de su ejecución.
+Por ejemplo, podemos inyectar un evento que se ejecuta justo antes de que la configuración construya la base de datos
 (que funciona más o menos como definir un script en `netuno/apps/mi_app/server/setup/_start.js`)
 o un evento que se ejecuta justo después de que finalice el procesamiento de construcción de la base de datos
 (que sería análogo a `netuno/apps/mi_app/server/setup/_end.js`).
 
-Para ello necesitamos extender la clase `org.netuno.tritao.event.EventBase`. También vamos a definir nuestro paquete, que será el mismo definido en los tutoriales anteriores de servicios y recursos de Java Core.
+Para ello necesitamos extender la clase `org.netuno.tritao.event.EventBase`. También vamos a definir nuestro paquete, que será el mismo que se definió en los tutoriales anteriores de servicios y recursos de Java Core.
 
 ```java
 package org.netuno.addon.calc.event;
@@ -66,7 +66,7 @@ Para referencia, la lista completa de todos los tipos de eventos disponibles se 
 
 - [org.netuno.tritao.event.EventId](https://github.com/netuno-org/platform/blob/main/netuno.tritao/src/main/java/org/netuno/tritao/event/EventId.java)
 
-Volviendo a nuestro código, vamos a finalizar sobrescribiendo la función `run`:
+Volviendo a nuestro código, vamos a finalizar sobrescribiendo la función `run`: 
 
 ```java
 package org.netuno.addon.calc.event;
@@ -85,7 +85,7 @@ public class EventoInicioSetup extends EventBase {
 
     @Override
     public void run(Values datos) {
-        System.out.println("EVENTO PERSONALIZADO DE INICIO DE SETUP "+ datos.toJSON());
+        System.out.println("EVENTO PERSONALIZADO DE INICIO DE CONFIGURACIÓN " + datos.toJSON());
     }
 
 }

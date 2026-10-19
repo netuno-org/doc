@@ -9,12 +9,12 @@ sidebar_label: URL personnalisées
 Netuno permet de modifier les adresses par défaut, par exemple :
 
 - L'adresse de l'interface d'administration, `admin`.
-- L'adresse des fichiers publics, comme les images, le CSS et le JS, `public`.
+- L'adresse des fichiers publics, comme les images, CSS et JS, `public`.
 - L'adresse des services de l'API REST, `services`.
 
 ## Configuration
 
-Naviguez dans l'application que vous développez jusqu'au fichier de configuration d'environnement. Dans cet exemple, nous utiliserons le fichier d'environnement de développement situé dans :
+Naviguez dans l'application que vous développez jusqu'au fichier de configuration d'environnement. Dans cet exemple, nous utiliserons le fichier d'environnement de développement situé à :
 
 - 📂 `config/_development.json`
 
@@ -34,18 +34,18 @@ Vérifiez si la configuration d'URL n'existe pas déjà ; si elle n'existe pas, 
 
 ### admin
 
-Définit le préfixe de l'adresse de l'URL de l'interface d'administration ; la valeur par défaut est `/`.
+Définit le préfixe de l'adresse URL de l'interface d'administration ; la valeur par défaut est simplement `/`.
 
 ### public
 
-Définit le préfixe de l'adresse de l'URL des fichiers statiques publics tels que les images, les styles CSS et le code JavaScript ; la valeur par défaut est `/public`.
+Définit le préfixe de l'adresse URL des fichiers statiques publics comme les images, le style CSS et le code JavaScript ; la valeur par défaut est `/public`.
 
 ### services
 
-Définit l'adresse de l'URL initiale des services web de l'API REST ; la valeur par défaut est `/services`.
+Définit l'adresse URL initiale des services web de l'API REST ; la valeur par défaut est `/services`.
 
 ## Conclusion
 
-La personnalisation des URL est importante, tant pour les rendre plus intuitives que pour pouvoir les rendre plus complexes et renforcer la sécurité.
+La personnalisation des URL est importante, tant pour la rendre plus intuitive que pour la rendre plus complexe et augmenter la sécurité.
 
-Par exemple, dans l'adresse d'administration, on peut ajouter un préfixe composé d'une séquence de caractères aléatoires ; ainsi, seuls ceux qui la connaissent par cœur pourront accéder à l'adresse d'accès, ce qui complique l'accès et évite les attaques.
+Par exemple, dans l'adresse d'administration, on peut placer un préfixe avec une chaîne de caractères aléatoires ; ainsi, seul celui qui la connaît par cœur accédera à l'adresse d'accès, ce qui complique l'accès et évite les attaques.

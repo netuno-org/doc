@@ -1,18 +1,18 @@
 ---
 id: db-query-execute
-title: Interogare și Executare - Comenzi directe în Baza de Date
+title: Query și Execute - Comenzi directe în baza de date
 sidebar_label: Interogare & Executare
 ---
 
 ## Înainte de a începe
 
-Pentru a putea înțelege acest tutorial cât mai eficient posibil, vă recomandăm să vă asigurați că aveți noțiuni de bază în _**JavaScript, SQL**_ și că știți să creați servicii în Netuno.
+Pentru a putea înțelege acest tutorial cât mai eficient posibil, vă recomandăm să vă asigurați că aveți noțiuni de bază de _**JavaScript, SQL**_ și că știți să creați servicii în Netuno.
 
 Dacă nu știți să creați servicii, consultați [Servicii Web REST](/docs/academy/server/services/rest).
 
 ## Crearea interogărilor
 
-Netuno oferă funcții dedicate pentru crearea interogărilor către baza de date, iar în acest tutorial vom prezenta și descrie pe scurt efectul fiecăreia și, de asemenea, bunele practici pentru a obține cel mai bun rezultat.
+Netuno oferă funcții dedicate creării interogărilor către baza de date, iar în acest tutorial le vom prezenta și descrie pe scurt efectul fiecăreia, precum și bunele practici pentru a obține cel mai bun rezultat.
 
 ### _db.query('SELECT * FROM ...')
 
@@ -24,19 +24,19 @@ _out.json(
 )
 ```
 
-> Rețineți că funcția _out.json() este pentru a permite vizualizarea datelor serviciului pe ecran la apelarea acestuia în browser
+> Rețineți că funcția _out.json() permite vizualizarea datelor serviciului pe ecran atunci când acesta este apelat în browser.
 
-Această funcție permite și acceptarea de argumente, care sunt transmise direct prin apelul către serviciu, de exemplu, să presupunem că avem serviciul _selecteaza-toate.js_, apelul către acesta se va face prin _**http://localhost:9000/services/selecteaza-toate.netuno**_ unde argumentele de transmis se adaugă după apel, după un semn de întrebare:
+Această funcție acceptă și argumente, iar acestea sunt transmise direct prin apelul către serviciu. De exemplu, să presupunem că avem serviciul _selecteaza-toate.js_; apelul acestuia se va face prin _**http://localhost:9000/services/selecteaza-toate.netuno**_, iar argumentele de transmis se adaugă după apel, după un semn de întrebare:
 
 ```
 http://localhost:9000/services/selecteaza-toate.netuno?argument1=1&argument2=nume
 ```
 
-> Rețineți că pentru a trimite mai multe argumente este suficient să le separați printr-un ampersand (&)
+> Rețineți că pentru a trimite mai mulți parametri este suficient să-i separați printr-un ampersand (&).
 
 ### Interogare cu parametri
 
-Și, în final, este suficient să declarați această variabilă în interogare după cum urmează:
+Iar la final este suficient să declarați această variabilă în interogare în felul următor:
 
 ```javascript
 _out.json(
@@ -47,11 +47,11 @@ _out.json(
 )
 ```
 
-> În locul semnelor '?' (întrebări) va fi injectat parametrul corespunzător în funcție de ordinea sa.
+> În locul semnelor '?' (întrebare) va fi injectat parametrul corespunzător, în funcție de ordinea sa.
 
 ## Interogare cu parametri și tipuri PostgreSQL și H2DataBase
 
-Cu toate acestea, H2Database și PostgreSQL suportă o sintaxă simplă de conversie, astfel putem atribui tipuri parametrilor după cum urmează:
+Totuși, H2Database și PostgreSQL suportă o sintaxă simplă de conversie, astfel putem atribui tipuri parametrilor în felul următor:
 
 ```javascript
 _out.json(
@@ -62,15 +62,15 @@ _out.json(
 )
 ```
 
-## Tipuri de parametri H2Database și PostgreSQL
+## Tipuri de parametri pentru H2Database și PostgreSQL
 
-După cum ați putut observa anterior, atunci când doriți să executați o interogare cu argumente, trebuie să definiți tipul acestora. Urmează acum o listă cu toate tipurile de variabile și tipul cel mai potrivit pentru fiecare:
+După cum ați putut observa anterior, atunci când se dorește executarea unei interogări cu argumente trebuie definit tipul acestora. Urmează o listă cu toate tipurile de variabile și tipul cel mai potrivit pentru fiecare:
 
 * Potrivit pentru parametri de numere întregi:
     * **?::int**
-* Potrivit pentru parametri numerici zecimali:
+* Potrivit pentru parametri de numere zecimale:
     * **?::float**
- * Potrivit pentru parametri de identificator unic global/universal, cunoscut mai mult ca guid sau uuid:
+ * Potrivit pentru parametri de identificator unic global/universal, cunoscuți mai ales ca guid sau uuid:
     * **?::uuid**
  * Potrivit pentru parametri de text generic, string-uri:
     * **?::varchar**
@@ -91,26 +91,26 @@ Returnează numărul de înregistrări afectate de comanda executată.
 
 ```javascript
 // Exemplu de inserare:
-const nrInregistrariInserate = _db.execute(
+const nInregistrariInserate = _db.execute(
     "INSERT INTO tabel_nume(id, activ, nume) " + 
     "VALUES(nextval('tabel_nume_id'), ?::int, ?::varchar)", 
     1, nume
 )
 
 // Exemplu de actualizare:
-const nrInregistrariActualizate = _db.execute(
+const nInregistrariActualizate = _db.execute(
     "UPDATE tabel_nume SET nume = ?::varchar WHERE id = ?::int",
     _req.getString("nume"), _req.getInt("id")
 )
 
 // Exemplu de ștergere:
-const nrInregistrariSterse = _db.execute(
+const nInregistrariSterse = _db.execute(
     "DELETE FROM tabel_nume WHERE id = ?::int",
     _req.getInt("id")
 )
 ```
 
-> **Notă:** Când se face o inserare, verificați dacă câmpul activ este egal cu 1, altfel nu va apărea în rezultat.
+> **Notă:** La inserare, verificați dacă câmpul activ este egal cu 1; altfel nu va apărea în rezultat. 
 
 ## Exemplu de interacțiune cu datele
 
@@ -118,13 +118,13 @@ Vom prezenta acum norme recomandate pentru a obține cele mai bune rezultate pos
 
 ## Prima interogare
 
-Vedeți mai jos cum să obțineți prima linie a interogării, sau va fi nul dacă nu se obține nicio linie.
+Vezi mai jos cum se obține prima linie a interogării, sau va fi nul dacă nu se obține nicio linie.
 
 ```javascript
 // Selectarea datelor:
 const dbRezultat = _db.queryFirst(
-    'SELECT nume FROM tabel_nume WHERE id_unic = ?::uuid',
-    _req.getString("id_unic")
+    'SELECT nume FROM tabel_nume WHERE uid = ?::uuid',
+    _req.getString("uid")
 )
 if (!dbRezultat) {
     // Codul de stare HTTP:
@@ -132,18 +132,18 @@ if (!dbRezultat) {
     // Indicarea erorii:
     _out.json(
         _val.map()
-            .set('eroare', 'id-negasit')
+            .set('error', 'id-negasit')
     )
-    // Finalizează execuția serviciului:
+    // Încheie execuția serviciului:
     _exec.stop()
 }
 ```
 
 ## Validarea numărului de înregistrări
 
-Când efectuați o selecție în baza de date în care rezultatul este unic, pentru a avea acces la date, se recomandă să procedați **în felul următor**:
+Când efectuați o selecție în baza de date în care rezultatul este unic, pentru a accesa datele este recomandat să procedați **în felul următor**:
 
-Rețineți că acesta este doar un exemplu simplu care garantează că cel puțin un rezultat este returnat și evită eroarea în cazul în care nu există rezultat.
+Rețineți că acesta este doar un exemplu simplu care garantează că este returnat cel puțin 1 rezultat și evită eroarea în cazul în care nu există niciun rezultat.
 
 ```javascript
 // Selectarea datelor:
@@ -153,9 +153,9 @@ var dbRezultate = _db.query(
         .add(_req.getInt("id"))
 )
 let nume = null;
-// Garantează că există date și se poate folosi simbolul
-// mai mare (rezultat.length > 1) în cazul
-// în care există mai multe înregistrări:
+// Garantează că există date și se poate folosi
+// semnul mai mare (dbRezultate.length > 1) în cazul
+// în care există mai mult de o înregistrare:
 if (dbRezultate.size() >= 1) {
   // Pentru a accesa direct valoarea numelui, este suficient:
   nume = dbRezultate.get(0).getString('nume');
@@ -164,20 +164,20 @@ if (dbRezultate.size() >= 1) {
 
 ## Iterarea în buclă a înregistrărilor
 
-Dacă rezultatul selecției sunt **mai multe rezultate**, puteți interacționa cu ciclul 'for' pentru a obține datele în felul următor:
+Dacă rezultatul selecției sunt **mai multe rezultate**, puteți interacționa cu bucla 'for' pentru a obține datele după cum urmează:
 
 ```javascript
 // Execută interogarea
 const dbRezultate = _db.query('SELECT id, nume FROM tabel_nume');
 
-// Inițializează variabila pentru a putea primi valori
+// Inițializează variabila pentru ca aceasta să poată primi valori
 const elemente = _val.init();
 
 // Iterează prin toate rezultatele pentru a primi fiecare valoare separat
 for (const dbRezultat of dbRezultate) {
     elemente.push(
         _val.map()
-            .set("id_unic", dbRezultat.getString("id_unic"))
+            .set("uid", dbRezultat.getString("uid"))
             .set("nume", dbRezultat.getString("nume"))
     );
 }
@@ -186,6 +186,6 @@ for (const dbRezultat of dbRezultate) {
 _out.json(elemente);
 ```
 
-Dacă aveți întrebări, nu ezitați să ne contactați; vedeți indicațiile din subsolul acestui website.
+Dacă aveți întrebări, nu ezitați să ne contactați; consultați indicațiile din subsolul acestui website.
 
-Spor la dezvoltare!
+Dezvoltare plăcută!

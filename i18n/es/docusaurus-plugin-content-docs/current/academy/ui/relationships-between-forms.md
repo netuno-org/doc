@@ -7,19 +7,19 @@ sidebar_label: Relaciones
 
 ## Cómo crear relaciones entre formularios
 
-La creación de relaciones entre formularios es un recurso esencial para organizar la información de forma inteligente. Al conectar formularios, eliminas la necesidad de duplicar datos y garantizas que tu aplicación sea cohesiva, escalable y fácil de mantener.
+La creación de relaciones entre formularios es un recurso esencial para organizar la información de forma inteligente. Al conectar formularios, eliminas la necesidad de duplicar datos y garantizas que tu aplicación sea cohesionada, escalable y fácil de mantener.
 
 Una de las grandes ventajas de Netuno es la capacidad de generar automáticamente el diagrama del modelo de datos.
 
 Las relaciones definen cómo interactúan entre sí los datos de diferentes tablas. Esta conexión se refleja directamente en la interfaz de usuario (UI), permitiendo que los campos de un formulario busquen información en otro automáticamente.
 
-**Diagrama Simple:** Ideal para validar la lógica inicial de pequeños módulos.
+**Diagrama simple:** Ideal para validar la lógica inicial de pequeños módulos.
 
-![diagrama-simple-plantilla-es.png](/docs/assets/academy/ui/relationships/simple-diagram-template-pt.png)
+![plantilla-diagrama-simple-es.png](/docs/assets/academy/ui/relationships/simple-diagram-template-pt.png)
 
-**Diagrama Complejo:** Demuestra la robustez de la herramienta en aplicaciones de gran escala, mapeando múltiples dependencias y flujos de datos.
+**Diagrama complejo:** Demuestra la solidez de la herramienta en aplicaciones de gran escala, mapeando múltiples dependencias y flujos de datos.
  
-![diagrama-complejo-plantilla-es.png](/docs/assets/academy/ui/relationships/complex-diagram-template-en.png)
+![plantilla-diagrama-complejo-es.png](/docs/assets/academy/ui/relationships/complex-diagram-template-en.png)
 
 
 ## Creación de campo relacional de tipo Select
@@ -28,7 +28,7 @@ El campo Select crea una relación entre dos formularios. Te permite elegir un v
 
 Usaremos los formularios de **Vehículos** y **Color** como ejemplo. 
 
-**¿Cuándo usarlo?** Usa el select cuando tienes una relación de tipo "Muchos a Uno" (N-1).
+**¿Cuándo usarlo?** Usa el select cuando tienes una relación de tipo "Muchos-a-Uno" (N-1).
 
 **Ejemplo:** Muchos Vehículos pueden tener un Color. En lugar de escribir "Azul" cada vez, seleccionas "Azul" de una lista de colores ya registrados.
 
@@ -41,77 +41,77 @@ Antes de empezar, asegúrate de que:
 
 - Ambos formularios (**Vehículo** y **Color**) ya están creados en Netuno. Para más detalles, consulta nuestra guía sobre [Creación de Formularios](/docs/academy/ui/forms).
 
-- El formulario de origen (**Color**) ya tiene algunos registros creados. (Ej: "Azul", "Rojo", "Plata"). Para más detalles, consulta nuestra guía sobre [Creación de Campos](/docs/academy/ui/fields).
+- El formulario de origen (**Color**) ya contiene algunos registros. (Ej.: "Azul", "Rojo", "Plateado"). Para más detalles, consulta nuestra guía sobre [Creación de Campos](/docs/academy/ui/fields).
 
-### Crear y Configurar el Select
+### Crear y configurar el Select
 
-Añade el tipo de campo **select** en el formulario **Vehículo** para que pueda "extraer" los datos del formulario **Color**.
+Añade el tipo de campo **select** en el formulario **Vehículo** para que pueda "traer" los datos del formulario **Color**.
 
 ![crear-y-configurar-el-campo-select-es.png](/docs/assets/academy/ui/relationships/create-and-configure-the-select-field-pt.png)
 
-#### 1 - Accede al Formulario de Destino
+#### 1 - Accede al formulario de destino
 
 - En el Backoffice, ve a la gestión de campos y abre la edición del formulario **Vehículo**.
  
-#### 2 - Crea el Nuevo Campo
+#### 2 - Crea el nuevo campo
 
 - Haz clic en "Crear nuevo campo".
 
-#### 3 - Define el Título y el Nombre de la Columna
+#### 3 - Define el título y el nombre de la columna
 
-- **Título del Campo:** Dale un nombre amigable que aparecerá para el usuario. **Ejemplo:** Color del Automóvil.
-- **Nombre de la Columna:** Este es el nombre técnico del campo en la base de datos.
+- **Título del campo:** Asigna un nombre amigable que aparecerá al usuario. **Ejemplo:** Color del Automóvil.
+- **Nombre de la columna:** Este es el nombre técnico del campo en la base de datos.
 
-**Buena Práctica:** Al crear un campo relacional, usa siempre el sufijo `_id` en el **Nombre de la Columna**. Esto deja claro que esta columna no almacena el texto "Azul", sino el ID de referencia para el registro "Azul" en el formulario **Color**. **Ejemplo:** `color_automovil_id`.
+**Buena práctica:** Al crear un campo relacional, usa siempre el sufijo `_id` en el **Nombre de la columna**. Esto deja claro que esta columna no almacena el texto "Azul", sino el ID de referencia del registro "Azul" en el formulario **Color**. **Ejemplo:** `color_automovil_id`.
 
-#### 4 - Elige el Tipo de Datos
+#### 4 - Elige el tipo de datos
 
 - En el campo **Tipo**, selecciona la opción _`select - select`_ en la lista.
 
-#### 5 - Configura el Enlace (La Relación)
+#### 5 - Configura el Link (la relación)
 
-![configurar-el-enlace-es.png](/docs/assets/academy/ui/relationships/configure-the-link-pt.png)
+![configurar-el-link-es.png](/docs/assets/academy/ui/relationships/configure-the-link-pt.png)
 
-- Al elegir _`select`_, se mostrará un nuevo campo llamado **Enlace**.
+- Al elegir _`select`_, se mostrará un nuevo campo llamado **Link**.
 - Haz clic en el botón **Configurar**.
-- Se abrirá un modal, listando todos tus formularios. Este es el momento de elegir el formulario de Origen.
+- Se abrirá una ventana modal que mostrará todos tus formularios. Este es el momento de elegir el formulario de Origen.
 - Selecciona el formulario que contiene los datos que quieres listar. En nuestro ejemplo, haz clic en **color - Color**.
-- Después de seleccionar, haz clic en el botón **Cerrar** en el modal.
+- Después de seleccionar, haz clic en el botón **Cerrar** de la ventana modal.
 
-#### 6 - Guarda los Cambios
+#### 6 - Guarda los cambios
 
 - Haz clic en el botón **Guardar** en la gestión de campos para aplicar todas tus configuraciones.
 
 ### Resultado
 
-¡Listo! Ahora en el modo "visualizar", cuando vayas a añadir o editar un registro en el formulario **Vehículo**, el campo "Color del Automóvil" será una lista desplegable (dropdown) que mostrará todos los colores registrados en tu formulario Color.
+¡Listo! Ahora, en el modo "visualizar", cuando vayas a añadir o editar un registro en el formulario **Vehículo**, el campo "Color del Automóvil" será una lista desplegable (dropdown) que mostrará todos los colores registrados en tu formulario Color.
 
 ## Creación de campo relacional de tipo Multiselect
 
-El campo **Multiselect** crea una relación "Muchos a Muchos" (N-M). Te permite seleccionar varios elementos de una lista en un único campo.
+El campo **Multiselect** crea una relación "Muchos-a-Muchos" (N-M). Te permite seleccionar varios elementos de una lista en un único campo.
 
-Usaremos los formularios de **Persona**, **Función** y **Persona-Función** como ejemplo.
+Usaremos los formularios **Persona**, **Función** y **Persona-Función** como ejemplo.
 
 **¿Cuándo usarlo?** Usa el multiselect cuando un registro pueda estar vinculado a varios otros, y viceversa.
 **Ejemplo:** Muchas Personas pueden tener muchas Funciones.
 
-- Una persona (ej: "Ana") puede tener las funciones "Admin" y "Gestor".
-- La función "Gestor" puede estar asociada a varias personas (ej: "Ana", "Bruno" y "Santiago").
+- Una persona (ej.: "Ana") puede tener las funciones "Admin" y "Gestor".
+- La función "Gestor" puede estar asociada a varias personas (ej.: "Ana", "Bruno" y "Thiago").
 
 Para que esto funcione, necesitamos tres formularios:
 
 - **Formulario "Padre" (Persona):** Donde el campo _`multiselect`_ será visible para el usuario.
-- **Formulario "Origen" (Función):** De donde vienen las opciones de la lista (ej: "Admin", "Gestor").
+- **Formulario "Origen" (Función):** De donde vienen las opciones de la lista (ej.: "Admin", "Gestor").
 - **Formulario "Unión" (Persona-Función):** Un formulario "puente" que almacena las conexiones entre **Persona** y **Función**.
 
 ### Requisitos
 Antes de empezar, asegúrate de que:
 
-- El formulario "Padre" (**Persona**) ya está creado y con algunos registros (ej: "Ana", "Bruno", "Lucas").
-- El formulario "Origen" (**Función**) ya está creado y con algunos registros (ej: "Admin", "Gestor", "Consultor").
+- El formulario "Padre" (**Persona**) ya está creado y con algunos registros (ej.: "Ana", "Bruno", "Lucas").
+- El formulario "Origen" (**Función**) ya está creado y con algunos registros (ej.: "Admin", "Gestor", "Consultor").
 
-### Crear y Configurar el Multiselect 
-La configuración se hace en 4 etapas:
+### Crear y configurar el Multiselect 
+La configuración se realiza en 4 etapas:
 
 ### Etapa 1: crear el formulario de unión (Persona-Función)
 Primero, vamos a crear el formulario "puente".
@@ -122,7 +122,7 @@ Primero, vamos a crear el formulario "puente".
 
 3 - **Nombre de la tabla:** persona_funcion  (o similar).
 
-4 - **Importante:** En el campo **Padre**, selecciona el formulario "Padre" principal, que en este caso es **Persona**. Esto transforma **Persona-Función** en un subformulario.
+4 - **Importante:** En el campo **Padre**, selecciona el formulario "Padre" principal, que en este caso es **Persona**. Esto convierte a **Persona-Función** en un subformulario.
 
 5 - Haz clic en **Guardar**.
 
@@ -136,25 +136,25 @@ Añade los campos "puente" al formulario Persona-Función.
 
 2 - Añade dos campos de tipo select: uno que apuntará a Persona y otro a Función.
 
-**Campo 1 (Enlace a Persona):**
+**Campo 1 (Link a Persona):**
 
-![campo-enlace-para-persona-es.png](/docs/assets/academy/ui/relationships/link-field-for-person-pt.png)
+![campo-link-para-persona-es.png](/docs/assets/academy/ui/relationships/link-field-for-person-pt.png)
 
 - **Título del campo:** Nombre de la Persona
 - **Nombre de la columna:** `nombre_persona_id` (siguiendo la convención **_id**)
 - **Tipo:** `select - select`
-- **Enlace:** Haz clic en **Configurar** y selecciona el campo principal del formulario **Persona**, ejemplo: `persona:nombre`.
+- **Link:** Haz clic en **Configurar** y selecciona el campo principal del formulario **Persona**, ejemplo: `persona:nombre`.
 - Haz clic en **Guardar**.
 
-**Campo 2 (Enlace a Función):**
+**Campo 2 (Link a Función):**
 
 - **Título del campo:** Función de la Persona. 
 - **Nombre de la columna:** `funcion_persona_id`.
 - **Tipo:** `select - select`.
-- **Enlace:** Haz clic en **Configurar** y selecciona el campo principal del formulario **Función**, ejemplo: `funcion:funcion_id`.
+- **Link:** Haz clic en **Configurar** y selecciona el campo principal del formulario **Función**, ejemplo: `funcion:funcion_id`.
 - Haz clic en **Guardar**.
 
-![campo-enlace-a-persona-funcion-es.png](/docs/assets/academy/ui/relationships/field-link-to-person-function-pt.png)
+![campo-link-a-persona-funcion-es.png](/docs/assets/academy/ui/relationships/field-link-to-person-function-pt.png)
 
 ### Etapa 3: crear el campo multiselect en el formulario "padre"
 
@@ -173,7 +173,7 @@ Con el "puente" (**Persona-Función**) listo, podemos volver al formulario **Per
 
 ### Etapa 4: configurar el campo multiselect
 
-Al seleccionar el tipo _`multiselect`_, aparecerán dos nuevos campos de configuración: **Referencia** y **Enlace**.
+Al seleccionar el tipo _`multiselect`_, aparecerán dos nuevos campos de configuración: **Referencia** y **Link**.
 
 #### 1 - Referencia (¿Dónde guardar la relación?)
 
@@ -181,13 +181,13 @@ Al seleccionar el tipo _`multiselect`_, aparecerán dos nuevos campos de configu
  - Haz clic en **Configurar**.
  - Selecciona el formulario de unión (**Persona-Función**) y el campo que creaste en la Etapa 2 (Campo 1). **Ejemplo:** _`persona_funcion:nombre_persona_id`_.
 
-#### 2 - Enlace (¿De dónde vienen las opciones?)
+#### 2 - Link (¿De dónde vienen las opciones?)
 
  - **Este campo dice:** "¿Qué campo del formulario 'puente' se refiere a las opciones (**Función**)?"
  - Haz clic en **Configurar**.
  - Selecciona el formulario de unión (**Persona-Función**) y el campo que creaste en la Etapa 2 (Campo 2). **Ejemplo:** _`persona_funcion:funcion_persona_id`_.
   
-#### 3 - Guarda los Cambios
+#### 3 - Guarda los cambios
 
 - Haz clic en el botón **Guardar** en la gestión de campos para aplicar todas tus configuraciones.
 
@@ -195,8 +195,8 @@ Al seleccionar el tipo _`multiselect`_, aparecerán dos nuevos campos de configu
 
 ### Resultado
 
-¡Listo! Ahora en el modo "visualizar", al añadir o editar un registro en el formulario **Persona**, el campo "Persona Función" aparecerá como una casilla de selección múltiple. Podrás elegir varias funciones de la lista (que vienen del formulario **Función**), y Netuno guardará automáticamente esas asociaciones dentro del formulario **Persona-Función**.
+¡Listo! Ahora, en el modo "visualizar", al añadir o editar un registro en el formulario **Persona**, el campo "Persona Función" aparecerá como un cuadro de selección múltiple. Podrás elegir varias funciones de la lista (que vienen del formulario **Función**), y Netuno guardará automáticamente esas asociaciones dentro del formulario **Persona-Función**.
 
-Si tienes alguna duda, contacta con nosotros a través de la comunidad y otros canales disponibles al final de esta página.
+Si tienes alguna duda, ponte en contacto con nosotros a través de la comunidad y otros canales disponibles al final de esta página.
 
 ¡Buen desarrollo!

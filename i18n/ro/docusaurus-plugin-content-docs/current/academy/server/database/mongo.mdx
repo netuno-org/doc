@@ -9,13 +9,13 @@ import PolyglotPath from "@site/src/components/PolyglotPath";
 
 ## Introducere
 
-<a href="https://www.mongodb.com/" target="_blank">MongoDB</a> este o bază de date NoSQL orientată pe documente. În loc de tabele și rânduri, datele sunt stocate în documente în format asemănător JSON, ceea ce permite o mare flexibilitate a modelului de date.
+<a href="https://www.mongodb.com/" target="_blank">MongoDB</a> este o bază de date NoSQL orientată pe documente. În loc de tabele și rânduri, datele sunt stocate în documente în format similar cu JSON, ceea ce permite o mare flexibilitate în modelul datelor.
 
-Netuno oferă resursa [_mongo](/docs/library/resources/mongo) pentru integrarea cu MongoDB, cu o abstractizare low-code peste clientul oficial MongoDB pentru Java, disponibilă pentru diferitele limbaje de programare suportate de Netuno: **JavaScript, Python, Ruby, Kotlin și Groovy**.
+Netuno oferă resursa [_mongo](/docs/library/resources/mongo) pentru integrarea cu MongoDB, cu o abstractizare low-code peste clientul oficial MongoDB pentru Java, disponibilă pentru limbajele de programare suportate de Netuno: **JavaScript, Python, Ruby, Kotlin și Groovy**.
 
 > Înainte de a continua, se recomandă să știți cum să creați servicii în Netuno; consultați tutorialul [REST - Servicii Web](/docs/academy/server/services/rest).
 
-Un exemplu de implementare a operațiilor prezentate aici este disponibil în serviciul exemplu `mongo.js` care se află în:
+Un exemplu de implementare a operațiilor prezentate aici este disponibil în serviciul exemplu `mongo.js`, situat în:
 
 <PolyglotPath files={[
     `apps/demo/server/services/samples/javascript/mongo`
@@ -25,19 +25,19 @@ Un exemplu de implementare a operațiilor prezentate aici este disponibil în se
 
 ### Cu Docker
 
-Presupunând că aveți Docker instalat, trebuie doar să descărcați imaginea MongoDB și să porniți un container nou:
+Presupunând că aveți Docker instalat, este suficient să descărcați imaginea MongoDB și să porniți un container nou:
 
 ```shell
 docker pull mongo
 docker run -d --name mongo -p 27017:27017 mongo
 ```
 
-În acest fel, MongoDB este accesibil la `localhost:27017` fără autentificare.
+Astfel, MongoDB devine accesibil la `localhost:27017` fără autentificare.
 
-Pentru a crea utilizatorul bazei de date conform configurației aplicației, executați:
+Pentru a crea utilizatorul bazei de date conform configurației aplicației, rulați:
 
 ```shell
-docker exec -it mongo mongosh produse_db --eval 'db.createUser({ user: "utilizator_produse", pwd: "12345678", roles: [{ role: "readWrite", db: "produse_db" }] })'
+docker exec -it mongo mongosh baza_produse --eval 'db.createUser({ user: "utilizator_produse", pwd: "12345678", roles: [{ role: "readWrite", db: "baza_produse" }] })'
 ```
 
 ### Cu Ubuntu
@@ -62,17 +62,17 @@ sudo systemctl start mongod
 
 - <a href="https://www.mongodb.com/try/download/community" target="_blank">Descărcați MongoDB Community Server</a>.
 
-Executați programul de instalare descărcat și, la pasul **Service Configuration**, activați **Install MongoD as a Service** pentru ca MongoDB să pornească automat. MongoDB este accesibil la `localhost:27017` fără autentificare.
+Rulați installerul descărcat și, la pasul **Service Configuration**, activați **Install MongoD as a Service** pentru ca MongoDB să pornească automat. MongoDB devine accesibil la `localhost:27017` fără autentificare.
 
 > Consultați [documentația oficială MongoDB](https://www.mongodb.com/docs/manual/installation/) pentru alte distribuții și versiuni.
 
-## Configurarea Aplicației
+## Configurarea aplicației
 
 Configurarea conexiunilor MongoDB se face în fișierul de configurare al aplicației, în funcție de mediu:
 
 - `config/_development.json`
 
-> Vezi mai multe despre [fișierele de configurare](/docs/academy/explore/configuration) ale aplicației.
+> Aflați mai multe despre [fișierele de configurare](/docs/academy/explore/configuration) ale aplicației.
 
 În fișierul de configurare, adăugați blocul `mongo`, unde fiecare cheie identifică o conexiune:
 
@@ -80,13 +80,13 @@ Configurarea conexiunilor MongoDB se face în fișierul de configurare al aplica
 {
     ...
     "mongo": {
-        "magazin": "mongodb://utilizator_magazin:12345678@localhost/magazin_db",
+        "magazin": "mongodb://utilizator_magazin:12345678@localhost/baza_magazin",
         "produse": {
             "username": "utilizator_produse",
             "password": "12345678",
             "host": "127.0.0.1",
             "port": "27017",
-            "database": "produse_db"
+            "database": "baza_produse"
         }
     },
     ...
@@ -95,7 +95,7 @@ Configurarea conexiunilor MongoDB se face în fișierul de configurare al aplica
 
 O conexiune poate fi definită în două moduri:
 
-- **Ca URL de conexiune** — valoarea este pur și simplu un șir, de exemplu `"mongodb://utilizator_magazin:12345678@localhost/magazin_db"`.
+- **Ca URL de conexiune** — valoarea este pur și simplu un string, de exemplu `"mongodb://utilizator_magazin:12345678@localhost/baza_magazin"`.
 - **Ca obiect de configurare** — cu câmpurile:
   - `url` — dacă este definit, este utilizat direct ca URL de conexiune, ignorând celelalte câmpuri.
   - `protocol` — protocolul conexiunii, implicit `mongodb`.
@@ -105,11 +105,11 @@ O conexiune poate fi definită în două moduri:
   - `database` — numele bazei de date, implicit numele cheii conexiunii.
   - `params` — parametri suplimentari ai conexiunii adăugați la URL, de exemplu `{ "authSource": "admin" }`. Sunt aplicați doar când URL-ul este construit din câmpurile obiectului.
 
-> Conexiunea nu trebuie să fie baza de date principală a aplicației. Spre deosebire de configurarea `db`, blocul `mongo` este independent și permite mai multe conexiuni simultane.
+> Conexiunea nu trebuie să fie baza de date principală a aplicației. Spre deosebire de configurația `db`, blocul `mongo` este independent și permite mai multe conexiuni simultan.
 
-## Inițializarea Conexiunii
+## Inițializarea conexiunii
 
-Primul pas este să inițializați clientul MongoDB cu resursa `_mongo.init(...)`, transmitând numele cheii de configurare sau direct un URL de conexiune:
+Primul pas este inițializarea clientului MongoDB cu resursa `_mongo.init(...)`, transmisând numele cheii de configurare sau direct un URL de conexiune:
 
 <PolyglotCode
     codes={[
@@ -146,46 +146,46 @@ Primul pas este să inițializați clientul MongoDB cu resursa `_mongo.init(...)
     ]}
 />
 
-De asemenea, puteți inițializa conexiunea direct cu un URL:
+Puteți inițializa și conexiunea direct cu un URL:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const mongo = _mongo.init("mongodb://localhost:27017/produse_db")
+                const mongo = _mongo.init("mongodb://localhost:27017/baza_produse")
             `
         },
         {
             lang: 'python',
             code: `
-                mongo = _mongo.init("mongodb://localhost:27017/produse_db")
+                mongo = _mongo.init("mongodb://localhost:27017/baza_produse")
             `
         },
         {
             lang: 'ruby',
             code: `
-                mongo = _mongo.init("mongodb://localhost:27017/produse_db")
+                mongo = _mongo.init("mongodb://localhost:27017/baza_produse")
             `
         },
         {
             lang: 'kotlin',
             code: `
-                val mongo = _mongo.init("mongodb://localhost:27017/produse_db")
+                val mongo = _mongo.init("mongodb://localhost:27017/baza_produse")
             `
         },
         {
             lang: 'groovy',
             code: `
-                def mongo = _mongo.init("mongodb://localhost:27017/produse_db")
+                def mongo = _mongo.init("mongodb://localhost:27017/baza_produse")
             `
         }
     ]}
 />
 
-> La apelarea `_mongo.init()` fără argumente este utilizată cheia de configurare `default`. Este recomandat să transmiteți întotdeauna numele cheii sau URL-ul, pentru a face explicită conexiunea utilizată.
+> La apelul `_mongo.init()` fără argumente se utilizează cheia de configurare `default`. Se recomandă să transmiteți întotdeauna numele cheii sau URL-ul, pentru a face explicită conexiunea utilizată.
 
-## Baze de date și Colecții
+## Bază de date și colecții
 
 Cu clientul inițializat, obțineți instanța bazei de date cu `database("nume")`. Apoi puteți crea colecții și accesa o colecție existentă:
 
@@ -194,51 +194,51 @@ Cu clientul inițializat, obțineți instanța bazei de date cu `database("nume"
         {
             lang: 'javascript',
             code: `
-                const db = mongo.database("produse_db")
+                const baza = mongo.database("baza_produse")
 
-                db.createCollection("produs")
+                baza.createCollection("produs")
 
-                const collection = db.collection("produs")
+                const colectie = baza.collection("produs")
             `
         },
         {
             lang: 'python',
             code: `
-                db = mongo.database("produse_db")
+                baza = mongo.database("baza_produse")
 
-                db.createCollection("produs")
+                baza.createCollection("produs")
 
-                collection = db.collection("produs")
+                colectie = baza.collection("produs")
             `
         },
         {
             lang: 'ruby',
             code: `
-                db = mongo.database("produse_db")
+                baza = mongo.database("baza_produse")
 
-                db.createCollection("produs")
+                baza.createCollection("produs")
 
-                collection = db.collection("produs")
+                colectie = baza.collection("produs")
             `
         },
         {
             lang: 'kotlin',
             code: `
-                val db = mongo.database("produse_db")
+                val baza = mongo.database("baza_produse")
 
-                db.createCollection("produs")
+                baza.createCollection("produs")
 
-                val collection = db.collection("produs")
+                val colectie = baza.collection("produs")
             `
         },
         {
             lang: 'groovy',
             code: `
-                def db = mongo.database("produse_db")
+                def baza = mongo.database("baza_produse")
 
-                db.createCollection("produs")
+                baza.createCollection("produs")
 
-                def collection = db.collection("produs")
+                def colectie = baza.collection("produs")
             `
         }
     ]}
@@ -251,56 +251,56 @@ Puteți testa conexiunea la baza de date cu `ping()` și lista toate colecțiile
         {
             lang: 'javascript',
             code: `
-                db.ping()
+                baza.ping()
 
-                const nume = db.collectionNames()
+                const nume = baza.collectionNames()
             `
         },
         {
             lang: 'python',
             code: `
-                db.ping()
+                baza.ping()
 
-                nume = db.collectionNames()
+                nume = baza.collectionNames()
             `
         },
         {
             lang: 'ruby',
             code: `
-                db.ping()
+                baza.ping()
 
-                nume = db.collectionNames()
+                nume = baza.collectionNames()
             `
         },
         {
             lang: 'kotlin',
             code: `
-                db.ping()
+                baza.ping()
 
-                val nume = db.collectionNames()
+                val nume = baza.collectionNames()
             `
         },
         {
             lang: 'groovy',
             code: `
-                db.ping()
+                baza.ping()
 
-                def nume = db.collectionNames()
+                def nume = baza.collectionNames()
             `
         }
     ]}
 />
 
-Puteți redenumi o colecție cu `renameCollection()`, transmitând numele complet cu baza de date, sau numele bazei de date și noul nume al colecției separat:
+Puteți redenumi o colecție cu `renameCollection()`, transmisând numele complet cu baza de date, sau numele bazei de date și noul nume al colecției separat:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                collection.renameCollection("produse_db.produs_arhiva")
+                colectie.renameCollection("baza_produse.arhiva_produs")
 
-                collection.renameCollection("arhiva_db", "produs_arhiva")
+                colectie.renameCollection("baza_arhiva", "arhiva_produs")
             `
         }
     ]}
@@ -313,13 +313,13 @@ Pentru a elimina o colecție și toate documentele sale, utilizați `drop()`:
         {
             lang: 'javascript',
             code: `
-                collection.drop()
+                colectie.drop()
             `
         }
     ]}
 />
 
-## Inserarea Documentelor
+## Inserarea documentelor
 
 Datele sunt reprezentate cu resursa `_val`, prin `_val.map()` pentru documente și `_val.list()` pentru liste de valori.
 
@@ -332,7 +332,7 @@ Cu `insertOne()` inserați un document și obțineți ID-ul generat:
         {
             lang: 'javascript',
             code: `
-                const id = collection.insertOne(
+                const id = colectie.insertOne(
                     _val.map()
                         .set("nume", "Laptop")
                         .set("cantitate", 22)
@@ -344,7 +344,7 @@ Cu `insertOne()` inserați un document și obțineți ID-ul generat:
         {
             lang: 'python',
             code: `
-                id = collection.insertOne(
+                id = colectie.insertOne(
                     _val.map()
                         .set("nume", "Laptop")
                         .set("cantitate", 22)
@@ -356,7 +356,7 @@ Cu `insertOne()` inserați un document și obțineți ID-ul generat:
         {
             lang: 'ruby',
             code: `
-                id = collection.insertOne(
+                id = colectie.insertOne(
                     _val.map()
                         .set("nume", "Laptop")
                         .set("cantitate", 22)
@@ -368,7 +368,7 @@ Cu `insertOne()` inserați un document și obțineți ID-ul generat:
         {
             lang: 'kotlin',
             code: `
-                val id = collection.insertOne(
+                val id = colectie.insertOne(
                     _val.map()
                         .set("nume", "Laptop")
                         .set("cantitate", 22)
@@ -380,7 +380,7 @@ Cu `insertOne()` inserați un document și obțineți ID-ul generat:
         {
             lang: 'groovy',
             code: `
-                def id = collection.insertOne(
+                def id = colectie.insertOne(
                     _val.map()
                         .set("nume", "Laptop")
                         .set("cantitate", 22)
@@ -399,9 +399,9 @@ Documentele pot conține structuri imbricate, cum ar fi liste și alte documente
         {
             lang: 'javascript',
             code: `
-                collection.insertOne(
+                colectie.insertOne(
                     _val.map()
-                        .set("nume", "Tablet")
+                        .set("nume", "Tabletă")
                         .set("etichete",
                             _val.list()
                                 .add("promo")
@@ -427,7 +427,7 @@ Cu `insertMany()` inserați mai multe documente deodată, primind lista de ID-ur
         {
             lang: 'javascript',
             code: `
-                const ids = collection.insertMany(
+                const ids = colectie.insertMany(
                     _val.list()
                         .add(
                             _val.map()
@@ -445,7 +445,7 @@ Cu `insertMany()` inserați mai multe documente deodată, primind lista de ID-ur
         {
             lang: 'python',
             code: `
-                ids = collection.insertMany(
+                ids = colectie.insertMany(
                     _val.list()
                         .add(
                             _val.map()
@@ -463,7 +463,7 @@ Cu `insertMany()` inserați mai multe documente deodată, primind lista de ID-ur
         {
             lang: 'ruby',
             code: `
-                ids = collection.insertMany(
+                ids = colectie.insertMany(
                     _val.list()
                         .add(
                             _val.map()
@@ -481,7 +481,7 @@ Cu `insertMany()` inserați mai multe documente deodată, primind lista de ID-ur
         {
             lang: 'kotlin',
             code: `
-                val ids = collection.insertMany(
+                val ids = colectie.insertMany(
                     _val.list()
                         .add(
                             _val.map()
@@ -499,7 +499,7 @@ Cu `insertMany()` inserați mai multe documente deodată, primind lista de ID-ur
         {
             lang: 'groovy',
             code: `
-                def ids = collection.insertMany(
+                def ids = colectie.insertMany(
                     _val.list()
                         .add(
                             _val.map()
@@ -517,7 +517,7 @@ Cu `insertMany()` inserați mai multe documente deodată, primind lista de ID-ur
     ]}
 />
 
-## Interogarea Documentelor
+## Interogarea documentelor
 
 Metoda `find()` returnează un [MongoFindIterable](/docs/library/objects/MongoFindIterable), din care obțineți documentele cu `all()` (toate) sau `first()` (primul, sau `null` dacă nu există niciunul).
 
@@ -528,31 +528,31 @@ Pentru a obține toate documentele din colecție:
         {
             lang: 'javascript',
             code: `
-                const documente = collection.find().all()
+                const documente = colectie.find().all()
             `
         },
         {
             lang: 'python',
             code: `
-                documente = collection.find().all()
+                documente = colectie.find().all()
             `
         },
         {
             lang: 'ruby',
             code: `
-                documente = collection.find().all()
+                documente = colectie.find().all()
             `
         },
         {
             lang: 'kotlin',
             code: `
-                val documente = collection.find().all()
+                val documente = colectie.find().all()
             `
         },
         {
             lang: 'groovy',
             code: `
-                def documente = collection.find().all()
+                def documente = colectie.find().all()
             `
         }
     ]}
@@ -565,7 +565,7 @@ Pentru a interoga cu un filtru, utilizați fabrica [_mongo.filters()](/docs/libr
         {
             lang: 'javascript',
             code: `
-                const documente = collection.find(
+                const documente = colectie.find(
                     _mongo.filters().eq("nume", "Laptop")
                 ).all()
             `
@@ -573,7 +573,7 @@ Pentru a interoga cu un filtru, utilizați fabrica [_mongo.filters()](/docs/libr
         {
             lang: 'python',
             code: `
-                documente = collection.find(
+                documente = colectie.find(
                     _mongo.filters().eq("nume", "Laptop")
                 ).all()
             `
@@ -581,7 +581,7 @@ Pentru a interoga cu un filtru, utilizați fabrica [_mongo.filters()](/docs/libr
         {
             lang: 'ruby',
             code: `
-                documente = collection.find(
+                documente = colectie.find(
                     _mongo.filters().eq("nume", "Laptop")
                 ).all()
             `
@@ -589,7 +589,7 @@ Pentru a interoga cu un filtru, utilizați fabrica [_mongo.filters()](/docs/libr
         {
             lang: 'kotlin',
             code: `
-                val documente = collection.find(
+                val documente = colectie.find(
                     _mongo.filters().eq("nume", "Laptop")
                 ).all()
             `
@@ -597,7 +597,7 @@ Pentru a interoga cu un filtru, utilizați fabrica [_mongo.filters()](/docs/libr
         {
             lang: 'groovy',
             code: `
-                def documente = collection.find(
+                def documente = colectie.find(
                     _mongo.filters().eq("nume", "Laptop")
                 ).all()
             `
@@ -619,15 +619,15 @@ Fabrica `_mongo.filters()` oferă principalii operatori de interogare MongoDB:
 | `lte("câmp", valoare)` | Mai mic sau egal cu valoarea. |
 | `in("câmp", valoare1, valoare2, ...)` | Egal cu oricare dintre valori. |
 | `nin("câmp", valoare1, valoare2, ...)` | Diferit de toate valorile. |
-| `and(filtru1, filtru2, ...)` | Corespunde tuturor filtrelor. |
-| `or(filtru1, filtru2, ...)` | Corespunde cel puțin unuia dintre filtre. |
-| `not(filtru)` | Nu corespunde filtrului. |
-| `regex("câmp", "model")` | Corespunde expresiei regulate. |
+| `and(filtru1, filtru2, ...)` | Se potrivește cu toate filtrele. |
+| `or(filtru1, filtru2, ...)` | Se potrivește cu cel puțin unul dintre filtre. |
+| `not(filtru)` | Nu se potrivește cu filtrul. |
+| `regex("câmp", "model")` | Se potrivește cu expresia regulată. |
 | `exists("câmp")` | Câmpul există în document. |
 | `text("căutare")` | Căutare de text. |
 | `type("câmp", "tip")` | Câmpul este de tipul specificat. |
 | `mod("câmp", divizor, rest)` | Restul împărțirii câmpului la divizor este egal cu valoarea. |
-| `where("expresie")` | Corespunde documentelor care satisfac o expresie JavaScript, de exemplu `"this.pret > 100"`. |
+| `where("expresie")` | Se potrivește cu documentele care satisfac o expresie JavaScript, de exemplu `"this.pret > 100"`. |
 | `size("câmp", n)` | Câmpul de tip matrice are exact `n` elemente. |
 
 De exemplu, pentru a obține produsele cu prețul mai mare de 50 și cantitatea mai mică de 30:
@@ -637,7 +637,7 @@ De exemplu, pentru a obține produsele cu prețul mai mare de 50 și cantitatea 
         {
             lang: 'javascript',
             code: `
-                const documente = collection.find(
+                const documente = colectie.find(
                     _mongo.filters().and(
                         _mongo.filters().gt("pret", 50),
                         _mongo.filters().lt("cantitate", 30)
@@ -648,7 +648,7 @@ De exemplu, pentru a obține produsele cu prețul mai mare de 50 și cantitatea 
         {
             lang: 'python',
             code: `
-                documente = collection.find(
+                documente = colectie.find(
                     _mongo.filters().and(
                         _mongo.filters().gt("pret", 50),
                         _mongo.filters().lt("cantitate", 30)
@@ -659,7 +659,7 @@ De exemplu, pentru a obține produsele cu prețul mai mare de 50 și cantitatea 
         {
             lang: 'ruby',
             code: `
-                documente = collection.find(
+                documente = colectie.find(
                     _mongo.filters().and(
                         _mongo.filters().gt("pret", 50),
                         _mongo.filters().lt("cantitate", 30)
@@ -670,7 +670,7 @@ De exemplu, pentru a obține produsele cu prețul mai mare de 50 și cantitatea 
         {
             lang: 'kotlin',
             code: `
-                val documente = collection.find(
+                val documente = colectie.find(
                     _mongo.filters().and(
                         _mongo.filters().gt("pret", 50),
                         _mongo.filters().lt("cantitate", 30)
@@ -681,7 +681,7 @@ De exemplu, pentru a obține produsele cu prețul mai mare de 50 și cantitatea 
         {
             lang: 'groovy',
             code: `
-                def documente = collection.find(
+                def documente = colectie.find(
                     _mongo.filters().and(
                         _mongo.filters().gt("pret", 50),
                         _mongo.filters().lt("cantitate", 30)
@@ -699,7 +699,7 @@ Sau pentru a obține produsele al căror nume corespunde unei expresii regulate:
         {
             lang: 'javascript',
             code: `
-                const documente = collection.find(
+                const documente = colectie.find(
                     _mongo.filters().regex("nume", "^[LS]")
                 ).all()
             `
@@ -707,7 +707,7 @@ Sau pentru a obține produsele al căror nume corespunde unei expresii regulate:
         {
             lang: 'python',
             code: `
-                documente = collection.find(
+                documente = colectie.find(
                     _mongo.filters().regex("nume", "^[LS]")
                 ).all()
             `
@@ -715,7 +715,7 @@ Sau pentru a obține produsele al căror nume corespunde unei expresii regulate:
         {
             lang: 'ruby',
             code: `
-                documente = collection.find(
+                documente = colectie.find(
                     _mongo.filters().regex("nume", "^[LS]")
                 ).all()
             `
@@ -723,7 +723,7 @@ Sau pentru a obține produsele al căror nume corespunde unei expresii regulate:
         {
             lang: 'kotlin',
             code: `
-                val documente = collection.find(
+                val documente = colectie.find(
                     _mongo.filters().regex("nume", "^[LS]")
                 ).all()
             `
@@ -731,7 +731,7 @@ Sau pentru a obține produsele al căror nume corespunde unei expresii regulate:
         {
             lang: 'groovy',
             code: `
-                def documente = collection.find(
+                def documente = colectie.find(
                     _mongo.filters().regex("nume", "^[LS]")
                 ).all()
             `
@@ -739,7 +739,7 @@ Sau pentru a obține produsele al căror nume corespunde unei expresii regulate:
     ]}
 />
 
-## Parcurgerea Rezultatelor
+## Parcurgerea rezultatelor
 
 Cu rezultatul interogării puteți parcurge toate documentele găsite:
 
@@ -748,7 +748,7 @@ Cu rezultatul interogării puteți parcurge toate documentele găsite:
         {
             lang: 'javascript',
             code: `
-                for (const document of collection.find().all()) {
+                for (const document of colectie.find().all()) {
                     _out.println(document.getString("nume"))
                 }
             `
@@ -756,14 +756,14 @@ Cu rezultatul interogării puteți parcurge toate documentele găsite:
         {
             lang: 'python',
             code: `
-                for document in collection.find().all():
+                for document in colectie.find().all():
                     _out.println(document.getString("nume"))
             `
         },
         {
             lang: 'ruby',
             code: `
-                collection.find().all().each do |document|
+                colectie.find().all().each do |document|
                     _out.println(document.getString("nume"))
                 end
             `
@@ -771,7 +771,7 @@ Cu rezultatul interogării puteți parcurge toate documentele găsite:
         {
             lang: 'kotlin',
             code: `
-                for (document in collection.find().all()) {
+                for (document in colectie.find().all()) {
                     _out.println(document.getString("nume"))
                 }
             `
@@ -779,7 +779,7 @@ Cu rezultatul interogării puteți parcurge toate documentele găsite:
         {
             lang: 'groovy',
             code: `
-                for (document in collection.find().all()) {
+                for (document in colectie.find().all()) {
                     _out.println(document.getString("nume"))
                 }
             `
@@ -787,14 +787,14 @@ Cu rezultatul interogării puteți parcurge toate documentele găsite:
     ]}
 />
 
-De asemenea, puteți parcurge rezultatele cu `forEach()` transmitând o funcție:
+Puteți parcurge și rezultatele cu `forEach()` transmițând o funcție:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                collection.find().forEach((document) =>
+                colectie.find().forEach((document) =>
                     _out.println(document.getString("nume"))
                 )
             `
@@ -802,7 +802,7 @@ De asemenea, puteți parcurge rezultatele cu `forEach()` transmitând o funcție
         {
             lang: 'python',
             code: `
-                collection.find().forEach(
+                colectie.find().forEach(
                     lambda document: _out.println(document.getString("nume"))
                 )
             `
@@ -810,7 +810,7 @@ De asemenea, puteți parcurge rezultatele cu `forEach()` transmitând o funcție
         {
             lang: 'ruby',
             code: `
-                collection.find().forEach do |document|
+                colectie.find().forEach do |document|
                     _out.println(document.getString("nume"))
                 end
             `
@@ -818,7 +818,7 @@ De asemenea, puteți parcurge rezultatele cu `forEach()` transmitând o funcție
         {
             lang: 'kotlin',
             code: `
-                collection.find().forEach { document ->
+                colectie.find().forEach { document ->
                     _out.println(document.getString("nume"))
                 }
             `
@@ -826,7 +826,7 @@ De asemenea, puteți parcurge rezultatele cu `forEach()` transmitând o funcție
         {
             lang: 'groovy',
             code: `
-                collection.find().forEach { document ->
+                colectie.find().forEach { document ->
                     _out.println(document.getString("nume"))
                 }
             `
@@ -836,14 +836,14 @@ De asemenea, puteți parcurge rezultatele cu `forEach()` transmitând o funcție
 
 ## Sortare
 
-Cu fabrica `_mongo.sorts()` definiți ordinea rezultatelor, ascendent sau descendent:
+Cu fabrica `_mongo.sorts()` definiți ordinea rezultatelor, ascendentă sau descendentă:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const documente = collection.find().sort(
+                const documente = colectie.find().sort(
                     _mongo.sorts().descending("pret")
                 ).all()
             `
@@ -851,7 +851,7 @@ Cu fabrica `_mongo.sorts()` definiți ordinea rezultatelor, ascendent sau descen
         {
             lang: 'python',
             code: `
-                documente = collection.find().sort(
+                documente = colectie.find().sort(
                     _mongo.sorts().descending("pret")
                 ).all()
             `
@@ -859,7 +859,7 @@ Cu fabrica `_mongo.sorts()` definiți ordinea rezultatelor, ascendent sau descen
         {
             lang: 'ruby',
             code: `
-                documente = collection.find().sort(
+                documente = colectie.find().sort(
                     _mongo.sorts().descending("pret")
                 ).all()
             `
@@ -867,7 +867,7 @@ Cu fabrica `_mongo.sorts()` definiți ordinea rezultatelor, ascendent sau descen
         {
             lang: 'kotlin',
             code: `
-                val documente = collection.find().sort(
+                val documente = colectie.find().sort(
                     _mongo.sorts().descending("pret")
                 ).all()
             `
@@ -875,7 +875,7 @@ Cu fabrica `_mongo.sorts()` definiți ordinea rezultatelor, ascendent sau descen
         {
             lang: 'groovy',
             code: `
-                def documente = collection.find().sort(
+                def documente = colectie.find().sort(
                     _mongo.sorts().descending("pret")
                 ).all()
             `
@@ -890,7 +890,7 @@ Pentru a sorta după mai multe câmpuri, utilizați `orderBy()`:
         {
             lang: 'javascript',
             code: `
-                const documente = collection.find().sort(
+                const documente = colectie.find().sort(
                     _mongo.sorts().orderBy(
                         _mongo.sorts().descending("pret"),
                         _mongo.sorts().ascending("cantitate")
@@ -901,7 +901,7 @@ Pentru a sorta după mai multe câmpuri, utilizați `orderBy()`:
         {
             lang: 'python',
             code: `
-                documente = collection.find().sort(
+                documente = colectie.find().sort(
                     _mongo.sorts().orderBy(
                         _mongo.sorts().descending("pret"),
                         _mongo.sorts().ascending("cantitate")
@@ -912,7 +912,7 @@ Pentru a sorta după mai multe câmpuri, utilizați `orderBy()`:
         {
             lang: 'ruby',
             code: `
-                documente = collection.find().sort(
+                documente = colectie.find().sort(
                     _mongo.sorts().orderBy(
                         _mongo.sorts().descending("pret"),
                         _mongo.sorts().ascending("cantitate")
@@ -923,7 +923,7 @@ Pentru a sorta după mai multe câmpuri, utilizați `orderBy()`:
         {
             lang: 'kotlin',
             code: `
-                val documente = collection.find().sort(
+                val documente = colectie.find().sort(
                     _mongo.sorts().orderBy(
                         _mongo.sorts().descending("pret"),
                         _mongo.sorts().ascending("cantitate")
@@ -934,7 +934,7 @@ Pentru a sorta după mai multe câmpuri, utilizați `orderBy()`:
         {
             lang: 'groovy',
             code: `
-                def documente = collection.find().sort(
+                def documente = colectie.find().sort(
                     _mongo.sorts().orderBy(
                         _mongo.sorts().descending("pret"),
                         _mongo.sorts().ascending("cantitate")
@@ -945,7 +945,7 @@ Pentru a sorta după mai multe câmpuri, utilizați `orderBy()`:
     ]}
 />
 
-## Proiecția Câmpurilor
+## Proiecția câmpurilor
 
 Cu fabrica `_mongo.projections()` limitați câmpurile returnate în documente:
 
@@ -954,7 +954,7 @@ Cu fabrica `_mongo.projections()` limitați câmpurile returnate în documente:
         {
             lang: 'javascript',
             code: `
-                const documente = collection.find().projection(
+                const documente = colectie.find().projection(
                     _mongo.projections().include("nume", "cantitate")
                 ).all()
             `
@@ -962,7 +962,7 @@ Cu fabrica `_mongo.projections()` limitați câmpurile returnate în documente:
         {
             lang: 'python',
             code: `
-                documente = collection.find().projection(
+                documente = colectie.find().projection(
                     _mongo.projections().include("nume", "cantitate")
                 ).all()
             `
@@ -970,7 +970,7 @@ Cu fabrica `_mongo.projections()` limitați câmpurile returnate în documente:
         {
             lang: 'ruby',
             code: `
-                documente = collection.find().projection(
+                documente = colectie.find().projection(
                     _mongo.projections().include("nume", "cantitate")
                 ).all()
             `
@@ -978,7 +978,7 @@ Cu fabrica `_mongo.projections()` limitați câmpurile returnate în documente:
         {
             lang: 'kotlin',
             code: `
-                val documente = collection.find().projection(
+                val documente = colectie.find().projection(
                     _mongo.projections().include("nume", "cantitate")
                 ).all()
             `
@@ -986,7 +986,7 @@ Cu fabrica `_mongo.projections()` limitați câmpurile returnate în documente:
         {
             lang: 'groovy',
             code: `
-                def documente = collection.find().projection(
+                def documente = colectie.find().projection(
                     _mongo.projections().include("nume", "cantitate")
                 ).all()
             `
@@ -1001,7 +1001,7 @@ Pentru a combina mai multe proiecții:
         {
             lang: 'javascript',
             code: `
-                const documente = collection.find().projection(
+                const documente = colectie.find().projection(
                     _mongo.projections().fields(
                         _mongo.projections().include("nume", "cantitate"),
                         _mongo.projections().excludeId()
@@ -1012,7 +1012,7 @@ Pentru a combina mai multe proiecții:
         {
             lang: 'python',
             code: `
-                documente = collection.find().projection(
+                documente = colectie.find().projection(
                     _mongo.projections().fields(
                         _mongo.projections().include("nume", "cantitate"),
                         _mongo.projections().excludeId()
@@ -1023,7 +1023,7 @@ Pentru a combina mai multe proiecții:
         {
             lang: 'ruby',
             code: `
-                documente = collection.find().projection(
+                documente = colectie.find().projection(
                     _mongo.projections().fields(
                         _mongo.projections().include("nume", "cantitate"),
                         _mongo.projections().excludeId()
@@ -1034,7 +1034,7 @@ Pentru a combina mai multe proiecții:
         {
             lang: 'kotlin',
             code: `
-                val documente = collection.find().projection(
+                val documente = colectie.find().projection(
                     _mongo.projections().fields(
                         _mongo.projections().include("nume", "cantitate"),
                         _mongo.projections().excludeId()
@@ -1045,7 +1045,7 @@ Pentru a combina mai multe proiecții:
         {
             lang: 'groovy',
             code: `
-                def documente = collection.find().projection(
+                def documente = colectie.find().projection(
                     _mongo.projections().fields(
                         _mongo.projections().include("nume", "cantitate"),
                         _mongo.projections().excludeId()
@@ -1070,7 +1070,7 @@ Tipurile de proiecție disponibile sunt următoarele:
 | `elemMatch("câmp", filtru)` | Include doar primul element al matricei care corespunde filtrului. |
 | `computed("câmp", expresie)` | Adaugă un câmp calculat pe baza unei expresii de agregare. |
 
-## Limite și Sărituri
+## Limite și salturi
 
 Cu `limit()` și `skip()` controlați cantitatea de rezultate returnate:
 
@@ -1079,7 +1079,7 @@ Cu `limit()` și `skip()` controlați cantitatea de rezultate returnate:
         {
             lang: 'javascript',
             code: `
-                const documente = collection.find()
+                const documente = colectie.find()
                     .skip(1)
                     .limit(2)
                     .all()
@@ -1088,7 +1088,7 @@ Cu `limit()` și `skip()` controlați cantitatea de rezultate returnate:
         {
             lang: 'python',
             code: `
-                documente = collection.find()
+                documente = colectie.find()
                     .skip(1)
                     .limit(2)
                     .all()
@@ -1097,7 +1097,7 @@ Cu `limit()` și `skip()` controlați cantitatea de rezultate returnate:
         {
             lang: 'ruby',
             code: `
-                documente = collection.find()
+                documente = colectie.find()
                     .skip(1)
                     .limit(2)
                     .all()
@@ -1106,7 +1106,7 @@ Cu `limit()` și `skip()` controlați cantitatea de rezultate returnate:
         {
             lang: 'kotlin',
             code: `
-                val documente = collection.find()
+                val documente = colectie.find()
                     .skip(1)
                     .limit(2)
                     .all()
@@ -1115,7 +1115,7 @@ Cu `limit()` și `skip()` controlați cantitatea de rezultate returnate:
         {
             lang: 'groovy',
             code: `
-                def documente = collection.find()
+                def documente = colectie.find()
                     .skip(1)
                     .limit(2)
                     .all()
@@ -1124,7 +1124,7 @@ Cu `limit()` și `skip()` controlați cantitatea de rezultate returnate:
     ]}
 />
 
-## Actualizarea Documentelor
+## Actualizarea documentelor
 
 Cu fabrica `_mongo.updates()` definiți modificările de aplicat, iar cu `updateOne()` sau `updateMany()` aplicați modificările documentelor care corespund filtrului:
 
@@ -1133,14 +1133,14 @@ Cu fabrica `_mongo.updates()` definiți modificările de aplicat, iar cu `update
         {
             lang: 'javascript',
             code: `
-                collection.updateOne(
+                colectie.updateOne(
                     _mongo.filters().eq("nume", "Laptop"),
                     _mongo.updates().set("cantitate", 42)
                 )
 
-                collection.updateMany(
+                colectie.updateMany(
                     _mongo.filters().eq("categorie", "calculatoare"),
-                    _mongo.updates().set("categorie", "recomandate")
+                    _mongo.updates().set("categorie", "recomandat")
                 )
             `
         }
@@ -1151,7 +1151,7 @@ Fabrica `_mongo.updates()` oferă operatorii de actualizare:
 
 | Operator | Descriere |
 |---|---|
-| `set("câmp", valoare)` | Definește valoarea unui câmp. |
+| `set("câmp", valoare)` | Setează valoarea unui câmp. |
 | `unset("câmp")` | Elimină un câmp din document. |
 | `rename("câmp", "numeNou")` | Redenumește un câmp. |
 | `push("câmp", valoare)` | Adaugă o valoare la un array. |
@@ -1166,10 +1166,10 @@ Pentru a aplica mai multe modificări deodată, utilizați `combine()`:
             code: `
                 const combinat = _mongo.updates().combine(
                     _mongo.updates().set("cantitate", 42),
-                    _mongo.updates().rename("altul", "mai_mult")
+                    _mongo.updates().rename("altul", "suplimentar")
                 )
 
-                collection.updateOne(
+                colectie.updateOne(
                     _mongo.filters().eq("nume", "Laptop"),
                     combinat
                 )
@@ -1180,10 +1180,10 @@ Pentru a aplica mai multe modificări deodată, utilizați `combine()`:
             code: `
                 combinat = _mongo.updates().combine(
                     _mongo.updates().set("cantitate", 42),
-                    _mongo.updates().rename("altul", "mai_mult")
+                    _mongo.updates().rename("altul", "suplimentar")
                 )
 
-                collection.updateOne(
+                colectie.updateOne(
                     _mongo.filters().eq("nume", "Laptop"),
                     combinat
                 )
@@ -1194,10 +1194,10 @@ Pentru a aplica mai multe modificări deodată, utilizați `combine()`:
             code: `
                 combinat = _mongo.updates().combine(
                     _mongo.updates().set("cantitate", 42),
-                    _mongo.updates().rename("altul", "mai_mult")
+                    _mongo.updates().rename("altul", "suplimentar")
                 )
 
-                collection.updateOne(
+                colectie.updateOne(
                     _mongo.filters().eq("nume", "Laptop"),
                     combinat
                 )
@@ -1208,10 +1208,10 @@ Pentru a aplica mai multe modificări deodată, utilizați `combine()`:
             code: `
                 val combinat = _mongo.updates().combine(
                     _mongo.updates().set("cantitate", 42),
-                    _mongo.updates().rename("altul", "mai_mult")
+                    _mongo.updates().rename("altul", "suplimentar")
                 )
 
-                collection.updateOne(
+                colectie.updateOne(
                     _mongo.filters().eq("nume", "Laptop"),
                     combinat
                 )
@@ -1222,10 +1222,10 @@ Pentru a aplica mai multe modificări deodată, utilizați `combine()`:
             code: `
                 def combinat = _mongo.updates().combine(
                     _mongo.updates().set("cantitate", 42),
-                    _mongo.updates().rename("altul", "mai_mult")
+                    _mongo.updates().rename("altul", "suplimentar")
                 )
 
-                collection.updateOne(
+                colectie.updateOne(
                     _mongo.filters().eq("nume", "Laptop"),
                     combinat
                 )
@@ -1234,16 +1234,16 @@ Pentru a aplica mai multe modificări deodată, utilizați `combine()`:
     ]}
 />
 
-### Găsește și actualizează
+### Găsire și actualizare
 
-Cu `findOneAndUpdate()` găsiți și actualizați un document în mod atomic, returnând documentul original (sau `null` dacă nu există niciunul):
+Cu `findOneAndUpdate()` găsiți și actualizați atomic un document, returnând documentul original (sau `null` dacă nu există niciunul):
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const vechi = collection.findOneAndUpdate(
+                const vechi = colectie.findOneAndUpdate(
                     _mongo.filters().eq("nume", "Laptop"),
                     _mongo.updates().set("cantitate", 42)
                 )
@@ -1252,7 +1252,7 @@ Cu `findOneAndUpdate()` găsiți și actualizați un document în mod atomic, re
         {
             lang: 'python',
             code: `
-                vechi = collection.findOneAndUpdate(
+                vechi = colectie.findOneAndUpdate(
                     _mongo.filters().eq("nume", "Laptop"),
                     _mongo.updates().set("cantitate", 42)
                 )
@@ -1261,7 +1261,7 @@ Cu `findOneAndUpdate()` găsiți și actualizați un document în mod atomic, re
         {
             lang: 'ruby',
             code: `
-                vechi = collection.findOneAndUpdate(
+                vechi = colectie.findOneAndUpdate(
                     _mongo.filters().eq("nume", "Laptop"),
                     _mongo.updates().set("cantitate", 42)
                 )
@@ -1270,7 +1270,7 @@ Cu `findOneAndUpdate()` găsiți și actualizați un document în mod atomic, re
         {
             lang: 'kotlin',
             code: `
-                val vechi = collection.findOneAndUpdate(
+                val vechi = colectie.findOneAndUpdate(
                     _mongo.filters().eq("nume", "Laptop"),
                     _mongo.updates().set("cantitate", 42)
                 )
@@ -1279,7 +1279,7 @@ Cu `findOneAndUpdate()` găsiți și actualizați un document în mod atomic, re
         {
             lang: 'groovy',
             code: `
-                def vechi = collection.findOneAndUpdate(
+                def vechi = colectie.findOneAndUpdate(
                     _mongo.filters().eq("nume", "Laptop"),
                     _mongo.updates().set("cantitate", 42)
                 )
@@ -1288,36 +1288,36 @@ Cu `findOneAndUpdate()` găsiți și actualizați un document în mod atomic, re
     ]}
 />
 
-## Înlocuirea Documentelor
+## Înlocuirea documentelor
 
-Cu `replaceOne()` înlocuiți întregul document (spre deosebire de actualizări, nu poate conține operatori de actualizare):
+Cu `replaceOne()` înlocuiți documentul întreg (spre deosebire de actualizări, nu poate conține operatori de actualizare):
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                collection.replaceOne(
+                colectie.replaceOne(
                     _mongo.filters().eq("nume", "Laptop"),
                     _val.map()
                         .set("nume", "Laptop")
                         .set("cantitate", 50)
                         .set("pret", 150)
-                        .set("categorie", "recomandate")
+                        .set("categorie", "recomandat")
                 )
             `
         }
     ]}
 />
 
-Pentru a găsi și înlocui în mod atomic, returnând documentul vechi, utilizați `findOneAndReplace()`:
+Pentru a găsi și a înlocui atomic, returnând documentul vechi, utilizați `findOneAndReplace()`:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const vechi = collection.findOneAndReplace(
+                const vechi = colectie.findOneAndReplace(
                     _mongo.filters().eq("nume", "Laptop"),
                     _val.map()
                         .set("nume", "Laptop")
@@ -1328,7 +1328,7 @@ Pentru a găsi și înlocui în mod atomic, returnând documentul vechi, utiliza
         {
             lang: 'python',
             code: `
-                vechi = collection.findOneAndReplace(
+                vechi = colectie.findOneAndReplace(
                     _mongo.filters().eq("nume", "Laptop"),
                     _val.map()
                         .set("nume", "Laptop")
@@ -1339,7 +1339,7 @@ Pentru a găsi și înlocui în mod atomic, returnând documentul vechi, utiliza
         {
             lang: 'ruby',
             code: `
-                vechi = collection.findOneAndReplace(
+                vechi = colectie.findOneAndReplace(
                     _mongo.filters().eq("nume", "Laptop"),
                     _val.map()
                         .set("nume", "Laptop")
@@ -1350,7 +1350,7 @@ Pentru a găsi și înlocui în mod atomic, returnând documentul vechi, utiliza
         {
             lang: 'kotlin',
             code: `
-                val vechi = collection.findOneAndReplace(
+                val vechi = colectie.findOneAndReplace(
                     _mongo.filters().eq("nume", "Laptop"),
                     _val.map()
                         .set("nume", "Laptop")
@@ -1361,7 +1361,7 @@ Pentru a găsi și înlocui în mod atomic, returnând documentul vechi, utiliza
         {
             lang: 'groovy',
             code: `
-                def vechi = collection.findOneAndReplace(
+                def vechi = colectie.findOneAndReplace(
                     _mongo.filters().eq("nume", "Laptop"),
                     _val.map()
                         .set("nume", "Laptop")
@@ -1372,7 +1372,7 @@ Pentru a găsi și înlocui în mod atomic, returnând documentul vechi, utiliza
     ]}
 />
 
-## Ștergerea Documentelor
+## Ștergerea documentelor
 
 Cu `deleteOne()` și `deleteMany()` ștergeți documentele care corespund filtrului:
 
@@ -1381,59 +1381,59 @@ Cu `deleteOne()` și `deleteMany()` ștergeți documentele care corespund filtru
         {
             lang: 'javascript',
             code: `
-                collection.deleteOne(
+                colectie.deleteOne(
                     _mongo.filters().eq("nume", "Laptop")
                 )
 
-                collection.deleteMany(
-                    _mongo.filters().eq("categorie", "inactive")
+                colectie.deleteMany(
+                    _mongo.filters().eq("categorie", "inactiv")
                 )
             `
         }
     ]}
 />
 
-Pentru a găsi și șterge un document în mod atomic, returnând documentul șters, utilizați `findOneAndDelete()`:
+Pentru a găsi și a șterge atomic un document, returnând documentul șters, utilizați `findOneAndDelete()`:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const vechi = collection.findOneAndDelete(
-                    _mongo.filters().eq("nume", "Tablet")
+                const vechi = colectie.findOneAndDelete(
+                    _mongo.filters().eq("nume", "Tabletă")
                 )
             `
         },
         {
             lang: 'python',
             code: `
-                vechi = collection.findOneAndDelete(
-                    _mongo.filters().eq("nume", "Tablet")
+                vechi = colectie.findOneAndDelete(
+                    _mongo.filters().eq("nume", "Tabletă")
                 )
             `
         },
         {
             lang: 'ruby',
             code: `
-                vechi = collection.findOneAndDelete(
-                    _mongo.filters().eq("nume", "Tablet")
+                vechi = colectie.findOneAndDelete(
+                    _mongo.filters().eq("nume", "Tabletă")
                 )
             `
         },
         {
             lang: 'kotlin',
             code: `
-                val vechi = collection.findOneAndDelete(
-                    _mongo.filters().eq("nume", "Tablet")
+                val vechi = colectie.findOneAndDelete(
+                    _mongo.filters().eq("nume", "Tabletă")
                 )
             `
         },
         {
             lang: 'groovy',
             code: `
-                def vechi = collection.findOneAndDelete(
-                    _mongo.filters().eq("nume", "Tablet")
+                def vechi = colectie.findOneAndDelete(
+                    _mongo.filters().eq("nume", "Tabletă")
                 )
             `
         }
@@ -1447,95 +1447,95 @@ Pentru a șterge toate documentele din colecție, transmiteți un filtru gol cu 
         {
             lang: 'javascript',
             code: `
-                collection.deleteMany(_mongo.valToDoc(_val.map()))
+                colectie.deleteMany(_mongo.valToDoc(_val.map()))
             `
         }
     ]}
 />
 
-## Numărarea Documentelor
+## Numărarea documentelor
 
-Cu `countDocuments()` obțineți numărul de documente din colecție, opțional cu un filtru. Deja `estimatedDocumentCount()` este mai rapid deoarece utilizează metadatele colecției, dar fără filtru:
+Cu `countDocuments()` obțineți numărul de documente din colecție, opțional cu un filtru. Iar `estimatedDocumentCount()` este mai rapid deoarece utilizează metadatele colecției, dar fără filtru:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const total = collection.countDocuments()
+                const total = colectie.countDocuments()
 
-                const totalPrincipal = collection.countDocuments(
+                const totalPrincipal = colectie.countDocuments(
                     _mongo.filters().eq("categorie", "calculatoare")
                 )
 
-                const estimat = collection.estimatedDocumentCount()
+                const estimat = colectie.estimatedDocumentCount()
             `
         },
         {
             lang: 'python',
             code: `
-                total = collection.countDocuments()
+                total = colectie.countDocuments()
 
-                totalPrincipal = collection.countDocuments(
+                totalPrincipal = colectie.countDocuments(
                     _mongo.filters().eq("categorie", "calculatoare")
                 )
 
-                estimat = collection.estimatedDocumentCount()
+                estimat = colectie.estimatedDocumentCount()
             `
         },
         {
             lang: 'ruby',
             code: `
-                total = collection.countDocuments()
+                total = colectie.countDocuments()
 
-                totalPrincipal = collection.countDocuments(
+                totalPrincipal = colectie.countDocuments(
                     _mongo.filters().eq("categorie", "calculatoare")
                 )
 
-                estimat = collection.estimatedDocumentCount()
+                estimat = colectie.estimatedDocumentCount()
             `
         },
         {
             lang: 'kotlin',
             code: `
-                val total = collection.countDocuments()
+                val total = colectie.countDocuments()
 
-                val totalPrincipal = collection.countDocuments(
+                val totalPrincipal = colectie.countDocuments(
                     _mongo.filters().eq("categorie", "calculatoare")
                 )
 
-                val estimat = collection.estimatedDocumentCount()
+                val estimat = colectie.estimatedDocumentCount()
             `
         },
         {
             lang: 'groovy',
             code: `
-                def total = collection.countDocuments()
+                def total = colectie.countDocuments()
 
-                def totalPrincipal = collection.countDocuments(
+                def totalPrincipal = colectie.countDocuments(
                     _mongo.filters().eq("categorie", "calculatoare")
                 )
 
-                def estimat = collection.estimatedDocumentCount()
+                def estimat = colectie.estimatedDocumentCount()
             `
         }
     ]}
 />
 
-## Indexuri
+## Indici
 
-Cu fabrica `_mongo.indexes()` creați indexuri pentru a îmbunătăți performanța interogărilor. Pentru a crea un index, este suficient să transmiteți specificațiile către `createIndex()`:
+Cu fabrica `_mongo.indexes()` creați indici pentru a îmbunătăți performanța interogărilor. Pentru a crea un indice, este suficient să transmiteți specificațiile la `createIndex()`:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                collection.createIndex(
+                colectie.createIndex(
                     _mongo.indexes().ascending("cantitate")
                 )
 
-                collection.createIndex(
+                colectie.createIndex(
                     _mongo.indexes().compoundIndex(
                         _mongo.indexes().descending("pret"),
                         _mongo.indexes().ascending("cantitate")
@@ -1546,14 +1546,14 @@ Cu fabrica `_mongo.indexes()` creați indexuri pentru a îmbunătăți performan
     ]}
 />
 
-Puteți indica MongoDB ce index să utilizeze într-o interogare, cu `hint()`:
+Puteți indica MongoDB ce indice să utilizeze într-o interogare, cu `hint()`:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const documente = collection.find().hint(
+                const documente = colectie.find().hint(
                     _mongo.valToDoc(
                         _val.map().set("cantitate", 1)
                     )
@@ -1563,7 +1563,7 @@ Puteți indica MongoDB ce index să utilizeze într-o interogare, cu `hint()`:
         {
             lang: 'python',
             code: `
-                documente = collection.find().hint(
+                documente = colectie.find().hint(
                     _mongo.valToDoc(
                         _val.map().set("cantitate", 1)
                     )
@@ -1573,7 +1573,7 @@ Puteți indica MongoDB ce index să utilizeze într-o interogare, cu `hint()`:
         {
             lang: 'ruby',
             code: `
-                documente = collection.find().hint(
+                documente = colectie.find().hint(
                     _mongo.valToDoc(
                         _val.map().set("cantitate", 1)
                     )
@@ -1583,7 +1583,7 @@ Puteți indica MongoDB ce index să utilizeze într-o interogare, cu `hint()`:
         {
             lang: 'kotlin',
             code: `
-                val documente = collection.find().hint(
+                val documente = colectie.find().hint(
                     _mongo.valToDoc(
                         _val.map().set("cantitate", 1)
                     )
@@ -1593,7 +1593,7 @@ Puteți indica MongoDB ce index să utilizeze într-o interogare, cu `hint()`:
         {
             lang: 'groovy',
             code: `
-                def documente = collection.find().hint(
+                def documente = colectie.find().hint(
                     _mongo.valToDoc(
                         _val.map().set("cantitate", 1)
                     )
@@ -1603,14 +1603,14 @@ Puteți indica MongoDB ce index să utilizeze într-o interogare, cu `hint()`:
     ]}
 />
 
-Cu `min()` și `max()` limitați intervalul de valori ale indexului parcurse de interogare:
+Cu `min()` și `max()` limitați intervalul de valori ale indicelui parcurse de interogare:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const documente = collection.find()
+                const documente = colectie.find()
                     .min(
                         _mongo.valToDoc(
                             _val.map().set("cantitate", 10)
@@ -1627,7 +1627,7 @@ Cu `min()` și `max()` limitați intervalul de valori ale indexului parcurse de 
         {
             lang: 'python',
             code: `
-                documente = collection.find()
+                documente = colectie.find()
                     .min(
                         _mongo.valToDoc(
                             _val.map().set("cantitate", 10)
@@ -1644,7 +1644,7 @@ Cu `min()` și `max()` limitați intervalul de valori ale indexului parcurse de 
         {
             lang: 'ruby',
             code: `
-                documente = collection.find()
+                documente = colectie.find()
                     .min(
                         _mongo.valToDoc(
                             _val.map().set("cantitate", 10)
@@ -1661,7 +1661,7 @@ Cu `min()` și `max()` limitați intervalul de valori ale indexului parcurse de 
         {
             lang: 'kotlin',
             code: `
-                val documente = collection.find()
+                val documente = colectie.find()
                     .min(
                         _mongo.valToDoc(
                             _val.map().set("cantitate", 10)
@@ -1678,7 +1678,7 @@ Cu `min()` și `max()` limitați intervalul de valori ale indexului parcurse de 
         {
             lang: 'groovy',
             code: `
-                def documente = collection.find()
+                def documente = colectie.find()
                     .min(
                         _mongo.valToDoc(
                             _val.map().set("cantitate", 10)
@@ -1699,14 +1699,14 @@ Cu `min()` și `max()` limitați intervalul de valori ale indexului parcurse de 
 
 Pentru analize mai avansate, `aggregate()` permite executarea unui pipeline de agregare, unde fiecare etapă este definită cu fabrica `_mongo.aggregates()` și acumulatorii cu `_mongo.accumulators()`.
 
-De exemplu, pentru a grupa produsele după categorie și a suma prețul fiecărui grup:
+De exemplu, pentru a grupa produsele după categorie și a însuma prețul fiecărui grup:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const documente = collection.aggregate(
+                const documente = colectie.aggregate(
                     _mongo.aggregates().match(
                         _mongo.filters().eq("categorie", "calculatoare")
                     ),
@@ -1723,7 +1723,7 @@ De exemplu, pentru a grupa produsele după categorie și a suma prețul fiecăru
         {
             lang: 'python',
             code: `
-                documente = collection.aggregate(
+                documente = colectie.aggregate(
                     _mongo.aggregates().match(
                         _mongo.filters().eq("categorie", "calculatoare")
                     ),
@@ -1740,7 +1740,7 @@ De exemplu, pentru a grupa produsele după categorie și a suma prețul fiecăru
         {
             lang: 'ruby',
             code: `
-                documente = collection.aggregate(
+                documente = colectie.aggregate(
                     _mongo.aggregates().match(
                         _mongo.filters().eq("categorie", "calculatoare")
                     ),
@@ -1757,7 +1757,7 @@ De exemplu, pentru a grupa produsele după categorie și a suma prețul fiecăru
         {
             lang: 'kotlin',
             code: `
-                val documente = collection.aggregate(
+                val documente = colectie.aggregate(
                     _mongo.aggregates().match(
                         _mongo.filters().eq("categorie", "calculatoare")
                     ),
@@ -1774,7 +1774,7 @@ De exemplu, pentru a grupa produsele după categorie și a suma prețul fiecăru
         {
             lang: 'groovy',
             code: `
-                def documente = collection.aggregate(
+                def documente = colectie.aggregate(
                     _mongo.aggregates().match(
                         _mongo.filters().eq("categorie", "calculatoare")
                     ),
@@ -1802,9 +1802,9 @@ Etapele de agregare disponibile sunt următoarele:
 | `limit(n)` | Limitează la primele `n` documente. |
 | `skip(n)` | Sare peste primele `n` documente. |
 | `count()` | Numără documentele. |
-| `lookup("colecție", "câmpLocal", "câmpStrăin", "ca")` | Execută un join cu altă colecție. |
+| `lookup("colecție", "câmpLocal", "câmpStrăin", "ca")` | Execută un join cu o altă colecție. |
 
-Și acumulatorii cei mai utilizați:
+Iar acumulatorii cei mai utilizați:
 
 | Acumulator | Descriere |
 |---|---|
@@ -1878,7 +1878,7 @@ Uneori este necesar să convertiți între obiectele `_val` din Netuno și docum
     ]}
 />
 
-## Operații cu Opțiuni
+## Operații cu opțiuni
 
 Fabricile `*Options()` ale resursei `_mongo` returnează obiectele de opțiuni implicite ale driverului MongoDB, iar puteți înlănțui metodele lor direct. De exemplu, `upsert(true)` inserează documentul când filtrul nu corespunde niciunui document existent:
 
@@ -1887,7 +1887,7 @@ Fabricile `*Options()` ale resursei `_mongo` returnează obiectele de opțiuni i
         {
             lang: 'javascript',
             code: `
-                const vechi = collection.findOneAndUpdate(
+                const vechi = colectie.findOneAndUpdate(
                     _mongo.filters().eq("nume", "Monitor"),
                     _mongo.updates().set("cantitate", 8),
                     _mongo.findOneAndUpdateOptions().upsert(true)
@@ -1897,7 +1897,7 @@ Fabricile `*Options()` ale resursei `_mongo` returnează obiectele de opțiuni i
         {
             lang: 'python',
             code: `
-                vechi = collection.findOneAndUpdate(
+                vechi = colectie.findOneAndUpdate(
                     _mongo.filters().eq("nume", "Monitor"),
                     _mongo.updates().set("cantitate", 8),
                     _mongo.findOneAndUpdateOptions().upsert(true)
@@ -1907,7 +1907,7 @@ Fabricile `*Options()` ale resursei `_mongo` returnează obiectele de opțiuni i
         {
             lang: 'ruby',
             code: `
-                vechi = collection.findOneAndUpdate(
+                vechi = colectie.findOneAndUpdate(
                     _mongo.filters().eq("nume", "Monitor"),
                     _mongo.updates().set("cantitate", 8),
                     _mongo.findOneAndUpdateOptions().upsert(true)
@@ -1917,7 +1917,7 @@ Fabricile `*Options()` ale resursei `_mongo` returnează obiectele de opțiuni i
         {
             lang: 'kotlin',
             code: `
-                val vechi = collection.findOneAndUpdate(
+                val vechi = colectie.findOneAndUpdate(
                     _mongo.filters().eq("nume", "Monitor"),
                     _mongo.updates().set("cantitate", 8),
                     _mongo.findOneAndUpdateOptions().upsert(true)
@@ -1927,7 +1927,7 @@ Fabricile `*Options()` ale resursei `_mongo` returnează obiectele de opțiuni i
         {
             lang: 'groovy',
             code: `
-                def vechi = collection.findOneAndUpdate(
+                def vechi = colectie.findOneAndUpdate(
                     _mongo.filters().eq("nume", "Monitor"),
                     _mongo.updates().set("cantitate", 8),
                     _mongo.findOneAndUpdateOptions().upsert(true)
@@ -1941,9 +1941,9 @@ Când documentul este inserat, `findOneAndUpdate()` returnează `null`.
 
 Fabricile de opțiuni disponibile sunt: `insertOneOptions()`, `insertManyOptions()`, `updateOptions()`, `findOneAndUpdateOptions()`, `replaceOptions()`, `findOneAndReplaceOptions()`, `deleteOptions()`, `findOneAndDeleteOptions()`, `countOptions()`, `estimatedDocumentCountOptions()`, `dropCollectionOptions()` și `textSearchOptions()`.
 
-## Închiderea Conexiunii
+## Închiderea conexiunii
 
-La final, este o bună practică să închideți conexiunea la MongoDB:
+La final, este o bună practică să închideți conexiunea MongoDB:
 
 <PolyglotCode
     codes={[
@@ -1958,8 +1958,8 @@ La final, este o bună practică să închideți conexiunea la MongoDB:
 
 ## Concluzie
 
-Cu resursa `_mongo`, Netuno oferă o abstractizare low-code și poliglotă peste clientul oficial MongoDB pentru Java, permițând lucrul cu documente, filtre, sortări, proiecții, actualizări, indexuri și agregări în JavaScript, Python, Ruby, Kotlin și Groovy.
+Cu resursa `_mongo`, Netuno oferă o abstractizare low-code și poliglotă peste clientul oficial MongoDB pentru Java, permițând lucrul cu documente, filtre, sortări, proiecții, actualizări, indici și agregări în JavaScript, Python, Ruby, Kotlin și Groovy.
 
 Pentru mai multe detalii despre toate metodele disponibile, consultați documentația resursei [_mongo](/docs/library/resources/mongo) și a clasei [MongoCollection](/docs/library/objects/MongoCollection).
 
-Dezvoltare plăcută!
+Spor la dezvoltare!

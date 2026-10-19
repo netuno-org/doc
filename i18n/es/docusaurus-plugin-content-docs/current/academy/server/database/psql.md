@@ -6,7 +6,7 @@ sidebar_label: PostgreSQL
 
 ## Introducción
 
-<a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> es una de las bases de datos objeto-relacionales de código abierto más utilizadas.
+<a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> es una de las bases de datos relacionales de objetos de código abierto más utilizadas.
 
 ## Instalación
 
@@ -14,7 +14,7 @@ Información sobre cómo instalar PostgreSQL.
 
 #### Ubuntu
 
-Ejecute en el terminal:
+Ejecute en la terminal:
 
 ```shell
 sudo apt install postgresql
@@ -34,7 +34,7 @@ Conéctese a PostgreSQL para ejecutar comandos de gestión en el servidor de bas
 
 #### Ubuntu
 
-Ejecute en el terminal:
+Ejecute en la terminal:
 
 ```shell
 sudo -u postgres psql
@@ -57,7 +57,7 @@ create user usuario_app with password 'S3cR3t';
 Ejecute el siguiente comando conectado al cliente de PostgreSQL:
 
 ```sql
-create database bd_app with owner usuario_app;
+create database base_datos_app with owner usuario_app;
 ```
 
 > Para salir utilice el comando: `\q`
@@ -68,17 +68,17 @@ Conéctese a la nueva base de datos creada utilizando la aplicación cliente de 
 
 #### Ubuntu
 
-Ejecute el siguiente comando en el terminal:
+Ejecute el siguiente comando en la terminal:
 
 ```shell
-sudo -u postgres psql bd_app
+sudo -u postgres psql base_datos_app
 ```
 
 #### Windows
 
 Instale y utilice <a href="https://www.pgadmin.org/" target="_blank">pgAdmin</a>.
 
-### Instalar extensión UUID
+### Instalar la extensión UUID
 
 Es necesario instalar en PostgreSQL la extensión para generar los UUID.
 
@@ -88,7 +88,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 ## Configurar la aplicación
 
-Edite el fichero de configuración de la aplicación de acuerdo con el entorno:
+Edite el archivo de configuración de la aplicación según el entorno:
 
 - `config/_development.json`
 
@@ -102,7 +102,7 @@ Ejemplo de la configuración para PostgreSQL:
             "engine": "pg",
             "port": "5432",
             "host": "localhost",
-            "name": "bd_app",
+            "name": "base_datos_app",
             "username": "usuario_app",
             "password": "S3cR3t"
         }
@@ -121,7 +121,7 @@ Se pueden utilizar configuraciones avanzadas como:
             "engine": "pg",
             "port": "5432",
             "host": "localhost",
-            "name": "bd_app",
+            "name": "base_datos_app",
             "username": "usuario_app",
             "password": "S3cR3t",
             "maximumPoolSize": 100,

@@ -14,7 +14,7 @@ Antes de instalar CLUAR, es necesario tener:
 
 ## Clonar el proyecto
 
-CLUAR es una aplicación de Netuno, por lo que debe clonarse dentro de la carpeta `apps` de la instalación de Netuno:
+CLUAR es una app de Netuno, por lo que debe clonarse dentro de la carpeta `apps` de la instalación de Netuno:
 
 ```
 [directorio raíz de Netuno]/apps
@@ -46,7 +46,7 @@ Es necesario permitir la ejecución de scripts no confiables de ESBUILD:
 bun pm trust --all
 ```
 
-Si necesitas reiniciar la instalación del sitio web, elimina la carpeta `node_modules` y los archivos de bloqueo, e instala de nuevo:
+Si necesitas reiniciar la instalación del sitio web, elimina la carpeta `node_modules` y los ficheros de lock, y vuelve a instalar:
 
 ```
 rm -rf node_modules

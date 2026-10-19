@@ -7,20 +7,20 @@ sidebar_label: Installation
 
 ## Prérequis
 
-Avant d'installer CLUAR, il faut disposer de :
+Avant d'installer CLUAR, il faut :
 
 1. [Netuno](https://doc.netuno.org/pt/docs/get-started/installation) installé.
 2. [Bun](https://bun.sh/docs/installation) installé.
 
 ## Cloner le projet
 
-CLUAR est une application Netuno, il doit donc être cloné dans le dossier `apps` de l'installation de Netuno :
+CLUAR est une application Netuno, elle doit donc être clonée dans le dossier `apps` de l'installation de Netuno :
 
 ```
 [répertoire racine de Netuno]/apps
 ```
 
-En utilisant la commande :
+À l'aide de la commande :
 
 ```
 git clone https://github.com/netuno-org/cluar.git
@@ -40,13 +40,13 @@ Exécuter la commande d'installation de Bun :
 bun install
 ```
 
-Il est nécessaire d'autoriser l'exécution de scripts non fiables d'ESBUILD :
+Il est nécessaire d'autoriser l'exécution des scripts non fiables d'ESBUILD :
 
 ```
 bun pm trust --all
 ```
 
-Si vous devez redémarrer l'installation du site web, supprimez le dossier `node_modules` et les fichiers de verrouillage, puis installez à nouveau :
+Si tu as besoin de redémarrer l'installation du site web, supprime le dossier `node_modules` et les fichiers de verrouillage, puis réinstalle :
 
 ```
 rm -rf node_modules
@@ -56,4 +56,4 @@ bun pm trust --all
 
 ## Étape suivante
 
-Une fois le code et les dépendances installés, passez à la [Configuration](/docs/academy/cluar/configuration).
+Une fois le code et les dépendances installés, passe à la [Configuration](/docs/academy/cluar/configuration).

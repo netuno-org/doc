@@ -7,15 +7,15 @@ sidebar_label: XLS - Excel
 import PolyglotCode from "@site/src/components/PolyglotCode";
 import PolyglotPath from "@site/src/components/PolyglotPath";
 
-Process customized Excel files.
+Process custom Excel files.
 
 ## Introduction
 
-Netuno generates EXCEL files compatible with LibreOffice, OpenOffice, Microsoft Office, Google Drive, etc., through the [XLS](/docs/library/resources/xls) resource that allows a low-code abstraction of [Apache POI](https://poi.apache.org/) for the various programming languages supported by Netuno.
+Netuno generates EXCEL files compatible with LibreOffice, OpenOffice, Microsoft Office, Google Drive, etc., through the [XLS](/docs/library/resources/xls) resource, which provides a low-code abstraction of [Apache POI](https://poi.apache.org/) for the various programming languages supported by Netuno.
 
-We can either generate XLSX, XLS or ODS files.
+We can generate XLSX, XLS, or ODS files.
 
-The application that comes with Netuno called **demo** (demonstration application) contains many examples of possible code implementations in various languages, including a demonstration of exporting spreadsheets through the `export-excel` service located at:
+The application that comes with Netuno called **demo** (the demonstration application) contains many examples of possible code implementations in various languages, including a demonstration of spreadsheet export through the `export-excel` service located at:
 
 <PolyglotPath files={[
     `netuno/apps/demo/server/services/samples/%lang%/export-excel`
@@ -23,7 +23,7 @@ The application that comes with Netuno called **demo** (demonstration applicatio
 
 ## Initialization
 
-To start using the resource XLS:
+To initialize the XLS resource:
 
 <PolyglotCode
     codes={[
@@ -36,13 +36,13 @@ To start using the resource XLS:
     ]}
 />
 
-Creates the object with the context of the new file that will be built, with an empty spreadsheet.
+Creates the object that contains the context of the new file to be built, with an empty worksheet.
 
 ## Formatting
 
-The definition of visual formatting styles, i.e. format of dates, times, money, among others, must be done before defining cell values, because when defining cell values it is possible to associate their formatting style together.
+The definition of visual formatting styles—that is, date, time, currency formats, and others—must be done before defining cell values, because when defining cell values it is possible to associate their formatting style along with them.
 
-So, as shown in the example that comes with the `demo` application, the formatting is defined in the beginning of the code.
+Thus, as demonstrated in the example included in the `demo` application, the formats are defined at the beginning of the code.
 
 To format dates:
 
@@ -83,7 +83,7 @@ To format dates with times:
     ]}
 />
 
-To format **euro** money amounts:
+To format currency values in **euros**:
 
 <PolyglotCode
     codes={[
@@ -96,20 +96,20 @@ To format **euro** money amounts:
     ]}
 />
 
-To format money values in **reais**:
+To format currency values in **Brazilian reais**:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const styleMoneyReal = excel.cellStyleFormat("R$#,##0.00;\\-R$#,##0.00")
+                const styleMoneyBRL = excel.cellStyleFormat("R$#,##0.00;\\-R$#,##0.00")
             `
         },
     ]}
 />
 
-To format values as **percentage**:
+To format values as **percentages**:
 
 <PolyglotCode
     codes={[
@@ -124,9 +124,9 @@ To format values as **percentage**:
 
 ## Appearance
 
-The definition of visual appearance styles, that is, the appearance of cells such as colors, font, borders, alignment, among others, must be done before defining cell values, because when defining cell values it is possible to associate your appearance style.
+The definition of visual appearance styles—that is, the appearance of cells such as colors, font, borders, alignment, and others—must be done before defining cell values, because when defining cell values it is possible to associate their appearance style along with them.
 
-So, as shown in the example in the `demo` application, appearances are defined at the beginning of the code.
+Thus, as demonstrated in the example included in the `demo` application, the appearances are defined at the beginning of the code.
 
 Example of defining colors and alignment:
 
@@ -144,9 +144,9 @@ Example of defining colors and alignment:
     ]}
 />
 
-> Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Style object in Apache POI</a>.
+> Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Styles object in Apache POI</a>.
 
-Border style definition:
+Defining the border style:
 
 <PolyglotCode
     codes={[
@@ -163,9 +163,9 @@ Border style definition:
     ]}
 />
 
-> Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Style object in Apache POI</a>.
+> Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Styles object in Apache POI</a>.
 
-Creates a new font style for the text, and associates the font definitions with a specific cell style that already exists:
+Creates a new font style for the text and associates the font definitions with a specific existing cell style:
 
 <PolyglotCode
     codes={[
@@ -176,7 +176,7 @@ Creates a new font style for the text, and associates the font definitions with 
                 fontTitle.setBold(true)
                 fontTitle.setFontHeightInPoints(14)
                 fontTitle.setColor(excel.color("yellow"))
-                // Define a fonte do styleHeader
+                // Set the font of styleHeader
                 styleHeader.setFont(fontTitle)
             `
         },
@@ -187,7 +187,7 @@ Creates a new font style for the text, and associates the font definitions with 
 
 ## Image
 
-To insert an image into the spreadsheet located at `storage/samples/export-excel/logo.png` internally in the application:
+To insert an image into the worksheet that is located at `storage/samples/export-excel/logo.png` inside the application:
 
 <PolyglotCode
     codes={[
@@ -196,8 +196,8 @@ To insert an image into the spreadsheet located at `storage/samples/export-excel
             code: `
                 excel.insertPicture(
                     _storage.filesystem("server", "samples/export-excel", "logo.png"),
-                    1, // Número da Coluna
-                    1  // Número da Linha
+                    1, // Column Number
+                    1  // Row Number
                 ).resize(2.3)
             `
         },
@@ -213,30 +213,30 @@ To insert an image that is in the application at `public/images/logo.png`:
             code: `
                 excel.insertPicture(
                     _app.file("public/images/logo.png"),
-                    10, // Número da Coluna
-                    1  // Número da Linha
+                    10, // Column Number
+                    1  // Row Number
                 ).resize(1.5)
             `
         },
     ]}
 />
 
-Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/ss/usermodel/Picture.html" target="_blank">Image object in Apache POI</a>.
+> Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/ss/usermodel/Picture.html" target="_blank">Image object in Apache POI</a>.
 
-## Merge Cells
+## Merging Cells
 
-To join cells into a region we use the `mergedRegion` method.
+To merge cells in a region, we use the `mergedRegion` method.
 
-The order of the parameters are:
+The parameter order is:
 
-1. Start Line
-2. Start Column
-3. End Line
-4. End Column
+1. Starting Row
+2. Starting Column
+3. Ending Row
+4. Ending Column
 
 > Numeric positioning references always start at **zero**.
 
-In this example below, all cells from column 10 to column 15 that are in line 3 will be merged:
+In the example below, all cells from column 10 through column 15 that are on row 3 will be merged:
 
 <PolyglotCode
     codes={[
@@ -258,8 +258,8 @@ To get the object that represents a cell:
         {
             lang: 'javascript',
             code: `
-                // Obtém a célula que está na coluna B e na linha 2:
-                const celula = excel.cell(1, 1)
+                // Gets the cell located in column B and row 2:
+                const cell = excel.cell(1, 1)
             `
         },
     ]}
@@ -267,16 +267,16 @@ To get the object that represents a cell:
 
 > Numeric positioning references always start at **zero**.
 
-Example of how to show the cell formula into the output log:
+Example of how to log the cell formula:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                // Loga a fórmula da linha 2 e coluna B.
+                // Logs the formula of row 2 and column B.
                 _log.info(
-                    "Fórmula Célula B2: "+ excel.cell(1, 1).getCellFormula()
+                    "Cell Formula B2: "+ excel.cell(1, 1).getCellFormula()
                 )
             `
         },
@@ -290,9 +290,9 @@ Example of how to get the text value of a cell:
         {
             lang: 'javascript',
             code: `
-                // Loga o valor de texto da célula da linha 2 e coluna B.
+                // Logs the text value of the cell in row 2 and column B.
                 _log.info(
-                    "Valor Célula B2: "+ excel.cell(1, 1).getStringCellValue()
+                    "Cell Value B2: "+ excel.cell(1, 1).getStringCellValue()
                 )
             `
         },
@@ -301,40 +301,39 @@ Example of how to get the text value of a cell:
 
 > Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCell.html" target="_blank">Cell object in Apache POI</a>.
 
+## Rows
 
-## Lines
-
-To get the object that represents a line:
+To get the object that represents a row:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                // Obtem o objeto que representa a linha 2.
-                const linha = excel.row(1)
+                // Gets the object that represents row 2.
+                const row = excel.row(1)
             `
         },
     ]}
 />
 
-> Numeric positioning references always start at **zero**
+> Numeric positioning references always start at **zero**.
 
-In the example above, if the line does not exist, a new line will be created automatically.
+In the example above, if the row does not exist, a new row will be created automatically.
 
-> Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFRow.html" target="_blank">Line object in Apache POI</a>.
+> Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFRow.html" target="_blank">Row object in Apache POI</a>.
 
-## Insert Data Table
+## Inserting Tabular Data
 
 We can insert a data table using the `addDataTable` method.
 
-Since the first two parameters define the position where the data table should be inserted, they are the row and the column numbers.
+Since the first two parameters define the position where the data table should be inserted, they are the row and column numbers.
 
-> Please note that the positioning of lines and columns in the code always starts from **zero**.
+> Note that positioning in the code for rows and columns always starts from **zero**.
 >
-> That is, Row 1 is `0` and Column A is also `0`.
+> That is, Row 1 is position `0`, and Column A is also position `0`.
 
-Next we add a list of lines, where each line contains another list for the columns, only then is the map with the cell value.
+Next, we pass a list of rows, where each row contains another list for the columns, and only then do we add a map with the cell value.
 
 Complete example:
 
@@ -345,9 +344,9 @@ Complete example:
             code: `
                 excel.addDataTable(
                     6, 1,
-                    _val.list() // Lines
+                    _val.list() // Rows
                         .add(
-                            _val.list() // Columns
+                            _val.list() // Column
                                 .add(
                                     _val.map() // Cell
                                         .set("value", "Name")
@@ -357,11 +356,11 @@ Complete example:
                                         .set("value", "Age")
                                 )
                         )
-                        .add( // Another Line
+                        .add( // Another Row
                             _val.list()
                                 .add( // First Column
                                     _val.map()
-                                        .set("value", "Mary")
+                                        .set("value", "Maria")
                                 )
                                 .add( // Second Column
                                     _val.map()
@@ -376,9 +375,9 @@ Complete example:
 
 ### Appearance
 
-In the cell map we can associate the styles already created, using for example the styles defined in the appearance and formatting section that we saw previously.
+In the cell map, we can associate the styles already created, for example using the styles defined in the appearance and formatting section we saw earlier.
 
-Here is an example of how to associate styles in cells:
+The following is an example of how to associate styles with cells:
 
 <PolyglotCode
     codes={[
@@ -409,9 +408,9 @@ Here is an example of how to associate styles in cells:
 
 ### Formulas
 
-To insert formulas we use the `formula` key in the cell definitions map.
+To insert formulas, we use the `formula` key in the cell definition map.
 
-In this example, all the values in the other cells will be added together in the last cell:
+In this example, the sum of all values from the other cells will be performed in the last cell:
 
 <PolyglotCode
     codes={[
@@ -446,7 +445,7 @@ In this example, all the values in the other cells will be added together in the
     ]}
 />
 
-To obtain the column letter from the column number, the columnReference method can be used, which can help in defining the formulas. The same method can also be used to obtain the column number from the reference letter, for example:
+To get the column letter from the column number, you can use the `columnReference` method, which can help when defining formulas. The same method can also be used to get the column number from the reference letter, for example:
 
 <PolyglotCode
     codes={[
@@ -484,9 +483,9 @@ To obtain the column letter from the column number, the columnReference method c
     ]}
 />
 
-## Spreadsheets
+## Sheets
 
-To create a new __spreadsheet__ within the document itself, observe the following example:
+To create a new worksheet (_sheet_) within the document itself, see the following example:
 
 <PolyglotCode
     codes={[
@@ -499,11 +498,11 @@ To create a new __spreadsheet__ within the document itself, observe the followin
     ]}
 />
 
-> In cell, image and data manipulation methods, the reference to the spreadsheet object can be assigned to the first parameter.
+> In the methods for manipulating cells, images, and data, the sheet object reference can be added as the first parameter.
 >
-> It depends on which sheet is active, it is possible to change the active sheet with the [activeSheet](/docs/library/resources/xls#activesheet) method.
+> Depending on which sheet is active, it is possible to change the active sheet with the [activeSheet](/docs/library/resources/xls#activesheet) method.
 
-Example of how to insert an image into the new spreadsheet:
+Example of how to insert an image into the new sheet:
 
 <PolyglotCode
     codes={[
@@ -511,17 +510,17 @@ Example of how to insert an image into the new spreadsheet:
             lang: 'javascript',
             code: `
                 excel.insertPicture(
-                    novaPlanilha,
+                    newSheet,
                     _app.file("public/images/logo.png"),
                     10, // Column Number
-                    1  // Line Number
+                    1  // Row Number
                 ).resize(1.5)
             `
         },
     ]}
 />
 
-Example of how to insert a data table into the new spreadsheet:
+Example of how to insert a data table into the new sheet:
 
 <PolyglotCode
     codes={[
@@ -559,19 +558,19 @@ Example of how to insert a data table into the new spreadsheet:
 
 ### Activate
 
-So, to avoid having to constantly indicate in the methods which spreadsheet should be used, as in the examples above, alternatively it is possible to indicate which spreadsheet is active.
+So, to avoid having to constantly indicate in the methods which sheet should be processed, as in the examples above, as an alternative you can indicate which sheet is active.
 
-> All cell, image and data manipulation methods use the spreadsheet that is activated when a specific spreadsheet is not indicated.
+> All methods for manipulating cells, images, and data use the sheet that is activated when a specific sheet is **not** indicated.
 
-See two ways to activate a specific spreadsheet, first with object reference and then second with the index of the spreadsheet:
+See two ways to activate a specific sheet, first with the object reference and then with the sheet index:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                excel.activeSheet(mySheet) // Spreadsheet reference object.
-                excel.activeSheet(1) // Index of the spreadsheet that will be activated.
+                excel.activeSheet(mySheet) // Sheet reference object.
+                excel.activeSheet(1) // Index of the sheet that will be activated.
             `
         },
     ]}
@@ -579,7 +578,7 @@ See two ways to activate a specific spreadsheet, first with object reference and
 
 ### Useful Resources
 
-Examples of other useful methods for manipulating spreadsheets.
+Examples of other useful methods for manipulating sheets.
 
 Get a sheet by name:
 
@@ -595,14 +594,14 @@ Get a sheet by name:
     ]}
 />
 
-Get a spreadsheet by its index:
+Get a sheet by its index:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                // Gets the spreadsheet from the respective number.
+                // Gets the sheet from its number.
                 const mySheet = excel.getSheet(1)
             `
         },
@@ -630,7 +629,7 @@ To list all existing sheets in the document.
         {
             lang: 'javascript',
             code: `
-                // List all sheets.
+                // Lists all sheets.
                 const allSheets = excel.getAllSheets()
                 for (const sheet of allSheets) {
                     ...
@@ -640,7 +639,7 @@ To list all existing sheets in the document.
         {
             lang: 'python',
             code: `
-                # List all sheets.
+                # Lists all sheets.
                 allSheets = excel.getAllSheets()
                 for sheet in allSheets:
                     ...
@@ -649,7 +648,7 @@ To list all existing sheets in the document.
         {
             lang: 'ruby',
             code: `
-                # List all sheets.
+                # Lists all sheets.
                 allSheets = excel.getAllSheets()
                 allSheets.each do |sheet|
                     ...
@@ -659,7 +658,7 @@ To list all existing sheets in the document.
         {
             lang: 'kotlin',
             code: `
-                // List all sheets.
+                // Lists all sheets.
                 val allSheets = excel.getAllSheets()
                 allSheets.forEach {
                     ...
@@ -669,7 +668,7 @@ To list all existing sheets in the document.
         {
             lang: 'groovy',
             code: `
-                // List all sheets.
+                // Lists all sheets.
                 def allSheets = excel.getAllSheets()
                 for (sheet in allSheets) {
                     ...
@@ -679,13 +678,13 @@ To list all existing sheets in the document.
     ]}
 />
 
-> Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFSheet.html" target="_blank">Spreadsheet object in Apache POI</a>.
+> Documentation with all methods of the <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFSheet.html" target="_blank">Sheet object in Apache POI</a>.
 
 ## Generate File
 
 In the `save` and `output` methods, the final file binary is generated.
 
-Sends the generated file as the service's `output`:
+Sends the generated file as the service's data output (`output`):
 
 <PolyglotCode
     codes={[
@@ -711,7 +710,7 @@ To save the generated file in the application's `storage/filesystem` folder:
     ]}
 />
 
-To save the generated file in the `/tmp` folder from the HD file system:
+To save the generated file to the `/tmp` folder using the hard drive file system:
 
 <PolyglotCode
     codes={[
@@ -726,11 +725,11 @@ To save the generated file in the `/tmp` folder from the HD file system:
 
 ## Edit File
 
-We can edit files by opening them, making the necessary changes and then saving the new edited file.
+We can edit files by opening them, making the necessary changes, and then saving the new edited file.
 
-Below are some examples of how you can open files.
+Below are some examples of how to open files.
 
-Open a file in the application root:
+Open a file at the root of the application:
 
 <PolyglotCode
     codes={[
@@ -743,7 +742,7 @@ Open a file in the application root:
     ]}
 />
 
-To open the file generated in the application's `storage/filesystem` folder:
+To open the generated file in the application's `storage/filesystem` folder:
 
 <PolyglotCode
     codes={[
@@ -756,7 +755,7 @@ To open the file generated in the application's `storage/filesystem` folder:
     ]}
 />
 
-And also to open the file in the `/tmp` folder from the HD file system:
+And also to open the file in the `/tmp` folder using the hard drive file system:
 
 <PolyglotCode
     codes={[
@@ -769,15 +768,15 @@ And also to open the file in the `/tmp` folder from the HD file system:
     ]}
 />
 
-In the examples above, the Excel constant will contain the editing object with the context of the respective file, so it is possible to carry out any type of manipulation.
+In the examples above, the `excel` constant will contain the editing object with the context of the respective file, so it is possible to perform any type of manipulation.
 
-When you complete the changes, generate the new file.
+When you finish the changes, generate the new file.
 
-> It is not possible to directly change the same open file, making it necessary to generate a new file with a different path.
+> It is not possible to directly change the same opened file; it is necessary to generate a new file with a different path.
 
-To directly change the same file, it can be done using `inputStream`.
+To directly change the same file, you can do so using `inputStream`.
 
-Here is an example of how to change the value of a cell:
+The following is an example of how to change a cell value:
 
 <PolyglotCode
     codes={[
@@ -796,50 +795,50 @@ Here is an example of how to change the value of a cell:
                         )
                 )
 
-                fileInput.close() // Closes the open file.
-                excel.save(_app.file("file.xlsx")) // Save the new version.
-            `
+                fileInput.close() // Closes the opened file.
+                excel.save(_app.file("file.xlsx")) // Saves the new version.
+                `
         },
     ]}
 />
 
 ## Read File
 
-Extracting data from Excel files is done using the `read` method.
+Extracting data from Excel files is done with the `read` method.
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const dados = _xls.read(_app.file("file.xlsx"))
+                const data = _xls.read(_app.file("file.xlsx"))
             `
         },
     ]}
 />
 
-The data is obtained in an object structure of the Values type with Lists, for the spreadsheets, rows and columns, and Maps (key and value) for the cells.
+The data is obtained in a structure of Values objects that contains Lists for sheets, rows, and columns, and Maps (key and value) for cells.
 
-To visualize all the data, we can put as data output from the service:
+To view all the data, we can set it as the service's data output:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                _out.json(dados)
+                _out.json(data)
             `
         },
     ]}
 />
 
-To carry out the interaction we have to keep in mind that the data structure is organized in the following order:
+To perform the iteration, we must keep in mind that the data structure is organized in the following order:
 
-1. `sheets` - Spreadsheets
+1. `sheets` - Sheets
 2. `rows` - Rows
 3. `columns` - Columns
 
-Example of a complete interaction:
+Example of a complete iteration:
 
 <PolyglotCode
     codes={[
@@ -847,7 +846,7 @@ Example of a complete interaction:
             lang: 'javascript',
             code: `
                 for (const sheet of data.getValues("sheets")) {
-                    _out.println(\`<h4>Spreadsheet: \${sheet.getInt("index")} - \${sheet.getString("name")}</h4>\`)
+                    _out.println(\`<h4>Sheet: \${sheet.getInt("index")} - \${sheet.getString("name")}</h4>\`)
                     for (const row of sheet.getValues("rows")) {
                         _out.println(\`<h4>Row: \${row.getInt("row")}</h4>\`)
                         _out.println("<p>")
@@ -867,7 +866,7 @@ Example of a complete interaction:
             lang: 'python',
             code: `
                 for sheet in data.getValues("sheets"):
-                    _out.println(f"<h4>Spreadsheet: {sheet.getInt('index')} - {sheet.getString('name')}</h4>")
+                    _out.println(f"<h4>Sheet: {sheet.getInt('index')} - {sheet.getString('name')}</h4>")
                     for row in sheet.getValues("rows"):
                         _out.println(f"<h4>Row: {row.getInt('row')}</h4>")
                         _out.println("<p>")
@@ -884,7 +883,7 @@ Example of a complete interaction:
             lang: 'ruby',
             code: `
                 data.getValues("sheets").each do |sheet|
-                    _out.println("<h4>Spreadsheet: #{sheet.getInt("index")} - #{sheet.getString("name")}</h4>")
+                    _out.println("<h4>Sheet: #{sheet.getInt("index")} - #{sheet.getString("name")}</h4>")
                     sheet.getValues("rows").each do |row|
                         _out.println("<h4>Row: #{row.getInt("row")}</h4>")
                         _out.println("<p>")
@@ -905,7 +904,7 @@ Example of a complete interaction:
             code: `
                 data.getValues("sheets").forEach {
                     val sheet = it
-                    _out.println("<h4>Spreadsheet: \${sheet.getInt("index")} - \${sheet.getString("name")}</h4>")
+                    _out.println("<h4>Sheet: \${sheet.getInt("index")} - \${sheet.getString("name")}</h4>")
                     sheet.getValues("rows").forEach {
                         val row = it
                         _out.println("<h4>Row: \${row.getInt("row")}</h4>")
@@ -927,7 +926,7 @@ Example of a complete interaction:
             lang: 'groovy',
             code: `
                 for (sheet in data.getValues("sheets")) {
-                    _out.println("<h4>Spreadsheet: \${sheet.getInt('index')} - \${sheet.getString('name')}</h4>")
+                    _out.println("<h4>Sheet: \${sheet.getInt('index')} - \${sheet.getString('name')}</h4>")
                     for (row in sheet.getValues("rows")) {
                         _out.println("<h4>Row: \${row.getInt('row')}</h4>")
                         _out.println("<p>")
@@ -953,45 +952,51 @@ The cell type is obtained through the code:
 And the supported types are:
 
 - `string` - Text content.
-- `numeric` - Numeric or date and/or time content.
+- `numeric` - Numeric content or date and/or time content.
 - `boolean` - True or false.
 - `blank` - Blank cell.
 - `formula` - Cell that contains a formula.
-- `error` - Error processing the cell.
+- `error` - Error in cell processing.
 
 ### Additional Parameters
 
-For each cell type we have some additional parameters.
+For each cell type, we have some additional parameters.
 
-**string** - Type of cell with textual content.
+`string` - Cell type with textual content.
 
 - `value` - Cell text.
 - `richValue` - Cell formatting.
 
-**numeric** - Type of cell with numeric content, or dates and even times.
+`numeric` - Cell type with numeric content, or dates and also times.
 
 - `value` - Value of the cell's numeric content.
+  
+In the case of dates and times, we have these additional parameters:
 
-In the case of dates and times we have these additional parameters
-
-- `localDateTime` - Java Time LocalDateTime object that represents the date and time value of the cell.
-- `localDate` - Java Time LocalDate object that represents the date value of the cell.
+- `localDateTime` - Java Time LocalDateTime object that represents the cell's date and time value.
+- `localDate` - Java Time LocalDate object that represents the cell's date value.
 - `localTime` - Java Time LocalTime object that represents the cell's time value.
-- `instant` - Java Time Instant object that represents the date and/or time value of the cell.
-- `date` - Java Date object that represents the date and/or time value of the cell.
+- `instant` - Java Time Instant object that represents the cell's date and/or time value.
+- `date` - Java Date object that represents the cell's date and/or time value.
 
-**boolean** - Type of cell with boolean content, i.e. true or false.
+`boolean` - Cell type with boolean content, that is, true or false.
 
 - `value` - Value of type _boolean_, `true` or `false`.
 
-**blank** - Type of cell without content, therefore it does not contain additional parameters.
+`blank` - Cell type without content, therefore it does not contain additional parameters.
 
-**formula** - Type of cell that contains calculation formulas.
+`formula` - Cell type that contains calculation formulas.
 
 - `value` - Final value resulting from the calculation.
-- `formula` - Contains the expression of the formula used for the calculation.
+- `formula` - Contains the formula expression used for the calculation.
 
-**error** - Type of cell that contains error.
+`error` - Cell type that contains an error.
 
-- `value` - Value in bytes of the generated error.
-- `code` - If there are errors in the calculation of the formula, provide here the code of the error that occurred.
+- `value` - Byte value of the generated error.
+- `code` - If there are errors in the formula calculation, provides the code of the error that occurred here.
+
+## Videos
+
+Below are some example videos on how to generate Excel/XLSX files programmatically:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/nTnoqEpLghQ?si=8engICqRqNFUPi_i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

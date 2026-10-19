@@ -6,26 +6,27 @@ sidebar_label: Client SSH
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
 
-Executați comenzi pe server și transferați fișiere.
+Executarea comenzilor pe server și transferul de fișiere.
 
 ## Introducere
 
-Netuno are integrat în framework-ul său low-code un client SSH, care permite conectarea la servere, executarea comenzilor, trimiterea și primirea fișierelor, modificarea folderelor, printre alte operațiuni la distanță.
+Netuno are integrat în framework-ul său low-code un client SSH, care permite conectarea la servere, executarea
+comenzilor, trimiterea și primirea de fișiere, modificarea dosarelor, printre alte operațiuni la distanță.
 
 Suportă multiple conexiuni simultane, precum și SCP și SFTP.
 
 Acest lucru se datorează implementării Java și open-source
-<a target="_blank" href="https://github.com/hierynomus/sshj/tree/master">SSHJ</a>, ceea ce permite Netuno
+<a target="_blank" href="https://github.com/hierynomus/sshj/tree/master">SSHJ</a>, care îi permite Netuno
 să ofere aceste funcționalități tuturor limbajelor de script prin resursa `_ssh`.
 
 > Mai multe despre resursa [SSH](/docs/library/resources/ssh) din Netuno.
 
 ## Configurare
 
-Primul pas va fi configurarea datelor de acces SSH pe care Netuno le va folosi pentru a realiza conexiunea.
+Primul pas este să configurați datele de acces SSH pe care Netuno le va folosi pentru a realiza conexiunea.
 
 Navigați în aplicația pe care o dezvoltați până la fișierul de configurare a mediului. În acest exemplu,
-vom folosi fișierul de dezvoltare, localizat în:
+vom folosi fișierul de dezvoltare, situat în:
 
 - `config/_development.json`
 
@@ -48,13 +49,13 @@ adăugați parametrii de configurare SSH, de exemplu:
 }
 ```
 
-După salvarea modificărilor, este suficient să reporniți Netuno pentru a prelua modificările configurației. Acestea fiind
+După salvarea modificărilor, este suficient să reporniți Netuno pentru a prelua modificările de configurare. Acestea sunt
 configurările implicite pentru conexiune, după cum indică numele cheii `default`.
 
 Puteți adăuga mai multe configurări de conexiune SSH cu alte chei în JSON.
 
 Pentru a adăuga mai multe configurări de conexiune SSH, este suficient să repetați blocul de configurare implicit și să înlocuiți cheia
-`default` cu alta la alegerea dvs., de exemplu:
+`default` cu alta la alegerea dumneavoastră, de exemplu:
 
 ```json
 {
@@ -69,7 +70,7 @@ Pentru a adăuga mai multe configurări de conexiune SSH, este suficient să rep
     },
     "altul": {
       "enabled": true,
-      "host": "serverul.meu-altul.net",
+      "host": "serverul.alt.net",
       "port": 22,
       "username": "root",
       "password": "$eCr37"
@@ -79,7 +80,7 @@ Pentru a adăuga mai multe configurări de conexiune SSH, este suficient să rep
 }
 ```
 
-Configurarea de mai sus permite utilizarea contului `default` atunci când este codificat după cum urmează:
+Configurarea de mai sus permite utilizarea contului `default` atunci când este codificat în felul următor:
 
 <PolyglotCode
     codes={[
@@ -92,8 +93,8 @@ Configurarea de mai sus permite utilizarea contului `default` atunci când este 
     ]}
 />
 
-Pentru a utiliza configurația `altul`, este suficient să adăugați cheia configurației ca parametru al funcției
-`_ssh.init()`, după cum urmează:
+Pentru a utiliza configurarea `altul`, este suficient să adăugați cheia configurării ca parametru al funcției
+`_ssh.init()`, în felul următor:
 
 <PolyglotCode
     codes={[
@@ -106,7 +107,7 @@ Pentru a utiliza configurația `altul`, este suficient să adăugați cheia conf
     ]}
 />
 
-> Dacă nu adăugați un nume de configurație ca parametru, va fi utilizată configurația contului `default`.
+> Dacă nu adăugați un nume de configurare ca parametru, va fi utilizată configurarea contului `default`.
 
 ## Conexiune
 
@@ -230,7 +231,7 @@ Pentru a realiza încărcarea (upload) fișierelor existente în aplicație:
             code: `
                 const sshSCP = ssh.initSCP()
                 // Trimite un fișier care se află în storage/filesystem.
-                sshSCP.upload("foaie_calcul.xlsx", _storage.filesystem("server", "foaie_calcul.xlsx").file())
+                sshSCP.upload("tabel.xlsx", _storage.filesystem("server", "tabel.xlsx").file())
                 // Trimite un fișier care se află în rădăcina aplicației.
                 sshSCP.upload("document.pdf", _app.file("document.pdf"))
                 sshSCP.close()
@@ -248,7 +249,7 @@ Pentru a descărca (download) fișiere de pe server în aplicație:
             code: `
                 const sshSCP = ssh.initSCP()
                 // Descarcă fișierul în storage/filesystem.
-                sshSCP.download("foaie_calcul.xlsx", _storage.filesystem("server", "foaie_calcul.xlsx").file())
+                sshSCP.download("tabel.xlsx", _storage.filesystem("server", "tabel.xlsx").file())
                 // Descarcă fișierul în rădăcina aplicației.
                 sshSCP.download("document.pdf", _app.file("document.pdf"))
                 sshSCP.close()
@@ -259,7 +260,7 @@ Pentru a descărca (download) fișiere de pe server în aplicație:
 
 ## SFTP
 
-SFTP este o formă de transfer și manipulare a fișierelor și folderelor care suportă aceleași funcționalități
+SFTP este o formă de transfer și manipulare de fișiere și dosare care suportă aceleași funcționalități
 ca FTP, dar folosind SSH.
 
 Pentru a iniția o nouă sesiune SFTP:
@@ -275,16 +276,16 @@ Pentru a iniția o nouă sesiune SFTP:
     ]}
 />
 
-> Inițiază obiectul [SSHSFTP](/docs/library/objects/SSHSFTP) care este clientul sesiunii.
+> Inițiază obiectul [SSHSFTP](/docs/library/objects/SSHSFTP), care este clientul sesiunii.
 
-Creați un folder nou la distanță:
+Creează un dosar nou la distanță:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                sftp.createDirectory("cale/folder-nou")
+                sftp.createDirectory("cale/dosar-nou")
             `
         },
     ]}
@@ -297,7 +298,7 @@ Creează sau înlocuiește fișierul remote cu conținutul text transmis:
         {
             lang: 'javascript',
             code: `
-                sftp.uploadText("folder/fișier.txt", "Conținutul meu!")
+                sftp.uploadText("dosar/fisier.txt", "Conținutul meu!")
             `
         },
     ]}
@@ -310,7 +311,7 @@ Obține conținutul text al unui fișier remote:
         {
             lang: 'javascript',
             code: `
-                const continutFisierRemote = sftp.downloadText("folder/fișier.txt"))
+                const continutFisierRemote = sftp.downloadText("dosar/fisier.txt"))
                 _out.println(continutFisierRemote)
             `
         },
@@ -324,35 +325,35 @@ Obține conținutul text al unui fișier remote:
         {
             lang: 'javascript',
             code: `
-                sftp.deleteFile("folder/fișier.txt")
+                sftp.deleteFile("dosar/fisier.txt")
             `
         },
     ]}
 />
 
-Șterge definitiv folderul remote:
+Șterge definitiv dosarul remote:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                sftp.deleteDirectory("folder")
+                sftp.deleteDirectory("dosar")
             `
         },
     ]}
 />
 
-Listează tot conținutul unui folder:
+Listează tot conținutul unui dosar:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                for (const i of sftp.list("cale/folder")) {
+                for (const i of sftp.list("cale/dosar")) {
                     if (i.directory) {
-                        _out.print("Folder: ")
+                        _out.print("Dosar: ")
                     } else if (i.regularFile) {
                         _out.print("Fișier: ")
                     } else {
@@ -366,9 +367,9 @@ Listează tot conținutul unui folder:
         {
             lang: 'python',
             code: `
-                for i in sftp.list("cale/folder":
+                for i in sftp.list("cale/dosar":
                     if i.directory:
-                        _out.print("Folder: ")
+                        _out.print("Dosar: ")
                     elif i.regularFile:
                         _out.print("Fișier: ")
                     else:
@@ -381,9 +382,9 @@ Listează tot conținutul unui folder:
         {
             lang: 'ruby',
             code: `
-                sftp.list("cale/folder").each do |i|
+                sftp.list("cale/dosar").each do |i|
                     if i.directory
-                        _out.print("Folder: ")
+                        _out.print("Dosar: ")
                     elsif i.regularFile
                         _out.print("Fișier: ")
                     else
@@ -397,9 +398,9 @@ Listează tot conținutul unui folder:
         {
             lang: 'kotlin',
             code: `
-                sftp.list("cale/folder").forEach {
+                sftp.list("cale/dosar").forEach {
                     if (it.directory) {
-                        _out.print("Folder: ")
+                        _out.print("Dosar: ")
                     } else if (it.regularFile) {
                         _out.print("Fișier: ")
                     } else {
@@ -413,9 +414,9 @@ Listează tot conținutul unui folder:
         {
             lang: 'groovy',
             code: `
-                for (i in sftp.list("cale/folder")) {
+                for (i in sftp.list("cale/dosar")) {
                     if (i.directory) {
-                        _out.print("Folder: ")
+                        _out.print("Dosar: ")
                     } else if (i.regularFile) {
                         _out.print("Fișier: ")
                     } else {
@@ -439,7 +440,7 @@ Pentru a realiza încărcarea (upload) fișierelor existente în aplicație:
             lang: 'javascript',
             code: `
                 // Trimite un fișier care se află în storage/filesystem.
-                sftp.upload("foaie_calcul.xlsx", _storage.filesystem("server", "foaie_calcul.xlsx").file())
+                sftp.upload("tabel.xlsx", _storage.filesystem("server", "tabel.xlsx").file())
                 // Trimite un fișier care se află în rădăcina aplicației.
                 sftp.upload("document.pdf", _app.file("document.pdf"))
             `
@@ -455,7 +456,7 @@ Pentru a descărca (download) fișiere de pe server în aplicație:
             lang: 'javascript',
             code: `
                 // Descarcă fișierul în storage/filesystem.
-                sftp.download("foaie_calcul.xlsx", _storage.filesystem("server", "foaie_calcul.xlsx").file())
+                sftp.download("tabel.xlsx", _storage.filesystem("server", "tabel.xlsx").file())
                 // Descarcă fișierul în rădăcina aplicației.
                 sftp.download("document.pdf", _app.file("document.pdf"))
             `

@@ -8,16 +8,16 @@ sidebar_label: Pages et React Router
 ## Introduction
 
 La création de pages est un besoin courant lorsque l'application web devient complexe ou qu'il est nécessaire de présenter
-des contenus distincts. Cela arrive souvent, en particulier dans le cas d'un site web ou d'une plateforme.
+des contenus distincts ; cela arrive fréquemment, en particulier lorsqu'il s'agit d'un site web ou d'une plateforme.
 
 Dans le développement avec React, il est possible de créer le mécanisme de navigation entre les pages avec [React Router](https://reactrouter.com).
 
 Les étapes ci-dessous doivent être exécutées dans votre projet frontend en React.
 
-Si c'est un frontend intégré avec Netuno, vous devez alors réaliser les étapes ci-dessous dans le dossier de l'application Netuno mais
-où se trouve le projet frontend, par exemple dans :
+S'il s'agit d'un frontend intégré avec Netuno, vous devez alors effectuer les étapes ci-dessous dans le dossier de l'application Netuno, mais
+à l'endroit où se trouve le projet frontend, par exemple dans :
 
-- `📂 site_web/`
+- `📂 website/`
 
 ## Installation
 
@@ -35,7 +35,7 @@ bun install antd
 
 ## Configuration
 
-Pour commencer, nous devons modifier le `main.jsx` qui se trouve dans le dossier `📂 src`. Il faut placer le `BrowserRoute` de cette façon :
+Pour commencer, nous devons modifier le `main.jsx` qui se trouve dans le dossier `📂 src`, il faut placer le `BrowserRoute` de cette manière :
 
 ```javascript title="src/main.jsx"
 import { createRoot } from 'react-dom/client';
@@ -49,7 +49,7 @@ createRoot(document.getElementById('root')).render(
 );
 ```
 
-**Très important :** Si c'est un frontend récemment créé, vous devez supprimer tout type de CSS/Style et les importations inutiles
+**Très important :** S'il s'agit d'un frontend récemment créé, vous devez supprimer tout type de CSS/Style et les importations inutiles
 comme celles d'images, afin d'éviter des comportements indésirables.
 
 Dans le `App.js` qui se trouve également dans le dossier `📂 src`, ajoutez l'importation des modules de la manière suivante :
@@ -65,7 +65,7 @@ Après les importations, ajoutez les constantes :
 const { Header, Footer, Content } = Layout;
 ```
 
-À ce stade initial, le retour du composant App peut être de la manière suivante :
+À ce stade initial, le retour du composant App pourra être de la manière suivante :
 
 ```jsx title="src/App.jsx"
   ...
@@ -92,17 +92,17 @@ const { Header, Footer, Content } = Layout;
   ...
 ```
 
-De cette façon, les composants de React Router sont structurés avec les composants de structure de page d'Ant.Design.
+De cette manière, les composants de React Router sont structurés avec les composants de structure de page d'Ant.Design.
 
 ## Créer des pages
 
-Les pages se trouvent dans des composants à part. Chaque page est représentée par un composant React propre.
+Les pages se trouvent dans des composants à part, chaque page est représentée par un composant propre en React.
 
-Une bonne pratique consiste à placer les composants des pages dans un dossier appelé `📂 pages`.
+Une bonne pratique est de placer les composants des pages dans un dossier appelé `📂 pages`.
 
 ### Accueil
 
-Créer la page d'entrée, qui sera le composant `Accueil` et sera associé au chemin `/`.
+Créer la page d'entrée, qui sera le composant `Accueil` et sera associée au path `/`.
 
 Le fichier du composant de cette page sera :
 
@@ -115,11 +115,11 @@ import {useNavigate} from 'react-router';
 import {Button} from 'antd';
 
 function Accueil() {
-  const navigate = useNavigate();
+  const naviguer = useNavigate();
   return (
     <div>
       <h1>Accueil</h1>
-      <Button onClick={()=> navigate('/informations')}>
+      <Button onClick={()=> naviguer('/informations')}>
         Aller à la page Informations
       </Button>
     </div>
@@ -129,11 +129,11 @@ function Accueil() {
 export default Accueil;
 ```
 
-> Le bouton effectue le changement de page par programmation en utilisant la fonction `navigate`. C'est une alternative au composant `Link`.
+> Le bouton effectue le changement de page programmatiquement en utilisant la fonction `naviguer`, c'est une alternative au composant `Link`.
 
 ### Informations
 
-Créer une page de contenu d'exemple, qui sera le composant `Informations` et sera associé au chemin `/informations`.
+Créer une page de contenu d'exemple, qui sera le composant `Informations` et sera associée au path `/informations`.
 
 Le fichier du composant de cette page sera :
 
@@ -146,11 +146,11 @@ import {useNavigate} from 'react-router';
 import {Button} from 'antd';
 
 function Informations() {
-  const navigate = useNavigate();
+  const naviguer = useNavigate();
   return (
     <div>
       <h1>Informations</h1>
-      <Button onClick={()=> navigate('/')}>
+      <Button onClick={()=> naviguer('/')}>
         Retour à l'accueil
       </Button>
     </div>
@@ -160,7 +160,7 @@ function Informations() {
 export default Informations;
 ```
 
-> Le bouton effectue le changement de page par programmation en utilisant la fonction `navigate`. C'est une alternative au composant `Link`.
+> Le bouton effectue le changement de page programmatiquement en utilisant la fonction `naviguer`, c'est une alternative au composant `Link`. 
 
 ## Importer des pages
 
@@ -175,7 +175,7 @@ Avec les pages importées, il est possible de relier chaque page à une adresse 
 
 L'adresse de la page peut aussi être comprise comme une route, ou `Route`.
 
-Donc dans `App.jsx`, où sont définies les routes ou plutôt les `Routes`, vous allez définir l'adresse et le composant des pages de la manière suivante :
+Donc dans le `App.jsx` où sont définies les routes ou plutôt `Routes`, vous allez définir l'adresse et le composant des pages de la manière suivante :
 
 ```jsx title="src/App.jsx"
     ...
@@ -186,33 +186,33 @@ Donc dans `App.jsx`, où sont définies les routes ou plutôt les `Routes`, vous
     ...
 ```
 
-> Le `path` est l'adresse et l'`element` est le composant de la page.
+> Le `path` est l'adresse et le `element` est le composant de la page.
 
-Remarquez que dans le `Menu`, nous avons des éléments avec le `Link` qui pointent vers les adresses des pages. Ainsi, l'attribut `to` dans le
-`Link` indique qu'il doit charger la `Route` correspondante qui a la même valeur associée dans le `path`.
+Remarquez que dans le `Menu`, nous avons des éléments avec le `Link` qui pointent vers les adresses des pages, donc l'attribut `to` dans le 
+`Link` indique qu'il doit charger le `Route` correspondant qui a la même valeur associée dans le `path`.
 
 Dans le navigateur, vous pouvez saisir directement ces adresses et les composants respectifs, qui sont les pages, devraient apparaître.
 
 ## Navigation
 
-Pour proposer davantage d'options de navigation entre les pages, vous devez ajouter dans le `Menu` des composants de type `Link` qui pointent
+Pour réaliser plus d'options de navigation de pages, il faudra ajouter dans le `Menu` des composants de type `Link` qui pointent
 vers l'adresse respective.
 
-Vous devez également ajouter les composants `Route` qui associent l'adresse au composant de page correspondant.
+Il faudra également ajouter les composants `Route` qui associent l'adresse au composant de page correspondant.
 
-Avec la fonction `navigate`, vous pouvez effectuer des changements de page par programmation, par exemple dans ces situations :
+Avec la fonction `naviguer`, vous pouvez effectuer des changements de pages programmatiquement, par exemple dans ces situations :
 
-1. Sur la page de connexion, après que les données ont été validées avec succès, vous devez procéder automatiquement au changement de page.
+1. Sur la page de connexion, après validation réussie des données, vous devez procéder automatiquement au changement de page.
 2. Après avoir enregistré un compte, lorsque les données ont été sauvegardées avec succès, vous devez passer automatiquement à la page de connexion.
 
-Lorsque l'utilisateur interagit directement avec la navigation en cliquant, nous utilisons alors le composant `Link`.
+Lorsque l'utilisateur interagit directement avec la navigation via un clic, nous utilisons alors le composant `Link`.
 
 Pour les autres cas où le changement de page se produit à un moment spécifique de l'exécution du code, nous utilisons alors la
-fonction `navigate` obtenue avec `useNavigate`.
+fonction `naviguer` obtenue avec `useNavigate`.
 
 ## Conclusion
 
-ReactJS avec React Router permet de définir plusieurs pages et d'effectuer la navigation entre elles.
+Avec ReactJS et React Router, il est possible de définir plusieurs pages et d'effectuer la navigation entre elles.
 
-Ant.Design aide à construire la structure de la page et offre divers composants utiles pour construire des interfaces
+Ant.Design aide à la construction de la structure de la page et offre divers composants utiles pour construire des interfaces 
 complexes et responsives.

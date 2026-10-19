@@ -12,18 +12,13 @@ Messages instantanés entre le serveur et le client.
 
 Avec WebSocket, il est possible d'établir une connexion permanente entre le serveur et le navigateur du client.
 
-Cela signifie qu'à tout moment le navigateur pourra utiliser la connexion établie via WebSocket pour envoyer
-des données au serveur, sans qu'il soit obligatoire d'obtenir une réponse. Il en va de même pour le serveur qui pourra contacter
-le navigateur du client en envoyant des données de manière immédiate.
+Cela signifie qu'à tout moment le navigateur pourra utiliser la connexion établie via WebSocket pour envoyer des données au serveur, sans qu'il soit obligatoire d'obtenir une réponse. Il en va de même pour le serveur qui pourra contacter le navigateur du client en envoyant des données de manière immédiate.
 
-> La communication est réalisée instantanément et à tout moment il est possible de faire transiter des données d'un côté à l'autre
-de manière indépendante et immédiate.
+> La communication est réalisée instantanément et à tout moment il est possible de faire transiter des données d'un côté à l'autre de manière indépendante et immédiate.
 
-C'est très utile pour réaliser des opérations en temps réel avec des communications immédiates, c'est comme s'il s'agissait d'un chat, d'une discussion
-entre le navigateur et le serveur, à tout moment chacun peut envoyer un message et l'autre le reçoit.
+C'est très utile pour réaliser des opérations en temps réel avec des communications immédiates, c'est comme s'il s'agissait d'un chat, d'une discussion entre le navigateur et le serveur, à tout moment l'un ou l'autre peut envoyer un message et l'autre le reçoit.
 
-Par exemple, il est très utilisé depuis les solutions de chat en général jusqu'aux jeux, nous l'utilisons aussi pour présenter des modifications
-de données en direct, c'est-à-dire lorsqu'il existe un besoin de communication la plus immédiate possible.
+Par exemple, il est très utilisé depuis des solutions de chats en général jusqu'aux jeux, nous l'utilisons aussi pour présenter des modifications de données en direct, c'est-à-dire lorsqu'il existe un besoin de réaliser une communication le plus immédiatement possible.
 
 De manière simplifiée, la différence entre la communication HTTP classique et WebSocket :
 
@@ -31,17 +26,13 @@ De manière simplifiée, la différence entre la communication HTTP classique et
 
 Du côté du serveur, un `endpoint` est créé, une adresse qui permet d'établir des connexions avec WebSocket.
 
-Le serveur a la capacité d'envoyer des données uniquement vers une connexion spécifique, c'est-à-dire qu'il est possible d'envoyer de nouveaux
-messages à un participant d'un chat en particulier.
+Le serveur a la capacité d'envoyer des données uniquement vers une connexion spécifique, c'est-à-dire qu'il est possible d'envoyer de nouveaux messages à un participant d'un chat en particulier.
 
-Le serveur peut également faire du `broadcast`, qui est l'envoi de données vers toutes les connexions actives sur une adresse
-donnée, c'est-à-dire lorsqu'un message est envoyé à tous les participants du chat qui sont dans une salle ou un
-groupe.
+De même, le serveur peut faire du `broadcast`, c'est-à-dire l'envoi de données à toutes les connexions actives sur une adresse déterminée, autrement dit lorsqu'un message est envoyé à tous les participants du chat qui sont dans une salle ou un groupe.
 
 ## Activation et Configuration
 
-Pour activer et configurer WebSocket dans votre application Netuno, il est nécessaire de modifier le fichier de configuration de
-l'application correspondant à l'environnement utilisé, comme :
+Pour activer et configurer WebSocket dans votre application Netuno, il est nécessaire de modifier le fichier de configuration de l'application correspondant à l'environnement utilisé, comme :
 
 - `📂 config/_development.json`
 - `📂 config/_production.json`
@@ -70,7 +61,7 @@ Insérez et ajustez les paramètres suivants :
                 "idleTimeout": 0,
                 "maxText": 15000,
                 "public": "/ws/salle",
-                "path": "/{id}",
+                "path": "/{uid}",
                 "service": "/services/ws/salle"
             }
         ]
@@ -80,9 +71,7 @@ Insérez et ajustez les paramètres suivants :
 
 #### endpoints
 
-C'est un tableau qui permet de définir que le serveur va prendre en charge WebSocket à travers les multiples adresses publiques
-spécifiées (_endpoints_), donc chaque endpoint est une adresse publique qui prend en charge la réception de connexions via
-WebSockets depuis les navigateurs.
+C'est un tableau qui permet de définir que le serveur prendra en charge WebSocket à travers les multiples adresses publiques spécifiées (_endpoints_), donc chaque endpoint est une adresse publique qui prend en charge la réception de connexions via WebSockets depuis les navigateurs.
 
 #### name
 
@@ -94,12 +83,11 @@ Permet d'activer et de désactiver l'endpoint, la valeur par défaut est `true` 
 
 #### sendTimeout
 
-Limite de temps maximum pour envoyer un message aux clients, la valeur par défaut est `60000` millisecondes, soit
-1 minute.
+Limite de temps maximale pour envoyer un message aux clients, la valeur par défaut est `60000` millisecondes, soit l'équivalent de 1 minute.
 
 #### idleTimeout
 
-Limite de temps maximum pour l'inactivité de la connexion, la valeur par défaut est `300000` millisecondes, soit 5 minutes.
+Limite de temps maximale pour l'inactivité de la connexion, la valeur par défaut est `300000` millisecondes, soit l'équivalent de 5 minutes.
 
 #### maxText
 
@@ -109,17 +97,15 @@ Limite en octets pour la taille maximale de la longueur du message, la valeur pa
 
 Définit la base de l'adresse publique qui permettra de recevoir les connexions via WebSocket provenant des navigateurs.
 
-L'adresse finale est constituée de la valeur de la configuration `public` suivie de ce qui est défini dans le `path`.
+L'adresse finale est constituée de la valeur de configuration `public` suivie de ce qui est défini dans `path`.
 
 #### path
 
-Définit la partie finale du chemin de l'adresse publique, peut être dynamique, ce qui permet de créer par exemple plusieurs
-canaux séparés, par exemple c'est utile pour créer plusieurs salles.
+Définit la partie finale du chemin de l'adresse publique, peut être dynamique, ce qui permet de créer par exemple de multiples canaux séparés, par exemple c'est utile pour créer plusieurs salles.
 
-> Attention : le `path` doit toujours commencer par `/`, et dans la configuration de connexion sur le front-end il est très important de contenir
-la barre exactement comme défini dans le `path`.
+> Attention : le `path` doit toujours commencer par `/`, et dans la configuration de connexion côté front-end, il est très important de contenir la barre exactement comme défini dans `path`.
 
-Sur le front-end l'adresse finale sera le `public` + `path`, voir l'exemple :
+Côté front-end, l'adresse finale sera `public` + `path`, voir l'exemple :
 
 ```json
     ...
@@ -128,52 +114,45 @@ Sur le front-end l'adresse finale sera le `public` + `path`, voir l'exemple :
     ...
 ```
 
-Alors l'adresse finale sur le front-end sera `/ws/pool/`, avec la barre à la fin.
+Donc l'adresse finale côté front-end sera `/ws/pool/`, avec la barre à la fin.
 
 ##### service
 
-Adresse de base du service back-end de l'application qui traite les connexions et la communication via WebSocket.
+Adresse de la base de service back-end de l'application qui traite les connexions et la communication via WebSocket.
 
 #### hosts
 
-Optionnellement, nous pouvons définir les hôtes sur lesquels nos endpoints sont disponibles, c'est-à-dire que dans la connexion arrive
-l'adresse de l'hôte dans l'en-tête HTTP, exactement cet hôte étant considéré uniquement l'information du domaine ou IP et
-écarté l'indication du port, c'est ce qui est utilisé pour associer et trouver l'endpoint correspondant.
+Optionnellement, nous pouvons définir les hôtes sur lesquels nos endpoints sont disponibles, c'est-à-dire que dans la connexion arrive l'adresse de l'hôte dans l'en-tête HTTP, exactement cet hôte en considérant uniquement l'information du domaine ou de l'IP et en écartant l'indication du port, c'est ce qui est utilisé pour associer et trouver l'endpoint correspondant.
 
 > Par conséquent, l'endpoint pour fonctionner correctement doit combiner `host` et `public` + `path`, de la manière suivante :
 >
 > `ws://[host]:9000[public][path]`
 >
-> En production avec NGINX, proxy inverse et SSL, cela doit être ainsi :
+> En production avec NGINX, proxy inverse et SSL, cela doit ressembler à ceci :
 >
 > `wss://[host][public][path]`
 
-Netuno définit certains domaines locaux avec le préfixe du nom de l'application, qui les associe automatiquement comme valeur
-par défaut pour les hôtes des endpoints, en plus dans l'application en développement il ajoute aussi `localhost` et
-`127.0.0.1` aux hôtes par défaut, c'est pourquoi la définition des hôtes est optionnelle, car il y a cette configuration automatique.
+Netuno définit certains domaines locaux avec le préfixe du nom de l'app, qui s'associe automatiquement comme valeur par défaut pour les hôtes des endpoints, en plus pour l'app en développement il ajoute aussi `localhost` et `127.0.0.1` aux hôtes par défaut, c'est pourquoi la définition des hôtes est optionnelle, car il y a cette configuration automatique.
 
-Les hôtes suivants sont définis automatiquement pour les endpoints, si le nom de l'application est `monapp` :
+Les hôtes suivants sont définis automatiquement pour les endpoints, si le nom de l'app est `monapp` :
 
-- Celui-ci pointe directement vers l'IP local 127.0.0.1 :
+- Celui-ci pointe directement vers l'IP locale 127.0.0.1 :
   - `monapp.local.netu.no`
-- Ceux-ci pour fonctionner il est nécessaire de les enregistrer dans le fichier hosts du système d'exploitation :
+- Ceux-ci, pour fonctionner, il est nécessaire de les enregistrer dans le fichier hosts du système d'exploitation :
   - `monapp.localhost`
   - `monapp.local`
 
-Si le nom de l'application est `mon_app`, alors les hôtes automatiques deviennent :
+Si le nom de l'app est `mon_app`, alors les hôtes automatiques deviennent :
 
-- Celui-ci pointe directement vers l'IP local 127.0.0.1 :
+- Celui-ci pointe directement vers l'IP locale 127.0.0.1 :
   - `mon-app.local.netu.no`
-- Ceux-ci pour fonctionner il est nécessaire de les enregistrer dans le fichier hosts du système d'exploitation :
+- Ceux-ci, pour fonctionner, il est nécessaire de les enregistrer dans le fichier hosts du système d'exploitation :
   - `mon-app.localhost`
   - `mon-app.local`
 
-> Dans le domaine, le `_` (souligné) n'est pas autorisé et dans le nom des applications le `-` (trait d'union) n'est pas autorisé, c'est pourquoi en externe
-> nous utilisons le `-` (trait d'union) dans l'adresse, mais Netuno transforme automatiquement le `-` (trait d'union) en `_` (souligné) pour
-> trouver la bonne application.
+> Dans le domaine, le `_` (tiret bas) n'est pas autorisé et dans le nom des apps le `-` (tiret) n'est pas autorisé, c'est pourquoi en externe nous utilisons le `-` (tiret) dans l'adresse, mais Netuno transforme automatiquement le `-` (tiret) en `_` (tiret bas) pour trouver la bonne application.
 
-L'application par défaut ou l'application définie au démarrage du serveur Netuno a en plus les hôtes
-suivants :
+L'application par défaut ou l'application définie à l'initialisation du serveur Netuno possède en plus les hôtes suivants :
 
 - `localhost`
 - `127.0.0.1`
@@ -210,8 +189,7 @@ Si tous les endpoints fonctionnent pour les mêmes hôtes, alors nous pouvons d�
     ...
 ```
 
-Assurez-vous que dans l'adresse finale du WebSocket vous utilisez toujours un domaine ou une IP qui soit un hôte valide, sinon
-cela ne fonctionnera pas car l'endpoint ne pourra pas être trouvé en interne.
+Assurez-vous que dans l'adresse finale du WebSocket vous utilisez toujours un domaine ou une IP qui soit un hôte valide, sinon cela ne fonctionnera pas car l'endpoint ne pourra pas être trouvé en interne.
 
 ## Service pour les Endpoints
 
@@ -225,11 +203,11 @@ Le service configuré avec la méthode `POST` est exécuté lorsqu'une nouvelle 
         {
             lang: 'javascript',
             code: `
-                const idSalle = _ws.path().getString("id")
-                const dbSalle = _db.get("salle", idSalle)
+                const uidSalle = _ws.path().getString("uid")
+                const dbSalle = _db.get("salle", uidSalle)
 
                 if (dbSalle == null) {
-                    _log.warn(\`Salle invalide \${idSalle}.\`)
+                    _log.warn(\`Salle invalide \${uidSalle}.\`)
                     _ws.close()
                 } else {
                     _log.info(\`Nouvelle session WebSocket : \${_ws.sessionId()}\`)
@@ -239,11 +217,11 @@ Le service configuré avec la méthode `POST` est exécuté lorsqu'une nouvelle 
         {
             lang: 'python',
             code: `
-                idSalle = _ws.path().getString("id")
-                dbSalle = _db.get("salle", idSalle)
+                uidSalle = _ws.path().getString("uid")
+                dbSalle = _db.get("salle", uidSalle)
 
                 if dbSalle == null:
-                    _log.warn(f"Salle invalide {idSalle}.")
+                    _log.warn(f"Salle invalide {uidSalle}.")
                     _ws.close()
                 else:
                     _log.info(f"Nouvelle session WebSocket : {_ws.sessionId()}")
@@ -252,11 +230,11 @@ Le service configuré avec la méthode `POST` est exécuté lorsqu'une nouvelle 
         {
             lang: 'ruby',
             code: `
-                idSalle = _ws.path().getString("id")
-                dbSalle = _db.get("salle", idSalle)
+                uidSalle = _ws.path().getString("uid")
+                dbSalle = _db.get("salle", uidSalle)
 
                 if dbSalle == null
-                    _log.warn("Salle invalide #{idSalle}.")
+                    _log.warn("Salle invalide #{uidSalle}.")
                     _ws.close()
                 else
                     _log.info("Nouvelle session WebSocket : #{_ws.sessionId()}")
@@ -266,11 +244,11 @@ Le service configuré avec la méthode `POST` est exécuté lorsqu'une nouvelle 
         {
             lang: 'kotlin',
             code: `
-                val idSalle = _ws.path().getString("id")
-                val dbSalle = _db.get("salle", idSalle)
+                val uidSalle = _ws.path().getString("uid")
+                val dbSalle = _db.get("salle", uidSalle)
 
                 if (dbSalle == null) {
-                    _log.warn("Salle invalide \${idSalle}.")
+                    _log.warn("Salle invalide \${uidSalle}.")
                     _ws.close()
                 } else {
                     _log.info("Nouvelle session WebSocket : \${_ws.sessionId()}")
@@ -280,11 +258,11 @@ Le service configuré avec la méthode `POST` est exécuté lorsqu'une nouvelle 
         {
             lang: 'groovy',
             code: `
-                def idSalle = _ws.path().getString("id")
-                def dbSalle = _db.get("salle", idSalle)
+                def uidSalle = _ws.path().getString("uid")
+                def dbSalle = _db.get("salle", uidSalle)
 
                 if (dbSalle == null) {
-                    _log.warn("Salle invalide \${idSalle}.")
+                    _log.warn("Salle invalide \${uidSalle}.")
                     _ws.close()
                 } else {
                     _log.info("Nouvelle session WebSocket : \${_ws.sessionId()}")
@@ -294,12 +272,11 @@ Le service configuré avec la méthode `POST` est exécuté lorsqu'une nouvelle 
     ]}
 />
 
-> Normalement, `_ws.sessionId()` est enregistré dans la base de données pour être utilisé dans de futures communications.
+> Normalement, le `_ws.sessionId()` est enregistré dans la base de données pour être utilisé dans de futures communications.
 
 ### PUT = nouveau message
 
-Si le message reçu n'est pas au format JSON, ou s'il s'agit d'un JSON qui n'est pas au format pris en charge pour l'exécution de
-un service spécifique (`service`), alors ce service générique sera exécuté :
+Si le message reçu n'est pas au format JSON, ou s'il s'agit d'un JSON qui n'est pas au format pris en charge pour l'exécution d'un service spécifique (`service`), alors ce service générique sera exécuté :
 
 <PolyglotCode
     file="server/services/ws/salle/put"
@@ -377,14 +354,11 @@ Est exécuté lorsqu'une déconnexion du navigateur du client se produit.
     ]}
 />
 
-
 ### GET = flux continu de messages
 
-Démarre l'exécution lorsqu'une nouvelle connexion du navigateur du client se produit, et l'exécution est maintenue jusqu'à la fin
-de la connexion.
+Démarre l'exécution lorsqu'une nouvelle connexion du navigateur du client se produit, et l'exécution est maintenue jusqu'à la fin de la connexion.
 
-C'est-à-dire que le service pour la méthode HTTP `GET` reçoit les messages provenant du client continuellement
-en `stream`, c'est-à-dire qu'il s'agit d'un flux ouvert et continu de messages qui peut autant recevoir qu'envoyer.
+Autrement dit, le service pour la méthode HTTP `GET` reçoit continuellement les messages provenant du client en `stream`, c'est-à-dire qu'il s'agit d'un flux ouvert et continu de messages qui peut à la fois recevoir et envoyer.
 
 <PolyglotCode
     file="server/services/ws/salle/get"
@@ -434,54 +408,45 @@ en `stream`, c'est-à-dire qu'il s'agit d'un flux ouvert et continu de messages 
     ]}
 />
 
-Le `if` avec `_ws.isStream()` fait en sorte de vérifier s'il s'agit vraiment d'une requête interne gérée par WebSocket pour
-réaliser le stream.
+Le `if` avec `_ws.isStream()` fait en sorte de vérifier s'il s'agit bien d'une requête interne gérée par WebSocket pour réaliser le stream.
 
-Dans le `while` avec `_ws.awaitStream()`, il attend qu'un nouveau flux de message arrive, c'est-à-dire qu'il attend
-l'arrivée d'un nouveau message. Dès qu'il y a un nouveau message, le code interne du `while` est exécuté.
+Dans le `while` avec `_ws.awaitStream()`, il attend qu'un nouveau flux de message arrive, c'est-à-dire qu'il attend l'arrivée d'un nouveau message. Dès qu'il y a un nouveau message, le code interne du `while` est exécuté.
 
-> `_ws.awaitStream()` fonctionne comme une boucle infinie en attente d'un nouveau message.
+> Le `_ws.awaitStream()` fonctionne comme une boucle infinie en attente d'un nouveau message.
 
-Ensuite, dans les `ifs` internes du `while`, le type de message est vérifié, si le message est binaire ou texte, dans les deux
-cas le contenu de ces messages est présenté dans les logs. Notez que n'importe quel format de message peut être
-utilisé, pouvant être traité de n'importe quelle manière qui soit pratique.
+Ensuite, dans les `ifs` internes du `while`, le type de message est vérifié, si le message est binaire ou texte, dans les deux cas le contenu de ces messages est présenté dans les logs. Remarquez que n'importe quel format de message peut être utilisé, pouvant être traité de n'importe quelle manière qui soit convenable.
 
-Finalement, dans `_ws.sendText`, un message de réponse est envoyé au client, confirmant la réception.
+Enfin, dans `_ws.sendText`, un message de réponse est envoyé au client, confirmant la réception.
 
 > Chaque exécution du service `GET` sera une connexion active.
 
-Lorsque la connexion à l'endpoint WebSocket est terminée, l'exécution de ce service se termine
-en interne.
+Lorsque la connexion avec l'endpoint WebSocket est terminée, alors l'exécution de ce service est terminée en interne.
 
 ## Communication
 
 ### sendService
 
-Exécute le service et envoie la sortie générée à un client spécifique connecté via WebSocket, utilise l'ID de
-connexion du client (`sessionId`).
+Exécute le service et envoie la sortie générée à un client spécifique connecté via WebSocket, utilise l'ID de connexion du client (`sessionId`).
 
 #### Exemple d'appel de service
 
-Le code ci-dessous peut être utilisé dans le service de méthode PUT de l'endpoint (`service`), notez que
-`_ws.sessionId()` est utilisé, ce qui obtient l'ID de la session de connexion du client, si l'identifiant de session
-est enregistré dans la base de données, `sendService` pourrait être exécuté dans n'importe quel autre service à tout
-moment.
+Le code ci-dessous peut être utilisé dans le service de méthode PUT de l'endpoint (`service`), remarquez que `_ws.sessionId()` est utilisé pour obtenir l'ID de la session de connexion du client ; si l'identifiant de session est enregistré dans la base de données, `sendService` pourrait être exécuté dans n'importe quel autre service à n'importe quel moment.
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const id = _ws.path().getString("id")
+                const uid = _ws.path().getString("uid")
                 _ws.sendService(
                     _ws.sessionId(), // Identification de la connexion WebSocket actuelle.
                     _val.map() // Paramétrage du service qui sera exécuté.
                         .set("method", "POST")
-                        .set("service", "/services/salle/participant/new")
+                        .set("service", "/services/salle/participant/nouveau")
                         .set(
-                            "data", // Paramètres qui seront passés au service et reçus via _req.
+                            "data", // Paramètres qui seront transmis au service et reçus via _req.
                             _val.map()
-                                .set("id", id)
+                                .set("uid", uid)
                         )
                 )
             `
@@ -489,25 +454,24 @@ moment.
     ]}
 />
 
-C'est-à-dire que dans la configuration le `path` configuré dans l'`endpoint` a la valeur `/{id}`, ce qui permet au client
-de se connecter via l'adresse publique :
+Autrement dit, dans la configuration, le `path` configuré dans l'`endpoint` a la valeur `/{uid}`, ce qui permet au client de se connecter via l'adresse publique :
 
 - `/ws/salle/d641f095-30eb-4025-a39c-b2e3e497eab7`
 
-Alors la valeur du `id` sera `d641f095-30eb-4025-a39c-b2e3e497eab7`.
+Donc la valeur de `uid` sera `d641f095-30eb-4025-a39c-b2e3e497eab7`.
 
-Ensuite, le service qui se trouve à l'URL `/services/salle/participant/new` sera exécuté et la valeur du `id` est passée.
+Ensuite, le service situé à l'URL `/services/salle/participant/nouveau` sera exécuté et la valeur de `uid` est transmise.
 
-Le `id` peut être obtenu dans le code du service exécuté, comme un paramètre de la requête HTTP, voir un exemple :
+Le `uid` peut être obtenu dans le code du service exécuté, comme un paramètre de la requête HTTP, voir un exemple :
 
 <PolyglotCode
-    file="/server/services/salle/participant/new"
+    file="/server/services/salle/participant/nouveau"
     codes={[
         {
             lang: 'javascript',
             code: `
-                // L'ID envoyé est obtenu directement dans la requête.
-                const id = _req.getString('id')
+                // L'UID envoyé est obtenu directement dans la requête.
+                const uid = _req.getString('uid')
             `
         },
     ]}
@@ -515,15 +479,14 @@ Le `id` peut être obtenu dans le code du service exécuté, comme un paramètre
 
 ### broadcastService
 
-Pour réaliser le broadcast, il faut le nom de l'endpoint WebSocket, définir le chemin (`path`) si applicable, et le
-service qui sera exécuté.
+Pour réaliser le broadcast, il faut le nom de l'endpoint WebSocket, définir le chemin (`path`) si applicable, et le service qui sera exécuté.
 
 > La sortie du service sera envoyée à toutes les connexions actives sur l'`endpoint` spécifié.
 
-#### Exemple de Broadcast
+#### Exemple de broadcast
 
 <PolyglotCode
-    file="/server/services/salle/participant/new"
+    file="/server/services/salle/participant/nouveau"
     codes={[
         {
             lang: 'javascript',
@@ -532,19 +495,18 @@ service qui sera exécuté.
                     "admin", // Nom de l'endpoint WebSocket.
                     "/", // Chemin configuré dans l'endpoint (path).
                     _val.map() // Paramétrage du service qui sera exécuté.
-                        .set("service", "/services/salle/participant/list")
+                        .set("service", "/services/salle/participant/liste")
                 )
             `
         },
     ]}
 />
 
-Dans cet exemple, le contenu de sortie généré par le service `salle/participant/list` sera envoyé à tous ceux qui sont
-connectés à l'endpoint `admin`.
+Dans cet exemple, le contenu de la sortie générée par le service `salle/participant/liste` sera envoyé à tous ceux qui sont connectés à l'endpoint `admin`.
 
 ## WS Client - NPM
 
-Pour faciliter l'intégration avec le frontend, le module NPM est mis à disposition :
+Pour réaliser facilement l'intégration avec le frontend, le module NPM est mis à disposition :
 
 - https://www.npmjs.com/package/@netuno/ws-client
 
@@ -574,12 +536,11 @@ _ws.config({
 });
 ```
 
-> Assurez-vous que l'URL combine correctement les valeurs configurées dans l'endpoint pour `host` et `public` + `path`,
-> de la manière suivante :
+> Assurez-vous que l'URL combine correctement les valeurs configurées dans l'endpoint pour `host` et `public` + `path`, de la manière suivante :
 >
 > `ws://[host]:9000[public][path]`
 >
-> Quant à l'URL de production avec l'intégration de NGINX, proxy inverse et SSL, elle sera probablement ainsi :
+> Quant à l'URL de production avec l'intégration NGINX, proxy inverse et SSL, elle sera probablement ainsi :
 >
 > `wss://[host][public][path]`
 
@@ -591,15 +552,13 @@ _ws.connect();
 
 ### Exécuter un service via WebSocket
 
-Nous pouvons exécuter des services de l'API REST via la connexion WebSocket, cela signifie qu'aucune
-requête HTTP ne sera effectuée, donc les données de la requête sont envoyées comme message, et la réponse du service est obtenue comme un
-message reçu en retour.
+Nous pouvons exécuter des services de l'API REST via la connexion WebSocket, cela signifie qu'aucune requête HTTP ne sera réalisée, donc les données de la requête sont envoyées comme message, et la réponse du service est obtenue comme un message reçu en retour.
 
 Avant de commencer, nous devons créer un observateur de la réponse du service, par exemple :
 
 ```js
-const listenerRef = _ws.addListener({
-    method: 'GET', // Optionnel ; omettre pour écouter toutes les méthodes.
+const refEcouteur = _ws.addListener({
+    method: 'GET', // Optionnel ; omettez pour écouter toutes les méthodes.
     service: 'chemin/de/mon/service/ici',
     success: (data) => {
         console.log('Réponse du service exécuté via WebSocket :', data);
@@ -610,8 +569,7 @@ const listenerRef = _ws.addListener({
 });
 ```
 
-Maintenant, nous pouvons envoyer une requête d'exécution du service, sachant que la réponse du service sera obtenue dans l'observateur
-créé ci-dessus, nous exécutons le service ainsi :
+Maintenant, nous pouvons envoyer une demande d'exécution du service, sachant que la réponse du service sera obtenue dans l'observateur créé ci-dessus, nous exécutons le service ainsi :
 
 ```js
 _ws.sendService({
@@ -626,7 +584,7 @@ _ws.sendService({
 Pour supprimer l'observateur ajouté, utilisez :
 
 ```js
-_ws.removeListener(listenerRef);
+_ws.removeListener(refEcouteur);
 ```
 
 Et pour fermer la connexion WebSocket :
@@ -654,16 +612,11 @@ Dans NGINX, le proxy inverse peut être configuré de cette façon :
     }
 ```
 
-> À la ligne 3, où est défini le `Host`, la partie `mon-app` doit être ajustée au nom correspondant de
-> l'application Netuno. S'il y a `_` dans le nom de l'application, alors dans l'adresse du `Host` il sera remplacé par `-`,
-> par exemple, l'application `mon_app` aura la valeur du `Host` ainsi `mon-app.local.netu.no`.
+> Sur la ligne 3 où est défini le `Host`, il faut ajuster la partie `mon-app` pour le nom correspondant de l'application Netuno. Si le nom de l'application contient `_`, alors dans l'adresse du `Host` il sera remplacé par `-`, par exemple, l'application `mon_app` aura la valeur du `Host` ainsi : `mon-app.local.netu.no`.
 
 Redémarrez NGINX pour que la configuration prenne effet.
 
-Les domaines configurés dans NGINX, c'est-à-dire le paramétrage du `server_name`, n'ont pas besoin d'être dans les hôtes de
-l'endpoint dans l'application Netuno, car dans la configuration de proxy ci-dessus, le Host dans l'en-tête HTTP
-est modifié vers une adresse standard qui est déjà configurée automatiquement par Netuno toujours, tant que le préfixe avec le nom de
-l'application est correct.
+Les domaines configurés dans NGINX, c'est-à-dire le paramétrage du `server_name`, n'ont pas besoin d'être dans les hôtes de l'endpoint dans l'application Netuno, car dans la configuration de proxy ci-dessus, le Host dans l'en-tête HTTP est modifié pour une adresse standard qui est déjà configurée automatiquement par Netuno toujours, tant que le préfixe avec le nom de l'application est correct.
 
 Si le serveur NGINX utilise le port 80, alors l'URL finale sera :
 

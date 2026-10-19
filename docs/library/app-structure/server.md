@@ -4,14 +4,14 @@ title: Server
 sidebar_label: Server
 ---
 
-Backend and API Development.
+Backend and API development.
 
 ## Server Folder
 
-The `📂 server` folder contains a set of files and folders that make up the application's backend.
+The `📂 server` folder contains a set of files and folders that form the application's backend.
 
-Everything in the `📂 server` folder is used for backend server processing, such as integrations, API,
-database, security and authentication, Cron Jobs, and much more.
+Everything in the `📂 server` folder is used in backend server processing, such as integrations, API,
+database, security and authentication, Cron Jobs, among many others.
 
 ## Folder Structure
 
@@ -53,94 +53,116 @@ The `📂 server` folder has the following structure:
 
 ## Actions
 
-In `📂 actions`, you can add custom actions (_hooks_) to the CRUD operations of forms
-automatically generated for the back office. Depending on the data structure, many data interventions can be
-performed here.
+In `📂 actions`, custom actions tailored (_hooks_) can be added to the CRUD operations of the forms 
+automatically generated for the backoffice; depending on the data structure, significant data handling can be
+done here.
 
-For example, when reviewing a customer, it is necessary to delete all their orders, or when creating a new product, it must
+For example, when deleting a customer, it is necessary to remove all their orders, or when creating a new product it must 
 be integrated with another system. In short, any development directly related to data can be done
 here.
 
-Actions are inspired by database triggers, but at the code execution level.
+Actions are inspired by database `triggers`, but at the code execution level.
 
-Therefore, specific operations can be programmed for creating, modifying, and deleting data.
+Therefore, specific operations can be programmed for creating, updating, and deleting data.
 
 ## Components
 
-`📂 components` are used to define custom field types in back office forms, which
-can perform data manipulation themselves.
+`📂 components` is used to define custom field types in backoffice forms, which 
+can perform their own data manipulation.
 
-Components can be created through scripts to provide a new, specific field type in the application.
+Components can be created through scripts to provide a new specific field type in the application.
 
 ## Core
 
 The `📂 core` folder allows code injection into the HTTP request processing flow.
 
-It is also used to share code between different services and others.
+It is also used to share code among the various services and others.
 
-`_config.js` is executed after the configuration is loaded for each HTTP request. It is executed after the environment configuration script found in the application's `📂 config` folder.
+`_config.js` is executed after the configuration is loaded on each HTTP request; it is executed after the environment 
+configuration script located in the application's `📂 config` folder.
 
-`_init.js` is used to inject instructions when the application is initialized for the first time.
+`_init.js` is used to inject some instruction when the application is initialized for the first time.
 
 ### HTTP Request Processing
 
-The corresponding scripts are executed in the HTTP request processing flow for any URL in the application:
+In the HTTP request processing flow for any application URL, the respective scripts are executed:
 
-- `_request_start.js` is executed when the HTTP request arrives at the Netuno server.
+- `_request_start.js` is executed when the HTTP request reaches the Netuno server.
 - `_request_url.js` is executed when the URL is processed by Netuno; the URL can be changed to another destination.
-- `_request_close.js` is executed when the HTTP request response is closed. - `_request_end.js` is executed when the HTTP request is definitively completed.
-- `_request_error.js` is executed when an error occurs while processing the HTTP request.
+- `_request_close.js` is executed when the HTTP request response is closed.
+- `_request_end.js` is executed when the HTTP request is definitively completed.
+- `_request_error.js` is executed when an error occurs in HTTP request processing.
 
-### API Service Processing
+### API Services Processing
 
-The following scripts are executed in the processing flow of any application's API service:
+In the processing flow of any application API service, the following scripts are executed:
 
-- `_service_config.js` is executed before starting the service execution. It is used to define the service execution settings, among other things. It can be used to define whether or not the service can be executed, i.e., a security control over access to the API service.
-- `_service_start.js` is executed as soon as a service begins processing.
-- `_service_end.js` is executed after a service has finished processing.
+- `_service_config.js` is executed before starting the service execution; it is used to define the service execution 
+settings, among other things. It can define whether or not the service can be executed, that is, an 
+access security control for the API service.
+- `_service_start.js` is executed as soon as a service starts being processed.
+- `_service_end.js` is executed after the processing of a service is finished.
 - `_service_error.js` is executed when an error occurs while processing a service.
 
 ## Services - API
 
-The services that make up the application API are created in the `📂 services` folder.
+It is in the `📂 services` folder that the services that make up the application API are created. 
 
-Services can be written in various languages: Javascript, Python, Java, Kotlin, Ruby, or Groovy.
+Services can be written in various languages: JavaScript, Python, Java, Kotlin, Ruby, or Groovy.
 
-Since Netuno is polyglot, any script file can be modified to another supported programming language;
-the file extension simply matches the language.
+Since Netuno is polyglot, any script file can be changed to another supported programming language;
+the files just need to have the extension corresponding to the language.
 
-No additional configuration is required depending on the programming language used; simply create the service file with the correct extension corresponding to the programming language.
+No additional configuration is required depending on the programming language used; you just need to create the service 
+file with the correct extension corresponding to the programming language.
 
 ## Setup
 
-The `📂 setup` folder contains the code automatically generated by the Netuno engine that defines the database schemas.
+The `📂 setup` folder contains the code automatically generated by the Netuno engine that defines the database 
+schemas, and it is also where we can place the data loading that is essential for the application to work.
 
-It is also where we can place the data loading, which is essential for the application to function.
+The `_start.js` script is executed before starting the database build process.
 
-The `_start.js` script is executed before the database construction process begins.
+The `_end.js` script is executed after the database build process is finished.
 
-The `_end.js` script is executed after the database construction process is complete.
-
-As the data structure is built, Netuno automatically creates the code in the `📂 setup` folder
-necessary for the entire data structure to be recreated in a new database, or to recreate any missing code in
+Based on the construction of the data structure, Netuno automatically creates here in the `📂 setup` folder the code 
+necessary for the entire data structure to be recreated in a new database, or to recreate anything missing in 
 another database where the application may eventually run.
 
-## Templates
+ ## Templates
 
-The `📂 templates` folder contains the HTML content of the application's backoffice pages, which are generated by the Netuno server.
+The `📂 templates` folder contains the HTML content of the application's backoffice pages, which are generated by the Netuno
+server.
 
-The `📂 dev` folder contains the `dashboard.html` file, which allows you to change the workspace in developer
-build mode.
+The `📂 dev` folder contains the `dashboard.html` file, which allows changing the workspace in the developer 
+construction mode.
 
-The `dashboard.html` folder, located in the templates root, contains the HTML for the general backoffice workspace.
+The `dashboard.html` at the root of the templates contains the HTML of the general backoffice workspace.
 
 ### Native Templates
 
-In the `📂 _` folder, any general template can be replaced, meaning Netuno's default templates can be
+In the `📂 _` folder, any general template can be replaced, meaning Netuno's default templates can be 
 changed.
 
 - [Here are Netuno's native templates.](https://github.com/netuno-org/platform/tree/main/bundle/base/web/netuno/templates/sbadmin)
 
-If the folder and/or file names match those of the native templates within this folder, then the template found in this folder will be used instead of the native template.
+If the name of folders and/or files matches those of the native templates inside this folder, then the template 
+located in this folder is used instead of the native template.
 
-In other words, simply replicate the same structure of the native template within the `📂 _` folder to replace it.
+In other words, you just need to replicate the same structure as the native template inside the `📂 _` folder to replace it.
+
+### Scripts
+
+The script templates inject JavaScript code files at the end of the pages for the following purpose:
+
+1. `scripts.html` add JavaScript code at the end of the **backoffice** page.
+2. `scripts_dev.html` add JavaScript code at the end of the **developer construction area** page.
+3. `scripts_login.html` add JavaScript code at the end of the **login** page.
+
+### Styles
+
+The style templates inject style files at the beginning of the pages for the following purpose:
+
+1. `styles.html` add CSS code at the beginning of the **backoffice** page.
+2. `styles_dev.html` add CSS code at the beginning of the **developer construction area** page.
+3. `styles_login.html` add CSS code at the beginning of the **login** page.

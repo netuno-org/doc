@@ -5,7 +5,7 @@ title: Configuration
 sidebar_label: Configuration
 ---
 
-> Le processus ci-dessous est destiné aux environnements de développement Linux.
+> Le processus ci-dessous est orienté pour les environnements de développement Linux.
 
 ## 1. Nom de l'application
 
@@ -19,25 +19,25 @@ Copie le fichier de configuration d'exemple, depuis la racine de l'application :
 cp config/sample.json config/_development.json
 ```
 
-Pour un environnement de production, utilisez plutôt :
+Pour un environnement de production, utilise plutôt :
 
 ```
 cp config/sample.json config/_production.json
 ```
 
-Ensuite, modifiez la propriété `name` à la racine du JSON pour le nom de l'application choisi à l'étape 1.
+Ensuite, modifie la propriété `name` à la racine du JSON pour le nom de l'application choisi à l'étape 1.
 
-> Les fichiers `config/_development.js` et `config/_production.js` existent déjà dans le projet et servent pour des configurations dynamiques/programmatiques — normalement, vous n'avez pas besoin d'y toucher ; ce qui s'édite, c'est le `.json` correspondant.
+> Les fichiers `config/_development.js` et `config/_production.js` existent déjà dans le projet et servent à des configurations dynamiques/programmatiques — normalement, tu n'as pas besoin d'y toucher ; ce qui s'édite, c'est le `.json` correspondant.
 
 ## 3. Base de données
 
-CLUAR a besoin d'une connexion à une base de données PostgreSQL. [Apprenez à configurer ici](https://doc.netuno.org/pt/docs/academy/server/database/psql/).
+Le CLUAR a besoin d'une connexion à une base de données PostgreSQL. [Apprends à configurer ici](https://doc.netuno.org/pt/docs/academy/server/database/psql/).
 
-Dans `config/_development.json` (ou `_production.json`), localisez `db.default` et remplacez par les données de votre base de données :
+Dans `config/_development.json` (ou `_production.json`), localise `db.default` et remplace par les données de ta base de données :
 
 ```json
 "db": {"default": {
-    "password": "Votre-Mot-De-Passe-SeCr3t-Ici",
+    "password": "Votre-BD-SeCr3t-Ic1",
     "engine": "pg",
     "port": "5432",
     "host": "localhost",
@@ -48,13 +48,13 @@ Dans `config/_development.json` (ou `_production.json`), localisez `db.default` 
 
 ## 4. Secret JWT
 
-Dans `auth.jwt.secret`, définissez un secret aléatoire de **32 caractères**, utilisé pour garantir la sécurité de l'authentification :
+Dans `auth.jwt.secret`, définis un secret aléatoire de **32 caractères**, utilisé pour garantir la sécurité de l'authentification :
 
 ```json
 "auth": {
     "jwt": {
         "enabled": true,
-        "secret": "CeSecretDoitAvoir32Caracteres!!!",
+        "secret": "CeSecretDoitAvoir32Caractères!!!",
         "expires": {
             "access": 1440,
             "refresh": 1440
@@ -67,7 +67,7 @@ Dans `auth.jwt.secret`, définissez un secret aléatoire de **32 caractères**, 
 
 ## 5. Altcha (alternative au reCAPTCHA)
 
-CLUAR prend en charge [Altcha](https://altcha.org/) — une alternative au Google reCAPTCHA basée sur une preuve de travail (*proof-of-work*), sans dépendre de services externes ni collecter de données du visiteur. Il est utilisé à la connexion et à l'inscription des utilisateurs.
+Le CLUAR prend en charge [Altcha](https://altcha.org/) — une alternative au Google reCAPTCHA basée sur une preuve de travail (*proof-of-work*), sans dépendre de services externes ni collecter de données du visiteur. Il est utilisé à la connexion et à l'inscription des utilisateurs.
 
 Il existe deux interrupteurs, à des endroits différents du `.json` :
 
@@ -82,8 +82,8 @@ Il existe deux interrupteurs, à des endroits différents du `.json` :
 }
 ```
 
-- `auth.altcha.enabled` — active la vérification d'Altcha côté serveur (Netuno). Sans cela à `true`, Altcha n'est pas validé, même s'il apparaît sur le site web.
-- `auth.altcha.admin.enabled` — active Altcha également à la connexion du **backoffice de Netuno** (port `9000`), séparé de la connexion du site web.
+- `auth.altcha.enabled` — active la vérification d'Altcha côté serveur (Netuno). Sans le mettre à `true`, Altcha n'est pas validé, même s'il apparaît sur le site web.
+- `auth.altcha.admin.enabled` — active aussi Altcha à la connexion du **back-office de Netuno** (port `9000`), séparé de la connexion du site web.
 
 ```json
 "settings": {
@@ -104,18 +104,18 @@ Il existe deux interrupteurs, à des endroits différents du `.json` :
 
 - `settings.cluar.website.auth.altcha` — reflète la même option côté site web : contrôle si le widget Altcha est affiché dans le formulaire de connexion/inscription du site.
 
-> Pour qu'Altcha fonctionne, activez `enabled: true` **des deux côtés** — le serveur doit valider, et le site web doit afficher le widget.
+> Pour qu'Altcha fonctionne, active `enabled: true` **des deux côtés** — le serveur doit valider, et le site web doit afficher le widget.
 
-## 6. Paramètres de CLUAR
+## 6. Paramètres du CLUAR
 
-Dans `settings.cluar`, ajustez la configuration du site web :
+Dans `settings.cluar`, ajuste la configuration du site web :
 
 ```json
 "settings": {
     "cluar": {
         "website": {
             "url": "http://localhost:3000",
-            "name": "Nom du site",
+            "name": "Nom du site web",
             "analytics": null,
             "mapbox": {
                 "dark": false,
@@ -157,8 +157,8 @@ Le site web peut démarrer automatiquement avec le serveur Netuno, via la liste 
 ]
 ```
 
-Il suffit de mettre `enabled` à `true` dans l'entrée avec `"path": "website"`. Ainsi, en exécutant `./netuno server app=cluar`, le site web démarre en même temps sans que vous ayez besoin de le lancer manuellement dans un autre terminal.
+Il suffit de mettre `enabled` à `true` dans l'entrée avec `"path": "website"`. Ainsi, en exécutant `./netuno server app=cluar`, le site web démarre en même temps, sans que tu aies besoin de le lancer manuellement dans un autre terminal.
 
-## Prochaine étape
+## Étape suivante
 
-Une fois l'application configurée, passez à [Exécution](/docs/academy/cluar/execution).
+Une fois l'application configurée, passe à [Exécution](/docs/academy/cluar/execution).

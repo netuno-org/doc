@@ -1,29 +1,29 @@
 ---
 sidebar_position: 2
 id: advanced
-title: Installation avancée
-sidebar_label: Installation avancée
+title: Installation Avancée
+sidebar_label: Installation Avancée
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Installation avancée
+# Installation Avancée
 
 Si vous rencontrez un problème avec l'installation rapide via script, ou si vous souhaitez mieux comprendre comment fonctionne l'installation de Netuno, ou pour toute autre raison, vous pouvez effectuer l'installation manuelle.
 
 Choisissez la version souhaitée. La sélection effectuée ici s'appliquera à tous les blocs de commande de cette page.
 
 <Tabs groupId="version">
-  <TabItem value="stable" label="Version stable" default>
+  <TabItem value="stable" label="Version Stable" default>
 
-La **Version stable** est l'édition homologuée de Netuno. Elle a passé des tests rigoureux et est totalement prête pour une utilisation en environnements de production.
+La **Version Stable** est l'édition homologuée de Netuno. Elle a passé des tests rigoureux et est totalement prête à être utilisée dans des environnements de production.
 
 </TabItem>
-  <TabItem value="testing" label="Version de test">
+  <TabItem value="testing" label="Version en Test">
 
 :::danger NE PAS UTILISER EN PRODUCTION
-La **Version de test** contient les fonctionnalités les plus récentes et les implémentations en cours. Parce qu'elle est expérimentale, elle peut présenter des instabilités. Nous recommandons son utilisation uniquement pour découvrir de nouvelles fonctionnalités, effectuer des tests ou contribuer à l'écosystème de la plateforme.
+La **Version en Test** contient les fonctionnalités les plus récentes et les implémentations en cours. Comme elle est expérimentale, elle peut présenter des instabilités. Nous recommandons son utilisation uniquement pour découvrir de nouvelles fonctionnalités, effectuer des tests ou contribuer à l'écosystème de la plateforme.
 :::
 
   </TabItem>
@@ -35,16 +35,16 @@ Avant de commencer, vérifiez ce que vous devez avoir installé sur votre ordina
 
 - **Java** *(Uniquement pour l'installateur)*
 
-Il est nécessaire d'avoir **Java** préalablement installé sur votre système d'exploitation. Il sera utilisé **exclusivement** pour exécuter le script initial d'installation de Netuno.
+Il est nécessaire d'avoir **Java** préalablement installé sur votre système d'exploitation. Il sera utilisé **exclusivement** pour exécuter le script d'installation initial de Netuno.
 
-- **GraalVM** *(Installation automatique)*
+- **GraalVM** *(Installation Automatique)*
 
-Pendant l'installation, le moteur **GraalVM** est téléchargé et configuré automatiquement dans le dossier même de Netuno. À partir de ce moment, le Java de GraalVM isolé sera utilisé pour exécuter la plateforme, garantissant stabilité et haute performance sans interférer avec les configurations globales de votre machine.
+Pendant l'installation, le moteur **GraalVM** est téléchargé et configuré automatiquement dans le dossier de Netuno lui-même. À partir de ce moment, le Java de GraalVM isolé sera utilisé pour exécuter la plateforme, garantissant stabilité et haute performance sans interférer avec les configurations globales de votre machine.
 
 Pour en savoir plus sur la technologie, consultez : [GraalVM](https://www.graalvm.org/).
 
-:::info Les prérequis Frontend sont optionnels
-L'installation d'outils frontend (comme Node.js, NPM ou Yarn) est totalement optionnelle. Vous ne devrez les configurer que si votre objectif est de développer des interfaces avancées en mode full-stack.
+:::info Les Prérequis Frontend sont Optionnels
+L'installation d'outils frontend (comme Node.js, NPM ou Yarn) est totalement optionnelle. Vous n'aurez besoin de les configurer que si votre objectif est de développer des interfaces avancées en mode full-stack.
 :::
 
 ### Backend - Java
@@ -57,7 +57,7 @@ Vérifiez si Java est déjà installé en exécutant la commande ci-dessous dans
 java -version
 ```
 
-S'il n'est pas installé, nous recommandons l'installation de **Java open source** :
+Si ce n'est pas installé, nous recommandons l'installation de **Java open source** :
 
 - Windows et macOS : [Java OpenJDK Eclipse Temurin](https://adoptium.net/pt-BR)
 
@@ -73,18 +73,18 @@ Pour développer des interfaces utilisateur (UI / Frontend), nous recommandons l
 
 #### Pourquoi utiliser Bun ?
 
-**Bun** est une alternative moderne et hautement optimisée à Node.js. Il se distingue dans l'environnement Netuno en offrant :
+**Bun** est une alternative moderne et hautement optimisée à Node.js. Il se démarque dans l'environnement Netuno en offrant :
 
-- **Haute performance :** Exécution et installation de dépendances visiblement plus rapides.
-- **Productivité :** Meilleures performances dans le flux quotidien de développement d'interfaces.
-- **Intégration native :** Tous les projets d'exemple et templates de Netuno sont déjà préconfigurés pour fonctionner avec Bun.
+- **Haute Performance :** Exécution et installation de dépendances visiblement plus rapides.
+- **Productivité :** Meilleure performance dans le flux quotidien de développement d'interfaces.
+- **Intégration Native :** Tous les projets d'exemple et templates de Netuno sont déjà préconfigurés pour fonctionner avec Bun.
 
 Consultez le guide : [Installation de Bun](/docs/academy/website/bun)
 
 Netuno ne fige pas vos choix technologiques. Si vous préférez, **il est possible d'utiliser Node.js avec NPM, PNPM, Yarn** ou tout autre gestionnaire de paquets. Le choix de la stack frontend est entièrement à votre discrétion.
 
 :::tip MAINTENEZ LES OUTILS À JOUR
-Quelle que soit la technologie choisie, utilisez toujours les versions les plus récentes pour garantir compatibilité, sécurité et performance.
+Indépendamment de la technologie choisie, utilisez toujours les versions les plus récentes pour garantir compatibilité, sécurité et performance.
 :::
 
 ## Linux ou macOS
@@ -109,7 +109,7 @@ mkdir -p netuno && cd netuno
 **2. Téléchargez l'installateur** (choisissez une seule méthode) :
 
 <Tabs groupId="version">
-  <TabItem value="stable" label="Version stable" default>
+  <TabItem value="stable" label="Version Stable" default>
 
 **Avec cURL :**
 ```bash
@@ -122,7 +122,7 @@ wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setu
 ```
 
   </TabItem>
-  <TabItem value="testing" label="Version de test">
+  <TabItem value="testing" label="Version en Test">
 
 **Avec cURL :**
 ```bash
@@ -140,14 +140,14 @@ wget https://github.com/netuno-org/platform/releases/download/testing/netuno-set
 **3. Exécutez l'installation :**
 
 <Tabs groupId="version">
-  <TabItem value="stable" label="Version stable" default>
+  <TabItem value="stable" label="Version Stable" default>
 
 ```bash
 java -jar netuno-setup.jar install
 ```
 
   </TabItem>
-  <TabItem value="testing" label="Version de test">
+  <TabItem value="testing" label="Version en Test">
 
 ```bash
 java -jar netuno-setup.jar install version=testing
@@ -175,7 +175,7 @@ Nous utiliserons **PowerShell** pour effectuer le téléchargement et l'installa
 **1. Créez le dossier, accédez-y et téléchargez l'installateur**. Copiez le bloc complet et appuyez sur Entrée :
 
 <Tabs groupId="version">
-  <TabItem value="stable" label="Version stable" default>
+  <TabItem value="stable" label="Version Stable" default>
 
 ```powershell
 md netuno; cd netuno
@@ -183,7 +183,7 @@ Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download
 ```
 
   </TabItem>
-  <TabItem value="testing" label="Version de test">
+  <TabItem value="testing" label="Version en Test">
 
 ```powershell
 md netuno; cd netuno
@@ -196,14 +196,14 @@ Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download
 **2. Exécutez l'installation :**
 
 <Tabs groupId="version">
-  <TabItem value="stable" label="Version stable" default>
+  <TabItem value="stable" label="Version Stable" default>
 
 ```powershell
 java -jar netuno-setup.jar install
 ```
 
   </TabItem>
-  <TabItem value="testing" label="Version de test">
+  <TabItem value="testing" label="Version en Test">
 
 ```powershell
 java -jar netuno-setup.jar install version=testing
@@ -213,10 +213,10 @@ java -jar netuno-setup.jar install version=testing
 </Tabs>
 
 :::caution ATTENTION
-L'installation standard ne nécessite généralement pas de privilèges élevés. Cependant, si vous recevez un message "Accès refusé", fermez PowerShell, rouvrez-le en tant qu'**Administrateur** et exécutez à nouveau la commande.
+L'installation standard ne nécessite généralement pas de privilèges élevés. Cependant, si vous recevez un message "Accès Refusé", fermez PowerShell, rouvrez-le en tant qu'**Administrateur** et exécutez à nouveau la commande.
 :::
 
-## Recommencer à zéro
+## Recommencer à Zéro
 
 Pour nettoyer l'environnement et recommencer à zéro :
 

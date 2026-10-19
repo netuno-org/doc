@@ -6,7 +6,7 @@ sidebar_label: MariaDB (MySQL)
 
 ## Introducción
 
-<a href="https://mariadb.org/" target="_blank">MariaDB</a> es la innovadora base de datos relacional de código abierto compatible con **MySQL**.
+<a href="https://mariadb.org/" target="_blank">MariaDB</a> es la base de datos relacional innovadora de código abierto compatible con **MySQL**.
 
 ## Instalación
 
@@ -24,7 +24,7 @@ sudo apt install mariadb-server
 
 Descargue e instale MariaDB:
 
-- <a href="https://mariadb.com/downloads/" target="_blank">Descarga de MariaDB</a>
+- <a href="https://mariadb.com/downloads/" target="_blank">MariaDB Download</a>
 
 ## Cliente
 
@@ -46,9 +46,9 @@ Abra la aplicación `Command Prompt MariaDB` y ejecute:
 mariadb -u root -p
 ```
 
-O busque `MySQL Client` o `MariaDB Client`.
+O bien busque `MySQL Client` o `MariaDB Client`.
 
-## Crear la base de datos
+## Crear la Base de Datos
 
 Ejecute el siguiente comando conectado al cliente de MariaDB:
 
@@ -56,18 +56,18 @@ Ejecute el siguiente comando conectado al cliente de MariaDB:
 CREATE DATABASE app_bd
 ```
 
-## Crear usuario
+## Crear Usuario
 
 Ejecute el siguiente comando conectado al cliente de MariaDB:
 
 ```sql
-CREATE USER 'app_usuario'@'localhost' IDENTIFIED BY 'S3cr3t0';
+CREATE USER 'usuario_app'@'localhost' IDENTIFIED BY 'S3cR3t';
 ```
 
-Para otorgar acceso general al usuario en la base de datos creada, ejecute:
+Para otorgar al usuario acceso general a la base de datos que se ha creado, ejecute:
 
 ```sql
-GRANT ALL PRIVILEGES ON app_bd.* TO 'app_usuario'@'localhost';
+GRANT ALL PRIVILEGES ON app_bd.* TO 'usuario_app'@'localhost';
 ```
 
 Actualice los privilegios de acceso:
@@ -78,9 +78,9 @@ FLUSH PRIVILEGES;
 
 > Para salir utilice el comando: `\q`
 
-## Configurar la aplicación
+## Configurar la Aplicación
 
-Edite el fichero de configuración de la aplicación según el entorno:
+Edite el archivo de configuración de la aplicación según el entorno:
 
 - `config/_development.json`
 
@@ -95,8 +95,8 @@ Ejemplo de configuración de base de datos para MariaDB:
             "port": "3306",
             "host": "localhost",
             "name": "app_bd",
-            "username": "app_usuario",
-            "password": "S3cr3t0"
+            "username": "usuario_app",
+            "password": "S3cR3t"
         }
     },
     ...
@@ -114,8 +114,8 @@ Se pueden utilizar configuraciones avanzadas como:
             "port": "3306",
             "host": "localhost",
             "name": "app_bd",
-            "username": "app_usuario",
-            "password": "S3cr3t0",
+            "username": "usuario_app",
+            "password": "S3cR3t",
             "maximumPoolSize": 100,
             "minimumIdle": 1,
             "idleTimeout": 10000,
@@ -126,4 +126,4 @@ Se pueden utilizar configuraciones avanzadas como:
 }
 ```
 
-> Vea más sobre las [configuraciones de conexión a la base de datos con HikariCP](/docs/academy/server/database/hikaricp-database-connection-pool).
+> Vea más sobre las [configuraciones de conexión a la Base de Datos con HikariCP](/docs/academy/server/database/hikaricp-database-connection-pool).

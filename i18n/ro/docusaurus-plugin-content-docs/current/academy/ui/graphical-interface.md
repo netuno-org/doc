@@ -1,15 +1,15 @@
 ---
 sidebar_position: 1
 id: graphical-interface
-title: Aflați cum să utilizați interfața grafică
-sidebar_label: Aflați cum
+title: Aflați Cum să Utilizați Interfața Grafică
+sidebar_label: Aflați Cum
 ---
 
-Interfața Netuno este împărțită în două zone de lucru, cu scopuri specifice și diferite. Modul de *vizualizare* pentru a interacționa și a afișa rezultatul aplicației finale (Frontend), și modul de *construire* pentru a dezvolta aplicația dvs.
+Interfața Netuno este împărțită în două zone de lucru, cu scopuri specifice și diferite. Modul de *vizualizare* pentru interacțiune și afișarea rezultatului aplicației finale (Frontend) și modul de *construire* pentru dezvoltarea aplicației dumneavoastră.
 
 ### Vizualizare
 
-Acesta este mediul frontend unde utilizatorii interacționează cu partea vizuală a aplicației.
+Acesta este mediul frontend în care utilizatorii interacționează cu partea vizuală a aplicației.
 
 #### 1 - Construire
 
@@ -17,33 +17,33 @@ Acest buton vă permite să accesați modul de dezvoltare al aplicației.
 
 #### 2 - Meniu derulant
 
- Permite selectarea opțiunilor pentru gestionarea sesiunii dvs., cum ar fi deconectarea, schimbarea parolei contului și consultarea datelor utilizatorului și grupurilor dvs.
+ Permite selectarea opțiunilor pentru gestionarea sesiunii dumneavoastră, cum ar fi deconectarea, schimbarea parolei contului și consultarea datelor utilizatorului și grupurilor sale.
 
-#### 3 - Zona mea de lucru
+#### 3 - Spațiul meu de lucru
 
-Aceasta este zona centrală, unde este afișată aplicația dvs. web frontend, programată în folderul `public`.
+Aceasta este zona centrală, unde este afișată aplicația dumneavoastră web frontend, programată în folderul `public`.
 
-#### 4 - Tabele formulare
+#### 4 - Tabele și formulare
 
-În această zonă, găsiți accesul la toate tabelele de date. Faceți clic pentru a vizualiza, adăuga, edita sau șterge date direct prin formulare.
+În această zonă găsiți accesul la toate tabelele de date. Faceți clic pentru a vizualiza, adăuga, edita sau șterge date direct prin formulare.
 
-![vizualizare-ro.png](/docs/assets/academy/ui/get-to-know/view-pt.png)
+![vizualizare-pt.png](/docs/assets/academy/ui/get-to-know/view-pt.png)
 
 ### Construire
 
-Este mediul low-code unde configurați și gestionați toate aspectele aplicației dvs. fără a fi nevoie să scrieți un cod extensiv.
+Acesta este mediul low-code în care configurați și gestionați toate aspectele aplicației dumneavoastră fără a fi nevoie să scrieți cod extins.
 
 #### 1 - Vizualizare
 
-Permite revenirea imediată la modul "Vizualizare", pentru a verifica impactul modificărilor dvs. în timp real.
+Permite revenirea imediată la modul „Vizualizare”, pentru a verifica impactul modificărilor dumneavoastră în timp real.
 
 #### 2 - Meniu derulant
 
 Permite ieșirea din aplicație.
 
-#### 3 -  Zona mea de lucru
+#### 3 -  Spațiul meu de lucru
 
-Aceasta este zona centrală, unde este afișată aplicația dvs. web frontend, programată în folderul `public`. 
+Aceasta este zona centrală, unde este afișată aplicația dumneavoastră web frontend, programată în folderul `public`. 
 
 #### 4 - Gestionare
 
@@ -55,5 +55,5 @@ Această secțiune permite monitorizarea și inspectarea comportamentului script
 
 #### 6 - Gestionarea câmpurilor
 
-Această secțiune permite gestionarea structurii tabelelor dvs. de date. Puteți adăuga, edita sau elimina câmpuri și defini tipul de date (text, număr, dată etc.) pentru fiecare.
-![constructie-ro.png](/docs/assets/academy/ui/get-to-know/construction-pt.png)
+Această secțiune permite gestionarea structurii tabelelor dumneavoastră de date. Puteți adăuga, edita sau elimina câmpuri și defini tipul de date (text, număr, dată etc.) pentru fiecare.
+![construcție-pt.png](/docs/assets/academy/ui/get-to-know/construction-pt.png)

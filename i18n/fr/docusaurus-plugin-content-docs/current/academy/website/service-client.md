@@ -13,11 +13,12 @@ Dans l'écosystème technologique de Netuno, certains modules sont fournis sur N
 
 > Voir aussi le dépôt [GIT du Service Client](https://github.com/netuno-org/service-client).
 
-Ce module sert à réaliser les intégrations avec les services développés dans Netuno, c'est-à-dire les points de terminaison de l'API REST développés dans le backend de Netuno, dans le dossier `server/services` des applications Netuno.
+Ce module sert à réaliser les intégrations avec les services développés dans Netuno, c'est-à-dire les points de terminaison 
+de l'API REST développés dans le backend de Netuno, dans le dossier `server/services` des applications Netuno.
 
 Il est courant, lors du développement des services, d'utiliser des programmes comme :
 
-- [Pororoca](https://pororoca.io/)
+- [Pororoca](https://pororoca.io/) 
 - [Yaak](https://yaak.app/)
 - [API Dash](https://apidash.dev/)
 - [Requestly](https://requestly.com/)
@@ -28,15 +29,17 @@ Il est courant, lors du développement des services, d'utiliser des programmes c
 
 Pour effectuer les tests de requêtes HTTP vers les services.
 
-Dans le code frontend pour intégrer ces services, nous pourrions utiliser fetch, requests, AXIOS, et tant d'autres.
+Dans le code frontend pour intégrer ces services, nous pourrions utiliser fetch, requests, AXIOS, et bien d'autres.
 
-Cependant, Netuno fournit son propre client, qui fonctionne dans le développement frontend JavaScript ainsi qu'en backend NodeJS.
+Cependant, Netuno fournit son propre client, qui fonctionne dans le développement frontend JavaScript ainsi 
+qu'en backend NodeJS.
 
-La raison pour laquelle Netuno a sa propre implémentation de client HTTP pour les services est d'offrir une plus grande praticité, en simplifiant l'implémentation du code et en garantissant une plus grande agilité dans le développement.
+La raison pour laquelle Netuno dispose de sa propre implémentation de client HTTP pour les services est d'offrir une plus grande 
+praticité, en simplifiant l'implémentation du code et en garantissant une plus grande agilité dans le développement.
 
 ## Installation
 
-L'installation du client de services est comme installer n'importe quel autre module.
+L'installation du client de services est comme l'installation de tout autre module.
 
 Là où nous avons le fichier `package.json`, nous exécutons la commande d'installation :
 
@@ -60,13 +63,15 @@ const _service = require('@netuno/service-client');
 
 Remarquez que le nom interne dans le code est `_service`.
 
-> Par défaut, Netuno utilise le `_` comme préfixe pour indiquer qu'il s'agit de quelque chose d'interne ou de spécifique, comme une ressource ou un outil, de son écosystème.
+> Par défaut, Netuno utilise le `_` comme préfixe pour indiquer qu'il s'agit de quelque chose d'interne ou de spécifique comme une ressource 
+> ou un outil, de son écosystème.
 
 Par conséquent, pour maintenir le standard, nous devons toujours utiliser le nom `_service`.
 
 ## Configuration
 
-La configuration se fait globalement, on définit la configuration une seule fois, il convient de l'exécuter à un point initial du code général.
+La configuration se fait globalement, on définit la configuration une
+seule fois, il convient de l'exécuter à un point initial du code général.
 
 Ce sera la configuration minimale :
 
@@ -76,13 +81,17 @@ _service.config({
 });
 ```
 
-C'est-à-dire qu'il définit le préfixe des adresses des services, ce qui évite la nécessité de toujours mettre l'URL complète, ainsi nous pouvons dans les appels aux services indiquer seulement le reste de l'URL.
+C'est-à-dire, définit le préfixe des adresses des services, cela évite
+la nécessité de toujours mettre l'URL complète, ainsi nous pouvons dans les
+appels aux services indiquer seulement le reste de l'URL.
 
 ### Configuration complète
 
-Nous pouvons configurer des valeurs par défaut pour tous les appels de services, étant entendu que dans l'appel à chaque service, nous pouvons remplacer ces valeurs.
+Nous pouvons configurer des valeurs par défaut pour tous les appels de
+services, étant entendu que dans l'appel à chaque service nous pouvons remplacer
+ces valeurs.
 
-Voir tous les paramètres que nous pouvons configurer :
+Voyez tous les paramètres que nous pouvons configurer :
 
 ```js
 _service.config({
@@ -95,8 +104,8 @@ _service.config({
     'Accept':  'application/json'
   },
   start: () => { },
-  success: (donnees) => { },
-  fail: (donnees) => {},
+  success: (data) => { },
+  fail: (data) => {},
   end: () => { }
 });
 ```
@@ -107,57 +116,68 @@ C'est le préfixe global des URL.
 
 #### url
 
-C'est la partie de l'URL qui est ajoutée au préfixe, l'adresse spécifique du service.
+C'est la partie de l'URL qui est ajoutée au préfixe, l'adresse spécifique
+du service.
 
 #### method
 
-Méthode HTTP qui sera utilisée dans la requête HTTP, par défaut c'est `GET`.
+Méthode HTTP qui sera utilisée dans la requête HTTP, par
+défaut c'est `GET`.
 
 #### credentials
 
-Définit le comportement des identifiants dans les appels HTTP :
+Définit le comportement des informations d'identification dans les appels HTTP :
 
-- `omit` - N'envoie jamais et ne reçoit jamais d'identifiants.
-- `same-origin` - Envoie et inclut les identifiants uniquement lorsque les requêtes sont sur le même domaine.
-- `include` - Doit toujours inclure les identifiants, même si le domaine est différent.
+- `omit` - N'envoie jamais et ne reçoit jamais d'informations d'identification.
+- `same-origin` - Envoie et inclut des informations d'identification uniquement lorsque les requêtes sont sur le même domaine.
+- `include` - Doit toujours inclure les informations d'identification, même si le domaine est différent.
 
-Par défaut la valeur est `include`, car c'est ce qui a le plus de sens dans le développement standard, le backend peut être ou non sur le même domaine selon l'architecture, et en développement local il diffère parfois de la production, donc pour éviter les surprises nous recommandons d'utiliser `include`.
+Par défaut, la valeur est `include`, car c'est ce qui a le plus de sens dans
+le développement standard, le backend peut être ou non sur le même domaine
+cela dépend de l'architecture, et en développement local, cela diffère parfois
+de la production, donc pour éviter les surprises, nous recommandons d'utiliser
+`include`.
 
 #### headers
 
-Dans les `headers` nous pouvons définir des clés et des valeurs dans l'en-tête HTTP.
+Dans les `headers`, nous pouvons définir des clés et des valeurs dans l'en-tête HTTP.
 
-Par défaut il est défini que les données seront envoyées et reçues au format JSON.
+Par défaut, il est défini que les données seront envoyées et reçues au format
+JSON.
 
 #### start
 
-Fonction de `callback` exécutée lorsque la requête HTTP va commencer.
+Fonction de `callback` exécutée lorsqu'elle va initier la requête HTTP.
 
 #### success
 
-Fonction de `callback` exécutée lorsque la requête HTTP a été exécutée avec succès sur le serveur backend.
+Fonction de `callback` exécutée lorsque la requête HTTP a été exécutée
+avec succès sur le serveur backend.
 
 Le contenu de la réponse est obtenu dans le premier argument de la fonction.
 
 #### fail
 
-Fonction de `callback` exécutée lorsque la requête HTTP a généré une erreur.
+Fonction de `callback` exécutée lorsque la requête HTTP a généré une
+erreur.
 
 Les détails de l'erreur sont obtenus dans le premier argument de la fonction.
 
 #### end
 
-Fonction de `callback` exécutée lorsque la requête HTTP est terminée.
+Fonction de `callback` exécutée lorsque la requête HTTP a été terminée.
 
-Elle est exécutée toujours, indépendamment du succès ou de l'erreur.
+Elle est exécutée toujours, indépendamment s'il y a eu succès ou erreur.
 
 ## Utilisation
 
-Pour exécuter un service avec une requête HTTP, nous définissons les valeurs des paramètres qui configurent les exigences du service.
+Pour exécuter un service avec une requête HTTP, nous définissons les valeurs
+des paramètres qui configurent les exigences du service.
 
-Dans la clé `data` nous envoyons les données elles-mêmes, c'est-à-dire tous les paramètres de données que nous allons envoyer au service backend.
+Dans la clé `data`, nous envoyons les données elles-mêmes, c'est-à-dire tous les paramètres
+de données que nous allons envoyer au service backend.
 
-Voir l'exemple basique d'une requête :
+Voyez l'exemple basique d'une requête :
 
 ```js
 import _service from '@netuno/service-client';
@@ -166,32 +186,35 @@ _service({
   url: "mon-service",
   data: { id: 1, exemple: "Bonjour backend." },
   start: () => {
-    console.log("La requête va commencer.");
+    console.log("La requête va démarrer.");
   },
-  success: (reponse) => {
-    if (reponse.text) {
-      console.info("Réponse en texte :", reponse.text);
+  success: (réponse) => {
+    if (réponse.text) {
+      console.info("A répondu en texte :", réponse.text);
     }
-    if (reponse.json) {
-      console.info("Réponse en JSON :", reponse.json);
+    if (réponse.json) {
+      console.info("A répondu en JSON :", réponse.json);
     }
   },
   fail: (erreur) => {
-    console.error("Échoué avec l'erreur :", erreur);
+    console.error("A échoué avec l'erreur :", erreur);
   },
   end: () => {
-    console.log("La requête est terminée.");
+    console.log("La requête a été terminée.");
   }
 });
 ```
 
-L'URL finale prendra en compte le préfixe défini globalement dans la configuration générale.
+L'URL finale prendra en compte le préfixe défini globalement dans la
+configuration générale.
 
-Comme la méthode HTTP n'a pas été définie, elle sera envoyée avec la méthode par défaut qui a été définie dans la configuration générale, qui par défaut est `GET`.
+Comme la méthode HTTP n'a pas été définie, elle sera envoyée avec la
+méthode par défaut qui a été définie dans la configuration générale, qui par
+défaut est `GET`.
 
 ### Simple
 
-Exemple simple de la façon de réaliser l'exécution d'une requête de type `POST` :
+Exemple simple de comment exécuter une requête de type `POST` :
 
 ```js
 import _service from '@netuno/service-client';
@@ -199,7 +222,7 @@ import _service from '@netuno/service-client';
 _service({
   method: "POST",
   url: "produit",
-  data: { nom: "Chapeau de Paille", quantite: 20 },
+  data: { nom: "Chapeau de Paille", quantité: 20 },
   success: ({json}) => {
     console.info("Produit créé avec succès :", json);
   },
@@ -211,16 +234,16 @@ _service({
 
 ### Formulaire
 
-Lorsque nous utilisons des formulaires, nous pouvons charger la classe FormData avec le contenu du formulaire, voir l'exemple :
+Lorsque nous utilisons des formulaires, nous pouvons charger la classe FormData avec le contenu du formulaire, voyez l'exemple :
 
 ```js
 import _service from '@netuno/service-client';
 
-const donneesFormulaire = new FormData(document.getElementById("formulaire"));
+const formData = new FormData(document.getElementById("formulaire"));
 _service({
   method: "PUT",
   url: "client",
-  data: donneesFormulaire,
+  data: formData,
   success: ({json}) => {
     if (json.result === true) {
       alert("Client mis à jour avec succès.");
@@ -234,21 +257,21 @@ _service({
 });
 ```
 
-### Upload
+### Téléversement
 
-Exemple simple de la façon de réaliser le téléversement de fichiers en utilisant la classe `FormData` :
+Exemple simple de comment effectuer le téléversement de fichiers en utilisant la classe `FormData` :
 
 ```js
 import _service from '@netuno/service-client';
 
-const donneesFormulaire = new FormData();
-donneesFormulaire.append('idUtilisateur', 'c476964a-eb8b-40d1-8907-4fee2e1532fb');
-donneesFormulaire.append('fichier', document.getElementById("champFichier").files[0]);
-donneesFormulaire.append('autreChamp', 'valeur...');
+const formData = new FormData();
+formData.append('uid', 'c476964a-eb8b-40d1-8907-4fee2e1532fb');
+formData.append('fichier', document.getElementById("champFichier").files[0]);
+formData.append('autreChamp', 'valeur...');
 _service({
   method: "PUT",
-  url: "/televersement",
-  data: donneesFormulaire,
+  url: "/upload",
+  data: formData,
   success: ({json}) => {
     alert('Fichier envoyé avec succès.');
   },
@@ -260,19 +283,21 @@ _service({
 
 ### Téléchargement
 
-Nous pouvons réaliser le téléchargement de fichiers générés dynamiquement par des services de manière intégrée dans le contexte de la page.
+Nous pouvons effectuer le téléchargement de fichiers générés dynamiquement par des services de manière intégrée dans le contexte de la
+page.
 
 #### BLOB - Objet Binaire Grand
 
-Pour réaliser le téléchargement de réponses binaires, nous devons définir le `blob` avec la valeur `true` dans la paramétrisation de base, et nous obtenons les octets générés dans le `blob` de la réponse.
+Pour effectuer le téléchargement de réponses binaires, nous devons définir le `blob` avec la valeur `true` dans la paramétrisation de base, 
+et nous obtenons les octets générés dans le `blob` de la réponse.
 
 ```js
 import _service from '@netuno/service-client';
 
 _service({
-  url: "/telechargement",
+  url: "/download",
   method: 'POST',
-  data: { idUtilisateur: "98e25c93-d662-4b5c-8b89-d19b42e2c998", type: "pdf" },
+  data: { uid: "98e25c93-d662-4b5c-8b89-d19b42e2c998", type: "pdf" },
   blob: true, // Définit que la réponse est binaire.
   success: ({blob}) => {
     if (blob) {
@@ -298,7 +323,7 @@ Installez la dépendance [DownloadJS](https://www.npmjs.com/package/downloadjs) 
 bun add downloadjs
 ```
 
-Dans le code, il peut être utilisé de la manière suivante :
+Dans le code, elle peut être utilisée de la manière suivante :
 
 ```js
 import _service from '@netuno/service-client';
@@ -331,21 +356,23 @@ _service({
 });
 ```
 
-### URL pour Services
+### URL pour les services
 
-Il y a des situations où nous devons générer l'URL de services, par exemple, lorsqu'il y a des services qui fournissent des ressources qui doivent être intégrées dans le HTML ou le CSS.
+Il y a des situations où nous devons générer l'URL de services, par exemple, lorsqu'il y a des services qui fournissent des ressources qui 
+doivent être intégrées dans le HTML ou le CSS.
 
-Un exemple clair est l'Avatar, l'utilisateur définit son image d'avatar, et pour l'afficher nous pouvons générer l'URL finale de la manière suivante :
+Un exemple clair est l'Avatar, l'utilisateur définit son image d'avatar, et pour l'afficher, nous pouvons générer l'URL finale
+de la manière suivante :
 
 ```js
-const lienAvatar = _service.url(`/profil/avatar?idUtilisateur=${utilisateur.idUtilisateur}`)
+const lienAvatar = _service.url(`/profil/avatar?uid=${utilisateur.uid}`)
 ```
 
 L'URL générée peut être injectée dans le HTML ou dans une propriété CSS, comme le background.
 
 ### React & Ant.Design
 
-Comme nous utilisons beaucoup React et Ant.Design, voici quelques astuces utiles.
+Comme nous utilisons beaucoup React et Ant.Design, voici quelques conseils utiles.
 
 Les imports classiques :
 
@@ -361,14 +388,14 @@ Définir l'état de traitement :
 const [chargement, setChargement] = useState(false);
 ```
 
-Implémentation de l'événement pour enregistrer un formulaire, qui enverra l'objet avec les valeurs remplies au format JSON :
+Implémentation de l'événement pour sauvegarder un formulaire, qui enverra l'objet avec les valeurs remplies au format JSON :
 
 ```js
-const surTerminer = (valeurs) => {
-  const surEchec = () => {
+const onFinish = (valeurs) => {
+  const onEchec = () => {
     notification.error({
       title: 'Erreur',
-      description: 'Impossible d\'enregistrer les données.'
+      description: 'Impossible de sauvegarder les données.'
     });
   };
   _service({
@@ -382,15 +409,15 @@ const surTerminer = (valeurs) => {
       if (json.result === true) {
         notification.success({
           title: 'Succès',
-          description: 'Les données ont été enregistrées avec succès.'
+          description: 'Les données ont été sauvegardées avec succès.'
         });
         return;
       }
-      surEchec();
+      onEchec();
     },
     fail: (e) => {
       console.error("Échec du service.", e);
-      surEchec();
+      onEchec();
     },
     end: () => {
         setChargement(false);
@@ -399,17 +426,19 @@ const surTerminer = (valeurs) => {
 };
 ```
 
-Dans le composant de formulaire d'Ant.Design, on définit la propriété de l'action qui envoie les données avec l'événement précédemment implémenté, par exemple :
+Dans le composant de formulaire d'Ant.Design, on définit la propriété de l'action qui envoie les données avec l'événement 
+précédemment implémenté, par exemple :
 
 ```jsx
-  <Form onFinish={surTerminer}>
+  <Form onFinish={onFinish}>
     ...
   </Form>
 ```
 
-#### Upload
+#### Téléversement
 
-Voici un exemple complet de la façon de faire le téléversement de fichiers en utilisant un formulaire en Ant.Design et avec le FormData :
+Voici un exemple complet de comment effectuer le téléversement de fichiers en utilisant un formulaire dans Ant.Design et avec
+le FormData :
 
 ```jsx
 import {useState} from 'react';
@@ -417,30 +446,30 @@ import _service from '@netuno/service-client';
 import {Button, Form, Input, Upload, notification} from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 
-function FormulaireTeleversement() {
+function FormulaireTéléversement() {
   const [chargement, setChargement] = useState(false);
-  const surTerminer = (valeurs)=> {
-    const donneesFormulaire = new FormData();
-    donneesFormulaire.append("titre", valeurs.titre);
-    donneesFormulaire.append("fichier", valeurs.fichier.fileList[0].originFileObj);
+  const onFinish = (valeurs)=> {
+    const formData = new FormData();
+    formData.append("titre", valeurs.titre);
+    formData.append("fichier", valeurs.fichier.fileList[0].originFileObj);
     _service({
       method: "POST",
-      url: "fichier/enregistrer",
-      data: donneesFormulaire,
+      url: "fichier/sauvegarder",
+      data: formData,
       start: () => {
         setChargement(true);
       },
       success: () => {
         notification.success({
           title: 'Formulaire',
-          description: 'Vos données ont été enregistrées avec succès.'
+          description: 'Vos données ont été sauvegardées avec succès.'
         });
       },
       fail: (e) => {
         console.error("Échec du formulaire de téléversement", e);
         notification.error({
           title: 'Formulaire',
-          description: 'Impossible d\'enregistrer vos données.'
+          description: 'Impossible de sauvegarder vos données.'
         });
       },
       end: () => {
@@ -449,7 +478,7 @@ function FormulaireTeleversement() {
     });
   };
   return (
-    <Form onFinish={surTerminer} layout="vertical">
+    <Form onFinish={onFinish} layout="vertical">
       <Form.Item label="Titre" name="titre"
         rules={[{ required: true, message: 'Veuillez saisir le titre.' }]}
       >
@@ -466,26 +495,28 @@ function FormulaireTeleversement() {
         </Upload>
       </Form.Item>
       <Form.Item label={null}>
-        <Button type="primary" htmlType="submit" loading={chargement}>
-          Enregistrer
+        <Button type="primary" htmlType="submit" chargement={chargement}>
+          Sauvegarder
         </Button>
       </Form.Item>
     </Form>
   );
 }
 
-export default FormulaireTeleversement;
+export default FormulaireTéléversement;
 ```
 
 ## Conclusion
 
-Le Service Client accélère l'intégration avec le backend pour obtenir et envoyer des données et des fichiers.
+Le Service Client facilite l'intégration avec le backend pour obtenir et envoyer des données et des fichiers.
 
-Il est possible d'utiliser toute autre méthode native ou une autre dépendance pour réaliser ces opérations, cependant le Service Client est développé pour faciliter et accélérer les intégrations, étant flexible et très intuitif.
+Il est possible d'utiliser toute autre méthode native ou une autre dépendance pour réaliser ces opérations, cependant le
+Service Client est développé pour faciliter et accélérer les intégrations, étant flexible et très intuitif.
 
-L'objectif principal de Netuno en fournissant le Service Client dans son écosystème est de garantir que le développement soit clair et rapide.
+L'objectif principal de Netuno en fournissant le Service Client dans son écosystème est de garantir que le développement soit
+clair et rapide.
 
-Lors de l'utilisation du Service Client, si vous rencontrez un problème, signalez-le dans les [Problèmes](https://github.com/netuno-org/service-client/issues) du projet.
+En utilisant le Service Client, si vous rencontrez un problème, signalez-le dans les [Issues](https://github.com/netuno-org/service-client/issues) du projet.
 
 ⭐ N'oubliez pas de donner votre étoile sur le GitHub du projet :
 

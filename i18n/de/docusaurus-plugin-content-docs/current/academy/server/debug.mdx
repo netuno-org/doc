@@ -1,0 +1,197 @@
+---
+id: debug
+title: Debugging (Debug)
+sidebar_label: Debuggen
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Ermöglicht die Analyse der Codeausführung in Echtzeit.
+
+## Einführung
+
+Während der Programmierung ist es oft notwendig, die Ausführung des Codes zu analysieren.
+
+Im Fall von Netuno können wir Folgendes verwenden:
+
+- `_out.print` – Um eine Information in der Datenausgabe (_output_) anzuzeigen.
+- `_log.info` – Um eine Information im Terminal des Netuno-Servers anzuzeigen.
+
+Es gibt jedoch auch komplexere Szenarien, in denen wir tiefergehend analysieren möchten, zum Beispiel
+mehrere Werte von Objekten und Variablen gleichzeitig prüfen, die Ausführung eines bestimmten Codes in diesem
+Kontext testen, alles um das Verhalten besser zu verstehen.
+
+In diesen komplexeren Fällen ist es immer möglich, die oben gezeigten Methoden wie `_out.print` und
+`_log.info` zu verwenden, jedoch kann dies zu einem sehr arbeitsintensiven und verwirrenden Prozess werden,
+um ein gutes Verständnis dafür zu erlangen, was vor sich geht.
+
+Das Debugging (_debug_) dient genau dazu, ein gutes Verständnis dafür zu vermitteln, was vor sich geht, insbesondere in
+komplexeren Situationen.
+
+> Debugging (englisch: _debugging_, _debug_) ist der Prozess, der in der Entwicklung verwendet wird, um
+> Fehler, Störungen, fehlerhaftes Verhalten usw. zu finden und zu reduzieren.
+
+Das Debugging kann in 3 wichtige Mechanismen unterteilt werden:
+
+- Haltepunkt (_Break Point_): Hält die Ausführung des Codes an, sodass wir dann die Untersuchung dort beginnen können,
+wo der Code angehalten ist.
+- Beobachten (_Watch_): Ermöglicht die Beobachtung der Werte von Variablen dort, wo der Code angehalten ist.
+- Code ausführen (_Code Execution_): Wir können vorübergehend beliebigen Code ausführen, um einen Test
+an der Stelle durchzuführen, an der die Ausführung zum Debuggen angehalten ist.
+
+## Haltepunkt (_Breakpoint_)
+
+Der Haltepunkt (_breakpoint_) ist die Stelle im Code, an der die Ausführung pausiert werden soll, um den
+Debugging-Prozess zu starten.
+
+Um das Debugging in beliebigem Code und in jeder von Netuno unterstützten Sprache wie JavaScript, Python,
+Ruby, Kotlin oder Groovy zu starten, fügen Sie an der Stelle, an der Sie das Debugging beginnen möchten, den folgenden Code ein:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _exec.debug()
+            `
+        },
+    ]}
+/>
+
+> Da Netuno polyglott ist, funktioniert es mit jeder unterstützten Sprache, wie: JavaScript, Python, Kotlin, Ruby,
+> oder Groovy.
+
+Um das Debugging zu starten, führen Sie nun den Code aus und die Ausführung wird angehalten, pausiert.
+
+Gehen Sie dann zur Entwicklungsoberfläche im Backoffice unter `Erstellen`, und im linken Menü haben wir die Option:
+
+- **Debuggen**
+
+Dort finden wir den grünen Doppelpfeil, der anzeigt, dass die Ausführung durch Anklicken fortgesetzt werden kann:
+
+![Debug - Weiter](/docs/assets/academy/server/debug/step-over-pt.jpg "Debug - Weiter")
+
+> Der grüne Doppelpfeil hebt die Pause des Debuggings auf, sodass die Codeausführung normal von dem
+> Punkt aus fortgesetzt wird, an dem sie angehalten wurde.
+
+## Beobachten (_Watch_)
+
+Um den Wert von Variablen zu sehen, verwenden wir die gelbe Lupe.
+
+Durch Anklicken der gelben Lupe können wir den Namen der Variable angeben, deren Wert wir beobachten möchten.
+
+![Debug - Beobachten](/docs/assets/academy/server/debug/watch-pt.jpg "Debug - Beobachten")
+
+Der Variablenname und ihr aktueller Wert erscheinen in der Liste; wir können den Wert mehrerer Variablen beobachten, falls eine
+Variable nicht existiert, wird kein Wert angezeigt.
+
+## Code ausführen (_Execute Code_)
+
+Wir können Code injizieren, der im Kontext des Haltepunkts ausgeführt werden soll, also dort, wo das Debugging
+stattfindet.
+
+Wir klicken auf das blaue Code-Symbol und können den Code eingeben, den wir ausführen möchten.
+
+![Debug - Code ausführen](/docs/assets/academy/server/debug/execute-code-pt.jpg "Debug - Code ausführen")
+
+Der ausgeführte Code wird in der Liste unten angezeigt, zusammen mit der Angabe, dass der Code erfolgreich ausgeführt wurde; falls
+ein Fehler auftritt, wird die Fehlermeldung zusammen mit dem Code angezeigt.
+
+## Konfiguration für Remote-Debugging
+
+Beim lokalen Ausführen von Netuno sollte keine Konfiguration erforderlich sein.
+
+Denn in der lokalen Entwicklung wird der `host` der WebSocket-Adresse automatisch konfiguriert.
+
+Bei lokalen Adressen werden normalerweise diese Werte als `host` verwendet:
+
+- `localhost`
+- `127.0.0.1`
+- `192.168.1.*` – Beispiel für eine beliebige lokale Netzwerk-IP.
+- `meine-app.local.netu.no`
+
+> Lokale Adressen benötigen keine Konfiguration, daher kann dieser Schritt übersprungen werden.
+
+In der Produktion oder bei der Remote-Entwicklung, etwa in einem Container oder über VPN, kann es jedoch erforderlich sein, die externe
+Adresse (IP oder Domain) festzulegen, die für die WebSocket-Verbindung verwendet wird.
+
+Navigieren Sie in diesem Fall innerhalb der Anwendung, die entwickelt wird, bis zur Umgebungskonfigurationsdatei.
+In diesem Beispiel verwenden wir die Entwicklungsumgebungsdatei, die sich hier befindet:
+
+- 📂 `config/_development.json`
+
+Prüfen Sie, ob die Konfiguration eventuell bereits vorhanden ist; falls nicht, fügen Sie am Ende der Konfigurationsdatei
+(im JSON-Format) die Konfigurationsparameter für die externe Adresse hinzu, die für die WebSocket-Verbindung verwendet werden soll,
+zum Beispiel:
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": "dev.netuno.org"
+        }
+    },
+    ...
+}
+```
+
+> Die Portinformation darf nicht zur `host`-Adresse im WebSocket hinzugefügt werden.
+
+Es können auch mehrere `host`-Adressen in einem Array angegeben werden:
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": [ "mein-container.dev.netuno.org", "mein-projekt.com" ]
+        }
+    },
+    ...
+}
+```
+
+### Proxy in der Produktion (NGINX)
+
+In der Produktion wird häufig ein Webserver als Reverse-Proxy verwendet, etwa NGINX.
+
+Damit das Debugging über einen Proxy funktioniert, ist eine spezielle Konfiguration erforderlich, um
+den Verkehr für die WebSocket-Adresse weiterzuleiten:
+
+```
+server {
+    listen 443 ssl;
+    server_name mein-projekt.com;
+    
+    ...
+    
+    location /dev/ws/ {
+        proxy_pass http://127.0.0.1:9000;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        add_header X-Frame-Options "";
+    }
+}
+```
+
+## Fazit
+
+Mit der Debugging-Oberfläche und dem Befehl `_exec.debug()` können wir eine gründliche Untersuchung dessen durchführen, was
+vor sich geht.
+
+In den meisten Backend-Sprachen und -Technologien, insbesondere Skripttechnologien, ist Debugging oft
+unmöglich oder komplex.
+
+Netuno bietet eine einfache Möglichkeit, polyglotten Code zu debuggen, der in den verschiedenen unterstützten Sprachen
+wie JavaScript, Python, Ruby, Kotlin und Groovy funktioniert.
+
+> Ermöglicht polyglottes Debugging in Remote-Umgebungen und in der Produktion.
+
+Die Verwendung von Debugging beschleunigt die Entwicklung erheblich, bietet größere Präzision bei der Lösung von Problemen und wird
+zu einem unverzichtbaren Werkzeug. Probieren Sie es aus.

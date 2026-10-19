@@ -4,7 +4,7 @@ id: introduction
 title: Introducere
 ---
 
-Această secțiune conține marea majoritate a logicii de back-end despre Netuno. Veți găsi definiții, explicații și fragmente de cod care vă vor ajuta să parcurgeți o logică funcțională despre cum să vă construiți site-ul web pornind de la Netuno.
+Această secțiune conține marea majoritate a logicii de backend din Netuno. Veți găsi definiții, explicații și fragmente de cod care vă vor ajuta să parcurgeți o logică funcțională despre cum să vă construiți site-ul web pornind de la Netuno.
 
 > Platforma Netuno este gratuită, [începeți acum](/docs/get-started/installation).
 
@@ -16,16 +16,16 @@ Descoperiți cum să explorați dezvoltarea în Netuno:
 
 ## Obiecte
 
-Această secțiune conține informații despre Obiectele Netuno, și anume Values.
+Această secțiune conține informații despre obiectele Netuno, în special Values.
 
 * [Values](/docs/library/objects/Values)
 
 ## Resurse
-Conține toate informațiile despre resursele de ajutor pentru programare puse la dispoziție de Netuno.
+Conține toate informațiile despre resursele de asistență pentru programare oferite de Netuno.
 
-Folosind resursele Netuno, este posibil să faceți mai mult în mai puțin timp, economisind linii de cod și bătăi de cap.
+Folosind resursele Netuno, puteți face mai multe într-un timp mai scurt, economisind linii de cod și bătăi de cap.
 
-Explorați și descoperiți diversele tipuri de resurse disponibile în Netuno.
+Explorați și descoperiți diferitele tipuri de resurse disponibile în Netuno.
 
 * [App](/docs/library/resources/app)
 * [Auth](/docs/library/resources/auth)

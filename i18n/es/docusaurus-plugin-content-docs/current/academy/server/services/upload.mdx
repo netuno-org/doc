@@ -1,7 +1,7 @@
 ---
 id: upload
-title: Subida
-sidebar_label: Subida
+title: Subida de archivos
+sidebar_label: Subida de archivos
 ---
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
@@ -11,19 +11,19 @@ Enviar archivos a la API y guardarlos en una carpeta o en la base de datos.
 ## Introducción
 
 Cuando necesitamos enviar archivos a los servicios de la API REST tenemos varias formas
-de realizar este desarrollo en Netuno.
+de llevar a cabo este desarrollo en Netuno.
 
-Normalmente los archivos se envían en el cuerpo de la petición HTTP estructurados en formato
+Normalmente los archivos se envían en el cuerpo de la petición HTTP estructurados en el formato
 multipart, es el procedimiento más común en el frontend, por ejemplo cuando rellenamos un
 formulario y hay un campo para elegir un archivo.
 
 Como alternativa podemos enviar los bytes de los archivos codificados en Base64 como valor
-en un objeto JSON, cuando queremos una API REST 100 % JSON.
+en un objeto JSON, cuando queremos una API REST 100% JSON.
 
 ## Archivos
 
-A través de `_req.file` podemos pasar el nombre del campo y así obtener el objeto del archivo
-que se ha enviado, veamos cómo:
+Mediante `_req.file` podemos pasar el nombre del campo y así obtener el objeto del archivo
+que se ha enviado, vea cómo:
 
 <PolyglotCode
     codes={[
@@ -38,15 +38,15 @@ que se ha enviado, veamos cómo:
 
 Es decir, `_req` tiene todos los datos que recibimos en el cuerpo de la petición HTTP.
 
-Y a través del método `file` permite obtener el objeto que representa el archivo que se
-ha enviado.
+Y mediante el método `file` permite obtener el objeto que representa el archivo que se ha
+enviado.
 
 El valor obtenido podrá ser `null` en caso de que no haya ningún archivo.
 
 ## Imágenes
 
-Cuando recibimos imágenes es común que sea necesario redimensionarlas, para garantizar
-uniformidad y para reducir el espacio ocupado por las imágenes.
+Cuando recibimos imágenes es habitual que necesitemos redimensionarlas, para garantizar
+uniformidad y reducir el espacio que ocupan las imágenes.
 
 <PolyglotCode
     codes={[
@@ -124,15 +124,15 @@ uniformidad y para reducir el espacio ocupado por las imágenes.
 Con el recurso de programación low-code políglota [Image](/docs/library/resources/image),
 podemos manipular imágenes, recortar, redimensionar, crear nuevas, etc.
 
-## Como Base64 en el JSON
+## Cómo usar Base64 en JSON
 
 Para realizar la subida de un archivo en el JSON enviado al servicio, podemos definir una propiedad con el valor:
 
 `data:image/png;base64,...`
 
-Donde en los `...` sigue la secuencia de bytes del archivo codificados en Base64.
+Donde en `...` sigue la secuencia de bytes del archivo codificados en Base64.
 
-Siendo que el tipo de archivo va a continuación de `data`, por ejemplo:
+El tipo de archivo va a continuación de `data`, por ejemplo:
 
 - PNG: `image/png`.
 - JPG: `image/jpeg`
@@ -250,7 +250,7 @@ Se puede obtener de la siguiente forma:
         {
             lang: 'javascript',
             code: `
-                const miArchivo = _req.getValues("persona").getFile("avatar");
+                const miArchivo = _req.getValues("persona").getFile("archivo");
             `
         },
     ]}
@@ -283,7 +283,7 @@ Se puede obtener de la siguiente forma:
 
 ## OpenAPI
 
-Netuno soporta la integración con OpenAPI y utiliza la definición de OpenAPI para validar la petición HTTP.
+Netuno admite la integración con OpenAPI y utiliza la definición de OpenAPI para validar la petición HTTP.
 
 > Más sobre la [OpenAPI en Netuno](/docs/academy/server/services/openapi).
 
@@ -291,7 +291,7 @@ Con el tipo `file`, Netuno valida si el valor comienza con el formato de archivo
 
 - `data:image/png;base64,...`
 
-Para validar si se está recibiendo un archivo en una propiedad del objeto JSON:
+Para validar si se recibe un archivo en una propiedad del objeto JSON:
 
 ```json title="post.in.json"
 {
@@ -309,12 +309,12 @@ Para validar si se está recibiendo un archivo en una propiedad del objeto JSON:
 }
 ```
 
-Para validar si se está recibiendo una lista de archivos en array en el JSON:
+Para validar si se recibe una lista de archivos en un array en el JSON:
 
 ```json title="post.in.json"
 {
   "summary": "Subida de archivos",
-  "description": "Servicio que recibe una lista de archivos en array en el JSON.",
+  "description": "Servicio que recibe una lista de archivos en un array en el JSON.",
   "properties": {
     "archivos": {
       "type": "array",
@@ -331,7 +331,7 @@ Para validar si se está recibiendo una lista de archivos en array en el JSON:
 
 ## Guardar el archivo
 
-Normalmente cuando recibimos un archivo en el servicio necesitamos guardarlo, como por ejemplo:
+Normalmente, cuando recibimos un archivo en el servicio necesitamos guardarlo, como por ejemplo:
 
 - **Base de datos**: Archivo relacionado con un registro, como el de un usuario.
 - **Storage**: Carpeta interna de la aplicación que sirve para gestionar archivos en general.
@@ -339,17 +339,17 @@ Normalmente cuando recibimos un archivo en el servicio necesitamos guardarlo, co
 
 ### Base de datos
 
-En la gestión de los campos de los formularios, Netuno soporta el tipo `image` y `file`, siendo:
+En la gestión de los campos de los formularios, Netuno admite el tipo `image` y `file`, siendo:
 
 - **Image**: Archivos de imagen en general, JPG y PNG.
 - **File**: Cualquier tipo de archivo.
 
-Imagine que tiene un campo de Imagen en el formulario Producto, podemos guardar el archivo enviado mediante subida de la
+Imagine que tiene un campo de Imagen en el formulario Producto; podemos guardar el archivo enviado mediante la subida de la
 siguiente forma:
 
-#### Ejemplo utilizando el DB Form:
+#### Ejemplo utilizando DB Form:
 
-Fíjese en la utilización de `_db.form`:
+Observe el uso de `_db.form`:
 
 <PolyglotCode
     file="services/producto/imagen/post"
@@ -467,7 +467,7 @@ Fíjese en la utilización de `_db.form`:
 
 #### Ejemplo utilizando el update clásico:
 
-Fíjese en la utilización de `_db.update`:
+Observe el uso de `_db.update`:
 
 <PolyglotCode
     file="services/producto/imagen/post"
@@ -593,13 +593,13 @@ Fíjese en la utilización de `_db.update`:
 
 Para mostrar el archivo almacenado debemos crear un servicio que proporcione los bytes del archivo.
 
-Siendo que los archivos guardados en base de datos, como en el ejemplo anterior, el archivo en sí se coloca en el storage de la
-aplicación y en la base de datos se almacena solo el nombre final del archivo.
+Cabe señalar que, en los archivos guardados en la base de datos, como en el ejemplo anterior, el archivo en sí se coloca en el storage de la
+aplicación y en la base de datos solo se almacena el nombre final del archivo.
 
 > El storage de la aplicación es una carpeta destinada a almacenar y organizar estructuras de archivos genéricos.
 
-Por lo tanto, en el ejemplo anterior los archivos de base de datos del formulario `Producto` y del campo `Imagen` quedan
-almacenados en:
+Por tanto, en el ejemplo anterior los archivos de base de datos del formulario `Producto` y del campo `Imagen` se almacenan
+en:
 
 - `storage/database/producto/imagen/*`
 
@@ -615,11 +615,11 @@ Para obtener el archivo, se puede crear un servicio que muestre el archivo de im
         code: `
             const productoUid = _req.getString("uid");
 
-            // DB Form:
+            // Formulario DB:
             const dbProducto = _db.form("producto")
                 .where(_db.where("uid").equals(productoUid))
                 .first();
-            // Alternativa con DB Clásico:
+            // Alternativa con DB clásico:
             // const dbProducto = _db.get("producto", productoUid)
 
             if (dbProducto == null) {
@@ -656,13 +656,13 @@ Para obtener el archivo, se puede crear un servicio que muestre el archivo de im
         code: `
             productoUid = _req.getString("uid")
 
-            # DB Form:
+            # Formulario DB:
             dbProducto = (
                 _db.form("producto")
                     .where(_db.where("uid").equals(productoUid))
                     .first()
             )
-            # Alternativa con DB Clásico:
+            # Alternativa con DB clásico:
             # dbProducto = _db.get("producto", productoUid)
 
             if dbProducto is None:
@@ -697,11 +697,11 @@ Para obtener el archivo, se puede crear un servicio que muestre el archivo de im
         code: `
             productoUid = _req.getString("uid")
 
-            # DB Form:
+            # Formulario DB:
             dbProducto = _db.form("producto")
                 .where(_db.where("uid").equals(productoUid))
                 .first()
-            # Alternativa con DB Clásico:
+            # Alternativa con DB clásico:
             # dbProducto = _db.get("producto", productoUid)
 
             if dbProducto.nil?
@@ -736,7 +736,7 @@ Para obtener el archivo, se puede crear un servicio que muestre el archivo de im
 ]}
 />
 
-Fíjese en que el recurso `_storage` ([Storage](/docs/library/resources/storage)) se utiliza para obtener el archivo:
+Observe que el recurso `_storage` ([Storage](/docs/library/resources/storage)) se utiliza para obtener el archivo:
 
 <PolyglotCode
     codes={[
@@ -753,18 +753,18 @@ Fíjese en que el recurso `_storage` ([Storage](/docs/library/resources/storage)
     ]}
 />
 
-En la base de datos se almacena solo el nombre del archivo, siendo que a través de `_storage.database` podemos
+En la base de datos solo se almacena el nombre del archivo, y mediante `_storage.database` podemos
 obtener el archivo en sí.
 
 ### Storage
 
 Podemos guardar un archivo directamente en el `storage` de la aplicación.
 
-Para no mezclar con los archivos de base de datos, debemos utilizar la carpeta de `filesystem`, que tiene la
-finalidad de almacenar archivos genéricos que no están asociados en la base de datos.
+Para no mezclarlo con los archivos de base de datos, debemos utilizar la carpeta `filesystem`, que tiene la
+finalidad de almacenar archivos genéricos que no están asociados a la base de datos.
 
 Para recibir el archivo, en este ejemplo se muestra cómo un archivo enviado en el servicio
- `POST` se almacena directamente en el storage:
+`POST` se almacena directamente en el storage:
 
 <PolyglotCode
     file="services/archivo/post"
@@ -773,16 +773,16 @@ Para recibir el archivo, en este ejemplo se muestra cómo un archivo enviado en 
             lang: 'javascript',
             code: `
                 const archivo = _req.getFile("archivo");
-                _storage.filesystem("servidor", "subida").ensurePath();
-                archivo.save(_storage.filesystem("servidor", "subida", archivo.name()));
+                _storage.filesystem("servidor", "subidas").ensurePath();
+                archivo.save(_storage.filesystem("servidor", "subidas", archivo.name()));
             `
         },
     ]}
 />
 
-El archivo queda almacenado en la carpeta `storage` de la aplicación, en:
+El archivo se almacena en la carpeta `storage` de la aplicación, en:
 
-- `storage/filesystem/servidor/subida/*`
+- `storage/filesystem/servidor/subidas/*`
 
 > El recurso [Storage](/docs/library/resources/storage) se utiliza para obtener la ruta de carpeta y de archivo:
 
@@ -793,7 +793,7 @@ El archivo queda almacenado en la carpeta `storage` de la aplicación, en:
             code: `
                 _storage.filesystem(
                     "servidor", // Nombre de la subcarpeta en el filesystem.
-                    "subida", // Nombre o ruta de la subcarpeta interna.
+                    "subidas", // Nombre o ruta de la subcarpeta interna.
                     archivo.name() // Nombre final del archivo.
                 );
             `
@@ -803,8 +803,8 @@ El archivo queda almacenado en la carpeta `storage` de la aplicación, en:
 
 > Vea más sobre la documentación de [Storage](/docs/library/resources/storage).
 
-Para hacer la descarga del archivo, en este ejemplo se muestra cómo se pueden obtener los bytes del archivo
-a través del servicio `GET`:
+Para descargar el archivo, en este ejemplo se muestra cómo se pueden obtener los bytes del archivo
+mediante el servicio `GET`:
 
 <PolyglotCode
     file="services/archivo/get"
@@ -812,12 +812,12 @@ a través del servicio `GET`:
         {
             lang: 'javascript',
             code: `
-                const nombreArchivo = _req.getString("archivo");
+                const archivoNombre = _req.getString("archivo");
 
                 const archivo = _storage.filesystem(
                     "servidor",
-                    "subida",
-                    nombreArchivo
+                    "subidas",
+                    archivoNombre
                 ).file();
 
                 if (archivo.exists() == false) {
@@ -837,12 +837,12 @@ a través del servicio `GET`:
         {
             lang: 'python',
             code: `
-                nombreArchivo = _req.getString("archivo")
+                archivoNombre = _req.getString("archivo")
 
                 archivo = _storage.filesystem(
                     "servidor",
-                    "subida",
-                    nombreArchivo
+                    "subidas",
+                    archivoNombre
                 ).file()
 
                 if archivo.exists() == False:
@@ -861,12 +861,12 @@ a través del servicio `GET`:
         {
             lang: 'ruby',
             code: `
-                nombre_archivo = _req.getString("archivo")
+                archivo_nombre = _req.getString("archivo")
 
                 archivo = _storage.filesystem(
                     "servidor",
-                    "subida",
-                    nombre_archivo
+                    "subidas",
+                    archivo_nombre
                 ).file()
 
                 if archivo.exists() == false
@@ -892,11 +892,11 @@ Podemos guardar un archivo directamente en cualquier carpeta del ordenador.
 
 Hay dos recursos que son muy útiles en estos casos:
 
-- `_app` - Podemos obtener cualquier carpeta o archivo en la aplicación.
-- `_os` - Podemos obtener cualquier carpeta o archivo en el ordenador.
+- `_app` - Podemos obtener cualquier carpeta o archivo de la aplicación.
+- `_os` - Podemos obtener cualquier carpeta o archivo del ordenador.
 
 > Vea la documentación de los respectivos recursos [App](/docs/library/resources/app) y [OS](/docs/library/resources/os),
-> ambos recursos tienen los métodos `folder` y `file`, que permiten indicar cuál es la ruta de la carpeta o del archivo
+> ambos recursos tienen los métodos `folder` y `file`, que permiten indicar cuál es la ruta de la carpeta o del archivo,
 > respectivamente.
 
 Para recibir el archivo, en este ejemplo se muestra cómo un archivo enviado en el servicio
@@ -963,11 +963,11 @@ Para recibir el archivo, en este ejemplo se muestra cómo un archivo enviado en 
     ]}
 />
 
-El código anterior va a crear la carpeta `temporal` dentro de la aplicación y guardar el archivo recibido
+El código anterior creará la carpeta `temporal` dentro de la aplicación y guardará el archivo recibido
 dentro de esta carpeta.
 
-Para hacer la descarga del archivo, en este ejemplo se muestra cómo se pueden obtener los bytes del archivo
-a través del servicio `GET`:
+Para descargar el archivo, en este ejemplo se muestra cómo se pueden obtener los bytes del archivo
+mediante el servicio `GET`:
 
 <PolyglotCode
     file="services/archivo/get"
@@ -975,8 +975,8 @@ a través del servicio `GET`:
         {
             lang: 'javascript',
             code: `
-                const nombreArchivo = _req.getString("archivo");
-                const archivo = _app.file(\`temporal/\${nombreArchivo}\`);
+                const archivoNombre = _req.getString("archivo");
+                const archivo = _app.file(\`temporal/\${archivoNombre}\`);
 
                 if (archivo.exists() == false) {
                     _header.status(404);
@@ -995,8 +995,8 @@ a través del servicio `GET`:
         {
             lang: 'python',
             code: `
-                nombreArchivo = _req.getString("archivo")
-                archivo = _app.file(f"temporal/{nombreArchivo}")
+                archivoNombre = _req.getString("archivo")
+                archivo = _app.file(f"temporal/{archivoNombre}")
 
                 if archivo.exists() == False:
                     _header.status(404)
@@ -1014,8 +1014,8 @@ a través del servicio `GET`:
         {
             lang: 'ruby',
             code: `
-                nombre_archivo = _req.getString("archivo")
-                archivo = _app.file("temporal/#{nombre_archivo}")
+                archivo_nombre = _req.getString("archivo")
+                archivo = _app.file("temporal/#{archivo_nombre}")
 
                 if archivo.exists() == false
                     _header.status(404)
@@ -1034,8 +1034,8 @@ a través del servicio `GET`:
         {
             lang: 'kotlin',
             code: `
-                val nombreArchivo = _req.getString("archivo")
-                val archivo = _app.file("temporal/\${nombreArchivo}")
+                val archivoNombre = _req.getString("archivo")
+                val archivo = _app.file("temporal/\${archivoNombre}")
 
                 if (archivo.exists() == false) {
                     _header.status(404)
@@ -1054,8 +1054,8 @@ a través del servicio `GET`:
         {
             lang: 'groovy',
             code: `
-                final nombreArchivo = _req.getString("archivo")
-                final archivo = _app.file("temporal/\${nombreArchivo}")
+                final archivoNombre = _req.getString("archivo")
+                final archivo = _app.file("temporal/\${archivoNombre}")
 
                 if (archivo.exists() == false) {
                     _header.status(404)
@@ -1076,7 +1076,7 @@ a través del servicio `GET`:
 
 ## Conclusión
 
-Como puede verse, podemos integrar la subida de archivos en los servicios de la API REST, incluso integrado con
+Como se puede ver, podemos integrar la subida de archivos en los servicios de la API REST, incluso integrada con
 OpenAPI.
 
 Podemos guardar el archivo en la base de datos, dentro de la carpeta `storage` de la aplicación o en cualquier carpeta del
@@ -1088,6 +1088,6 @@ Vea la documentación de los recursos utilizados en este tutorial que permiten m
 - [App](/docs/library/resources/app)
 - [OS](/docs/library/resources/os)
 
-En base de datos podemos guardar imágenes en campos del tipo `image`, y podemos guardar cualquier tipo de archivo en
-campos del tipo `file`, cómo guardamos u obtenemos archivos son de la misma forma en cualquier caso, ya sea imagen o
+En la base de datos podemos guardar imágenes en campos de tipo `image`, y podemos guardar cualquier tipo de archivo en
+campos de tipo `file`; cómo guardamos u obtenemos archivos es igual en cualquier caso, ya sea imagen o
 archivo genérico.

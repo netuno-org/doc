@@ -1,15 +1,15 @@
 ---
 id: web-service 
-title: Service Web Multi-Applications 
+title: Service Web Multi-Application
 sidebar_label: Service Web
 sidebar_position: 4
 ---
 
-Dans ce tutoriel, nous allons créer un service web multi-applications pour Netuno. Cela signifie que nous allons créer un service web en Java qui sera placé dans le répertoire de base de Netuno et qui pourra être utilisé par n'importe quelle application dans le dossier `apps`.
+Dans ce tutoriel, nous allons créer un service web multi-application pour Netuno. Cela signifie que nous allons créer un service web en Java qui sera placé dans le répertoire de base de Netuno et qui pourra être utilisé par n'importe quelle application dans le dossier `apps`.
 
-L'exemple que nous allons créer, en suivant les tutoriels précédents, est le service `calcul`, qui est un service d'exemple qui exécute des opérations arithmétiques simples.
+L'exemple que nous allons créer, en suivant les tutoriels précédents, est le service `calcul`, qui est un service d'exemple qui effectue des opérations arithmétiques simples.
 
-Pour commencer, il faut d'abord créer la structure de dossiers du projet. Dans cet exemple, nous considérons que le projet sera créé dans un dossier appelé `Calcul`. Il faut donc créer la structure de dossiers qui reflète le nom du package (dans notre exemple, `org.netuno.addon.calcul`). Notre structure de dossiers sera donc :
+Pour commencer, il est d'abord nécessaire de créer la structure de dossiers du projet. Dans cet exemple, nous considérerons que le projet sera créé dans un dossier nommé `Calcul`. Il faut donc créer la structure de dossiers qui reflète le nom du package (dans notre exemple, `org.netuno.addon.calcul`). Notre structure de dossiers sera donc :
 
 - `Calcul/src/main/java/org/netuno/addon/calcul/web/`
 
@@ -17,13 +17,13 @@ Dans cette structure, nous allons créer une classe Java appelée `CalculWeb`, q
 
 - ` Calcul/src/main/java/org/netuno/addon/calcul/web/CalculWeb.java`
 
-Le package défini dans la classe sera donc :
+Alors le package défini dans la classe sera :
 
 ```java
 package org.netuno.addon.calcul.web;
 ```
 
-Pour que la classe définisse un service web multi-applications personnalisé, cette classe doit étendre la classe `org.netuno.tritao.Web` :
+Pour que la classe définisse un service web multi-application personnalisé, cette classe doit étendre la classe `org.netuno.tritao.Web` :
 
 ```java
 package org.netuno.addon.calcul.web;
@@ -71,7 +71,7 @@ public class CalculWeb extends Web {
 
 Nous allons donc, en utilisant certaines ressources de Netuno, définir la méthode `run` pour qu'elle reçoive le paramètre `op`, qui définira quelle opération utiliser entre `plus` (addition) et `moins` (soustraction), et les paramètres `x` et `y` qui seront les opérandes (termes dans le cas de l'addition, diminuende et diminuteur respectivement dans le cas de la soustraction).
 
-Ensuite, en fonction de l'opération choisie, notre service calculera le résultat et le renverra à l'utilisateur au format JSON :
+Ensuite, en fonction de l'opération choisie, notre service calculera le résultat et le retournera à l'utilisateur au format JSON :
 
 ```java
 package org.netuno.addon.calcul.web;
@@ -97,24 +97,24 @@ public class CalculWeb extends Web {
         double x = req.getDouble("x", 0);
         double y = req.getDouble("y", 0);
 
-        double resultat = 0;
+        double résultat = 0;
 
         if (op.equalsIgnoreCase("moins")) {
-            resultat = x - y;
+            résultat = x - y;
         } else {
-            resultat = x + y;
+            résultat = x + y;
         }
 
-        out.json(val.map().set("resultat", resultat));
+        out.json(val.map().set("résultat", résultat));
     }
 }
 ```
 
-Il ne reste plus qu'à compiler la classe, en vous assurant que le fichier `CalculWeb.class` se trouve dans le dossier :
+Maintenant, il suffit de compiler la classe, en s'assurant que le fichier `CalculWeb.class` se trouve dans le dossier :
 
 - `netuno/core/web/WEB-INF/classes/org/netuno/addon/calcul/web/`
 
-Ou produire un fichier JAR, en vous assurant qu'il se trouve dans le dossier :
+Ou produire un fichier JAR, en s'assurant qu'il se trouve dans le dossier :
 
 - `netuno/lib/`
 
@@ -124,18 +124,18 @@ Démarrez le serveur Netuno avec n'importe quelle application :
 ./netuno server app=demo
 ```
 
-Pour appeler ce service, il est nécessaire d'ajouter `.netuno` à la fin de l'URL :
+Pour faire des appels à ce service, il est nécessaire d'ajouter `.netuno` à la fin de l'URL :
 
 - `http://localhost:9000/addon/calcul/Calcul.netuno`
 
-Par exemple, si vous appelez :
+Par exemple, si vous faites un appel à :
 
 - `http://localhost:9000/addon/calcul/Calcul.netuno?op=moins&x=5&y=2`
 
 Vous recevrez en retour :
 
 ```js
-{"resultat":3}
+{"résultat":3}
 ```
 
 Vous pouvez voir les fichiers complets du projet dans ce [lien](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/web).

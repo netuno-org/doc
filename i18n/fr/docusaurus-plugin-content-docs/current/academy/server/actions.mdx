@@ -11,32 +11,32 @@ Personnalisations des opérations de base de données.
 
 ## Introduction
 
-Des manipulations de données sont effectuées en permanence, et il est courant de rencontrer des règles telles que, par exemple :
+Il y a constamment une manipulation de données, et il est courant d'avoir des règles comme, par exemple :
 
 - Lors de la suppression d'un client, son historique doit être supprimé.
 - Lors de l'annulation d'un produit, il faut le retirer des commandes et ajuster le montant total.
 - Lors de la finalisation d'un achat, il faut envoyer les données à un autre système qui effectue la distribution.
 
-Les actions (_actions_) servent justement à cela : injecter du code à exécuter dans des situations spécifiques
+Les actions (_actions_) servent justement à cela, à injecter du code à exécuter dans des situations spécifiques
 lorsqu'une manipulation de données se produit.
 
-Lors de l'**insertion** ou de la **modification** d'une information, les actions de sauvegarde (_save_) et de sauvegardé
+Lors de l'**insertion** ou de la **modification** d'une information, les actions d'enregistrement (_save_) et une fois enregistré
 (_saved_) sont exécutées :
 
-- `save` : Avant l'exécution de la commande en base de données.
-- `saved` : Après l'exécution de la commande en base de données.
+- `save` : Avant d'exécuter la commande en base de données.
+- `saved` : Après avoir exécuté la commande en base de données.
 
-En revanche, lors de la **suppression**, de l'**effacement** ou de l'**élimination** d'une information, les actions de suppression (_remove_) et
-de supprimé (_removed_) sont alors exécutées.
+De même, lors de la **suppression**, de l'**effacement** ou de l'**élimination** d'une information, les actions de suppression (_remove_) et
+une fois supprimé (_removed_) sont exécutées.
 
-- `remove` : Avant l'exécution de la commande en base de données.
-- `removed` : Après l'exécution de la commande en base de données.
+- `remove` : Avant d'exécuter la commande en base de données.
+- `removed` : Après avoir exécuté la commande en base de données.
 
 Ainsi, lorsque nous modifions quelque chose dans un formulaire, avec des opérations de création, de modification ou de suppression d'informations, des
 opérations distinctes sont exécutées en base de données, et les actions (_actions_) correspondantes sont exécutées.
 
-> Avez-vous déjà entendu parler des _triggers_ de base de données ? Le _trigger_ de base de données est exécuté à chaque fois qu'il y a
-> des modifications de données ; les actions (_actions_) sont donc similaires aux _triggers_, mais au niveau du code.
+> Avez-vous déjà entendu parler des _triggers_ de base de données ? Le _trigger_ de base de données est exécuté chaque fois qu'il y a
+> des modifications de données ; par conséquent, les actions (_actions_) sont similaires aux _triggers_, mais au niveau du code.
 
 Rappelez-vous que chaque type d'opération exécute une commande distincte en base de données, à savoir :
 
@@ -49,7 +49,7 @@ car la commande est exécutée directement dans la base de données sans qu'il s
 
 > Dans le code des actions, vous pouvez utiliser n'importe quelle ressource du framework low-code polyglotte.
 
-Les actions sont exécutées lorsqu'une manipulation de données se produit dans les formulaires de back-office auto-générés
+Les actions sont exécutées lorsqu'une manipulation de données se produit dans les formulaires de backoffice auto-générés
 par Netuno, ou lorsque nous exécutons des opérations en base de données dans le code en utilisant :
 
 - `_db.insert(...)`, `_db.form(...).insert()`, `_db.insertIfNotExits(...)`, `_db.insertMany(...)`, entre autres.
@@ -68,13 +68,13 @@ Dans le code des actions, vous pouvez effectuer toute opération associée à la
 
 ## Élément de données (Data Item)
 
-L'élément de données (`_dataItem`) est une ressource du framework low-code polyglotte qui contient toute la relation de données
+L'élément de données (`_dataItem`) est une ressource du framework low-code polyglotte qui contient l'ensemble des données
 en cours de création, de modification ou de suppression.
 
 Grâce à la ressource `_dataItem`, nous pouvons accéder à toute l'information et vérifier les détails du processus de l'opération
 en cours.
 
-> Consultez la documentation de la ressource [DataItem](/docs/library/resources/dataItem) pour plus de détails sur ce que
+> Consultez la documentation de la ressource [DataItem](/docs/library/resources/dataItem) pour en savoir plus sur ce que
 > la ressource `_dataItem` prend en charge.
 
 **Attention :** La ressource `_dataItem` est uniquement disponible dans le code des actions (_actions_).
@@ -82,7 +82,7 @@ en cours.
 ## Enregistrer, Sauvegarder, Modifier ou Créer Nouveau (_Save_)
 
 Pour créer une action qui sera exécutée lors de la création d'un nouvel enregistrement, ou lorsqu'une modification a lieu, le script
-de cette action sera appelé `save`, ce qui signifie que quelque chose est en cours de sauvegarde en base de données, par exemple :
+de cette action sera appelé `save`, ce qui signifie que quelque chose est sauvegardé en base de données, par exemple :
 
 <PolyglotPath files={[
     'mon_app/server/actions/mon_formulaire/save'
@@ -217,8 +217,8 @@ base de données et les comparer avec les nouvelles données `getRecord()`, par 
 
 ### Générer une Erreur
 
-Il est possible de générer une erreur pour empêcher l'opération de progresser ; la génération de l'erreur est normalement effectuée avant
-l'exécution de la commande de base de données, donc dans l'action `save`, par exemple :
+Il est possible de générer une erreur pour empêcher l'opération de se poursuivre ; la génération de l'erreur est normalement effectuée avant
+d'exécuter la commande de base de données, donc dans l'action `save`, par exemple :
 
 <PolyglotCode
     file="mon_app/server/actions/mon_formulaire/save"
@@ -228,7 +228,7 @@ l'exécution de la commande de base de données, donc dans l'action `save`, par 
             code: `
                 _dataItem.setStatusWithError()
                     .setErrorTitle("E-mail")
-                    .setErrorMessage("Il n'est pas permis de modifier l'e-mail.")
+                    .setErrorMessage("La modification de l'e-mail n'est pas autorisée.")
             `
         },
     ]}
@@ -236,7 +236,7 @@ l'exécution de la commande de base de données, donc dans l'action `save`, par 
 
 ### Vérifier s'il y a eu une Erreur
 
-Il est possible de vérifier si une erreur s'est produite lors de l'exécution de la commande en base de données ; diverses erreurs peuvent survenir,
+Il est possible de vérifier s'il y a eu une erreur lors de l'exécution de la commande en base de données ; diverses erreurs peuvent survenir,
 par exemple :
 
 - Il n'est pas permis d'avoir des e-mails en double.
@@ -253,7 +253,7 @@ La vérification des erreurs est normalement effectuée après l'exécution de l
             lang: 'javascript',
             code: `
                 if (_dataItem.isError()) {
-                    // Une erreur s'est produite et il n'a pas été possible d'enregistrer les données...
+                    // Une erreur est survenue et il n'a pas été possible d'enregistrer les données...
                 }
             `
         },
@@ -261,14 +261,14 @@ La vérification des erreurs est normalement effectuée après l'exécution de l
             lang: 'python',
             code: `
                 if _dataItem.isError():
-                    # Une erreur s'est produite et il n'a pas été possible d'enregistrer les données...
+                    # Une erreur est survenue et il n'a pas été possible d'enregistrer les données...
             `
         },
         {
             lang: 'ruby',
             code: `
                 if _dataItem.isError()
-                    # Une erreur s'est produite et il n'a pas été possible d'enregistrer les données...
+                    # Une erreur est survenue et il n'a pas été possible d'enregistrer les données...
                 end
             `
         },
@@ -277,7 +277,7 @@ La vérification des erreurs est normalement effectuée après l'exécution de l
 
 ### Configuration
 
-Il est possible d'avoir une `action` spécifique qui n'est exécutée que lorsque des modifications de données sont effectuées pendant la
+Il est possible d'avoir une `action` spécifique qui est exécutée uniquement lorsque des modifications de données sont effectuées pendant la
 configuration (_setup_) de la base de données.
 
 Par exemple :
@@ -290,7 +290,7 @@ Par exemple :
 ## Supprimer, Effacer ou Éliminer (_Remove_)
 
 Pour créer une action qui sera exécutée lorsqu'un enregistrement est supprimé, le script de cette action sera appelé
-`remove`, ce qui signifie que quelque chose est en cours d'élimination en base de données, par exemple :
+`remove`, ce qui signifie que quelque chose est éliminé en base de données, par exemple :
 
 <PolyglotPath files={[
     'mon_app/server/actions/mon_formulaire/setup_remove',
@@ -314,7 +314,7 @@ ou après la commande de base de données.
 ### Conflit avec les Relations
 
 Selon le modèle de données, il peut arriver que, lors de la suppression d'un enregistrement utilisé dans une relation avec
-une autre table, qui est également un autre formulaire, il ne puisse pas être supprimé pour éviter que la relation ne soit brisée.
+une autre table, qui est aussi un autre formulaire, il ne puisse pas être supprimé pour éviter que la relation ne soit brisée.
 
 Ainsi, dans l'action `removed` qui s'exécute après la commande de base de données de suppression, nous pouvons vérifier si cette
 erreur se produit de la manière suivante :
@@ -327,8 +327,8 @@ erreur se produit de la manière suivante :
             code: `
                 if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations()) {
                     _log.error(
-                        "Impossible de supprimer car il existe une relation avec la table "
-                        + _dataItem.getRelationTable() + " en utilisant l'ID " + _dataItem.getRelationItem().getInt("id")
+                        "Impossible de supprimer car il y a une relation avec la table "
+                        + _dataItem.getRelationTable() +" en utilisant l'ID " + _dataItem.getRelationItem().getInt("id")
                     )
                 }
             `
@@ -338,8 +338,8 @@ erreur se produit de la manière suivante :
             code: `
                 if _dataItem.isStatusAsError() and _dataItem.isStatusAsRelations():
                     _log.error(
-                        "Impossible de supprimer car il existe une relation avec la table "
-                        + _dataItem.getRelationTable() + " en utilisant l'ID " + _dataItem.getRelationItem().getInt("id")
+                        "Impossible de supprimer car il y a une relation avec la table "
+                        + _dataItem.getRelationTable() +" en utilisant l'ID " + _dataItem.getRelationItem().getInt("id")
                     )
             `
         },
@@ -348,8 +348,8 @@ erreur se produit de la manière suivante :
             code: `
                 if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations())
                     _log.error(
-                        "Impossible de supprimer car il existe une relation avec la table "
-                        + _dataItem.getRelationTable() + " en utilisant l'ID " + _dataItem.getRelationItem().getInt("id")
+                        "Impossible de supprimer car il y a une relation avec la table "
+                        + _dataItem.getRelationTable() +" en utilisant l'ID " + _dataItem.getRelationItem().getInt("id")
                     )
                 end
             `
@@ -357,7 +357,7 @@ erreur se produit de la manière suivante :
     ]}
 />
 
-Nous pouvons alternativement, dans l'action `remove`, qui s'exécute avant la commande de base qui supprime l'enregistrement,
+Nous pouvons en alternative, dans l'action `remove`, qui s'exécute avant d'effectuer la commande de base qui efface l'enregistrement,
 implémenter le « nettoyage » d'autres enregistrements qui peuvent avoir une relation, par exemple :
 
 <PolyglotCode
@@ -379,7 +379,7 @@ implémenter le « nettoyage » d'autres enregistrements qui peuvent avoir une r
 
 ### Configuration
 
-Il est possible d'avoir une `action` spécifique qui n'est exécutée que lorsque la suppression de données est effectuée pendant la
+Il est possible d'avoir une `action` spécifique qui est exécutée uniquement lorsque la suppression de données est effectuée pendant la
 configuration (_setup_) de la base de données.
 
 Par exemple :
@@ -394,13 +394,13 @@ Par exemple :
 Avec les actions (`actions`), nous pouvons centraliser des opérations spécifiques liées à la manipulation de
 certaines données.
 
-Cela permet d'articuler avec du code qui fournit des mécanismes utiles pour garantir l'intégrité, faciliter les tâches, réaliser
+Elles permettent d'implémenter du code qui fournit des mécanismes utiles pour garantir l'intégrité, faciliter les tâches, réaliser
 des intégrations, effectuer des opérations parallèles, ajouter des vérifications supplémentaires, et bien plus encore.
 
-Coder des actions est simple et extrêmement utile ; il est possible de les étendre avec l'utilisation de n'importe quelle autre ressource
+Coder des actions est simple et extrêmement utile ; il est possible d'étendre avec l'utilisation de toute autre ressource
 du framework low-code polyglotte.
 
 > Dans le code des actions, vous pouvez utiliser n'importe quelle ressource du framework low-code polyglotte.
 
-Envisagez d'utiliser les actions et vous constaterez rapidement à quel point la facilité obtenue peut renforcer
+Envisagez d'utiliser les actions et vous pourrez rapidement constater comment la facilité obtenue peut potentialiser
 de nombreuses stratégies utiles.

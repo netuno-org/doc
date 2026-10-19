@@ -8,14 +8,14 @@ Cum să gestionezi utilizatorii, grupurile și să garantezi securitatea aplica�
 
 ## Introducere
 
-Securitatea este unul dintre pilonii fundamentali ai oricărei aplicații. Fie că este o aplicație internă simplă sau un sistem complex cu mii de utilizatori externi prin API.
+Securitatea este unul dintre pilonii fundamentali ai oricărei aplicații. Fie că este vorba de o aplicație internă simplă sau de un sistem complex cu mii de utilizatori externi prin API.
 
-Netuno oferă, nativ, un sistem robust de **Control al Accesului și Permisiunilor**, furnizând instrumentele necesare pentru a gestiona securitatea în mod centralizat și eficient. Și elimină necesitatea de a dezvolta aceste funcționalități de la zero.
+Netuno oferă nativ un sistem robust de **Control al Accesului și Permisiunilor**, furnizând instrumentele necesare pentru a gestiona securitatea în mod centralizat și eficient. Și elimină necesitatea de a dezvolta aceste funcționalități de la zero.
 
 Printre principalele mecanisme de securitate se remarcă:
 
-- Gestionarea utilizatorilor și a grupurilor.
-- Controlul permisiunilor asupra datelor și gestionarea datelor.
+- Gestionarea utilizatorilor și grupurilor.
+- Controlul permisiunilor asupra datelor până la gestionarea datelor.
 - Istoric detaliat al încercărilor de autentificare.
 - Blocare automată pe IP după încercări de acces eșuate consecutiv.
 - Autentificare integrată cu LDAP, Google, GitHub, Discord etc.
@@ -24,89 +24,89 @@ Printre principalele mecanisme de securitate se remarcă:
 
 ## Gestionarea Utilizatorilor
 
-Aceasta se referă la administrarea conturilor individuale care accesează platforma. Fiecare utilizator, serviciu sau integrare care trebuie să intre în sistem trebuie să aibă o înregistrare unică de utilizator.
+Este vorba despre administrarea conturilor individuale care accesează platforma. Fiecare utilizator, serviciu sau integrare care trebuie să intre în sistem trebuie să dețină o înregistrare unică de utilizator.
 
-În zona de gestionare a utilizatorilor din Netuno, aveți control total asupra ciclului de viață al acestor conturi:
+În zona de gestionare a utilizatorilor din Netuno, ai control total asupra ciclului de viață al acestor conturi:
 - **Creare**: Înregistrarea de noi membri ai echipei sau clienți.
 - **Întreținere**: Actualizarea e-mailurilor, modificarea parolelor și a datelor de înregistrare.
 - **Controlul Accesului**: Blocarea rapidă a conturilor (dezactivare) fără a fi nevoie de ștergerea datelor istorice.
 
-:::tip Ghid Vizual
+:::tip Ghid Vizual 
 Pentru informații detaliate despre Gestionarea Utilizatorilor, consultați [Ghidul Interfeței: Utilizatori și Grupuri](/docs/academy/ui/groups-users)
-:::
+::: 
 
 
 ## Gestionarea Grupurilor
 
-Definirea regulilor de autorizare se realizează prin intermediul Grupurilor, care stabilesc ce meniuri, formulare, servicii și date are fiecare utilizator permisiunea de a accesa sau manipula. În loc să configurați permisiunile individual, ideal este să definiți regulile în Grup și apoi să asociați utilizatorii cu acesta. Această procedură garantează:
+Definirea regulilor de autorizare se face prin intermediul Grupurilor, care stabilesc ce meniuri, formulare, servicii și date are fiecare utilizator permisiunea să acceseze sau să manipuleze. În loc să configurezi permisiunile individual, ideal este să definești regulile în Grup și apoi să asociezi utilizatorii la acesta. Această procedură garantează:
 
-- **Scalabilitate:** Ușurința de a gestiona sute de utilizatori.
-- **Securitate:** Risc redus de a acorda accidental acces necorespunzător.
-- **Organizare:** Separare clară între Administratori, Manageri, Supervizori și utilizatori în general.
+- **Scalabilitate:** Ușurință în gestionarea a sute de utilizatori.
+- **Securitate:** Riscul redus de a acorda acces necorespunzător din greșeală.
+- **Organizare:** Separare clară între Administratori, Manageri, Supervizori și utilizatorii în general.
 
-Netuno vine deja cu grupuri native precum `dev` și `admin` și oferă autonomie totală pentru a crea grupuri personalizate care să răspundă regulilor de business ale aplicației dumneavoastră.
+Netuno vine deja cu grupuri native precum `dev` și `admin` și oferă autonomie totală pentru a crea grupuri personalizate care să răspundă regulilor de business ale aplicației tale.
 
-:::tip Ghid Vizual
+:::tip Ghid Vizual 
 Pentru informații detaliate despre Gestionarea Grupurilor, consultați [Ghidul Interfeței: Utilizatori și Grupuri](/docs/academy/ui/groups-users)
-:::
+::: 
 
 
 ## Controlul Permisiunilor asupra Datelor
 
-Pentru a garanta funcționalitatea unui grup sau permisiunile unui utilizator, este crucial să stabiliți ce date are acesta autorizarea de a manipula. În Netuno, controlul accesului este detaliat și aplicat direct Formularelor (tabelelor) din aplicația dumneavoastră.
+Pentru a garanta funcționalitatea unui grup sau permisiunile unui utilizator, este crucial să se stabilească ce date este autorizat să manipuleze. În Netuno, controlul accesului este detaliat și aplicat direct Formularelor (tabelelor) aplicației tale.
 
-Sistemul utilizează o matrice de permisiuni care permite definirea, pentru fiecare funcționalitate, dacă un anumit grup are autorizarea corespunzătoare pentru a:
+Sistemul utilizează o matrice de permisiuni care permite definirea, pentru fiecare funcționalitate, dacă un anumit grup are autorizația necesară pentru a:
 
-- **Citire:** Doar vizualizarea înregistrărilor.
-- **Scriere:** Inserarea și editarea înregistrărilor în baza de date.
-- **Ștergere:** Eliminarea definitivă a înregistrărilor.
+- **Citi:** Doar vizualizarea înregistrărilor.
+- **Scrie:** Inserarea și editarea înregistrărilor în baza de date.
+- **Șterge:** Eliminarea permanentă a înregistrărilor.
 
-Această flexibilitate asigură protecția datelor sensibile, deoarece fiecare colaborator are acces restricționat doar la informațiile esențiale pentru executarea sarcinilor sale.
+Această flexibilitate asigură protecția datelor sensibile, deoarece fiecare colaborator are acces restricționat doar la informațiile esențiale pentru îndeplinirea sarcinilor sale.
 
-:::tip Ghid Vizual
-Pentru informații detaliate despre modul de configurare a permisiunilor asupra datelor, consultați [Ghidul Interfeței: Utilizatori și Grupuri](/docs/academy/ui/groups-users)
-:::
+:::tip Ghid Vizual 
+Pentru informații detaliate despre cum să configurezi permisiunile asupra datelor, consultați [Ghidul Interfeței: Utilizatori și Grupuri](/docs/academy/ui/groups-users)
+::: 
 
 ## Istoricul Autentificării
 
 Pentru a garanta transparență și control, toate încercările de acces (reușite sau invalide) sunt înregistrate și pot fi consultate în Istoricul Autentificării.
 
-Sistemul monitorizează și stochează în detaliu informațiile fiecărei încercări de autentificare a utilizatorului:
+Sistemul monitorizează și stochează detaliat informațiile fiecărei încercări de autentificare a utilizatorului:
 
-- **IP de Origine:** Adresa de rețea de la care a provenit solicitarea.
-- **Moment:** Momentul exact al acțiunii.
+- **IP de Origine:** Adresa de rețea de unde a provenit solicitarea.
+- **Momentul:** Momentul exact al acțiunii.
 - **Acces:** Dacă accesul a fost permis, refuzat sau blocat.
 
-#### Legenda Iconițelor de Acces
+#### Legenda Pictogramelor de Acces
 
-🟩 **Lacăt/check_mark, în culoarea verde:** Indică un succes. Utilizatorul a furnizat credențialele corecte și autentificarea a fost autorizată. De asemenea, indică faptul că IP-ul de origine a fost deblocat.
+🟩 **Lacăt/check_mark, de culoare verde:** Indică un succes. Utilizatorul a furnizat credențialele corecte și autentificarea a fost autorizată. De asemenea, indică faptul că IP-ul de origine a fost deblocat.
 
-🟧 **Iconiță cu "X", în culoarea portocalie:** Indică numărul de încercări invalide.
+🟧 **Pictogramă cu "X", de culoare portocalie:** Indică numărul de încercări invalide.
 
-🟥 **Lacăt în culoarea roșie:** Indică blocarea IP-ului de origine.
+🟥 **Lacăt de culoare roșie:** Indică blocarea IP-ului de origine.
 
 ## Blocarea Automată
 
-Netuno are un sistem de securitate activ conceput pentru a vă proteja aplicația împotriva atacurilor și accesului neautorizat.
+Netuno dispune de un sistem de securitate activ conceput pentru a proteja aplicația ta împotriva atacurilor și acceselor neautorizate.
 
-Când sunt detectate activități suspecte, precum multiple încercări consecutive de autentificare invalidă, sistemul blochează automat adresa IP de origine.
+Când sunt detectate activități suspecte, cum ar fi multiple încercări consecutive de autentificare invalidă, sistemul blochează automat adresa IP de origine.
 
 Odată blocat, IP-ul nu va putea efectua noi cereri pentru o perioadă determinată sau până când blocarea este eliminată manual.
 
 ### Configurarea Regulilor de Blocare
 
-Această regulă este definită în **fișierele de configurare** ale mediului aplicației dumneavoastră "development.json" sau "production.json".
+Această regulă este definită în **fișierele de configurare** ale mediului aplicației tale "development.json" sau "production.json".
 
-#### 1. Localizați fișierul de configurare
+#### 1. Localizează fișierul de configurare
 
-În rădăcina proiectului dumneavoastră, navigați până la folderul `config`. Deschideți fișierul corespunzător mediului pe care doriți să îl protejați:
+În rădăcina proiectului tău, navighează până la folderul `config`. Deschide fișierul corespunzător mediului pe care dorești să îl protejezi:
 
 * Pentru dezvoltare: `_development.json`
 
 * Pentru producție: `_production.json`
 
-#### 2. Introduceți codul de protecție
-În fișierul JSON, localizați secțiunea `auth`. Dacă aceasta nu există, introduceți blocul `attempts` conform exemplului de mai jos:
+#### 2. Inserează codul de protecție
+În fișierul JSON, localizează secțiunea `auth`. Dacă aceasta nu există, inserează blocul `attempts` conform exemplului de mai jos:
 
 ```json
 {
@@ -122,7 +122,7 @@ Această regulă este definită în **fișierele de configurare** ale mediului a
 
 #### 3. Înțelegerea parametrilor
 
-* `interval`: Fereastra de timp în **minute** (exemplu: 60 de minute = 1 oră).
+* `interval`: Fereastra de timp în **minute** (exemplu: 60 minute = 1 oră).
 
 * `maxFails`: Numărul maxim de eșecuri permise în acest interval înainte de blocare.
 
@@ -131,64 +131,64 @@ Această regulă este definită în **fișierele de configurare** ale mediului a
 
 - După blocarea automată, utilizatorul este împiedicat să acceseze aplicația.
 
-- În mod implicit, sistemul este configurat pentru trei încercări invalide cu blocare pentru o oră. După această perioadă, încercările sunt din nou permise.
+- În mod implicit, sistemul este configurat pentru trei încercări invalide cu blocarea pentru o oră. După această perioadă, încercările sunt din nou permise.
 
-- Acest proces poate fi configurat în funcție de nevoile aplicației dumneavoastră.
+- Acest proces poate fi configurat în funcție de necesitățile aplicației tale.
 
 
-### Deblocarea prin Interfață
+### Deblocare prin Interfață 
 
-Doar un utilizator cu permisiunea de "Administrator" poate debloca accesul direct din Back-Office fără a fi nevoie să acceseze baza de date.
+Doar un utilizator cu permisiunea de "Administrator" poate elibera accesul direct din Back-Office fără a fi nevoie să acceseze baza de date.
 
-1. Accesați meniul aplicației în modul "Vizualizare" și faceți clic pe secțiunea **"Configurare > Utilizatori"**.
+1. Accesează meniul aplicației în modul "Vizualizare" și fă clic pe secțiunea **"Configurare > Utilizatori"**.
 ![user-configuration-section-pt.png](/docs/assets/academy/explore/access-permissions/user-configuration-section-pt.png)
 
-2. În câmpul **"Editați utilizatorul existent"**, selectați utilizatorul dorit.
+2. În câmpul **"Editare utilizator existent"**, selectează utilizatorul dorit.
 ![select-an-existing-user-pt.png](/docs/assets/academy/explore/access-permissions/select-an-existing-user-pt.png)
 
-3. În secțiunea **"Istoricul Autentificării"**, verificați dacă statusul "Access" afișează iconița "Lacăt" în culoarea verde;
+3. În secțiunea **"Istoricul Autentificării"**, verifică dacă statusul "Access" afișează pictograma de "Lacăt" de culoare verde;
 ![section-authentication-history-pt.png](/docs/assets/academy/explore/access-permissions/section-authentication-history-pt.png)
 
-4. Faceți clic pe iconița **Ceas** pentru a verifica lista completă de accesări ale utilizatorului.
+4. Fă clic pe pictograma de **Ceas** pentru a verifica lista completă a accesărilor utilizatorului.
 ![authentication-history-pt.png](/docs/assets/academy/explore/access-permissions/authentication-history-pt.png)
 
-5. Faceți clic pe lacătul verde din coloana **"Acces"** pentru a debloca utilizatorul. După această acțiune, se afișează un mesaj de succes.
+5. Fă clic pe lacătul verde din coloana **"Acces"** pentru a debloca utilizatorul. După această acțiune, este afișat un mesaj de succes.
 
-Deblocarea este imediată, permițând utilizatorului să încerce din nou să se autentifice.
+Eliberarea este imediată, permițând utilizatorului să încerce din nou să se autentifice.
 
 
 ## Autentificări Integrate
 
-Aplicația dumneavoastră poate solicita metode de intrare mai sofisticate, mai ales dacă construiți o aplicație mobilă sau vă integrați într-o rețea corporativă.
+Aplicația ta poate necesita metode de intrare mai sofisticate, mai ales dacă construiești o aplicație mobilă sau te integrezi într-o rețea corporativă.
 
-Netuno a fost conceput să fie flexibil și să se integreze în ecosistemul organizației dumneavoastră. Pe lângă autentificarea standard (utilizator și parolă), platforma oferă suport pentru diverse protocoale de autentificare de pe piață.
+Netuno a fost conceput pentru a fi flexibil și a se integra în ecosistemul organizației tale. Pe lângă autentificarea standard (utilizator și parolă), platforma oferă suport pentru diverse protocoale de autentificare de pe piață.
 
-Acest lucru permite implementarea strategiilor de Single Sign-On (Autentificare Unică), în care utilizatorii accesează sistemul folosind credențiale pe care le dețin deja, centralizând gestionarea accesului.
+Aceasta permite implementarea strategiilor de Single Sign-On (Autentificare Unică), unde utilizatorii accesează sistemul folosind credențiale pe care le dețin deja, centralizând gestionarea accesului.
 
-**Medii Corporative:** Compatibilitate cu directoare de utilizatori (precum LDAP și Active Directory), ideal pentru intranet și sisteme interne.
+**Medii Corporative:** Compatibilitate cu directoare de utilizatori (precum LDAP și Active Directory), ideală pentru intranet și sisteme interne.
 
-**Autentificare Socială (OAuth):** Posibilitatea de integrare cu furnizori precum Google, Microsoft, GitHub, printre alții, facilitând înregistrarea și accesul în aplicații publice.
+**Autentificare Socială (OAuth):** Posibilitatea de integrare cu furnizori precum Google, Microsoft, GitHub, printre altele, facilitând înregistrarea și accesul în aplicații publice.
 
 ## Autentificare prin Token (JWT)
 
-Pentru proiectele care utilizează un Front-end dedicat (precum site-uri în React, Vue.js sau aplicații Mobile), ecranul de autentificare tradițional al Netuno nu este utilizat. În aceste scenarii, se adoptă standardul JWT (JSON Web Token).
+Pentru proiectele care utilizează un Front-end dedicat (precum site-uri în React, Vue.js sau aplicații Mobile), ecranul de autentificare tradițional din Netuno nu este utilizat. În aceste scenarii, se adoptă standardul JWT (JSON Web Token).
 
-Netuno oferă un serviciu nativ care generează și validează automat aceste token-uri, garantând securitatea și eficiența comunicării prin API.
+Netuno oferă un serviciu nativ care generează și validează automat aceste tokenuri, garantând securitate și eficiență în comunicarea prin API.
 
 :::tip Ghid Vizual
-Pentru mai multe informații despre modul de implementare și configurare a JWT în fișierele de configurare, consultați [Ghidul de Autentificare JWT](/docs/academy/server/services/jwt)
+Pentru mai multe informații despre cum să implementezi și să configurezi JWT în fișierele tale de configurare, consultați [Ghidul de Autentificare JWT](/docs/academy/server/services/jwt)
 :::
 
-## Concluzie
+## Concluzie 
 
-Stăpânirea funcțiilor de securitate ale Netuno este fundamentală pentru sănătatea proiectului dumneavoastră. Utilizând corect instrumentele de gestionare a utilizatorilor, a grupurilor și de monitorizare a istoricului, ați construit un mediu care echilibrează protecția datelor cu ușurința de utilizare.
+Stăpânirea funcționalităților de securitate ale Netuno este fundamentală pentru sănătatea proiectului tău. Utilizând corect instrumentele de gestionare a utilizatorilor, a grupurilor și monitorizarea istoricului, ai construit un mediu care echilibrează protecția datelor cu ușurința de utilizare.
 
-Astfel garantați că sistemul dumneavoastră în Netuno este:
+Astfel, garantezi că sistemul tău din Netuno este:
 
-- **Sigur:** Protejând informațiile sensibile împotriva accesului neautorizat.
+- **Sigur:** Protejând informațiile sensibile împotriva acceselor neautorizate.
 
 - **Organizat:** Stabilind ierarhii și responsabilități clare.
 
 - **Scalabil:** Pregătit să crească cu integrări moderne.
 
-**Mențineți bunele practici:** Revizuiți periodic permisiunile grupurilor și verificați istoricul accesărilor pentru a menține un mediu sănătos.
+**Menține bunele practici:** Revizuiește periodic permisiunile grupurilor și verifică istoricul accesărilor pentru a menține mediul tău sănătos.

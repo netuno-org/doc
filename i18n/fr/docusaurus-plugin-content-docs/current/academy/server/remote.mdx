@@ -11,13 +11,13 @@ Souvent, dans nos applications, nous devons effectuer des requêtes HTTP vers de
 
 Pour effectuer des appels HTTP en interne vers d'autres services ou serveurs internes sur l'ordinateur, ou pour appeler un service sur Internet, l'utilisation de la ressource Remote est essentielle.
 
-> Consultez la documentation de la ressource [Remote](/docs/library/resources/remote).
+> Voir la documentation de la ressource [Remote](/docs/library/resources/remote).
 
-Nous pouvons même envoyer et recevoir des données en JSON et effectuer l'envoi ou le téléchargement de fichiers.
+Nous pouvons même envoyer et recevoir des données en JSON et téléverser ou télécharger des fichiers.
 
 ## Initialisation
 
-Pour pouvoir effectuer un appel HTTP, nous devons d'abord l'initialiser ; pour cela, nous utiliserons la méthode init de _remote et stockerons ensuite le résultat de cette opération dans une variable appelée remote afin de pouvoir référencer la requête :
+Pour pouvoir effectuer un appel HTTP, nous devons d'abord l'initialiser, pour cela nous utiliserons la méthode init de _remote et nous stockerons ensuite le résultat de cette opération dans une variable appelée remote afin de pouvoir référencer la requête :
 
 <PolyglotCode
     codes={[
@@ -35,7 +35,7 @@ Pour pouvoir effectuer un appel HTTP, nous devons d'abord l'initialiser ; pour c
 
 ## Configuration
 
-Nous pouvons également définir des configurations globales dans l'application ; observez cet exemple complet :
+Nous pouvons également définir des configurations globales dans l'application, remarquez cet exemple complet :
 
 ```json
   ...
@@ -55,7 +55,7 @@ Nous pouvons également définir des configurations globales dans l'application 
     "exemple-auth-token": {
       "urlPrefix": "https://exemple.com/api",
       "json": true,
-      "authorization": "Bearer AUTH-TOKEN-ICI",
+      "authorization": "Bearer JETON-AUTH-ICI",
       "connectTimeout": 5000,
       "readTimeout": 60000,
     }
@@ -65,13 +65,13 @@ Nous pouvons également définir des configurations globales dans l'application 
 
 Nous pouvons configurer un préfixe d'URL (`urlPrefix`) ou l'URL complète (`url`).
 
-Nous pouvons définir si la requête doit envoyer par défaut les données au format Form ou JSON.
+Nous pouvons définir si la requête par défaut doit envoyer les données sous forme de Form ou JSON.
 
-Prend en charge l'envoi d'une autorisation basique avec identifiant et mot de passe ou jeton.
+Prend en charge l'envoi d'une autorisation de base avec identifiant et mot de passe ou jeton.
 
 Et il est possible de définir les données par défaut qui seront envoyées (`data`), ainsi que les délais limites de connexion (`connectTimeout`) et de lecture (`readTimeout`).
 
-### Comment utiliser
+### Utilisation
 
 Pour utiliser la ressource Remote avec les configurations définies dans l'application, il suffit d'initialiser la ressource avec la clé de configuration, par exemple :
 
@@ -107,13 +107,13 @@ Et si l'URL de préfixe est définie :
 
 ## Requête HTTP
 
-Voyez comment nous pouvons initialiser une requête HTTP en utilisant la ressource [Remote](/docs/library/resources/remote).
+Voyez comment nous pouvons initier une requête HTTP en utilisant la ressource [Remote](/docs/library/resources/remote).
 
 ### Envoyer du JSON
 
-Pour envoyer des données au format JSON, nous devons signaler le type de contenu comme JSON :
+Pour envoyer des données au format JSON, nous devons indiquer le type de contenu comme JSON :
 
-La façon simple de faire cela est d'utiliser la méthode `asJSON()`, par exemple :
+La façon simple de le faire est d'utiliser la méthode `asJSON()`, par exemple :
 
 <PolyglotCode
     codes={[
@@ -132,11 +132,11 @@ La façon simple de faire cela est d'utiliser la méthode `asJSON()`, par exempl
     ]}
 />
 
-Ainsi, les données seront envoyées en JSON pour les méthodes HTTP POST et PUT, mais pour GET et DELETE, les données sont toujours envoyées dans la chaîne de requête car, pour ces méthodes, le protocole HTTP ne prend pas en charge un corps avec des données.
+Ainsi, les données seront envoyées en JSON pour les méthodes HTTP POST et PUT, mais pour GET et DELETE, les données sont toujours envoyées dans la chaîne de requête car ces méthodes ne supportent pas, selon le protocole HTTP, un corps avec des données.
 
 ### Méthodes HTTP
 
-Nous n'avons pas besoin d'indiquer explicitement dans l'en-tête de l'appel sa méthode HTTP ; pour cela, notre référence d'appel possède une fonction propre à chaque type de méthode HTTP :
+Nous n'avons pas besoin d'indiquer explicitement dans l'en-tête de l'appel sa méthode HTTP, pour cela notre référence d'appel possède une fonction propre pour chaque type de méthode HTTP :
 
 <PolyglotCode
     codes={[
@@ -291,7 +291,9 @@ Après avoir reçu la réponse de la requête, nous pouvons lire ses données en
     ]}
 />
 
-Dans la réponse, avec la fonction `json()`, nous obtenons le tableau ou l'objet fourni en tant que Values, et avec la fonction `content()`, nous obtenons le contenu en texte brut ou le HTML, et le numéro du code de statut reçu est disponible dans `statusCode()`, tandis que `ok()` retourne une valeur booléenne qui est vraie si le code de statut est compris entre 200 et 299.
+Dans la réponse, avec la fonction `json()`, nous obtenons le tableau ou l'objet fourni comme Values, et avec la fonction `content()`
+nous obtenons le contenu en texte brut ou le HTML, et le numéro du code de statut reçu se trouve dans `statusCode()`, sachant que `ok()`
+renvoie une valeur booléenne qui est vraie si le code de statut est dans l'intervalle de 200 à 299.
 
 ## Téléchargement
 
@@ -395,7 +397,7 @@ Voyez cet exemple de service complet :
     ]}
 />
 
-> Le `fichier.save` est utilisé 3 fois intentionnellement ; pour en savoir plus sur `_app.file`, `_storage` et `_os.file`,
+> Le `fichier.save` est utilisé 3 fois volontairement, pour en savoir plus sur `_app.file`, `_storage` et `_os.file`,
 > consultez le tutoriel sur [Manipulation de fichiers et dossiers](/docs/academy/server/files-manipulation).
 
 ## Téléversement
@@ -414,7 +416,7 @@ Voyez l'exemple complet d'un service :
 
                 const televersement = _remote.asMultipartFormData()
                   .post(
-                    'http://localhost:9000/services/recepteur-fichier',
+                    'http://localhost:9000/services/file-receiver',
                     _val.map()
                       .set("fichier", fichier)
                   );
@@ -435,7 +437,7 @@ Voyez l'exemple complet d'un service :
                 fichier = _app.file("public/images/logo.png")
 
                 televersement = _remote.asMultipartFormData().post(
-                    "http://localhost:9000/services/recepteur-fichier",
+                    "http://localhost:9000/services/file-receiver",
                     _val.map().set("fichier", fichier)
                 );
 
@@ -454,7 +456,7 @@ Voyez l'exemple complet d'un service :
                 fichier = _app.file("public/images/logo.png")
 
                 televersement = _remote.asMultipartFormData().post(
-                    "http://localhost:9000/services/recepteur-fichier",
+                    "http://localhost:9000/services/file-receiver",
                     _val.map().set("fichier", fichier)
                 );
 
@@ -474,7 +476,7 @@ Voyez l'exemple complet d'un service :
                 val fichier = _app.file("public/images/logo.png")
 
                 val televersement = _remote.asMultipartFormData().post(
-                    "http://localhost:9000/services/recepteur-fichier",
+                    "http://localhost:9000/services/file-receiver",
                     _val.map().set("fichier", fichier)
                 );
 
@@ -491,7 +493,8 @@ Voyez l'exemple complet d'un service :
     ]}
 />
 
-Remarquez que dans l'exemple ci-dessus, le fichier est envoyé à un autre service ; voyez comment cet autre service qui reçoit le fichier peut être implémenté dans Netuno :
+Remarquez que dans l'exemple ci-dessus, le fichier est envoyé vers un autre service, voyez comment cet autre service qui reçoit le
+fichier peut être implémenté dans Netuno :
 
 <PolyglotCode
     file="server/services/file-receiver"
@@ -537,6 +540,6 @@ Remarquez que dans l'exemple ci-dessus, le fichier est envoyé à un autre servi
 
 ## Conclusion
 
-Avec la ressource [Remote](/docs/library/resources/remote), nous pouvons intégrer des API externes, exporter, importer ou synchroniser des données.
+Avec la ressource [Remote](/docs/library/resources/remote), nous pouvons intégrer des API externes, nous pouvons exporter, importer ou synchroniser des données.
 
-Nous pouvons même intégrer des services implémentés dans d'autres technologies, ce qui permet d'effectuer des opérations spécifiques fournies par d'autres langages.
+Nous pouvons même intégrer des services implémentés dans d'autres technologies, ce qui permet de réaliser des opérations spécifiques fournies par d'autres langages.

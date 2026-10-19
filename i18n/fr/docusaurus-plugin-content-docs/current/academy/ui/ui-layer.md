@@ -9,25 +9,25 @@ Installation et compilation du tableau de bord et de l'interface générale des 
 
 ## Contexte
 
-Les applications Netuno intègrent déjà par défaut un ensemble de technologies avancées orientées front-end, dont certaines sont [React](https://react.dev/), [Vite](https://vite.dev/), [Less](https://lesscss.org/) et [Ant.Design](https://ant.design/).
+Les applications Netuno intègrent déjà, par défaut, un ensemble de technologies avancées destinées au front-end, dont certaines sont [React](https://react.dev/), [Vite](https://vite.dev/), [Less](https://lesscss.org/) et [Ant.Design](https://ant.design/).
 
-Dans les applications, il y a le dossier `📁 ui` (_interface utilisateur_, interface d'utilisation), où nous développons les tableaux de bord et d'autres composants front-end.
+Dans les applications, il y a le dossier `📁 ui` (_user interface_, interface d'utilisation), qui est l'endroit où nous développons les tableaux de bord et d'autres composants front-end.
 
 ## Avant de commencer
 
-Vérifiez que [Bun](https://bun.sh/) est installé, car il s'agit d'un prérequis ; pour en savoir plus :
+Assurez-vous d'avoir installé [Bun](https://bun.sh/), qui est un prérequis, plus d'informations sur :
 
 - [Installer Bun](/docs/academy/website/bun)
 
-## Installer les modules de dépendance
+## Installer les modules de dépendances
 
-Pour installer toutes les dépendances fournies par défaut, entrez dans le dossier `📁 ui` (_interface utilisateur_) de votre application en cours de développement, par exemple :
+Pour installer toutes les dépendances fournies par défaut, entrez dans le dossier `📁 ui` (_user interface_) à l'intérieur de votre application en cours de développement, par exemple :
 
 ```shell
 cd apps/mon_app/ui/
 ```
 
-Exécutez la commande d'installation des modules de dépendance :
+Exécutez la commande d'installation des modules de dépendances :
 
 ```shell
 bun install
@@ -37,7 +37,7 @@ bun install
 
 ## Compilation automatique
 
-Entrez dans le dossier `📁 ui` (_interface utilisateur_) de votre application en cours de développement, par exemple :
+Entrez dans le dossier `📁 ui` (_user interface_) de votre application en cours de développement, par exemple :
 
 ```shell
 cd apps/mon_app/ui/
@@ -49,7 +49,7 @@ Pour compiler le front-end automatiquement à chaque modification du code, exéc
 bun run watch
 ```
 
-> Vérifiez que [Bun](https://bun.sh/) est installé.
+> Assurez-vous que [Bun](https://bun.sh/) est installé.
  
 ## Intégration automatique du front-end avec Netuno
 
@@ -57,7 +57,7 @@ Netuno vous permet de démarrer l'UI en même temps que le processus serveur de 
 
 > Tous les messages de compilation de React seront intégrés dans le même terminal que l'application Netuno.
 
-Pour cela, il suffit d'activer la configuration dans les `commands` de l'application Netuno dans `📂 config/_development.json`, c'est-à-dire dans le `command` dont le `path` est `ui`, passer `enabled` à `true`, de la manière suivante :
+Pour ce faire, il suffit d'activer la configuration dans les `commands` de l'application Netuno dans `📂 config/_development.json`, c'est-à-dire dans le `command` avec le `path` du `ui`, passer `enabled` à `true`, de la manière suivante :
 
 ```json title="config/_development.json"
 {
@@ -75,9 +75,9 @@ Pour cela, il suffit d'activer la configuration dans les `commands` de l'applica
 
 > Chaque fois que vous modifiez les fichiers de configuration de l'application Netuno, il est nécessaire de redémarrer le serveur pour qu'il prenne en compte les nouvelles modifications.
 
-Enfin, démarrez/redémarrez le serveur avec votre application Netuno pour vérifier son bon fonctionnement.
+Enfin, démarrez/redémarrez le serveur avec votre application Netuno pour vérifier son fonctionnement.
 
-Et maintenant, tout sera intégré dans un seul terminal centralisé, vous évitant ainsi d'avoir plusieurs terminaux dispersés ; pour en savoir plus :
+Et maintenant, tout sera intégré dans un seul terminal centralisé, évitant ainsi d'avoir plusieurs terminaux dispersés, plus d'informations sur :
 
 - [Terminal centralisé](/docs/academy/explore/centralized-terminal)
 
@@ -85,7 +85,7 @@ Et maintenant, tout sera intégré dans un seul terminal centralisé, vous évit
 
 Dans le dossier `📁 ui`, il est possible de configurer n'importe quelle technologie front-end, ou d'inclure tout nouveau module de dépendance nécessaire.
 
-Si vous ne souhaitez pas utiliser l'une des technologies par défaut, vous pouvez la remplacer par n'importe quelle autre, notamment en adaptant les fichiers :
+Si vous ne souhaitez pas utiliser l'une des technologies standard, vous pouvez la remplacer par n'importe quelle autre, notamment en adaptant les fichiers :
 
 - `package.json`
 - `vite.config.js`

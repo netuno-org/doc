@@ -178,7 +178,8 @@ code blocks and commands.
 
 These are never changed:
 
-- link and image targets (`![alt](/docs/assets/image.png)`)
+- link and image targets (`![alt](/docs/assets/image.png)`), except the
+  anchor of internal links (see below)
 - `src` and `href` attributes
 - `import` / `require` paths in MDX
 - Netuno and external library API, command and parameter names
@@ -190,6 +191,21 @@ restored afterwards. If the model drops a placeholder, the file is not written
 and the script fails with the error
 `A tradução perdeu referências protegidas` ("The translation lost protected
 references").
+
+### Anchors
+
+The `#anchor` part of an internal link (`/docs/page#campos-comuns` or
+`#campos-comuns`) is not protected: the model translates it to match the
+translated heading (`#common-fields` in English), as Docusaurus generates
+anchors from heading text. External URLs (`https://...#format`) keep their
+anchor, and headings with an explicit `{#anchor}` keep theirs.
+
+When the heading is in another page, the model can't see its translation, so
+some links may still point to a missing anchor. The build reports them as
+`Docusaurus found broken anchors!` warnings.
+
+Existing translations only get translated anchors after running with
+`--force`, because changing the prompt doesn't change the hashes.
 
 ## After translating
 

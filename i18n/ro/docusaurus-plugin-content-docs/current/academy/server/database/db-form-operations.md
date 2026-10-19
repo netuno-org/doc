@@ -1,38 +1,38 @@
 ---
 id: db-form-operations
-title: Form și Operațiunile de Bază de Date
+title: Formularul și Operațiunile de Bază de Date
 sidebar_label: DB Form
 ---
 
 ## Înainte de a Începe
 
-Înainte de a continua, asigură-te că ai noțiuni de SQL, relaționare între tabele precum "unu la mulți" și "mulți la unu".
+Înainte de a proceda, asigurați-vă că aveți noțiuni de SQL și de relaționare între tabele, precum „unul la mulți” și „mulți la unul”.
 
-În plus, este necesară cunoașterea prealabilă a `Forms` din Netuno și modul în care sunt organizate pentru a putea extrage maximul din DB Form.
+De asemenea, este necesară cunoașterea prealabilă a `Forms` din Netuno și a modului în care acestea sunt organizate, pentru a extrage maximum din DB Form.
 
 ## Introducere
 
-În dezvoltarea de software, de multe ori trebuie să căutăm informații într-o bază de date, iar să facem asta folosind SQL pur face lucrurile oarecum masive și stresante. Interogarea transformă construirea interogărilor SQL într-o experiență intuitivă și lipsită de stres. Cu ea, poți crea interogări puternice folosind metode prietenoase care abstractizează complexitatea SQL-ului brut, oferind o abordare de dezvoltare a interogărilor care se aliniază cu fluxul tău de gândire.
+În dezvoltarea de software, de multe ori trebuie să căutăm informații în baza de date, iar folosirea SQL-ului pur face lucrurile masive și stresante. Query transformă construirea interogărilor SQL într-o experiență intuitivă și lipsită de stres. Cu el, puteți crea interogări puternice folosind metode prietenoase care abstractizează complexitatea SQL-ului brut, oferind o abordare de dezvoltare a interogărilor aliniată la fluxul dumneavoastră de gândire.
 
 ## Cum Funcționează
 
-În inima DB Form stă capacitatea de a structura comenzi SQL folosind obiecte și metode. În loc să scrii comenzile SQL direct, DB Form îți permite să folosești un mecanism orientat pe obiecte pentru a defini interogări și operații în mod programatic.
+În inima DB Form se află capacitatea de a structura comenzi SQL folosind obiecte și metode. În loc să scrieți comenzile SQL direct, DB Form vă permite să utilizați un mecanism orientat pe obiecte pentru a defini interogări și operațiuni în mod programatic.
 
-Fiecare interogare sau operație de bază de date este reprezentată ca un obiect.
+Fiecare interogare sau operațiune de bază de date este reprezentată ca un obiect.
 
-Creezi instanțe de clase de interogare care încapsulează diferite părți ale SQL-ului, cum ar fi selecție, filtrare, grupare etc. Și, de asemenea, execuți operațiile de ștergere, inserare și actualizare a înregistrărilor.
+Creați instanțe ale claselor de interogare care încapsulează diferite părți ale SQL-ului, precum selecție, filtrare, grupare etc. Și, de asemenea, executați operațiunile de ștergere, inserare și actualizare a înregistrărilor.
 
 ## Inițializare
 
-Totul începe cu inițializarea DB Form, care trebuie să știe care va fi numele formularului de bază sau principal care va fi utilizat, adică formularele din Netuno reprezintă întotdeauna tabele din baza de date, prin urmare este același lucru cu a spune care este tabela de bază sau tabela principală.
+Totul începe cu inițializarea DB Form, care trebuie să știe care va fi numele formularului de bază sau principal ce va fi utilizat, adică formularele din Netuno reprezintă întotdeauna tabele în baza de date, prin urmare este același lucru cu a spune care este tabela de bază sau tabela principală.
 
-În acest exemplu inițiem DB Form pornind de la formularul/tabelul `persoane`:
+În acest exemplu inițiem DB Form pornind de la formularul/tabela `persoane`:
 
 ```javascript
 const dbFormPersoane = _db.form("persoane")
 ```
 
-Cu DB Form inițializat, putem realiza interogări sau operații.
+Cu DB Form inițializat putem realiza interogări sau operațiuni.
 
 ## Interogare Simplă
 
@@ -41,7 +41,7 @@ DB Form oferă două metode foarte comune pentru obținerea datelor, pe lângă 
 - `all` - Toate înregistrările ca o listă.
 - `first` - Obține doar prima înregistrare.
 
-Vezi exemplele de mai jos.
+Vedeți exemplele următoare.
 
 Pentru a obține toate persoanele:
 
@@ -59,9 +59,9 @@ const dbPersoana = _db.form("persoane")
 
 ## Filtre și Condiții
 
-Cu `where` putem filtra datele care respectă anumite condiții.
+Cu ajutorul lui where putem filtra datele care respectă anumite condiții.
 
-Vezi câteva exemple:
+Vedeți câteva exemple:
 
 ```js
 const dbPersoana = _db.form("persoane")
@@ -79,7 +79,7 @@ const dbPersoane = _db.form("persoane")
 
 ## Comparații Where
 
-`_db.where` oferă obiectul [Where](/docs/library/objects/Where) care suportă următoarele operații de comparație:
+`_db.where` oferă obiectul [Where](/docs/library/objects/Where) care suportă următoarele operațiuni de comparație:
 
 Comparații cu operatorii numerici și textuali:
 
@@ -94,34 +94,34 @@ Condiții de text cu operatorul `LIKE`:
 
 -  `startsWith('text')` - Dacă începe cu prefixul determinat, este `LIKE '...%'`.
 -  `endsWith('text')` - Dacă se termină cu sufixul determinat, este `LIKE '%...'`.
--  `contains('text')` - Dacă conține termenul, este `LIKE '%...%'`.
+-  `contains('text')` - Dacă conține termenul, este `LIKE '%...%'`..
 
-Condiții cu liste cu operatorul `IN`:
+Condiții cu liste folosind operatorul `IN`:
 
 -  `in(_val.list()...)` - Dacă este egal cu vreo valoare din listă, este condiția `IN (...)`.
--  `notIn(_val.list()...)` - Dacă nu este egal cu nicio valoare din listă, este condiția `NOT IN (...)`.
+-  `notIn(_val.list()...)` - Dacă nu este egal cu niciuna dintre valorile din listă, este condiția `NOT IN (...)`.
 
 ## Exemple Practice de Interogare
 
-`DB Form` este accesibil prin resursa `_db.form('form')`, odată invocat ai în mâini interogarea de bază care poate fi configurată folosind metodele și obiectele disponibile în el.
+`DB Form` este accesibil din resursa `_db.form('formular')`; odată invocat, aveți în mână interogarea de bază care poate fi configurată folosind metodele și obiectele disponibile în ea.
 
 ### Mulți la Unu și Rezultate Distincte
 
 ```javascript
 const interogare = _db.form('persoane')
     .where(
-        _db.where('nume').startsWith('And')
+        _db.where('nume').startsWith('jail')
         .and(
-             _db.where('email').contains('and')
+             _db.where('email').contains('jai')
              .or('email').endsWith('com')
          )
     )
-    .link('slujba', _db.where('cod').equal('manager'))
+    .link('functie', _db.where('cod').equal('manager'))
     .join(
         _db.manyToOne(
             'netuno_user', 
             'persoane_user_id',  
-            _db.where('mail').startsWith('and')
+            _db.where('mail').startsWith('jai')
         ).join(
             _db.manyToOne(
                 'netuno_group',
@@ -139,10 +139,10 @@ const interogare = _db.form('persoane')
 const rezultate = interogare.all();
 ```
 
-În exemplul de mai sus facem o interogare pentru tabelul `persoane` relaționând cu încă alte două tabele, `slujba` și `netuno_user`, unde `slujba` este relaționat prin metoda `link`, iar `netuno_user` prin `join`. Se poate observa că `link` este mult mai simplificat decât `join`, adică `link` reutilizează relația din `Form`-ul Netuno pentru a mapa relația, în timp ce `join` utilizează doar informațiile furnizate în metodă. De asemenea, se pot observa celelalte metode și obiecte utilizate precum:
+În exemplul de mai sus facem o interogare pentru tabela `persoane`, relaționând-o cu încă două tabele, `functie` și `netuno_user`, unde `functie` este relaționată prin metoda `link`, iar `netuno_user` prin intermediul lui `join`. Se poate observa că `link` este mult mai simplificat decât `join`, deoarece `link` reutilizează relația din `Form`-ul Netuno pentru a mapa legătura, în timp ce `join` folosește doar informațiile furnizate în metodă. De asemenea, se pot observa celelalte metode și obiecte utilizate, precum:
 
-- `where` : Obiect furnizat pentru a construi condiții pentru un tabel.
-- `link` : Metodă care relaționează tabelul principal cu un alt tabel folosind criteriile `Form`-ului Netuno.
+- `where` : Obiect furnizat pentru a construi condiții pentru o tabelă.
+- `link` : Metodă care relaționează tabela principală cu o altă tabelă folosind criteriile din `Form`-ul Netuno.
 - `join` : Metodă care primește un obiect de relație între tabele.
 - `get` : Metodă care definește ce câmpuri vor fi returnate în interogare.
 - `manyToOne` : Obiect care definește tipul de relație între tabele, în acest caz o relație de tip `Many To One`.
@@ -150,49 +150,48 @@ const rezultate = interogare.all();
 - `distinct` : Metodă care determină dacă comanda `DISTINCT` va fi aplicată interogării.
 - `all` : Metodă care execută interogarea și returnează rezultatele sub formă de listă.
 
-> Metoda `link` trebuie folosită doar când tabelele au deja o relație prin `Form`-ul Netuno.
+> Metoda `link` trebuie utilizată doar atunci când tabelele au deja o relație prin intermediul `Form`-ului Netuno.
 
 ### Prima Înregistrare cu Relație și Ordonare
 
 ```javascript
 const interogare = _db.form('persoane')
     .where(
-        _db.where('nume').startsWith('And')
+        _db.where('nume').startsWith('jail')
         .and('email').in(
             _val.list().add('primul@mail.com').add('aldoilea@mail.com'))
     )
-    .link('slujba')
+    .link('functie')
     .get("persoane.nume", "persoane_nume")
     .get("persoane.activ", "persoane_activ")
-    .get("slujba.cod", "slujba_cod")
+    .get("functie.cod", "functie_cod")
     .order('persoane.varsta', 'desc')
     .debug(true)
 
 const primulRezultat = interogare.first();
 ```
-
-La finalul exemplului de mai sus invocăm metoda `first()`, aceasta returnează prima apariție găsită la execuția interogării; dacă nu găsește niciuna, va returna `null`.
+La finalul exemplului de mai sus invocăm metoda `first()`, care returnează prima apariție găsită la executarea interogării; în cazul în care nu găsește niciuna, va returna `null`.
 
 ### Paginare
 
 ```javascript
 const interogare = _db.form('persoane')
     .link(
-        'slujba', 
+        'functie', 
         _db.link('sarcina')
     )
     .get("persoane.nume", "persoane_nume")
     .get("persoane.activ", "persoane_activ")
-    .get("slujba.cod", "slujba_cod")
+    .get("functie.cod", "functie_cod")
     .group("persoane.id")
     .debug(true)
 
 const pagina = interogare.page(_db.pagination(1, 10));
 ```
 
-> Numărul paginii în obiectul Pagination începe de la 1, deci exemplul de mai sus este echivalent cu: `offset = 0` și `limit = 10`.  
+> Numărul paginii în obiectul Pagination începe de la 1, așadar exemplul de mai sus este echivalent cu: `offset = 0` și `limit = 10`.  
 
-La finalul exemplului de mai sus invocăm metoda `page()` transmisă ca parametru obiectul `pagination` care are preferințele de paginare. Aceasta va returna un obiect pagină cu atributele echivalente, de exemplu:
+La finalul exemplului de mai sus invocăm metoda `page()` transmigând ca parametru obiectul `pagination`, care conține preferințele de paginare. Aceasta va returna un obiect pagină cu atributele echivalente, de exemplu:
 
 ```json
 {
@@ -200,12 +199,12 @@ La finalul exemplului de mai sus invocăm metoda `page()` transmisă ca parametr
 	"hasPrevious": false,
 	"items": [
 		{
-			"slujba_cod": "stagiar",
+			"functie_cod": "stagiar",
 			"persoane_activ": true,
-			"persoane_nume": "Ion Popescu"
+			"persoane_nume": "Ion Ionescu"
 		},
 		{
-			"slujba_cod": "manager",
+			"functie_cod": "manager",
 			"persoane_activ": true,
 			"persoane_nume": "Andrei Popescu"
 		}
@@ -219,7 +218,7 @@ La finalul exemplului de mai sus invocăm metoda `page()` transmisă ca parametr
 
 ## Inserarea Înregistrărilor
 
-Pentru a introduce date în baza de date folosim metoda `insert`, de exemplu:
+Pentru a insera date în baza de date folosim metoda `insert`, de exemplu:
 
 ```javascript
 const dbPersoanaInserata = _db.form("persoane")
@@ -230,7 +229,7 @@ const dbPersoanaInserata = _db.form("persoane")
 
 Cu rezultatul lui `insert` putem obține id-ul înregistrării care a fost inserată în baza de date.
 
-Prin urmare, în `dbPersoanaInserata` se obține `id`-ul înregistrării inserate astfel:
+Prin urmare, în `dbPersoanaInserata` se obține `id`-ul înregistrării inserate în felul următor:
 
 ```javascript
 _log.info("ID Persoană Inserată: "+ dbPersoanaInserata.getInt('id'))
@@ -238,36 +237,36 @@ _log.info("ID Persoană Inserată: "+ dbPersoanaInserata.getInt('id'))
 
 ## Editarea Înregistrărilor
 
-Prin intermediul obiectului DB Form poți actualiza înregistrările interogării în mod ușor și intuitiv.
+Prin intermediul obiectului DB Form puteți actualiza înregistrările interogării într-un mod simplu și intuitiv.
 
 ```javascript
 _db.form('persoane')
     .link(
-        'slujba',
+        'functie',
         _db.where('cod').equal('stagiar')
     )
     .set("nume", "nume nou")
-    .set("email", "emailnou@mail.com")
+    .set("email", "noulmeuemail@mail.com")
     .update();
 ```
 
-> `Important`. Metoda `update()` va actualiza toate aparițiile interogării, așa că fii atent când o utilizezi.
+> `Important`. Metoda `update()` va actualiza toate aparițiile interogării, așadar fiți atenți atunci când o utilizați.
 
-> De asemenea, poți folosi alte metode combinate precum `order()` și `limit()` pentru a-ți îmbunătăți interogările.
+> În plus, puteți folosi alte metode combinate, precum `order()` și `limit()`, pentru a vă îmbunătăți interogările.
 
 ## Ștergerea Înregistrărilor
 
-DB Form îți permite, de asemenea, să ștergi înregistrările returnate în interogare în mod simplu.
+DB Form vă permite, de asemenea, să ștergeți înregistrările returnate în interogare într-un mod simplu.
 
 ```javascript
 _db.form('persoane')
     .link(
-        'slujba',
+        'functie',
         _db.where('cod').equal('stagiar')
     )
     .delete();
 ```
 
-> `Important`. Metoda `delete()` va șterge toate aparițiile interogării, așa că fii atent când o folosești.
+> `Important`. Metoda `delete()` va șterge toate aparițiile interogării, așadar fiți atenți atunci când o utilizați.
 
-> Ca și celelalte, este posibil să combini alte metode precum `order()` și `limit()` pentru a îmbunătăți rezultatele.
+> La fel ca în celelalte cazuri, este posibil să combinați alte metode, precum `order()` și `limit()`, pentru a îmbunătăți rezultatele.

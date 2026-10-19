@@ -10,11 +10,13 @@ Téléverser et télécharger des fichiers, gérer des dossiers distants.
 
 ## Introduction
 
-Netuno intègre dans son framework low-code un client FTP, qui permet de se connecter à des serveurs, d'envoyer et de recevoir des fichiers, de modifier des dossiers, entre autres opérations distantes.
+Netuno intègre dans son framework low-code un client FTP, qui permet de se connecter à des serveurs, d'envoyer et
+de recevoir des fichiers, de modifier des dossiers, entre autres opérations distantes.
 
 Il prend en charge plusieurs connexions simultanées, ainsi que FTPS.
 
-Cela est possible grâce à l'implémentation Java et open-source [Apache Commons Net](https://github.com/apache/commons-net), qui permet à Netuno de fournir ces fonctionnalités dans tous les langages de _script_ via la ressource `_ftp`.
+Cela grâce à l'implémentation Java et open-source [Apache Commons Net](https://github.com/apache/commons-net), qui
+permet à Netuno de fournir ces fonctionnalités dans tous les langages de _script_ via la ressource `_ftp`.
 
 > En savoir plus sur la ressource [FTP](/docs/library/resources/ftp) de Netuno.
 
@@ -27,7 +29,8 @@ nous utiliserons le fichier d'environnement de développement situé dans :
 
 - `config/_development.json`
 
-Vérifiez s'il ne contient pas déjà les configurations pour FTP ; s'il n'en existe pas encore, ajoutez les paramètres de configuration FTP à la fin du fichier de configuration (au format JSON) :
+Vérifiez qu'il ne contient pas déjà les configurations pour FTP, sinon à la fin du fichier de
+configuration (au format JSON) ajoutez les paramètres de configuration FTP :
 
 ```json title="config/_development.json"
 {
@@ -45,9 +48,9 @@ Vérifiez s'il ne contient pas déjà les configurations pour FTP ; s'il n'en ex
 }
 ```
 
-Après avoir enregistré les modifications, il suffit de redémarrer Netuno pour prendre en compte les modifications de configuration. Il s'agit des configurations par défaut pour la connexion, comme l'indique le nom `default`.
+Après avoir enregistré les modifications, il suffit de redémarrer Netuno pour prendre en compte les modifications de configuration. Celles-ci constituent les configurations par défaut pour la connexion, comme l'indique le nom `default`.
 
-Vous pouvez ajouter d'autres configurations de connexion FTP, mais une seule pourra être définie comme configuration par défaut.
+Vous pouvez ajouter d'autres configurations de connexion FTP, mais une seule pourra être définie par défaut.
 
 Pour ajouter d'autres configurations de connexion FTP, il suffit de répéter le bloc de configuration par défaut et de remplacer le nom
 `default` par un autre nom de votre choix, voir l'exemple :
@@ -75,7 +78,7 @@ Pour ajouter d'autres configurations de connexion FTP, il suffit de répéter le
 }
 ```
 
-Une configuration semblable à l'exemple ci-dessus permettra d'utiliser le compte par défaut lorsqu'elle est appelée de la manière suivante dans le code :
+Une configuration similaire à l'exemple ci-dessus permettra d'utiliser le compte default lorsqu'elle est appelée de la manière suivante dans le code :
 
 <PolyglotCode
     codes={[
@@ -112,7 +115,7 @@ Une configuration semblable à l'exemple ci-dessus permettra d'utiliser le compt
     ]}
 />
 
-Et pour utiliser la configuration `autre`, il suffit d'ajouter le nom de la configuration comme paramètre à la fonction
+Et pour utiliser la configuration `autre`, il suffit d'ajouter le nom de la configuration en paramètre à la fonction
 `_ftp.init()` de la manière suivante :
 
 <PolyglotCode
@@ -150,11 +153,11 @@ Et pour utiliser la configuration `autre`, il suffit d'ajouter le nom de la conf
     ]}
 />
 
-> Si vous n'ajoutez pas de nom de configuration comme paramètre, le compte par défaut sera toujours utilisé.
+> Si vous n'ajoutez pas de nom de configuration en paramètre, le compte default sera toujours utilisé.
 
 ## Connexion
 
-Avant toute chose, il est nécessaire d'initialiser la connexion FTP :
+Avant de faire quoi que ce soit, il faut initier la connexion FTP :
 
 <PolyglotCode
     codes={[
@@ -169,9 +172,9 @@ Avant toute chose, il est nécessaire d'initialiser la connexion FTP :
 
 ## Dossier de travail
 
-Lors de l'exécution d'opérations sur le FTP, il est nécessaire de définir quel dossier sera utilisé.
+Lors de la réalisation d'opérations sur le FTP, il est nécessaire de définir quel dossier sera utilisé.
 
-En définissant le dossier de travail, nous pourrons effectuer les différentes manipulations à partir de ce dossier de base.
+Grâce à la définition du dossier de travail, nous pourrons effectuer les diverses manipulations à partir de ce dossier de base.
 
 Pour changer le dossier de travail :
 
@@ -204,7 +207,7 @@ Pour créer un dossier, il suffit d'indiquer le chemin de ce dossier :
     ]}
 />
 
-Pour supprimer ou effacer des dossiers :
+Pour supprimer ou retirer des dossiers :
 
 <PolyglotCode
     codes={[
@@ -220,7 +223,7 @@ Pour supprimer ou effacer des dossiers :
 
 ## Renommer
 
-Il est possible de renommer des fichiers ou des dossiers ; on passe l'ancien chemin puis le nouveau chemin :
+Il est possible de renommer des fichiers ou des dossiers, on passe l'ancien chemin puis le nouveau chemin :
 
 <PolyglotCode
     codes={[
@@ -235,7 +238,7 @@ Il est possible de renommer des fichiers ou des dossiers ; on passe l'ancien che
 
 ## Envoyer des fichiers
 
-Pour téléverser un fichier texte :
+Pour soumettre un fichier texte :
 
 <PolyglotCode
     codes={[
@@ -292,7 +295,7 @@ Pour obtenir un fichier texte :
     ]}
 />
 
-## Lister les éléments dans le dossier
+## Lister les éléments du dossier
 
 Liste tout le contenu d'un dossier :
 

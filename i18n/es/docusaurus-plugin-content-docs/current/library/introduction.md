@@ -6,7 +6,7 @@ title: Introducción
 
 Esta sección contiene la gran mayoría de la lógica de back-end sobre Netuno. Encontrará definiciones, explicaciones y fragmentos de código que le ayudarán a recorrer una lógica funcional sobre cómo construir su sitio web a partir de Netuno.
 
-> La plataforma Netuno es gratuita, [empieza ya](/docs/get-started/installation).
+> La plataforma Netuno es gratuita, [empiece ya](/docs/get-started/installation).
 
 ## Tutoriales
 
@@ -16,7 +16,7 @@ Descubra cómo explorar el desarrollo en Netuno:
 
 ## Objetos
 
-Esta sección contiene la información acerca de los Objetos de Netuno, concretamente Values.
+Esta sección contiene la información acerca de los Objetos de Netuno, en particular Values.
 
 * [Values](/docs/library/objects/Values)
 
@@ -25,7 +25,7 @@ Contiene toda la información acerca de los recursos de ayuda a la programación
 
 Utilizando los recursos de Netuno es posible hacer más en menos tiempo, ahorre líneas de código y dolores de cabeza.
 
-Explore y descubra los diversos tipos de recursos disponibles en Netuno. 
+Explore y descubra los diversos tipos de recursos disponibles en Netuno.
 
 * [App](/docs/library/resources/app)
 * [Auth](/docs/library/resources/auth)

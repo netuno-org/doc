@@ -7,10 +7,10 @@ sidebar_label: Servidor, Comandos y Consejos
 
 # Comandos del Servidor
 
-Referencia de los principales comandos de Netuno. Ejecútalos en el **terminal**, desde la carpeta donde está instalado Netuno.
+Referencia de los principales comandos de Netuno. Ejecútelos en la **terminal**, desde la carpeta donde está instalado Netuno.
 
 :::tip
-¿No sabes cómo llegar a la carpeta de Netuno? Consulta la guía de [Instalación](/docs/get-started/installation).
+¿No sabe cómo llegar a la carpeta de Netuno? Consulte la guía de [Instalación](/docs/get-started/installation).
 :::
 
 ---
@@ -75,7 +75,7 @@ Actualiza Netuno a la versión estable más reciente.
 
 ---
 
-## Actualización a la Versión en Pruebas
+## Actualización a la Versión En Pruebas
 
 Actualiza Netuno a la versión más reciente en desarrollo.
 

@@ -1,15 +1,15 @@
 {
   "version.label": {
-    "message": "Următor",
+    "message": "Următoarea",
     "description": "Eticheta pentru versiunea curentă"
   },
   "sidebar.academySidebar.category.Demonstration": {
     "message": "Demonstrație",
-    "description": "Eticheta pentru categoria Demo aplicație din bara laterală academySidebar"
+    "description": "Eticheta pentru categoria Aplicație demonstrativă din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.Demonstration.link.generated-index.description": {
-    "message": "Faceți un tur de dezvoltare, modificând aplicația demonstrativă implicită.",
-    "description": "Descrierea paginii generated-index pentru categoria Demo aplicație din bara laterală academySidebar"
+    "message": "Faceți un tur al dezvoltării, modificând aplicația demonstrativă implicită.",
+    "description": "Descrierea paginii de index generată pentru categoria Aplicație demonstrativă din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.User Interface": {
     "message": "Interfață de utilizare",
@@ -17,7 +17,7 @@
   },
   "sidebar.academySidebar.category.User Interface.link.generated-index.description": {
     "message": "Cum funcționează interfața de utilizare, construirea formularelor și gestionarea datelor.",
-    "description": "Descrierea paginii generated-index pentru categoria Interfață de utilizare din bara laterală academySidebar"
+    "description": "Descrierea paginii de index generată pentru categoria Interfață de utilizare din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.Explore": {
     "message": "Explorare",
@@ -25,31 +25,31 @@
   },
   "sidebar.academySidebar.category.Explore.link.generated-index.description": {
     "message": "Descoperiți câteva funcționalități și concepte generale.",
-    "description": "Descrierea paginii generated-index pentru categoria Explorare din bara laterală academySidebar"
+    "description": "Descrierea paginii de index generată pentru categoria Explorare din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.Understand": {
     "message": "Înțelegere",
-    "description": "Eticheta pentru categoria Explorare din bara laterală academySidebar"
+    "description": "Eticheta pentru categoria Înțelegere din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.Understand.link.generated-index.description": {
     "message": "Aplicabilitatea generală a platformei, potențialul strategic.",
-    "description": "Descrierea paginii generated-index pentru categoria Explorare din bara laterală academySidebar"
+    "description": "Descrierea paginii de index generată pentru categoria Înțelegere din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.Server Backend": {
     "message": "Backend Server",
-    "description": "Eticheta pentru categoria Server din bara laterală academySidebar"
+    "description": "Eticheta pentru categoria Backend Server din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.Server Backend.link.generated-index.description": {
     "message": "Tutoriale despre backend-ul integrat în dezvoltarea low-code poliglotă.",
-    "description": "Descrierea paginii generated-index pentru categoria Server din bara laterală academySidebar"
+    "description": "Descrierea paginii de index generată pentru categoria Backend Server din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.Database": {
     "message": "Bază de date",
     "description": "Eticheta pentru categoria Bază de date din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.Database.link.generated-index.description": {
-    "message": "Tutoriale pentru administrarea bazei de date.",
-    "description": "Descrierea paginii generated-index pentru categoria Bază de date din bara laterală academySidebar"
+    "message": "Tutoriale pentru gestionarea bazei de date.",
+    "description": "Descrierea paginii de index generată pentru categoria Bază de date din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.Service": {
     "message": "Serviciu",
@@ -57,23 +57,23 @@
   },
   "sidebar.academySidebar.category.Service.link.generated-index.description": {
     "message": "Tutoriale despre resursele utilizate în servicii.",
-    "description": "Descrierea paginii generated-index pentru categoria Serviciu din bara laterală academySidebar"
+    "description": "Descrierea paginii de index generată pentru categoria Serviciu din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.Website Frontend": {
     "message": "Frontend Website",
-    "description": "Eticheta pentru categoria Website din bara laterală academySidebar"
+    "description": "Eticheta pentru categoria Frontend Website din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.Website - Frontend.link.generated-index.description": {
     "message": "Dezvoltare frontend avansată și integrări.",
-    "description": "Descrierea paginii generated-index pentru categoria Website din bara laterală academySidebar"
+    "description": "Descrierea paginii de index generată pentru categoria Frontend Website din bara laterală academySidebar"
   },
   "sidebar.librarySidebar.category.App Structure": {
     "message": "Structura aplicației",
-    "description": "Eticheta pentru categoria Foldere aplicație din bara laterală librarySidebar"
+    "description": "Eticheta pentru categoria Structura aplicației din bara laterală librarySidebar"
   },
   "sidebar.librarySidebar.category.App Structure.link.generated-index.description": {
-    "message": "Structura de foldere și fișiere a aplicației în detaliu.",
-    "description": "Descrierea paginii generated-index pentru categoria Foldere aplicație din bara laterală librarySidebar"
+    "message": "Structura detaliată a folderelor și fișierelor aplicațiilor.",
+    "description": "Descrierea paginii de index generată pentru categoria Structura aplicației din bara laterală librarySidebar"
   },
   "sidebar.librarySidebar.category.Resources": {
     "message": "Resurse",
@@ -81,7 +81,7 @@
   },
   "sidebar.librarySidebar.category.Resources.link.generated-index.description": {
     "message": "Toate resursele low-code disponibile.",
-    "description": "Descrierea paginii generated-index pentru categoria Resurse din bara laterală librarySidebar"
+    "description": "Descrierea paginii de index generată pentru categoria Resurse din bara laterală librarySidebar"
   },
   "sidebar.librarySidebar.category.Objects": {
     "message": "Obiecte",
@@ -89,15 +89,15 @@
   },
   "sidebar.librarySidebar.category.Objects.link.generated-index.description": {
     "message": "Principalele obiecte low-code disponibile.",
-    "description": "Descrierea paginii generated-index pentru categoria Obiecte din bara laterală librarySidebar"
+    "description": "Descrierea paginii de index generată pentru categoria Obiecte din bara laterală librarySidebar"
   },
   "sidebar.academySidebar.category.CLUAR": {
     "message": "CLUAR",
     "description": "Eticheta pentru categoria CLUAR din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.CLUAR.link.generated-index.description": {
-    "message": "O soluție gata de utilizat pentru gestionarea conținutului și site-uri web multilingve.",
-    "description": "Descrierea paginii generated-index pentru categoria CLUAR din bara laterală academySidebar"
+    "message": "O soluție gata de utilizare pentru gestionarea conținutului și a site-urilor web multilingve.",
+    "description": "Descrierea paginii de index generată pentru categoria CLUAR din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.Components": {
     "message": "Componente",
@@ -105,7 +105,7 @@
   },
   "sidebar.academySidebar.category.Components.link.generated-index.description": {
     "message": "Tutoriale despre componentele de conținut din CLUAR — Banner, Conținut, Listare, Slider și Funcționalitate.",
-    "description": "Descrierea paginii generated-index pentru categoria Componente din bara laterală academySidebar"
+    "description": "Descrierea paginii de index generată pentru categoria Componente din bara laterală academySidebar"
   },
   "sidebar.academySidebar.category.Pages": {
     "message": "Pagini",
@@ -113,6 +113,6 @@
   },
   "sidebar.academySidebar.category.Pages.link.generated-index.description": {
     "message": "Tutoriale despre entitatea Pagină din CLUAR — câmpuri, versionare, publicare și clonare.",
-    "description": "Descrierea paginii generated-index pentru categoria Pagini din bara laterală academySidebar"
+    "description": "Descrierea paginii de index generată pentru categoria Pagini din bara laterală academySidebar"
   }
 }

@@ -1,5 +1,5 @@
 ---
 id: form
-title: Formulaire intégré au Service
-sidebar_label: Formulaire et Service
+title: Formulaire intégré avec le service
+sidebar_label: Formulaire et service
 ---

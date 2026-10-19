@@ -1,14 +1,14 @@
 {
   "title": {
     "message": "Blog",
-    "description": "Titlul pentru blog folosit în SEO"
+    "description": "Titlul pentru blog utilizat în SEO"
   },
   "description": {
     "message": "Blog",
-    "description": "Descrierea pentru blog folosită în SEO"
+    "description": "Descrierea pentru blog utilizată în SEO"
   },
   "sidebar.title": {
-    "message": "Articole recente",
+    "message": "Postări recente",
     "description": "Eticheta pentru bara laterală stângă"
   }
 }

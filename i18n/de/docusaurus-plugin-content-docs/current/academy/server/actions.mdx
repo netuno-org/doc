@@ -1,0 +1,371 @@
+---
+id: actions
+title: Aktionen (Actions)
+sidebar_label: Aktionen
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Anpassungen an Datenbankoperationen.
+
+## Einführung
+
+Ständig werden Daten manipuliert, und es ist üblich, dass Regeln gelten, zum Beispiel:
+
+- Beim Entfernen eines Kunden muss dessen Verlauf entfernt werden.
+- Beim Stornieren eines Produkts muss es aus den Bestellungen entfernt und der Gesamtbetrag angepasst werden.
+- Beim Abschließen eines Kaufs müssen die Daten an ein anderes System gesendet werden, das die Distribution durchführt.
+
+Die Aktionen (_actions_) dienen genau dazu, Code einzufügen, der in bestimmten Situationen ausgeführt wird, wenn eine Datenmanipulation stattfindet.
+
+Beim **Einfügen** oder **Ändern** von Informationen werden die Aktionen Speichern (_save_) und gespeichert (_saved_) ausgeführt:
+
+- `save`: Vor dem Ausführen des Befehls in der Datenbank.
+- `saved`: Nach dem Ausführen des Befehls in der Datenbank.
+
+Beim **Entfernen**, **Löschen** oder **Beseitigen** von Informationen werden die Aktionen Entfernen (_remove_) und entfernt (_removed_) ausgeführt.
+
+- `remove`: Vor dem Ausführen des Befehls in der Datenbank.
+- `removed`: Nach dem Ausführen des Befehls in der Datenbank.
+
+Wenn wir also etwas in einem Formular ändern, mit Operationen zum Erstellen, Ändern oder Entfernen von Informationen, werden unterschiedliche Operationen in der Datenbank ausgeführt und die entsprechenden Aktionen (_actions_) ausgeführt.
+
+> Haben Sie schon von Datenbank-_Triggern_ gehört? Der Datenbank-_Trigger_ wird immer ausgeführt, wenn Datenänderungen stattfinden; die Aktionen (_actions_) ähneln den _Triggern_, nur auf Codeebene.
+
+Denken Sie daran, dass jeder Operationstyp einen eigenen Befehl in der Datenbank ausführt:
+
+- Erstellen: `insert into ...`
+- Ändern: `update ...`
+- Entfernen: `delete from ...`
+
+Wenn wir einen dieser Datenbankbefehle über `_db.execute(...)` ausführen, wird keine Aktion ausgeführt, weil der Befehl direkt in der Datenbank ausgeführt wird und keine Interaktion mit den Aktionen möglich ist.
+
+> Im Code der Aktionen können Sie jede Ressource des polyglotten Low-Code-Frameworks verwenden.
+
+Die Aktionen werden ausgeführt, wenn eine Datenmanipulation in den vom Netuno automatisch generierten Backoffice-Formularen stattfindet oder wenn wir Datenbankoperationen im Code mit folgenden Methoden ausführen:
+
+- `_db.insert(...)`, `_db.form(...).insert()`, `_db.insertIfNotExits(...)`, `_db.insertMany(...)`, unter anderem.
+- `_db.update(...)`, `_db.form(...).update()`, `_db.updateMany(...)`, unter anderem.
+- `_db.delete(...)`, `_db.form(...).delete()`, `_db.deleteMany(...)`, unter anderem.
+
+Das heißt, wenn wir im Code einen Mechanismus des polyglotten Low-Code-Frameworks verwenden, um Datenmanipulationsoperationen durchzuführen, wird die entsprechende Aktion ausgeführt, falls sie existiert.
+
+Wenn jedoch ein Befehl direkt in der Datenbank ausgeführt wird, ist es nicht möglich, die Aktion auszuführen.
+
+> Es wird empfohlen, Befehle nicht direkt in der Datenbank auszuführen, um die vom Netuno bereitgestellten Mechanismen zur Datenmanipulation nicht zu umgehen.
+
+Im Code der Aktionen können Sie jede Operation im Zusammenhang mit der Datenmanipulation ausführen.
+
+## Datenelement (Data Item)
+
+Das Datenelement (`_dataItem`) ist eine Ressource des polyglotten Low-Code-Frameworks, die die gesamte Datenbeziehung enthält, die gerade erstellt, geändert oder entfernt wird.
+
+Über die Ressource `_dataItem` können wir auf alle Informationen zugreifen und Details des Prozesses der laufenden Operation überprüfen.
+
+> Sehen Sie sich die Dokumentation der Ressource [DataItem](/docs/library/resources/dataItem) an, um weitere Details darüber zu erfahren, was die Ressource `_dataItem` unterstützt.
+
+**Achtung:** Die Ressource `_dataItem` ist nur im Code der Aktionen (_actions_) verfügbar.
+
+## Speichern, Sichern, Ändern oder Neu Erstellen (_Save_)
+
+Um eine Action zu erstellen, die ausgeführt wird, wenn ein neuer Datensatz erstellt oder etwas geändert wird, wird das Skript dieser Action `save` genannt, was bedeutet, dass etwas in der Datenbank gespeichert wird, zum Beispiel:
+
+<PolyglotPath files={[
+    'meine_app/server/actions/mein_formular/save'
+]} />
+
+> Diese Aktion wird vor dem Ausführen des Datenbankbefehls ausgeführt.
+
+Wenn Code ausgeführt werden soll, nachdem die Daten in der Datenbank gespeichert wurden, verwenden wir die Aktion `saved`, zum Beispiel:
+
+<PolyglotPath files={[
+    'meine_app/server/actions/mein_formular/saved'
+]} />
+
+> Diese Aktion wird nach dem Ausführen des Datenbankbefehls ausgeführt.
+
+Das heißt, innerhalb der Anwendung erstellen wir im Ordner `server/actions` einen Unterordner mit dem Namen des Formulars (der Tabelle) und legen darin ein Skript namens `save` oder `saved` ab, das den jeweiligen Code enthält, der vor oder nach dem Datenbankbefehl ausgeführt werden soll.
+
+Um zu unterscheiden, ob Daten erstellt werden, können wir mit einem `if` das Ergebnis der Methode `_dataItem.isInsert()` prüfen, zum Beispiel:
+
+<PolyglotCode
+    file="meine_app/server/actions/mein_formular/save"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isInsert()) {
+                    // Es werden neue Daten erstellt...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isInsert():
+                    # Es werden neue Daten erstellt...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isInsert()
+                    # Es werden neue Daten erstellt...
+                end
+            `
+        },
+    ]}
+/>
+
+Um zu unterscheiden, ob Daten geändert werden, können wir mit einem `if` das Ergebnis der Methode `_dataItem.isUpdate()` prüfen, zum Beispiel:
+
+<PolyglotCode
+    file="meine_app/server/actions/mein_formular/saved"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isUpdate()) {
+                    // Die Daten werden geändert...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isUpdate():
+                    # Die Daten werden geändert...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isUpdate()
+                    # Die Daten werden geändert...
+                end
+            `
+        },
+    ]}
+/>
+
+### ID abrufen
+
+Um die ID (den Identifikator) des Elements abzurufen, das geändert wird:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _dataItem.getId()
+            `
+        },
+    ]}
+/>
+
+### Prüfen, was geändert wird
+
+Um zu prüfen, was geändert wird, können wir `getOldRecord()` verwenden, um die alten Daten aus der Datenbank abzurufen und sie mit den neuen Daten aus `getRecord()` zu vergleichen, zum Beispiel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email")) {
+                    // Achtung: Die E-Mail-Adresse wird geändert!
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email"):
+                    # Achtung: Die E-Mail-Adresse wird geändert!
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email")
+                    # Achtung: Die E-Mail-Adresse wird geändert!
+                end
+            `
+        },
+    ]}
+/>
+
+### Einen Fehler auslösen
+
+Es ist möglich, einen Fehler zu erzeugen, um zu verhindern, dass die Operation fortgesetzt wird. Die Fehlererzeugung erfolgt normalerweise vor dem Ausführen des Datenbankbefehls, also in der Aktion `save`, zum Beispiel:
+
+<PolyglotCode
+    file="meine_app/server/actions/mein_formular/save"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _dataItem.setStatusWithError()
+                    .setErrorTitle("E-Mail")
+                    .setErrorMessage("Das Ändern der E-Mail-Adresse ist nicht erlaubt.")
+            `
+        },
+    ]}
+/>
+
+### Prüfen, ob ein Fehler aufgetreten ist
+
+Es ist möglich zu prüfen, ob bei der Ausführung des Datenbankbefehls ein Fehler aufgetreten ist. Verschiedene Fehler können auftreten, zum Beispiel:
+
+- Doppelte E-Mail-Adressen sind nicht erlaubt.
+- Ein Pflichtfeld wurde nicht korrekt ausgefüllt.
+- Unter vielen anderen.
+
+Die Fehlerprüfung erfolgt normalerweise nach der Ausführung des Datenbankbefehls, also in der Aktion `saved`, zum Beispiel:
+
+<PolyglotCode
+    file="meine_app/server/actions/mein_formular/saved"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isError()) {
+                    // Es ist ein Fehler aufgetreten und die Daten konnten nicht gespeichert werden...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isError():
+                    # Es ist ein Fehler aufgetreten und die Daten konnten nicht gespeichert werden...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _dataItem.isError()
+                    # Es ist ein Fehler aufgetreten und die Daten konnten nicht gespeichert werden...
+                end
+            `
+        },
+    ]}
+/>
+
+### Setup
+
+Es ist möglich, eine spezifische `action` zu haben, die nur ausgeführt wird, wenn während der Konfiguration (_setup_) der Datenbank Datenänderungen vorgenommen werden.
+
+Zum Beispiel:
+
+<PolyglotPath files={[
+    'meine_app/server/actions/mein_formular/setup_save',
+    'meine_app/server/actions/mein_formular/setup_saved',
+]} />
+
+## Entfernen, Löschen oder Beseitigen (_Remove_)
+
+Um eine Action zu erstellen, die ausgeführt wird, wenn ein Datensatz entfernt wird, wird das Skript dieser Action `remove` genannt, was bedeutet, dass etwas in der Datenbank gelöscht wird, zum Beispiel:
+
+<PolyglotPath files={[
+    'meine_app/server/actions/mein_formular/setup_remove',
+]} />
+
+> Diese Aktion wird vor dem Ausführen des Datenbankbefehls ausgeführt.
+
+Wenn Code ausgeführt werden soll, nachdem die Daten in der Datenbank gespeichert wurden, verwenden wir die Aktion `removed`, zum Beispiel:
+
+<PolyglotPath files={[
+    'meine_app/server/actions/mein_formular/setup_removed',
+]} />
+
+> Diese Aktion wird nach dem Ausführen des Datenbankbefehls ausgeführt.
+
+Das heißt, innerhalb der Anwendung erstellen wir im Ordner `server/actions` einen Unterordner mit dem Namen des Formulars (der Tabelle) und legen darin ein Skript namens `remove` oder `removed` ab, das den jeweiligen Code enthält, der vor oder nach dem Datenbankbefehl ausgeführt werden soll.
+
+### Konflikt mit Beziehungen
+
+Je nach Datenmodell kann es vorkommen, dass ein Datensatz, der in einer Beziehung zu einer anderen Tabelle verwendet wird – die ebenfalls ein anderes Formular ist –, nicht entfernt werden kann, um zu vermeiden, dass die Beziehung unterbrochen wird.
+
+Dann können wir in der Aktion `removed`, die nach dem Datenbankbefehl zum Entfernen ausgeführt wird, wie folgt prüfen, ob dieser Fehler auftritt:
+
+<PolyglotCode
+    file="meine_app/server/actions/mein_formular/removed"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations()) {
+                    _log.error(
+                        "Es konnte nicht entfernt werden, da eine Beziehung zur Tabelle "
+                        + _dataItem.getRelationTable() + " mit der ID " + _dataItem.getRelationItem().getInt("id") + " besteht"
+                    )
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _dataItem.isStatusAsError() and _dataItem.isStatusAsRelations():
+                    _log.error(
+                        "Es konnte nicht entfernt werden, da eine Beziehung zur Tabelle "
+                        + _dataItem.getRelationTable() + " mit der ID " + _dataItem.getRelationItem().getInt("id") + " besteht"
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations())
+                    _log.error(
+                        "Es konnte nicht entfernt werden, da eine Beziehung zur Tabelle "
+                        + _dataItem.getRelationTable() + " mit der ID " + _dataItem.getRelationItem().getInt("id") + " besteht"
+                    )
+                end
+            `
+        },
+    ]}
+/>
+
+Alternativ können wir in der Aktion `remove`, die vor dem Datenbankbefehl ausgeführt wird, der den Datensatz löscht, die „Bereinigung“ anderer Datensätze implementieren, die eine Beziehung haben könnten, zum Beispiel:
+
+<PolyglotCode
+    file="meine_app/server/actions/mein_formular/remove"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _db.form("anderes_formular")
+                    .where(
+                        _db.where("mein_formular_id")
+                            .equals(_dataItem.getRecord().getInt("id"))
+                    )
+                    .delete()
+            `
+        },
+    ]}
+/>
+
+### Setup
+
+Es ist möglich, eine spezifische `action` zu haben, die nur ausgeführt wird, wenn während der Konfiguration (_setup_) der Datenbank Daten entfernt werden.
+
+Zum Beispiel:
+
+<PolyglotPath files={[
+    'meine_app/server/actions/mein_formular/setup_remove',
+    'meine_app/server/actions/mein_formular/setup_removed',
+]} />
+
+## Fazit
+
+Mit den Aktionen (`actions`) können wir spezifische Operationen zentralisieren, die mit der Manipulation bestimmter Daten zusammenhängen.
+
+Sie ermöglichen es, Code einzubinden, der nützliche Mechanismen bereitstellt, um Integrität zu gewährleisten, Aufgaben zu erleichtern, Integrationen durchzuführen, parallele Operationen auszuführen, zusätzliche Prüfungen vorzunehmen und vieles mehr.
+
+Das Codieren von Aktionen ist einfach und äußerst nützlich; es kann durch die Verwendung jeder anderen Ressource des polyglotten Low-Code-Frameworks erweitert werden.
+
+> Im Code der Aktionen können Sie jede Ressource des polyglotten Low-Code-Frameworks verwenden.
+
+Ziehen Sie die Verwendung von Aktionen in Betracht, und Sie werden schnell feststellen, wie die erzielte Leichtigkeit viele nützliche Strategien stärken kann.

@@ -1,11 +1,11 @@
 ---
 sidebar_position: 4
 id: queries-interface
-title: Interface de requêtes
+title: Interface des requêtes
 ---
 
 
-L'outil de requête de Netuno est une ressource puissante qui permet une interaction directe avec la base de données de l'application via SQL (Structured Query Language). 
+L'outil de requête de Netuno est une ressource puissante qui permet une interaction directe avec la base de données de l'application via SQL (Structured Query Language).
 
 Cette fonctionnalité est essentielle pour tester des logiques métier, valider des informations stockées et établir les bases pour des rapports ou des composants d'interface complexes. Netuno prend actuellement en charge trois systèmes de gestion de base de données : **PostgreSql, H2 Database et MySQL**.
 
@@ -13,41 +13,41 @@ Cette fonctionnalité est essentielle pour tester des logiques métier, valider 
 
 En mode « Construire », dans le menu latéral, accédez à la zone « Gestion » et cliquez sur la section « Requête ».
 
-![requete-requetes-interface-pt.png](/docs/assets/academy/ui/queries/query-queries-interface-pt.png)
+![Interface de requêtes](/docs/assets/academy/ui/queries/query-queries-interface-pt.png)
 
 ## 2 - Zone de commandes
 
-Cette zone est l'environnement d'interaction directe avec la base de données du projet. Ici, il est possible d'exécuter des commandes pour consulter, rechercher et analyser des données de manière précise et instantanée. 
+Cette zone est l'environnement d'interaction directe avec la base de données du projet. Ici, il est possible d'exécuter des commandes pour consulter, rechercher et analyser des données de manière précise et instantanée.
 
 Assurez-vous que la syntaxe utilisée est compatible avec la base de données configurée dans votre environnement Netuno.
 
-![requete-base-de-donnees-zone-requete-pt](/docs/assets/academy/ui/queries/query-database-query-area-pt.png)
+![Zone de requête de base de données](/docs/assets/academy/ui/queries/query-database-query-area-pt.png)
 
 ## 3 - Zone de validation
 
 La zone de validation fournit un retour instantané sur la syntaxe et l'exécution de votre code.
 
-- **Succès (Vert) :** Lorsque la requête est exécutée sans erreurs de syntaxe ou de structure, le message est affiché avec un fond de couleur verte. Cela indique que les données ont été traitées et sont prêtes à être visualisées.
+- **Succès (Vert) :** Lorsque la requête est exécutée sans erreurs de syntaxe ou de structure, le message est affiché avec un fond vert. Cela indique que les données ont été traitées et sont prêtes à être visualisées.
 
-![requete-validation-zone-succes-pt-at.png](/docs/assets/academy/ui/queries/query-validation-area-success-pt-at.png)
+![Zone de validation réussie](/docs/assets/academy/ui/queries/query-validation-area-success-pt-at.png)
 
-- **Échec ou Erreur (Rouge) :** S'il y a un quelconque empêchement à l'exécution (comme une erreur de syntaxe, un nom de colonne incorrect ou un manque de permission), le message sera affiché avec un fond de couleur rouge. Outre la couleur, le système présentera le journal d'erreur technique pour aider au diagnostic.
+- **Échec ou Erreur (Rouge) :** S'il y a un quelconque empêchement à l'exécution (comme une erreur de syntaxe, un nom de colonne incorrect ou un manque de permission), le message sera affiché avec un fond rouge. Outre la couleur, le système présentera le journal d'erreur technique pour aider au diagnostic.
 
-![requete-validation-zone-echec-pt-at.png](/docs/assets/academy/ui/queries/query-validation-area-fail-pt-at.png)
+![Zone de validation échouée](/docs/assets/academy/ui/queries/query-validation-area-fail-pt-at.png)
 
 ## 4 - Zone de résultats
 
 C'est l'endroit où les informations demandées à la base de données sont présentées de manière structurée. Elle vous permet de visualiser le contenu des tables et de confirmer si la logique de votre requête renvoie les enregistrements attendus.
 
-![requete-resultat-zone-pt.png](/docs/assets/academy/ui/queries/query-result-area-pt.png)
+![Zone de résultats de requête](/docs/assets/academy/ui/queries/query-result-area-pt.png)
 
 ## 5 - Boutons d'action
 
-Cette section détaille les outils disponibles pour exécuter, enregistrer et gérer vos scripts SQL, optimisant le flux de travail et la réutilisation de requêtes complexes.
+Cette section détaille les outils disponibles pour exécuter, enregistrer et gérer vos scripts SQL, en optimisant le flux de travail et la réutilisation de requêtes complexes.
 
-Il permet non seulement l'exécution de commandes en temps réel, mais aussi une gestion intelligente de la productivité grâce à des enregistrements historiques et des bibliothèques de scripts sauvegardés.
+Il permet non seulement l'exécution de commandes en temps réel, mais aussi une gestion intelligente de la productivité grâce à des enregistrements historiques et des bibliothèques de scripts enregistrés.
 
-![requete-action-boutons-pt-at.png](/docs/assets/academy/ui/queries/query-action-buttons-pt-at.png)
+![Boutons d'action de requête](/docs/assets/academy/ui/queries/query-action-buttons-pt-at.png)
 
 ### 5.1 Bouton - Exécuter
 
@@ -61,7 +61,7 @@ Il permet non seulement l'exécution de commandes en temps réel, mais aussi une
 
 - **Récupération rapide :** En cliquant sur n'importe quel enregistrement de la liste d'historique, le script correspondant est inséré à nouveau dans la zone « Commandes » pour être exécuté ou modifié.
 
-![requete-commande-historique-bouton-pt-at.png](/docs/assets/academy/ui/queries/query-command-history-button-pt-at.png)
+![Bouton historique des commandes de requête](/docs/assets/academy/ui/queries/query-command-history-button-pt-at.png)
 
 ### 5.3 Bouton - Enregistrer
 
@@ -71,11 +71,11 @@ Il permet non seulement l'exécution de commandes en temps réel, mais aussi une
 
 - Avec le script prêt dans l'éditeur, cliquez sur Enregistrer.
 
-- Dans la fenêtre modale « Enregistrer la commande », saisissez un « Nom » clair pour identifier la fonction de la requête (ex : « Filtrer les produits par prix »).
+- Dans la fenêtre modale « Enregistrer la commande », saisissez un « Nom » clair pour identifier la fonction de la requête (ex. : « Filtrer les produits par prix »).
 
 - Cliquez sur le bouton Enregistrer dans la modale pour confirmer le stockage.
 
-![requete-enregistrer-commande-bouton-pt-at.png](/docs/assets/academy/ui/queries/query-save-command-button-pt-at.png)
+![Bouton enregistrer la commande de requête](/docs/assets/academy/ui/queries/query-save-command-button-pt-at.png)
 
 ### 5.4 Bouton - Enregistrement
 
@@ -85,4 +85,4 @@ Il permet non seulement l'exécution de commandes en temps réel, mais aussi une
 
 - **Supprimer :** Utilisez l'icône de corbeille à côté de chaque enregistrement pour le supprimer définitivement après confirmation.
 
-![requete-enregistre-commandes-bouton-pt-at.png](/docs/assets/academy/ui/queries/query-registered-commands-button-pt-at.png)
+![Bouton des commandes enregistrées de requête](/docs/assets/academy/ui/queries/query-registered-commands-button-pt-at.png)

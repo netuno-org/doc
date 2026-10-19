@@ -8,34 +8,34 @@ description: Learn how to create Web Services and REST APIs in Netuno, integrate
 import PolyglotCode from "@site/src/components/PolyglotCode";
 import PolyglotPath from "@site/src/components/PolyglotPath";
 
-With Netuno, you can create **Web Services** and build complex **<a href="https://en.wikipedia.org/wiki/REST" target="_blank">REST</a> APIs** for data integration between systems.
+With Netuno, you can create **_Web Services_** and build any type of complex **<a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a> APIs** for data integration between systems.
 
 :::info What is a Web Service?
-A Web Service allows systems to exchange information online in a standardized way. In Netuno, every file within `server/services/` automatically becomes an endpoint accessible via HTTP.
+A Web Service allows systems to exchange information online in a standardized way. In Netuno, each file inside `server/services/` automatically becomes an endpoint accessible via HTTP.
 :::
 
-## Why use Web Services? 
+## Why use Web Services?
 
-Using asynchronous services offers clear benefits for the user experience:
+Using asynchronous services brings clear benefits to the user experience:
 
 - **Faster loading:** the server delivers the page's visual structure immediately, without waiting for all data to be processed.
-- **On-demand dynamic data:** the frontend requests only the necessary data, exactly when needed.
-- **System integration:** a service created in Netuno can be consumed by any external application (mobile, another web system, etc.).
-- **Better user experience:** the user does not need to wait for the page to finish processing before seeing something on the screen.
+- **Dynamic data on demand:** the frontend requests only the necessary data, when needed.
+- **Integration between systems:** a service created in Netuno can be consumed by any external application (mobile, another web system, etc.).
+- **Better user experience:** the user does not need to wait for the page to fully process before seeing something on the screen.
 
-## Prerequisites 
+## Prerequisites
 
-Before starting, ensure that:
+Before you begin, make sure that:
 
 - Netuno is installed and running locally.
-- The `demo` application has been created as described in [Create Application](../app-create).
-- There is data registered in **Tasks** linked to **Records** (necessary to ensure the response is not empty).
+- The `demo` application was created as described in [Create Application](../app-create).
+- There is data registered in **Tasks** and related to **Records** (required so the return is not empty).
 
 ## Configure the Code Editor
 
-To create and edit services in Netuno, use a code editor of your choice. We recommend **[Visual Studio Code](https://code.visualstudio.com/download)** because it is free, lightweight, and highly intuitive, but any editor compatible with JavaScript, Python, or Groovy will work fine.
+To create and edit services in Netuno, use a code editor of your choice. We recommend **[Visual Studio Code](https://code.visualstudio.com/download)** because it is free, lightweight, and highly intuitive, but any editor compatible with JavaScript/Python/Groovy will work normally.
 
-## Opening the Demo Application {#abrir-a-aplicacao-demo} 
+## Open the Demo Application {#abrir-a-aplicacao-demo}
 
 1. Open **Visual Studio Code**.
 2. Click the **Files** icon in the left sidebar.
@@ -44,21 +44,21 @@ To create and edit services in Netuno, use a code editor of your choice. We reco
 5. Select the directory: **`apps/demo`**
 6. Click **Open**.
 
-The folder structure for the `demo` application will load in the left panel.
+The `demo` application's folder structure will be loaded in the left panel.
 
-## Creating the Service
+## Create the Service
 
 Services are processed on the **server** side. To create a new service:
 
 1. In the file panel, expand the structure until you find the `server/services/` folder.
 2. **Right-click** the `services` folder.
-3. Select **New File**.
-4. Name the file according to the language you wish to use:
-
+3. Select **New File** `New File`.
+4. Name the file according to the language you want to use:
 
 <PolyglotPath files={[
     'server/services/workers'
 ]} />
+
 
 <PolyglotCode
     file="server/services/workers"
@@ -67,7 +67,7 @@ Services are processed on the **server** side. To create a new service:
             lang: 'javascript',
             code: `
                 /**
-                *** Transforms query data into JSON output.
+                *** Transforms the query data into JSON output.
                 */
                 const dbRecords = _db.query(\`
                     SELECT DISTINCT
@@ -96,7 +96,7 @@ Services are processed on the **server** side. To create a new service:
             lang: 'python',
             code: `
                 #
-                # Transforms query data into JSON output.
+                # Transforms the query data into JSON output.
                 #
                 dbRecords = _db.query(
                     """SELECT DISTINCT
@@ -124,7 +124,7 @@ Services are processed on the **server** side. To create a new service:
             lang: 'ruby',
             code: `
                 #
-                # Transforms query data into JSON output.
+                # Transforms the query data into JSON output.
                 #
                 dbRecords = _db.query(%{
                     SELECT DISTINCT
@@ -153,7 +153,7 @@ Services are processed on the **server** side. To create a new service:
             lang: 'kotlin',
             code: `
                 /**
-                *** Transforms query data into JSON output.
+                *** Transforms the query data into JSON output.
                 */
                 val dbRecords = _db.query(
                     """SELECT DISTINCT
@@ -182,7 +182,7 @@ Services are processed on the **server** side. To create a new service:
             lang: 'groovy',
             code: `
                 /**
-                *** Transforms query data into JSON output.
+                *** Transforms the query data into JSON output.
                 */
                 def dbRecords = _db.query("""\\
                     SELECT DISTINCT
@@ -210,36 +210,36 @@ Services are processed on the **server** side. To create a new service:
     ]}
 />
 
-Implement the service by adding the code below to the created file. This service queries the database and returns a list of workers with their total recorded hours in **JSON** format.
+Implement the service by adding the code below to the file you created. This service queries the database and returns a list of workers with the total number of recorded hours in **JSON** format.
 
 ### Understanding the Code
 
 | Object/Method | Description |
 |---|---|
-| `_db.query()` | Executes an SQL query and returns a list of objects in key-value format (column → data). |
+| `_db.query()` | Executes an SQL query and returns a list of key-value objects (column → data). |
 | `_val.list()` | Creates a mutable list to accumulate the results. |
 | `_val.map()` | Creates a mapping object (key-value) for each result row. |
-| `_out.json()` | Serializes the object to JSON and sends the response to the HTTP request. |
+| `_out.json()` | Serializes the object to JSON and sends the response to HTTP requests. |
 
-:::warning Required Data
-Ensure there is data registered in **Tasks** and linked to **Records**. Otherwise, the endpoint will return an empty list `[]`.
+:::warning Required data
+Make sure there is data registered in **Tasks** and linked to **Records**. Otherwise, the endpoint will return an empty list `[]`.
 :::
 
-## Running and Testing the Service
+## Run and Test the Service
 
-With Netuno running, access the endpoint in your browser:
+With Netuno running, open the endpoint in your browser:
 
-:::tip Tip for viewing JSON
-We recommend **[Firefox](https://www.mozilla.org/)** for testing endpoints directly in the browser, as it formats and displays the JSON response in a readable way with syntax highlighting. Alternatively, use extensions like **JSON Viewer** in Chrome or tools like **[Postman](https://www.postman.com/)** for more advanced testing.
+:::tip Tip for viewing the JSON
+We recommend **[Firefox](https://www.mozilla.org/)** for testing endpoints directly in the browser, as it formats and displays the JSON response legibly with syntax highlighting. Alternatively, use extensions such as **JSON Viewer** in Chrome or tools such as **[Postman](https://www.postman.com/)** for more advanced testing.
 :::
 
-The expected output will be JSON similar to this:
+The expected return will be a JSON similar to:
 
 ```json
 [
-{ "name": "Ana Silva", "total": 12 },
-{ "name": "Carlos Mendes", "total": 28 },
-{ "name": "João Costa", "total": 45 }
+  { "name": "Anna Smith", "total": 12 },
+  { "name": "Charles Miller", "total": 28 },
+  { "name": "John Costa", "total": 45 }
 ]
 ```
 
@@ -247,8 +247,8 @@ The expected output will be JSON similar to this:
 
 Now that your service is working, you can:
 
-- 📄 **[Interface & Design](./ui)** — integrate this service into the application's frontend. 
-- 📚 **[Service Library](../../library/overview)** — explore the `_db`, `_val`, `_out`, and other objects available in Netuno.
+- 📄 **[Interface & Design](./ui)** — integrate this service into the application frontend.
+- 📚 **[Services Library](../../library/overview)** — explore the `_db`, `_val`, `_out`, and other objects available in Netuno.
 - 🔗 Add **authentication** and **access control** to your service.
 
 ___

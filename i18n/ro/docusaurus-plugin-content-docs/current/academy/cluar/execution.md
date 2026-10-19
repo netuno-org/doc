@@ -5,28 +5,28 @@ title: Execuție
 sidebar_label: Execuție
 ---
 
-Cu proiectul instalat și configurat, este timpul să îl rulezi.
+Cu proiectul instalat și configurat, este momentul să îl rulezi.
 
 ## Pornirea serverului
 
-În directorul rădăcină al Netuno, execută:
+În directorul rădăcină Netuno, rulează:
 
 ```
 ./netuno server app=cluar
 ```
 
-Aceasta pornește back-end-ul și front-end-ul simultan.
+Aceasta pornește simultan back-end-ul și front-end-ul.
 
-> La prima rulare poate dura mai mult, din cauza instalării dependențelor front-end-ului.
+> Prima execuție poate dura mai mult, din cauza instalării dependențelor front-end-ului.
 
 În mod implicit:
 
 - Backoffice-ul Netuno este disponibil la [http://localhost:9000/](http://localhost:9000/)
-- OpenAPI-ul serviciilor se află la [http://localhost:9000/services/_openapi](http://localhost:9000/services/_openapi)
+- OpenAPI-ul serviciilor este disponibil la [http://localhost:9000/services/_openapi](http://localhost:9000/services/_openapi)
 
 ## Pornirea site-ului web
 
-Pentru a porni site-ul web manual:
+Pentru a porni manual site-ul web:
 
 ```
 cd website
@@ -35,9 +35,9 @@ bun run dev
 
 În mod implicit, site-ul web este disponibil la [http://localhost:3000/](http://localhost:3000/)
 
-> Este posibil să pornești automat site-ul web împreună cu serverul Netuno, activând comanda corespunzătoare în `config/_development.json` — vezi [Configurare](/docs/academy/cluar/configuration#7-arranque-automático-do-website-opcional).
+> Este posibil ca site-ul web să pornească automat împreună cu serverul Netuno, activând comanda corespunzătoare în `config/_development.json` — vezi [Configurare](/docs/academy/cluar/configuration#7-pornirea-automată-a-site-ului-opțional).
 
-## Rezolvarea problemelor
+## Depanare
 
 ### Eroare de versiune GLIBC la rularea `bun run dev`
 
@@ -50,9 +50,9 @@ Error: Cannot find module @rollup/rollup-linux-x64-gnu. npm has a bug related to
 code: 'ERR_DLOPEN_FAILED'
 ```
 
-Nu este vorba despre bug-ul dependențelor opționale npm menționat în mesaj, ci despre o **incompatibilitate de versiune GLIBC**: binarul nativ Rollup a fost compilat cerând `GLIBC_2.32` sau mai recent, iar distribuțiile Linux mai vechi (de exemplu, Ubuntu 20.04, care vine cu glibc 2.31) nu îl au disponibil.
+Nu este vorba despre bug-ul dependențelor opționale npm menționat în mesaj, ci despre o **incompatibilitate de versiune GLIBC**: binarul nativ Rollup a fost compilat cerând `GLIBC_2.32` sau mai recent, iar distribuțiile Linux mai vechi (de exemplu, Ubuntu 20.04, care vine cu glibc 2.31) nu au această versiune disponibilă.
 
-Pentru a rezolva, forțează Rollup să folosească versiunea WASM în locul celei native, adăugând un câmp `overrides` în rădăcina `package.json` al site-ului web:
+Pentru a rezolva, forțează Rollup să folosească versiunea WASM în locul celei native, adăugând un câmp `overrides` în rădăcina `package.json` a site-ului web:
 
 ```json
 "overrides": {

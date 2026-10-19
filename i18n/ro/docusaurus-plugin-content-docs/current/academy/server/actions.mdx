@@ -7,81 +7,82 @@ sidebar_label: Acțiuni
 import PolyglotCode from "@site/src/components/PolyglotCode";
 import PolyglotPath from "@site/src/components/PolyglotPath";
 
-Personalizări în operațiunile de bază de date.
+Personalizări ale operațiilor cu baza de date.
 
 ## Introducere
 
-În permanență se realizează manipulări de date, iar regulile precum următoarele sunt obișnuite:
+În permanență se realizează o anumită manipulare a datelor și este obișnuit să existe reguli precum, de exemplu:
 
-- Când se elimină un client, trebuie eliminat și istoricul acestuia.
-- Când se anulează un produs, este necesar să fie eliminat din comenzi și să se ajusteze valoarea totală.
-- Când se finalizează o achiziție, este necesar să se trimită datele către un alt sistem care realizează distribuția.
+- La ștergerea unui client trebuie șters și istoricul acestuia.
+- La anularea unui produs este necesar să fie eliminat din comenzi și să se ajusteze valoarea totală.
+- La finalizarea unei achiziții este necesar să se trimită datele către un alt sistem care realizează distribuirea.
 
 Acțiunile (_actions_) servesc exact pentru aceasta, pentru a injecta cod care să fie executat în situații specifice
-când are loc o manipulare de date.
+când are loc o manipulare a datelor.
 
-Când **se inserează** sau **se modifică** o informație, atunci sunt executate acțiunile de salvare (_save_) și
-salvat (_saved_):
+La **inserarea** sau **modificarea** unei informații se execută acțiunile de salvare (_save_) și salvat
+(_saved_):
 
 - `save`: Înainte de executarea comenzii în baza de date.
-- `saved`: După ce a fost executată comanda în baza de date.
+- `saved`: După executarea comenzii în baza de date.
 
-Iar la **eliminarea**, **ștergerea** sau **suprimarea** unei informații sunt executate acțiunile de eliminare
-(_remove_) și eliminat (_removed_).
+Iar la **ștergerea**, **eliminarea** sau **suprimarea** unei informații se execută acțiunile de ștergere (_remove_) și
+șters (_removed_).
 
 - `remove`: Înainte de executarea comenzii în baza de date.
-- `removed`: După ce a fost executată comanda în baza de date.
+- `removed`: După executarea comenzii în baza de date.
 
-Astfel, când modificăm ceva într-un formular, cu operații de creare, modificare sau eliminare a informațiilor, sunt
+Astfel, când modificăm ceva într-un formular, cu operații de creare, modificare sau ștergere a informațiilor, sunt
 executate operații distincte în baza de date, iar acțiunile (_actions_) respective sunt executate.
 
-> Ați auzit de _triggers_ de bază de date? _Trigger_-ul de bază de date este executat ori de câte ori există
+> Ați auzit de _triggers_ de bază de date? _Triggerul_ de bază de date este executat ori de câte ori există
 > modificări de date, prin urmare acțiunile (_actions_) sunt similare cu _triggers_, doar că la nivel de cod.
 
 Rețineți că fiecare tip de operație execută o comandă distinctă în baza de date, și anume:
 
 - Creare: `insert into ...`
 - Modificare: `update ...`
-- Eliminare: `delete from ...`
+- Ștergere: `delete from ...`
 
 Când executăm una dintre aceste comenzi de bază de date prin `_db.execute(...)`, nicio acțiune nu va fi executată,
-deoarece comanda este executată direct în baza de date fără a fi posibil să interacționăm cu acțiunile.
+deoarece comanda este executată direct în baza de date fără a fi posibilă interacțiunea cu acțiunile.
 
 > În codul acțiunilor puteți utiliza orice resursă a framework-ului low-code poliglot.
 
-Acțiunile sunt executate când are loc o manipulare de date în formularele de backoffice auto-generate de Netuno,
-sau când executăm operații în baza de date în cod folosind:
+Acțiunile sunt executate când are loc o manipulare de date în formularele de backoffice auto-generate
+de Netuno sau când executăm operații în baza de date în cod folosind:
 
-- `_db.insert(...)`, `_db.form(...).insert()`, `_db.insertIfNotExits(...)`, `_db.insertMany(...)`, între altele.
-- `_db.update(...)`, `_db.form(...).update()`, `_db.updateMany(...)`, între altele.
-- `_db.delete(...)`, `_db.form(...).delete()`, `_db.deleteMany(...)`, între altele.
+- `_db.insert(...)`, `_db.form(...).insert()`, `_db.insertIfNotExits(...)`, `_db.insertMany(...)`, printre altele.
+- `_db.update(...)`, `_db.form(...).update()`, `_db.updateMany(...)`, printre altele.
+- `_db.delete(...)`, `_db.form(...).delete()`, `_db.deleteMany(...)`, printre altele.
 
-Adică, atunci când folosim în cod un mecanism al framework-ului low-code poliglot pentru a realiza operațiile de
+Adică, când folosim în cod un mecanism al framework-ului low-code poliglot pentru a realiza operațiile de
 manipulare a datelor, va fi executată acțiunea respectivă, dacă există.
 
-Totuși, dacă se execută o comandă direct în baza de date, atunci nu va fi posibilă executarea acțiunii.
+Însă, dacă se execută o comandă direct în baza de date, atunci nu va fi posibilă executarea acțiunii.
 
-> Este recomandat să evitați executarea comenzilor direct în baza de date pentru a nu ocoli mecanismele de
-> manipulare a datelor oferite de Netuno.
+> Se recomandă evitarea executării comenzilor direct în baza de date pentru a nu ocoli mecanismele de
+> manipulare a datelor pe care le oferă Netuno.
 
-În codul acțiunilor puteți realiza orice operație asociată cu manipularea datelor.
+În codul acțiunilor puteți realiza orice operație asociată manipulării datelor.
 
 ## Element de date (Data Item)
 
-Elementul de date (`_dataItem`) este o resursă a framework-ului low-code poliglot care conține toată relația de
-date ce este creată, modificată sau eliminată.
+Elementul de date (`_dataItem`) este o resursă a framework-ului low-code poliglot care conține întreaga relație de date
+care este creată, modificată sau ștearsă.
 
-Prin resursa `_dataItem` putem accesa toată informația și verifica detalii ale procesului operației care are loc.
+Prin resursa `_dataItem` putem accesa toată informația și verifica detalii ale procesului operației
+care are loc.
 
 > Consultați documentația resursei [DataItem](/docs/library/resources/dataItem) pentru a afla mai multe detalii despre ceea ce
 > suportă resursa `_dataItem`.
 
 **Atenție:** Resursa `_dataItem` este disponibilă doar în codul acțiunilor (_actions_).
 
-## Salvare, Păstrare, Modificare sau Creare (_Save_)
+## Salvare, Păstrare, Modificare sau Creare Nouă (_Save_)
 
-Pentru a crea o action care va fi executată când se creează o nouă înregistrare, sau când se modifică ceva,
-scriptul acestei action va fi numit `save`, ceea ce înseamnă că ceva este salvat în baza de date, de exemplu:
+Pentru a crea o acțiune care va fi executată când se creează o înregistrare nouă sau când se modifică ceva, scriptul
+acestei acțiuni va fi numit `save`, ceea ce înseamnă că ceva este salvat în baza de date, de exemplu:
 
 <PolyglotPath files={[
     'aplicatia_mea/server/actions/formularul_meu/save'
@@ -89,7 +90,7 @@ scriptul acestei action va fi numit `save`, ceea ce înseamnă că ceva este sal
 
 > Această acțiune este executată înainte de executarea comenzii în baza de date.
 
-Când se dorește executarea codului după ce datele au fost salvate în baza de date, atunci folosim acțiunea
+Când trebuie executat cod după ce datele au fost salvate în baza de date, atunci folosim acțiunea
 `saved`, de exemplu:
 
 <PolyglotPath files={[
@@ -98,8 +99,8 @@ Când se dorește executarea codului după ce datele au fost salvate în baza de
 
 > Această acțiune este executată după ce a fost executată comanda în baza de date.
 
-Adică, în cadrul aplicației, în directorul `server/actions` creăm un subdirector cu numele formularului (tabelului),
-iar în interior plasăm un script numit `save` sau `saved`, care conține codul respectiv pentru a fi executat înainte
+Adică, în cadrul aplicației, în folderul `server/actions`, creăm un subfolder cu numele formularului (tabelului) și
+în interior plasăm un script numit `save` sau `saved`, care conține codul respectiv pentru a fi executat înainte
 sau după comanda în baza de date.
 
 Pentru a distinge dacă este o creare de date, putem verifica cu un `if` rezultatul metodei
@@ -183,8 +184,8 @@ Pentru a obține ID-ul (identificatorul) elementului care este modificat:
 
 ### Verificarea a ceea ce este modificat
 
-Pentru a verifica ce se modifică, putem folosi `getOldRecord()` pentru a obține datele vechi din baza de date
-și a le compara cu noile date `getRecord()`, de exemplu:
+Pentru a verifica ceea ce este modificat, putem folosi `getOldRecord()` pentru a obține datele vechi din
+baza de date și a le compara cu datele noi `getRecord()`, de exemplu:
 
 <PolyglotCode
     codes={[
@@ -216,8 +217,8 @@ Pentru a verifica ce se modifică, putem folosi `getOldRecord()` pentru a obțin
 
 ### Generarea unei erori
 
-Este posibil să generați o eroare pentru a împiedica avansarea operației; generarea erorii se face de obicei
-înainte de executarea comenzii în baza de date, deci în acțiunea `save`, de exemplu:
+Este posibil să generați o eroare pentru a împiedica avansarea operației; generarea erorii se face de obicei înainte de
+executarea comenzii în baza de date, deci în acțiunea `save`, de exemplu:
 
 <PolyglotCode
     file="aplicatia_mea/server/actions/formularul_meu/save"
@@ -235,8 +236,8 @@ Este posibil să generați o eroare pentru a împiedica avansarea operației; ge
 
 ### Verificarea dacă a apărut o eroare
 
-Este posibil să verificați dacă a apărut vreo eroare la executarea comenzii în baza de date; pot apărea diverse
-erori, de exemplu:
+Este posibil să verificați dacă a apărut vreo eroare la executarea comenzii în baza de date; diverse erori pot apărea,
+de exemplu:
 
 - Nu este permis să existe e-mailuri duplicate.
 - Un câmp obligatoriu nu a fost completat corect.
@@ -252,7 +253,7 @@ Verificarea erorilor se realizează de obicei după executarea comenzii în baza
             lang: 'javascript',
             code: `
                 if (_dataItem.isError()) {
-                    // A apărut o eroare și nu a fost posibil să se salveze datele...
+                    // A apărut o eroare și nu a fost posibilă salvarea datelor...
                 }
             `
         },
@@ -260,23 +261,23 @@ Verificarea erorilor se realizează de obicei după executarea comenzii în baza
             lang: 'python',
             code: `
                 if _dataItem.isError():
-                    # A apărut o eroare și nu a fost posibil să se salveze datele...
+                    # A apărut o eroare și nu a fost posibilă salvarea datelor...
             `
         },
         {
             lang: 'ruby',
             code: `
                 if _dataItem.isError()
-                    # A apărut o eroare și nu a fost posibil să se salveze datele...
+                    # A apărut o eroare și nu a fost posibilă salvarea datelor...
                 end
             `
         },
     ]}
 />
 
-### Setup
+### Configurare (Setup)
 
-Este posibil să existe o `action` specifică ce este executată doar când se realizează modificări de date în
+Este posibil să aveți o acțiune (`action`) specifică ce este executată doar când se realizează modificări de date în
 timpul configurării (_setup_) bazei de date.
 
 De exemplu:
@@ -286,9 +287,9 @@ De exemplu:
     'aplicatia_mea/server/actions/formularul_meu/setup_saved',
 ]} />
 
-## Eliminare, Ștergere sau Suprimare (_Remove_)
+## Ștergere, Eliminare sau Suprimare (_Remove_)
 
-Pentru a crea o action care va fi executată când se elimină o înregistrare, scriptul acestei action va fi numit
+Pentru a crea o acțiune care va fi executată când este ștearsă o înregistrare, scriptul acestei acțiuni va fi numit
 `remove`, ceea ce înseamnă că ceva este eliminat din baza de date, de exemplu:
 
 <PolyglotPath files={[
@@ -297,7 +298,7 @@ Pentru a crea o action care va fi executată când se elimină o înregistrare, 
 
 > Această acțiune este executată înainte de executarea comenzii în baza de date.
 
-Când se dorește executarea codului după ce datele au fost salvate în baza de date, atunci folosim acțiunea
+Când trebuie executat cod după ce datele au fost salvate în baza de date, atunci folosim acțiunea
 `removed`, de exemplu:
 
 <PolyglotPath files={[
@@ -306,18 +307,17 @@ Când se dorește executarea codului după ce datele au fost salvate în baza de
 
 > Această acțiune este executată după ce a fost executată comanda în baza de date.
 
-Adică, în cadrul aplicației, în directorul `server/actions` creăm un subdirector cu numele formularului (tabelului),
-iar în interior plasăm un script numit `remove` sau `removed`, care conține codul respectiv pentru a fi executat
-înainte sau după comanda în baza de date.
+Adică, în cadrul aplicației, în folderul `server/actions`, creăm un subfolder cu numele formularului (tabelului) și
+în interior plasăm un script numit `remove` sau `removed`, care conține codul respectiv pentru a fi executat înainte
+sau după comanda în baza de date.
 
 ### Conflict cu relațiile
 
-În funcție de modelul de date, se poate întâmpla ca la eliminarea unei înregistrări care este utilizată într-o
-relație cu alt tabel, care este de asemenea un alt formular, aceasta să nu poată fi eliminată pentru a evita
-ruperea relației.
+În funcție de modelul de date, se poate întâmpla ca la ștergerea unei înregistrări care este utilizată în relația cu
+un alt tabel, care este de asemenea un alt formular, să nu poată fi ștearsă pentru a evita ruperea relației.
 
-Astfel, în acțiunea `removed` care se execută după comanda de bază de date de eliminare, putem verifica dacă
-apare această eroare în felul următor:
+Atunci, în acțiunea `removed`, care se execută după comanda de ștergere din baza de date, putem verifica dacă apare
+această eroare în felul următor:
 
 <PolyglotCode
     file="aplicatia_mea/server/actions/formularul_meu/removed"
@@ -327,7 +327,7 @@ apare această eroare în felul următor:
             code: `
                 if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations()) {
                     _log.error(
-                        "Nu a fost posibilă eliminarea deoarece există o relație cu tabelul "
+                        "Nu a fost posibilă ștergerea deoarece există o relație cu tabelul "
                         + _dataItem.getRelationTable() +" folosind ID-ul " + _dataItem.getRelationItem().getInt("id")
                     )
                 }
@@ -338,7 +338,7 @@ apare această eroare în felul următor:
             code: `
                 if _dataItem.isStatusAsError() and _dataItem.isStatusAsRelations():
                     _log.error(
-                        "Nu a fost posibilă eliminarea deoarece există o relație cu tabelul "
+                        "Nu a fost posibilă ștergerea deoarece există o relație cu tabelul "
                         + _dataItem.getRelationTable() +" folosind ID-ul " + _dataItem.getRelationItem().getInt("id")
                     )
             `
@@ -348,7 +348,7 @@ apare această eroare în felul următor:
             code: `
                 if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations())
                     _log.error(
-                        "Nu a fost posibilă eliminarea deoarece există o relație cu tabelul "
+                        "Nu a fost posibilă ștergerea deoarece există o relație cu tabelul "
                         + _dataItem.getRelationTable() +" folosind ID-ul " + _dataItem.getRelationItem().getInt("id")
                     )
                 end
@@ -357,8 +357,8 @@ apare această eroare în felul următor:
     ]}
 />
 
-Putem, în alternativă, în acțiunea `remove`, care se execută înainte de realizarea comenzii de bază ce șterge
-înregistrarea, să implementăm „curățarea” altor înregistrări care pot avea relație, de exemplu:
+Alternativ, în acțiunea `remove`, care se execută înainte de realizarea comenzii din baza de date care șterge
+înregistrarea, putem implementa „curățarea” altor înregistrări care pot avea relație, de exemplu:
 
 <PolyglotCode
     file="aplicatia_mea/server/actions/formularul_meu/remove"
@@ -377,9 +377,9 @@ Putem, în alternativă, în acțiunea `remove`, care se execută înainte de re
     ]}
 />
 
-### Setup
+### Configurare (Setup)
 
-Este posibil să existe o `action` specifică ce este executată doar când se realizează eliminarea de date în
+Este posibil să aveți o acțiune (`action`) specifică ce este executată doar când se realizează ștergerea de date în
 timpul configurării (_setup_) bazei de date.
 
 De exemplu:
@@ -391,15 +391,16 @@ De exemplu:
 
 ## Concluzie
 
-Cu acțiunile (`actions`) putem centraliza operații specifice care sunt legate de manipularea anumitor date.
+Cu acțiunile (`actions`) putem centraliza operații specifice care sunt legate de manipularea
+anumitor date.
 
-Permite echiparea cu cod care oferă mecanisme utile pentru a garanta integritatea, a facilita sarcini, a realiza
+Permite îmbogățirea cu cod care oferă mecanisme utile pentru a garanta integritatea, a facilita sarcini, a realiza
 integrări, a face operații paralele, a avea verificări suplimentare și multe altele.
 
-Codificarea acțiunilor este simplă și extrem de utilă; este posibil să extindeți cu utilizarea oricărei alte
-resurse a framework-ului low-code poliglot.
+Codificarea acțiunilor este simplă și extrem de utilă; este posibil să extindeți folosind orice altă resursă
+a framework-ului low-code poliglot.
 
 > În codul acțiunilor puteți utiliza orice resursă a framework-ului low-code poliglot.
 
-Luați în considerare utilizarea acțiunilor și rapid veți putea constata cum ușurința obținută poate potența
+Luați în considerare utilizarea acțiunilor și veți putea constata rapid cum ușurința obținută poate potența
 multe strategii utile.

@@ -1,7 +1,7 @@
 ---
 id: setup
-title: Setup-ul Datelor
-sidebar_label: Setup-ul Datelor
+title: Configurarea Datelor
+sidebar_label: Configurarea Datelor
 ---
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
@@ -9,32 +9,21 @@ import PolyglotPath from "@site/src/components/PolyglotPath";
 
 ## Introducere
 
-Cu Netuno, dezvoltarea aplicațiilor trece mai întâi prin construirea bazei de date, prin intermediul
-construcției formularelor și câmpurilor.
+Cu Netuno, dezvoltarea aplicațiilor trece mai întâi prin construirea bazei de date, prin construirea formularelor și câmpurilor.
 
-Iar când se lucrează în echipă sau este nevoie să se treacă dezvoltarea aplicației într-un alt mediu, este
-necesar să se creeze un backup al bazei de date însoțit de cod.
+Și când se lucrează în echipă sau este necesar să se transfere dezvoltarea aplicației într-un alt mediu, este necesar să se creeze o copie de siguranță a bazei de date împreună cu codul.
 
-Astfel, la destinație va fi necesar să se reconfigureze baza de date și astfel aplicația va putea fi executată
-așa cum a fost dezvoltată la origine.
+Astfel, la destinație va fi necesar să se reconfigureze baza de date și astfel aplicația va putea fi executată așa cum a fost dezvoltată la origine.
 
-Problema acestui proces este efortul de a-ți aminti mereu să creezi un backup nou de fiecare dată când există o
-modificare în baza de date. Și cu cât mai multe persoane sunt implicate în dezvoltare și/sau cu cât mai multe
-medii există pentru publicarea aplicației, cu atât acest proces devine mai complicat.
+Problema acestui proces este efortul de a-ți aminti mereu să creezi o nouă copie de siguranță de fiecare dată când apare o modificare în baza de date. Și cu cât mai multe persoane sunt implicate în dezvoltare și/sau cu cât mai multe medii există pentru publicarea aplicației, cu atât acest proces devine mai complicat.
 
-Așadar, Netuno, pentru a rezolva această problemă, aduce un sistem de *setup* al aplicațiilor, care generează automat
-structura bazei de date (*schema*) și, în plus, permite programarea manuală a încărcării datelor inițiale prin
-*scripturi* suplimentare.
+Așadar, Netuno, pentru a rezolva această problemă, aduce un sistem de *setup* al aplicațiilor, care generează automat structura bazei de date (*schema*) și, în plus, permite programarea manuală a încărcării datelor inițiale prin *scripturi* suplimentare.
 
-De asemenea, permite schimbarea tipului de server de baze de date, garantind că *setup*-ul va fi executat fără
-probleme și aplicația fără nicio problemă. Aceasta înseamnă că aplicația poate fi dezvoltată în H2DataBase și, cu
-schemele generate automat, va putea schimba conexiunea bazei de date a aplicației la PostgreSQL sau MariaDB. La
-prima execuție a aplicației pe noua bază de date, totul va fi reconstruit, indiferent de schimbarea tipului de
-server de baze de date.
+De asemenea, permite schimbarea tipului de server de bază de date, garantând că *setup-ul* va fi executat în mod normal și aplicația fără nicio problemă. Aceasta înseamnă că aplicația poate fi dezvoltată în H2DataBase și, cu schemele generate automat, vei putea schimba conexiunea bazei de date a aplicației la PostgreSQL sau MariaDB. La prima execuție a aplicației pe noua bază de date, totul va fi reconstruit, indiferent de schimbarea tipului de server de bază de date.
 
 Astfel, permite ca baza de date să fie complet schimbată fără a avea impact asupra dezvoltării deja realizate.
 
-Fișierele de programare ale _setup_-ului se află în folderul aplicației în:
+Fișierele de programare ale _setup-ului_ se află în dosarul aplicației la:
 
 - `server/setup`
 
@@ -42,10 +31,10 @@ Fișierele de programare ale _setup_-ului se află în folderul aplicației în:
 
 În configurațiile de mediu ale aplicațiilor care se află în:
 
-- `/apps/APLICATIA_MEA/config/_development.json`
-- `/apps/APLICATIA_MEA/config/_production.json`
+- `/apps/APP_MEA/config/_development.json`
+- `/apps/APP_MEA/config/_production.json`
 
-Veți putea manipula comportamentul 'setup'-ului prin configurațiile:
+Vei putea manipula comportamentul 'setup-ului' prin configurațiile:
 
 ```json
     ...
@@ -64,28 +53,23 @@ Veți putea manipula comportamentul 'setup'-ului prin configurațiile:
 
 ##### `enabled`: boolean > _implicit true_
 
-Definește dacă setup-ul este activ sau nu și astfel activează sau dezactivează, la prima execuție a aplicației,
-executarea operațiilor de setup al datelor.
+Definește dacă setup-ul este activ sau nu și astfel activează sau dezactivează, la prima execuție a aplicației, execuția operațiilor de setup al datelor.
 
 ##### `schema.auto_create`: boolean > _implicit true_
 
-Permite Netuno să știe dacă trebuie sau nu să genereze fișierele de schema a bazei de date de fiecare dată când
-este creat sau modificat vreun formular sau câmp.
+Permite Netuno să știe dacă trebuie sau nu să genereze fișierele de schemă ale bazei de date ori de câte ori este creat sau modificat un formular sau un câmp.
 
 ##### `schema.execution`: boolean > _implicit true_
 
-Controlează dacă schema trebuie executată sau nu în timpul operațiilor de setup realizate la prima execuție a
-aplicației.
+Controlează dacă schema trebuie executată sau nu în timpul operațiilor de setup realizate la prima execuție a aplicației.
 
 ##### `scripts.execution`: boolean > _implicit true_
 
-Activează sau dezactivează executarea scripturilor suplimentare în timpul operațiilor de setup realizate la prima
-execuție a aplicației.
+Activează sau dezactivează execuția scripturilor suplimentare în timpul operațiilor de setup realizate la prima execuție a aplicației.
 
-## Schema
+## Schemă
 
-În timpul creării sau modificării formularelor și câmpurilor în interfața web Netuno, vor fi generate fișierele de
-schema în folderul setup după cum urmează:
+În timpul creării sau modificării formularelor și câmpurilor în interfața web Netuno, vor fi generate fișierele de schemă în dosarul setup, după cum urmează:
 
 <PolyglotPath files={[
     "server/setup/_schema-NUME_FORMULAR"
@@ -93,43 +77,33 @@ schema în folderul setup după cum urmează:
 
 Unde va exista un fișier `_schema-***` pentru fiecare formular existent în aplicație.
 
-Aceste fișiere nu trebuie modificate manual pentru că sunt generate automat de Netuno.
+Aceste fișiere nu trebuie modificate manual, deoarece sunt generate automat de Netuno.
 
-Astfel, dacă modificați conținutul acestor fișiere, la următoarea generare a schemelor acestea vor fi înlocuite automat
-și modificările făcute direct în fișiere vor fi pierdute.
+Astfel, dacă modifici conținutul acestor fișiere, la următoarea generare a schemelor vor fi înlocuite automat, iar modificările făcute direct în fișiere vor fi pierdute.
 
-Pentru ca generarea automată a schemei bazei de date să fie executată, trebuie să vă asigurați că configurația
-__schema.auto_create__ este activă și că folderul __setup__ există în folderul __server__.
+Pentru ca generarea automată a schemei bazei de date să fie executată, trebuie să te asiguri că configurația __schema.auto_create__ este activă și că dosarul __setup__ există în dosarul __server__.
 
 ## Scripturi
 
-Scripturile de cod personalizate sunt fișiere localizate în folderul __setup__ care nu încep cu `_`.
+Scripturile de cod programate la comandă sunt fișiere aflate în dosarul __setup__ care nu încep cu `_`.
 
-Principalul obiectiv al acestor scripturi este de a încărca datele, garantind că baza de date conține informația minimă
-necesară pentru funcționarea corectă a aplicației.
+Scopul principal al acestor scripturi este să încarce datele, garantând că baza de date conține informația minimă necesară pentru funcționarea corectă a aplicației.
 
-Astfel, când aplicația este reconfigurată într-un alt mediu, va fi încărcată automat cu datele inițiale, fiind
-pregătită pentru a începe utilizarea.
+Astfel, când aplicația va fi reconfigurată într-un alt mediu, va fi încărcată automat cu datele inițiale și va fi gata să înceapă utilizarea.
 
-Pentru a realiza aceste operații de încărcare a datelor, trebuie să utilizați funcțiile resursei *_db*.
+Pentru a realiza aceste operații de încărcare a datelor, va trebui să utilizezi funcțiile resursei *_db*.
 
-__Scripturile__ sunt executate după executarea __schemelor__, în ordinea alfanumerică a numelui fișierelor
-care nu încep cu `_`.
+__Scripturile__ sunt executate după execuția __schemelor__, în ordine alfanumerică a numelui fișierelor care nu încep cu `_`.
 
-> Începerea numelui fișierelor cu o secvență numerică este ideală pentru a defini ordinea de execuție, prin urmare
-> scripturile personalizate sunt executate în ordinea numelui fișierelor care nu încep cu `_`.
+> Începerea numelui fișierelor cu o secvență numerică este ideală pentru a defini ordinea de execuție, așadar scripturile personalizate sunt executate în ordinea numelui fișierelor care nu încep cu `_`.
 
 ### Inserarea Datelor Personalizate
 
-Și, pentru a economisi efortul de a face interogări în baza de date pentru a verifica dacă se poate face __insert__-ul
-de date sau nu, Netuno pune la dispoziție funcția `insertIfNotExists`.
+Și, pentru a economisi efortul de a face interogări în baza de date pentru a verifica dacă se poate face sau nu __inserarea__ de date, Netuno oferă funcția `insertIfNotExists`.
 
-Această funcție verifică dacă datele există exact așa cum sunt definite în baza de date; dacă nu există, atunci
-realizează crearea lor.
+Această funcție verifică dacă există datele exact așa cum sunt definite în baza de date; dacă nu există, atunci realizează crearea lor.
 
-Un exemplu de utilizare va fi încărcarea câmpurilor __Cod__ și __Nume__ din formularul __Tip de Teritoriu__,
-unde numele tabelului este __tip\_teritoriu__ și are coloanele __cod__ și __nume__; pentru aceasta este suficient
-să creați fișierul cu următorul conținut:
+Un exemplu de utilizare a sa va fi încărcarea câmpurilor __Cod__ și __Nume__ din formularul __Tip de Teritoriu__, unde numele tabelului este __tip\_teritoriu__ și are coloanele __cod__ și __nume__; pentru aceasta va fi suficient să creezi fișierul cu următorul conținut:
 
 <PolyglotCode
     file="server/setup/001-tip_teritoriu"
@@ -158,61 +132,52 @@ să creați fișierul cu următorul conținut:
 
 ## Ciclul de Procesare
 
-După cum s-a explicat deja, *setup*-ul este executat doar la prima execuție a aplicației.
+După cum s-a explicat deja, *setup-ul* este executat doar la prima execuție a aplicației.
 
 Iar ordinea de execuție este:
 
 1. `_start` - execută fișierul de inițializare care poate conține orice tip de programare personalizată:
-    <PolyglotPath files={["APLICATIA_MEA/server/setup/_start"]} />
+    <PolyglotPath files={["APP_MEA/server/setup/_start"]} />
 2. `_cleanup` - execută eliminarea formularelor, rapoartelor și câmpurilor respective în mod programatic:
-    <PolyglotPath files={["APLICATIA_MEA/server/setup/_cleanup"]} />
-3. `_schema-*` - execută toate scripturile cu prefixul *_schema-*, conține comenzile de creare a
-  formularelor, rapoartelor și câmpurilor respective:
+    <PolyglotPath files={["APP_MEA/server/setup/_cleanup"]} />
+3. `_schema-*` - execută toate scripturile cu prefixul *_schema-*, conține comenzile de creare a formularelor, rapoartelor și câmpurilor respective:
     <PolyglotPath files={[
-        "APLICATIA_MEA/server/setup/_schema-structura_autogenerata",
-        "APLICATIA_MEA/server/setup/_schema-categorie",
-        "APLICATIA_MEA/server/setup/_schema-produs",
-        "APLICATIA_MEA/server/setup/_schema-client",
+        "APP_MEA/server/setup/_schema-structura_autogenerata",
+        "APP_MEA/server/setup/_schema-categorie",
+        "APP_MEA/server/setup/_schema-produs",
+        "APP_MEA/server/setup/_schema-client",
     ]} />
-4. `001-alte_scripturi` - execută fișierele de *scripturi* programate la cerere; sunt toate fișierele care nu
-  încep cu `_` și care probabil vor conține __inserturile__ de date inițiale necesare sau alte
-  dezvoltări personalizate, de exemplu:
+4. `001-alte_scripturi` - execută fișierele de *scripturi* programate la comandă, sunt toate fișierele care nu încep cu `_` și care probabil vor conține __inserările__ de date inițiale necesare sau alte dezvoltări personalizate, de exemplu:
     <PolyglotPath files={[
-        "APLICATIA_MEA/server/setup/001-insereaza_date_personalizate",
-        "APLICATIA_MEA/server/setup/002-categorie",
-        "APLICATIA_MEA/server/setup/003-produs",
-        "APLICATIA_MEA/server/setup/004-client",
+        "APP_MEA/server/setup/001-insereaza_date_personalizate",
+        "APP_MEA/server/setup/002-categorie",
+        "APP_MEA/server/setup/003-produs",
+        "APP_MEA/server/setup/004-client",
     ]} />
 5. *_end* - execută fișierul de finalizare care poate conține orice tip de programare personalizată:
-    <PolyglotPath files={["APLICATIA_MEA/server/setup/_end"]} />
+    <PolyglotPath files={["APP_MEA/server/setup/_end"]} />
 
-Adică, este permisă crearea de cod personalizat în scripturile *start* și *end* pentru a realiza unele operații
-care are sens să fie executate înainte de setup sau chiar la finalizarea acestuia.
+Adică este permisă crearea de cod la comandă în scripturile *start* și *end* pentru a realiza unele operații care are sens să fie executate înainte de setup sau chiar când acesta este finalizat.
 
-Este bine să subliniem că acest ciclu de procesare este executat de fiecare dată când aplicația rulează pentru prima
-dată; de aceea este necesar să se garanteze verificarea existenței datelor înainte de a realiza crearea lor.
+Este bine să reamintim că acest ciclu de procesare este executat de fiecare dată când aplicația este executată pentru prima dată, de aceea este necesar să se garanteze verificarea existenței datelor înainte de a realiza crearea lor.
 
-Asigurați-vă că următoarele *configurații* de mediu sunt active pentru a permite executarea acestui proces în
-fișierele `APLICATIA_MEA/config/_development.json` sau `APLICATIA_MEA/config/_production.json`, în funcție de
-mediu:
+Asigură-te că următoarele *configurații* de mediu sunt active pentru a permite execuția acestui proces în fișierele `APP_MEA/config/_development.json` sau `APP_MEA/config/_production.json`, în funcție de mediu:
 
-* Activează sau dezactivează complet executarea oricărei operații de setup:
+* Activează sau dezactivează complet execuția oricărei operații de setup:
 
   `setup.enabled = true|false`
 
-* Activează sau dezactivează executarea *_schemelor-*:
+* Activează sau dezactivează execuția *_schemelor-*:
 
   `setup.schema.execution = true|false`
 
-* Activează sau dezactivează executarea *scripturilor*:
+* Activează sau dezactivează execuția *scripturilor*:
 
   `setup.scripts.execution = true|false`
 
 ## Curățare
 
-Pentru a programa eliminarea formularelor și câmpurilor, trebuie să utilizăm scriptul `_cleanup.js`, ceea ce garantează
-că în toate mediile care sincronizează fișierele proiectului, la executarea setup-ului, structura va fi eliminată,
-dacă există.
+Pentru a programa eliminarea formularelor și câmpurilor, trebuie să utilizăm scriptul `_cleanup.js`, ceea ce garantează că, în toate mediile care sincronizează fișierele proiectului, la execuția setup-ului structura va fi eliminată, dacă există.
 
 Exemplu de script de curățare:
 
@@ -234,26 +199,19 @@ De fiecare dată când Netuno execută setup-ul datelor, este generat fișierul:
 
 - `server/setup/_db-schema.dbml`
 
-Acesta este fișierul cu toată structura de date care poate fi utilizat cu Inteligența Artificială.
+Acesta este fișierul cu întreaga structură de date care poate fi utilizat cu Inteligență Artificială.
 
-Pe baza conținutului DBML, Inteligența Artificială înțelege structura de date și poate genera interogări SQL
-precise.
+Pe baza conținutului DBML, Inteligența Artificială înțelege structura de date și poate genera interogări SQL precise.
 
-Încercați să utilizați acest fișier ca atașament în prompt și cereți să genereze interogări SQL complexe; veți obține
-rezultate bune.
+Încearcă să utilizezi acest fișier ca atașament în prompt și cere să generezi interogări SQL complexe; vei obține rezultate bune.
 
 ## Concluzie
 
 Procesul de *setup* al aplicațiilor în Netuno are ca principale funcții:
 
-* *_schema-*: generează automat toată structura de formulare și rapoarte cu câmpurile lor respective,
-care permit garantarea întregii coerențe a structurii bazei de date a aplicației, în special când
-aplicația este executată cu o nouă bază de date goală.
-* *scripturi*: realizează operații de bază de date pentru a garanta că aplicația conține datele obligatorii
-încărcate anterior de fiecare dată când este executată pentru prima dată.
+* *_schema-*: generează automat întreaga structură de formulare și rapoarte cu câmpurile lor respective, care permit garantarea întregii coerențe a structurii bazei de date a aplicației, în special când aplicația este executată cu o nouă bază de date goală.
+* *scripturi*: realizează operații de bază de date pentru a garanta că aplicația conține datele obligatorii preîncărcate anterior de fiecare dată când este executată pentru prima dată.
 
-În acest fel, Netuno permite aplicațiilor să funcționeze în medii noi, chiar dacă se schimbă tipul bazei
-de date, garantind funcționarea corectă a aplicației fără a fi nevoie de realizarea de __backup-uri__ și __restore__
-ale bazelor de date.
+În acest fel, Netuno permite ca aplicațiile să funcționeze în medii noi, chiar dacă se schimbă tipul bazei de date, garantând funcționarea corectă a aplicației fără necesitatea de a realiza __copii de siguranță__ și __restaurare__ ale bazelor de date.
 
 Permițând în plus ca tot codul de configurare generat automat și manual să fie versionat cu GIT, de exemplu.

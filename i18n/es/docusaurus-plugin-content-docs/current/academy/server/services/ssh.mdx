@@ -10,33 +10,34 @@ Ejecutar comandos en el servidor y transferir archivos.
 
 ## Introducción
 
-Netuno tiene integrado en su framework low-code un cliente SSH, que permite conectar con servidores, ejecutar comandos, enviar y recibir archivos, modificar carpetas, entre otras operaciones remotas.
+Netuno tiene integrado en su framework low-code un cliente SSH, que permite conectar con servidores, ejecutar
+comandos, enviar y recibir archivos, modificar carpetas, entre otras operaciones remotas.
 
-Soporta múltiples conexiones simultáneas, y también SCP y SFTP.
+Admite múltiples conexiones simultáneas, además de SCP y SFTP.
 
-Esto gracias a la implementación Java y open-source
-<a target="_blank" href="https://github.com/hierynomus/sshj/tree/master">SSHJ</a>, es lo que permite a Netuno
-proporcionar estas funcionalidades a todos los lenguajes de script a través del recurso `_ssh`.
+Esto es gracias a la implementación Java y de código abierto
+<a target="_blank" href="https://github.com/hierynomus/sshj/tree/master">SSHJ</a>, lo que permite a Netuno
+ofrecer estas funcionalidades a todos los lenguajes de script mediante el recurso `_ssh`.
 
-> Más sobre el recurso [SSH](/docs/library/resources/ssh) de Netuno.
+> Más información sobre el recurso [SSH](/docs/library/resources/ssh) de Netuno.
 
 ## Configuración
 
 El primer paso será configurar los datos de acceso al SSH que Netuno utilizará para realizar la conexión.
 
 Navegue dentro de la aplicación que está desarrollando hasta el archivo de configuración de entorno. En este ejemplo,
-utilizaremos el archivo de desarrollo, ubicado en:
+utilizaremos el archivo de desarrollo, situado en:
 
 - `config/_development.json`
 
-Verifique si hay configuraciones para el SSH, si no existe, entonces al final del archivo de configuración (en formato JSON)
-añada los parámetros de configuración del SSH, por ejemplo:
+Compruebe si hay configuraciones para SSH; si no existen, añada al final del archivo de configuración (en formato JSON)
+los parámetros de configuración de SSH, por ejemplo:
 
 ```json
 {
   ...
   "ssh": {
-    "predeterminado": {
+    "default": {
       "enabled": true,
       "host": "mi.servidor.net",
       "port": 22,
@@ -48,19 +49,19 @@ añada los parámetros de configuración del SSH, por ejemplo:
 }
 ```
 
-Después de guardar los cambios, basta con reiniciar Netuno para asumir los cambios de la configuración. Siendo estas las
-configuraciones predeterminadas para la conexión, como indica el nombre de clave `predeterminado`.
+Después de guardar los cambios, basta con reiniciar Netuno para que asuma los cambios de la configuración. Estas son las
+configuraciones predeterminadas para la conexión, como indica el nombre de clave `default`.
 
 Puede añadir más configuraciones de conexión SSH con otras claves en el JSON.
 
 Para añadir más configuraciones de conexión SSH basta con repetir el bloque de configuración predeterminado y cambiar la clave
-`predeterminado` por otra a su elección, por ejemplo:
+`default` por otra a su elección, por ejemplo:
 
 ```json
 {
   ...
   "ssh": {
-    "predeterminado": {
+    "default": {
       "enabled": true,
       "host": "mi.servidor.net",
       "port": 22,
@@ -79,7 +80,7 @@ Para añadir más configuraciones de conexión SSH basta con repetir el bloque d
 }
 ```
 
-La configuración anterior permite utilizar la cuenta `predeterminado` cuando se codifique de la siguiente forma:
+La configuración anterior permite utilizar la cuenta `default` cuando se codifique de la siguiente forma:
 
 <PolyglotCode
     codes={[
@@ -92,7 +93,7 @@ La configuración anterior permite utilizar la cuenta `predeterminado` cuando se
     ]}
 />
 
-Para utilizar la configuración `otro` basta con añadir la clave de la configuración como parámetro de la función
+Para utilizar la configuración `otro`, basta con añadir la clave de la configuración como parámetro de la función
 `_ssh.init()`, de la siguiente forma:
 
 <PolyglotCode
@@ -106,7 +107,7 @@ Para utilizar la configuración `otro` basta con añadir la clave de la configur
     ]}
 />
 
-> Si no se añade un nombre de configuración como parámetro se utilizará la configuración de la cuenta `predeterminado`.
+> Si no añade un nombre de configuración como parámetro, se utilizará la configuración de la cuenta `default`.
 
 ## Conexión
 
@@ -138,7 +139,7 @@ Para ejecutar comandos es necesario iniciar una sesión de comandos:
     ]}
 />
 
-Al ejecutar un comando se proporciona un objeto que contiene el estado de la ejecución y la respectiva salida de datos
+Al ejecutar un comando se proporciona un objeto que contiene el estado de la ejecución y su correspondiente salida de datos
 (output), por ejemplo:
 
 <PolyglotCode
@@ -146,45 +147,45 @@ Al ejecutar un comando se proporciona un objeto que contiene el estado de la eje
         {
             lang: 'javascript',
             code: `
-                const sshComandoResultado = sshSesion.exec("ls -rato")
-                if (sshComandoResultado.ok) {
-                    _out.println("Ejecutó con éxito:")
-                    _out.println(sshComandoResultado.output())
+                const sshResultadoComando = sshSesion.exec("ls -rato")
+                if (sshResultadoComando.ok) {
+                    _out.println("Se ejecutó con éxito:")
+                    _out.println(sshResultadoComando.output())
                 } else {
                     _out.println("El comando falló:")
-                    _out.println(sshComandoResultado.error())
+                    _out.println(sshResultadoComando.error())
                 }
             `
         },
         {
             lang: 'python',
             code: `
-                sshComandoResultado = sshSesion.exec("ls -rato")
-                if sshComandoResultado.ok:
-                    _out.println("Ejecutó con éxito:")
-                    _out.println(sshComandoResultado.output())
+                sshResultadoComando = sshSesion.exec("ls -rato")
+                if sshResultadoComando.ok:
+                    _out.println("Se ejecutó con éxito:")
+                    _out.println(sshResultadoComando.output())
                 else:
                     _out.println("El comando falló:")
-                    _out.println(sshComandoResultado.error())
+                    _out.println(sshResultadoComando.error())
             `
         },
         {
             lang: 'ruby',
             code: `
-                sshComandoResultado = sshSesion.exec("ls -rato")
-                if sshComandoResultado.ok
-                    _out.println("Ejecutó con éxito:")
-                    _out.println(sshComandoResultado.output())
+                sshResultadoComando = sshSesion.exec("ls -rato")
+                if sshResultadoComando.ok
+                    _out.println("Se ejecutó con éxito:")
+                    _out.println(sshResultadoComando.output())
                 else
                     _out.println("El comando falló:")
-                    _out.println(sshComandoResultado.error())
+                    _out.println(sshResultadoComando.error())
                 end
             `
         },
     ]}
 />
 
-> El objeto devuelto por el comando es el [SSHExecResult](/docs/library/objects/SSHExecResult).
+> El objeto devuelto por el comando es [SSHExecResult](/docs/library/objects/SSHExecResult).
 
 Recuerde cerrar siempre la sesión:
 
@@ -201,9 +202,9 @@ Recuerde cerrar siempre la sesión:
 
 ## SCP
 
-A través de SCP podemos enviar y recibir archivos.
+Mediante SCP podemos enviar y recibir archivos.
 
-Para crear un archivo de texto a partir de una cadena y descargar contenido del archivo creado, vea el ejemplo:
+Para crear un archivo de texto a partir de una cadena y descargar el contenido del archivo creado, vea el ejemplo:
 
 <PolyglotCode
     codes={[
@@ -229,7 +230,7 @@ Para realizar el envío (upload) de archivos existentes en la aplicación:
             lang: 'javascript',
             code: `
                 const sshSCP = ssh.initSCP()
-                // Envía un archivo que está en el storage/filesystem.
+                // Envía un archivo que está en storage/filesystem.
                 sshSCP.upload("hoja_calculo.xlsx", _storage.filesystem("server", "hoja_calculo.xlsx").file())
                 // Envía un archivo que está en la raíz de la aplicación.
                 sshSCP.upload("documento.pdf", _app.file("documento.pdf"))
@@ -247,9 +248,9 @@ Para descargar (download) archivos del servidor a la aplicación:
             lang: 'javascript',
             code: `
                 const sshSCP = ssh.initSCP()
-                // Descarga el archivo al storage/filesystem.
+                // Descarga el archivo en storage/filesystem.
                 sshSCP.download("hoja_calculo.xlsx", _storage.filesystem("server", "hoja_calculo.xlsx").file())
-                // Descarga el archivo a la raíz de la aplicación.
+                // Descarga el archivo en la raíz de la aplicación.
                 sshSCP.download("documento.pdf", _app.file("documento.pdf"))
                 sshSCP.close()
             `
@@ -259,7 +260,7 @@ Para descargar (download) archivos del servidor a la aplicación:
 
 ## SFTP
 
-SFTP es una forma de transferencia y manipulación de archivos y carpetas que soporta las mismas funcionalidades
+SFTP es una forma de transferencia y manipulación de archivos y carpetas que admite las mismas funcionalidades
 que FTP, pero utilizando SSH.
 
 Para iniciar una nueva sesión SFTP:
@@ -277,7 +278,7 @@ Para iniciar una nueva sesión SFTP:
 
 > Inicia el objeto [SSHSFTP](/docs/library/objects/SSHSFTP) que es el cliente de la sesión.
 
-Crear una nueva carpeta remotamente:
+Crear una nueva carpeta de forma remota:
 
 <PolyglotCode
     codes={[
@@ -310,7 +311,7 @@ Obtiene el contenido de texto de un archivo remoto:
         {
             lang: 'javascript',
             code: `
-                const contenidoArchivoRemoto = sftp.downloadText("carpeta/archivo.txt"))
+                const contenidoArchivoRemoto = sftp.downloadText("carpeta/archivo.txt")
                 _out.println(contenidoArchivoRemoto)
             `
         },
@@ -366,7 +367,7 @@ Lista todo el contenido de una carpeta:
         {
             lang: 'python',
             code: `
-                for i in sftp.list("ruta/carpeta":
+                for i in sftp.list("ruta/carpeta"):
                     if i.directory:
                         _out.print("Carpeta: ")
                     elif i.regularFile:
@@ -375,7 +376,6 @@ Lista todo el contenido de una carpeta:
                         _out.print("Otro: ")
                     _out.println(i.name)
                     _out.println("<br/>")
-                }
             `
         },
         {
@@ -438,7 +438,7 @@ Para realizar el envío (upload) de archivos existentes en la aplicación:
         {
             lang: 'javascript',
             code: `
-                // Envía un archivo que está en el storage/filesystem.
+                // Envía un archivo que está en storage/filesystem.
                 sftp.upload("hoja_calculo.xlsx", _storage.filesystem("server", "hoja_calculo.xlsx").file())
                 // Envía un archivo que está en la raíz de la aplicación.
                 sftp.upload("documento.pdf", _app.file("documento.pdf"))
@@ -454,9 +454,9 @@ Para descargar (download) archivos del servidor a la aplicación:
         {
             lang: 'javascript',
             code: `
-                // Descarga el archivo al storage/filesystem.
+                // Descarga el archivo en storage/filesystem.
                 sftp.download("hoja_calculo.xlsx", _storage.filesystem("server", "hoja_calculo.xlsx").file())
-                // Descarga el archivo a la raíz de la aplicación.
+                // Descarga el archivo en la raíz de la aplicación.
                 sftp.download("documento.pdf", _app.file("documento.pdf"))
             `
         },

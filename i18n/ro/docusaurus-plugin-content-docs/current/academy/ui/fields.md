@@ -6,199 +6,199 @@ title: Câmpuri
 
 
 
-Câmpurile sunt componentele fundamentale și "blocurile de construcție" ale unui formular în Netuno. Ele reprezintă interfața de interacțiune cu utilizatorul și definesc modul în care datele vor fi structurate și stocate.
+Câmpurile sunt componentele fundamentale și „cărămizile de construcție" ale unui formular în Netuno. Ele reprezintă interfața de interacțiune cu utilizatorul și definesc modul în care datele vor fi structurate și stocate.
 
-În practică, fiecare câmp creat corespunde unei coloane din tabelul bazei de date, determinând tipul de informație pe care sistemul îl poate procesa — cum ar fi texte, numere, date, selecții și fișiere. 
+În practică, fiecare câmp creat corespunde unei coloane din tabelul bazei de date, determinând tipul de informație pe care sistemul îl poate procesa — cum ar fi texte, numere, date, selecții și fișiere.
 
-### Creare și editare câmpuri
+### Creare și Editare Câmpuri
 
-Aceste butoane permit gestionarea stării generale de editare:
+Aceste butoane permit gestionarea stării generale a editării:
 
-- **Editare câmp existent:** Meniu derulant pentru a selecta un câmp deja creat și a-i modifica setările.
+- **Editare câmp existent:** Meniu derulant pentru a selecta un câmp deja creat și a-i modifica configurațiile.
 
-- **Creare câmp nou:** Golește toate câmpurile din formular pentru a începe configurarea unui element nou de la zero.
+- **Creare câmp nou:** Golește toate câmpurile formularului pentru a începe configurarea unui element nou de la zero.
 
-- **Clonare câmp:** Duplică setările câmpului selectat pentru a accelera crearea de elemente similare.
+- **Clonare câmp:** Duplică configurațiile câmpului selectat pentru a accelera crearea unor elemente similare.
 
-![editare-câmp-existent-pt.png](/docs/assets/academy/ui/fields/field-edit-existing-pt.png)    
+![field-edit-existing-pt.png](/docs/assets/academy/ui/fields/field-edit-existing-pt.png)    
 
-## 1 - Titlul câmpului
+## 1 - Titlul Câmpului
 
-Titlul câmpului (cunoscut tehnic ca etichetă) este instrucțiunea vizuală care îl ghidează pe utilizator cu privire la ce informație trebuie introdusă într-un formular. Funcționează ca o etichetă identificatoare, asigurând că completarea datelor este intuitivă și corectă.
+Titlul Câmpului (cunoscut tehnic ca Label) este instrucțiunea vizuală care îl orientează pe utilizator cu privire la ce informație trebuie introdusă într-un formular. Funcționează ca o etichetă identificatoare, garantând că completarea datelor este intuitivă și corectă.
 
-În această etapă, titlul are un dublu scop în platformă:
+În această etapă, titlul are o dublă finalitate în platformă:
 
-- **În Gestionarea câmpurilor (Construire):** Servește la identificarea câmpului în lista de elemente în timpul dezvoltării aplicației.
+- **În Gestionarea Câmpurilor (Construire):** Servește pentru a identifica câmpul în lista ta de elemente în timpul dezvoltării aplicației.
 
-![titlu-nume-câmp-pt.png](/docs/assets/academy/ui/fields/field-title-name-pt.png)
+![field-title-name-pt.png](/docs/assets/academy/ui/fields/field-title-name-pt.png)
 
-- **În Interfața utilizatorului (Vizualizare):** Este textul care apare poziționat imediat deasupra sau lângă câmpul de introducere (input), indicând utilizatorului final ce trebuie să tasteze în formular.
+- **În Interfața Utilizatorului (Vizualizare):** Este textul care apare poziționat chiar deasupra sau în lateralul câmpului de intrare (input), indicând utilizatorului final ce trebuie să tasteze în formular.
 
-![conținut-titlu-nume-câmp-pt.png](/docs/assets/academy/ui/fields/field-title-name-content-pt.png)
+![field-title-name-content-pt.png](/docs/assets/academy/ui/fields/field-title-name-content-pt.png)
 
 ## 2 - Numele coloanei
 
-Spre deosebire de titlu, **Numele coloanei** este identificatorul intern și exclusiv al câmpului, utilizat direct în baza de date și în logica de programare. Prin intermediul acestui nume, sistemul localizează informația în baza de date.
+Spre deosebire de titlu, **Numele Coloanei** este identificatorul intern și exclusiv al câmpului, utilizat direct în baza de date și în logicile de programare. Prin intermediul acestui nume, sistemul localizează informația în baza de date.
 
-**Formatare automată (Switch Auto):**
+**Formatare Automată (Switch Auto):**
 
-Netuno facilitează acest proces completând automat numele pe baza "Titlului câmpului". Modelul utilizat este snake_case.
+Netuno facilitează acest proces prin completarea automată a numelui pe baza „Titlului câmpului". Modelul utilizat este snake_case.
 
-**Reguli de scriere:** Dacă alegeți să completați manual (dezactivând "Auto"), păstrați numele la singular, folosiți doar litere mici și evitați spațiile sau caracterele speciale.
+**Reguli de Scriere:** Dacă optezi pentru completarea manuală (dezactivând „Auto"), menține numele la singular, folosește doar litere mici și evită spațiile sau caracterele speciale.
 
-![nume-coloană-câmp-pt.png](/docs/assets/academy/ui/fields/field-column-name-pt.png)  
+![field-column-name-pt.png](/docs/assets/academy/ui/fields/field-column-name-pt.png)  
 
 ## 3 - Tipuri de date
 
-Definirea **Tipului de date** determină natura informației colectate, afectând direct aspectul câmpului pentru utilizator și modul în care datele sunt stocate în sistem.
+Definirea **Tipului de Date** determină natura informației colectate, impactând direct asupra aspectului câmpului pentru utilizator și asupra modului în care data este stocată în sistem.
 
-![tip-date-câmp-pt.png](/docs/assets/academy/ui/fields/field-type-data-pt.png)  
+![field-type-data-pt.png](/docs/assets/academy/ui/fields/field-type-data-pt.png)  
 
-### 3.1 Câmpuri textuale
+### 3.1 Câmpuri Textuale
 
-Aceste câmpuri sunt destinate introducerii de text în diferite formate. Ele variază în funcție de necesarul de volum de date.
+Aceste câmpuri sunt destinate introducerii de text în diferite formate. Ele variază în funcție de necesitatea volumului de date.
 
-| Tip | Ce face? | Exemplu de utilizare practică |
+| Tip | Ce face? | Exemplu de Utilizare Practică |
 | :--- | :--- | :--- |
-| text | Creează un input simplu pentru o singură linie. | Nume, titluri de articole, cartiere etc. |
-| textarea | Creează un input de zonă de text mai mare, pentru mai multe linii. | Descrieri de produse, comentarii, observații. |
+| text | Creează un input simplu pentru o singură linie. | Nume, titluri de articole, cartiere, etc. |
+| textarea | Creează un input cu o zonă de text mai mare, pentru multiple linii. | Descrieri de produse, comentarii, observații. |
 | email | Creează un input de text formatat pentru a primi un e-mail. | Înregistrarea e-mailului de contact, login de utilizator. |
 | texthtml | Creează un editor de text bogat, care permite formatarea cu HTML. | Crearea de conținut pentru un blog, e-mailuri de marketing, pagini de site. |
 | textmd | Creează un editor de text care suportă limbajul de marcare Markdown. | Ideal pentru documentație tehnică, postări de blog pentru dezvoltatori. |
 
-### 3.2 Câmpuri numerice
+### 3.2 Câmpuri Numerice
 
-Utilizate pentru a colecta informații strict numerice.
+Utilizate pentru a colecta informații care sunt strict numerice.
 
-| Tip | Ce face? | Exemplu de utilizare |
+| Tip | Ce face? | Exemplu de Utilizare |
 | :--- | :--- | :--- |
-| textnum | Creează un input pentru introducerea numerelor întregi. | Cantitatea în stoc, vârsta unei persoane, numărul de locuri. |
+| textnum | Creează un input pentru introducerea numerelor întregi. | Cantitate în stoc, vârsta unei persoane, numărul de locuri. |
 | textfloat | Creează un input pentru introducerea numerelor cu zecimale. | Prețuri de produse (ex: 99.90), greutate (ex: 75.5), înălțime (ex: 1.82). |
 
-### 3.3 Câmpuri de selecție
+### 3.3 Câmpuri de Selecție
 
 Utilizate atunci când utilizatorul trebuie să aleagă între opțiuni predefinite.
 
-| Tip | Ce face? | Exemplu de utilizare practică |
+| Tip | Ce face? | Exemplu de Utilizare Practică |
 | :--- | :--- | :--- |
-| select | Creează o listă de opțiuni în care utilizatorul poate alege doar una. | Selectarea unui stat (UF), stare civilă, categorie de produs. |
-| multiselect | Creează o listă de opțiuni în care utilizatorul poate alege mai multe. | Selectarea intereselor (sport, tehnologie), ingredientele unei pizza. |
-| checkbox | Afișează o singură casetă de selectare (activare/dezactivare). | "Accept termenii de utilizare", "Ține minte parola mea". |
-| color | Afișează un selector vizual de culori. | Alegerea culorii unui produs, personalizarea culorii unui eveniment. |
+| select | Creează o listă de opțiuni din care utilizatorul poate alege doar una. | Selectarea unui județ, starea civilă, categoria unui produs. |
+| multiselect | Creează o listă de opțiuni din care utilizatorul poate alege mai multe. | Selectarea intereselor (sport, tehnologie), ingredientele unei pizza. |
+| checkbox | Afișează o singură casetă de selecție (activare/dezactivare). | „Accept termenii de utilizare", „Ține minte parola mea". |
+| color | Afișează un selector de culori vizual. | Alegerea culorii unui produs, personalizarea culorii unui eveniment. |
 
-### 3.4 Câmpuri de dată și oră
+### 3.4 Câmpuri de Dată și Oră
 
 Specializate pentru introducerea informațiilor temporale.
 
-| Tip | Ce face? | Exemplu de utilizare practică |
+| Tip | Ce face? | Exemplu de Utilizare Practică |
 | :--- | :--- | :--- |
 | date | Afișează un calendar pentru ca utilizatorul să selecteze o dată (zi, lună, an). | Data nașterii, data programării. |
 | datetime | Permite selectarea unei date și a unei ore. | Începutul unui eveniment, data și ora unei publicări. |
 | time | Permite selectarea unei ore (ore și minute). | Programul de funcționare, ora unei alarme. |
 
-### 3.5 Câmpuri de fișiere și media
+### 3.5 Câmpuri de Fișiere și Media
 
-Utilizate pentru a trimite fișiere și imagini către aplicația dvs.
+Utilizate pentru a trimite fișiere și imagini către aplicația ta.
 
-| Tip | Ce face? | Exemplu de utilizare practică |
+| Tip | Ce face? | Exemplu de Utilizare Practică |
 | :--- | :--- | :--- |
 | file | Creează un câmp pentru încărcarea oricărui fișier (PDF, DOCX, ZIP). | Atașarea unui CV, trimiterea unei dovezi de plată. |
 | image | Un câmp optimizat pentru încărcarea imaginilor (JPG, PNG, GIF). | Fotografia de profil a utilizatorului, imaginea unui produs. |
 
-### 3.6 Câmpuri tehnice și speciale
+### 3.6 Câmpuri Tehnice și Speciale
 
-Aceste câmpuri au comportamente automate sau servesc unor scopuri specifice sistemului.
+Aceste câmpuri au comportamente automate sau servesc unor scopuri specifice ale sistemului.
 
-| Tip | Ce face? | Exemplu de utilizare practică |
+| Tip | Ce face? | Exemplu de Utilizare Practică |
 | :--- | :--- | :--- |
-| hidden | Câmpul este invizibil pentru utilizator, dar păstrează o valoare. | Stochează un ID provenit de pe altă pagină, un cod de urmărire. |
+| hidden | Câmpul este invizibil pentru utilizator, dar stochează o valoare. | Stocarea unui ID provenit de pe altă pagină, un cod de urmărire. |
 | uid | Generează automat un Identificator Unic Universal. | Cheia primară a unei înregistrări, codul unic al unei comenzi. |
 | user | Asociază înregistrarea cu utilizatorul care a creat-o sau modificat-o. | Identificarea autorului unei postări de blog, vânzătorul care a înregistrat un client. |
-| lastchange | Stochează automat data și ora ultimei modificări a înregistrării. | Audit, pentru a ști când a fost modificată ultima dată o informație. |
-| group | Utilizat pentru a grupa vizual alte câmpuri în formular. | Crearea de secțiuni precum "Date personale" și "Adresă" pentru a organiza formulare lungi. |
+| lastchange | Stochează automat data și ora ultimei modificări a înregistrării. | Audit, pentru a ști când a fost modificată ultima dată o dată. |
+| group | Utilizat pentru a grupa vizual alte câmpuri în formular. | Crearea de secțiuni precum „Date Personale" și „Adresă" pentru a organiza formulare lungi. |
 
-## 4 - Configurări de comportament și aspect
+## 4 - Configurări de Comportament și Aspect
 
-Această zonă este "panoul de control" al câmpului dvs., definind regulile de business și permisiunile de acces.
+Această zonă este „panoul de control" al câmpului tău, definind regulile de business și permisiunile de acces.
 
-![configurări-comportament-aspect-câmp-pt.png](/docs/assets/academy/ui/fields/field-behavior-and-layout-settings-pt.png)
+![field-behavior-and-layout-settings-pt.png](/docs/assets/academy/ui/fields/field-behavior-and-layout-settings-pt.png)
 
-### 4.1 Reguli de integritate a datelor
+### 4.1 Reguli de Integritate a Datelor
 
 Aceste opțiuni garantează calitatea și consistența informațiilor.
 
-| Configurare | Ce face? | Exemplu de utilizare practică |
+| Configurare | Ce face? | Exemplu de Utilizare Practică |
 | :--- | :--- | :--- |
-| Valori unice (Cheie primară) | Transformă câmpul în identificatorul principal și unic, împiedicând valorile duplicate. | A se folosi pentru "CPF", garantând că nu există doi clienți cu același număr. |
-| Obligatoriu (Nenul) | Face completarea câmpului obligatorie. | A se aplica în câmpuri esențiale precum "Nume" și "E-mail". |
+| Valori Unice (Cheie Primară) | Transformă câmpul în identificatorul principal și unic, împiedicând valorile duplicate. | Utilizare pentru „CNP", garantând că nu există doi clienți cu același număr. |
+| Obligatoriu (Non-Nul) | Face completarea câmpului obligatorie. | Aplicare în câmpuri esențiale precum „Nume" și „E-mail". |
 
-### 4.2 Controlul permisiunilor și vizibilității
+### 4.2 Controlul Permisiunilor și Vizibilității
 
-Define unde și cum interacționează utilizatorii cu datele acestui câmp.
+Definește unde și cum interacționează utilizatorii cu datele acestui câmp.
 
-| Configurare | Ce face? | Exemplu de utilizare practică |
+| Configurare | Ce face? | Exemplu de Utilizare Practică |
 | :--- | :--- | :--- |
-| Afișare în rezultat | Definește dacă coloana va apărea în listarea principală de date. | Debifați pentru "Observații interne" pentru a menține listarea curată. |
-| Permite filtrarea | Adaugă o casetă de căutare pentru această coloană în listare. | Activați la "Starea comenzii" pentru a facilita localizarea. |
-| Permite vizualizarea | Controlează dacă conținutul va fi afișat în modul de vizualizare. | Lăsați bifat în majoritatea cazurilor. |
-| Permite editarea | Permite modificarea conținutului când o înregistrare este editată. | Debifați pentru câmpuri care nu trebuie modificate, precum "Data înregistrării". |
-| Permite la creare nouă | Definește dacă câmpul trebuie să apară în formularul de creare. | Debifați pentru câmpuri de "feedback", care trebuie completate doar *după* creare. |
-| Permite exportarea | Include datele acestui câmp la exportarea listării (Excel, CSV). | Debifați datele interne care nu sunt relevante pentru rapoarte externe. |
+| Afișare în Rezultat | Definește dacă coloana va apărea în listarea principală de date. | Debifare pentru „Observații Interne" pentru a menține listarea curată. |
+| Permitere Filtrare | Adaugă o casetă de căutare pentru această coloană în listare. | Activare în „Status Comandă" pentru a facilita localizarea. |
+| Permitere Vizualizare | Controlează dacă conținutul va fi afișat în modul de vizualizare. | Lăsare bifată în majoritatea cazurilor. |
+| Permitere Editare | Permite modificarea conținutului atunci când o înregistrare este editată. | Debifare pentru câmpuri care nu trebuie modificate, precum „Data Înregistrării". |
+| Permitere la Creare Nouă | Definește dacă câmpul trebuie să apară în formularul de creare. | Debifare pentru câmpurile de „feedback", care trebuie completate doar *după* creare. |
+| Permitere Exportare | Include datele acestui câmp la exportarea listării (Excel, CSV). | Debifare date interne care nu sunt relevante pentru rapoarte externe. |
 
-## 5 - Organizarea vizuală a formularului
+## 5 - Organizarea Vizuală a Formularului
 
-Define poziționarea câmpurilor în aspect.
+Definește poziționarea câmpurilor în aspect.
 
-![organizare-vizuală-formular-câmp-pt.png](/docs/assets/academy/ui/fields/field-visual-organization-form-pt.png)
+![field-visual-organization-form-pt.png](/docs/assets/academy/ui/fields/field-visual-organization-form-pt.png)
 
-| Configurare | Ce face? | Exemplu de utilizare practică |
+| Configurare | Ce face? | Exemplu de Utilizare Practică |
 | :--- | :--- | :--- |
-| Linie | Definește poziția verticală a câmpului în formular. | Puneți "Nume complet" la Linia: 1 și "Adresă" la Linia: 2. |
-| Coloană | Definește poziția orizontală, permițând mai multe câmpuri alăturate. | Pentru a avea "Oraș" și "Județ" împreună, folosiți Linia: 3, Coloana: 1 (Oraș) și Coloana: 2 (Județ). |
+| Rând | Definește poziția verticală a câmpului în formular. | Plasarea „Nume Complet" în Rând: 1 și „Adresă" în Rând: 2. |
+| Coloană | Definește poziția orizontală, permițând multiple câmpuri unul lângă altul. | Pentru a avea „Oraș" și „Județ" împreună, folosește Rând: 3, Coloană: 1 (Oraș) și Coloană: 2 (Județ). |
 
-## 6 - Vezi mai multe opțiuni
+## 6 - Vezi Mai Multe Opțiuni
 
-Pentru un control mai personalizat, faceți clic pe butonul "+ Vezi mai multe opțiuni".
+Pentru un control mai personalizat, fă clic pe butonul „+ Vezi Mai Multe Opțiuni".
 
-### 6.1 Câmp de descriere
+### 6.1 Câmp de Descriere
 
-![câmp-descriere-opțiuni-pt.png](/docs/assets/academy/ui/fields/field-view-options-description-pt.png)
+![field-view-options-description-pt.png](/docs/assets/academy/ui/fields/field-view-options-description-pt.png)
 
-| Configurare | Ce face? | Exemplu de utilizare practică |
+| Configurare | Ce face? | Exemplu de Utilizare Practică |
 | :--- | :--- | :--- |
-| Descriere | Adaugă un text de ajutor sau instrucțiune care apare sub câmp. | La "Parolă", folosiți descrierea pentru a informa regulile: "Parola trebuie să aibă cel puțin 8 caractere...". |
+| Descriere | Adaugă un text de ajutor sau instrucțiune care apare sub câmp. | La „Parolă", folosește descrierea pentru a informa regulile: „Parola trebuie să aibă minim 8 caractere...". |
 
-### 6.2 Dimensionarea câmpului
+### 6.2 Dimensionarea Câmpului
 
-![dimensionare-aspect-câmp-pt.png](/docs/assets/academy/ui/fields/field-dimensioning-layout-pt.png)
+![field-dimensioning-layout-pt.png](/docs/assets/academy/ui/fields/field-dimensioning-layout-pt.png)
 
 Control fin asupra dimensiunii câmpului.
 
-| Configurare | Ce face? | Exemplu de utilizare practică |
+| Configurare | Ce face? | Exemplu de Utilizare Practică |
 | :--- | :--- | :--- |
-| Lățime | Definește lățimea componentei (bazat pe grilă de 12 coloane). | "CPF" (Lățime: 6) și "Data nașterii" (Lățime: 6) pe aceeași linie. |
-| Înălțime | Definește înălțimea componentei în pixeli (px). | În `textarea` "Observații", definiți Înălțime "120" pentru o zonă mai mare. |
-| Lățimea celulei (px) | Definește o lățime fixă în pixeli pentru celulă. | Utilizați pentru a alinia câmpuri cu lățimi specifice, precum "UF" (Lățime: 80). |
-| Înălțimea celulei (px) | Definește o înălțime fixă în pixeli pentru celulă. | Măriți înălțimea unui câmp `image` pentru a crea o zonă de "trage și plasează". |
-| Rowspan | Permite celulei să se extindă vertical pe mai multe linii. | Un `textarea` de "Descriere" care să ocupe 3 linii de înălțime lângă câmpuri mai mici. |
-| Colspan | Permite celulei să se extindă orizontal pe mai multe coloane. | Un câmp "Adresă completă" (Colspan: 2) deasupra "Oraș" și "Județ". |
+| Lățime | Definește lățimea componentei (bazat pe grilă de 12 coloane). | „CNP" (Lățime: 6) și „Data Nașterii" (Lățime: 6) pe același rând. |
+| Înălțime | Definește înălțimea componentei în pixeli (px). | La `textarea` „Observații", definește Înălțime „120" pentru o zonă mai mare. |
+| Lățimea Celulei (px) | Definește o lățime fixă în pixeli pentru celulă. | Utilizare pentru alinierea câmpurilor cu lățimi specifice, precum „Județ" (Lățime: 80). |
+| Înălțimea Celulei (px) | Definește o înălțime fixă în pixeli pentru celulă. | Mărirea înălțimii unui câmp `image` pentru a crea o zonă de „trage și plasează". |
+| Rowspan | Permite celulei să se extindă vertical pe multiple rânduri. | Un `textarea` de „Descriere" care să ocupe 3 rânduri de înălțime alături de câmpuri mai mici. |
+| Colspan | Permite celulei să se extindă orizontal pe multiple coloane. | Un câmp „Adresă Completă" (Colspan: 2) deasupra „Oraș" și „Județ". |
 
-### 6.3 Validare și reguli de date
+### 6.3 Validare și Reguli de Date
 
-Stabiliți limite pentru valorile introduse.
+Stabilește limite pentru valorile introduse.
 
-| Configurare | Ce face? | Exemplu de utilizare practică |
+| Configurare | Ce face? | Exemplu de Utilizare Practică |
 | :--- | :--- | :--- |
-| Max | Valoarea maximă (numerică) sau numărul maxim de caractere (text). | La "Notă (0 la 10)", definiți Max ca "10". La "Pseudonim", Max "20". |
-| Min | Valoarea minimă (numerică) sau numărul minim de caractere (text). | La "Cantitate", definiți Min ca "1". La "Justificare", Min "30". |
+| Max | Valoarea maximă (numerică) sau numărul maxim de caractere (text). | La „Notă (0 la 10)", definește Max ca „10". La „Poreclă", Max „20". |
+| Min | Valoarea minimă (numerică) sau numărul minim de caractere (text). | La „Cantitate", definește Min ca „1". La „Justificare", Min „30". |
 
-### 6.4 Controlul accesului 
+### 6.4 Controlul Accesului 
 
-![control-acces-câmp-pt.png](/docs/assets/academy/ui/fields/field-access-control-pt.png)
+![field-access-control-pt.png](/docs/assets/academy/ui/fields/field-access-control-pt.png)
 
-Definiți grupuri și utilizatori care pot vizualiza și edita câmpul.
+Definește grupuri și utilizatori care pot vizualiza și edita câmpul.
 
-| Configurare | Ce face? | Exemplu de utilizare practică |
+| Configurare | Ce face? | Exemplu de Utilizare Practică |
 | :--- | :--- | :--- |
-| Vizualizare utilizator și Vizualizare grup | Restrânge *vizualizarea* câmpului doar la utilizatorii sau grupurile specificate. | "Comisionul vânzătorului" să aibă Vizualizare grup "Manageri". |
-| Editare utilizator și Editare grup | Permite doar utilizatorilor sau grupurilor specificate să *editeze* câmpul (ceilalți îl văd ca "doar citire"). | "Starea comenzii" să aibă Editare grup "Logistică". |
+| Vizualizare Utilizator și Vizualizare Grup | Restrânge *vizualizarea* câmpului doar la utilizatorii sau grupurile specificate. | „Comisionul Vânzătorului" să aibă Vizualizare Grup „Manageri". |
+| Editare Utilizator și Editare Grup | Permite doar utilizatorilor sau grupurilor specificate să *editeze* câmpul (ceilalți îl văd ca „doar citire"). | „Status Comandă" să aibă Editare Grup „Logistică". |

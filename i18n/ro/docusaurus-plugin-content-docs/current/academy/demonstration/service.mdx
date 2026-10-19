@@ -2,25 +2,25 @@
 sidebar_position: 6
 id: service
 title: Serviciu
-description: Aflați cum să creați Web Services și API-uri REST în Netuno, să integrați date între sisteme și să furnizați date dinamice pentru frontend în mod asincron.
+description: Învațați să creați servicii web și API-uri REST în Netuno, să integrați date între sisteme și să furnizați date dinamice frontendului în mod asincron.
 ---
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
 import PolyglotPath from "@site/src/components/PolyglotPath";
 
-Cu Netuno este posibil să creați **_servicii web_** și să construiți orice tip de **API-uri <a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a>** complexe pentru integrarea datelor între sisteme.
+Cu Netuno puteți crea **_servicii web_** și construi orice tip de **API-uri <a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a>** complexe pentru integrarea datelor între sisteme.
 
 :::info Ce este un serviciu web?
-Un serviciu web permite sistemelor să schimbe informații online într-un mod standardizat. În Netuno, fiecare fișier din `server/services/` devine automat un endpoint accesibil via HTTP.
+Un serviciu web permite sistemelor să facă schimb de informații online într-un mod standardizat. În Netuno, fiecare fișier din `server/services/` devine automat un endpoint accesibil prin HTTP.
 :::
 
 ## De ce să folosiți servicii web?
 
 Utilizarea serviciilor asincrone aduce beneficii clare pentru experiența utilizatorului:
 
-- **Încărcare mai rapidă:** serverul livrează structura vizuală a paginii imediat, fără a aștepta procesarea tuturor datelor.
-- **Date dinamice la cerere:** frontend-ul solicită doar datele necesare, atunci când este nevoie.
-- **Integrare între sisteme:** un serviciu creat în Netuno poate fi consumat de orice aplicație externă (mobile, alt sistem web etc.).
+- **Încărcare mai rapidă:** serverul livrează structura vizuală a paginii imediat, fără să aștepte procesarea tuturor datelor.
+- **Date dinamice la cerere:** frontendul solicită doar datele necesare, atunci când este necesar.
+- **Integrare între sisteme:** un serviciu creat în Netuno poate fi consumat de orice aplicație externă (mobilă, alt sistem web etc.).
 - **Experiență mai bună pentru utilizator:** utilizatorul nu trebuie să aștepte procesarea completă a paginii înainte de a vedea ceva pe ecran.
 
 ## Cerințe preliminare
@@ -28,32 +28,32 @@ Utilizarea serviciilor asincrone aduce beneficii clare pentru experiența utiliz
 Înainte de a începe, asigurați-vă că:
 
 - Netuno este instalat și rulează local.
-- Aplicația `demo` a fost creată conform descrierii din [Creați Aplicație](../app-create).
-- Există date înregistrate în **Sarcini** și asociate cu **Inregistrari** (necesar pentru ca răspunsul să nu fie gol).
+- Aplicația `demo` a fost creată conform descrierii din [Creați aplicația](../app-create).
+- Există date înregistrate în **Sarcini** și asociate cu **Înregistrări** (necesar pentru ca răspunsul să nu fie gol).
 
-## Configurați Editorul de Cod
+## Configurați editorul de cod
 
-Pentru a crea și edita servicii în Netuno, utilizați un editor de cod preferat. Recomandăm **[Visual Studio Code](https://code.visualstudio.com/download)** deoarece este gratuit, ușor și foarte intuitiv, dar orice editor compatibil cu JavaScript/Python/Groovy va funcționa normal.
+Pentru a crea și edita servicii în Netuno, utilizați un editor de cod preferat. Recomandăm **[Visual Studio Code](https://code.visualstudio.com/download)** deoarece este gratuit, ușor și foarte intuitiv, însă orice editor compatibil cu JavaScript/Python/Groovy va funcționa normal.
 
-## Deschideți Aplicația Demo {#abrir-a-aplicacao-demo}
+## Deschideți aplicația demo {#abrir-a-aplicacao-demo}
 
 1. Deschideți **Visual Studio Code**.
-2. Faceți clic pe pictograma **Fișiere** din panoul din stânga.
-3. Selectați **Deschide Folder** (File > Open Folder).
-4. Navigați la folderul de instalare Netuno.
+2. Faceți clic pe pictograma **Fișiere** din panoul lateral stâng.
+3. Selectați **Deschideți folderul** (File > Open Folder).
+4. Navigați până la folderul de instalare Netuno.
 5. Selectați directorul: **`apps/demo`**
-6. Faceți clic pe **Deschide**.
+6. Faceți clic pe **Deschideți**.
 
 Structura de foldere a aplicației `demo` va fi încărcată în panoul din stânga.
 
-## Creați Serviciul
+## Creați serviciul
 
 Serviciile sunt procesate pe partea de **server**. Pentru a crea un serviciu nou:
 
-1. În panoul de fișiere, extindeți structura până găsiți folderul `server/services/`.
+1. În panoul de fișiere, extindeți structura până când găsiți folderul `server/services/`.
 2. Faceți clic dreapta pe folderul `services`.
-3. Selectați **Fișier Nou** `New File`.
-4. Denumiți fișierul în funcție de limbajul dorit:
+3. Selectați **Fișier nou** `New File`.
+4. Denumiți fișierul în funcție de limbajul pe care doriți să îl utilizați:
 
 <PolyglotPath files={[
     'server/services/lucratori'
@@ -67,7 +67,7 @@ Serviciile sunt procesate pe partea de **server**. Pentru a crea un serviciu nou
             lang: 'javascript',
             code: `
                 /**
-                *** Transformă datele interogării în output JSON.
+                *** Transformă datele interogării în ieșire JSON.
                 */
                 const dbInregistrari = _db.query(\`
                     SELECT DISTINCT
@@ -96,7 +96,7 @@ Serviciile sunt procesate pe partea de **server**. Pentru a crea un serviciu nou
             lang: 'python',
             code: `
                 #
-                # Transformă datele interogării în output JSON.
+                # Transformă datele interogării în ieșire JSON.
                 #
                 dbInregistrari = _db.query(
                     """SELECT DISTINCT
@@ -124,7 +124,7 @@ Serviciile sunt procesate pe partea de **server**. Pentru a crea un serviciu nou
             lang: 'ruby',
             code: `
                 #
-                # Transformă datele interogării în output JSON.
+                # Transformă datele interogării în ieșire JSON.
                 #
                 dbInregistrari = _db.query(%{
                     SELECT DISTINCT
@@ -153,7 +153,7 @@ Serviciile sunt procesate pe partea de **server**. Pentru a crea un serviciu nou
             lang: 'kotlin',
             code: `
                 /**
-                *** Transformă datele interogării în output JSON.
+                *** Transformă datele interogării în ieșire JSON.
                 */
                 val dbInregistrari = _db.query(
                     """SELECT DISTINCT
@@ -182,7 +182,7 @@ Serviciile sunt procesate pe partea de **server**. Pentru a crea un serviciu nou
             lang: 'groovy',
             code: `
                 /**
-                *** Transformă datele interogării în output JSON.
+                *** Transformă datele interogării în ieșire JSON.
                 */
                 def dbInregistrari = _db.query("""\\
                     SELECT DISTINCT
@@ -212,25 +212,25 @@ Serviciile sunt procesate pe partea de **server**. Pentru a crea un serviciu nou
 
 Implementați serviciul adăugând codul de mai jos în fișierul creat. Acest serviciu interoghează baza de date și returnează o listă de lucrători cu totalul orelor înregistrate, în format **JSON**.
 
-### Înțelegerea Codului
+### Înțelegerea codului
 
 | Obiect/Metodă | Descriere |
 |---|---|
-| `_db.query()` | Execută o interogare SQL și returnează o listă de obiecte în format cheie-valoare (coloană → dată). |
-| `_val.list()` | Creează o listă mutabilă pentru a acumula rezultatele. |
+| `_db.query()` | Execută o interogare SQL și returnează o listă de obiecte în format cheie-valoare (coloană → valoare). |
+| `_val.list()` | Creează o listă mutabilă pentru acumularea rezultatelor. |
 | `_val.map()` | Creează un obiect de mapare (cheie-valoare) pentru fiecare rând de rezultat. |
 | `_out.json()` | Serializează obiectul în JSON și trimite răspunsul la cererile HTTP. |
 
 :::warning Date necesare
-Asigurați-vă că există date înregistrate în **Sarcini** și asociate cu **Inregistrari**. În caz contrar, endpoint-ul va returna o listă goală `[]`.
+Asigurați-vă că există date înregistrate în **Sarcini** și asociate cu **Înregistrări**. În caz contrar, endpointul va returna o listă goală `[]`.
 :::
 
-## Executați și Testați Serviciul
+## Rulați și testați serviciul
 
-Cu Netuno în execuție, accesați endpoint-ul în browser:
+Cu Netuno în execuție, accesați endpointul în browser:
 
 :::tip Sfat pentru vizualizarea JSON
-Recomandăm **[Firefox](https://www.mozilla.org/)** pentru a testa endpoint-uri direct în browser, deoarece formatează și afișează răspunsul JSON într-un mod lizibil cu evidențierea sintaxei. Alternativ, folosiți extensii precum **JSON Viewer** în Chrome sau instrumente precum **[Postman](https://www.postman.com/)** pentru teste mai avansate.
+Recomandăm **[Firefox](https://www.mozilla.org/)** pentru testarea endpointurilor direct în browser, deoarece formatează și afișează răspunsul JSON într-un mod lizibil, cu evidențierea sintaxei. Alternativ, utilizați extensii precum **JSON Viewer** în Chrome sau instrumente precum **[Postman](https://www.postman.com/)** pentru teste mai avansate.
 :::
 
 Răspunsul așteptat va fi un JSON similar cu:
@@ -238,17 +238,17 @@ Răspunsul așteptat va fi un JSON similar cu:
 ```json
 [
   { "nume": "Ana Popescu", "total": 12 },
-  { "nume": "Carol Ionescu", "total": 28 },
-  { "nume": "Ion Popescu", "total": 45 }
+  { "nume": "Mihai Ionescu", "total": 28 },
+  { "nume": "Ion Dumitrescu", "total": 45 }
 ]
 ```
 
-## Pași următori
+## Pașii următori
 
-Acum că serviciul dvs. funcționează, puteți:
+Acum că serviciul dumneavoastră funcționează, puteți:
 
-- 📄 **[Interfață & Design](./ui)** — integrați acest serviciu în frontend-ul aplicației.
-- 📚 **[Biblioteca de Servicii](../../library/overview)** — explorați obiectele `_db`, `_val`, `_out` și altele disponibile în Netuno.
-- 🔗 Adăugați **autentificare** și **control de acces** la serviciul dvs.
+- 📄 **[Interfață și design](./ui)** — integrați acest serviciu în frontendul aplicației.
+- 📚 **[Biblioteca de servicii](../../library/overview)** — explorați obiectele `_db`, `_val`, `_out` și altele disponibile în Netuno.
+- 🔗 Adăugați **autentificare** și **control de acces** la serviciul dumneavoastră.
 
 ___

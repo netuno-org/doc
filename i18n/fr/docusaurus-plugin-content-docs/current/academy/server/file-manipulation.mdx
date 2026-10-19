@@ -1,7 +1,7 @@
 ---
 id: files-manipulation
-title: Manipulation de fichiers et dossiers
-sidebar_label: Manipulation de fichiers et dossiers
+title: Manipulation de Fichiers et Dossiers
+sidebar_label: Manipulation de Fichiers et Dossiers
 ---
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
@@ -10,36 +10,40 @@ import PolyglotCode from "@site/src/components/PolyglotCode";
 
 Dans le code backend polyglotte de la plateforme Netuno, nous pouvons manipuler n'importe quel fichier ou dossier.
 
-La manipulation consiste à pouvoir créer, renommer et supprimer des fichiers et dossiers, modifier le contenu de fichiers et lister le contenu de dossiers. De manière générale, ce sont les opérations que nous devons habituellement effectuer par programmation.
+La manipulation consiste à pouvoir créer, renommer et supprimer des fichiers et des dossiers, modifier le contenu de fichiers
+et lister le contenu de dossiers. En général, ce sont les opérations que nous devons habituellement effectuer par programmation.
 
-Dans la plateforme Netuno, il existe des ressources de programmation low-code qui permettent de manipuler les dossiers et les fichiers internes de l'application, mais aussi n'importe quels fichiers et dossiers du système en général, c'est-à-dire en dehors de l'application.
+Sur la plateforme Netuno, il existe des fonctionnalités de programmation low-code qui permettent de manipuler les dossiers et les fichiers
+internes de l'application, mais aussi n'importe quels fichiers et dossiers du système en général, c'est-à-dire en dehors de l'application.
 
 C'est utile lorsque nous devons automatiser un processus qui doit modifier un fichier quelconque, voyons comment.
 
-Les ressources de programmation polyglotte low-code qui permettent de manipuler des fichiers sont :
+Les fonctionnalités de programmation polyglotte low-code qui permettent de manipuler des fichiers sont :
 
 - `_app` - [Application](/docs/library/resources/app)
 - `_storage` - [Stockage](/docs/library/resources/storage)
 - `_os` - [Système d'exploitation](/docs/library/resources/os)
 
-À travers ces ressources, nous avons les méthodes pour :
+Grâce à ces fonctionnalités, nous disposons des méthodes pour :
 
 - `.file` - Fichier existant.
 - `.folder` - Dossier existant.
-- `.path` - Chemin générique, pouvant être un fichier ou un dossier, existant ou non.
+- `.path` - Chemin générique, pouvant être un fichier ou un dossier, qui existe ou qui n'existe pas.
 
-Avec ces méthodes, nous obtenons un objet de type [File](/docs/library/objects/File), qui fournit tous les moyens pour manipuler des fichiers, dossiers et chemins en général, ce qui permet d'effectuer des opérations telles que :
+Avec ces méthodes, nous obtenons un objet de type [File](/docs/library/objects/File), qui fournit tous les moyens pour
+manipuler des fichiers, des dossiers et des chemins en général, ce qui permet d'effectuer des opérations telles que :
 
-- Créer des fichiers et dossiers.
-- Supprimer des fichiers et dossiers.
+- Créer des fichiers et des dossiers.
+- Supprimer des fichiers et des dossiers.
 - Lister le contenu des dossiers.
-- Renommer des fichiers et dossiers.
+- Renommer des fichiers et des dossiers.
 - Lire et écrire des données dans des fichiers.
 - Supprimer des dossiers et leurs sous-dossiers et fichiers respectifs de manière récursive.
 
 ## Application
 
-Pour effectuer les principales opérations de manipulation de fichiers et dossiers dans la structure de l'application, nous utilisons la ressource `_app` :
+Pour effectuer les principales opérations de manipulation de fichiers et de dossiers dans la structure de l'application,
+nous utilisons la fonctionnalité `_app` :
 
 #### Dossiers dans l'Application
 
@@ -88,7 +92,8 @@ Obtient un chemin de fichier ou de dossier, qu'il existe ou non, par exemple :
 
 ## Stockage
 
-Pour effectuer les principales opérations de manipulation de fichiers et dossiers dans le dossier `📁 storage` de l'application, nous utilisons la ressource `_storage` :
+Pour effectuer les principales opérations de manipulation de fichiers et de dossiers dans le dossier `📁 storage` de l'application,
+nous utilisons la fonctionnalité `_storage` :
 
 #### Dossiers dans le Stockage
 
@@ -151,7 +156,8 @@ Obtient un chemin de fichier ou de dossier, qu'il existe ou non, par exemple :
 
 ## Système d'exploitation
 
-Pour effectuer les principales opérations de manipulation de fichiers et dossiers n'importe où dans le système d'exploitation, nous utilisons la ressource `_os` :
+Pour effectuer les principales opérations de manipulation de fichiers et de dossiers n'importe où dans le système d'exploitation,
+nous utilisons la fonctionnalité `_os` :
 
 #### Dossiers dans le Système d'exploitation
 
@@ -202,49 +208,52 @@ Obtient un chemin de fichier ou de dossier, qu'il existe ou non, par exemple :
 
 La méthode `mkdir` crée un dossier.
 
-Dans l'exemple suivant, crée le dossier spécifique à la racine de l'application :
+Dans l'exemple suivant, elle crée le dossier spécifique à la racine de l'application :
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const dossier = _app.path("temp")
+                const dossier = _app.path("temporaire")
                 dossier.mkdir()
             `
         },
     ]}
 />
 
-Pour créer un sous-dossier dans le dossier existant, indiquez le chemin complet en séparant la hiérarchie des dossiers avec `/` :
+Pour créer un sous-dossier dans le dossier existant, indiquez le chemin complet en séparant la hiérarchie de
+dossiers par `/` :
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const sousDossier = _app.path("temp/autre")
+                const sousDossier = _app.path("temporaire/autre")
                 sousDossier.mkdir()
             `
         },
     ]}
 />
 
-Le `mkdirs`, quant à lui, crée les dossiers précédents et/ou les sous-dossiers s'ils n'existent pas, il permet donc de créer une structure de dossiers dans l'application, par exemple :
+Tandis que `mkdirs` crée les dossiers précédents et/ou les sous-dossiers s'ils n'existent pas, il permet donc de créer une structure
+de dossiers dans l'application, par exemple :
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const cheminDossiers = _app.path("temp/a/b/c")
+                const cheminDossiers = _app.path("temporaire/a/b/c")
                 cheminDossiers.mkdirs()
             `
         },
     ]}
 />
 
-La ressource `_storage` possède la méthode [ensurePath](/docs/library/resources/storage#ensurepath) qui vérifie si le chemin existe, et le crée s'il n'existe pas :
+La fonctionnalité `_storage` dispose de la méthode [ensurePath](/docs/library/resources/storage#ensurepath) qui vérifie si le
+chemin existe, et le crée s'il n'existe pas :
 
 <PolyglotCode
     codes={[
@@ -253,7 +262,7 @@ La ressource `_storage` possède la méthode [ensurePath](/docs/library/resource
             code: `
                 const fichier = _storage.filesystem(
                     "public",
-                    "temp/sous-dossier",
+                    "temporaire/sous-dossier",
                     "fichier.txt"
                 )
                 // Crée la structure de dossiers si elle n'existe pas :
@@ -263,11 +272,12 @@ La ressource `_storage` possède la méthode [ensurePath](/docs/library/resource
     ]}
 />
 
-Donc `ensurePath` garantit que la structure de dossiers existe.
+Par conséquent, `ensurePath` garantit que la structure de dossiers existe.
 
 ## Supprimer des Fichiers et Dossiers
 
-Avec la méthode `delete`, nous pouvons supprimer aussi bien des dossiers que des fichiers, étant entendu que les dossiers doivent être vides, voyez l'exemple :
+Avec la méthode `delete`, nous pouvons supprimer aussi bien des dossiers que des fichiers, étant précisé que les dossiers doivent être vides,
+voyez l'exemple :
 
 <PolyglotCode
     codes={[
@@ -282,7 +292,7 @@ Avec la méthode `delete`, nous pouvons supprimer aussi bien des dossiers que de
                 const fichier = _app.file("dossier/fichier.txt")
                 fichier.delete()
 
-                // Supprime un chemin, un dossier vide ou un fichier :
+                // Supprime un chemin, dossier vide ou fichier :
                 const chemin = _app.path("dossier1/fichier-ou-dossier-vide")
                 chemin.delete()
             `
@@ -297,7 +307,7 @@ Avec `deleteAll`, il est possible de tout supprimer, c'est-à-dire tous les fich
         {
             lang: 'javascript',
             code: `
-                // Supprime le dossier et tout son contenu de manière récursive :
+                // Supprime le dossier et tout le contenu récursivement :
                 const dossierVide = _app.folder("dossier/exemple")
                 dossierVide.deleteAll()
 
@@ -310,7 +320,8 @@ Avec `deleteAll`, il est possible de tout supprimer, c'est-à-dire tous les fich
     ]}
 />
 
-Pour supprimer uniquement les fichiers dans le dossier sans rien supprimer dans les sous-dossiers, nous avons `deleteFiles`, qui permet de recevoir une extension si vous souhaitez supprimer uniquement les fichiers ayant une extension spécifique :
+Pour supprimer uniquement les fichiers à l'intérieur du dossier sans rien supprimer dans les sous-dossiers, nous avons `deleteFiles`, qui permet
+de recevoir une extension si vous souhaitez supprimer uniquement les fichiers ayant une extension spécifique :
 
 <PolyglotCode
     codes={[
@@ -329,7 +340,9 @@ Pour supprimer uniquement les fichiers dans le dossier sans rien supprimer dans 
     ]}
 />
 
-Pour supprimer uniquement les fichiers de manière récursive et conserver la structure des dossiers, nous avons `deleteAllFiles`, qui permet également de recevoir une extension si vous souhaitez supprimer uniquement un type de fichier spécifique, voyez ces deux exemples :
+Pour supprimer uniquement les fichiers de manière récursive et conserver la structure de dossiers, nous avons `deleteAllFiles`, qui
+permet également de recevoir une extension si vous souhaitez supprimer uniquement un type de fichier spécifique, voyez ces deux
+exemples :
 
 <PolyglotCode
     codes={[
@@ -350,28 +363,28 @@ Pour supprimer uniquement les fichiers de manière récursive et conserver la st
 
 ## Renommer ou Déplacer
 
-Pour déplacer un dossier, cela revient à le renommer :
+Pour déplacer un dossier, c'est la même chose que de le renommer :
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const dossier = _app.folder("temp")
+                const dossier = _app.folder("temporaire")
                 dossier.renameTo("test")
             `
         },
     ]}
 />
 
-Pour renommer un dossier et le changer de niveau dans la hiérarchie des dossiers, cela revient à déplacer le dossier :
+Pour renommer un dossier et le changer de niveau dans la hiérarchie de dossiers, c'est la même chose que de déplacer le dossier :
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const dossier = _app.folder("temp/a/b")
+                const dossier = _app.folder("temporaire/a/b")
                 dossier.renameTo("test/z")
             `
         },
@@ -386,7 +399,7 @@ Et pour déplacer un sous-dossier sans changer son nom, il suffit d'indiquer le 
             lang: 'javascript',
             code: `
                 const dossier = _app.folder("test/autre")
-                dossier.renameTo("nouvelle")
+                dossier.renameTo("autre")
             `
         },
     ]}
@@ -394,9 +407,11 @@ Et pour déplacer un sous-dossier sans changer son nom, il suffit d'indiquer le 
 
 ## Enregistrer des Contenus dans des Fichiers
 
-La génération de contenus dans des fichiers se fait via la méthode `output`, qui fournit un objet de type [OutputStream](/docs/library/objects/OutputStream).
+La génération de contenus dans des fichiers se fait via la méthode `output` qui fournit un objet de type
+[OutputStream](/docs/library/objects/OutputStream).
 
-Pour écrire les données dans l'`output`, nous utilisons la méthode [printAndClose](/docs/library/objects/OutputStream#printandclose), qui imprime le contenu dans le fichier et ferme le fichier en enregistrant le contenu.
+Pour écrire les données dans `output`, nous utilisons la méthode [printAndClose](/docs/library/objects/OutputStream#printandclose),
+qui imprime le contenu dans le fichier et ferme le fichier en enregistrant le contenu.
 
 #### Écrire un Fichier Texte
 
@@ -407,15 +422,16 @@ Voyez l'exemple de création d'un fichier avec un contenu texte :
         {
             lang: 'javascript',
             code: `
-                _app.path("temp").mkdir()
-                const ecriture = _app.path("temp/fichier.txt").output()
+                _app.path("temporaire").mkdir()
+                const ecriture = _app.path("temporaire/fichier.txt").output()
                 ecriture.printAndClose("Mon texte ici...")
             `
         },
     ]}
 />
 
-> Chaque fois que nous utilisons `output`, un nouveau fichier est généré, donc si vous exécutez à nouveau le code, le fichier sera recréé.
+> Chaque fois que nous utilisons `output`, un nouveau fichier est généré, donc si vous exécutez à nouveau le code, le fichier
+> sera recréé.
 
 #### Écrire un fichier JSON
 
@@ -426,11 +442,11 @@ Voyez comment nous pouvons enregistrer des données JSON dans des fichiers :
         {
             lang: 'javascript',
             code: `
-                _app.path("temp").mkdir()
-                const ecriture = _app.path("temp/client.json").output()
+                _app.path("temporaire").mkdir()
+                const ecriture = _app.path("temporaire/client.json").output()
                 ecriture.printAndClose(
                     _val.map()
-                        .set("nom", "Marie Jeanne")
+                        .set("nom", "Marie Jacqueline")
                         .set(
                             "enregistrements",
                             _val.list()
@@ -443,15 +459,18 @@ Voyez comment nous pouvons enregistrer des données JSON dans des fichiers :
     ]}
 />
 
-Pour générer le JSON indenté, c'est-à-dire formaté sur plusieurs lignes et tabulé, nous pouvons passer le nombre d'espaces qui sera utilisé pour la tabulation, par exemple `.toJSON(4)`.
+Pour générer le JSON indenté, c'est-à-dire formaté sur plusieurs lignes et tabulé, nous pouvons passer le nombre d'espaces
+qui sera utilisé pour la tabulation, par exemple `.toJSON(4)`.
 
 > Plus de détails sur la méthode [toJSON dans Values](/docs/library/objects/Values#tojsonindentfactor-int--string).
 
 ## Lire des Contenus dans des Fichiers
 
-L'obtention de contenus dans des fichiers se fait via la méthode `input`, qui fournit un objet de type [InputStream](/docs/library/objects/InputStream).
+L'obtention de contenus dans des fichiers se fait via la méthode `input` qui fournit un objet de type
+[InputStream](/docs/library/objects/InputStream).
 
-Pour lire les données dans l'`input`, nous utilisons la méthode [readAllAndClose](/docs/library/objects/InputStream#readallandclose), qui traite la lecture du contenu dans le fichier et ferme le fichier.
+Pour lire les données dans `input`, nous utilisons la méthode [readAllAndClose](/docs/library/objects/InputStream#readallandclose),
+qui effectue la lecture du contenu dans le fichier et ferme le fichier.
 
 #### Lire un Fichier Texte
 
@@ -462,7 +481,7 @@ Voyez l'exemple de lecture d'un fichier et d'obtention du contenu texte :
         {
             lang: 'javascript',
             code: `
-                const fichier = _app.file("temp/fichier.txt")
+                const fichier = _app.file("temporaire/fichier.txt")
                 const lecture = fichier.input()
                 _log.info(lecture.readAllAndClose())
             `
@@ -479,7 +498,7 @@ Voyez comment nous pouvons traiter des données JSON obtenues dans des fichiers 
         {
             lang: 'javascript',
             code: `
-                const fichier = _app.file("temp/fichier.txt")
+                const fichier = _app.file("temporaire/fichier.txt")
                 const lecture = fichier.input()
                 const donnees = _val.fromJSON(lecture.readAllAndClose())
                 _log.info("Données du fichier :", donnees)
@@ -492,20 +511,22 @@ Voyez comment nous pouvons traiter des données JSON obtenues dans des fichiers 
 
 ## Particularités du Stockage
 
-La ressource storage possède quelques méthodes à utiliser directement.
+La ressource stockage dispose de quelques méthodes pour une utilisation directe.
 
-Par exemple, nous pouvons y accéder via le stockage :
+Par exemple, nous pouvons accéder via le stockage :
 
-- [Storage Output](/docs/library/resources/storage#output)
-- [Storage Input](/docs/library/resources/storage#input)
+- [Sortie de stockage](/docs/library/resources/storage#output)
+- [Entrée de stockage](/docs/library/resources/storage#input)
 
-Cela signifie que nous n'avons pas besoin d'obtenir le `file` ou le `path` pour travailler avec l'`input` ou l'`output`.
+Cela signifie que nous n'avons pas besoin d'obtenir le `file` ou `path` pour travailler avec `input` ou `output`.
 
 #### Écrire un Fichier Texte dans le Stockage
 
-Lors de l'initialisation d'un stockage pour un fichier, nous pouvons effectuer l'écriture en utilisant la méthode [output](/docs/library/resources/storage#output), qui obtient une instance de l'objet [OutputStream](/docs/library/objects/OutputStream) permettant de traiter et de lire les données.
+En initialisant un stockage pour un fichier, nous pouvons effectuer l'écriture en utilisant la méthode [output](/docs/library/resources/storage#output), qui obtient
+une instance de l'objet [OutputStream](/docs/library/objects/OutputStream) permettant de traiter et de lire les données.
 
-Ainsi, avec l'`OutputStream`, la méthode [printAndClose](/docs/library/objects/OutputStream#printandclose) effectue l'écriture de texte (`string`) dans le fichier et le ferme.
+Ainsi, avec `OutputStream`, la méthode [printAndClose](/docs/library/objects/OutputStream#printandclose)
+écrit du texte (`string`) dans le fichier et le ferme.
 
 Voyez cet exemple :
 
@@ -514,9 +535,9 @@ Voyez cet exemple :
         {
             lang: 'javascript',
             code: `
-                const txt = _storage.filesystem("server", "temp", "fichier.txt")
-                txt.ensurePath()
-                txt.output().printAndClose("Mon texte ici...")
+                const texte = _storage.filesystem("server", "temporaire", "fichier.txt")
+                texte.ensurePath()
+                texte.output().printAndClose("Mon texte ici...")
             `
         },
     ]}
@@ -524,9 +545,11 @@ Voyez cet exemple :
 
 #### Lire un Fichier Texte dans le Stockage
 
-Lors de l'initialisation d'un stockage pour un fichier, nous pouvons effectuer la lecture en utilisant la méthode [input](/docs/library/resources/storage#input), qui obtient une instance de l'objet [InputStream](/docs/library/objects/InputStream) permettant de traiter et de lire les données.
+En initialisant un stockage pour un fichier, nous pouvons effectuer la lecture en utilisant la méthode [input](/docs/library/resources/storage#input), qui obtient
+une instance de l'objet [InputStream](/docs/library/objects/InputStream) permettant de traiter et de lire les données.
 
-Ainsi, avec l'`InputStream`, la méthode [readAllAndClose](/docs/library/objects/InputStream#readallandclose) lit tout le fichier et le ferme, en retournant les données sous forme de texte (`string`).
+Ainsi, avec `InputStream`, la méthode [readAllAndClose](/docs/library/objects/InputStream#readallandclose)
+effectue la lecture de tout le fichier et le ferme, en retournant les données sous forme de texte (`string`).
 
 Voyez cet exemple :
 
@@ -535,8 +558,8 @@ Voyez cet exemple :
         {
             lang: 'javascript',
             code: `
-                const txt = _storage.filesystem("server", "temp", "fichier.txt")
-                _log.info(txt.input().readAllAndClose())
+                const texte = _storage.filesystem("server", "temporaire", "fichier.txt")
+                _log.info(texte.input().readAllAndClose())
             `
         },
     ]}
@@ -546,18 +569,19 @@ Voyez cet exemple :
 
 La ressource `_storage` permet de générer des noms de fichiers aléatoires, avec la méthode [newRandomFile](/docs/library/resources/storage#newrandomfile).
 
-Vous devez initialiser un stockage pour le chemin d'un dossier, et lors de l'exécution de la méthode `newRandomFile`, vous passez l'extension du fichier souhaité.
+Il faut initialiser un stockage pour le chemin d'un dossier, et lors de l'exécution de la méthode `newRandomFile`, l'extension du
+fichier souhaité est passée.
 
 La méthode retourne une nouvelle instance du stockage pour le fichier aléatoire généré automatiquement, à utiliser dans le dossier initial.
 
-Voyez comment générer un fichier avec l'extension `TXT` et un nom aléatoire :
+Voyez comment générer un fichier avec l'extension `TXT` avec un nom aléatoire :
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const dossier = _storage.filesystem("server", "temp")
+                const dossier = _storage.filesystem("server", "temporaire")
                 const fichier = dossier.newRandomFile("txt")
                 fichier.output().printAndClose("Mon texte ici...")
             `
@@ -567,14 +591,16 @@ Voyez comment générer un fichier avec l'extension `TXT` et un nom aléatoire :
 
 ## Conclusion
 
-Avec le framework low-code polyglotte de Netuno, nous pouvons effectuer toutes les principales opérations sur les dossiers et fichiers directement.
+Avec le framework low-code polyglotte de Netuno, nous pouvons réaliser directement toutes les principales opérations sur les dossiers et les fichiers.
 
-En utilisant les ressources spécifiques pour manipuler des fichiers et dossiers dans :
+En utilisant les ressources spécifiques pour manipuler des fichiers et des dossiers dans :
 
 - `_app` - Application
 - `_storage` - Stockage de l'Application
 - `_os` - Système d'exploitation
 
-> Pour des questions de bonnes pratiques et d'organisation, nous devons privilégier l'utilisation du **stockage** ; les exceptions ne doivent être que des cas ponctuels et strictement nécessaires.
+> Pour des raisons de bonnes pratiques et d'organisation, nous devons prioriser l'utilisation du **stockage** ; les exceptions ne doivent être
+> que des cas ponctuels et strictement nécessaires.
 
-Netuno gère la fermeture automatique des inputs et outputs à la fin du traitement des services, mais par bonnes pratiques, nous devons toujours essayer de les fermer.
+Netuno gère la fermeture automatique des inputs et outputs à la fin du traitement des services, mais par bonnes
+pratiques, nous devons toujours essayer de les fermer.

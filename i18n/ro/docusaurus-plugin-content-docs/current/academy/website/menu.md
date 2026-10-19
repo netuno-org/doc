@@ -1,7 +1,7 @@
 ---
 id: menu
-title: Menu și Navigare
-sidebar_label: Menu și Navigare
+title: Meniu și Navigare
+sidebar_label: Meniu și Navigare
 ---
 
 > Aflați mai multe despre [Ant.Design](https://ant.design/).

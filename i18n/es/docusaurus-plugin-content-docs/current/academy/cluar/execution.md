@@ -15,9 +15,9 @@ En el directorio raíz de Netuno, ejecuta:
 ./netuno server app=cluar
 ```
 
-Esto arranca el back-end y el front-end simultáneamente.
+Esto inicia el back-end y el front-end al mismo tiempo.
 
-> La primera ejecución puede tardar más tiempo, debido a la instalación de las dependencias del front-end.
+> La primera ejecución puede tardar más tiempo debido a la instalación de las dependencias del front-end.
 
 Por defecto:
 
@@ -35,9 +35,9 @@ bun run dev
 
 Por defecto, el sitio web está disponible en [http://localhost:3000/](http://localhost:3000/)
 
-> Es posible hacer que el sitio web se inicie automáticamente junto con el servidor Netuno, activando el comando correspondiente en `config/_development.json` — ver [Configuración](/docs/academy/cluar/configuration#7-arranque-automático-do-website-opcional).
+> Es posible hacer que el sitio web se inicie automáticamente junto con el servidor Netuno, activando el comando correspondiente en `config/_development.json` — ver [Configuración](/docs/academy/cluar/configuration#7-inicio-automático-del-sitio-web-opcional).
 
-## Solución de problemas
+## Resolución de problemas
 
 ### Error de versión de GLIBC al ejecutar `bun run dev`
 
@@ -50,7 +50,7 @@ Error: Cannot find module @rollup/rollup-linux-x64-gnu. npm has a bug related to
 code: 'ERR_DLOPEN_FAILED'
 ```
 
-No se trata del bug de dependencias opcionales de npm mencionado en el mensaje, sino de una **incompatibilidad de versión de GLIBC**: el binario nativo de Rollup se compiló exigiendo `GLIBC_2.32` o más reciente, y las distribuciones Linux más antiguas (por ejemplo, Ubuntu 20.04, que trae glibc 2.31) no lo tienen disponible.
+No se trata del bug de dependencias opcionales de npm mencionado en el mensaje, sino de una **incompatibilidad de versión de GLIBC**: el binario nativo de Rollup se compiló exigiendo `GLIBC_2.32` o posterior, y las distribuciones de Linux más antiguas (por ejemplo, Ubuntu 20.04, que trae glibc 2.31) no lo tienen disponible.
 
 Para resolverlo, fuerza a Rollup a usar la versión WASM en lugar de la nativa, añadiendo un campo `overrides` en la raíz del `package.json` del sitio web:
 

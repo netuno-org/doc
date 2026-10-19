@@ -3,6 +3,7 @@
   "position": 3,
   "link": {
     "type": "generated-index",
+    "slug": "/category/app-structure",
     "description": "Les dossiers et fichiers de l'application en détail."
   }
 }

@@ -1,30 +1,32 @@
 ---
 id: centralized-terminal
-title: Terminal centralizat
-sidebar_label: Terminal centralizat
+title: Terminal Centralizat
+sidebar_label: Terminal Centralizat
 ---
 
-Netuno permite unificarea ieșirii de date (loguri) de la mai multe comenzi și procese într-o singură fereastră de terminal — aceeași în care rulează serverul principal.
+Netuno permite unificarea ieșirii de date (logs) a mai multor comenzi și procese într-o singură fereastră de terminal — aceeași în care rulează serverul principal.
 
-În fluxurile moderne de dezvoltare, unde este obișnuit să gestionezi mai multe tehnologii simultan, Netuno acționează ca un orchestrator de loguri, putând conține diverse comenzi configurate să pornească automat în paralel, cum ar fi procese front-end ReactJS, Angular, Vue și orice altceva.
+În fluxurile moderne de dezvoltare, unde este obișnuit să se lucreze cu diverse tehnologii simultan, Netuno acționează ca un orchestrator de logs, putând conține diverse comenzi configurate să fie pornite automat în paralel, cum ar fi procese front-end ReactJS, Angular, Vue și oricare altul.
 
-> Orice proces poate fi pornit, trebuie doar să definești comanda sa; de exemplu, poate fi integrat chiar și un alt server al unei API REST auxiliare dezvoltate în orice altă tehnologie.
+> Orice proces poate fi pornit, este suficient să definiți comanda acestuia; de exemplu, poate fi integrat chiar și un alt server al unei API REST auxiliare dezvoltate în orice altă tehnologie.
+
 
 ## Configurare
 
-Pentru a integra procese externe, trebuie să editezi fișierul de configurare a mediului aplicației tale. În acest ghid, vom folosi mediul de dezvoltare ca exemplu.
+Pentru a integra procese externe, trebuie să editați fișierul de configurare al mediului aplicației dvs. În acest ghid, vom folosi mediul de dezvoltare ca exemplu.
 
-### Localizarea fișierului
+### Locația fișierului
 
-Navighează până la folderul aplicației tale și localizează fișierul:
+Navigați până la folderul aplicației dvs. și localizați fișierul:
 
 - 📂 `config/_development.json`
 
 ### Structura configurației
 
-Configurarea se face prin cheia "commands", care constă într-un array de obiecte. Aceasta îți permite să execuți mai multe servicii în paralel.
 
-Deschide fișierul și verifică dacă cheia `"commands"` există deja. În caz contrar, inserează la finalul fișierului (respectând formatul JSON) urmând configurația de mai jos:
+Configurarea se face prin cheia `"commands"`, care constă într-un array de obiecte. Aceasta vă permite să executați mai multe servicii în paralel.
+
+Deschideți fișierul și verificați dacă cheia `"commands"` există deja. În caz contrar, inserați la finalul fișierului (respectând formatul JSON) configurația de mai jos:
 
 ```json
 {
@@ -37,7 +39,7 @@ Deschide fișierul și verifică dacă cheia `"commands"` există deja. În caz 
         },
         {
             "env": [ "PORT=21030", "WDS_SOCKET_PORT=21030" ],
-            "path": "website",
+            "path": "site",
             "install": "bun install",
             "command": "bun run dev",
             "enabled": true
@@ -47,31 +49,31 @@ Deschide fișierul și verifică dacă cheia `"commands"` există deja. În caz 
 }
 ```
 
-> **Notă:** În exemplul de mai sus, am configurat o comandă pentru folderul "ui" și alta pentru folderul "website", ambele folosind managerul bun.
+> **Notă:** În exemplul de mai sus, am configurat o comandă pentru folderul `ui` și alta pentru folderul `site`, ambele folosind managerul bun.
 
-### Referință pentru parametri
+### Referință parametri
 
-**Interfața de utilizare (UI):** Execută `bun run watch` în directorul `ui` al aplicației tale.
+**Interfață utilizator (UI):** Execută `bun run watch` în folderul `ui` al aplicației dvs.
 
-**Website:** Execută `bun run dev` în folderul `website`.
+**Site web:** Execută `bun run dev` în folderul `site`.
 
 ### env
 
-Definește variabilele de mediu de care procesul are nevoie pentru a rula. Poți defini mai multe variabile simultan.
+Definește variabilele de mediu de care procesul are nevoie pentru a rula. Puteți defini mai multe variabile simultan.
 
 ### path
 
-Definește calea folderelor în care va fi executată comanda, relativă la rădăcina aplicației.
+Definește calea folderului în care va fi executată comanda, relativ la rădăcina aplicației.
 
 ### install
 
-Netuno are o inteligență integrată pentru gestionarea dependențelor de pachete:
+Netuno dispune de o inteligență integrată pentru gestionarea dependențelor pachetelor:
 
-- **Detectare automată:** Dacă comanda ta începe cu `npm`, `bun`, `pnpm` sau `yarn`, Netuno verifică dacă folderul `node_modules` există.
+- **Detectare automată:** Dacă comanda dvs. începe cu `npm`, `bun`, `pnpm` sau `yarn`, Netuno verifică dacă folderul `node_modules` există.
 
-- **Execuție inteligentă:** Dacă folderul nu este găsit, comanda de instalare corespunzătoare (de exemplu: `bun install`) este executată automat înainte de a porni procesul principal.
+- **Execuție inteligentă:** Dacă folderul nu este găsit, comanda de instalare corespunzătoare (de exemplu: `bun install`) este executată automat înainte de pornirea procesului principal.
 
-- **Personalizare:** Când definești manual parametrul `install`, detectarea implicită este înlocuită de configurația ta personalizată.
+- **Personalizare:** Când definiți manual parametrul `install`, detectarea implicită este înlocuită de configurația dvs. personalizată.
 
 ### command
 
@@ -84,6 +86,6 @@ Definește dacă comanda trebuie (true) sau nu (false) să fie pornită automat 
 ## Concluzie
 
 Centralizarea comenzilor în Netuno simplifică mult fluxul de lucru.
-Vizibilitatea unificată permite ca toate informațiile din procesele paralele să fie consolidate într-un singur terminal, facilitând monitorizarea în timp real.
+Vizibilitatea unificată permite ca toate informațiile proceselor paralele să fie consolidate într-un singur terminal, facilitând monitorizarea în timp real.
 
-Închiderea sigură face ca, la oprirea executării serverului Netuno, toate procesele auxiliare configurate să fie și ele închise automat, evitând procesele "în fundal" sau blocajele de port.
+Închiderea sigură face ca, la oprirea execuției serverului Netuno, toate procesele auxiliare configurate să fie închise automat, evitând procesele „în fundal” sau blocarea porturilor.

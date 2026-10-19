@@ -10,7 +10,7 @@ Netuno permite que una aplicación se conecte a múltiples bases de datos.
 
 Así podrá manipular datos a través de varias conexiones y tipos de bases de datos diferentes.
 
-Netuno soporta la conexión a bases de datos como:
+Netuno admite la conexión a bases de datos como:
 
 - PostgreSQL
 - MariaDB
@@ -22,7 +22,7 @@ Netuno soporta la conexión a bases de datos como:
 
 Para que las aplicaciones funcionen correctamente, siempre es necesario que haya una base de datos configurada como default (predeterminada).
 
-Recuerde que las configuraciones de las aplicaciones se encuentran en los archivos:
+Recuerde que las configuraciones de las aplicaciones están en los archivos:
 
 ```
 /web/app/TU_APP/config/_development.json
@@ -39,7 +39,7 @@ Allí encontrará la configuración de la conexión a la base de datos _default_
             "password": "*****",
             "engine": "psql|mariadb|h2|mssql",
             "host": "localhost",
-            "name": "base_de_datos",
+            "name": "basedatos",
             "username": "usuario"
         }
     },
@@ -48,9 +48,9 @@ Allí encontrará la configuración de la conexión a la base de datos _default_
 
 Por lo tanto, para añadir más conexiones a otras bases de datos basta con repetir esta configuración cambiando el nombre _default_ por otro nombre deseado.
 
-Por ejemplo, imagine que tiene una aplicación en la que la base de datos default está en PostgreSQL, pero que también se tiene que conectar a una base de datos en MariaDB de WordPress (_sitio-wp_) y también a otra base de datos en Microsoft SQL Server de una aplicación .Net/C# (_app-dotnet-mssql_)...
+Por ejemplo, imagine que tiene una aplicación en la que la base de datos predeterminada está en PostgreSQL, pero que también debe conectarse a una base de datos en MariaDB de WordPress (_sitio-wp_) y también a otra base de datos en Microsoft SQL Server de una aplicación .Net/C# (_aplicacion-dotnet-mssql_)...
 
-La configuración de esta aplicación para poder conectarse a estas múltiples bases de datos será de esta forma:
+La configuración de esta aplicación para poder conectarse a estas múltiples bases de datos será de la siguiente forma:
 
 ```
     ...
@@ -59,38 +59,38 @@ La configuración de esta aplicación para poder conectarse a estas múltiples b
             "password": "*****",
             "engine": "psql",
             "host": "localhost",
-            "name": "base_de_datos",
+            "name": "basedatos",
             "username": "usuario"
         },
         "sitio-wp": {
             "password": "*****",
             "engine": "mariadb",
             "host": "localhost",
-            "name": "base_de_datos",
+            "name": "basedatos",
             "username": "usuario"
         },
-        "app-dot-net": {
+        "aplicacion-dot-net": {
             "password": "*****",
             "engine": "mssql",
             "host": "localhost",
-            "name": "base_de_datos",
+            "name": "basedatos",
             "username": "usuario"
         }
     },
     ...
 ```
 
-Para poder comunicarse con cada una de estas aplicaciones, basta con utilizar el recurso _db de la siguiente forma:
+Para poder comunicarse con cada una de estas aplicaciones basta con utilizar el recurso _db de la siguiente forma:
 
 ```
-var dbDefault = _db.init()
+var dbPredeterminada = _db.init()
 
 var dbSitioWP = _db.init("sitio-wp")
 
-var dbAppDotNet = _db.init("app-dot-net")
+var dbAplicacionDotNet = _db.init("aplicacion-dot-net")
 ```
 
-Cada variable contiene una instancia del recurso *_db* asociado a la base de datos correspondiente a la clave que identifica la conexión definida en las configuraciones de la aplicación.
+Cada variable contiene una instancia del recurso *_db* asociada a la base de datos correspondiente a la clave que identifica la conexión definida en la configuración de la aplicación.
 
 Así, utilizando estas variables podrá realizar las operaciones de base de datos como consultas, inserciones, actualizaciones y eliminaciones.
 

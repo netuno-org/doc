@@ -6,19 +6,19 @@ sidebar_label: Cliente FTP
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
 
-Subir y descargar archivos, gestionar carpetas remotas.
+Cargar y descargar archivos, gestionar carpetas remotas.
 
 ## Introducción
 
 Netuno tiene integrado en su framework low-code un cliente FTP, que permite conectar con servidores, enviar y
 recibir archivos, modificar carpetas, entre otras operaciones remotas.
 
-Soporta múltiples conexiones simultáneas, e incluso FTPS.
+Admite múltiples conexiones simultáneas, e incluso FTPS.
 
 Esto gracias a la implementación Java y de código abierto [Apache Commons Net](https://github.com/apache/commons-net), que
-permite a Netuno proporcionar estas funcionalidades en todos los lenguajes de _script_ a través del recurso `_ftp`.
+permite a Netuno proporcionar estas funcionalidades en todos los lenguajes de _script_ mediante el recurso `_ftp`.
 
-> Más sobre el recurso [FTP](/docs/library/resources/ftp) de Netuno.
+> Más información sobre el recurso [FTP](/docs/library/resources/ftp) de Netuno.
 
 ## Configuración
 
@@ -29,7 +29,7 @@ utilizaremos el archivo de entorno de desarrollo ubicado en:
 
 - `config/_development.json`
 
-Verifique que no contenga ya las configuraciones para el FTP; si aún no existe, entonces al final del archivo de
+Compruebe si ya contiene las configuraciones para el FTP; si aún no existen, entonces al final del archivo de
 configuración (en formato JSON) añada los parámetros de configuración del FTP:
 
 ```json title="config/_development.json"
@@ -51,10 +51,10 @@ configuración (en formato JSON) añada los parámetros de configuración del FT
 Después de guardar los cambios, basta con reiniciar Netuno para asumir los cambios de la configuración. Siendo estas las
 configuraciones predeterminadas para la conexión, como indica el nombre `default`.
 
-Puede añadir más configuraciones de conexión FTP, pero solo una podrá ser definida como predeterminada.
+Puede añadir más configuraciones de conexión FTP, pero solo una podrá definirse como predeterminada.
 
-Para añadir más configuraciones de conexión FTP basta con repetir el bloque de configuración predeterminado y cambiar el nombre
-`default` por otro nombre a su elección, vea el ejemplo:
+Para añadir más configuraciones de conexión FTP, basta con repetir el bloque de configuración predeterminado y cambiar el nombre
+`default` por otro nombre a su elección; vea el ejemplo:
 
 ```json title="config/_development.json"
 {
@@ -79,7 +79,7 @@ Para añadir más configuraciones de conexión FTP basta con repetir el bloque d
 }
 ```
 
-Una configuración similar al ejemplo anterior permitirá utilizar la cuenta predeterminada cuando se llame de la siguiente
+Una configuración similar al ejemplo anterior permitirá utilizar la cuenta `default` cuando se llame de la siguiente
 forma en el código:
 
 <PolyglotCode
@@ -117,7 +117,7 @@ forma en el código:
     ]}
 />
 
-Y para utilizar la configuración `otro` basta con añadir el nombre de la configuración como parámetro a la función
+Y para utilizar la configuración `otro`, basta con añadir el nombre de la configuración como parámetro a la función
 `_ftp.init()` de la siguiente forma:
 
 <PolyglotCode
@@ -155,7 +155,7 @@ Y para utilizar la configuración `otro` basta con añadir el nombre de la confi
     ]}
 />
 
-> Si no se añade un nombre de configuración como parámetro se utilizará siempre la cuenta predeterminada.
+> Si no se añade un nombre de configuración como parámetro, se utilizará siempre la cuenta `default`.
 
 ## Conexión
 
@@ -172,11 +172,11 @@ Antes de hacer cualquier cosa es necesario iniciar la conexión FTP:
     ]}
 />
 
-## Carpeta de Trabajo
+## Carpeta de trabajo
 
-Al realizar operaciones en el FTP es necesario definir qué carpeta se utilizará.
+Al realizar operaciones en FTP es necesario definir qué carpeta se utilizará.
 
-A través de la definición de la carpeta de trabajo podremos realizar las diversas manipulaciones a partir de esta carpeta base.
+Mediante la definición de la carpeta de trabajo podremos realizar las distintas manipulaciones a partir de esta carpeta base.
 
 Para cambiar la carpeta de trabajo:
 
@@ -191,9 +191,9 @@ Para cambiar la carpeta de trabajo:
     ]}
 />
 
-Ahora cualquier operación se realizará en esta carpeta o a partir de esta carpeta.
+Ahora cualquier operación se realizará en esta carpeta o a partir de ella.
 
-## Crear y Eliminar Carpetas
+## Crear y eliminar carpetas
 
 Al crear una carpeta basta con indicar la ruta de esta carpeta:
 
@@ -203,7 +203,7 @@ Al crear una carpeta basta con indicar la ruta de esta carpeta:
             lang: 'javascript',
             code: `
                 ftp.createDirectory("carpeta-temporal")
-                ftp.createDirectory("carpeta-temporal/sub-carpeta")
+                ftp.createDirectory("carpeta-temporal/subcarpeta")
             `
         },
     ]}
@@ -216,7 +216,7 @@ Para eliminar o borrar carpetas:
         {
             lang: 'javascript',
             code: `
-                ftp.deleteDirectory("carpeta-temporal/sub-carpeta")
+                ftp.deleteDirectory("carpeta-temporal/subcarpeta")
                 ftp.deleteDirectory("carpeta-temporal")
             `
         },
@@ -238,7 +238,7 @@ Es posible renombrar archivos o carpetas; se pasa la ruta antigua y a continuaci
     ]}
 />
 
-## Enviar Archivos
+## Enviar archivos
 
 Para subir un archivo de texto:
 
@@ -253,7 +253,7 @@ Para subir un archivo de texto:
     ]}
 />
 
-## Recibir Archivos
+## Recibir archivos
 
 Para obtener un archivo de texto:
 
@@ -297,7 +297,7 @@ Para obtener un archivo de texto:
     ]}
 />
 
-## Listar Ítems en la Carpeta
+## Listar elementos en la carpeta
 
 Lista todo el contenido de una carpeta:
 

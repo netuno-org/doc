@@ -6,9 +6,9 @@ sidebar_label: REST - Services Web
 
 ## Introduction
 
-Les requêtes REST sont des adresses en ligne qui renvoient des informations sur des données traitées sur le serveur, qui contient la logique métier des données exigeant sécurité et fiabilité, avec intégration de la base de données.
+Les requêtes REST sont des adresses en ligne qui retournent des informations sur des données traitées sur le serveur, lequel contient la logique métier des données qui exigent sécurité et fiabilité, avec intégration de la base de données.
 
-> En savoir plus sur <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/REST" target="_blank">REST</a>
+> Plus d'informations sur <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/REST" target="_blank">REST</a>
 
 La construction de l'API REST est basée sur les Services de Netuno.
 
@@ -41,12 +41,12 @@ Les adresses de type POST sont normalement utilisées pour des opérations qui c
 
 Pour créer un service dans Netuno qui répond uniquement au type de méthode POST, créez le fichier de code en utilisant l'une de ces formes :
 
-- `📂 server/services/créer/post.js`
-- `📂 server/services/créer.post.js`
+- `📂 server/services/creer/post.js`
+- `📂 server/services/creer.post.js`
 
 Ce service sera exécuté uniquement pour le type de requête POST à l'adresse :
 
-- POST http://localhost:9000/services/créer
+- POST http://localhost:9000/services/creer
 
 ## PUT
 
@@ -76,30 +76,30 @@ Ce service sera exécuté uniquement pour le type de requête DELETE à l'adress
 
 ## OPTIONS
 
-Dans l'intégration avec le frontend, lors du processus de validation CORS, le navigateur effectue un appel de type OPTIONS.
+Lors de l'intégration avec le frontend, pendant le processus de validation du CORS, le navigateur effectue un appel de type OPTIONS.
 
-> En savoir plus sur <a href="https://pt.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank">CORS</a>.
+> Plus d'informations sur <a href="https://pt.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank">CORS</a>.
 
 Pour créer un service dans Netuno qui répond uniquement au type de méthode OPTIONS, créez le fichier de code en utilisant l'une de ces formes :
 
 - `📂 server/services/lister/options.js`
 - `📂 server/services/lister.options.js`
 
-Doit être implémenté pour tous les services intégrés à un frontend externe, comme un site web.
+Doit être implémenté pour tous les services qui sont intégrés dans un frontend externe, comme un site web.
 
-Code habituellement utilisé :
+Code normalement utilisé :
 
 ```javascript
-_out.json(_val.map().set("result", true))
+_out.json(_val.map().set("resultat", true))
 ```
 
 Ce service sera exécuté pour le type de requête OPTIONS à l'adresse :
 
 - OPTIONS http://localhost:9000/services/lister
 
-## Clients et Exécution de Tests
+## Clients et exécution de tests
 
-Pour exécuter des tests sur les services avec un type de méthode spécifique, vous pouvez utiliser des programmes dédiés qui réalisent des tests sur API REST, comme :
+Pour exécuter des tests sur les services avec le type de méthode spécifique, vous pouvez utiliser des programmes dédiés qui réalisent des tests sur API REST, comme :
 
 - <a href="https://www.postman.com/" target="_blank">Postman</a>
 - <a href="https://insomnia.rest/" target="_blank">Insominia</a>
@@ -108,16 +108,16 @@ Pour exécuter des tests sur les services avec un type de méthode spécifique, 
 
 Avec la commande `curl` dans le terminal, vous pouvez effectuer tout type de test.
 
-À partir de la console/ligne de commande, envoyez un GET :
+À partir de la console/ligne de commandes, envoyez un GET :
 
 ```
-curl http://localhost:9000/services/sauvegarder
+curl http://localhost:9000/services/enregistrer
 ```
 
 Avec `-X`, vous pouvez spécifier le type de méthode :
 
 ```
-curl -X POST -F 'nom=Test' -F 'email=email@exemple.com' http://localhost:9000/services/sauvegarder
+curl -X POST -F 'nom=Test' -F 'email=email@exemple.com' http://localhost:9000/services/enregistrer
 ```
 
 > Le paramètre `-F` envoie avec le Content-Type : `multipart/form-data`
@@ -125,13 +125,13 @@ curl -X POST -F 'nom=Test' -F 'email=email@exemple.com' http://localhost:9000/se
 Une autre façon d'envoyer des paramètres :
 
 ```
-curl -X POST -d 'nom=Test' -d 'email=email@exemple.com' http://localhost:9000/services/sauvegarder
+curl -X POST -d 'nom=Test' -d 'email=email@exemple.com' http://localhost:9000/services/enregistrer
 ```
 
 Peut être concaténé de la manière suivante :
 
 ```
-curl -X POST -d 'nom=Test&email=email@exemple.com' http://localhost:9000/services/sauvegarder
+curl -X POST -d 'nom=Test&email=email@exemple.com' http://localhost:9000/services/enregistrer
 ```
 
 > Le paramètre `-d` envoie avec le Content-Type : `application/x-www-form-urlencoded`
@@ -143,20 +143,20 @@ Pour envoyer au format JSON, il est nécessaire de spécifier le type de contenu
 ```
 curl -X POST -H "Content-Type: application/json" \
     -d '{"nom": "Test", "email": "email@exemple.com"}' \
-    http://localhost:9000/services/sauvegarder
+    http://localhost:9000/services/enregistrer
 ```
 
 > Le `-H` définit la paramétrisation de l'en-tête (_HEADER_)
 
-### Upload
+### Téléversement
 
-Pour effectuer l'upload de fichiers :
+Pour effectuer le téléversement de fichiers :
 
 ```
-curl -X POST -F 'image=@/home/utilisateur/fichier.jpg' http://localhost:9000/services/sauvegarder
+curl -X POST -F 'image=@/home/utilisateur/fichier.jpg' http://localhost:9000/services/enregistrer
 ```
 
-## Service Client - NPM
+## Client de service - NPM
 
 Pour faciliter l'intégration avec le frontend, le module NPM suivant est disponible :
 
@@ -172,7 +172,7 @@ _service.config({
 });
 ```
 
-Vous pourrez exécuter des services intégrés avec le frontend, comme par exemple :
+Vous pourrez exécuter des services intégrés avec le frontend, par exemple :
 
 ```
   _service({
@@ -192,8 +192,8 @@ Vous pourrez exécuter des services intégrés avec le frontend, comme par exemp
 
 ## Conclusion
 
-Il est possible de restreindre les services à un type de méthode HTTP spécifique.
+Il est possible de restreindre les services uniquement au type de méthode HTTP souhaité.
 
-Pour intégrer avec le frontend, cela peut être fait au niveau le plus bas en utilisant `fetch`.
+Pour intégrer avec le frontend, cela peut être fait au plus bas niveau en utilisant `fetch`.
 
 Pour accélérer et standardiser l'implémentation, le module NPM [@netuno/service-client](https://www.npmjs.com/package/@netuno/service-client) est disponible.

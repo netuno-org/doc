@@ -8,16 +8,15 @@ Configurarea CORS în aplicație.
 
 ## Introducere
 
-CORS (Cross Origin Resource Sharing) este un proces de validare pe care îl fac browserele pentru a verifica dacă pot
-integra resursele partajate de la o altă adresă.
+CORS (Cross Origin Resource Sharing) este un proces de validare pe care browserele îl efectuează pentru a verifica dacă pot integra resursele partajate de o altă adresă.
 
-Este implementat când:
+Este implementat atunci când:
 
 - În dezvoltarea stratului frontend cu serverul webpack, cum ar fi dezvoltarea de interfețe web
 (site web sau aplicație web) folosind tehnologii moderne precum ReactJS și VueJS.
-- Adresa frontend-ului este diferită de adresa serviciilor, de exemplu, când serviciile rulează la
-adresa `http://localhost:9000` și frontend-ul rulează la adresa `http://localhost:3000`.
-- În producție, de exemplu, serviciile rulează pe subdomeniul propriu `api.exemplu.com` și frontend-ul pe
+- Adresa frontendului este diferită de adresa serviciilor, de exemplu, când serviciile rulează la
+adresa `http://localhost:9000`, iar frontendul rulează la adresa `http://localhost:3000`.
+- În producție, de exemplu, serviciile rulează pe un subdomeniu propriu `api.exemplu.com`, iar frontendul pe
 `www.exemplu.com`.
 
 > Mai multe despre CORS:
@@ -30,8 +29,8 @@ Netuno este pregătit să realizeze integrarea CORS într-un mod simplu și imed
 
 Configurarea CORS se realizează în fișierul de configurare al aplicației, în funcție de mediu.
 
-Pentru a face acest lucru, navigați în aplicația pe care o dezvoltați până la fișierul de configurare a mediului.
-În acest exemplu, vom folosi fișierul de mediu de dezvoltare localizat la:
+Pentru a face acest lucru, navigați în cadrul aplicației pe care o dezvoltați până la fișierul de configurare a mediului.
+În acest exemplu, vom utiliza fișierul de mediu de dezvoltare localizat în:
 
 - 📂 `config/_development.json`
 
@@ -55,13 +54,13 @@ format JSON) parametrii de configurare:
 
 ### Origini
 
-Parametrul `origins` este lista de adrese ale frontend-ului care va fi integrat cu serviciile.
+În parametrul `origins` se află lista de adrese ale frontendului care va fi integrat cu serviciile.
 
 ### Producție
 
-În producție trebuie să definim ca origini adresele la care frontend-ul va funcționa online.
+În producție trebuie să definim ca origini adresele la care frontendul va funcționa online.
 
-Fișierul de configurare al aplicației unde se află definiția pentru `cors` trebuie să fie diferit, în funcție de mediu.
+Fișierul de configurare al aplicației în care se află definiția pentru `cors` trebuie să fie diferit, în funcție de mediu.
 
 Fișierul de configurare al aplicației trebuie să fie:
 
@@ -82,7 +81,7 @@ Exemplu de configurare CORS:
 }
 ```
 
-Fișierul de configurare al aplicației este `_production.json` conform configurației de mediu din Netuno, care
+Fișierul de configurare al aplicației este `_production.json`, conform configurației de mediu a Netuno, care
 se află în fișierul `netuno/config.js`:
 
 ```javascript title="netuno/config.js"
@@ -91,7 +90,7 @@ config.env = 'production'
 
 ## Antet (Header HTTP)
 
-Antetul standard (Header al protocolului HTTP) este:
+Antetul standard (header-ul protocolului HTTP) este:
 
 ```http
 Access-Control-Allow-Origin: http://localhost:3000
@@ -119,16 +118,16 @@ Pentru a personaliza antetul standard, adăugați parametrul de configurare `hea
 }
 ```
 
-În exemplul de mai sus, se va accepta doar `Authorization` în header, în locul tuturor celorlalte care erau definite
+În exemplul de mai sus, se va accepta în header doar `Authorization` în locul tuturor celorlalte definite
 implicit.
 
 Puteți adăuga noi definiții în header, precum și înlocui definiția standard.
 
 ## Manual
 
-De asemenea, CORS poate fi configurat manual, în loc să se utilizeze mecanismul automat al Netuno.
+CORS poate fi configurat și manual, în loc să utilizați mecanismul automat al Netuno.
 
-În aplicația dvs. Netuno este suficient să modificați fișierul:
+În aplicația dumneavoastră Netuno este suficient să modificați fișierul:
 
 - `📂 server/core/_request_url.js`
 
@@ -147,15 +146,15 @@ if (origineHeaderHttp == 'https://www.aplicatia-mea.com'
 }
 ```
 
-Observați că în codul de mai sus, `if` restricționează 'Headers' în funcție de adresa de origine (`Origin`).
+Observați că în codul de mai sus `if` restricționează header-ele în funcție de adresa de origine (`Origin`).
 
 Nu uitați să ajustați la adresele pe care le veți utiliza.
 
-> În acest fel, toate serviciile și adresele aplicației dvs. vor suporta Headers de CORS.
+> În acest fel, toate serviciile și adresele aplicației dumneavoastră vor suporta header-ele CORS.
 
 ### Doar pentru servicii izolate
 
-Dacă doriți să creșteți nivelul de securitate activând Headers doar pentru servicii specifice, atunci utilizați
+Dacă doriți să creșteți nivelul de securitate activând header-ele doar pentru servicii specifice, atunci utilizați
 aceeași logică de cod în fișierul:
 
 - `📂 server/core/_service_config.js`
@@ -166,12 +165,12 @@ aceeași logică de cod în fișierul:
 
 ## Concluzie
 
-Când CORS este configurat, Netuno va răspunde automat cu antetul (Header al protocolului HTTP) standard pentru
-adresele configurate ca `origins`.
+Când CORS este configurat, Netuno va răspunde automat cu antetul standard (header-ul protocolului HTTP)
+pentru adresele configurate ca `origins`.
 
-`headers` standard pot fi personalizate și modificate.
+Header-ele standard (`headers`) pot fi personalizate și modificate.
 
 Puteți configura diverse reguli CORS.
 
-Deși Netuno suportă configurarea manuală a regulilor CORS, din punct de vedere programatic, este de preferat să
-utilizați mecanismul automat integrat în configurarea aplicației.
+Deși Netuno suportă configurarea manuală a regulilor CORS, din punct de vedere programatic, este preferabil să utilizați
+mecanismul automat integrat în configurarea aplicației.

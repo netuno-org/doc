@@ -7,14 +7,14 @@ sidebar_label: Instalare
 
 ## Cerințe
 
-Înainte de a instala CLUAR, este necesar să aveți:
+Înainte de a instala CLUAR, este necesar să ai:
 
 1. [Netuno](https://doc.netuno.org/pt/docs/get-started/installation) instalat.
 2. [Bun](https://bun.sh/docs/installation) instalat.
 
 ## Clonarea proiectului
 
-CLUAR este o aplicație Netuno, prin urmare trebuie clonată în dosarul `apps` al instalării Netuno:
+CLUAR este o aplicație Netuno, prin urmare trebuie clonată în directorul `apps` al instalării Netuno:
 
 ```
 [directorul rădăcină al Netuno]/apps
@@ -26,27 +26,27 @@ Folosind comanda:
 git clone https://github.com/netuno-org/cluar.git
 ```
 
-## Instalarea site-ului (cu Bun)
+## Instalarea site-ului web (cu Bun)
 
-În dosarul `website`:
+În interiorul directorului `website`:
 
 ```
 cd website
 ```
 
-Executați comanda de instalare Bun:
+Execută comanda de instalare a Bun:
 
 ```
 bun install
 ```
 
-Este necesar să permiteți executarea scripturilor nesigure ESBUILD:
+Este necesar să permiți executarea scripturilor nesigure ale ESBUILD:
 
 ```
 bun pm trust --all
 ```
 
-Dacă trebuie să reiei instalarea site-ului, șterge dosarul `node_modules` și fișierele lock, apoi instalează din nou:
+Dacă ai nevoie să repornești instalarea site-ului web, șterge directorul `node_modules` și fișierele lock, apoi instalează din nou:
 
 ```
 rm -rf node_modules
@@ -54,6 +54,6 @@ bun install
 bun pm trust --all
 ```
 
-## Următorul pas
+## Pasul următor
 
-Odată ce codul și dependențele sunt instalate, continuați cu [Configurare](/docs/academy/cluar/configuration).
+Cu codul și dependențele instalate, treci la [Configurare](/docs/academy/cluar/configuration).

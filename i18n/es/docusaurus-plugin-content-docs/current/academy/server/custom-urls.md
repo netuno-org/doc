@@ -1,7 +1,7 @@
 ---
 id: custom-urls
-title: URLs personalizadas
-sidebar_label: URLs personalizadas
+title: URL personalizadas
+sidebar_label: URL personalizadas
 ---
 
 ## Introducción
@@ -18,7 +18,7 @@ Navegue dentro de la aplicación que está desarrollando hasta el archivo de con
 
 - 📂 `config/_development.json`
 
-Verifique si ya no existe la configuración de URL; si no existe, añada al final del archivo de configuración (en formato JSON) los parámetros de configuración de URL, como por ejemplo:
+Compruebe si ya no existe la configuración de URL; si no existe, añada al final del archivo de configuración (en formato JSON) los parámetros de configuración de URL, como por ejemplo:
 
 ```json
 {
@@ -46,6 +46,6 @@ Define la dirección URL inicial de los servicios web de la API REST; el valor p
 
 ## Conclusión
 
-La personalización de las URLs es importante, tanto para hacerlas más intuitivas como para poder hacerlas más complejas y aumentar la seguridad.
+La personalización de las URL es importante, tanto para hacerlas más intuitivas como para poder hacerlas más complejas y aumentar la seguridad.
 
-Por ejemplo, en la dirección de administración se puede colocar un prefijo con una secuencia de caracteres aleatorios; así, solo quien sepa de memoria accederá a la dirección de acceso, lo que dificulta el acceso y evita ataques.
+Por ejemplo, en la dirección de administración se puede colocar un prefijo con una secuencia de caracteres aleatorios; así, solo quien se lo sepa de memoria accederá a la dirección de acceso, lo que dificulta el acceso y evita ataques.

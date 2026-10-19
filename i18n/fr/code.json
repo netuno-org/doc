@@ -1,10 +1,10 @@
 {
   "theme.ErrorPageContent.title": {
-    "message": "Cette page a rencontré une erreur.",
+    "message": "Cette page a généré une erreur.",
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Retour en haut",
+    "message": "Retour en haut de page",
     "description": "The ARIA label for the back to top button"
   },
   "theme.blog.archive.title": {
@@ -16,27 +16,27 @@
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Navigation de la page de liste du blog",
+    "message": "Navigation dans la page de liste du blog",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
-    "message": "Contenu plus récent",
+    "message": "Articles plus récents",
     "description": "The label used to navigate to the newer blog posts page (previous page)"
   },
   "theme.blog.paginator.olderEntries": {
-    "message": "Contenu plus ancien",
+    "message": "Articles plus anciens",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Navigation de la page des publications du blog",
+    "message": "Navigation dans la page d'article du blog",
     "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
-    "message": "Publication plus récente",
+    "message": "Article plus récent",
     "description": "The blog post button label to navigate to the newer/previous post"
   },
   "theme.blog.post.paginator.olderPost": {
-    "message": "Publication plus ancienne",
+    "message": "Article plus ancien",
     "description": "The blog post button label to navigate to the older/next post"
   },
   "theme.tags.tagsPageLink": {
@@ -87,11 +87,11 @@
     "message": "Version : {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "Ceci est une documentation non publiée pour {siteTitle} {versionLabel}.",
+    "message": "Cette documentation n'est pas encore publiée pour {siteTitle} {versionLabel}.",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "Ceci est la documentation pour {siteTitle} {versionLabel}, qui n'est plus activement maintenue.",
+    "message": "Il s'agit de la documentation pour {siteTitle} {versionLabel}, qui n'est plus activement maintenue.",
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
@@ -147,7 +147,7 @@
     "description": "The default label used for the Info admonition (:::info)"
   },
   "theme.admonition.note": {
-    "message": "note",
+    "message": "remarque",
     "description": "The default label used for the Note admonition (:::note)"
   },
   "theme.admonition.tip": {
@@ -163,7 +163,7 @@
     "description": "The ARIA label for close button of announcement bar"
   },
   "theme.blog.sidebar.navAriaLabel": {
-    "message": "Navigation des publications récentes du blog",
+    "message": "Navigation des articles récents du blog",
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.CodeBlock.copied": {
@@ -183,15 +183,15 @@
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "Développer la catégorie latérale « {label} »",
+    "message": "Développer la catégorie latérale '{label}'",
     "description": "The ARIA label to expand the sidebar category"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Réduire la catégorie latérale « {label} »",
+    "message": "Réduire la catégorie latérale '{label}'",
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "Principal",
+    "message": "Navigation principale",
     "description": "The ARIA label for the main navigation"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
@@ -199,11 +199,11 @@
     "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
-    "message": "Impossible de trouver ce que vous recherchez.",
+    "message": "Impossible de trouver ce que vous cherchez.",
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Contactez le propriétaire du site qui vous a amené ici et informez-le que le lien est rompu.",
+    "message": "Veuillez contacter le propriétaire du site qui vous a amené ici et l'informer que le lien est rompu.",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
@@ -259,7 +259,7 @@
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.SearchBar.seeAll": {
-    "message": "Voir tous les {count} résultats"
+    "message": "Voir les {count} résultats"
   },
   "theme.SearchBar.label": {
     "message": "Rechercher",
@@ -274,7 +274,7 @@
     "description": "The label and ARIA label for search box cancel button"
   },
   "theme.SearchModal.startScreen.recentSearchesTitle": {
-    "message": "Récent",
+    "message": "Récentes",
     "description": "The title for recent searches"
   },
   "theme.SearchModal.startScreen.noRecentSearchesText": {
@@ -290,7 +290,7 @@
     "description": "The label for remove recent search button"
   },
   "theme.SearchModal.startScreen.favoriteSearchesTitle": {
-    "message": "Favori",
+    "message": "Favoris",
     "description": "The title for favorite searches"
   },
   "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
@@ -350,11 +350,11 @@
     "description": "The text for the question where the user thinks there are missing results"
   },
   "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
-    "message": "Dites-le-nous.",
+    "message": "Signalez-le.",
     "description": "The text for the link to report missing results"
   },
   "theme.SearchModal.placeholder": {
-    "message": "Rechercher dans les documents",
+    "message": "Rechercher dans la documentation",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
   },
   "theme.SearchPage.documentsFound.plurals": {
@@ -378,11 +378,11 @@
     "description": "The ARIA label for search page input"
   },
   "theme.SearchPage.algoliaLabel": {
-    "message": "Recherche fournie par Algolia",
+    "message": "Recherche propulsée par Algolia",
     "description": "The ARIA label for Algolia mention"
   },
   "theme.SearchPage.noResultsText": {
-    "message": "Aucun résultat n'a été trouvé",
+    "message": "Aucun résultat trouvé",
     "description": "The paragraph for empty search result"
   },
   "theme.SearchPage.fetchingNewResults": {
@@ -390,11 +390,11 @@
     "description": "The paragraph for fetching new search results"
   },
   "theme.blog.post.plurals": {
-    "message": "Une publication|{count} publications",
+    "message": "Un article|{count} articles",
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "{nPosts} étiquetées avec « {tagName} »",
+    "message": "{nPosts} marqués avec « {tagName} »",
     "description": "The title of the page for a blog tag"
   },
   "theme.blog.author.pageTitle": {
@@ -410,7 +410,7 @@
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
-    "message": "Cet auteur n'a pas encore écrit de publication.",
+    "message": "Cet auteur n'a pas encore écrit d'articles.",
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
@@ -418,11 +418,11 @@
     "description": "The unlisted content banner title"
   },
   "theme.contentVisibility.unlistedBanner.message": {
-    "message": "Cette page n'est pas répertoriée. Les moteurs de recherche n'enregistreront aucune information, et seuls les utilisateurs disposant du lien direct pourront y accéder.",
+    "message": "Cette page n'est pas répertoriée. Les moteurs de recherche n'enregistreront aucune information et seuls les utilisateurs disposant du lien direct pourront y accéder.",
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
-    "message": "Page en brouillon",
+    "message": "Page brouillon",
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
@@ -442,11 +442,11 @@
     "description": "The title of the tag list page"
   },
   "page.home.title": {
-    "message": "Plateforme polyglotte low-code",
+    "message": "Plateforme Polyglotte Low-Code",
     "description": "The homepage title"
   },
   "page.home.subtitle.1": {
-    "message": "Développement rapide avec hautes performances, plusieurs langages de programmation et plusieurs bases de données.",
+    "message": "Développement rapide avec de hautes performances, de multiples langages de programmation et plusieurs bases de données.",
     "description": "The homepage subtitle 1"
   },
   "page.home.subtitle.2": {
@@ -470,7 +470,7 @@
     "description": "The homepage library title"
   },
   "page.home.library.description": {
-    "message": "Toutes les ressources de programmation low-code et polyglotte pour réaliser les diverses implémentations et intégrations nécessaires dans votre projet.",
+    "message": "Toutes les ressources de programmation low-code et polyglotte pour réaliser les différentes implémentations et intégrations nécessaires à votre projet.",
     "description": "The homepage library description"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "label": "Anwendungsordner",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/category/app-structure",
+    "description": "Die Ordner und Dateien der Anwendung im Detail."
+  }
+}

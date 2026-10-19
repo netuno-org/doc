@@ -11,9 +11,9 @@ Traiter des fichiers PDF personnalisés.
 
 ## Introduction
 
-Netuno génère des fichiers CSV via la ressource [CSV](/docs/library/resources/csv) qui permet une abstraction low-code d'[Apache Commons CSV](https://commons.apache.org/proper/commons-csv/) pour les différents langages de programmation pris en charge par Netuno.
+Netuno génère des fichiers CSV via la ressource [CSV](/docs/library/resources/csv) qui permet une abstraction low-code d'[Apache Commons CSV](https://commons.apache.org/proper/commons-csv/) pour les différents langages de programmation supportés par Netuno.
 
-L'application fournie avec Netuno appelée **demo** (application de démonstration) contient de nombreux exemples des implémentations de code possibles dans plusieurs langages, y compris la démonstration de l'exportation vers CSV via le service `csv` situé dans :
+L'application fournie avec Netuno nommée **demo** (application de démonstration) contient de nombreux exemples des implémentations possibles de code dans plusieurs langages, y compris la démonstration de l'exportation vers CSV via le service `csv` qui se trouve dans :
 
 <PolyglotPath files={[
     `netuno/apps/demo/server/services/samples/%lang%/csv`
@@ -75,7 +75,7 @@ Dans l'exemple, nous allons générer le fichier dans le `storage` de l'applicat
     ]}
 />
 
-Les formats pris en charge sont décrits [ici](https://doc.netuno.org/pt/docs/library/resources/csv/#format).
+Les formats supportés sont décrits [ici](https://doc.netuno.org/pt/docs/library/resources/csv/#format).
 
 ### Écriture
 
@@ -120,7 +120,7 @@ Dans l'exemple, nous allons lire le fichier dans le `storage` de l'application :
         {
             lang: 'javascript',
             code: `
-                const parseurCsv = _csv.parser(_storage.filesystem("server", "donnees.csv"))
+                const analyseurCsv = _csv.parser(_storage.filesystem("server", "donnees.csv"))
             `
         }
     ]}
@@ -128,14 +128,14 @@ Dans l'exemple, nous allons lire le fichier dans le `storage` de l'application :
 
 ### Lignes 
 
-Il est maintenant possible d'itérer sur les `CSVRecord` d'`Apache Commons CSV`, qui représentent chaque ligne du fichier CSV :
+Maintenant, il est possible d'itérer sur les `CSVRecord` d'`Apache Commons CSV`, qui représentent chaque ligne du fichier CSV :
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                for (const enregistrement of parseurCsv) {
+                for (const enregistrement of analyseurCsv) {
                     const colonneUn = enregistrement.get(0)
                     const colonneDeux = enregistrement.get(1)
                 }
@@ -144,7 +144,7 @@ Il est maintenant possible d'itérer sur les `CSVRecord` d'`Apache Commons CSV`,
         {
             lang: 'python',
             code: `
-                for enregistrement in parseurCsv:
+                for enregistrement in analyseur_csv:
                     colonneUn = enregistrement.get(0)
                     colonneDeux = enregistrement.get(1)
             `
@@ -152,7 +152,7 @@ Il est maintenant possible d'itérer sur les `CSVRecord` d'`Apache Commons CSV`,
         {
             lang: 'ruby',
             code: `
-                parseurCsv.each do |enregistrement|
+                analyseur_csv.each do |enregistrement|
                     colonneUn = enregistrement.get(0)
                     colonneDeux = enregistrement.get(1)
                 end
@@ -161,7 +161,7 @@ Il est maintenant possible d'itérer sur les `CSVRecord` d'`Apache Commons CSV`,
         {
             lang: 'kotlin',
             code: `
-                for (enregistrement in parseurCsv) {
+                for (enregistrement in analyseurCsv) {
                     val colonneUn = enregistrement.get(0)
                     val colonneDeux = enregistrement.get(1)
                 }
@@ -170,7 +170,7 @@ Il est maintenant possible d'itérer sur les `CSVRecord` d'`Apache Commons CSV`,
         {
             lang: 'groovy',
             code: `
-                for (enregistrement in parseurCsv) {
+                for (enregistrement in analyseurCsv) {
                     def colonneUn = enregistrement.get(0)
                     def colonneDeux = enregistrement.get(1)
                 }
@@ -187,7 +187,7 @@ Dans cet exemple, le premier `get` récupère la première ligne. Le second `get
         {
             lang: 'javascript',
             code: `
-                parseurCsv.getRecords().get(0).get(0)
+                analyseurCsv.getRecords().get(0).get(0)
             `
         }
     ]}
@@ -202,7 +202,7 @@ Dans cet exemple, le premier `get` récupère la première ligne. Le second `get
         {
             lang: 'javascript',
             code: `
-                parseurCsv.close()
+                analyseurCsv.close()
             `
         }
     ]}

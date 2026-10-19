@@ -11,9 +11,9 @@ Procesar archivos PDF personalizados.
 
 ## Introducción
 
-Netuno genera archivos PDF con soporte para imágenes, tablas, fuentes y mucho más, a través del recurso [PDF](/docs/library/resources/pdf) que permite una abstracción low-code de [iTextPDF](https://itextpdf.com/) para los diversos lenguajes de programación soportados por Netuno.
+Netuno genera archivos PDF con soporte para imágenes, tablas, fuentes y mucho más, a través del recurso [PDF](/docs/library/resources/pdf), que permite una abstracción low-code de [iTextPDF](https://itextpdf.com/) para los distintos lenguajes de programación soportados por Netuno.
 
-La aplicación que viene con Netuno denominada **demo** (aplicación de demostración) contiene bastantes ejemplos de las posibles implementaciones de código en varios lenguajes, incluida la demostración de la exportación a PDF a través del servicio `export-pdf` que se localiza en:
+La aplicación que viene con Netuno denominada **demo** (aplicación de demostración) contiene bastantes ejemplos de las posibles implementaciones de código en varios lenguajes, incluida la demostración de la exportación a PDF mediante el servicio `export-pdf`, que se encuentra en:
 
 <PolyglotPath files={[
     `netuno/apps/demo/server/services/samples/%lang%/export-pdf`
@@ -63,38 +63,38 @@ Si no se define nada, se generará en la salida de datos del servicio, por ejemp
 />
 
 
-Para generar un archivo PDF dentro de la carpeta `documentos` de la aplicación, se puede hacer así:
+Para generar un archivo PDF dentro de la carpeta `docs` de la aplicación, se puede hacer así:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const documentoPdf = _pdf.newDocument(_app.file("documentos/archivo.pdf").output())
+                const documentoPdf = _pdf.newDocument(_app.file("docs/archivo.pdf").output())
             `
         },
         {
             lang: 'python',
             code: `
-                documentoPdf = _pdf.newDocument(_app.file("documentos/archivo.pdf").output())
+                documentoPdf = _pdf.newDocument(_app.file("docs/archivo.pdf").output())
             `
         },
         {
             lang: 'ruby',
             code: `
-                documentoPdf = _pdf.newDocument(_app.file("documentos/archivo.pdf").output())
+                documentoPdf = _pdf.newDocument(_app.file("docs/archivo.pdf").output())
             `
         },
         {
             lang: 'kotlin',
             code: `
-                val documentoPdf = _pdf.newDocument(_app.file("documentos/archivo.pdf").output())
+                val documentoPdf = _pdf.newDocument(_app.file("docs/archivo.pdf").output())
             `
         },
         {
             lang: 'groovy',
             code: `
-                def documentoPdf = _pdf.newDocument(_app.file("documentos/archivo.pdf").output())
+                def documentoPdf = _pdf.newDocument(_app.file("docs/archivo.pdf").output())
             `
         },
     ]}
@@ -178,7 +178,7 @@ O también en el `storage` de la aplicación:
 
 ### Formato de página
 
-Para personalizar el formato de la página basta con indicarlo en la creación del documento.
+Para personalizar el formato de la página basta con indicarlo al crear el documento.
 
 Crea un nuevo documento para la salida de datos del servicio con páginas en formato **carta**:
 
@@ -291,9 +291,9 @@ Crea un nuevo documento en el `storage` de la aplicación con el formato de pág
     ]}
 />
 
-> Consulta la documentación sobre la [definición del tamaño de las páginas](/docs/library/resources/pdf/#pagesize).
+> Consulte la documentación sobre la [definición del tamaño de las páginas](/docs/library/resources/pdf/#pagesize).
 
-Los documentos PDF se pueden crear con la definición del tamaño de página personalizado; para ello utiliza `pageSize` pasando el valor del ancho y alto de la página, por ejemplo:
+Los documentos PDF se pueden crear con una definición personalizada del tamaño de página; para ello, utilice `pageSize` pasando el valor del ancho y la altura de la página, por ejemplo:
 
 <PolyglotCode
     codes={[
@@ -306,9 +306,9 @@ Los documentos PDF se pueden crear con la definición del tamaño de página per
     ]}
 />
 
-## Encabezado HTTP
+## Cabecera HTTP
 
-Para crear un servicio en la API REST que devuelva un archivo PDF como salida de datos, es necesario añadir en el header el parámetro `Content-Type` del protocolo HTTP.
+Para crear un servicio en la API REST que devuelva un archivo PDF como salida de datos, es necesario añadir en la cabecera el parámetro `Content-Type` del protocolo HTTP.
 
 Ejemplo de cómo definir el contenido como PDF:
 
@@ -390,11 +390,11 @@ Para añadir un párrafo en una posición fija:
     ]}
 />
 
-En el código anterior, en el método `setFixedPosition`, el primer parámetro es la posición X (`100`), el segundo parámetro es la posición Y (`500`) y el tercer parámetro es el ancho (`200`).
+En el código anterior, en el método `setFixedPosition`, el primer parámetro es la posición X (`100`), el segundo parámetro es la posición Y (`500`) y el tercer parámetro es la anchura (`200`).
 
-**Atención:** si la Y se define con el valor `0` significa que queda en el fondo de la página, así que para subir es necesario aumentar el valor de la Y; cuanto mayor sea el valor de la Y, más arriba aparecerá, pero si es demasiado alto y supera el largo de la página, no será visible.
+**Atención:** si el valor de Y se define como `0`, significa que queda en el fondo de la página; por tanto, para subirlo hay que aumentar el valor de Y. Cuanto mayor sea el valor de Y, más arriba aparecerá, pero si es demasiado alto y supera la longitud de la página, no será visible.
 
-> Documentación con todos los métodos del objeto [Párrafo de iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Paragraph.html).
+> Documentación con todos los métodos del objeto de [Párrafo de iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Paragraph.html).
 
 ## Fuente
 
@@ -406,45 +406,45 @@ Para definir una fuente nativa podemos hacerlo de la siguiente forma:
             lang: 'javascript',
             code: `
                 const helvetica = _pdf.font("helvetica")
-                const helveticaBold = _pdf.font("helvetica-bold")
-                const helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
-                const helveticaOblique = _pdf.font("helvetica-oblique")
+                const helveticaNegrita = _pdf.font("helvetica-bold")
+                const helveticaNegritaOblicua = _pdf.font("helvetica-boldoblique")
+                const helveticaOblicua = _pdf.font("helvetica-oblique")
             `
         },
         {
             lang: 'python',
             code: `
                 helvetica = _pdf.font("helvetica")
-                helveticaBold = _pdf.font("helvetica-bold")
-                helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
-                helveticaOblique = _pdf.font("helvetica-oblique")
+                helveticaNegrita = _pdf.font("helvetica-bold")
+                helveticaNegritaOblicua = _pdf.font("helvetica-boldoblique")
+                helveticaOblicua = _pdf.font("helvetica-oblique")
             `
         },
         {
             lang: 'ruby',
             code: `
                 helvetica = _pdf.font("helvetica")
-                helveticaBold = _pdf.font("helvetica-bold")
-                helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
-                helveticaOblique = _pdf.font("helvetica-oblique")
+                helveticaNegrita = _pdf.font("helvetica-bold")
+                helveticaNegritaOblicua = _pdf.font("helvetica-boldoblique")
+                helveticaOblicua = _pdf.font("helvetica-oblique")
             `
         },
         {
             lang: 'kotlin',
             code: `
                 val helvetica = _pdf.font("helvetica")
-                val helveticaBold = _pdf.font("helvetica-bold")
-                val helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
-                val helveticaOblique = _pdf.font("helvetica-oblique")
+                val helveticaNegrita = _pdf.font("helvetica-bold")
+                val helveticaNegritaOblicua = _pdf.font("helvetica-boldoblique")
+                val helveticaOblicua = _pdf.font("helvetica-oblique")
             `
         },
         {
             lang: 'groovy',
             code: `
                 def helvetica = _pdf.font("helvetica")
-                def helveticaBold = _pdf.font("helvetica-bold")
-                def helveticaBoldOblique = _pdf.font("helvetica-boldoblique")
-                def helveticaOblique = _pdf.font("helvetica-oblique")
+                def helveticaNegrita = _pdf.font("helvetica-bold")
+                def helveticaNegritaOblicua = _pdf.font("helvetica-boldoblique")
+                def helveticaOblicua = _pdf.font("helvetica-oblique")
             `
         },
     ]}
@@ -487,83 +487,83 @@ Para definir una fuente personalizada a medida, podemos utilizar `storage`:
     ]}
 />
 
-También podemos utilizar un archivo dentro de la aplicación, como en este ejemplo que muestra que la fuente está dentro de la carpeta `fuentes` en la raíz de la aplicación:
+También podemos utilizar un archivo dentro de la aplicación, como demuestra este ejemplo, en el que la fuente está dentro de la carpeta `fonts` en la raíz de la aplicación:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const roboto = _pdf.font(_app.file("fuentes/roboto.ttf"), true)
+                const roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
             `
         },
         {
             lang: 'python',
             code: `
-                roboto = _pdf.font(_app.file("fuentes/roboto.ttf"), true)
+                roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
             `
         },
         {
             lang: 'ruby',
             code: `
-                roboto = _pdf.font(_app.file("fuentes/roboto.ttf"), true)
+                roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
             `
         },
         {
             lang: 'kotlin',
             code: `
-                val roboto = _pdf.font(_app.file("fuentes/roboto.ttf"), true)
+                val roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
             `
         },
         {
             lang: 'groovy',
             code: `
-                def roboto = _pdf.font(_app.file("fuentes/roboto.ttf"), true)
+                def roboto = _pdf.font(_app.file("fonts/roboto.ttf"), true)
             `
         },
     ]}
 />
 
-O también utilizar un archivo en cualquier ruta del sistema; en este ejemplo la fuente está dentro de la carpeta `fuentes` que está dentro de la carpeta de archivos temporales del sistema:
+O incluso utilizar un archivo en cualquier ruta del sistema; en este ejemplo, la fuente está dentro de la carpeta `fonts`, que está dentro de la carpeta de archivos temporales del sistema:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const roboto = _pdf.font(_os.file("/tmp/fuentes/roboto.ttf"), true)
+                const roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
             `
         },
         {
             lang: 'python',
             code: `
-                roboto = _pdf.font(_os.file("/tmp/fuentes/roboto.ttf"), true)
+                roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
             `
         },
         {
             lang: 'ruby',
             code: `
-                roboto = _pdf.font(_os.file("/tmp/fuentes/roboto.ttf"), true)
+                roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
             `
         },
         {
             lang: 'kotlin',
             code: `
-                val roboto = _pdf.font(_os.file("/tmp/fuentes/roboto.ttf"), true)
+                val roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
             `
         },
         {
             lang: 'groovy',
             code: `
-                def roboto = _pdf.font(_os.file("/tmp/fuentes/roboto.ttf"), true)
+                def roboto = _pdf.font(_os.file("/tmp/fonts/roboto.ttf"), true)
             `
         },
     ]}
 />
 
-> Documentación con todos los métodos del objeto [Fuente de iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/kernel/font/PdfFont.html).
+> Documentación con todos los métodos del objeto de [Fuente de iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/kernel/font/PdfFont.html).
 
-Para utilizar la fuente en los textos se debe pasar la constante de la fuente al párrafo, de esta forma:
+Para utilizar la fuente en los textos, se debe pasar la constante de la fuente al párrafo, de esta forma:
 
 <PolyglotCode
     codes={[
@@ -572,7 +572,7 @@ Para utilizar la fuente en los textos se debe pasar la constante de la fuente al
             code: `
                 documentoPdf.add(
                     _pdf.paragraph("Utilizando la fuente en negrita.")
-                        .setFont(helveticaBold)
+                        .setFont(helveticaNegrita)
                         .setFontSize(15)
                 )
             `
@@ -598,7 +598,7 @@ La inserción de imágenes en el documento PDF generado programáticamente se ha
     ]}
 />
 
-Observa que el método `scaleAbsolute` es muy útil para redimensionar y ajustar el tamaño de la imagen.
+Tenga en cuenta que el método `scaleAbsolute` es muy útil para redimensionar y ajustar el tamaño de la imagen.
 
 Como alternativa, podemos utilizar un archivo dentro de la aplicación, como en este ejemplo:
 
@@ -607,68 +607,68 @@ Como alternativa, podemos utilizar un archivo dentro de la aplicación, como en 
         {
             lang: 'javascript',
             code: `
-                const imagenLogo = _pdf.image(_app.file("public/imagenes/logo.png")
+                const imagenLogo = _pdf.image(_app.file("public/images/logo.png")
             `
         },
         {
             lang: 'python',
             code: `
-                imagenLogo = _pdf.image(_app.file("public/imagenes/logo.png")
+                imagenLogo = _pdf.image(_app.file("public/images/logo.png")
             `
         },
         {
             lang: 'ruby',
             code: `
-                imagenLogo = _pdf.image(_app.file("public/imagenes/logo.png")
+                imagenLogo = _pdf.image(_app.file("public/images/logo.png")
             `
         },
         {
             lang: 'kotlin',
             code: `
-                val imagenLogo = _pdf.image(_app.file("public/imagenes/logo.png")
+                val imagenLogo = _pdf.image(_app.file("public/images/logo.png")
             `
         },
         {
             lang: 'groovy',
             code: `
-                def imagenLogo = _pdf.image(_app.file("public/imagenes/logo.png")
+                def imagenLogo = _pdf.image(_app.file("public/images/logo.png")
             `
         },
     ]}
 />
 
-O también utilizar un archivo en cualquier ruta del sistema, como en este ejemplo:
+O incluso utilizar un archivo en cualquier ruta del sistema, como en este ejemplo:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const imagenLogo = _pdf.image(_os.file("/tmp/imagenes/pdf-logo.png")
+                const imagenLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
             `
         },
         {
             lang: 'python',
             code: `
-                imagenLogo = _pdf.image(_os.file("/tmp/imagenes/pdf-logo.png")
+                imagenLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
             `
         },
         {
             lang: 'ruby',
             code: `
-                imagenLogo = _pdf.image(_os.file("/tmp/imagenes/pdf-logo.png")
+                imagenLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
             `
         },
         {
             lang: 'kotlin',
             code: `
-                val imagenLogo = _pdf.image(_os.file("/tmp/imagenes/pdf-logo.png")
+                val imagenLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
             `
         },
         {
             lang: 'groovy',
             code: `
-                def imagenLogo = _pdf.image(_os.file("/tmp/imagenes/pdf-logo.png")
+                def imagenLogo = _pdf.image(_os.file("/tmp/images/pdf-logo.png")
             `
         },
     ]}
@@ -693,9 +693,9 @@ Para añadir una imagen en una posición fija:
 
 En el código anterior, en el método `setFixedPosition`, el primer parámetro es la posición X (`100`) y el segundo parámetro es la posición Y (`500`).
 
-**Atención:** si la Y se define con el valor `0` significa que queda en el fondo de la página, así que para subir es necesario aumentar el valor de la Y; cuanto mayor sea el valor de la Y, más arriba aparecerá, pero si es demasiado alto y supera el largo de la página, no será visible.
+**Atención:** si el valor de Y se define como `0`, significa que queda en el fondo de la página; por tanto, para subirlo hay que aumentar el valor de Y. Cuanto mayor sea el valor de Y, más arriba aparecerá, pero si es demasiado alto y supera la longitud de la página, no será visible.
 
-> Documentación con todos los métodos del objeto [Imagen de iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Image.html).
+> Documentación con todos los métodos del objeto de [Imagen de iText](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Image.html).
 
 ## Tabla
 
@@ -703,11 +703,11 @@ Es posible crear tablas, lo que permite presentar un conjunto de datos de forma 
 
 El número de columnas de la tabla se define con el parámetro: `_pdf.table(numeroColumnas)`
 
-En el ejemplo de abajo, `numeroColumnas` es el número `1`, es decir, una columna.
+En el ejemplo siguiente, `numeroColumnas` es el número `1`, es decir, una columna.
 
 Como añadimos dos celdas a la tabla, la segunda celda pasa a la línea siguiente.
 
-Observa:
+Observe:
 
 <PolyglotCode
     codes={[
@@ -743,11 +743,11 @@ Observa:
 
 Con el método `addCell` se permite insertar la definición de las celdas con su respectivo contenido.
 
-> Documentación con todos los métodos del objeto [Celda de iText](https://api.itextpdf.com/iText/java//8.0.3/com/itextpdf/layout/element/Cell.html).
+> Documentación con todos los métodos del objeto de [Celda de iText](https://api.itextpdf.com/iText/java//8.0.3/com/itextpdf/layout/element/Cell.html).
 
 ## Cerrar y guardar el documento
 
-El documento solo se guarda o genera totalmente cuando se llama al método `close`, de la siguiente forma:
+El documento solo se guarda o genera por completo cuando se llama al método `close`, de la siguiente forma:
 
 <PolyglotCode
     codes={[
@@ -760,7 +760,7 @@ El documento solo se guarda o genera totalmente cuando se llama al método `clos
     ]}
 />
 
-Dónde se genera el documento se define en la inicialización; por lo tanto, es en la inicialización del documento donde definimos dónde se generará el documento final, ya sea en la salida de datos del servicio (`output`) o en un archivo.
+El lugar donde se genera el documento se define en la inicialización; por tanto, es en la inicialización del documento donde definimos dónde se generará el documento final, si será en la salida de datos del servicio (`output`) o en un archivo.
 
 ## Editar archivo
 
@@ -842,7 +842,7 @@ Ejemplo para editar un documento en el `storage` de la aplicación:
     ]}
 />
 
-Utiliza un documento como base pero guarda los cambios en un nuevo archivo PDF:
+Utiliza un documento como base, pero guarda los cambios en un nuevo archivo PDF:
 
 <PolyglotCode
     codes={[
@@ -894,7 +894,7 @@ Utiliza un documento como base pero guarda los cambios en un nuevo archivo PDF:
     ]}
 />
 
-Ejemplo usando como base un documento en el `storage` pero lo guarda en otro:
+Ejemplo usando como base un documento en el `storage`, pero lo guarda en otro:
 
 <PolyglotCode
     codes={[
@@ -946,7 +946,7 @@ Ejemplo usando como base un documento en el `storage` pero lo guarda en otro:
     ]}
 />
 
-Con el documento cargado podemos añadir contenidos y, al cerrar con el método `close` al final, se genera el documento final con el nuevo contenido añadido programáticamente.
+Con el documento cargado podemos añadir contenidos y, al cerrarlo con el método `close` al final, se genera el documento final con el nuevo contenido añadido programáticamente.
 
 Ejemplo de servicio que utiliza un PDF existente como plantilla para generar una salida de archivo PDF con contenido dinámico añadido:
 
@@ -1086,9 +1086,9 @@ Utilizamos el método `extract`, que obtiene todos los datos del archivo PDF en 
     ]}
 />
 
-El JSON retornado tiene la clave `content` con todo el contenido de texto del archivo PDF y tiene la clave `metadata` con las diversas propiedades del archivo PDF.
+El JSON devuelto tiene la clave `content` con todo el contenido de texto del archivo PDF, y tiene la clave `metadata` con las distintas propiedades del archivo PDF.
 
-Aquí tienes un ejemplo del JSON retornado por `extract`:
+Aquí tiene un ejemplo del JSON devuelto por `extract`:
 
 ```json
 {
@@ -1110,7 +1110,7 @@ Aquí tienes un ejemplo del JSON retornado por `extract`:
 }
 ```
 
-Existen muchos otros datos que se obtienen en `metadata`, pero se han omitido en `...` para que el ejemplo no quede demasiado largo.
+Existen muchos otros datos que se obtienen en `metadata`, pero que se han omitido en los `...` para que el ejemplo no sea demasiado largo.
 
 ## Convertir
 
@@ -1144,7 +1144,7 @@ Ejemplo de cómo utilizarlo para leer un archivo en la raíz de la aplicación:
     ]}
 />
 
-O también utilizando un archivo en el `storage` de la aplicación:
+O incluso utilizando un archivo en el `storage` de la aplicación:
 
 <PolyglotCode
     codes={[
@@ -1187,7 +1187,7 @@ Ejemplo de cómo utilizarlo para leer un archivo en la raíz de la aplicación:
     ]}
 />
 
-O también utilizando un archivo en el `storage` de la aplicación:
+O incluso utilizando un archivo en el `storage` de la aplicación:
 
 <PolyglotCode
     codes={[
@@ -1203,7 +1203,7 @@ O también utilizando un archivo en el `storage` de la aplicación:
 ### HTML a PDF
 
 
-Es posible generar archivos PDF a partir de código HTML, utilizando el método:
+Es posible generar archivos PDF a partir de código HTML utilizando el método:
 
 <PolyglotCode
     codes={[
@@ -1223,7 +1223,7 @@ Ejemplo de cómo utilizarlo para generar un archivo de descarga en el servicio:
         {
             lang: 'javascript',
             code: `
-                const icono = _app.file("public/imagenes/icono.png");
+                const icono = _app.file("public/images/icon.png");
 
                 const archivoPdf = _pdf.fromHTML(\`
                     <html>
@@ -1289,7 +1289,7 @@ Ejemplo de cómo utilizarlo para generar un archivo de descarga en el servicio:
                                 <div>Demostración</div>
                             </div>
                             <main>
-                                <h1>PDF a partir de HTML</h1>
+                                <h1>PDF a partir del HTML</h1>
                                 <div style="text-align: center; margin: 30px 0;">
                                     <img width="50" src="\${icon.uri()}">
                                 </div>
@@ -1334,6 +1334,6 @@ Ejemplo de cómo utilizarlo para generar un archivo de descarga en el servicio:
 
 ## Vídeos
 
-A continuación, algunos vídeos de ejemplo de cómo realizar la generación de archivos PDF programáticamente:
+A continuación se muestran algunos vídeos de ejemplo sobre cómo realizar la generación de archivos PDF programáticamente:
 
-<iframe width="100%" height="420" src="https://www.youtube.com/embed/OyUzHr9hi0c?si=eTecDP0i0P_9rhG4" title="Reproductor de vídeo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/OyUzHr9hi0c?si=eTecDP0i0P_9rhG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

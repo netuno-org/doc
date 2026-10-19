@@ -6,14 +6,14 @@ sidebar_label: Client FTP
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
 
-Încărcarea și descărcarea fișierelor, gestionarea dosarelor la distanță.
+Încărcați și descărcați fișiere, gestionați dosare la distanță.
 
 ## Introducere
 
 Netuno are integrat în framework-ul său low-code un client FTP, care permite conectarea la servere, trimiterea și
-primirea fișierelor, modificarea dosarelor, printre alte operațiuni la distanță.
+primirea fișierelor, modificarea dosarelor, printre alte operații la distanță.
 
-Suportă multiple conexiuni simultane și chiar FTPS.
+Suportă multiple conexiuni simultane și, de asemenea, FTPS.
 
 Acest lucru se datorează implementării Java și open-source [Apache Commons Net](https://github.com/apache/commons-net), care
 permite Netuno să ofere aceste funcționalități în toate limbajele de _script_ prin intermediul resursei `_ftp`.
@@ -22,14 +22,14 @@ permite Netuno să ofere aceste funcționalități în toate limbajele de _scrip
 
 ## Configurare
 
-Primul pas va fi configurarea datelor de acces la FTP pe care Netuno le va utiliza pentru a realiza conexiunea.
+Primul pas va fi configurarea datelor de acces FTP pe care Netuno le va utiliza pentru a realiza conexiunea.
 
-Navigați în aplicația pe care o dezvoltați până la fișierul de configurare a mediului. În acest exemplu,
+Navigați în cadrul aplicației pe care o dezvoltați până la fișierul de configurare a mediului. În acest exemplu,
 vom utiliza fișierul de mediu de dezvoltare localizat în:
 
 - `config/_development.json`
 
-Verificați dacă nu conține deja configurațiile pentru FTP, dacă nu există încă atunci la sfârșitul fișierului de
+Verificați dacă nu conține deja configurațiile pentru FTP; dacă acestea nu există încă, atunci la sfârșitul fișierului de
 configurare (în format JSON) adăugați parametrii de configurare FTP:
 
 ```json title="config/_development.json"
@@ -38,7 +38,7 @@ configurare (în format JSON) adăugați parametrii de configurare FTP:
   "ftp": {
     "default": {
       "enabled": true,
-      "host": "meu.server.net",
+      "host": "serverul.meu.net",
       "port": 21,
       "username": "temp",
       "password": "$eCr37"
@@ -48,13 +48,13 @@ configurare (în format JSON) adăugați parametrii de configurare FTP:
 }
 ```
 
-După salvarea modificărilor, este suficient să reporniți Netuno pentru a prelua modificările configurației. Acestea fiind
+După salvarea modificărilor, este suficient să reporniți Netuno pentru a prelua modificările de configurare. Acestea sunt
 configurațiile implicite pentru conexiune, după cum indică numele `default`.
 
 Puteți adăuga mai multe configurații de conexiune FTP, dar doar una poate fi definită ca implicită.
 
-Pentru a adăuga mai multe configurații de conexiune FTP este suficient să repetați blocul de configurare implicit și să schimbați numele
-`default` cu un alt nume la alegerea dvs., vedeți exemplul:
+Pentru a adăuga mai multe configurații de conexiune FTP, este suficient să repetați blocul de configurare implicit și să înlocuiți numele
+`default` cu un alt nume ales de dvs.; vedeți exemplul:
 
 ```json title="config/_development.json"
 {
@@ -62,14 +62,14 @@ Pentru a adăuga mai multe configurații de conexiune FTP este suficient să rep
   "ftp": {
     "default": {
       "enabled": true,
-      "host": "meu.server.net",
+      "host": "serverul.meu.net",
       "port": 22,
       "username": "temp",
       "password": "$eCr37"
     },
     "altul": {
       "enabled": true,
-      "host": "meu.alt-server.net",
+      "host": "serverul.alt.net",
       "port": 22,
       "username": "temp",
       "password": "$eCr37"
@@ -79,8 +79,7 @@ Pentru a adăuga mai multe configurații de conexiune FTP este suficient să rep
 }
 ```
 
-O configurație similară exemplului de mai sus va permite utilizarea contului `default` atunci când este apelată în următorul
-mod în cod:
+O configurație similară exemplului de mai sus va permite utilizarea contului default atunci când este apelată în cod după cum urmează:
 
 <PolyglotCode
     codes={[
@@ -117,8 +116,8 @@ mod în cod:
     ]}
 />
 
-Și pentru a utiliza configurația `altul` este suficient să adăugați numele configurației ca parametru la funcția
-`_ftp.init()` în felul următor:
+Iar pentru a utiliza configurația `altul`, trebuie doar să adăugați numele configurației ca parametru la funcția
+`_ftp.init()` după cum urmează:
 
 <PolyglotCode
     codes={[
@@ -155,7 +154,7 @@ mod în cod:
     ]}
 />
 
-> Dacă nu adăugați un nume de configurație ca parametru, va fi utilizat întotdeauna contul `default`.
+> Dacă nu adăugați un nume de configurație ca parametru, va fi utilizat întotdeauna contul default.
 
 ## Conexiune
 
@@ -172,28 +171,28 @@ mod în cod:
     ]}
 />
 
-## Dosar de lucru
+## Director de lucru
 
-La efectuarea operațiilor în FTP este necesar să definiți ce dosar va fi utilizat.
+Când efectuați operații pe FTP, este necesar să definiți ce dosar va fi utilizat.
 
-Prin definirea dosarului de lucru vom putea realiza diferitele manipulări pornind de la acest dosar de bază.
+Prin definirea directorului de lucru vom putea realiza diversele manipulări pornind de la acest dosar de bază.
 
-Pentru a schimba dosarul de lucru:
+Pentru a schimba directorul de lucru:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                ftp.changeWorkingDirectory("meu/dosar/baza")
+                ftp.changeWorkingDirectory("dosar/meu/de/baza")
             `
         },
     ]}
 />
 
-Acum orice operație va fi făcută în acest dosar sau pornind de la acesta.
+Acum orice operație va fi efectuată în acest dosar sau pornind de la el.
 
-## Crearea și Ștergerea Dosarelor
+## Crearea și ștergerea dosarelor
 
 Pentru a crea un dosar, este suficient să indicați calea acestui dosar:
 
@@ -225,7 +224,7 @@ Pentru a șterge sau elimina dosare:
 
 ## Redenumire
 
-Este posibilă redenumirea fișierelor sau dosarelor, se transmite calea veche și apoi noua cale:
+Este posibil să redenumiți fișiere sau dosare; se transmite calea veche și apoi noua cale:
 
 <PolyglotCode
     codes={[
@@ -238,7 +237,7 @@ Este posibilă redenumirea fișierelor sau dosarelor, se transmite calea veche �
     ]}
 />
 
-## Încărcarea fișierelor
+## Trimiterea fișierelor
 
 Pentru a încărca un fișier text:
 
@@ -247,7 +246,7 @@ Pentru a încărca un fișier text:
         {
             lang: 'javascript',
             code: `
-                ftp.uploadText("fisierul-meu.txt", "Salut FTP! Acesta este conținutul meu...")
+                ftp.uploadText("fisier-meu.txt", "Salut FTP! Acesta este conținutul meu...")
             `
         },
     ]}
@@ -262,35 +261,35 @@ Pentru a obține un fișier text:
         {
             lang: 'javascript',
             code: `
-                const continutFisier = ftp.downloadText("fisierul-meu.txt")
+                const continutFisier = ftp.downloadText("fisier-meu.txt")
                 _out.println(continutFisier)
             `
         },
         {
             lang: 'python',
             code: `
-                continutFisier = ftp.downloadText("fisierul-meu.txt")
+                continutFisier = ftp.downloadText("fisier-meu.txt")
                 _out.println(continutFisier)
             `
         },
         {
             lang: 'ruby',
             code: `
-                continutFisier = ftp.downloadText("fisierul-meu.txt")
+                continutFisier = ftp.downloadText("fisier-meu.txt")
                 _out.println(continutFisier)
             `
         },
         {
             lang: 'kotlin',
             code: `
-                val continutFisier = ftp.downloadText("fisierul-meu.txt")
+                val continutFisier = ftp.downloadText("fisier-meu.txt")
                 _out.println(continutFisier)
             `
         },
         {
             lang: 'groovy',
             code: `
-                def continutFisier = ftp.downloadText("fisierul-meu.txt")
+                def continutFisier = ftp.downloadText("fisier-meu.txt")
                 _out.println(continutFisier)
             `
         },
@@ -299,7 +298,7 @@ Pentru a obține un fișier text:
 
 ## Listarea elementelor din dosar
 
-Listează tot conținutul unui dosar:
+Listează întregul conținut al unui dosar:
 
 <PolyglotCode
     codes={[
@@ -384,4 +383,4 @@ Listează tot conținutul unui dosar:
     ]}
 />
 
-> Returnează o listă de obiecte de tip [FTPFile](/docs/library/objects/FTPFile).
+> Returnează o listă de obiecte de tipul [FTPFile](/docs/library/objects/FTPFile).

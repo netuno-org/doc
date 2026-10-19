@@ -1,29 +1,29 @@
 ---
 sidebar_position: 2
 id: advanced
-title: Instalación avanzada
-sidebar_label: Instalación avanzada
+title: Instalación Avanzada
+sidebar_label: Instalación Avanzada
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Instalación avanzada
+# Instalación Avanzada
 
-Si hay algún problema con la instalación rápida mediante script, o si se desea tener una mejor comprensión de cómo funciona la instalación de Netuno, o por cualquier otro motivo, se puede realizar la instalación manual.
+Si hay algún problema con la instalación rápida mediante script, o si se quiere entender mejor cómo funciona la instalación de Netuno, o por cualquier otro motivo, se puede realizar la instalación manual.
 
-Elija la versión deseada. La selección realizada aquí se aplicará a todos los bloques de comandos de esta página.
+Elige la versión deseada. La selección que hagas aquí se aplicará a todos los bloques de comandos de esta página.
 
 <Tabs groupId="versao">
-  <TabItem value="stable" label="Versión estable" default>
+  <TabItem value="stable" label="Versión Estable" default>
 
-La **Versión estable** es la edición homologada de Netuno. Ha pasado por pruebas rigurosas y está totalmente lista para su uso en entornos de producción.
+La **Versión Estable** es la edición homologada de Netuno. Ha superado pruebas rigurosas y está totalmente lista para su uso en entornos de producción.
 
 </TabItem>
-  <TabItem value="testing" label="Versión en pruebas">
+  <TabItem value="testing" label="Versión en Pruebas">
 
 :::danger NO USAR EN PRODUCCIÓN
-La **Versión en pruebas** contiene las funcionalidades más recientes y las implementaciones en curso. Al ser experimental, puede presentar inestabilidades. Recomendamos su uso solo para conocer nuevas funcionalidades, realizar pruebas o contribuir con el ecosistema de la plataforma.
+La **Versión en Pruebas** contiene las funcionalidades más recientes y las implementaciones en curso. Al ser experimental, puede presentar inestabilidades. Recomendamos su uso únicamente para conocer nuevas funcionalidades, realizar pruebas o contribuir con el ecosistema de la plataforma.
 :::
 
   </TabItem>
@@ -31,33 +31,33 @@ La **Versión en pruebas** contiene las funcionalidades más recientes y las imp
 
 ## Requisitos previos
 
-Antes de comenzar, verifique lo que necesita tener instalado en su equipo:
+Antes de empezar, comprueba qué necesitas tener instalado en tu ordenador:
 
-- **Java** *(Solo para el instalador)*
+- **Java** *(solo para el instalador)*
 
-Es necesario tener **Java** previamente instalado en su sistema operativo. Se usará **exclusivamente** para ejecutar el script inicial de instalación de Netuno.
+Es necesario tener **Java** previamente instalado en tu sistema operativo. Se utilizará **exclusivamente** para ejecutar el script inicial de instalación de Netuno.
 
-- **GraalVM** *(Instalación automática)* 
+- **GraalVM** *(instalación automática)*
 
-Durante la instalación, el motor **GraalVM** se descarga y configura automáticamente dentro de la propia carpeta de Netuno. A partir de ese momento, el Java del GraalVM aislado se utilizará para ejecutar la plataforma, garantizando estabilidad y alto rendimiento sin interferir en las configuraciones globales de su máquina.
+Durante la instalación, el motor **GraalVM** se descarga y configura automáticamente dentro de la propia carpeta de Netuno. A partir de ese momento, se utilizará el Java aislado de GraalVM para ejecutar la plataforma, garantizando estabilidad y alto rendimiento sin interferir en las configuraciones globales de tu máquina.
 
-Para obtener más información sobre la tecnología, visite: [GraalVM](https://www.graalvm.org/).
+Para obtener más información sobre la tecnología, visita: [GraalVM](https://www.graalvm.org/).
 
 :::info Los requisitos de Frontend son opcionales
-La instalación de herramientas de frontend (como Node.js, NPM o Yarn) es totalmente opcional. Solo necesitará configurarlas si su objetivo es desarrollar interfaces avanzadas en modo full-stack.
+La instalación de herramientas de frontend (como Node.js, NPM o Yarn) es totalmente opcional. Solo tendrás que configurarlas si tu objetivo es desarrollar interfaces avanzadas en modo full-stack.
 :::
 
 ### Backend - Java
 
-Esta etapa garantiza que el entorno esté preparado para ejecutar el instalador de la plataforma. Es necesario tener **Java versión 11 o superior** instalado.
+Este paso garantiza que el entorno esté preparado para ejecutar el instalador de la plataforma. Es necesario tener **Java versión 11 o superior** instalado.
 
-Verifique si Java ya está instalado ejecutando el comando siguiente en el terminal:
+Comprueba si Java ya está instalado ejecutando el siguiente comando en el terminal:
 
 ```bash
 java -version
 ```
 
-Si no está instalado, recomendamos instalar **Java de código abierto**:
+Si no está instalado, recomendamos la instalación de **Java de código abierto**:
 
 - Windows y macOS: [Java OpenJDK Eclipse Temurin](https://adoptium.net/pt-BR)
 
@@ -69,27 +69,27 @@ apt install default-jdk-headless
 
 ### Frontend - Bun
 
-Para desarrollar interfaces de usuario (UI / Frontend), recomendamos usar **Bun**, la herramienta estándar oficial del ecosistema Netuno para la compilación de frontend.
+Para desarrollar interfaces de usuario (UI / Frontend), recomendamos el uso de **Bun**, la herramienta estándar oficial del ecosistema Netuno para la compilación de frontend.
 
 #### ¿Por qué usar Bun?
 
 **Bun** es una alternativa moderna y altamente optimizada a Node.js. Destaca en el entorno Netuno por ofrecer:
 
-- **Alto rendimiento:** Ejecución e instalación de dependencias visiblemente más rápidas.
-- **Productividad:** Mejor desempeño en el flujo diario de desarrollo de interfaces.
-- **Integración nativa:** Todos los proyectos de ejemplo y plantillas de Netuno ya vienen preconfigurados para funcionar con Bun.
+- **Alto rendimiento:** ejecución e instalación de dependencias visiblemente más rápidas.
+- **Productividad:** mejor desempeño en el flujo diario de desarrollo de interfaces.
+- **Integración nativa:** todos los proyectos de ejemplo y plantillas de Netuno ya vienen preconfigurados para funcionar con Bun.
 
-Acceda a la guía en: [Instalación de Bun](/docs/academy/website/bun)
+Accede a la guía en: [Instalación de Bun](/docs/academy/website/bun)
 
-Netuno no limita sus elecciones tecnológicas. Si lo prefiere, **es posible utilizar Node.js con NPM, PNPM, Yarn** o cualquier otro gestor de paquetes. La elección del stack de frontend queda enteramente a su criterio.
+Netuno no limita tus elecciones tecnológicas. Si lo prefieres, **es posible utilizar Node.js con NPM, PNPM, Yarn** o cualquier otro gestor de paquetes. La elección del stack de frontend queda enteramente a tu criterio.
 
-:::tip MANTENGA LAS HERRAMIENTAS ACTUALIZADAS
-Independientemente de la tecnología elegida, utilice siempre las versiones más recientes para garantizar compatibilidad, seguridad y rendimiento.
+:::tip MANTÉN LAS HERRAMIENTAS ACTUALIZADAS
+Independientemente de la tecnología elegida, utiliza siempre las versiones más recientes para garantizar compatibilidad, seguridad y rendimiento.
 :::
 
 ## Linux o macOS
 
-La mayoría de las distribuciones Linux y macOS ya incluyen **cURL** o **Wget** de forma predeterminada. Verifique cuál está disponible:
+La mayoría de las distribuciones Linux y macOS ya incluyen **cURL** o **Wget** por defecto. Comprueba cuál está disponible:
 
 ```bash
 curl --version
@@ -98,18 +98,18 @@ curl --version
 wget --version
 ```
 
-Siga los pasos siguientes:
+Sigue los pasos a continuación:
 
-**1. Cree la carpeta y acceda a ella:**
+**1. Crea la carpeta y accede a ella:**
 
 ```bash
 mkdir -p netuno && cd netuno
 ```
 
-**2. Descargue el instalador** (elija solo un método):
+**2. Descarga el instalador** (elige solo un método):
 
 <Tabs groupId="versao">
-  <TabItem value="stable" label="Versión estable" default>
+  <TabItem value="stable" label="Versión Estable" default>
 
 **Con cURL:**
 ```bash
@@ -122,7 +122,7 @@ wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setu
 ```
 
   </TabItem>
-  <TabItem value="testing" label="Versión en pruebas">
+  <TabItem value="testing" label="Versión en Pruebas">
 
 **Con cURL:**
 ```bash
@@ -137,17 +137,17 @@ wget https://github.com/netuno-org/platform/releases/download/testing/netuno-set
   </TabItem>
 </Tabs>
 
-**3. Ejecute la instalación:**
+**3. Ejecuta la instalación:**
 
 <Tabs groupId="versao">
-  <TabItem value="stable" label="Versión estable" default>
+  <TabItem value="stable" label="Versión Estable" default>
 
 ```bash
 java -jar netuno-setup.jar install
 ```
 
   </TabItem>
-  <TabItem value="testing" label="Versión en pruebas">
+  <TabItem value="testing" label="Versión en Pruebas">
 
 ```bash
 java -jar netuno-setup.jar install version=testing
@@ -156,26 +156,26 @@ java -jar netuno-setup.jar install version=testing
   </TabItem>
 </Tabs>
 
-:::caution ATENCIÓN 
-macOS posee un mecanismo de seguridad nativo (Gatekeeper) que puede bloquear aplicaciones descargadas vía terminal.
+:::caution ATENCIÓN
+macOS tiene un mecanismo de seguridad nativo (Gatekeeper) que puede bloquear aplicaciones descargadas mediante el terminal.
 :::
 
-En **macOS**, para garantizar que Netuno funcione sin errores de permisos, ejecute el comando siguiente inmediatamente después del paso 3, aún dentro de la carpeta `netuno`.
+En **macOS**, para garantizar que Netuno funcione sin errores de permisos, ejecuta el comando siguiente inmediatamente después del paso 3, todavía dentro de la carpeta `netuno`.
 
 ```bash
 sudo xattr -r -d com.apple.quarantine .
 ```
 
-El sistema solicitará la contraseña de administrador de su Mac para confirmar.
+El sistema solicitará la contraseña de administrador de tu Mac para confirmar.
 
 ## Windows
 
-Utilizaremos **PowerShell** para realizar la descarga y la instalación. Abra PowerShell desde el menú Inicio escribiendo `powershell`.
+Utilizaremos **PowerShell** para realizar la descarga y la instalación. Abre PowerShell desde el menú Inicio escribiendo `powershell`.
 
-**1. Cree la carpeta, acceda a ella y descargue el instalador**. Copie el bloque completo y pulse Enter:
+**1. Crea la carpeta, accede a ella y descarga el instalador**. Copia el bloque completo y pulsa Intro:
 
 <Tabs groupId="versao">
-  <TabItem value="stable" label="Versión estable" default>
+  <TabItem value="stable" label="Versión Estable" default>
 
 ```powershell
 md netuno; cd netuno
@@ -183,7 +183,7 @@ Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download
 ```
 
   </TabItem>
-  <TabItem value="testing" label="Versión en pruebas">
+  <TabItem value="testing" label="Versión en Pruebas">
 
 ```powershell
 md netuno; cd netuno
@@ -193,17 +193,17 @@ Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download
   </TabItem>
 </Tabs>
 
-**2. Ejecute la instalación:**
+**2. Ejecuta la instalación:**
 
 <Tabs groupId="versao">
-  <TabItem value="stable" label="Versión estable" default>
+  <TabItem value="stable" label="Versión Estable" default>
 
 ```powershell
 java -jar netuno-setup.jar install
 ```
 
   </TabItem>
-  <TabItem value="testing" label="Versión en pruebas">
+  <TabItem value="testing" label="Versión en Pruebas">
 
 ```powershell
 java -jar netuno-setup.jar install version=testing
@@ -212,21 +212,21 @@ java -jar netuno-setup.jar install version=testing
   </TabItem>
 </Tabs>
 
-:::caution ATENCIÓN 
-La instalación estándar generalmente no requiere privilegios elevados. Sin embargo, si recibe un mensaje de "Acceso denegado", cierre PowerShell, vuelva a abrirlo como **Administrador** y ejecute el comando de nuevo.
+:::caution ATENCIÓN
+La instalación estándar generalmente no requiere privilegios elevados. Sin embargo, si recibes un mensaje de «Acceso denegado», cierra PowerShell, vuelve a abrirlo como **Administrador** y ejecuta el comando de nuevo.
 :::
 
 ## Empezar de cero
 
 Para limpiar el entorno y empezar de cero:
 
-**1. Vuelva un nivel en el terminal:**
+**1. Vuelve un nivel atrás en el terminal:**
 
 ```bash
 cd ..
 ```
 
-**2. Elimine la carpeta con errores:**
+**2. Elimina la carpeta defectuosa:**
 
 <Tabs groupId="os">
   <TabItem value="linux-mac" label="Linux o macOS" default>
@@ -245,4 +245,4 @@ rmdir /s /q netuno
   </TabItem>
 </Tabs>
 
-**3. Reinicie la instalación**.
+**3. Reinicia la instalación**.

@@ -5,26 +5,26 @@ title: Execution
 sidebar_label: Execution
 ---
 
-With the project installed and configured, it's time to run it.
+With the project installed and configured, it is time to run it.
 
-## Start the server
+## Starting the server
 
-In the Netuno root directory, run:
+In Netuno's root directory, run:
 
 ```
 ./netuno server app=cluar
 ```
 
-This starts the back-end and the front-end at the same time.
+This starts the back end and front end simultaneously.
 
-> The first run may take longer, due to the front-end dependencies being installed.
+> The first run may take longer due to installing the front-end dependencies.
 
 By default:
 
-- The Netuno backoffice is available at [http://localhost:9000/](http://localhost:9000/)
-- The services OpenAPI is available at [http://localhost:9000/services/_openapi](http://localhost:9000/services/_openapi)
+- Netuno's backoffice is available at [http://localhost:9000/](http://localhost:9000/)
+- The services' OpenAPI is at [http://localhost:9000/services/_openapi](http://localhost:9000/services/_openapi)
 
-## Start the website
+## Starting the website
 
 To start the website manually:
 
@@ -35,13 +35,13 @@ bun run dev
 
 By default, the website is available at [http://localhost:3000/](http://localhost:3000/)
 
-> The website can be made to start automatically together with the Netuno server, by enabling the corresponding command in `config/_development.json` — see [Configuration](/docs/academy/cluar/configuration#7-automatic-website-startup-optional).
+> It is possible to make the website start automatically together with the Netuno server by enabling the corresponding command in `config/_development.json` — see [Configuration](/docs/academy/cluar/configuration#7-automatic-website-startup-optional).
 
 ## Troubleshooting
 
 ### GLIBC version error when running `bun run dev`
 
-If an error like this shows up when starting the website:
+If an error like this appears when starting the website:
 
 ```
 Error: Cannot find module @rollup/rollup-linux-x64-gnu. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory.
@@ -50,9 +50,9 @@ Error: Cannot find module @rollup/rollup-linux-x64-gnu. npm has a bug related to
 code: 'ERR_DLOPEN_FAILED'
 ```
 
-This isn't actually the npm optional dependencies bug mentioned in the message — it's a **GLIBC version mismatch**: Rollup's native binary was compiled requiring `GLIBC_2.32` or newer, and older Linux distributions (Ubuntu 20.04, for example, which ships with glibc 2.31) don't have it available.
+This is not the npm optional dependency bug mentioned in the message, but rather a **GLIBC version incompatibility**: Rollup's native binary was compiled requiring `GLIBC_2.32` or newer, and older Linux distributions (for example, Ubuntu 20.04, which ships glibc 2.31) do not have it available.
 
-To fix it, force Rollup to use the WASM build instead of the native one, by adding an `overrides` field at the root of the website's `package.json`:
+To resolve it, force Rollup to use the WASM version instead of the native one by adding an `overrides` field at the root of the website's `package.json`:
 
 ```json
 "overrides": {
@@ -60,7 +60,7 @@ To fix it, force Rollup to use the WASM build instead of the native one, by addi
 }
 ```
 
-Then, reinstall the dependencies:
+Then reinstall the dependencies:
 
 ```
 rm -rf node_modules bun.lock bun.lockb

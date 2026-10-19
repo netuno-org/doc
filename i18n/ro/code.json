@@ -1,476 +1,476 @@
 {
   "theme.ErrorPageContent.title": {
-    "message": "Această pagină a generat o eroare.",
-    "description": "The title of the fallback page when the page crashed"
+    "message": "Această pagină a întâmpinat o eroare.",
+    "description": "Titlul paginii de rezervă atunci când pagina s-a blocat"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
     "message": "Înapoi sus",
-    "description": "The ARIA label for the back to top button"
+    "description": "Eticheta ARIA pentru butonul de întoarcere la început"
   },
   "theme.blog.archive.title": {
     "message": "Arhivă",
-    "description": "The page & hero title of the blog archive page"
+    "description": "Titlul paginii și al secțiunii hero pentru pagina de arhivă a blogului"
   },
   "theme.blog.archive.description": {
     "message": "Arhivă",
-    "description": "The page & hero description of the blog archive page"
+    "description": "Descrierea paginii și a secțiunii hero pentru pagina de arhivă a blogului"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Navigare în pagina de listare a blogului",
-    "description": "The ARIA label for the blog pagination"
+    "message": "Navigarea paginii de listare a blogului",
+    "description": "Eticheta ARIA pentru paginarea blogului"
   },
   "theme.blog.paginator.newerEntries": {
     "message": "Conținut mai nou",
-    "description": "The label used to navigate to the newer blog posts page (previous page)"
+    "description": "Eticheta folosită pentru a naviga la postările mai noi din blog (pagina anterioară)"
   },
   "theme.blog.paginator.olderEntries": {
     "message": "Conținut mai vechi",
-    "description": "The label used to navigate to the older blog posts page (next page)"
+    "description": "Eticheta folosită pentru a naviga la postările mai vechi din blog (pagina următoare)"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Navigare în pagina de postări a blogului",
-    "description": "The ARIA label for the blog posts pagination"
+    "message": "Navigarea paginii de postări ale blogului",
+    "description": "Eticheta ARIA pentru paginarea postărilor din blog"
   },
   "theme.blog.post.paginator.newerPost": {
     "message": "Postare mai nouă",
-    "description": "The blog post button label to navigate to the newer/previous post"
+    "description": "Eticheta butonului din blog pentru a naviga la postarea mai nouă/anterioară"
   },
   "theme.blog.post.paginator.olderPost": {
     "message": "Postare mai veche",
-    "description": "The blog post button label to navigate to the older/next post"
+    "description": "Eticheta butonului din blog pentru a naviga la postarea mai veche/următoare"
   },
   "theme.tags.tagsPageLink": {
     "message": "Vezi toate etichetele",
-    "description": "The label of the link targeting the tag list page"
+    "description": "Eticheta linkului către pagina cu lista de etichete"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "Comută între modul deschis și întunecat (modul {mode} activat)",
-    "description": "The ARIA label for the navbar color mode toggle"
+    "message": "Comută între modul luminos și întunecat (modul {mode} activat)",
+    "description": "Eticheta ARIA pentru comutatorul modului de culoare din bara de navigare"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "mod întunecat",
-    "description": "The name for the dark color mode"
+    "description": "Numele pentru modul de culoare întunecat"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "mod deschis",
-    "description": "The name for the light color mode"
+    "message": "mod luminos",
+    "description": "Numele pentru modul de culoare luminos"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
-    "message": "Cale de navigare",
-    "description": "The ARIA label for the breadcrumbs"
+    "message": "Firimituri de navigare",
+    "description": "Eticheta ARIA pentru firimiturile de navigare"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "1 element|{count} elemente",
-    "description": "The default description for a category card in the generated index about how many items this category includes"
+    "message": "1 element|{count} elemente|{count} de elemente",
+    "description": "Descrierea implicită pentru un card de categorie din indexul generat despre câte elemente include această categorie"
   },
   "theme.docs.paginator.navAriaLabel": {
     "message": "Pagini de documentație",
-    "description": "The ARIA label for the docs pagination"
+    "description": "Eticheta ARIA pentru paginarea documentației"
   },
   "theme.docs.paginator.previous": {
-    "message": "Precedent",
-    "description": "The label used to navigate to the previous doc"
+    "message": "Anterior",
+    "description": "Eticheta folosită pentru a naviga la documentul anterior"
   },
   "theme.docs.paginator.next": {
     "message": "Următor",
-    "description": "The label used to navigate to the next doc"
+    "description": "Eticheta folosită pentru a naviga la documentul următor"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "Un document etichetat|{count} documente etichetate",
-    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+    "message": "Un document etichetat|{count} documente etichetate|{count} de documente etichetate",
+    "description": "Etichetă pluralizată pentru \"{count} documente etichetate\". Folosiți cât mai multe forme de plural (separate prin \"|\") cât permite limba dvs. (consultați https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
     "message": "{nDocsTagged} cu \"{tagName}\"",
-    "description": "The title of the page for a docs tag"
+    "description": "Titlul paginii pentru o etichetă de documentație"
   },
   "theme.docs.versionBadge.label": {
     "message": "Versiune: {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "Aceasta este documentația nelansată pentru {siteTitle} {versionLabel}.",
-    "description": "The label used to tell the user that he's browsing an unreleased doc version"
+    "message": "Aceasta este o documentație nepublicată pentru {siteTitle} {versionLabel}.",
+    "description": "Eticheta folosită pentru a-i spune utilizatorului că navighează într-o versiune de documentație nepublicată"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
     "message": "Aceasta este documentația pentru {siteTitle} {versionLabel}, care nu mai este întreținută activ.",
-    "description": "The label used to tell the user that he's browsing an unmaintained doc version"
+    "description": "Eticheta folosită pentru a-i spune utilizatorului că navighează într-o versiune de documentație neîntreținută"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
-    "message": "Pentru documentația actualizată, vedeți: {latestVersionLink} ({versionLabel}).",
-    "description": "The label used to tell the user to check the latest version"
+    "message": "Pentru documentația actualizată, vezi: {latestVersionLink} ({versionLabel}).",
+    "description": "Eticheta folosită pentru a-i spune utilizatorului să verifice cea mai recentă versiune"
   },
   "theme.docs.versions.latestVersionLinkLabel": {
     "message": "ultima versiune",
-    "description": "The label used for the latest version suggestion link label"
+    "description": "Eticheta linkului pentru sugestia celei mai recente versiuni"
   },
   "theme.common.editThisPage": {
     "message": "Editează această pagină",
-    "description": "The link label to edit the current page"
+    "description": "Eticheta linkului pentru editarea paginii curente"
   },
   "theme.common.headingLinkTitle": {
     "message": "Link direct către {heading}",
-    "description": "Title for link to heading"
+    "description": "Titlul linkului către titlu"
   },
   "theme.lastUpdated.atDate": {
     "message": " la {date}",
-    "description": "The words used to describe on which date a page has been last updated"
+    "description": "Cuvintele folosite pentru a descrie data la care o pagină a fost actualizată ultima dată"
   },
   "theme.lastUpdated.byUser": {
     "message": " de {user}",
-    "description": "The words used to describe by who the page has been last updated"
+    "description": "Cuvintele folosite pentru a descrie de către cine a fost actualizată ultima dată pagina"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
     "message": "Ultima actualizare {atDate}{byUser}",
-    "description": "The sentence used to display when a page has been last updated, and by who"
+    "description": "Propoziția folosită pentru a afișa când a fost actualizată ultima dată o pagină și de către cine"
   },
   "theme.navbar.mobileVersionsDropdown.label": {
     "message": "Versiuni",
-    "description": "The label for the navbar versions dropdown on mobile view"
+    "description": "Eticheta pentru meniul derulant de versiuni din bara de navigare pe mobil"
   },
   "theme.NotFound.title": {
     "message": "Pagina nu a fost găsită",
-    "description": "The title of the 404 page"
+    "description": "Titlul paginii 404"
   },
   "theme.tags.tagsListLabel": {
     "message": "Etichete:",
-    "description": "The label alongside a tag list"
+    "description": "Eticheta afișată lângă o listă de etichete"
   },
   "theme.admonition.caution": {
     "message": "precauție",
-    "description": "The default label used for the Caution admonition (:::caution)"
+    "description": "Eticheta implicită folosită pentru admonițiunea Caution (:::caution)"
   },
   "theme.admonition.danger": {
     "message": "pericol",
-    "description": "The default label used for the Danger admonition (:::danger)"
+    "description": "Eticheta implicită folosită pentru admonițiunea Danger (:::danger)"
   },
   "theme.admonition.info": {
     "message": "info",
-    "description": "The default label used for the Info admonition (:::info)"
+    "description": "Eticheta implicită folosită pentru admonițiunea Info (:::info)"
   },
   "theme.admonition.note": {
     "message": "notă",
-    "description": "The default label used for the Note admonition (:::note)"
+    "description": "Eticheta implicită folosită pentru admonițiunea Note (:::note)"
   },
   "theme.admonition.tip": {
     "message": "sfat",
-    "description": "The default label used for the Tip admonition (:::tip)"
+    "description": "Eticheta implicită folosită pentru admonițiunea Tip (:::tip)"
   },
   "theme.admonition.warning": {
     "message": "avertisment",
-    "description": "The default label used for the Warning admonition (:::warning)"
+    "description": "Eticheta implicită folosită pentru admonițiunea Warning (:::warning)"
   },
   "theme.AnnouncementBar.closeButtonAriaLabel": {
     "message": "Închide",
-    "description": "The ARIA label for close button of announcement bar"
+    "description": "Eticheta ARIA pentru butonul de închidere al barei de anunțuri"
   },
   "theme.blog.sidebar.navAriaLabel": {
-    "message": "Navigare postări recente blog",
-    "description": "The ARIA label for recent posts in the blog sidebar"
+    "message": "Navigarea postărilor recente din blog",
+    "description": "Eticheta ARIA pentru postările recente din bara laterală a blogului"
   },
   "theme.CodeBlock.copied": {
     "message": "Copiat",
-    "description": "The copied button label on code blocks"
+    "description": "Eticheta butonului de copiere de pe blocurile de cod"
   },
   "theme.CodeBlock.copyButtonAriaLabel": {
     "message": "Copiază codul în clipboard",
-    "description": "The ARIA label for copy code blocks button"
+    "description": "Eticheta ARIA pentru butonul de copiere a blocurilor de cod"
   },
   "theme.CodeBlock.copy": {
     "message": "Copiază",
-    "description": "The copy button label on code blocks"
+    "description": "Eticheta butonului de copiere de pe blocurile de cod"
   },
   "theme.CodeBlock.wordWrapToggle": {
-    "message": "Comută încadrarea textului",
-    "description": "The title attribute for toggle word wrapping button of code block lines"
+    "message": "Comută împărțirea rândurilor",
+    "description": "Atributul title pentru butonul de comutare a împărțirii rândurilor în blocurile de cod"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
     "message": "Extinde categoria din bara laterală '{label}'",
-    "description": "The ARIA label to expand the sidebar category"
+    "description": "Eticheta ARIA pentru extinderea categoriei din bara laterală"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
     "message": "Restrânge categoria din bara laterală '{label}'",
-    "description": "The ARIA label to collapse the sidebar category"
+    "description": "Eticheta ARIA pentru restrângerea categoriei din bara laterală"
   },
   "theme.NavBar.navAriaLabel": {
     "message": "Principal",
-    "description": "The ARIA label for the main navigation"
+    "description": "Eticheta ARIA pentru navigarea principală"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "Limbi",
-    "description": "The label for the mobile language switcher dropdown"
+    "description": "Eticheta pentru meniul derulant de schimbare a limbii pe mobil"
   },
   "theme.NotFound.p1": {
     "message": "Nu am putut găsi ceea ce căutați.",
-    "description": "The first paragraph of the 404 page"
+    "description": "Primul paragraf al paginii 404"
   },
   "theme.NotFound.p2": {
-    "message": "Contactați proprietarul site-ului care v-a adus aici și informați-l că linkul este defect.",
-    "description": "The 2nd paragraph of the 404 page"
+    "message": "Contactați proprietarul site-ului care v-a adus aici și anunțați-l că linkul este defect.",
+    "description": "Al doilea paragraf al paginii 404"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Pe această pagină",
-    "description": "The label used by the button on the collapsible TOC component"
+    "description": "Eticheta folosită de butonul din componenta TOC pliabilă"
   },
   "theme.blog.post.readMore": {
     "message": "Citește mai mult",
-    "description": "The label used in blog post item excerpts to link to full blog posts"
+    "description": "Eticheta folosită în extrasele postărilor din blog pentru a face link către postările complete"
   },
   "theme.blog.post.readMoreLabel": {
-    "message": "Citește mai mult despre {title}",
-    "description": "The ARIA label for the link to full blog posts from excerpts"
+    "message": "Citește mai multe despre {title}",
+    "description": "Eticheta ARIA pentru linkul către postările complete din extrase"
   },
   "theme.blog.post.readingTime.plurals": {
-    "message": "Citire de un minut|Citire de {readingTime} minute",
-    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+    "message": "Un minut de citire|{readingTime} minute de citire|{readingTime} de minute de citire",
+    "description": "Etichetă pluralizată pentru \"{readingTime} min read\". Folosiți cât mai multe forme de plural (separate prin \"|\") cât permite limba dvs. (consultați https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.breadcrumbs.home": {
     "message": "Pagina principală",
-    "description": "The ARIA label for the home page in the breadcrumbs"
+    "description": "Eticheta ARIA pentru pagina principală din firimiturile de navigare"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
     "message": "Închide panoul lateral",
-    "description": "The title attribute for collapse button of doc sidebar"
+    "description": "Atributul title pentru butonul de restrângere al barei laterale a documentației"
   },
   "theme.docs.sidebar.collapseButtonAriaLabel": {
     "message": "Închide panoul lateral",
-    "description": "The title attribute for collapse button of doc sidebar"
+    "description": "Atributul title pentru butonul de restrângere al barei laterale a documentației"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Bară laterală documentație",
-    "description": "The ARIA label for the sidebar navigation"
+    "message": "Bara laterală a documentației",
+    "description": "Eticheta ARIA pentru navigarea din bara laterală"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "Închide bara de navigare",
-    "description": "The ARIA label for close button of mobile sidebar"
+    "description": "Eticheta ARIA pentru butonul de închidere al barei laterale pe mobil"
   },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
     "message": "← Înapoi la meniul principal",
-    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+    "description": "Eticheta butonului de întoarcere la meniul principal, în meniul secundar al barei laterale de navigare pe mobil (folosit în special pentru afișarea barei laterale a documentației)"
   },
   "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
     "message": "Comută bara de navigare",
-    "description": "The ARIA label for hamburger menu button of mobile navigation"
+    "description": "Eticheta ARIA pentru butonul meniului hamburger din navigarea pe mobil"
   },
   "theme.docs.sidebar.expandButtonTitle": {
     "message": "Extinde panoul lateral",
-    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+    "description": "Eticheta ARIA și atributul title pentru butonul de extindere al barei laterale a documentației"
   },
   "theme.docs.sidebar.expandButtonAriaLabel": {
     "message": "Extinde panoul lateral",
-    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+    "description": "Eticheta ARIA și atributul title pentru butonul de extindere al barei laterale a documentației"
   },
   "theme.SearchBar.seeAll": {
-    "message": "Vezi toate cele {count} rezultate"
+    "message": "Vezi toate rezultatele ({count})"
   },
   "theme.SearchBar.label": {
     "message": "Caută",
-    "description": "The ARIA label and placeholder for search button"
+    "description": "Eticheta ARIA și textul substituent pentru butonul de căutare"
   },
   "theme.SearchModal.searchBox.resetButtonTitle": {
     "message": "Șterge căutarea",
-    "description": "The label and ARIA label for search box reset button"
+    "description": "Eticheta și eticheta ARIA pentru butonul de resetare al casetei de căutare"
   },
   "theme.SearchModal.searchBox.cancelButtonText": {
     "message": "Anulează",
-    "description": "The label and ARIA label for search box cancel button"
+    "description": "Eticheta și eticheta ARIA pentru butonul de anulare al casetei de căutare"
   },
   "theme.SearchModal.startScreen.recentSearchesTitle": {
-    "message": "Recente",
-    "description": "The title for recent searches"
+    "message": "Căutări recente",
+    "description": "Titlul pentru căutările recente"
   },
   "theme.SearchModal.startScreen.noRecentSearchesText": {
     "message": "Nicio căutare recentă",
-    "description": "The text when no recent searches"
+    "description": "Textul afișat când nu există căutări recente"
   },
   "theme.SearchModal.startScreen.saveRecentSearchButtonTitle": {
     "message": "Salvează această căutare",
-    "description": "The label for save recent search button"
+    "description": "Eticheta pentru butonul de salvare a căutării recente"
   },
   "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
     "message": "Elimină această căutare din istoric",
-    "description": "The label for remove recent search button"
+    "description": "Eticheta pentru butonul de eliminare a căutării recente"
   },
   "theme.SearchModal.startScreen.favoriteSearchesTitle": {
-    "message": "Favorite",
-    "description": "The title for favorite searches"
+    "message": "Căutări favorite",
+    "description": "Titlul pentru căutările favorite"
   },
   "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
     "message": "Elimină această căutare din favorite",
-    "description": "The label for remove favorite search button"
+    "description": "Eticheta pentru butonul de eliminare a căutării favorite"
   },
   "theme.SearchModal.errorScreen.titleText": {
     "message": "Nu s-au putut obține rezultate",
-    "description": "The title for error screen of search modal"
+    "description": "Titlul pentru ecranul de eroare al modalului de căutare"
   },
   "theme.SearchModal.errorScreen.helpText": {
-    "message": "Poate ar trebui să verificați conexiunea la rețea.",
-    "description": "The help text for error screen of search modal"
+    "message": "Poate ar trebui să îți verifici conexiunea la rețea.",
+    "description": "Textul de ajutor pentru ecranul de eroare al modalului de căutare"
   },
   "theme.SearchModal.footer.selectText": {
     "message": "selectează",
-    "description": "The explanatory text of the action for the enter key"
+    "description": "Textul explicativ al acțiunii pentru tasta Enter"
   },
   "theme.SearchModal.footer.selectKeyAriaLabel": {
     "message": "Tasta Enter",
-    "description": "The ARIA label for the Enter key button that makes the selection"
+    "description": "Eticheta ARIA pentru butonul tastei Enter care face selecția"
   },
   "theme.SearchModal.footer.navigateText": {
     "message": "navighează",
-    "description": "The explanatory text of the action for the Arrow up and Arrow down key"
+    "description": "Textul explicativ al acțiunii pentru tastele Săgeată în sus și Săgeată în jos"
   },
   "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
     "message": "Săgeată în sus",
-    "description": "The ARIA label for the Arrow up key button that makes the navigation"
+    "description": "Eticheta ARIA pentru butonul tastei Săgeată în sus care face navigarea"
   },
   "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
     "message": "Săgeată în jos",
-    "description": "The ARIA label for the Arrow down key button that makes the navigation"
+    "description": "Eticheta ARIA pentru butonul tastei Săgeată în jos care face navigarea"
   },
   "theme.SearchModal.footer.closeText": {
     "message": "închide",
-    "description": "The explanatory text of the action for Escape key"
+    "description": "Textul explicativ al acțiunii pentru tasta Escape"
   },
   "theme.SearchModal.footer.closeKeyAriaLabel": {
     "message": "Tasta Esc",
-    "description": "The ARIA label for the Escape key button that close the modal"
+    "description": "Eticheta ARIA pentru butonul tastei Escape care închide modalul"
   },
   "theme.SearchModal.footer.searchByText": {
-    "message": "Această căutare folosește",
-    "description": "The text explain that the search is making by Algolia"
+    "message": "Această căutare utilizează",
+    "description": "Textul care explică faptul că căutarea este realizată de Algolia"
   },
   "theme.SearchModal.noResultsScreen.noResultsText": {
     "message": "Niciun rezultat pentru",
-    "description": "The text explains that there are no results for the following search"
+    "description": "Textul care explică faptul că nu există rezultate pentru căutarea următoare"
   },
   "theme.SearchModal.noResultsScreen.suggestedQueryText": {
-    "message": "Încercați să căutați",
-    "description": "The text for the suggested query when no results are found for the following search"
+    "message": "Încearcă să cauți după",
+    "description": "Textul pentru interogarea sugerată când nu se găsesc rezultate pentru căutarea următoare"
   },
   "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
     "message": "Credeți că această căutare ar trebui să returneze rezultate?",
-    "description": "The text for the question where the user thinks there are missing results"
+    "description": "Textul pentru întrebarea în care utilizatorul crede că lipsesc rezultate"
   },
   "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
-    "message": "Anunțați-ne.",
-    "description": "The text for the link to report missing results"
+    "message": "Anunță-ne.",
+    "description": "Textul pentru linkul de raportare a rezultatelor lipsă"
   },
   "theme.SearchModal.placeholder": {
-    "message": "Caută documente",
-    "description": "The placeholder of the input of the DocSearch pop-up modal"
+    "message": "Caută în documente",
+    "description": "Textul substituent al câmpului de introducere din modalul pop-up DocSearch"
   },
   "theme.SearchPage.documentsFound.plurals": {
-    "message": "Un document găsit|{count} documente găsite",
-    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+    "message": "Un document găsit|{count} documente găsite|{count} de documente găsite",
+    "description": "Etichetă pluralizată pentru \"{count} documents found\". Folosiți cât mai multe forme de plural (separate prin \"|\") cât permite limba dvs. (consultați https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Rezultatul căutării pentru \"{query}\"",
-    "description": "The search page title for non-empty query"
+    "description": "Titlul paginii de căutare pentru o interogare nevidă"
   },
   "theme.SearchPage.emptyResultsTitle": {
     "message": "Căutare în documentație",
-    "description": "The search page title for empty query"
+    "description": "Titlul paginii de căutare pentru o interogare vidă"
   },
   "theme.SearchPage.inputPlaceholder": {
-    "message": "Introduceți căutarea aici",
-    "description": "The placeholder for search page input"
+    "message": "Introdu căutarea aici",
+    "description": "Textul substituent pentru câmpul de introducere al paginii de căutare"
   },
   "theme.SearchPage.inputLabel": {
     "message": "Caută",
-    "description": "The ARIA label for search page input"
+    "description": "Eticheta ARIA pentru câmpul de introducere al paginii de căutare"
   },
   "theme.SearchPage.algoliaLabel": {
     "message": "Căutare realizată de Algolia",
-    "description": "The ARIA label for Algolia mention"
+    "description": "Eticheta ARIA pentru mențiunea Algolia"
   },
   "theme.SearchPage.noResultsText": {
-    "message": "Nu a fost găsit niciun rezultat",
-    "description": "The paragraph for empty search result"
+    "message": "Nu s-a găsit niciun rezultat",
+    "description": "Paragraful pentru rezultatul de căutare gol"
   },
   "theme.SearchPage.fetchingNewResults": {
     "message": "Se aduc rezultate noi...",
-    "description": "The paragraph for fetching new search results"
+    "description": "Paragraful pentru preluarea de noi rezultate de căutare"
   },
   "theme.blog.post.plurals": {
-    "message": "O postare|{count} postări",
-    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+    "message": "O postare|{count} postări|{count} de postări",
+    "description": "Etichetă pluralizată pentru \"{count} posts\". Folosiți cât mai multe forme de plural (separate prin \"|\") cât permite limba dvs. (consultați https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "{nPosts} etichetate cu \"{tagName}\"",
-    "description": "The title of the page for a blog tag"
+    "message": "{nPosts} cu eticheta \"{tagName}\"",
+    "description": "Titlul paginii pentru o etichetă de blog"
   },
   "theme.blog.author.pageTitle": {
     "message": "{authorName} - {nPosts}",
-    "description": "The title of the page for a blog author"
+    "description": "Titlul paginii pentru un autor de blog"
   },
   "theme.blog.authorsList.pageTitle": {
     "message": "Autori",
-    "description": "The title of the authors page"
+    "description": "Titlul paginii autorilor"
   },
   "theme.blog.authorsList.viewAll": {
     "message": "Vezi toți autorii",
-    "description": "The label of the link targeting the blog authors page"
+    "description": "Eticheta linkului către pagina autorilor de blog"
   },
   "theme.blog.author.noPosts": {
     "message": "Acest autor nu a scris încă nicio postare.",
-    "description": "The text for authors with 0 blog post"
+    "description": "Textul pentru autorii cu 0 postări pe blog"
   },
   "theme.contentVisibility.unlistedBanner.title": {
     "message": "Pagină nelistată",
-    "description": "The unlisted content banner title"
+    "description": "Titlul bannerului pentru conținut nelistat"
   },
   "theme.contentVisibility.unlistedBanner.message": {
-    "message": "Această pagină nu este listată. Motoarele de căutare nu vor stoca nicio informație, iar doar utilizatorii care au linkul direct o pot accesa",
-    "description": "The unlisted content banner message"
+    "message": "Această pagină nu este listată. Motoarele de căutare nu vor stoca nicio informație, iar doar utilizatorii care au linkul direct o pot accesa.",
+    "description": "Mesajul bannerului pentru conținut nelistat"
   },
   "theme.contentVisibility.draftBanner.title": {
     "message": "Pagină ciornă",
-    "description": "The draft content banner title"
+    "description": "Titlul bannerului pentru conținut ciornă"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "Această pagină este o ciornă. Va fi vizibilă doar în dezvoltare și exclusă din versiunea de producție.",
-    "description": "The draft content banner message"
+    "message": "Această pagină este o ciornă. Va fi vizibilă doar în dezvoltare și va fi exclusă din build-ul de producție.",
+    "description": "Mesajul bannerului pentru conținut ciornă"
   },
   "theme.ErrorPageContent.tryAgain": {
     "message": "Încearcă din nou",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+    "description": "Eticheta butonului de reîncercare a randării când granița de eroare React capturează o eroare"
   },
   "theme.common.skipToMainContent": {
     "message": "Sari la conținutul principal",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+    "description": "Eticheta de salt la conținut folosită pentru accesibilitate, permițând navigarea rapidă la conținutul principal cu tastatura prin tab/enter"
   },
   "theme.tags.tagsPageTitle": {
     "message": "Etichete",
-    "description": "The title of the tag list page"
+    "description": "Titlul paginii cu lista de etichete"
   },
   "page.home.title": {
     "message": "Platformă Poliglotă Low-Code",
-    "description": "The homepage title"
+    "description": "Titlul paginii principale"
   },
   "page.home.subtitle.1": {
-    "message": "Dezvoltare rapidă cu performanță ridicată, multiple limbaje de programare și diverse baze de date.",
-    "description": "The homepage subtitle 1"
+    "message": "Dezvoltare rapidă cu performanță ridicată, multiple limbaje de programare și mai multe baze de date.",
+    "description": "Subtitlul 1 al paginii principale"
   },
   "page.home.subtitle.2": {
     "message": "Generare automată a backoffice-ului cu modelare intuitivă a datelor, diagrame și interogări.",
-    "description": "The homepage subtitle 2"
+    "description": "Subtitlul 2 al paginii principale"
   },
   "page.home.button": {
-    "message": "Instalare Netuno",
-    "description": "The homepage button"
+    "message": "Instalarea Netuno",
+    "description": "Butonul paginii principale"
   },
   "page.home.academy.title": {
     "message": "Academie",
-    "description": "The homepage academy title"
+    "description": "Titlul secțiunii Academie de pe pagina principală"
   },
   "page.home.academy.description": {
     "message": "Tutoriale, sfaturi, pași pas cu pas pentru a explora întregul potențial și a cunoaște detaliile interfețelor și automatismelor.",
-    "description": "The homepage academy description"
+    "description": "Descrierea secțiunii Academie de pe pagina principală"
   },
   "page.home.library.title": {
     "message": "Bibliotecă",
-    "description": "The homepage library title"
+    "description": "Titlul secțiunii Bibliotecă de pe pagina principală"
   },
   "page.home.library.description": {
-    "message": "Toate resursele de programare low-code și poliglotă pentru a realiza diversele implementări și integrări necesare în proiectul dvs.",
-    "description": "The homepage library description"
+    "message": "Toate resursele de programare low-code și poliglotă pentru realizarea diverselor implementări și integrări necesare în proiectul tău.",
+    "description": "Descrierea secțiunii Bibliotecă de pe pagina principală"
   }
 }

@@ -40,7 +40,7 @@ sudo mariadb
 
 #### Windows
 
-Ouvrez l'application `Invite de commandes MariaDB` et exécutez :
+Ouvrez l'application `Command Prompt MariaDB` et exécutez :
 
 ```shell
 mariadb -u root -p
@@ -50,24 +50,24 @@ Ou recherchez `MySQL Client` ou `MariaDB Client`.
 
 ## Créer la base de données
 
-Exécutez la commande suivante connecté au client MariaDB :
+Exécutez la commande suivante une fois connecté au client MariaDB :
 
 ```sql
-CREATE DATABASE base_app
+CREATE DATABASE bdd_app
 ```
 
 ## Créer un utilisateur
 
-Exécutez la commande suivante connecté au client MariaDB :
+Exécutez la commande suivante une fois connecté au client MariaDB :
 
 ```sql
 CREATE USER 'utilisateur_app'@'localhost' IDENTIFIED BY 'S3cR3t';
 ```
 
-Pour donner un accès général à l'utilisateur sur la base de données créée, exécutez :
+Pour donner l'accès général de l'utilisateur à la base de données qui a été créée, exécutez :
 
 ```sql
-GRANT ALL PRIVILEGES ON base_app.* TO 'utilisateur_app'@'localhost';
+GRANT ALL PRIVILEGES ON bdd_app.* TO 'utilisateur_app'@'localhost';
 ```
 
 Actualisez les privilèges d'accès :
@@ -94,7 +94,7 @@ Exemple de configuration de base de données pour MariaDB :
             "engine": "mariadb",
             "port": "3306",
             "host": "localhost",
-            "name": "base_app",
+            "name": "bdd_app",
             "username": "utilisateur_app",
             "password": "S3cR3t"
         }
@@ -103,7 +103,7 @@ Exemple de configuration de base de données pour MariaDB :
 }
 ```
 
-Vous pouvez utiliser des configurations avancées telles que :
+Des configurations avancées peuvent être utilisées, comme :
 
 ```javascript
 {
@@ -113,7 +113,7 @@ Vous pouvez utiliser des configurations avancées telles que :
             "engine": "mariadb",
             "port": "3306",
             "host": "localhost",
-            "name": "base_app",
+            "name": "bdd_app",
             "username": "utilisateur_app",
             "password": "S3cR3t",
             "maximumPoolSize": 100,
@@ -126,4 +126,4 @@ Vous pouvez utiliser des configurations avancées telles que :
 }
 ```
 
-> Voir plus sur les [configurations de connexion à la base de données avec HikariCP](/docs/academy/server/database/hikaricp-database-connection-pool).
+> En savoir plus sur les [configurations de connexion à la base de données avec HikariCP](/docs/academy/server/database/hikaricp-database-connection-pool).

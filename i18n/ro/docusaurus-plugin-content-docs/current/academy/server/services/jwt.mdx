@@ -6,47 +6,47 @@ sidebar_label: Autentificare JWT
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
 
-Configurare și utilizare a autentificării cu token.
+Configurarea și utilizarea autentificării cu token.
 
 ## Introducere
 
-JWT (JSON Web Token) este un standard pentru asigurarea securității și contextului autentificării în aplicațiile web, unde 
+JWT (JSON Web Token) este un standard pentru a garanta securitatea și contextul autentificării în aplicațiile web, unde
 frontend-ul este decuplat de backend.
 
-Este utilizat frecvent când frontend-ul unei aplicații web este dezvoltat în ReactJS, AngularJS, VueJS etc., iar 
-backend-ul furnizează un API REST pentru a furniza și primi date dinamice ale aplicației.
+Este utilizat frecvent atunci când frontend-ul unei aplicații web este dezvoltat în ReactJS, AngularJS, VueJS etc., iar
+backend-ul oferă o API REST pentru a furniza și primi date dinamice ale aplicației.
 
-> Token-ul (JWT) este un cod securizat care identifică utilizatorul.
+> Tokenul (JWT) este un cod sigur care identifică utilizatorul.
 
-Cu JWT (JSON Web Token), API-ul REST al backend-ului permite serviciilor private să obțină contextul de autentificare, 
-pentru a ști cine este utilizatorul autentificat, adică pe baza token-ului putem afla care este utilizatorul, 
-token-ul în acest caz fiind JWT (JSON Web Token).
+Cu JWT (JSON Web Token), API REST a backend-ului permite serviciilor private să obțină contextul de autentificare,
+pentru a ști cine este utilizatorul autentificat; adică, pe baza tokenului putem afla care este utilizatorul, tokenul
+fiind în acest caz JWT (JSON Web Token).
 
 ![flux-jwt](/docs/assets/academy/server/services/jwt/flow-pt.png)
 
 ## CORS
 
-API-ul REST poate fi într-un subdomeniu diferit de website, ceea ce implică configurații de 
+API REST poate fi găsit într-un subdomeniu diferit de cel al site-ului web, ceea ce implică configurații
 [CORS (Cross-Origin Resource Sharing)](/docs/academy/server/services/cors) pentru ca serviciile să poată fi accesate.
 
-Prin urmare, dacă API-ul REST este într-un domeniu/subdomeniu diferit de frontend, chiar și folosind JWT, este necesar
+Prin urmare, dacă API REST se află într-un domeniu/subdomeniu diferit de frontend, chiar și utilizând JWT, este necesar
 ca CORS să fie configurat corect.
 
-> CORS este o politică de securitate pentru consumul de resurse în domenii, subdomenii sau porturi diferite.
-> Pentru a garanta că o adresă poate integra cu adevărat cu altă adresă.
+> CORS este o politică de securitate privind consumul de resurse în domenii, subdomenii sau porturi diferite.
+> Pentru a garanta că o adresă poate chiar să se integreze cu o altă adresă.
 
-Acest lucru se întâmplă deoarece browserele blochează utilizarea serviciilor, sau a altor tipuri de resurse, la adrese 
-externe, pentru a evita atacurile de obținere a datelor confidențiale.
+Acest lucru se întâmplă deoarece browserele blochează utilizarea serviciilor sau a altor tipuri de resurse la adrese
+externe, pentru a evita atacuri de obținere a datelor confidențiale.
 
-## Activare și Configurare
+## Activare și configurare
 
-Pentru a activa și configura JWT în aplicația dvs. din Netuno, este necesar să editați fișierul de configurare al 
-aplicației corespunzător mediului pe care îl utilizați, cum ar fi:
+Pentru a activa și configura JWT în aplicația dvs. din Netuno, este necesar să editați fișierul de configurare al
+aplicației aferent mediului pe care îl utilizați, cum ar fi:
 
 - `config/_development.json`
 - `config/_production.json`
 
-> Depinde de mediul configurat în Netuno, în fișierul `netuno/config.js` vedeți parametrizarea `config.env`.
+> Depinde de mediul configurat în Netuno; în fișierul `netuno/config.js`, consultați parametrizarea `config.env`.
 
 Introduceți și ajustați următorii parametri:
 
@@ -55,7 +55,7 @@ Introduceți și ajustați următorii parametri:
     "auth": {
         "jwt": {
             "enabled": true,
-            "secret": "SecretTrebuieSaAiba32Caractere!!!",
+            "secret": "SecretulTrebuieSaAiba32Caractere!!!",
             "expires": {
                 "access": 1440,
                 "refresh": 1440
@@ -65,15 +65,15 @@ Introduceți și ajustați următorii parametri:
     ...
 ```
 
-În parametrul `secret` puneți o secvență de caractere complexă și aleatorie, este cheia care va asigura 
-securitatea criptării JWT.
+În parametrul `secret` puneți o secvență complexă și aleatorie de caractere; este cheia care va garanta securitatea
+criptării JWT.
 
-Parametrii `expires` sunt definiți în minute, de exemplu: `60` care echivalează cu 1 oră și `1440` cu o zi.
+Parametrii `expires` sunt definiți în minute, de exemplu: `60`, care echivalează cu 1 oră, și `1440` cu o zi.
 
-### Acces Restricționat la Grupuri
+### Acces restricționat la grupuri
 
-Suplimentar, poate fi transmis parametrul `groups`, care definește codul Grupurilor utilizatorilor care se pot 
-autentifica cu JWT, de exemplu:
+În plus, se poate transmite parametrul `groups`, care definește codul grupurilor de utilizatori care se pot autentifica
+cu JWT, de exemplu:
 
 ```json
     ...
@@ -94,23 +94,23 @@ autentifica cu JWT, de exemplu:
 
 Doar utilizatorii din aceste grupuri se pot autentifica cu JWT.
 
-## Cum se Obține Access Token-ul
+## Cum se obține Access Token
 
-Pentru a obține _Access Token_-ul JWT, Netuno furnizează serviciul `_auth` care validează autentificarea și, dacă aceasta este 
-reușită, returnează _Access Token_-ul și _Refresh Token_-ul.
+Pentru a obține _Access Token_-ul JWT, Netuno furnizează serviciul `_auth`, care validează autentificarea și, dacă
+aceasta are succes, returnează _Access Token_ și _Refresh Token_.
 
-_Access Token_-ul este obținut în modul următor:
+_Access Token_ este obținut în felul următor:
 
 <script dangerouslySetInnerHTML={{ __html: `window.addEventListener("message", function(e) {var i = e.data.split(":")[1];var h = e.data.split(":")[2];if (e.data.split(":")[0] == "swimlanes-io" && i && h) {document.getElementById("__sw-io-" + i).setAttribute("style","height:" + h + "px");}}, false);`}}></script>
 <div id="__sw-io-hVPQ">
     <iframe style={{border:'none', width:'100%', height:'100%'}} scrolling="no" src="https://cdn.swimlanes.io/dist/embeded.html#hVPLjtNAELzPV7RyjrMIEAeLhwLLos0BhMgKaS9x42nwBHvGmUf2gfYD+IwVhxUHvsI/Ro8fiUkOzMGyZ7rKVdU9Z9Zon5CWkLyE9+SDNjCv6xTmwZP2KsfmofllYPF5CdL0FUIbTym8KbBCMODIblXzYEAS4L+wHSQVIjtpC3NyJysuK16tr/wLbwNlQrzVW8VUDiTK+CQILjT3Vhkg5tcFRoIsWzujxQ8BvCaB6TRWNElhImk7mXbbNTp3ZawctsVdBApxtnP6PEnGVns3zU+w5A1TytbuFHJTRUnefCfdakLW7qIifrf01ZIrjmVhHqtWLSpqoJtF8eVdrj6oxfnF7cVsNhuUMj6UnmtiCLu9lnYPX24eX56eP9XfPvrL5WKEbitW/qZuA3hNaMkOZ3RdK6ZZqUjx5NmjuI5zOOx45w7Z8qe+o7EffFgO/RwaH4OBzmgXDzS/oTbONX+2VAJdUx48WtgELDeB7GhEEHDP1/+/jdowgY3Qqi4PxqWikHQfhg2ckuP8mRZiq+lQCduJ02WsukWvjIaCUJKdHtJnWeF9Lebj2hS6HOG4af8boiEa5AhNL8XRGmHb3JdKske+F9Hy6L5waH1UPHLttO3HfneRpJn9BQ==#hVPQ"></iframe>
 </div>
 
-## Fetch - JavaScript Pur
+## Fetch - JavaScript pur
 
-JavaScript-ul din browsere furnizează `fetch` pentru a integra cu serviciile API-ului REST al backend-ului.
+JavaScript-ul din browsere furnizează `fetch` pentru integrarea cu serviciile API REST ale backend-ului.
 
-Urmează câteva exemple despre cum să realizați autentificarea cu JWT și reînnoirea token-ului.
+Urmează câteva exemple despre cum să realizați autentificarea cu JWT și reînnoirea tokenului.
 
 ### Autentificare
 
@@ -124,14 +124,14 @@ fetch("http://localhost:9000/services/_auth", {
         'Accept': 'application/json'
     },
     body: JSON.stringify({
-        username: payload.username,
-        password: payload.password,
+        username: dateAutentificare.username,
+        password: dateAutentificare.password,
         jwt: true
     })
 }).then((response) => {
 	if (response.status != 200) {
         if (response.status != 403) {
-            console.log('Autentificarea a eșuat cu status neașteptat:', response.status);
+            console.log('Autentificarea a eșuat cu un status neașteptat:', response.status);
         }
         alert('Login invalid.');
         return null;
@@ -139,8 +139,8 @@ fetch("http://localhost:9000/services/_auth", {
     return response.json();
 }).then((res) => {
     if (res && res.result === true) {
-        console.log(`Token-ul meu de acces: ${res.access_token}`);
-        console.log(`Token-ul meu de reîmprospătare: ${res.refresh_token}`);
+        console.log(`Tokenul meu de acces: ${res.access_token}`);
+        console.log(`Tokenul meu de reîmprospătare: ${res.refresh_token}`);
         console.log(`Expiră în: ${res.expires_in} minute`);
         sessionStorage.setItem('token', JSON.stringify(res));
     }
@@ -150,19 +150,19 @@ fetch("http://localhost:9000/services/_auth", {
 });
 ```
 
-Observați că `token` ar trebui păstrat ca sesiune, prin urmare este preferabil să utilizați [sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) 
-în loc de [localStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) pentru mai multă siguranță.
+Observați că `token` trebuie păstrat ca sesiune, prin urmare este preferabil să utilizați [sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage)
+în locul [localStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) pentru o mai mare securitate.
 
-Cu `refresh_token` este posibil să generați un nou `token` înainte de timpul de expirare (`expires_in` în minute).
+Cu `refresh_token` este posibil să generați un `token` nou înainte de timpul de expirare (`expires_in` în minute).
 
-### Utilizarea _Access Token_-ului în alte Servicii
+### Utilizarea Access Token în alte servicii
 
-Pentru a executa servicii personalizate care necesită autentificare prealabilă în aplicațiile Netuno, trebuie să transmiteți 
-_Access Token_-ul în Header-ul protocolului HTTP, ca valoare a cheii _Authorization_, de exemplu:
+Pentru a executa servicii programate la comandă care necesită autentificare prealabilă în aplicațiile Netuno, trebuie
+să transmiteți _Access Token_ în header-ul protocolului HTTP, ca valoare a cheii _Authorization_, de exemplu:
 
 `Authorization: Bearer eyJhbGciOiJIUzU...`
 
-Exemplu de executare a unui serviciu personalizat prin frontend folosind [fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API), unde 
+Exemplu de executare a unui serviciu programat la comandă prin frontend folosind [fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API), unde
 `Authorization` este transmis în `headers`:
 
 ```javascript
@@ -201,19 +201,19 @@ fetch("http://localhost:9000/services/serviciul-meu", {
 });
 ```
 
-Observați că, în Headers-ul HTTP, în parametrul `Authorization` sunt utilizați `token_type` și `access_token` 
-obținuți din obiectul JWT salvat anterior la autentificare în 
+Observați că, în header-ele HTTP, la parametrul `Authorization` sunt utilizați `token_type` și `access_token`
+obținuți din obiectul JWT salvat anterior la autentificare în
 [sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage).
 
-### Actualizare cu _Refresh Token_
+### Actualizare cu Refresh Token
 
-Pentru a actualiza token-ul și a prelungi autentificarea, trebuie să apelați din nou serviciul `_auth`, dar pe lângă parametrul
-`jwt: true` este necesar să transmiteți și parametrul `refresh_token` cu valoarea primită în autentificarea reușită 
-anterior.
+Pentru a reînnoi tokenul și a prelungi autentificarea, trebuie să apelați din nou serviciul `_auth`, dar pe lângă
+parametrul `jwt: true` este necesar să transmiteți și parametrul `refresh_token` cu valoarea primită la autentificarea
+reușită anterior.
 
-Actualizarea token-ului trebuie făcută înainte de timpul de expirare (`expires_in` în minute).
+Reînnoirea tokenului trebuie făcută înainte de timpul de expirare (`expires_in` în minute).
 
-Deci, pentru a prelungi autentificarea și a reînnoi token-ul, vedeți exemplul:
+Așadar, pentru a prelungi autentificarea și a reînnoi tokenul, vedeți exemplul:
 
 ```javascript
 const token = JSON.parse(sessionStorage.getItem("token"));
@@ -231,7 +231,7 @@ fetch("http://localhost:9000/services/_auth", {
 }).then((response) => {
     if (response.status != 200) {
         if (response.status != 403) {
-            console.log('Reînnoirea token-ului a eșuat cu status neașteptat:', response.status);
+            console.log('Reînnoirea tokenului a eșuat cu un status neașteptat:', response.status);
         }
         alert('Reînnoirea accesului cu token invalid.');
         return null;
@@ -239,8 +239,8 @@ fetch("http://localhost:9000/services/_auth", {
     return response.json();
 }).then((res) => {
     if (res && res.result === true) {
-        console.log(`Noul meu Token de Acces: ${res.access_token}`);
-        console.log(`Noul meu Refresh Token: ${res.refresh_token}`);
+        console.log(`Noul meu token de acces: ${res.access_token}`);
+        console.log(`Noul meu token de reîmprospătare: ${res.refresh_token}`);
         console.log(`Expiră în: ${res.expires_in} minute`);
         sessionStorage.setItem("token", JSON.stringify(res));
     }
@@ -250,14 +250,15 @@ fetch("http://localhost:9000/services/_auth", {
 });
 ```
 
-La obținerea unui token nou, trebuie să începeți să îl utilizați, în locul celui anterior (vechi) în următoarele apeluri către servicii.
+După obținerea noului token, trebuie să îl utilizați în locul celui anterior (vechi) în următoarele apeluri către
+servicii.
 
-În acest mod, autentificarea este prelungită prin reînnoiri succesive ale token-ului, este o modalitate de a garanta că utilizatorul
+Astfel, autentificarea este prelungită prin reînnoiri succesive ale tokenului, o modalitate de a garanta că utilizatorul
 rămâne autentificat.
 
 ## Auth Client - NPM
 
-Pentru a realiza cu ușurință integrarea cu frontend-ul, este disponibil modulul NPM:
+Pentru a realiza cu ușurință integrarea cu frontend-ul este disponibil modulul NPM:
 
 - [@netuno/auth-client](https://www.npmjs.com/package/@netuno/auth-client)
 
@@ -269,7 +270,7 @@ Pentru a realiza cu ușurință integrarea cu frontend-ul, este disponibil modul
 
 ### Configurare
 
-Acest modul depinde de [@netuno/service-client](https://www.npmjs.com/package/@netuno/service-client), la definirea 
+Acest modul depinde de [@netuno/service-client](https://www.npmjs.com/package/@netuno/service-client), la definirea
 adresei serviciilor, de exemplu:
 
 ```javascript
@@ -280,13 +281,13 @@ _service.config({
 });
 ```
 
-`auth-client` utilizează prefixul din `service-client` pentru a construi intern adresa serviciului `_auth`, 
-în acest caz, urmând exemplul va fi:
+`auth-client` utilizează prefixul din `service-client` pentru a construi intern adresa serviciului `_auth`,
+în acest caz, urmând exemplul, va fi:
 
 - `http://localhost:9000/services/_auth`
 
-Deci această adresă este construită automat utilizând prefixul de adresă al serviciilor API-ului REST 
-al aplicației Netuno.
+Astfel, această adresă este construită automat utilizând prefixul de adresă al serviciilor API REST
+ale aplicației Netuno.
 
 Vedeți cum să personalizați configurațiile `auth-client`:
 
@@ -297,13 +298,13 @@ import _auth from '@netuno/auth-client';
 
 await _auth.config({
     storage: 'local', // session este valoarea implicită.
-    onLogin: () => { alert("Autentificat!"); },
+    onLogin: () => { alert("Conectat!"); },
     onLogout: () => { alert("Deconectat!"); }
 });
 ```
 
-Dacă doriți ca token-ul să fie salvat în `localStorage`, atunci este necesar să definiți în configurare 
-`storage: 'local'`, deoarece implicit este `storage: 'session'` utilizând `sessionStorage`.
+Dacă doriți ca tokenul să fie salvat în `localStorage`, atunci este necesar să definiți în configurare
+`storage: 'local'`, deoarece implicit este `storage: 'session'`, utilizând `sessionStorage`.
 
 ### Autentificare
 
@@ -314,7 +315,7 @@ import _auth from '@netuno/auth-client';
 ...
 _auth.login({
     username: "admin",
-    password: "secret",
+    password: "parola",
     success: ()=> {
         alert("Succes.");
     },
@@ -324,12 +325,12 @@ _auth.login({
 });
 ```
 
-Token-ul este salvat automat, în `session` (`sessionStorage`) sau `local` (`localStorage`), în funcție de 
-configurare, implicit este `session`.
+Tokenul este salvat automat, în `session` (`sessionStorage`) sau `local` (`localStorage`), în funcție de
+configurare; implicit este `session`.
 
-### Actualizarea Token-ului
+### Actualizarea tokenului
 
-Exemplu de actualizare a token-ului:
+Exemplu de reînnoire a tokenului:
 
 ```javascript
 import _auth from '@netuno/auth-client';
@@ -344,12 +345,12 @@ _auth.refreshToken({
 });
 ```
 
-Token-ul este salvat automat, în `session` (`sessionStorage`) sau `local` (`localStorage`), în funcție de
-configurare, implicit este `session`.
+Tokenul este salvat automat, în `session` (`sessionStorage`) sau `local` (`localStorage`), în funcție de
+configurare; implicit este `session`.
 
-### Eliminarea Token-ului
+### Eliminarea tokenului
 
-Exemplu de încheiere a sesiunii, adică procesul de deconectare și eliminare a token-ului:
+Exemplu de încheiere a sesiunii, adică procesul de deconectare și eliminare a tokenului:
 
 ```javascript
 import _auth from '@netuno/auth-client';
@@ -357,18 +358,17 @@ import _auth from '@netuno/auth-client';
 _auth.logout();
 ```
 
-Token-ul este eliminat din `sessionStorage` sau `localStorage` în funcție de configurare, implicit este 
+Tokenul este eliminat din `sessionStorage` sau din `localStorage` în funcție de configurare; implicit este
 `sessionStorage`.
 
-## Backend - Servicii ale API-ului REST
+## Backend - Servicii API REST
 
-Dacă header-ul `Authorization` este transmis în integrarea cu serviciile cu un token valid, atunci este posibil 
-să identificați care este utilizatorul și grupul.
+Dacă header-ul `Authorization` este transmis în integrarea cu serviciile cu un token valid, atunci este posibil
+să identificați utilizatorul și grupul.
 
-În backend putem utiliza resursa `_user` și `_group`, care identifică care este utilizatorul și grupul 
-respectiv.
+În backend putem utiliza resursa `_user` și `_group`, care identifică utilizatorul și, respectiv, grupul.
 
-Pentru a vedea datele utilizatorului autentificat, utilizăm resursa [User](/docs/library/resources/user), de exemplu:
+Pentru a vedea datele utilizatorului autentificat folosim resursa [User](/docs/library/resources/user), de exemplu:
 
 <PolyglotCode
     codes={[
@@ -381,14 +381,14 @@ Pentru a vedea datele utilizatorului autentificat, utilizăm resursa [User](/doc
                         .set("id", _user.id())
                         .set("nume", _user.name())
                         .set("cod", _user.code())
-                        .set("tot", _user.data())
+                        .set("toate", _user.data())
                 )
             `
         },
     ]}
 />
 
-Pentru a vedea grupul utilizatorului autentificat, utilizăm resursa [Group](/docs/library/resources/group), de exemplu:
+Pentru a vedea grupul utilizatorului autentificat folosim resursa [Group](/docs/library/resources/group), de exemplu:
 
 <PolyglotCode
     codes={[
@@ -401,7 +401,7 @@ Pentru a vedea grupul utilizatorului autentificat, utilizăm resursa [Group](/do
                         .set("id", _group.id())
                         .set("nume", _group.name())
                         .set("cod", _group.code())
-                        .set("tot", _group.data())
+                        .set("toate", _group.data())
                 )
             `
         },
@@ -410,54 +410,53 @@ Pentru a vedea grupul utilizatorului autentificat, utilizăm resursa [Group](/do
 
 ### Securitate
 
-Dacă token-ul este invalid sau dacă nu este transmis `Authorization`, atunci Netuno garantează că serviciul nu
-este executat, cu excepția cazului în care serviciul este configurat ca acces public, implicit serviciile sunt private.
+Dacă tokenul este invalid sau dacă nu este transmis `Authorization`, Netuno garantează că serviciul nu
+este executat, cu excepția cazului în care serviciul este configurat ca acces public; implicit, serviciile sunt private.
 
-> Pentru a gestiona dacă serviciul este public sau privat, configurați în aplicația dvs. în: `server/core/_service_config.js`
+> Pentru a gestiona dacă serviciul este public sau privat, configurați în aplicația dvs. la: `server/core/_service_config.js`
 
-Întrucât în dezvoltare Netuno permite executarea serviciilor private direct, fără autentificare, din
-motive de practicitate, deoarece majoritatea serviciilor programate nu au nevoie în mod normal de contextul de 
-autentificare, astfel devine mai simplu în general dezvoltarea și testarea.
+Deoarece în dezvoltare Netuno permite executarea serviciilor private direct, fără autentificare, din motive de
+practicitate, deoarece majoritatea serviciilor programate nu au de obicei nevoie de contextul de autentificare, astfel
+dezvoltarea și testarea devin în general mai simple.
 
-Dacă nu este în dezvoltare, de exemplu în producție, atunci serviciile pot fi executate doar cu
-autentificare, cum este evident.
+Dacă nu este în dezvoltare, de exemplu în producție, atunci serviciile pot fi executate doar cu autentificare, evident.
 
-### Resursa de Autentificare
+### Resursa de autentificare
 
-În mod normal, resursa `_user` și `_group` sunt suficiente, dar există situații în care dorim să realizăm operații mai 
-avansate și în acest caz avem resursa `_auth`.
+De obicei, resursele `_user` și `_group` sunt suficiente, dar există situații în care dorim să realizăm operații mai
+avansate, iar în acest caz avem resursa `_auth`.
 
-Resursa `_auth` este resursa principală de autentificare, gestionează configurațiile și are toate operațiile 
+Resursa `_auth` este resursa principală de autentificare, gestionează configurațiile și are toate operațiile
 legate de procesul de autentificare.
 
-> Pentru a afla mai multe, vedeți documentația resursei [Auth](/docs/library/resources/auth).
+> Pentru a afla mai multe, consultați documentația resursei [Auth](/docs/library/resources/auth).
 
 ## ReAuthKit
 
-Netuno furnizează un proiect de bază pentru a crea platforme cu autentificare online, care are crearea de cont, 
+Netuno oferă un proiect de bază pentru crearea de platforme cu autentificare online, care include crearea contului,
 login, profil, avatar, recuperarea parolei și multe altele.
 
 Verificați pe GitHub:
 
 - [ReAuthKit](https://github.com/netuno-org/reauthkit)
 
-> ReAuthKit este o aplicație Netuno cu frontend-ul realizat în React, Ant.Design și React Router, iar baza de date 
+> ReAuthKit este o aplicație Netuno cu frontend-ul realizat în React, Ant.Design și React Router, iar baza de date
 > în PostgreSQL.
 
-Cu ReAuthKit accelerați mult crearea de noi proiecte cu autentificare, deoarece are deja toate mecanismele
- necesare pentru orice proiect care necesită autentificare.
+Cu ReAuthKit se accelerează foarte mult crearea de noi proiecte cu autentificare, deoarece are deja toate mecanismele
+necesare pentru orice proiect care necesită autentificare.
 
 ## Concluzie
 
 Într-un mod simplu, este posibil să configurați și să activați autentificarea cu JWT (JSON Web Token) în aplicații.
 
-> Utilizați autentificarea cu JWT pentru a dezvolta servicii sigure în API-ul REST.
+> Utilizați autentificarea cu JWT pentru a dezvolta servicii sigure în API REST.
 
-Integrarea JWT în frontend poate fi realizată direct cu `fetch`.
+Integrarea JWT în frontend poate fi utilizată direct cu `fetch`.
 
-Pentru a agiliza și standardiza implementarea, este disponibil modulul NPM [@netuno/auth-client](https://www.npmjs.com/package/@netuno/auth-client), care poate fi
+Pentru a accelera și standardiza implementarea este disponibil modulul NPM [@netuno/auth-client](https://www.npmjs.com/package/@netuno/auth-client), care poate fi
 utilizat cu orice tehnologie de frontend.
 
-Întotdeauna când este necesar să identificați utilizatorul în execuția serviciilor API-ului REST, utilizați autentificarea cu JWT.
+Ori de câte ori este necesar să identificați utilizatorul la executarea serviciilor API REST, utilizați autentificarea cu JWT.
 
 În backend, configurarea și obținerea utilizatorului autentificat sunt foarte simple.

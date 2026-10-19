@@ -1,0 +1,346 @@
+---
+id: altcha
+title: Altcha
+sidebar_label: Altcha
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Open-Source-Alternative, gleichwertig zu reCaptcha.
+
+## Einführung
+
+Die Implementierung des Sicherheitsmechanismus mit Captcha ist von äußerster Wichtigkeit; hier sind einige relevante Gründe:
+
+- Vermeiden, dass Bots automatische Zugriffe auf die API-Adressen durchführen.
+- Sicherstellen, dass der Zugriff von einer echten Person erfolgt.
+- Außerdem wird sichergestellt, dass der Zugriff über einen Browser erfolgt.
+
+Lange Zeit bot der Captcha-Mechanismus dem Benutzer eine Challenge zum Ausfüllen.
+
+Heutzutage ist das nicht mehr nötig, da ein Mechanismus mit verschlüsselten Schlüsseln in Kombination mit einer Challenge verwendet wird, die von einem Algorithmus gelöst werden muss, der die Interaktion im Browser nutzt; so wird erkannt, ob es sich um eine menschliche oder robotisierte Interaktion handelt.
+
+> Diese Methode ist raffiniert und zuverlässig; mit nur einem Klick wird erkannt, ob es sich um einen Menschen oder einen Roboter handelt.
+
+[Altcha](https://altcha.org/) ist ein Open-Source-Projekt, das diesen Sicherheitsprozess implementiert, mit einem Frontend-Widget, das sich auch in React integrieren lässt, und einer Backend-Funktion, die Netuno bietet.
+
+## Einschränkungen
+
+[Altcha](https://altcha.org/) verwendet die [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API),
+funktioniert nur auf sicheren HTTPS-Adressen mit SSL-Zertifikat oder lokal.
+
+> Im Frontend muss die URL, wenn die Domain nicht `localhost` ist, zwingend eine sichere HTTPS-URL mit
+> SSL-Zertifikat sein.
+
+Wenn auf das Frontend lokal zugegriffen wird, erlauben Browser die Nutzung der [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API)
+nur unter der lokalen Adresse, zwingend `localhost`; andernfalls ist daher HTTPS mit
+SSL-Zertifikat erforderlich.
+
+## Backoffice
+
+Um die Authentifizierung mit [Altcha](https://altcha.org/) im Backoffice Ihrer Netuno-Anwendung zu aktivieren, verwenden Sie die
+folgende Konfiguration in der Anwendung:
+
+```json title="config/_[UMGEBUNG].json"
+{
+  ...
+  "auth": {
+    "altcha": {
+      "admin": {
+        "enabled": true
+      }
+    }
+  },
+  ...
+}
+```
+
+Fertig, jetzt müssen Sie nur noch die Anmeldeseite des Backoffice aufrufen und sehen die _Checkbox_ von [Altcha](https://altcha.org/) bereits
+voll funktionsfähig.
+
+### Wie es funktioniert
+
+Netuno stellt in der REST-API einen Standarddienst bereit, der die Parameter von [Altcha](https://altcha.org/) für das
+Frontend liefert; normalerweise lautet die Adresse dieses Dienstes:
+
+- `http://localhost:9000/services/_altcha`
+
+Mit den Parametern erzeugt das Widget von [Altcha](https://altcha.org/) im Frontend das digital signierte Ergebnis der Challenge, das
+im versteckten Feld `altcha` des Formulars an das Backend gesendet wird.
+
+Im Backend wird validiert, ob das Ergebnis und die digitale Signatur tatsächlich korrekt sind.
+
+### Widget in HTML
+
+Beispiel für die Integration des Widgets in das HTML der Backoffice-Anmeldung:
+
+```html title="login.html"
+<script type="text/javascript" src="/scripts/plugins/altcha/altcha.i18n.umd.min.cjs"></script>
+<form ...>
+  <input id="altchaEingabe" type="hidden" name="altcha" value="">
+  <altcha-widget id="altchaWidget"
+    challenge="/services/_altcha" language="de"
+    hideLogo hideFooter></altcha-widget>
+  <script>
+    document.getElementById("altchaWidget").addEventListener("statechange", function (e) {
+      if (e.detail.state === "verified") {
+        document.getElementById("altchaEingabe").value = e.detail.payload;
+      }
+    }, false);
+  </script>
+  ...
+</form>
+```
+
+Beachten Sie, dass die im Attribut `challenge` des Widgets verwendete URL der von Netuno automatisch generierte Dienst mit der
+Parametrisierung der Challenge ist.
+
+## Externe Authentifizierung
+
+Die normalerweise implementierte und sichere Authentifizierung mit JWT verwendet den Standarddienst der REST-API zur
+Authentifizierung, der üblicherweise folgender ist:
+
+- `http://localhost:9000/services/_auth`
+
+Dieser von Netuno automatisch generierte Dienst ermöglicht die Absicherung der externen Authentifizierung mit nativem JWT, validiert aber
+auch das Challenge-Ergebnis des Captcha-Widgets.
+
+Um [Altcha](https://altcha.org/) in der Authentifizierung zu aktivieren, fügen Sie die Konfiguration hinzu:
+
+```json title="config/_[UMGEBUNG].json"
+{
+  ...
+  "auth": {
+    "altcha": {
+      "enabled": true
+    }
+  },
+  ...
+}
+```
+
+Damit können nur Authentifizierungsanfragen, also Logins, die den Schlüssel des vom [Altcha](https://altcha.org/) erzeugten Challenge-Ergebnisses senden und die gültig sind, erfolgreich authentifizieren; andernfalls wird der Login blockiert.
+
+> Im Frontend muss das Widget von [Altcha](https://altcha.org/) integriert und der Schlüssel des Challenge-Ergebnisses im Feld `altcha` gesendet werden.
+
+### Widget in React
+
+Unten sehen Sie, wie die Integration des Widgets in React erfolgt:
+
+Fügen Sie die Abhängigkeit von [Altcha](https://altcha.org/) hinzu:
+
+- `bun add altcha`
+
+Importieren Sie [Altcha](https://altcha.org/) im Code:
+
+```jsx title="website/src/pages/Anmeldung/index.jsx"
+import "altcha/i18n";
+```
+
+Erstellen Sie einen State, um den Schlüssel des Challenge-Ergebnisses zu speichern:
+
+```jsx title="website/src/pages/Anmeldung/index.jsx"
+const [altchaNutzlast, setAltchaNutzlast] = useState(null);
+```
+
+Erstellen Sie eine interne Referenz in der React-Komponente für das Widget:
+
+```jsx title="website/src/pages/Anmeldung/index.jsx"
+const altcha = useRef(null);
+```
+
+Fügen Sie den Ladeeffekt der Komponente hinzu, die die Widget-Referenz verwendet, mit einem Event, das beobachtet,
+wenn die Checkbox des Widgets angeklickt wird, um den Schlüssel des Challenge-Ergebnisses im State zu laden:
+
+```jsx title="website/src/pages/Anmeldung/index.jsx"
+useEffect(() => {
+  if (altcha && altcha.current) {
+    function altchaVerifiziert(ev) {
+      if (ev.detail.state === "verified") {
+        setAltchaNutzlast(ev.detail.payload);
+      }
+    }
+    altcha.current.addEventListener("statechange", altchaVerifiziert, false);
+    return () => {
+      if (altcha.current != null) {
+        altcha.current.removeEventListener("statechange", altchaVerifiziert, false);
+      }
+    }
+  }
+}, [altcha]);
+```
+
+Beispiel des Widgets im "HTML" der React-Komponente:
+
+```jsx title="website/src/pages/Anmeldung/index.jsx"
+<altcha-widget
+    ref={altcha}
+    challenge={_service.url('/_altcha')}
+    language="de"
+    delay={1}
+    hideLogo={true}
+    hideFooter={true}
+></altcha-widget>
+```
+
+### Auth Client
+
+Sehen Sie, wie Sie [Altcha](https://altcha.org/) in den [Auth Client](https://www.npmjs.com/package/@netuno/auth-client) integrieren.
+
+Verwenden Sie den folgenden Code in dem Event, das die Daten des Login-Formulars an das Backend sendet,
+wie die Events `onSubmit`, `onClick` oder `onFinish` der Ant.Design-Formulare:
+
+```jsx title="website/src/pages/Anmeldung/index.jsx"
+_auth.login({
+  username,
+  password,
+  data: (data) => {
+    data.altcha = altchaNutzlast;
+    return data;
+  },
+  success: ({json}) => {
+    ...
+  },
+  fail: (data) => {
+    ...
+  }
+});
+```
+
+Beachten Sie, dass `altchaNutzlast` der State mit dem Schlüssel des Challenge-Ergebnisses des Captchas ist.
+
+Vollständiges Beispiel auf der Anmeldeseite des ReAuthKit:
+
+- [Quellcode der Anmeldeseite des ReAuthKit.](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Login/index.jsx)
+
+## Integration in Diensten
+
+Darüber hinaus kann der Captcha-Mechanismus mit [Altcha](https://altcha.org/), wie oben bei der Authentifizierung gezeigt, in jede andere Art von Dienst integriert werden.
+
+Es wird empfohlen, die Captcha-Integration in jeden öffentlichen Dienst einzubauen, der Ziel von Angriffen sein kann, wie
+die erschöpfende Automatisierung durch Bots zur massenhaften Registrierung von Daten.
+
+Im Frontend muss auf dem Bildschirm, in dem der REST-API-Dienst integriert ist, auch das Sicherheits-Widget von [Altcha](https://altcha.org/)
+implementiert werden; das heißt, wo der Dienst aufgerufen wird, muss das Widget verwendet werden.
+
+### Service Client
+
+Sehen Sie im Folgenden, wie Sie [Altcha](https://altcha.org/) in den [Service Client](https://www.npmjs.com/package/@netuno/service-client) integrieren.
+
+Die Integration des Widgets im Frontend ähnelt der oben bereits erklärten:
+
+- [Widget in HTML](#widget-in-html)
+- [Widget in React](#widget-in-react)
+
+Wir müssen die Nutzlast des Widgets abrufen, genau wie oben bereits beispielhaft gezeigt; es folgt derselbe Prozess wie bei der
+Login-Authentifizierung.
+
+Die Nutzlast wird über einen Parameter in der URL, ein Formularfeld oder auch als Eigenschaft im
+JSON an das Backend gesendet; das hängt von der HTTP-Methode und der Implementierung des Dienstes ab.
+
+Beispiel dafür, wie die Nutzlast an den Dienst zur Registrierung bzw. Erstellung eines neuen Benutzerkontos gesendet wird:
+
+```jsx title="pages/Registrierung/index.jsx"
+_service({
+  method: 'POST',
+  url: 'registrieren',
+  data: {
+    name,
+    email,
+    password,
+    altcha: altchaNutzlast
+  },
+  success: (response) => {
+    ...
+  },
+  fail: (e) => {
+    ...
+  }
+});
+```
+
+Beachten Sie, dass `altchaNutzlast` der State mit dem Schlüssel des Challenge-Ergebnisses des Captchas ist.
+
+Vollständiges Beispiel auf der Registrierungsseite des ReAuthKit:
+
+- [Quellcode der Registrierungsseite des ReAuthKit.](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Register/index.jsx)
+
+### Backend
+
+Da die Nutzlast an den REST-API-Dienst gesendet wird, müssen wir sie im Code des Dienstes auf der Backend-Seite
+validieren; sehen Sie wie:
+
+<PolyglotCode
+    file="server/services/registrieren/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+            const altchaNutzlast = _req.getString("altcha");
+
+            if (_auth.altchaEnabled() && !_altcha.verifySolution(altchaNutzlast)) {
+              _header.status(409);
+              _out.json(
+                _val.map()
+                  .set("error", "invalid-altcha-payload")
+              );
+              _exec.stop();
+            }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+            altchaNutzlast = _req.getString("altcha")
+
+            if _auth.altchaEnabled() and _altcha.verifySolution(altchaNutzlast) == False:
+                _header.status(409)
+                _out.json(
+                    _val.map()
+                        .set("error", "invalid-altcha-payload")
+                )
+                _exec.stop()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                altchaNutzlast = _req.getString("altcha")
+
+                if _auth.altchaEnabled() and _altcha.verifySolution(altchaNutzlast) == false
+                    _header.status(409)
+                    _out.json(
+                        _val.map()
+                            .set("error", "invalid-altcha-payload")
+                    )
+                    _exec.stop()
+                end
+            `
+        },
+    ]}
+/>
+
+Vollständiges Beispiel des Registrierungsdienstes des ReAuthKit:
+
+- [Quellcode des Registrierungsdienstes des ReAuthKit.](https://github.com/netuno-org/reauthkit/blob/main/server/services/profile/post.js)
+
+Erfahren Sie mehr über die Low-Code- und polyglotten Programmierfunktionen:
+
+- [Altcha](/docs/library/resources/altcha)
+- [Auth](/docs/library/resources/auth)
+
+## Fazit
+
+Ganz vereinfacht können wir einen Sicherheitsmechanismus in den API-Diensten erstellen, um Bots zu vermeiden und
+die Interaktion durch Menschen im Browser sicherzustellen.
+
+> Es wird empfohlen, den Captcha-Mechanismus mit [Altcha](https://altcha.org/) in den sensibelsten öffentlichen Diensten zu
+> verwenden, wie den Registrierungs- und Authentifizierungsdiensten.
+
+Mit der nativen Implementierung, die Netuno bietet, wird es sehr einfach, diesen Mechanismus in
+jedem REST-API-Dienst zu aktivieren und zu nutzen.
+
+> Es wird empfohlen, dass das von Netuno automatisch generierte Backoffice in der Produktion immer die Authentifizierung mit [Altcha](https://altcha.org/)
+> aktiviert hat und HTTPS sowie ein SSL-Zertifikat verwendet.
+
+Verwenden Sie wann immer möglich [Altcha](https://altcha.org/), um die Sicherheit und Robustheit der öffentlichen Dienste Ihrer API zu gewährleisten.

@@ -10,33 +10,33 @@ Alternativa de código abierto equivalente a reCaptcha.
 
 ## Introducción
 
-La implementación del mecanismo de seguridad con captcha es de extrema importancia, a continuación algunos motivos pertinentes:
+La implementación del mecanismo de seguridad con captcha es de suma importancia; a continuación se presentan algunos motivos relevantes:
 
 - Evitar que los robots realicen accesos automáticos a las direcciones de la API.
 - Garantizar que el acceso lo realiza una persona real.
 - También garantiza que el acceso se ha realizado con un navegador.
 
-Durante mucho tiempo, el mecanismo de captcha ofrecía un desafío para que el usuario lo completara.
+Durante mucho tiempo, el mecanismo de captcha ofrecía un desafío que el usuario debía completar.
 
 Hoy en día esto es innecesario, porque se utiliza un mecanismo de claves cifradas combinado con un desafío que
-debe ser resuelto por un algoritmo que utiliza la interacción en el navegador, así detecta si es una interacción humana
+debe resolverse mediante un algoritmo que emplea la interacción en el navegador, detectando así si la interacción es humana
 o robotizada.
 
-> Este método es ingenioso y fiable; con solo un clic se detecta si es humano o robot.
+> Este método es ingenioso y fiable; con un solo clic se detecta si es humano o robot.
 
-El [Altcha](https://altcha.org/) es un proyecto de código abierto que implementa este proceso de seguridad, con un widget
+[Altcha](https://altcha.org/) es un proyecto de código abierto que implementa este proceso de seguridad, con un widget
 de frontend que también se integra con React, y un recurso de backend que ofrece Netuno.
 
 ## Limitaciones
 
-El [Altcha](https://altcha.org/) utiliza la [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API),
+[Altcha](https://altcha.org/) utiliza la [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API),
 solo funciona en direcciones HTTPS seguras con certificado SSL, o localmente.
 
 > En el frontend, si el dominio no es `localhost`, la URL obligatoriamente debe ser HTTPS segura con
 > certificado SSL.
 
 Cuando se accede al frontend localmente, los navegadores permiten utilizar la [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API)
-solo en la dirección local, obligatoriamente `localhost`; por lo tanto, de lo contrario se exige HTTPS seguro con
+solo en la dirección local, obligatoriamente `localhost`; por lo tanto, en caso contrario se exige HTTPS seguro con
 certificado SSL.
 
 ## Backoffice
@@ -63,7 +63,7 @@ funcionamiento.
 
 ### Cómo funciona
 
-Netuno proporciona en la API REST un servicio estándar que proporciona los parámetros de [Altcha](https://altcha.org/) para el
+Netuno proporciona en la API REST un servicio estándar que proporciona los parámetros de [Altcha](https://altcha.org/) al
 frontend; normalmente, la dirección de este servicio es:
 
 - `http://localhost:9000/services/_altcha`
@@ -95,13 +95,13 @@ Ejemplo de cómo se integra el widget en el HTML de inicio de sesión del backof
 </form>
 ```
 
-Observe que la URL utilizada en el atributo `challenge` del widget es el servicio autogenerado por Netuno con la
+Tenga en cuenta que la URL utilizada en el atributo `challenge` del widget es el servicio autogenerado por Netuno con la
 parametrización del desafío.
 
 ## Autenticación externa
 
 La autenticación normalmente implementada y segura con JWT utiliza el servicio estándar de la API REST para
-autenticación, el cual suele ser:
+autenticación, que suele ser:
 
 - `http://localhost:9000/services/_auth`
 
@@ -123,9 +123,9 @@ Para activar [Altcha](https://altcha.org/) en la autenticación, añada la confi
 ```
 
 Así, solo las solicitudes de autenticación, es decir, los inicios de sesión que envíen la clave del resultado del desafío generado
-por [Altcha](https://altcha.org/) y que sea válida, podrán autenticarse con éxito; de lo contrario, el inicio de sesión será bloqueado.
+por [Altcha](https://altcha.org/) y que sea válida, podrán autenticarse correctamente; en caso contrario, el inicio de sesión será bloqueado.
 
-> Debe integrarse en el frontend el widget de [Altcha](https://altcha.org/) y enviar la clave del resultado del
+> Se debe integrar en el frontend el widget de [Altcha](https://altcha.org/) y enviar la clave del resultado del
 > desafío en el campo `altcha`.
 
 ### Widget en React
@@ -155,7 +155,7 @@ const altcha = useRef(null);
 ```
 
 Añada el efecto de carga del componente que utiliza la referencia del widget, con un evento que observa
-cuando se hace clic en la casilla de verificación del widget para cargar la clave del resultado del desafío en el estado:
+cuándo se hace clic en la casilla de verificación del widget para cargar la clave del resultado del desafío en el estado:
 
 ```jsx title="website/src/pages/InicioSesion/index.jsx"
 useEffect(() => {
@@ -190,59 +190,59 @@ Ejemplo del widget en el "HTML" del componente React:
 
 ### Auth Client
 
-Vea cómo integrar [Altcha](https://altcha.org/) en [Auth Client](https://www.npmjs.com/package/@netuno/auth-client).
+Vea cómo integrar [Altcha](https://altcha.org/) en el [Auth Client](https://www.npmjs.com/package/@netuno/auth-client).
 
-Utilice el código de abajo en el evento que envía los datos del formulario de inicio de sesión al backend,
-como los eventos `onSubmit`, `onClick`, o el `onFinish` de los formularios de Ant.Design:
+Utilice el código siguiente en el evento que envía los datos del formulario de inicio de sesión al backend,
+como los eventos `onSubmit`, `onClick` o el `onFinish` de los formularios de Ant.Design:
 
 ```jsx title="website/src/pages/InicioSesion/index.jsx"
 _auth.login({
-  usuario,
-  contraseña,
-  data: (datos) => {
-    datos.altcha = cargaAltcha;
-    return datos;
+  username,
+  password,
+  data: (data) => {
+    data.altcha = cargaAltcha;
+    return data;
   },
   success: ({json}) => {
     ...
   },
-  fail: (datos) => {
+  fail: (data) => {
     ...
   }
 });
 ```
 
-Observe que `cargaAltcha` es el estado que tiene la clave del resultado del desafío del captcha.
+Tenga en cuenta que `cargaAltcha` es el estado que contiene la clave del resultado del desafío del captcha.
 
-Ejemplo completo en la página de Inicio de sesión de ReAuthKit:
+Ejemplo completo en la página de inicio de sesión de ReAuthKit:
 
-- [Código fuente de la página de Inicio de sesión de ReAuthKit.](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Login/index.jsx)
+- [Código fuente de la página de inicio de sesión de ReAuthKit.](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Login/index.jsx)
 
 ## Integración en servicios
 
-Además de la autenticación como vimos anteriormente, en cualquier otro tipo de servicio puede integrarse el mecanismo de captcha
+Además de la autenticación, como hemos visto anteriormente, en cualquier otro tipo de servicio se puede integrar el mecanismo de captcha
 con [Altcha](https://altcha.org/).
 
 Se recomienda integrar el captcha en cualquier servicio público que pueda ser objetivo de ataques, como
 la automatización exhaustiva de robots para el registro masivo de datos.
 
-En el frontend, en la pantalla en la que se integra el servicio de la API REST también debe implementarse el widget de seguridad de [Altcha](https://altcha.org/);
+En el frontend, en la pantalla en la que se integra el servicio de la API REST, también debe implementarse el widget de seguridad de [Altcha](https://altcha.org/);
 es decir, donde se llama al servicio debe utilizarse el widget.
 
 ### Service Client
 
-Vea a continuación cómo integrar [Altcha](https://altcha.org/) en [Service Client](https://www.npmjs.com/package/@netuno/service-client).
+Vea a continuación cómo integrar [Altcha](https://altcha.org/) en el [Service Client](https://www.npmjs.com/package/@netuno/service-client).
 
-La integración del widget en el frontend es similar a como ya se explicó anteriormente en:
+La integración del widget en el frontend es similar a lo ya explicado anteriormente en:
 
-- [Widget en HTML](#widget-no-html)
-- [Widget en React](#widget-no-react)
+- [Widget en HTML](#widget-en-html)
+- [Widget en React](#widget-en-react)
 
-Necesitamos obtener el payload del widget, exactamente como ya se ejemplificó anteriormente; sigue el mismo proceso de la
+Necesitamos obtener el payload del widget, exactamente como se ha ejemplificado anteriormente; se sigue el mismo proceso que en la
 autenticación de inicio de sesión.
 
-El payload se envía al backend a través de un parámetro en la URL, campo del formulario, o incluso como una propiedad en el
-JSON; depende del método HTTP y de cómo se implemente el servicio.
+El payload se envía al backend mediante un parámetro en la URL, un campo del formulario o como una propiedad en el
+JSON, dependiendo del método HTTP y de cómo se implemente el servicio.
 
 Ejemplo de cómo enviar el payload al servicio de registro, o alta de una nueva cuenta de usuario:
 
@@ -251,21 +251,21 @@ _service({
   method: 'POST',
   url: 'registro',
   data: {
-    nombre,
-    correo,
-    contraseña,
+    name,
+    email,
+    password,
     altcha: cargaAltcha
   },
-  success: (respuesta) => {
+  success: (response) => {
     ...
   },
-  fail: (error) => {
+  fail: (e) => {
     ...
   }
 });
 ```
 
-Observe que `cargaAltcha` es el estado que tiene la clave del resultado del desafío del captcha.
+Tenga en cuenta que `cargaAltcha` es el estado que contiene la clave del resultado del desafío del captcha.
 
 Ejemplo completo en la página de Registro de ReAuthKit:
 
@@ -273,7 +273,7 @@ Ejemplo completo en la página de Registro de ReAuthKit:
 
 ### Backend
 
-Con el payload enviado al servicio de la API REST, entonces en el código del servicio, en el lado del backend tenemos
+Con el payload enviado al servicio de la API REST, en el código del servicio, en el lado del backend, tenemos
 que validarlo; vea cómo:
 
 <PolyglotCode
@@ -288,7 +288,7 @@ que validarlo; vea cómo:
               _header.status(409);
               _out.json(
                 _val.map()
-                  .set("error", "invalid-altcha-payload")
+                  .set("error", "carga-altcha-invalida")
               );
               _exec.stop();
             }
@@ -303,7 +303,7 @@ que validarlo; vea cómo:
                 _header.status(409)
                 _out.json(
                     _val.map()
-                        .set("error", "invalid-altcha-payload")
+                        .set("error", "carga-altcha-invalida")
                 )
                 _exec.stop()
             `
@@ -317,7 +317,7 @@ que validarlo; vea cómo:
                     _header.status(409)
                     _out.json(
                         _val.map()
-                            .set("error", "invalid-altcha-payload")
+                            .set("error", "carga-altcha-invalida")
                     )
                     _exec.stop()
                 end
@@ -338,7 +338,7 @@ Vea más sobre los recursos de programación low-code y políglota:
 ## Conclusión
 
 De forma bastante simplificada podemos crear un mecanismo de seguridad en los servicios de la API para evitar robots y
-garantizar la interacción por humanos en el navegador.
+garantizar la interacción por parte de humanos en el navegador.
 
 > Se recomienda utilizar el mecanismo de captcha con [Altcha](https://altcha.org/) en los servicios públicos más
 > sensibles, como los servicios de registro y autenticación.

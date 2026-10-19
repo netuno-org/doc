@@ -1,24 +1,29 @@
 ---
 id: upload
-title: Téléversement
-sidebar_label: Téléversement
+title: Upload
+sidebar_label: Upload
 ---
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
 
-Envoyer des fichiers vers l'API et les enregistrer dans un dossier ou dans la base de données.
+Envoyer des fichiers à l'API et les enregistrer dans un dossier ou dans la base de données.
 
 ## Introduction
 
-Lorsque nous devons envoyer des fichiers vers les services de l'API REST, nous avons plusieurs façons de réaliser ce développement dans Netuno.
+Lorsque nous devons envoyer des fichiers aux services de l'API REST, nous avons plusieurs façons
+de réaliser ce développement dans Netuno.
 
-Normalement, les fichiers sont envoyés dans le corps de la requête HTTP structurés au format multipart, c'est la procédure la plus courante dans le frontend, par exemple lorsque nous remplissons un formulaire et qu'il y a ce champ pour choisir un fichier.
+Normalement, les fichiers sont envoyés dans le corps de la requête HTTP structurés au format
+multipart, c'est la procédure la plus courante dans le frontend, par exemple lorsque nous remplissons un
+formulaire et qu'il y a ce champ pour choisir un fichier.
 
-En alternative, nous pouvons envoyer les octets des fichiers encodés en Base64 comme valeur dans un objet JSON, lorsque nous voulons une API REST 100% JSON.
+Alternativement, nous pouvons envoyer les octets des fichiers encodés en Base64 comme valeur
+dans un objet JSON, lorsque nous voulons une API REST 100% JSON.
 
 ## Fichiers
 
-Grâce à `_req.file`, nous pouvons passer le nom du champ et ainsi obtenir l'objet du fichier qui a été envoyé, voyez comment :
+Grâce à `_req.file`, nous pouvons passer le nom du champ et ainsi obtenir l'objet du fichier
+qui a été envoyé, voyez comment :
 
 <PolyglotCode
     codes={[
@@ -31,15 +36,17 @@ Grâce à `_req.file`, nous pouvons passer le nom du champ et ainsi obtenir l'ob
     ]}
 />
 
-C'est-à-dire, le `_req` a toutes les données que nous recevons dans le corps de la requête HTTP.
+C'est-à-dire que `_req` contient toutes les données que nous recevons dans le corps de la requête HTTP.
 
-Et grâce à la méthode `file`, il permet d'obtenir l'objet qui représente le fichier qui a été envoyé.
+Et grâce à la méthode `file`, il permet d'obtenir l'objet qui représente le fichier qui a été
+envoyé.
 
 La valeur obtenue peut être `null` s'il n'y a aucun fichier.
 
 ## Images
 
-Lorsque nous recevons des images, il est courant de devoir les redimensionner, pour garantir l'uniformité et pour réduire l'espace occupé par les images.
+Lorsque nous recevons des images, il est courant d'avoir besoin de les redimensionner, pour garantir
+l'uniformité et pour réduire l'espace occupé par les images.
 
 <PolyglotCode
     codes={[
@@ -115,17 +122,17 @@ Lorsque nous recevons des images, il est courant de devoir les redimensionner, p
 />
 
 Avec la ressource de programmation low-code polyglotte [Image](/docs/library/resources/image),
-nous pouvons manipuler des images, couper, redimensionner, en créer de nouvelles, etc.
+nous pouvons manipuler des images, les recadrer, les redimensionner, en créer de nouvelles, etc.
 
-## Comment Base64 dans le JSON
+## Comment faire un Base64 dans le JSON
 
-Pour effectuer le téléversement d'un fichier dans le JSON envoyé au service, nous pouvons définir une propriété avec la valeur :
+Pour effectuer l'upload d'un fichier dans le JSON envoyé au service, nous pouvons définir une propriété avec la valeur :
 
 `data:image/png;base64,...`
 
 Où dans les `...` suit la séquence des octets du fichier encodés en Base64.
 
-Étant donné que le type du fichier suit le `data`, par exemple :
+Le type du fichier va après le `data`, par exemple :
 
 - PNG : `image/png`.
 - JPG : `image/jpeg`
@@ -213,11 +220,11 @@ Nous pouvons obtenir le fichier envoyé de la manière suivante :
     ]}
 />
 
-Exemple de sortie générée par le service ci-dessus :
+Exemple de la sortie générée par le service ci-dessus :
 
 ```json
 {
-  "name": "fichier.png",
+  "name": "file.png",
   "result": true,
   "size": 1849,
   "sizeKB": 1
@@ -226,7 +233,7 @@ Exemple de sortie générée par le service ci-dessus :
 
 ### Objet
 
-Si le fichier se trouve dans une structure interne du JSON dans le sous-objet :
+Si le fichier se trouve dans une structure interne du JSON à l'intérieur du sous-objet :
 
 ```json
 {
@@ -236,7 +243,7 @@ Si le fichier se trouve dans une structure interne du JSON dans le sous-objet :
 }
 ```
 
-Peut être obtenu de la manière suivante :
+Il peut être obtenu de la manière suivante :
 
 <PolyglotCode
     codes={[
@@ -251,7 +258,7 @@ Peut être obtenu de la manière suivante :
 
 ### Tableau
 
-Si le fichier se trouve dans une structure interne du JSON dans le tableau :
+Si le fichier se trouve dans une structure interne du JSON à l'intérieur du tableau :
 
 ```json
 {
@@ -261,7 +268,7 @@ Si le fichier se trouve dans une structure interne du JSON dans le tableau :
 }
 ```
 
-Peut être obtenu de la manière suivante :
+Il peut être obtenu de la manière suivante :
 
 <PolyglotCode
     codes={[
@@ -276,7 +283,7 @@ Peut être obtenu de la manière suivante :
 
 ## OpenAPI
 
-Netuno prend en charge l'intégration avec OpenAPI et utilise la définition OpenAPI pour valider la requête HTTP.
+Netuno prend en charge l'intégration avec OpenAPI et utilise la définition de l'OpenAPI pour valider la requête HTTP.
 
 > Plus d'informations sur [OpenAPI dans Netuno](/docs/academy/server/services/openapi).
 
@@ -288,7 +295,7 @@ Pour valider si un fichier est reçu dans une propriété de l'objet JSON :
 
 ```json title="post.in.json"
 {
-  "summary": "Téléversement de Fichier",
+  "summary": "Upload de fichier",
   "description": "Service qui reçoit un fichier dans l'objet JSON.",
   "type": "object",
   "properties": {
@@ -302,12 +309,12 @@ Pour valider si un fichier est reçu dans une propriété de l'objet JSON :
 }
 ```
 
-Pour valider si une liste de fichiers est reçue en tableau dans le JSON :
+Pour valider si une liste de fichiers est reçue dans un tableau JSON :
 
 ```json title="post.in.json"
 {
-  "summary": "Téléversement de Fichiers",
-  "description": "Service qui reçoit une liste de fichiers en tableau dans le JSON.",
+  "summary": "Upload de fichiers",
+  "description": "Service qui reçoit une liste de fichiers dans un tableau JSON.",
   "properties": {
     "fichiers": {
       "type": "array",
@@ -322,22 +329,23 @@ Pour valider si une liste de fichiers est reçue en tableau dans le JSON :
 }
 ```
 
-## Enregistrer le Fichier
+## Enregistrer le fichier
 
 Normalement, lorsque nous recevons un fichier dans le service, nous devons l'enregistrer, par exemple :
 
 - **Base de données** : Fichier lié à un enregistrement, comme celui d'un utilisateur.
-- **Stockage** : Dossier interne de l'application qui sert à gérer des fichiers en général.
+- **Storage** : Dossier interne de l'application qui sert à gérer des fichiers en général.
 - **Dossier** : Placer le fichier dans un dossier quelconque du système.
 
-### Base de Données
+### Base de données
 
 Dans la gestion des champs des formulaires, Netuno prend en charge le type `image` et `file`, à savoir :
 
-- **Image** : Fichiers image en général, JPG et PNG.
+- **Image** : Fichiers d'image en général, JPG et PNG.
 - **File** : Tout type de fichier.
 
-Imaginez que vous avez un champ Image dans le formulaire Produit, nous pouvons enregistrer le fichier envoyé via téléversement de la manière suivante :
+Imaginez que vous avez un champ Image dans le formulaire Produit, nous pouvons enregistrer le fichier envoyé via upload de
+la manière suivante :
 
 #### Exemple utilisant le DB Form :
 
@@ -457,7 +465,7 @@ Remarquez l'utilisation de `_db.form` :
     ]}
 />
 
-#### Exemple utilisant la mise à jour classique :
+#### Exemple utilisant l'update classique :
 
 Remarquez l'utilisation de `_db.update` :
 
@@ -581,19 +589,21 @@ Remarquez l'utilisation de `_db.update` :
     ]}
 />
 
-#### Téléchargement du Fichier depuis la Base de Données
+#### Téléchargement du fichier depuis la base de données
 
 Pour présenter le fichier stocké, nous devons créer un service qui fournit les octets du fichier.
 
-Étant donné que les fichiers enregistrés dans la base de données, comme dans l'exemple ci-dessus, le fichier lui-même est placé dans le stockage de l'application et seule la nom final du fichier est stocké dans la base de données.
+Étant donné que les fichiers enregistrés dans la base de données, comme dans l'exemple ci-dessus, le fichier lui-même est placé dans le storage de
+l'application et dans la base de données seul le nom final du fichier est stocké.
 
-> Le stockage de l'application est un dossier destiné à stocker et organiser des structures de fichiers génériques.
+> Le storage de l'application est un dossier destiné à stocker et organiser des structures de fichiers génériques.
 
-Par conséquent, dans l'exemple ci-dessus, les fichiers de base de données du formulaire `Produit` et du champ `Image` sont stockés dans :
+Donc, dans l'exemple ci-dessus, les fichiers de base de données du formulaire `Produit` et du champ `Image` sont
+stockés dans :
 
 - `storage/database/produit/image/*`
 
-> Netuno gère automatiquement le nom du fichier stocké pour éviter les noms de fichiers en double.
+> Netuno gère automatiquement le nom du fichier stocké pour éviter les doublons de noms de fichiers.
 
 Pour obtenir le fichier, un service peut être créé qui présente le fichier image du produit, par exemple :
 
@@ -605,7 +615,7 @@ Pour obtenir le fichier, un service peut être créé qui présente le fichier i
         code: `
             const produitUid = _req.getString("uid");
 
-            // Formulaire DB :
+            // DB Form:
             const dbProduit = _db.form("produit")
                 .where(_db.where("uid").equals(produitUid))
                 .first();
@@ -624,13 +634,13 @@ Pour obtenir le fichier, un service peut être créé qui présente le fichier i
 
             const dbProduitImageNom = dbProduit.getString("image");
 
-            const stockageProduitImageFichier = _storage.database(
+            const storageProduitImageFichier = _storage.database(
                 "produit",
                 "image",
                 dbProduitImageNom
             );
 
-            if (stockageProduitImageFichier.extension() == "jpg" || stockageProduitImageFichier.extension() == "jpeg") {
+            if (storageProduitImageFichier.extension() == "jpg" || storageProduitImageFichier.extension() == "jpeg") {
                 _header.contentTypeJPG();
             } else {
                 _header.contentTypePNG();
@@ -638,7 +648,7 @@ Pour obtenir le fichier, un service peut être créé qui présente le fichier i
 
             _header.noCache();
 
-            _out.copy(stockageProduitImageFichier.inputStream());
+            _out.copy(storageProduitImageFichier.inputStream());
         `
     },
     {
@@ -646,7 +656,7 @@ Pour obtenir le fichier, un service peut être créé qui présente le fichier i
         code: `
             produitUid = _req.getString("uid")
 
-            # Formulaire DB :
+            # DB Form :
             dbProduit = (
                 _db.form("produit")
                     .where(_db.where("uid").equals(produitUid))
@@ -666,35 +676,35 @@ Pour obtenir le fichier, un service peut être créé qui présente le fichier i
 
             dbProduitImageNom = dbProduit.getString("image")
 
-            stockageProduitImageFichier = _storage.database(
+            storageProduitImageFichier = _storage.database(
                 "produit",
                 "image",
                 dbProduitImageNom
             )
 
-            if stockageProduitImageFichier.extension() == "jpg" or stockageProduitImageFichier.extension() == "jpeg":
+            if storageProduitImageFichier.extension() == "jpg" or storageProduitImageFichier.extension() == "jpeg":
                 _header.contentTypeJPG()
             else:
                 _header.contentTypePNG()
 
             _header.noCache()
 
-            _out.copy(stockageProduitImageFichier.inputStream())
+            _out.copy(storageProduitImageFichier.inputStream())
         `
     },
     {
         lang: 'ruby',
         code: `
-            produitUid = _req.getString("uid")
+            produit_uid = _req.getString("uid")
 
-            # Formulaire DB :
-            dbProduit = _db.form("produit")
-                .where(_db.where("uid").equals(produitUid))
+            # DB Form :
+            db_produit = _db.form("produit")
+                .where(_db.where("uid").equals(produit_uid))
                 .first()
             # Alternative avec DB Classique :
-            # dbProduit = _db.get("produit", produitUid)
+            # db_produit = _db.get("produit", produit_uid)
 
-            if dbProduit.nil?
+            if db_produit.nil?
                 _header.status(404)
                 _out.json(
                     _val.map()
@@ -704,15 +714,15 @@ Pour obtenir le fichier, un service peut être créé qui présente le fichier i
                 _exec.stop()
             end
 
-            dbProduitImageNom = dbProduit.getString("image")
+            db_produit_image_nom = db_produit.getString("image")
 
-            stockageProduitImageFichier = _storage.database(
+            storage_produit_image_fichier = _storage.database(
                 "produit",
                 "image",
-                dbProduitImageNom
+                db_produit_image_nom
             )
 
-            if stockageProduitImageFichier.extension() == "jpg" || stockageProduitImageFichier.extension() == "jpeg"
+            if storage_produit_image_fichier.extension() == "jpg" || storage_produit_image_fichier.extension() == "jpeg"
                 _header.contentTypeJPG()
             else
                 _header.contentTypePNG()
@@ -720,7 +730,7 @@ Pour obtenir le fichier, un service peut être créé qui présente le fichier i
 
             _header.noCache()
 
-            _out.copy(stockageProduitImageFichier.inputStream())
+            _out.copy(storage_produit_image_fichier.inputStream())
         `
     },
 ]}
@@ -743,15 +753,18 @@ Remarquez que la ressource `_storage` ([Storage](/docs/library/resources/storage
     ]}
 />
 
-Dans la base de données, seul le nom du fichier est stocké, et grâce à `_storage.database`, nous pouvons obtenir le fichier lui-même.
+Dans la base de données, seul le nom du fichier est stocké, et grâce à `_storage.database`, nous pouvons
+obtenir le fichier lui-même.
 
-### Stockage
+### Storage
 
-Nous pouvons enregistrer un fichier directement dans le `stockage` de l'application.
+Nous pouvons enregistrer un fichier directement dans le `storage` de l'application.
 
-Pour ne pas mélanger avec les fichiers de base de données, nous devons utiliser le dossier `filesystem`, qui a pour finalité de stocker des fichiers génériques qui ne sont pas associés à la base de données.
+Pour ne pas mélanger avec les fichiers de base de données, nous devons utiliser le dossier `filesystem`, qui a
+pour finalité de stocker des fichiers génériques qui ne sont pas associés dans la base de données.
 
-Pour recevoir le fichier, dans cet exemple, il est démontré comment un fichier envoyé dans le service `POST` est stocké directement dans le stockage :
+Pour recevoir le fichier, dans cet exemple il est démontré comment un fichier envoyé dans le service
+ `POST` est stocké directement dans le storage :
 
 <PolyglotCode
     file="services/fichier/post"
@@ -760,8 +773,8 @@ Pour recevoir le fichier, dans cet exemple, il est démontré comment un fichier
             lang: 'javascript',
             code: `
                 const fichier = _req.getFile("fichier");
-                _storage.filesystem("serveur", "televersement").ensurePath();
-                fichier.save(_storage.filesystem("serveur", "televersement", fichier.name()));
+                _storage.filesystem("serveur", "upload").ensurePath();
+                fichier.save(_storage.filesystem("serveur", "upload", fichier.name()));
             `
         },
     ]}
@@ -769,7 +782,7 @@ Pour recevoir le fichier, dans cet exemple, il est démontré comment un fichier
 
 Le fichier est stocké dans le dossier `storage` de l'application, dans :
 
-- `storage/filesystem/serveur/televersement/*`
+- `storage/filesystem/serveur/upload/*`
 
 > La ressource [Storage](/docs/library/resources/storage) est utilisée pour obtenir le chemin du dossier et du fichier :
 
@@ -780,7 +793,7 @@ Le fichier est stocké dans le dossier `storage` de l'application, dans :
             code: `
                 _storage.filesystem(
                     "serveur", // Nom du sous-dossier dans le filesystem.
-                    "televersement", // Nom ou chemin du sous-dossier interne.
+                    "upload", // Nom ou chemin du sous-dossier interne.
                     fichier.name() // Nom final du fichier.
                 );
             `
@@ -790,7 +803,8 @@ Le fichier est stocké dans le dossier `storage` de l'application, dans :
 
 > Voir plus sur la documentation de [Storage](/docs/library/resources/storage).
 
-Pour télécharger le fichier, dans cet exemple, il est démontré comment les octets du fichier peuvent être obtenus via le service `GET` :
+Pour télécharger le fichier, dans cet exemple il est démontré comment les octets du fichier
+peuvent être obtenus via le service `GET` :
 
 <PolyglotCode
     file="services/fichier/get"
@@ -802,7 +816,7 @@ Pour télécharger le fichier, dans cet exemple, il est démontré comment les o
 
                 const fichier = _storage.filesystem(
                     "serveur",
-                    "televersement",
+                    "upload",
                     nomFichier
                 ).file();
 
@@ -811,7 +825,7 @@ Pour télécharger le fichier, dans cet exemple, il est démontré comment les o
                     _out.json(
                         _val.map()
                             .set("result", false)
-                            .set("error", "fichier-n-existe-pas")
+                            .set("error", "fichier-inexistant")
                     );
                     _exec.stop();
                 }
@@ -827,7 +841,7 @@ Pour télécharger le fichier, dans cet exemple, il est démontré comment les o
 
                 fichier = _storage.filesystem(
                     "serveur",
-                    "televersement",
+                    "upload",
                     nomFichier
                 ).file()
 
@@ -836,7 +850,7 @@ Pour télécharger le fichier, dans cet exemple, il est démontré comment les o
                     _out.json(
                         _val.map()
                             .set("result", False)
-                            .set("error", "fichier-n-existe-pas")
+                            .set("error", "fichier-inexistant")
                     )
                     _exec.stop()
 
@@ -851,7 +865,7 @@ Pour télécharger le fichier, dans cet exemple, il est démontré comment les o
 
                 fichier = _storage.filesystem(
                     "serveur",
-                    "televersement",
+                    "upload",
                     nom_fichier
                 ).file()
 
@@ -860,9 +874,9 @@ Pour télécharger le fichier, dans cet exemple, il est démontré comment les o
                     _out.json(
                         _val.map()
                             .set("result", false)
-                            .set("error", "fichier-n-existe-pas")
+                            .set("error", "fichier-inexistant")
                     )
-                    _exec.stop
+                    _exec.stop()
                 end
 
                 _header.downloadFile(fichier.name())
@@ -879,13 +893,13 @@ Nous pouvons enregistrer un fichier directement dans n'importe quel dossier de l
 Il y a deux ressources qui sont très utiles dans ces cas :
 
 - `_app` - Nous pouvons récupérer n'importe quel dossier ou fichier dans l'application.
-- `_os` - Nous pouvons récupérer n'importe quel dossier ou fichier dans l'ordinateur.
+- `_os` - Nous pouvons récupérer n'importe quel dossier ou fichier sur l'ordinateur.
 
 > Voir la documentation des ressources respectives [App](/docs/library/resources/app) et [OS](/docs/library/resources/os),
 > les deux ressources ont les méthodes `folder` et `file`, qui permettent d'indiquer le chemin du dossier ou du fichier
 > respectivement.
 
-Pour recevoir le fichier, dans cet exemple, il est démontré comment un fichier envoyé dans le service
+Pour recevoir le fichier, dans cet exemple il est démontré comment un fichier envoyé dans le service
 `POST` est stocké directement dans un dossier de l'application :
 
 <PolyglotCode
@@ -952,7 +966,7 @@ Pour recevoir le fichier, dans cet exemple, il est démontré comment un fichier
 Le code ci-dessus va créer le dossier `temporaire` dans l'application et enregistrer le fichier reçu
 dans ce dossier.
 
-Pour télécharger le fichier, dans cet exemple, il est démontré comment les octets du fichier
+Pour télécharger le fichier, dans cet exemple il est démontré comment les octets du fichier
 peuvent être obtenus via le service `GET` :
 
 <PolyglotCode
@@ -969,7 +983,7 @@ peuvent être obtenus via le service `GET` :
                     _out.json(
                         _val.map()
                             .set("result", false)
-                            .set("error", "fichier-n-existe-pas")
+                            .set("error", "fichier-inexistant")
                     );
                     _exec.stop();
                 }
@@ -989,7 +1003,7 @@ peuvent être obtenus via le service `GET` :
                     _out.json(
                         _val.map()
                             .set("result", False)
-                            .set("error", "fichier-n-existe-pas")
+                            .set("error", "fichier-inexistant")
                     )
                     _exec.stop()
 
@@ -1008,9 +1022,9 @@ peuvent être obtenus via le service `GET` :
                     _out.json(
                         _val.map()
                             .set("result", false)
-                            .set("error", "fichier-n-existe-pas")
+                            .set("error", "fichier-inexistant")
                     )
-                    _exec.stop
+                    _exec.stop()
                 end
 
                 _header.downloadFile(fichier.name())
@@ -1028,7 +1042,7 @@ peuvent être obtenus via le service `GET` :
                     _out.json(
                         _val.map()
                             .set("result", false)
-                            .set("error", "fichier-n-existe-pas")
+                            .set("error", "fichier-inexistant")
                     )
                     _exec.stop()
                 }
@@ -1048,7 +1062,7 @@ peuvent être obtenus via le service `GET` :
                     _out.json(
                         _val.map()
                             .set("result", false)
-                            .set("error", "fichier-n-existe-pas")
+                            .set("error", "fichier-inexistant")
                     )
                     _exec.stop()
                 }
@@ -1062,9 +1076,11 @@ peuvent être obtenus via le service `GET` :
 
 ## Conclusion
 
-Comme on peut le voir, nous pouvons intégrer le téléversement de fichiers dans les services de l'API REST, y compris intégré avec la OpenAPI.
+Comme on peut le voir, nous pouvons intégrer l'upload de fichiers dans les services de l'API REST, y compris intégré avec
+OpenAPI.
 
-Nous pouvons enregistrer le fichier dans la base de données, dans le dossier `storage` de l'application ou dans n'importe quel dossier de l'ordinateur.
+Nous pouvons enregistrer le fichier dans la base de données, dans le dossier `storage` de l'application ou dans n'importe quel dossier de
+l'ordinateur.
 
 Voir la documentation des ressources utilisées dans ce tutoriel qui permettent de manipuler les fichiers :
 
@@ -1072,4 +1088,6 @@ Voir la documentation des ressources utilisées dans ce tutoriel qui permettent 
 - [App](/docs/library/resources/app)
 - [OS](/docs/library/resources/os)
 
-Dans la base de données, nous pouvons enregistrer des images dans des champs de type `image`, et nous pouvons enregistrer n'importe quel type de fichier dans des champs de type `file`, la façon dont nous enregistrons ou obtenons des fichiers est la même dans tous les cas, qu'il s'agisse d'une image ou d'un fichier générique.
+En base de données, nous pouvons enregistrer des images dans des champs de type `image`, et nous pouvons enregistrer tout type de fichier dans
+des champs de type `file`, comment nous enregistrons ou obtenons des fichiers est de la même manière dans tous les cas, qu'il s'agisse d'une image ou d'un
+fichier générique.

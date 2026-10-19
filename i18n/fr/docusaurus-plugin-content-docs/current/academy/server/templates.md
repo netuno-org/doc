@@ -5,7 +5,7 @@ sidebar_label: Modèles
 ---
 
 ## Avant de commencer
-Avant de créer des services qui appellent des modèles, assurez-vous de savoir créer des **Services Web REST** ; si ce n'est pas le cas, consultez le lien suivant :
+Avant de créer des services qui appellent des modèles, assurez-vous de savoir créer des **Services Web REST** ; si vous ne savez pas le faire, consultez le lien suivant :
 
 * [Services Web REST](/docs/academy/server/services/rest)
 
@@ -15,20 +15,20 @@ Il est également conseillé, avant de commencer ce tutoriel, de vous assurer qu
 
 Dans ce tutoriel, nous aborderons la création de modèles et les actions nécessaires pour pouvoir les appeler dans votre service.
 
-Lorsque vous créez un service dans Netuno, vous avez la possibilité d'accéder à des modèles que vous avez créés ; selon le résultat, vous pouvez rediriger votre service vers un modèle HTML avec des données.
+Lors de la création d'un service dans Netuno, vous avez la possibilité d'accéder à des modèles créés par vous, c'est-à-dire que selon le résultat, vous pouvez rediriger votre service vers un modèle en HTML avec des données.
 
-Dans cet exemple, nous aurons un modèle de base en HTML et nous passerons des données du service vers ce même modèle.
+Dans cet exemple, nous aurons un modèle de base en HTML et passerons des données du service vers ce même modèle.
 
 ## Création d'un modèle
 
 ![modeles1.png](/docs/assets/templates1.png)
 
-Après vous être placé dans le répertoire ci-dessus, nous allons créer un fichier en `.html` ; dans cet exemple, il sera nommé `modele.html`.
+Après vous être rendu dans le répertoire ci-dessus, nous allons créer un fichier en `.html` ; dans cet exemple, il sera nommé `modele.html`.
 
 Voici le contenu de cette page :
 
 ```html
-<!-- Appel à l'en-tête de Netuno -->
+<!-- Appel au header de Netuno -->
 _{include=_|includes/head}
 
 <!-- Définition des styles -->
@@ -43,15 +43,15 @@ h1, b {
 }
 </style>
 
-<!-- Début du corps HTML -->
+<!-- Début du body du HTML -->
 <h1>Titre du modèle</h1>
 
-<!-- Lorsque vous devez passer des données d'un service vers un modèle, utilisez _{&variable} -->
-<p>Bonjour, je suis un <b>_{&data=nom}</b> et je reçois <b>_{&data=donnees}</b> d'un service !</p>
+<!-- Lorsque vous devez passer des données d'un service à un modèle, utilisez _{&variable} -->
+<p>Bonjour, je suis un <b>_{&donnees=nom}</b> et je reçois <b>_{&donnees=donnees}</b> d'un service !</p>
 
-<!-- Fin du corps HTML -->
+<!-- Fin du body du HTML -->
 
-<!-- Appel au pied de page de Netuno -->
+<!-- Appel au footer de Netuno -->
 _{include=_|includes/foot}
 ```
 
@@ -62,15 +62,15 @@ Enfin, on crée le service avec l'appel au modèle à l'aide de la fonction suiv
 Voici l'exemple du service 'service.js' :
 
 ```javascript
-// Initialiser l'objet 'data' pour qu'il puisse recevoir des données
-var data = _val.init()
+// Initialiser l'objet 'donnees' pour qu'il puisse recevoir des données
+var donnees = _val.init()
     
-// Associer des valeurs à l'objet 'data'
+// Associer des valeurs à l'objet 'donnees'
     .set("nom", "modele")
-    .set("donnees", "données")
+    .set("donnees", "donnees")
 
-// C'est cette fonction qui permet d'effectuer l'appel au modèle
-_template.output("modele", data);
+// Cette fonction permet d'effectuer l'appel au modèle
+_template.output("modele", donnees);
 ```
 
 > Si votre modèle se trouve dans un sous-répertoire, indiquez-le dans la fonction : `_template.output('repertoire/nom_du_modele')`
@@ -79,7 +79,7 @@ Enfin, il suffit d'appeler le service dans le navigateur et quelque chose de sim
 
 ![modeles2.png](/docs/assets/templates2.png)
 
-> Notez que, selon votre navigateur, les résultats présentés précédemment peuvent différer.
+> Notez que selon votre navigateur, les résultats présentés ci-dessus peuvent différer.
 
 Si vous avez des questions, n'hésitez pas à nous contacter via les moyens présentés en bas de page.
 

@@ -11,80 +11,78 @@ Personalizaciones en las operaciones de base de datos.
 
 ## Introducción
 
-Todo el tiempo se realiza alguna manipulación de datos, y es común que haya reglas como, por ejemplo:
+Constantemente se realiza alguna manipulación de datos, y es habitual que existan reglas como, por ejemplo:
 
 - Al eliminar un cliente debe eliminarse su historial.
-- Al cancelar un producto es necesario eliminarlo de los pedidos y ajustar el valor total.
+- Al cancelar un producto es necesario eliminarlo de los pedidos y ajustar el importe total.
 - Al finalizar una compra es necesario enviar los datos a otro sistema que realiza la distribución.
 
-Las acciones (_actions_) sirven justamente para eso, para inyectar código que se ejecute en situaciones específicas
-cuando ocurre una manipulación de datos.
+Las acciones (_actions_) sirven precisamente para eso, para inyectar código que se ejecute en situaciones específicas
+cuando se produce una manipulación de datos.
 
-Al **insertar** o **modificar** alguna información, entonces se ejecutan las acciones de guardar (_save_) y guardado
+Al **insertar** o **modificar** alguna información, se ejecutan las acciones de guardar (_save_) y guardado 
 (_saved_):
 
-- `save`: Antes de ejecutar el comando en base de datos.
-- `saved`: Después de haber ejecutado el comando en base de datos.
+- `save`: Antes de ejecutar el comando en la base de datos.
+- `saved`: Después de haber ejecutado el comando en la base de datos.
 
-En cambio, al **eliminar**, **borrar** o **suprimir** alguna información se ejecutan las acciones de eliminar
-(_remove_) y eliminado (_removed_).
+En cambio, al **eliminar**, **borrar** o **suprimir** alguna información se ejecutan las acciones de eliminar (_remove_) y 
+eliminado (_removed_).
 
-- `remove`: Antes de ejecutar el comando en base de datos.
-- `removed`: Después de haber ejecutado el comando en base de datos.
+- `remove`: Antes de ejecutar el comando en la base de datos.
+- `removed`: Después de haber ejecutado el comando en la base de datos.
 
-Así, cuando modificamos algo en un formulario, con operaciones de crear, modificar o eliminar información, se
-ejecutan operaciones distintas en base de datos, y se ejecutan las respectivas acciones (_actions_).
+Así, cuando modificamos algo en un formulario, con operaciones de crear, modificar o eliminar información, se 
+ejecutan operaciones distintas en la base de datos y se ejecutan las respectivas acciones (_actions_).
 
-> ¿Ya ha oído hablar de los _triggers_ de base de datos? El _trigger_ de base de datos se ejecuta siempre que hay
-> modificaciones de datos, por lo tanto las acciones (_actions_) son similares a los _triggers_, solo que a nivel
-> de código.
+> ¿Ha oído hablar de los _triggers_ de base de datos? El _trigger_ de base de datos se ejecuta siempre que hay
+> modificaciones de datos; por tanto, las acciones (_actions_) son similares a los _triggers_, solo que a nivel del código.
 
-Recuerde que cada tipo de operación ejecuta un comando distinto en base de datos, estos son:
+Recuerde que cada tipo de operación ejecuta un comando distinto en la base de datos, que son:
 
 - Crear: `insert into ...`
 - Modificar: `update ...`
 - Eliminar: `delete from ...`
 
-Cuando ejecutamos uno de estos comandos de base de datos a través de `_db.execute(...)` no se ejecutará ninguna
-acción, porque el comando se ejecuta directamente en la base de datos sin ser posible interactuar con las acciones.
+Cuando ejecutamos uno de estos comandos de base de datos mediante `_db.execute(...)`, no se ejecutará ninguna acción,
+porque el comando se ejecuta directamente en la base de datos sin que sea posible interactuar con las acciones.
 
-> En el código de las acciones puede utilizar cualquier recurso del framework low-code políglota.
+> En el código de las acciones puede utilizar cualquier recurso de la framework low-code políglota.
 
-Las acciones se ejecutan cuando ocurre alguna manipulación de datos en los formularios de backoffice
-autogenerados por Netuno, o cuando ejecutamos operaciones en base de datos en el código utilizando:
+Las acciones se ejecutan cuando se produce alguna manipulación de datos en los formularios del backoffice autogenerado 
+por Netuno, o cuando ejecutamos operaciones en la base de datos en el código utilizando:
 
 - `_db.insert(...)`, `_db.form(...).insert()`, `_db.insertIfNotExits(...)`, `_db.insertMany(...)`, entre otros.
 - `_db.update(...)`, `_db.form(...).update()`, `_db.updateMany(...)`, entre otros.
 - `_db.delete(...)`, `_db.form(...).delete()`, `_db.deleteMany(...)`, entre otros.
 
-Es decir, cuando utilizamos en el código algún mecanismo del framework low-code políglota para realizar las
-operaciones de manipulación de datos, se ejecutará la respectiva acción si existe.
+Es decir, cuando utilizamos en el código algún mecanismo de la framework low-code políglota para realizar las operaciones de
+manipulación de datos, se ejecutará la acción correspondiente si existe.
 
-Sin embargo, si se ejecuta un comando directamente en la base de datos, entonces no será posible ejecutar la
-acción.
+Sin embargo, si se ejecuta un comando directamente en la base de datos, no será posible ejecutar la acción.
 
 > Se recomienda evitar ejecutar comandos directamente en la base de datos para no eludir los mecanismos de
 > manipulación de datos que ofrece Netuno.
 
 En el código de las acciones puede realizar cualquier operación asociada a la manipulación de datos.
 
-## Ítem de datos (Data Item)
+## Elemento de Datos (Data Item)
 
-El ítem de datos (`_dataItem`) es un recurso del framework low-code políglota que contiene toda la relación de
-datos que se está creando, modificando o eliminando.
+El elemento de datos (`_dataItem`) es un recurso de la framework low-code políglota que contiene toda la relación de datos
+que se está creando, modificando o eliminando.
 
-A través del recurso `_dataItem` podemos acceder a toda la información y verificar detalles del proceso de la
-operación que está ocurriendo.
+A través del recurso `_dataItem` podemos acceder a toda la información y verificar detalles del proceso de la operación
+que está ocurriendo.
 
-> Vea la documentación del recurso [DataItem](/docs/library/resources/dataItem) para saber más detalles sobre lo que soporta el recurso
-> `_dataItem`.
+> Consulte la documentación del recurso [DataItem](/docs/library/resources/dataItem) para obtener más detalles sobre lo que
+> admite el recurso `_dataItem`.
 
 **Atención:** El recurso `_dataItem` solo está disponible en el código de las acciones (_actions_).
 
-## Guardar, Almacenar, Modificar o Crear Nuevo (_Save_)
+## Guardar, Salvar, Modificar o Crear Nuevo (_Save_)
 
-Para crear una acción que se ejecutará cuando se cree un nuevo registro, o cuando se modifique algo, el script de
-esta acción se llamará `save`, que quiere decir que algo se está guardando en base de datos, por ejemplo:
+Para crear una acción que se ejecutará cuando se cree un nuevo registro, o cuando se modifique algo, el script
+de esta acción se llamará `save`, que significa que algo se está guardando en la base de datos, por ejemplo:
 
 <PolyglotPath files={[
     'mi_app/server/actions/mi_formulario/save'
@@ -92,8 +90,8 @@ esta acción se llamará `save`, que quiere decir que algo se está guardando en
 
 > Esta acción se ejecuta antes de ejecutar el comando de base de datos.
 
-Cuando se trate de ejecutar código después de que los datos se hayan guardado en base de datos, entonces
-utilizamos la acción `saved`, por ejemplo:
+Cuando se quiera ejecutar código después de que los datos se hayan guardado en la base de datos, utilizamos la acción
+`saved`, por ejemplo:
 
 <PolyglotPath files={[
     'mi_app/server/actions/mi_formulario/saved'
@@ -101,11 +99,11 @@ utilizamos la acción `saved`, por ejemplo:
 
 > Esta acción se ejecuta después de haber ejecutado el comando de base de datos.
 
-Es decir, dentro de la aplicación en la carpeta `server/actions` creamos una subcarpeta con el nombre del
-formulario (tabla), y dentro colocamos un script llamado `save` o `saved`, que contiene el código respectivo
-para ejecutarse antes o después del comando de base de datos.
+Es decir, dentro de la aplicación, en la carpeta `server/actions`, creamos una subcarpeta con el nombre del formulario (tabla) y
+dentro colocamos un script llamado `save` o `saved`, que contiene el código correspondiente para ejecutarse antes
+o después del comando de base de datos.
 
-Para distinguir si es una creación de datos podemos verificar con un `if` el resultado del método
+Para distinguir si es una creación de datos, podemos comprobar con un `if` el resultado del método
 `_dataItem.isInsert()`, por ejemplo:
 
 <PolyglotCode
@@ -137,7 +135,7 @@ Para distinguir si es una creación de datos podemos verificar con un `if` el re
     ]}
 />
 
-Para distinguir si es una modificación de datos podemos verificar con un `if` el resultado del método
+Para distinguir si es una modificación de datos, podemos comprobar con un `if` el resultado del método
 `_dataItem.isUpdate()`, por ejemplo:
 
 <PolyglotCode
@@ -171,7 +169,7 @@ Para distinguir si es una modificación de datos podemos verificar con un `if` e
 
 ### Obtener el ID
 
-Para obtener el ID (identificador) del ítem que se está modificando:
+Para obtener el ID (identificador) del elemento que se está modificando:
 
 <PolyglotCode
     codes={[
@@ -186,31 +184,31 @@ Para obtener el ID (identificador) del ítem que se está modificando:
 
 ### Verificar qué se modifica
 
-Para verificar qué se está modificando, podemos utilizar `getOldRecord()` para obtener los datos antiguos en
-base de datos y comparar con los nuevos datos `getRecord()`, por ejemplo:
+Para verificar qué se está modificando, podemos utilizar `getOldRecord()` para obtener los datos antiguos de
+la base de datos y compararlos con los nuevos datos de `getRecord()`, por ejemplo:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                if (_dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email")) {
-                    // ¡Atención: Se está modificando el correo electrónico!
+                if (_dataItem.getOldRecord().getString("correo") != _dataItem.getRecord().getString("correo")) {
+                    // ¡Atención: se está modificando el correo electrónico!
                 }
             `
         },
         {
             lang: 'python',
             code: `
-                if _dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email"):
-                    # ¡Atención: Se está modificando el correo electrónico!
+                if _dataItem.getOldRecord().getString("correo") != _dataItem.getRecord().getString("correo"):
+                    # ¡Atención: se está modificando el correo electrónico!
             `
         },
         {
             lang: 'ruby',
             code: `
-                if _dataItem.getOldRecord().getString("email") != _dataItem.getRecord().getString("email")
-                    # ¡Atención: Se está modificando el correo electrónico!
+                if _dataItem.getOldRecord().getString("correo") != _dataItem.getRecord().getString("correo")
+                    # ¡Atención: se está modificando el correo electrónico!
                 end
             `
         },
@@ -219,8 +217,8 @@ base de datos y comparar con los nuevos datos `getRecord()`, por ejemplo:
 
 ### Generar error
 
-Es posible generar un error para impedir que la operación avance; la generación del error normalmente se hace
-antes de ejecutar el comando de base de datos, por lo tanto en la acción `save`, por ejemplo:
+Es posible generar un error para impedir que la operación avance; la generación del error normalmente se realiza antes de
+ejecutar el comando de base de datos, por tanto, en la acción `save`, por ejemplo:
 
 <PolyglotCode
     file="mi_app/server/actions/mi_formulario/save"
@@ -229,7 +227,7 @@ antes de ejecutar el comando de base de datos, por lo tanto en la acción `save`
             lang: 'javascript',
             code: `
                 _dataItem.setStatusWithError()
-                    .setErrorTitle("Email")
+                    .setErrorTitle("Correo")
                     .setErrorMessage("No se permite modificar el correo electrónico.")
             `
         },
@@ -238,15 +236,15 @@ antes de ejecutar el comando de base de datos, por lo tanto en la acción `save`
 
 ### Verificar si hubo error
 
-Es posible verificar si hubo algún error en la ejecución del comando en base de datos; diversos errores pueden
-ocurrir, por ejemplo:
+Es posible verificar si hubo algún error en la ejecución del comando en la base de datos; pueden producirse diversos errores,
+por ejemplo:
 
 - No se permite tener correos electrónicos repetidos.
-- Un campo obligatorio no se ha rellenado correctamente.
+- Un campo obligatorio no se rellenó correctamente.
 - Entre muchos otros.
 
-La verificación de errores se realiza normalmente después de la ejecución del comando de base de datos, por lo
-tanto en la acción `saved`, por ejemplo:
+La comprobación de errores se realiza normalmente después de la ejecución del comando de base de datos, por tanto, en la acción
+`saved`, por ejemplo:
 
 <PolyglotCode
     file="mi_app/server/actions/mi_formulario/saved"
@@ -255,7 +253,7 @@ tanto en la acción `saved`, por ejemplo:
             lang: 'javascript',
             code: `
                 if (_dataItem.isError()) {
-                    // Ocurrió algún error y no fue posible guardar los datos...
+                    // Se produjo algún error y no se pudieron guardar los datos...
                 }
             `
         },
@@ -263,14 +261,14 @@ tanto en la acción `saved`, por ejemplo:
             lang: 'python',
             code: `
                 if _dataItem.isError():
-                    # Ocurrió algún error y no fue posible guardar los datos...
+                    # Se produjo algún error y no se pudieron guardar los datos...
             `
         },
         {
             lang: 'ruby',
             code: `
                 if _dataItem.isError()
-                    # Ocurrió algún error y no fue posible guardar los datos...
+                    # Se produjo algún error y no se pudieron guardar los datos...
                 end
             `
         },
@@ -279,8 +277,8 @@ tanto en la acción `saved`, por ejemplo:
 
 ### Configuración
 
-Es posible tener una `action` específica que se ejecuta solo cuando se realizan modificaciones de datos durante
-la configuración (_setup_) de la base de datos.
+Es posible tener una `action` específica que se ejecuta solo cuando se realizan modificaciones de datos durante la
+configuración (_setup_) de la base de datos.
 
 Por ejemplo:
 
@@ -292,7 +290,7 @@ Por ejemplo:
 ## Eliminar, Borrar o Suprimir (_Remove_)
 
 Para crear una acción que se ejecutará cuando se elimine algún registro, el script de esta acción se llamará
-`remove`, que quiere decir que algo se está eliminando en base de datos, por ejemplo:
+`remove`, que significa que algo se está eliminando en la base de datos, por ejemplo:
 
 <PolyglotPath files={[
     'mi_app/server/actions/mi_formulario/setup_remove',
@@ -300,8 +298,8 @@ Para crear una acción que se ejecutará cuando se elimine algún registro, el s
 
 > Esta acción se ejecuta antes de ejecutar el comando de base de datos.
 
-Cuando se trate de ejecutar código después de que los datos se hayan guardado en base de datos, entonces
-utilizamos la acción `removed`, por ejemplo:
+Cuando se quiera ejecutar código después de que los datos se hayan eliminado de la base de datos, utilizamos la acción
+`removed`, por ejemplo:
 
 <PolyglotPath files={[
     'mi_app/server/actions/mi_formulario/setup_removed',
@@ -309,17 +307,17 @@ utilizamos la acción `removed`, por ejemplo:
 
 > Esta acción se ejecuta después de haber ejecutado el comando de base de datos.
 
-Es decir, dentro de la aplicación en la carpeta `server/actions` creamos una subcarpeta con el nombre del
-formulario (tabla), y dentro colocamos un script llamado `remove` o `removed`, que contiene el código respectivo
-para ejecutarse antes o después del comando de base de datos.
+Es decir, dentro de la aplicación, en la carpeta `server/actions`, creamos una subcarpeta con el nombre del formulario (tabla) y
+dentro colocamos un script llamado `remove` o `removed`, que contiene el código correspondiente para ejecutarse antes
+o después del comando de base de datos.
 
 ### Conflicto con relaciones
 
-Dependiendo del modelo de datos puede ocurrir que, al eliminar un registro que se esté utilizando en la relación
-con otra tabla, que también es otro formulario, no se pueda eliminar para evitar que la relación quede rota.
+Según el modelo de datos, puede ocurrir que al eliminar un registro que se esté utilizando en la relación con
+otra tabla, que también es otro formulario, no se pueda eliminar para evitar que la relación quede rota.
 
-Entonces, en la acción `removed` que se ejecuta después del comando de base de datos de eliminación, podemos
-verificar si ocurre este error de la siguiente forma:
+Entonces, en la acción `removed`, que se ejecuta después del comando de base de datos de eliminación, podemos comprobar si se produce este
+error de la siguiente forma:
 
 <PolyglotCode
     file="mi_app/server/actions/mi_formulario/removed"
@@ -329,7 +327,7 @@ verificar si ocurre este error de la siguiente forma:
             code: `
                 if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations()) {
                     _log.error(
-                        "No fue posible eliminar porque hay relación con la tabla "
+                        "No se pudo eliminar porque hay una relación con la tabla "
                         + _dataItem.getRelationTable() +" utilizando el ID " + _dataItem.getRelationItem().getInt("id")
                     )
                 }
@@ -340,7 +338,7 @@ verificar si ocurre este error de la siguiente forma:
             code: `
                 if _dataItem.isStatusAsError() and _dataItem.isStatusAsRelations():
                     _log.error(
-                        "No fue posible eliminar porque hay relación con la tabla "
+                        "No se pudo eliminar porque hay una relación con la tabla "
                         + _dataItem.getRelationTable() +" utilizando el ID " + _dataItem.getRelationItem().getInt("id")
                     )
             `
@@ -350,7 +348,7 @@ verificar si ocurre este error de la siguiente forma:
             code: `
                 if (_dataItem.isStatusAsError() && _dataItem.isStatusAsRelations())
                     _log.error(
-                        "No fue posible eliminar porque hay relación con la tabla "
+                        "No se pudo eliminar porque hay una relación con la tabla "
                         + _dataItem.getRelationTable() +" utilizando el ID " + _dataItem.getRelationItem().getInt("id")
                     )
                 end
@@ -359,8 +357,8 @@ verificar si ocurre este error de la siguiente forma:
     ]}
 />
 
-Podemos, alternativamente, en la acción `remove`, que se ejecuta antes de realizar el comando de base que borra
-el registro, implementar la "limpieza" de otros registros que pueden tener relación, por ejemplo:
+Como alternativa, en la acción `remove`, que se ejecuta antes de realizar el comando de base de datos que borra el registro,
+podemos implementar la "limpieza" de otros registros que pueden tener relación, por ejemplo:
 
 <PolyglotCode
     file="mi_app/server/actions/mi_formulario/remove"
@@ -381,8 +379,8 @@ el registro, implementar la "limpieza" de otros registros que pueden tener relac
 
 ### Configuración
 
-Es posible tener una `action` específica que se ejecuta solo cuando se realiza la eliminación de datos durante
-la configuración (_setup_) de la base de datos.
+Es posible tener una `action` específica que se ejecuta solo cuando se realiza la eliminación de datos durante la
+configuración (_setup_) de la base de datos.
 
 Por ejemplo:
 
@@ -393,16 +391,16 @@ Por ejemplo:
 
 ## Conclusión
 
-Con las acciones (`actions`) podemos centralizar operaciones específicas que están relacionadas con la
-manipulación de determinados datos.
+Con las acciones (`actions`) podemos centralizar operaciones específicas que están relacionadas con la manipulación de
+determinados datos.
 
-Permite implementar código que proporciona mecanismos útiles para garantizar integridad, facilitar tareas,
-realizar integraciones, hacer operaciones paralelas, tener verificaciones adicionales, y mucho más.
+Permite equipar con código que proporciona mecanismos útiles para garantizar la integridad, facilitar tareas, realizar
+integraciones, hacer operaciones paralelas, tener comprobaciones adicionales y mucho más.
 
-Codificar acciones es simple y extremadamente útil; es posible extenderlas con la utilización de cualquier otro
-recurso del framework low-code políglota.
+Codificar acciones es sencillo y extremadamente útil; es posible extenderlas con la utilización de cualquier otro recurso
+de la framework low-code políglota.
 
-> En el código de las acciones puede utilizar cualquier recurso del framework low-code políglota.
+> En el código de las acciones puede utilizar cualquier recurso de la framework low-code políglota.
 
-Considere la utilización de las acciones y rápidamente es posible comprobar cómo la facilidad obtenida puede
-potenciar muchas estrategias útiles.
+Considere el uso de las acciones y rápidamente podrá comprobar cómo la facilidad obtenida puede potenciar
+muchas estrategias útiles.

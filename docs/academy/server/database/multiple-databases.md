@@ -4,13 +4,13 @@ title: Multiple Databases
 sidebar_label: Multiple Databases
 ---
 
-## Connect to Multiple Databases
+## Connecting to Multiple Databases
 
-_Netuno_ allows an application to connect to multiple databases.
+Netuno allows an application to connect to multiple databases.
 
-This way data can be managed through several different connections and database types.
+This way you can manipulate data through several connections and different database types.
 
-_Netuno_ supports databases connections such as:
+Netuno supports connections to databases such as:
 
 - PostgreSQL
 - MariaDB
@@ -18,11 +18,11 @@ _Netuno_ supports databases connections such as:
 - Microsoft SQL Server
 - Oracle _(coming soon)_
 
-## Default Database
+## DEFAULT database
 
-For applications to work correctly, a database must always be set as the default.
+For applications to work correctly, there must always be a database configured as default.
 
-Remember that the application settings are kept in the following files:
+Remember that the application configurations are stored in the files:
 
 ```
 /web/app/YOUR_APP/config/_development.json
@@ -30,7 +30,7 @@ Remember that the application settings are kept in the following files:
 /web/app/YOUR_APP/config/_YOUR_ENVIRONMENT.json
 ```
 
-There you will find the connection seetings to the _default_ database, as can be seen below:
+There you will find the configuration of the _default_ database connection, as follows:
 
 ```
     ...
@@ -46,11 +46,11 @@ There you will find the connection seetings to the _default_ database, as can be
     ...
 ```
 
-Therefore, to add more connections to other Databases just repeat this step by changing the name _default_ to other name as you wish.
+So, to add more connections to other databases, just repeat this configuration, changing the name _default_ to another desired name.
 
-For example, imagine you have an application where the default database will be `PostgreSQL` but you also have to connect to a `WordPress MariaDB` database (_website-wp_) and also to another `Microsoft SQL Server` database of a .Net/C# application (_app-dotnet-mssql_)...
+For example, imagine you have an application where the default database is on PostgreSQL but you also need to connect to a MariaDB database from WordPress (_website-wp_) and also to another database on Microsoft SQL Server from a .Net/C# application (_app-dotnet-mssql_)...
 
-The configuration of this application to be able to connect to these multiple databases will be this way:
+The configuration of this application to be able to connect to these multiple databases will be like this:
 
 ```
     ...
@@ -80,7 +80,7 @@ The configuration of this application to be able to connect to these multiple da
     ...
 ```
 
-To be able to communicate with each of these applications just use the _db resource as follows:
+To be able to communicate with each of these applications, just use the _db resource as follows:
 
 ```
 var dbDefault = _db.init()
@@ -90,8 +90,8 @@ var dbWebsiteWP = _db.init("website-wp")
 var dbAppDotNet = _db.init("app-dot-net")
 ```
 
-Each variable contains an instance of the * _db * resource associated with the database that corresponds to the key that identifies the connection defined in the application settings.
+Each variable contains an instance of the *_db* resource associated with the database corresponding to the key that identifies the connection defined in the application's configurations.
 
-Consequently, using these variables can be perform database operations such as `queries`, `inserts`, `updates` and `deletes`.
+So, using these variables you can perform database operations such as queries, inserts, updates and deletes.
 
-For more information on database operations see the documentation: *_db*
+For more information about database operations, see the resource documentation: [_db](/docs/library/resources/db)

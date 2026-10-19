@@ -7,17 +7,17 @@ sidebar_label: Páginas y React Router
 
 ## Introducción
 
-La creación de páginas es una necesidad común cuando la aplicación web se vuelve compleja o hay la necesidad de presentar
-contenidos distintos, es común que ocurra especialmente cuando se trata de un sitio web o de una plataforma.
+La creación de páginas es una necesidad común cuando la aplicación web se vuelve compleja o hay necesidad de presentar
+contenidos distintos; suele ocurrir especialmente cuando se trata de un sitio web o de una plataforma.
 
 En el desarrollo con React es posible crear el mecanismo de navegación entre páginas con [React Router](https://reactrouter.com).
 
-Los pasos a continuación deben ejecutarse dentro de su proyecto de frontend en React.
+Los pasos siguientes deben ejecutarse dentro de su proyecto de frontend en React.
 
-Si es un frontend integrado con Netuno, debe entonces realizar los pasos a continuación dentro de la carpeta de la aplicación Netuno pero
-donde tiene el proyecto de frontend, por ejemplo en:
+Si es un frontend integrado con Netuno, debe entonces realizar los pasos siguientes dentro de la carpeta de la aplicación Netuno, pero
+donde está el proyecto de frontend, por ejemplo, en:
 
-- `📂 sitio_web/`
+- `📂 website/`
 
 ## Instalación
 
@@ -27,7 +27,7 @@ Asegúrese de que tiene instalado el módulo de React Router en su proyecto:
 bun install react-router
 ```
 
-Y de Ant.Design, que será utilizado para crear la estructura general:
+Y el de Ant.Design, que se utilizará para crear la estructura general:
 
 ```
 bun install antd
@@ -35,7 +35,7 @@ bun install antd
 
 ## Configuración
 
-Para comenzar, debemos editar el `main.jsx` que se encuentra en la carpeta `📂 src`, es preciso colocar el `BrowserRouter` de esta forma:
+Para empezar, debemos editar el `main.jsx` que se encuentra en la carpeta `📂 src`; es necesario colocar el `BrowserRouter` de esta forma:
 
 ```javascript title="src/main.jsx"
 import { createRoot } from 'react-dom/client';
@@ -49,17 +49,17 @@ createRoot(document.getElementById('root')).render(
 );
 ```
 
-**Muy importante:** Si es un frontend recién creado, debe eliminar todo tipo de CSS/Style e importaciones innecesarias
+**Muy importante:** Si es un frontend recién creado, debe eliminar todo tipo de CSS/Style e importaciones innecesarias,
 como de imágenes, para evitar comportamientos indebidos.
 
-En el `App.jsx` que también se encuentra en la carpeta `📂 src`, agregue la importación de los módulos de la siguiente forma:
+En el `App.jsx`, que también se encuentra en la carpeta `📂 src`, añada la importación de los módulos de la siguiente forma:
 
 ```javascript title="src/App.jsx"
 import { Routes, Route, Link } from 'react-router';
 import { Layout, Menu } from 'antd';
 ```
 
-Después de las importaciones, agregue las constantes:
+Después de las importaciones, añada las constantes:
 
 ```javascript title="src/App.jsx"
 const { Header, Footer, Content } = Layout;
@@ -83,7 +83,7 @@ En esta fase inicial, el retorno del componente App podrá ser de la siguiente f
       </Header>
       <Content>
         <Routes>
-          { /* ¡Aquí irán las rutas de las páginas! */ }
+          { /* ¡Las rutas de las páginas irán aquí! */ }
         </Routes>
       </Content>
       <Footer>Pie de página</Footer>
@@ -94,15 +94,15 @@ En esta fase inicial, el retorno del componente App podrá ser de la siguiente f
 
 De esta forma, los componentes de React Router están estructurados con los componentes de estructura de página de Ant.Design.
 
-## Crear Páginas
+## Crear páginas
 
-Las páginas se encuentran en componentes aparte, cada página está representada por un componente propio en React.
+Las páginas se encuentran en componentes aparte; cada página está representada por su propio componente en React.
 
 Una buena práctica es colocar los componentes de las páginas dentro de una carpeta llamada `📂 paginas`.
 
 ### Inicio
 
-Crear la página de entrada, que será el componente `Inicio` y estará asociado a la ruta `/`.
+Crear la página de entrada, que será el componente `Inicio` y estará asociada a la ruta `/`.
 
 El archivo del componente de esta página será:
 
@@ -115,11 +115,11 @@ import {useNavigate} from 'react-router';
 import {Button} from 'antd';
 
 function Inicio() {
-  const navigate = useNavigate();
+  const navegar = useNavigate();
   return (
     <div>
       <h1>Inicio</h1>
-      <Button onClick={()=> navigate('/informacion')}>
+      <Button onClick={()=> navegar('/informacion')}>
         Ir a la página de Información
       </Button>
     </div>
@@ -129,11 +129,11 @@ function Inicio() {
 export default Inicio;
 ```
 
-> El botón cambia de página programáticamente utilizando la función `navigate`, es una alternativa al componente `Link`.
+> El botón cambia de página de forma programática utilizando la función `navegar`; es una alternativa al componente `Link`.
 
 ### Información
 
-Crear una página de contenido de ejemplo, que será el componente `Informacion` y estará asociado a la ruta `/informacion`.
+Crear una página de contenido de ejemplo, que será el componente `Informacion` y estará asociada a la ruta `/informacion`.
 
 El archivo del componente de esta página será:
 
@@ -146,11 +146,11 @@ import {useNavigate} from 'react-router';
 import {Button} from 'antd';
 
 function Informacion() {
-  const navigate = useNavigate();
+  const navegar = useNavigate();
   return (
     <div>
       <h1>Información</h1>
-      <Button onClick={()=> navigate('/')}>
+      <Button onClick={()=> navegar('/')}>
         Volver al Inicio
       </Button>
     </div>
@@ -160,22 +160,22 @@ function Informacion() {
 export default Informacion;
 ```
 
-> El botón cambia de página programáticamente utilizando la función `navigate`, es una alternativa al componente `Link`. 
+> El botón cambia de página de forma programática utilizando la función `navegar`; es una alternativa al componente `Link`.
 
-## Importar Páginas
+## Importar páginas
 
-Al inicio de `App.jsx`, importe los componentes de páginas que fueron creados.
+Al principio del `App.jsx`, importe los componentes de páginas que se han creado.
 
 ```jsx title="src/App.jsx"
 import Inicio from './paginas/Inicio';
 import Informacion from './paginas/Informacion';
 ```
 
-Con las páginas importadas, es posible relacionar cada página con una dirección determinada, por ejemplo `/`, `/informacion`, etc.
+Con las páginas importadas es posible relacionar cada página con una determinada dirección, por ejemplo `/`, `/informacion`, etc.
 
 La dirección de la página también puede entenderse como una ruta, o `Route`.
 
-Por lo tanto, en `App.jsx`, donde se definen las rutas o mejor dicho `Routes`, se definirá la dirección y el componente de las páginas de la siguiente forma:
+Por lo tanto, en el `App.jsx`, donde se definen las rutas o, mejor dicho, los `Routes`, se definirá la dirección y el componente de las páginas de la siguiente forma:
 
 ```jsx title="src/App.jsx"
     ...
@@ -188,31 +188,31 @@ Por lo tanto, en `App.jsx`, donde se definen las rutas o mejor dicho `Routes`, s
 
 > El `path` es la dirección y el `element` es el componente de la página.
 
-Observe que en el `Menu` tenemos elementos con el `Link` que apuntan a las direcciones de las páginas, por lo tanto, el atributo `to` en el 
-`Link` indica que debe cargar el `Route` referente que tiene el mismo valor asociado en el `path`.
+Observe que en el `Menu` tenemos elementos con el `Link` que apuntan a las direcciones de las páginas; por lo tanto, el atributo `to` del
+`Link` indica que debe cargar el `Route` correspondiente que tiene el mismo valor asociado en el `path`.
 
-En el navegador puede escribir directamente estas direcciones y los componentes respectivos, que son las páginas, deberán aparecer.
+En el navegador puede escribir directamente estas direcciones y deberán aparecer los componentes correspondientes, que son las páginas.
 
 ## Navegación
 
-Para realizar más opciones de navegación de páginas, se deberán agregar en el `Menu` componentes del tipo `Link` que apunten
-a la dirección respectiva.
+Para disponer de más opciones de navegación entre páginas, se deberán añadir en el `Menu` componentes de tipo `Link` que apunten
+a la dirección correspondiente.
 
-También se deberán agregar los componentes `Route` que asocian la dirección al componente de página referente.
+También se deberán añadir los componentes `Route` que asocian la dirección al componente de página correspondiente.
 
-Con la función `navigate` puede realizar cambios de página programáticamente, por ejemplo en estas situaciones:
+Con la función `navegar` se pueden realizar cambios de página de forma programática, por ejemplo, en estas situaciones:
 
-1. En la página de inicio de sesión, después de que los datos se validen con éxito, debe proceder al cambio de página automáticamente.
-2. Después de registrar una cuenta, cuando los datos se hayan guardado con éxito, debe cambiar automáticamente a la página de inicio de sesión.
+1. En la página de inicio de sesión, después de que los datos se validen correctamente, se debe cambiar de página automáticamente.
+2. Después de registrar una cuenta, cuando los datos se hayan guardado correctamente, se debe cambiar automáticamente a la página de inicio de sesión.
 
-Cuando el usuario interactúa directamente con la navegación a través del clic, entonces utilizamos el componente `Link`.
+Cuando el usuario interactúa directamente con la navegación mediante un clic, utilizamos el componente `Link`.
 
-Para los otros casos donde el cambio de página ocurre en un momento específico de la ejecución del código, entonces utilizamos la
-función `navigate` obtenida con `useNavigate`.
+Para los demás casos en los que el cambio de página ocurre en un momento específico de la ejecución del código, utilizamos la
+función `navegar` obtenida con `useNavigate`.
 
 ## Conclusión
 
 Con ReactJS y React Router es posible definir múltiples páginas y realizar la navegación entre ellas.
 
-Ant.Design ayuda a construir la estructura de la página y ofrece diversos componentes útiles para construir interfaces 
-complejas y con responsividad.
+Ant.Design ayuda a construir la estructura de la página y ofrece diversos componentes útiles para construir interfaces
+complejas y responsivas.

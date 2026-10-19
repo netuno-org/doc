@@ -9,22 +9,22 @@ sidebar_position: 3
 
 În acest exemplu vom folosi <a href="https://maven.apache.org/install.html" target="_blank">Apache Maven</a>, așa că faceți clic pe linkul anterior pentru informații despre cum să îl instalați.
 
-De asemenea, va trebui să aveți Java instalat.
+De asemenea, trebuie să aveți Java instalat.
 
 Instalați platforma Netuno. Proiectul Java va fi integrat cu platforma Netuno preinstalată.
 
-## Pachetul de cod
+## Pachetul codului
 
 După cum este standard în Java, codul trebuie să aibă întotdeauna un `package`.
 
-`package`-ul dvs. trebuie înregistrat în fișierul de configurare globală Netuno:
+Pachetul dvs. (`package`) trebuie înregistrat în fișierul de configurare globală Netuno:
 
 - `netuno/config.js`
 
 Adăugați la final următorul cod:
 
 ```javascript
-config.packagesScan.add("proiect.meu.java")
+config.packagesScan.add("proiectul.meu.java")
 ```
 
 Dacă pachetul dvs. nu este adăugat în configurare în acest mod, atunci proiectul dvs. nu va fi niciodată încărcat, deoarece Netuno caută resurse și servicii doar în pachetele adăugate anterior.
@@ -35,43 +35,43 @@ Netuno caută automat resurse și servicii care se află în pachete ce încep c
 
 > Este recomandat să utilizați prefixul: `org.netuno.addon`
 
-De exemplu, putem utiliza: `org.netuno.addon.calcul`
+De exemplu, putem utiliza: `org.netuno.addon.calculator`
 
 Prefixul de pachet `org.netuno.addon` distinge faptul că este o funcționalitate adăugată extern și care nu face parte din Netuno în sine.
 
 Prin urmare, tot codul dvs. Java care se integrează cu Netuno trebuie definit și construit în:
 
-- `org.netuno.addon.proiect.meu`
+- `org.netuno.addon.proiectul.meu`
 
 După `org.netuno.addon` adăugați identificarea proiectului dvs.
 
 ## Configurarea POM
 
-Netuno are multe dependențe în format JAR, prin urmare este necesar să definiți aceste dependențe în POM. Deoarece POM nu acceptă includerea unei întregi foldere, iar scrierea fiecărei dependențe ar fi laborioasă și obositoare, vom face un script în JavaScript pentru a genera POM-ul.
+Netuno are multe dependențe în format JAR, așa că este necesar să definiți aceste dependențe în POM. Deoarece POM nu acceptă includerea unui dosar întreg, iar scrierea fiecărei dependențe ar fi laborioasă și plictisitoare, vom face un script în JavaScript pentru a genera POM-ul.
 
 ### Preliminarii
 
-Creați folderul proiectului dvs., unde vor fi scrise clasele Java. Pentru exemplul nostru vom folosi `Calcul`:
+Creați dosarul proiectului dvs., unde vor fi scrise clasele Java. Pentru exemplul nostru vom folosi `Calculator`:
 
 ```bash
-mkdir Calcul
+mkdir Calculator
 ```
 
-Creați fișierul `genereaza-pom.js`. În acest fișier, vom începe prin a defini câteva variabile care vor fi folosite pe parcursul scriptului. `DIR_NETUNO` trebuie să fie folderul rădăcină unde aveți Netuno instalat. `DIR_PROIECT` este directorul unde veți scrie clasele de resurse și servicii globale. Iar `PACHET` trebuie să fie egal cu numele pachetului așa cum a fost definit în pașii anteriori. Selectați de asemenea versiunea Java cu `VERSIUNE_JAVA`. Căile trebuie să fie căi absolute:
+Creați fișierul `genereaza-pom.js`. În acest fișier, vom începe prin a defini câteva variabile care vor fi folosite pe parcursul scriptului. `DIRECTOR_NETUNO` trebuie să fie dosarul rădăcină în care aveți Netuno instalat. `DIRECTOR_PROIECT` este directorul în care veți scrie clasele de resurse și servicii globale. Iar `PACHET` trebuie să fie egal cu numele pachetului definit în pașii anteriori. Selectați, de asemenea, versiunea Java cu `VERSIUNE_JAVA`. Căile trebuie să fie absolute:
 
 ```js
-const DIR_NETUNO = '/cale/radacina/netuno';
-const DIR_PROIECT = '/Proiecte/Netuno/Calcul';
-const PACHET = 'org.netuno.addon.calcul';
+const DIRECTOR_NETUNO = '/cale/radacina/netuno';
+const DIRECTOR_PROIECT = '/Proiecte/Netuno/Calculator';
+const PACHET = 'org.netuno.addon.calculator';
 const VERSIUNE_JAVA = 25;
 ```
 
 Acum vom inițializa structura de bază a `pom.xml`:
 
 ```js
-const arrayPachet = PACHET.split(".");
-const ID_ARTEFACT = arrayPachet.slice(-1);
-const ID_GRUP = arrayPachet.slice(0, arrayPachet.length - 1).join(".");
+const elementePachet = PACHET.split(".");
+const ID_ARTEFACT = elementePachet.slice(-1);
+const ID_GRUP = elementePachet.slice(0, elementePachet.length - 1).join(".");
 
 let continutPom = `
 <?xml version="1.0" encoding="UTF-8"?>
@@ -94,18 +94,18 @@ let continutPom = `
 
 ### Dependențe
 
-Apoi, vom crea funcția care scanează directoarele și generează o etichetă `<dependency>` pentru fiecare fișier JAR de dependență Netuno:
+Apoi, vom crea funcția care scanează dosarele și generează un tag `<dependency>` pentru fiecare fișier JAR de dependență al Netuno:
 
 ```js
 function mapeazaDirector(dosar, sufixGrup) {
-    let dependinteXml = '';
+    let xmlDependente = '';
     try {
         const fisiere = readdirSync(dosar);
         for (const fisier of fisiere) {
             const caleCompleta = join(dosar, fisier);
             if (statSync(caleCompleta).isFile() && extname(fisier) === '.jar') {
                 const numeBaza = basename(fisier, '.jar');
-                dependinteXml += `
+                xmlDependente += `
         <dependency>
             <groupId>org.netuno.${sufixGrup}</groupId>
             <artifactId>${numeBaza}</artifactId>
@@ -118,18 +118,18 @@ function mapeazaDirector(dosar, sufixGrup) {
     } catch (eroare) {
         console.error(`Eroare la citirea directorului ${dosar}:`, eroare.message);
     }
-    return dependinteXml;
+    return xmlDependente;
 }
 ```
 
-Vom folosi această funcție pentru a mapa cele două directoare de dependențe:
+Vom folosi această funcție pentru a genera dependențele din cele două dosare de dependențe:
 
 ```js
-const dependinteCore = mapeazaDirector(join(DIR_NETUNO, 'core', 'lib'), 'core');
-const dependinteWeb = mapeazaDirector(join(DIR_NETUNO, 'core', 'web', 'WEB-INF', 'lib'), 'web');
+const dependenteCore = mapeazaDirector(join(DIRECTOR_NETUNO, 'core', 'lib'), 'core');
+const dependenteWeb = mapeazaDirector(join(DIRECTOR_NETUNO, 'core', 'web', 'WEB-INF', 'lib'), 'web');
 ```
 
-Și injectăm dependențele în POM, împreună cu `netuno.jar`:
+Și vom injecta dependențele în POM, împreună cu `netuno.jar`:
 
 ```js
 continutPom += `
@@ -139,17 +139,17 @@ continutPom += `
             <artifactId>netuno-root</artifactId>
             <version>1.0</version>
             <scope>system</scope>
-            <systemPath>${DIR_NETUNO}/netuno.jar</systemPath>
+            <systemPath>${DIRECTOR_NETUNO}/netuno.jar</systemPath>
         </dependency>
-        ${dependinteCore}
-        ${dependinteWeb}
+        ${dependenteCore}
+        ${dependenteWeb}
     </dependencies>
   `;
 ```
 
 ### Fișierul JAR
 
-Trebuie să definim directorul destinație pentru fișierele JAR. Acest pas este necesar pentru a avea opțiunea de a compila proiectul nostru într-un fișier JAR:
+Trebuie să definim directorul de destinație pentru fișierele JAR. Acest pas este necesar pentru a avea opțiunea de a compila proiectul într-un fișier JAR:
 
 ```js
 continutPom += `
@@ -160,13 +160,13 @@ continutPom += `
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.4.2</version>
                 <configuration>
-                    <outputDirectory>${DIR_NETUNO}/lib</outputDirectory>
+                    <outputDirectory>${DIRECTOR_NETUNO}/lib</outputDirectory>
                 </configuration>
             </plugin>
   `;
 ```
 
-### Curățarea
+### Curățare
 
 Acum trebuie să configurăm Maven astfel încât comanda `mvn clean` să șteargă fișierele corecte atunci când este invocată:
 
@@ -180,14 +180,14 @@ continutPom += `
                 <configuration>
                     <filesets>
                         <fileset>
-                            <directory>${DIR_NETUNO}/lib</directory>
+                            <directory>${DIRECTOR_NETUNO}/lib</directory>
                             <includes>
                                 <include>${ID_ARTEFACT}-*.jar</include>
                             </includes>
                             <followSymlinks>false</followSymlinks>
                         </fileset>
                         <fileset>
-                            <directory>${DIR_NETUNO}/core/web/WEB-INF/classes</directory>
+                            <directory>${DIRECTOR_NETUNO}/core/web/WEB-INF/classes</directory>
                             <includes>
                                 <include>${CALE_PACHET}/**</include>
                             </includes>
@@ -203,13 +203,13 @@ continutPom += `
 
 ### Profil
 
-Pentru a putea alege între a compila proiectul generând fișiere `.class` sau a genera fișiere `.jar`, trebuie să creăm un profil diferit și să configurăm compilatorul cu calea corectă. Și astfel finalizăm conținutul POM-ului:
+Pentru a putea alege între compilarea proiectului cu generare de fișiere `.class` sau generarea de fișiere `.jar`, trebuie să creăm un profil diferit și să configurăm compilatorul cu calea corectă. Și astfel finalizăm conținutul POM-ului:
 
 ```js
 continutPom += `
     <profiles>
         <profile>
-            <id>dezvoltare</id>
+            <id>dev</id>
             <build>
                 <plugins>
                     <plugin>
@@ -217,7 +217,7 @@ continutPom += `
                         <artifactId>maven-compiler-plugin</artifactId>
                         <version>3.13.0</version>
                         <configuration>
-                            <outputDirectory>${DIR_NETUNO}/core/web/WEB-INF/classes</outputDirectory>
+                            <outputDirectory>${DIRECTOR_NETUNO}/core/web/WEB-INF/classes</outputDirectory>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -233,14 +233,14 @@ continutPom += `
 
 ```js
 try {
-    writeFileSync(`${DIR_PROIECT}/pom.xml`, continutPom.trim() + '\n', 'utf8');
-    console.log(`Configurare finalizată. Fișierul pom.xml a fost actualizat la: ${DIR_PROIECT}/pom.xml`);
+    writeFileSync(`${DIRECTOR_PROIECT}/pom.xml`, continutPom.trim() + '\n', 'utf8');
+    console.log(`Configurare finalizată. Fișierul pom.xml a fost actualizat la: ${DIRECTOR_PROIECT}/pom.xml`);
 } catch (eroare) {
     console.error("Eroare la scrierea pom.xml:", eroare);
 }
 ```
 
-Pentru a genera POM-ul, executați această comandă în folderul rădăcină al proiectului dvs.:
+Pentru a genera POM-ul, executați această comandă în dosarul rădăcină al proiectului dvs.:
 
 ```bash
 bun genereaza-pom.js
@@ -253,10 +253,10 @@ Puteți vedea scriptul complet de generare a POM-ului la acest [link](https://gi
 Acum puteți compila proiectul dvs. cu:
 
 ```bash
-mvn clean compile -Pdezvoltare
+mvn clean compile -Pdev
 ```
 
-Sau generați fișiere JAR, ceea ce facilitează distribuirea codului către alte instanțe Netuno care se află pe alte calculatoare, cu:
+Sau generați fișiere JAR, ceea ce facilitează distribuirea codului către alte instanțe Netuno care se află pe alte computere, cu:
 
 ```bash
 mvn clean package
@@ -272,33 +272,33 @@ mvn clean
 
 Fișierul JAR creat poate fi distribuit și plasat în orice altă platformă Netuno.
 
-În orice platformă Netuno instalată, acest JAR trebuie plasat în folderul `lib` din rădăcina Netuno:
+În orice platformă Netuno instalată, acest JAR trebuie plasat în dosarul `lib` din rădăcina Netuno:
 
 - `netuno/lib`
 
-Rețineți că acest folder nu există implicit, prin urmare poate fi necesar să îl creați.
+Rețineți că acest dosar nu există implicit, prin urmare poate fi necesar să îl creați.
 
-Toate JAR-urile care se află în acest folder sunt încărcate automat în platforma Netuno.
+Toate fișierele JAR care se află în acest dosar sunt încărcate automat în platforma Netuno.
 
-## Execuție
+## Executare
 
 Pentru a executa proiectul, porniți Netuno în mod normal:
 
 ```bash
-./netuno server app=calcul
+./netuno server app=calculator
 ```
 
 Aplicația trebuie creată înainte cu comanda: `./netuno app`.
 
 ## Concluzie
 
-A fost prezentat cum să creați un nou proiect Java pentru a adăuga noi comportamente în nucleul Netuno.
+S-a arătat cum să creați un nou proiect Java pentru a adăuga noi comportamente în nucleul Netuno.
 
-De asemenea, am văzut bunele practici pentru a genera fișierul JAR și cum să îl distribuiți în folderul `netuno/lib`.
+De asemenea, am văzut bunele practici pentru generarea fișierului JAR și cum să îl distribuiți în dosarul `netuno/lib`.
 
 Toate tehnicile și bibliotecile de programare Java pot fi utilizate pentru a crea orice tip de funcționalitate în Netuno.
 
-În special, creați resurse de programare low-code care devin disponibile pentru toate limbajele de script acceptate, cum ar fi:
+În special, crearea de resurse de programare low-code care devin disponibile pentru toate limbajele de script acceptate, cum ar fi:
 
 - JavaScript
 - Python
@@ -308,4 +308,4 @@ Toate tehnicile și bibliotecile de programare Java pot fi utilizate pentru a cr
 
 În tutorialele următoare, vedeți cum să creați prima dvs. resursă de programare low-code.
 
-Și, de asemenea, cum să creați primul dvs. serviciu web multi-aplicațional, disponibil în toate aplicațiile care sunt configurate în Netuno.
+Și, de asemenea, cum să creați primul dvs. serviciu web multi-aplicație, disponibil în toate aplicațiile configurate în Netuno.

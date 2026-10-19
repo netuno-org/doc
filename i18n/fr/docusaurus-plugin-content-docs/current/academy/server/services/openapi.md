@@ -8,15 +8,15 @@ Définition du schéma des services.
 
 ## Introduction
 
-OpenAPI est une spécification qui standardise les services offerts par les API REST, aide à comprendre comment les services sont définis, comme l'adresse, les entrées et les sorties.
+OpenAPI est une spécification qui normalise les services offerts par les API REST, aide à comprendre comment les services sont définis, comme l'adresse, les entrées et les sorties.
 
-Permet la génération d'interfaces de test et la génération automatique de clients à intégrer avec d'autres technologies.
+Permet la génération d'interface de tests et la génération automatique de clients à intégrer avec d'autres technologies.
 
-> Plus d'informations sur <a href="https://www.openapis.org/" target="_blank">OpenAPI</a>.
+> En savoir plus sur <a href="https://www.openapis.org/" target="_blank">OpenAPI</a>.
 
 ## Activation et Configuration
 
-Pour activer et configurer OpenAPI dans votre application Netuno, il est nécessaire d'éditer le fichier de configuration de l'application relatif à l'environnement que vous utilisez, comme :
+Pour activer et configurer l'OpenAPI dans votre application sur Netuno, il est nécessaire de modifier le fichier de configuration de l'application correspondant à l'environnement que vous utilisez, comme :
 
 - `📂 config/_development.json`
 - `📂 config/_production.json`
@@ -75,11 +75,11 @@ Ajustez le titre et la description pour ce qui a du sens dans votre cas.
 
 ## Entrée
 
-Lors de la configuration des fichiers _schema_ d'entrées, cela permet à Netuno d'effectuer la validation des paramètres reçus en les comparant aux règles du JSON Schema.
+En configurant des fichiers _schema_ d'entrées, cela permet à Netuno d'effectuer la validation des paramètres reçus en les comparant aux règles du JSON Schema.
 
-> Plus d'informations sur le <a href="https://json-schema.org/" target="blank">JSON Schema</a>.
+> En savoir plus sur le <a href="https://json-schema.org/" target="blank">JSON Schema</a>.
 
-En cas d'échec de validation, l'exécution du service est empêchée et une erreur est présentée dans le `log` de Netuno, et pour le consommateur du service, le code de statut HTTP **400** (_Bad Request_) est retourné.
+En cas d'échec de validation, l'exécution du service est empêchée et une erreur est présentée dans le `log` de Netuno et, pour celui qui consomme le service, le code de statut HTTP **400** (_Bad Request_) est retourné.
 
 Pour configurer les règles des paramètres d'entrée, il est nécessaire de créer un fichier avec l'extension `in.json` à côté du fichier de code du service, le nom doit être le même.
 
@@ -108,21 +108,21 @@ Exemple de contenu du `in.json` :
 }
 ```
 
-Netuno prend en charge certains types supplémentaires qui ne sont pas supportés par JSON Schema, tels que `string-not-empty`, `array-not-empty`, `id` et `uid` (ou `uuid` ou encore `guid`).
+Netuno prend en charge certains types supplémentaires qui ne sont pas pris en charge par JSON Schema, comme `string-not-empty`, `array-not-empty`, `id` et le `uid` (ou `uuid` ou encore `guid`).
 
-> Plus d'informations sur cette spécification sur <a href="https://json-schema.org/learn/" target="_blank">JSON Schema Learn</a>.
+> En savoir plus sur cette spécification dans <a href="https://json-schema.org/learn/" target="_blank">JSON Schema Learn</a>.
 
 ## Sortie
 
-Lors de la configuration des fichiers _schema_ de sorties, cela permet à Netuno d'effectuer la validation des paramètres envoyés en les comparant aux règles du JSON Schema.
+En configurant des fichiers _schema_ de sorties, cela permet à Netuno d'effectuer la validation des paramètres envoyés en les comparant aux règles du JSON Schema.
 
-> Plus d'informations sur le <a href="https://json-schema.org/" target="blank">JSON Schema</a>.
+> En savoir plus sur le <a href="https://json-schema.org/" target="blank">JSON Schema</a>.
 
-En cas d'échec de validation, la sortie est quand même envoyée au consommateur du service, mais les messages d'échec de validation sont présentés dans le `log` de Netuno.
+En cas d'échec de validation, la sortie est quand même envoyée à celui qui consomme le service, mais les messages d'échec de validation sont présentés dans le `log` de Netuno.
 
 Pour configurer les règles des paramètres de sortie, il est nécessaire de créer un fichier avec l'extension `out.200.json` à côté du fichier de code du service, le nom doit être le même que celui du service.
 
-Où **200** est le code de statut HTTP qui va dans la réponse, pour supporter plusieurs codes de statut HTTP, il suffit d'ajouter d'autres fichiers JSON avec un numéro différent.
+Où le **200** est le code de statut HTTP qui figure dans la réponse, pour prendre en charge plusieurs codes de statut HTTP, il suffit d'ajouter d'autres fichiers JSON avec un numéro différent.
 
 Quelques exemples :
 - Le service `enregistrer.js` devrait avoir le fichier `enregistrer.out.200.json`.
@@ -135,23 +135,23 @@ Exemple de contenu du `out.200.json` :
 {
     "type": "object",
     "properties": {
-      "result": {
+      "resultat": {
         "type": "boolean"
       }
     },
     "required": [
-      "result"
+      "resultat"
     ]
 }
 ```
 
-Netuno prend en charge certains types supplémentaires qui ne sont pas supportés par JSON Schema, tels que `string-not-empty`, `array-not-empty`, `id` et `uid` (ou `uuid` ou encore `guid`).
+Netuno prend en charge certains types supplémentaires qui ne sont pas pris en charge par JSON Schema, comme `string-not-empty`, `array-not-empty`, `id` et le `uid` (ou `uuid` ou encore `guid`).
 
-> Plus d'informations sur cette spécification sur <a href="https://json-schema.org/learn/" target="_blank">JSON Schema Learn</a>.
+> En savoir plus sur cette spécification dans <a href="https://json-schema.org/learn/" target="_blank">JSON Schema Learn</a>.
 
 ## Importation de Schéma
 
-Netuno prend en charge l'importation de _schemas_, ce qui permet de réutiliser une partie du _schema_ dans plusieurs JSON.
+Netuno prend en charge l'importation de _schemas_, ce qui permet de réutiliser une partie du _schema_ dans plusieurs JSONs.
 
 > L'importation de _schemas_ évite la répétition de code.
 
@@ -163,17 +163,17 @@ Maintenant, dans la configuration du JSON, il est possible d'importer des _schem
 
 ```
 {
-    "summary": "Supprimer des Produits",
+    "summary": "Supprimer les Produits",
     "description": "Permet de supprimer définitivement des produits.",
-    "_schema": "get/only-code.in"
+    "_schema": "get/seulement-code.in"
 }
 ```
 
-Cela signifie que le fichier `_schema/get/only-code.in.json` sera importé, où se trouve le paramètre `_schema`.
+Cela signifie que le fichier `_schema/get/seulement-code.in.json` sera importé là où se trouve le paramètre `_schema`.
 
 ## Spécification et Tests
 
-Pour générer la spécification complète de tous les services qui supportent OpenAPI avec JSON Schema, accédez par exemple à :
+Pour générer la spécification complète de tous les services qui prennent en charge OpenAPI avec JSON Schema, accédez par exemple à :
 
 - http://localhost:9000/services/_openapi
 
@@ -181,30 +181,30 @@ Un JSON avec toute la spécification sera présenté.
 
 Pour tester, copiez tout le JSON généré.
 
-Ouvrez l'Éditeur Swagger : https://editor.swagger.io/
+Ouvrez l'éditeur Swagger : https://editor.swagger.io/
 
-Effacez le contenu qui se trouve du côté gauche et collez le JSON et répondez oui à la question de conversion de JSON en YAML.
+Effacez le contenu qui se trouve à gauche et collez le JSON, puis répondez oui à la question de conversion de JSON en YAML.
 
-Avec l'interface générée du côté droit, il est possible de mieux comprendre tous les services disponibles et d'effectuer des tests.
+Avec l'interface générée à droite, il est possible de mieux comprendre tous les services disponibles et d'effectuer des tests.
 
 Permet également de générer automatiquement des clients pour d'autres technologies.
 
-## Par programmation
+## Programmatiquement
 
 Dans le dossier `_schema`, nous pouvons utiliser des fichiers `.js` qui seront exécutés lors de la génération de la définition OpenAPI, mais aussi dans le processus de validation des entrées et sorties des services.
 
 Grâce à la programmation du schéma, nous pouvons générer des validations dynamiques, par exemple :
 - Accepter uniquement un code qui existe dans la base de données.
-- Avec l'`UID`, obtenir l'enregistrement dans la base de données et le partager avec les services.
-- Dans le cas d'un `POST` ou `PUT`, génère un type de schéma différent de celui généré dans le cas d'un `DELETE`.
+- Avec l'`UID`, obtient l'enregistrement dans la base de données et le partage avec les services.
+- Si c'est `POST` ou `PUT`, génère un type de schéma différent de celui généré dans le cas du `DELETE`.
 
 ### Exemple avec Liste de Valeurs
 
 Imaginez que nous avons un service qui reçoit le code d'une certaine catégorie.
 
-Nous ne pouvons pas recevoir n'importe quelle valeur comme code, car cela pourrait être une valeur qui ne correspond pas à un code valide de catégorie.
+Nous ne pouvons pas recevoir n'importe quelle valeur comme code, car cela peut être une valeur qui ne correspond pas à un code valide de catégorie.
 
-Nous pouvons donc restreindre les codes acceptés à ceux qui sont enregistrés dans la base de données.
+Alors nous pouvons restreindre les codes acceptés à ceux qui sont enregistrés dans la base de données.
 
 On crée le schéma dans : `server/services/_schema/categorie/codes.js`
 
@@ -257,9 +257,9 @@ De cette façon, nous pouvons garantir que le service ne s'exécute que si le co
 
 ### Exemple avec Objet Global
 
-Imaginez que nous avons plusieurs services qui reçoivent l'`UID` du client et dans chaque service nous devons accéder à la base de données pour obtenir les données du client associées à son `UID`.
+Imaginez que nous avons plusieurs services qui reçoivent l'`UID` du client et dans chaque service nous devons accéder à la base de données pour obtenir les données du client liées à son `UID`.
 
-Nous pouvons centraliser cela dans un schéma programmé qui, à partir de l'`UID` du client reçu, obtient les données du client dans la base de données et les stocke dans un objet global accessible dans le code des services.
+Nous pouvons centraliser cela dans un schéma programmé qui, grâce à l'`UID` du client reçu, obtient les données du client dans la base de données et les stocke dans un objet global accessible dans le code des services.
 
 Ainsi, les données du client sont toujours chargées globalement et automatiquement lorsque nous recevons un `UID` de client.
 
@@ -275,8 +275,8 @@ if (!_service.isGeneratingOpenAPIDefinition()) {
         _header.status(404)
         _out.json(
             _val.map()
-                .set('error', true)
-                .set('code', 'client-non-trouve')
+                .set('erreur', true)
+                .set('code', 'client-introuvable')
         )
         _service.cancel()
     }
@@ -301,11 +301,11 @@ _dataSchema.set('type', 'object')
     )
 ```
 
-> Avec `_service.isGeneratingOpenAPIDefinition()`, nous pouvons valider s'il s'agit de la génération de la définition OpenAPI, sinon c'est l'exécution d'une requête HTTP.
+> Avec `_service.isGeneratingOpenAPIDefinition()`, nous pouvons valider s'il s'agit de la génération de la définition OpenAPI, sinon il s'agit de l'exécution d'une requête HTTP.
 > 
-> Si l'`UID` du client n'est pas trouvé, alors il retourne 404 et interrompt l'exécution du service.
+> Si l'`UID` du client n'est pas trouvé, alors il retourne le 404 et interrompt l'exécution du service.
 > 
-> Notez que nous utilisons `_val.global()`, qui permet de partager des données globalement entre tous les fichiers de code exécutés lors du traitement de la requête HTTP.
+> Remarquez que nous utilisons `_val.global()`, qui permet de partager des données globalement entre tous les fichiers de code exécutés lors du traitement de la requête HTTP.
 
 Dans la suite de l'exemple, nous avons un service qui liste les achats effectués par le client.
 
@@ -313,7 +313,7 @@ Nous avons la validation d'entrée pour le service dans : `server/services/clien
 
 ```json
 {
-    "summary": "Liste d'Achats",
+    "summary": "Liste des Achats",
     "description": "Liste les achats effectués par le client.",
     "type": "object",
     "properties": {
@@ -327,7 +327,7 @@ Nous avons la validation d'entrée pour le service dans : `server/services/clien
 }
 ```
 
-> Notez que la valeur du `"_schema"` du client est le nom du fichier de code que nous avons programmé dans le schéma précédemment. 
+> Remarquez que la valeur du `"_schema"` du client est le nom du fichier de code que nous avons programmé dans le schéma précédemment.
 
 Et dans le code du service des achats de clients dans : `server/services/client/achats/post.js`
 
@@ -344,9 +344,9 @@ Nous pouvons retourner un schéma différent pour chaque type de méthode HTTP.
 
 Par exemple, nous pouvons générer un schéma par code pour les opérations de création, édition ou suppression de ports réseau :
 
-- Dans le cas d'un POST, effectue l'opération de création, donc ne contient pas l'UID mais exige le nom et le numéro de port.
-- Dans le cas d'un PUT, effectue l'opération d'édition, nécessite l'UID, le nom et le numéro du port réseau.
-- Lorsqu'il s'agit de PUT ou DELETE, nécessite l'UID pour effectuer les opérations respectives d'édition et de suppression. 
+- Si c'est POST, effectue l'opération de création, alors il ne contient pas l'UID mais exige le nom et le numéro de port.
+- Si c'est PUT, effectue l'opération d'édition, il doit exiger l'UID, le nom et le numéro du port réseau.
+- Lorsque c'est PUT ou DELETE, il a besoin de l'UID pour effectuer les opérations respectives d'édition et de suppression.
 
 ```javascript
 const proprietes = _val.map()
@@ -394,15 +394,15 @@ _dataSchema.set('type', 'object')
 
 ## Vidéos
 
-Voici quelques vidéos exemplatives sur la façon de développer l'API intégrée avec OpenAPI :
+Voici quelques vidéos illustrant comment développer l'API intégrée avec OpenAPI :
 
-<iframe width="100%" height="420" src="https://www.youtube.com/embed/SaeaMh_zwRg?si=oNt_rOcL8Xuu4qE" title="Lecteur vidéo YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/SaeaMh_zwRg?si=oNt_rOcL8Xuu4qE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## Conclusion
 
 Avec le support d'OpenAPI, nous pouvons créer des règles de validation en utilisant JSON Schema, ce qui offre les avantages suivants :
 
-- Garantir une meilleure sécurité des données injectées dans les services. 
+- Garantir une plus grande sécurité des données injectées dans les services.
 - Alerte dans le `log` si la sortie du service n'est pas conforme à ce qui a été spécifié.
 - Génère facilement une interface de navigation dans les services et de tests.

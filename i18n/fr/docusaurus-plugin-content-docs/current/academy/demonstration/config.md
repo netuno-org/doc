@@ -4,15 +4,15 @@ id: config
 title: Configuration
 ---
 
-# Configurer l'application
+# Configurez l'application
 
-Ce guide présente les premières étapes pour configurer la langue de l'application Demo, la base de données et activer les commandes automatiques exécutées avec le serveur.
+Ce guide présente les étapes initiales pour configurer la langue de l'application Demo, la base de données et activer les commandes automatiques exécutées avec le serveur.
 
 Toutes les modifications sont effectuées dans le fichier `_development.json` de configuration de l'application **Demo**, situé dans le dossier /apps/demo/**config**.
 
-### Prérequis
+### Pré-requis
 
-Avant de modifier la configuration, vérifiez les points suivants :
+Avant de modifier la configuration, confirmez ces points :
 
 - L'application Demo a déjà été créée et initialisée.
 - Vous êtes à la racine du projet Netuno.
@@ -27,14 +27,14 @@ Dans le fichier de configuration, localisez les champs `language` et `locale` po
 
 ```json title="/apps/demo/config/development.json"
 {
-  "language": "fr_FR",
-  "locale": "fr_FR",
+  "language": "pt_PT",
+  "locale": "pt_PT",
 }
 ```
 
-Définissez les valeurs selon la langue souhaitée :
+Définissez les valeurs en fonction de la langue souhaitée :
 
-- **Français** : `fr_FR` ou `fr_CA`
+- **Portugais** : `pt_PT` ou `pt_BR`
 - **Anglais** : `en_GB` ou `en_US`
 
 ### 2. Base de données
@@ -43,7 +43,7 @@ Localisez l'objet **"db"**, puis les configurations de **"default"**.
 
 Modifiez le champ **"name"** pour définir la base de données correspondante :
 
-- `demo_fr` : base de données en français.
+- `demo_pt` : base de données en portugais.
 - `demo_en` : base de données en anglais.
 
 ```json title="/apps/demo/config/development.json"
@@ -55,7 +55,7 @@ Modifiez le champ **"name"** pour définir la base de données correspondante :
             "engine": "h2",
             "port": "",
             "host": "",
-            "name": "demo_fr",
+            "name": "demo_pt",
             "username": "sa"
         }
     },
@@ -65,11 +65,11 @@ Modifiez le champ **"name"** pour définir la base de données correspondante :
 
 ### 3. Activer plusieurs commandes
 
-Netuno permet d'exécuter plusieurs commandes simultanément au démarrage du serveur, en affichant leurs sorties dans la même console.
+Netuno permet d'exécuter plusieurs commandes simultanément au démarrage du serveur, en affichant les sorties dans la même console.
 
-Par défaut, l'application **Demo** fournit la commande `bun run watch` configurée, mais désactivée. Cette commande compile automatiquement toute modification apportée aux fichiers de code du backoffice.
+Par défaut, l'application **Demo** fournit la commande `bun run watch` configurée, mais désactivée. Cette commande compile automatiquement toute modification effectuée dans les fichiers de code du backoffice.
 
-Pour l'activer, localisez dans le tableau **"commands"** et remplacez la valeur du champ **enabled** de false par **true**.
+Pour l'activer, localisez le tableau **"commands"** et modifiez la valeur du champ **enabled** de false à **true**.
  
 ```json title="/apps/demo/config/development.json"
 "commands": [
@@ -102,6 +102,6 @@ Après avoir redémarré le serveur, vérifiez les points suivants :
 - L'application Demo est dans la langue configurée.
 - La console affiche l'exécution de la commande `bun run watch`, si elle est activée.
 
-## Étapes suivantes
+## Prochaines étapes
 
 Passez à la prochaine étape **Formulaire** pour explorer et modifier l'application de démonstration.

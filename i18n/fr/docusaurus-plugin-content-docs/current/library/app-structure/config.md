@@ -20,30 +20,30 @@ config.env = 'development'
 ...
 ```
 
-N'importe quel nom peut être utilisé pour définir l'environnement, sachant que les applications doivent avoir le même nom d'environnement que celui des fichiers (`.json` et `.js` dans le dossier `📂 config` de l'application.
+Tout nom peut être utilisé pour définir l'environnement, étant donné que les applications doivent avoir le même nom d'environnement que le nom des fichiers (`.json` et `.js` dans le dossier `📂 config` de l'application.
 
 Par défaut, dans ce dossier, nous trouvons les fichiers suivants :
 
 ## _development.js
 
-L'injection de code JavaScript qui permet de réaliser des configurations dynamiques via la logique programmatique sur les paramétrages définis dans le fichier `_development.json`. Par exemple, définir une configuration en fonction d'informations qui se trouvent dans une base de données, définir le paramétrage du comportement de l'exécution du code, entre autres.
+L'injection de code JavaScript qui permet de réaliser des configurations dynamiques via la logique programmatique sur les paramétrages définis dans le fichier `_development.json`. Par exemple, définir une configuration basée sur des informations qui se trouvent dans une base de données, définir le paramétrage du comportement de l'exécution du code, entre autres.
 
-Ce fichier est utilisé selon la définition de l'environnement, s'il s'agit de `development` (développement).
+Ce fichier est utilisé en fonction de la définition de l'environnement, s'il s'agit de `development` (développement).
 
 ## _development.json
 
-Définition des paramétrages de l'application comme la langue, les configurations générales des ressources et des intégrations. Par exemple, les configurations de bases de données, les Cron Jobs, les intégrations avec SMTP ou des API distantes, l'authentification, entre beaucoup d'autres.
+Définition des paramétrages de l'application comme la langue, les configurations générales des ressources et des intégrations. Par exemple, les configurations de bases de données, les tâches Cron, les intégrations avec SMTP ou des API distantes, l'authentification, entre beaucoup d'autres.
 
-Ce fichier est utilisé selon la définition de l'environnement, s'il s'agit de `development` (développement).
+Ce fichier est utilisé en fonction de la définition de l'environnement, s'il s'agit de `development` (développement).
 
 ## _production.js
 
-L'injection de code JavaScript permet de réaliser des configurations dynamiques via une logique programmatique sur les paramétrages définis dans `_production.js`. Par exemple définir la configuration avec des informations qui se trouvent dans une base de données, le paramétrage du comportement de l'exécution du code, entre autres.
+L'injection de code JavaScript permet de réaliser des configurations dynamiques via la logique programmatique sur les paramétrages définis dans `_production.js`. Par exemple, définir la configuration avec des informations qui se trouvent dans une base de données, le paramétrage du comportement de l'exécution du code, entre autres.
 
-Ce fichier est utilisé selon la définition de l'environnement, s'il s'agit de `production` (production).
+Ce fichier est utilisé en fonction de la définition de l'environnement, s'il s'agit de `production` (production).
 
 ## _production.json
 
-Définition des paramétrages de l'application comme la langue, les configurations générales des ressources et des intégrations. Par exemple, les configurations de bases de données, les Cron Jobs, les intégrations avec SMTP ou des API distantes, l'authentification, entre beaucoup d'autres.
+Définition des paramétrages de l'application comme la langue, les configurations générales des ressources et des intégrations. Par exemple, les configurations de bases de données, les tâches Cron, les intégrations avec SMTP ou des API distantes, l'authentification, entre beaucoup d'autres.
 
-Ce fichier est utilisé selon la définition de l'environnement, s'il s'agit de `production` (production).
+Ce fichier est utilisé en fonction de la définition de l'environnement, s'il s'agit de `production` (production).

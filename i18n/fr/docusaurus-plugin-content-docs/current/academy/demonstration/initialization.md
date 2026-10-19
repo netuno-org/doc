@@ -22,8 +22,8 @@ Exécutez la commande ci-dessous pour démarrer le serveur :
 ./netuno server
 ```
 
-:::info Alternative de démarrage
-Si la commande principale ne fonctionne pas ou si l'application Demo n'est pas chargée par défaut, forcez le démarrage en spécifiant le paramètre de l'application :
+:::info Alternative d'initialisation
+Si la commande principale ne fonctionne pas ou si l'application Demo n'est pas chargée par défaut, forcez l'initialisation en spécifiant le paramètre de l'application :
 :::
 
 ```bash
@@ -31,7 +31,7 @@ Si la commande principale ne fonctionne pas ou si l'application Demo n'est pas c
 ```
 
 ### Choisissez l'éditeur de code
-Vous pouvez utiliser l'éditeur de code de votre choix pour développer le back-end et le front-end de votre application.
+Vous pouvez utiliser l'éditeur de code de votre choix pour développer le backend et le frontend de votre application.
 
 Si vous n'en avez pas encore, nous recommandons les options gratuites et open source suivantes :
 
@@ -41,7 +41,7 @@ Si vous n'en avez pas encore, nous recommandons les options gratuites et open so
 
 
 #### Ouvrez le dossier du projet
-Avec l'éditeur de code ouvert, localisez et ouvrez le répertoire de l'application Demo : `📁 apps/demo`.
+Une fois l'éditeur de code ouvert, localisez et ouvrez le répertoire de l'application Demo : `📁 apps/demo`.
 
 Ce dossier contient tous les fichiers et configurations de la nouvelle application. C'est exclusivement dans ce répertoire que tout le développement sera réalisé.
 

@@ -5,11 +5,11 @@ title: Limbi
 sidebar_label: Limbi
 ---
 
-Cum gestionează CLUAR limbile site-ului și conținutul multilingv.
+Cum gestionează CLUAR limbile site-ului web și conținutul multilingv.
 
 ## Introducere
 
-CLUAR este multilingv implicit: fiecare **Pagină** este asociată unei limbi, iar site-ul afișează un selector pentru ca vizitatorul să schimbe între limbile disponibile.
+CLUAR este multilingv prin implicit: fiecare **Pagină** este asociată cu o limbă, iar site-ul web afișează un selector pentru ca vizitatorul să comute între limbile disponibile.
 
 Limbile sunt gestionate în backoffice, prin formularul **Limbă**.
 
@@ -17,17 +17,17 @@ Limbile sunt gestionate în backoffice, prin formularul **Limbă**.
 
 | Câmp | Descriere |
 |---|---|
-| **Cod** (`code`) | Codul internațional al limbii (ex.: `RO`, `EN`). Este valoarea folosită pentru a asocia conținut (pagini, dicționar, configurații) cu această limbă. |
-| **Localizare** (`locale`) | Localizarea completă (ex.: `ro`, `en`). Este valoarea folosită în linkul paginilor și la schimbarea limbii prin cod. |
-| **Implicit** (`default`) | Marchează această limbă ca preferată a site-ului — este cea încărcată implicit. |
-| **Descriere** (`description`) | Numele limbii afișat vizitatorului (ex.: "Română"). |
+| **Cod** (`code`) | Codul internațional al limbii (ex.: `PT`, `EN`). Este valoarea folosită pentru a asocia conținut (pagini, dicționar, configurații) cu această limbă. |
+| **Localizare** (`locale`) | Localizarea completă (ex.: `pt`, `en`). Este valoarea folosită în linkul paginilor și la schimbarea limbii prin cod. |
+| **Implicit** (`default`) | Marchează această limbă ca preferată pentru site-ul web — este cea încărcată în mod implicit. |
+| **Descriere** (`description`) | Numele limbii afișat vizitatorului (ex.: „Portugheză”). |
 
-## Selectarea limbii pe site
+## Selectarea limbii pe site-ul web
 
-Există astăzi două selectoare de limbă în proiect:
+Există în prezent două selectoare de limbă în proiect:
 
-- **Header-ul site-ului public** (`website/src/base/Header`) — selectorul tradițional, realizat cu [Meniul Ant Design](https://ant.design/components/menu/). La schimbarea limbii, navighează către `/{locale}/`. Afișează doar limbile care au deja pagini publicate (prin `Cluar.pages()`), pentru a nu arăta opțiuni goale.
-- **`LanguageSwitch`** (`website/src/components/LanguageSwitch`) — folosit în Zona Rezervată (`ReservedArea`). Este un dropdown mai simplu: schimbă limba activă și reîncarcă pagina curentă, fără a naviga către altă rută.
+- **Antetul site-ului public** (`website/src/base/Header`) — selectorul tradițional, realizat cu [Meniul Ant Design](https://ant.design/components/menu/). La schimbarea limbii, navighează către `/{locale}/`. Listează doar limbile care au deja pagini publicate (prin `Cluar.pages()`), pentru a nu afișa opțiuni goale.
+- **`LanguageSwitch`** (`website/src/components/LanguageSwitch`) — folosit în interiorul Zonei Rezervate (`ReservedArea`). Este un meniu derulant mai simplu: schimbă limba activă și reîncarcă pagina curentă, fără a naviga către altă rută.
 
 ## Programatic
 
@@ -35,9 +35,9 @@ Clasa `website/src/common/Cluar.js` pune la dispoziție funcții pentru lucrul c
 
 - `Cluar.defaultLanguage()` — obține limba marcată ca implicită.
 - `Cluar.currentLanguage()` — obține limba activă în acest moment.
-- `Cluar.changeLanguage(codSauLocalizare)` — activează altă limbă în mod programatic (acceptă atât `code`, cât și `locale`).
+- `Cluar.changeLanguage(codigoOuLocalizacao)` — activează altă limbă în mod programatic (acceptă atât `code`, cât și `locale`).
 - `Cluar.languages()` — obține lista tuturor limbilor.
 
-## Pasul următor
+## Următorul pas
 
-Explorează cum este organizat conținutul în fiecare limbă în [Pagini](/docs/academy/cluar/pages/overview).
+Explorează modul în care conținutul din fiecare limbă este organizat în [Pagini](/docs/academy/cluar/pages/overview).

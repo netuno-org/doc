@@ -10,28 +10,28 @@ import PolyglotCode from "@site/src/components/PolyglotCode";
 
 En el código de backend políglota de la plataforma Netuno, podemos manipular cualquier archivo o carpeta.
 
-La manipulación consiste en poder crear, renombrar y eliminar archivos y carpetas, alterar el contenido de archivos
+La manipulación consiste en poder crear, renombrar y eliminar los archivos y carpetas, alterar el contenido de archivos
 y listar el contenido de carpetas. En general, estas son las operaciones que normalmente necesitamos hacer programáticamente.
 
 En la plataforma Netuno hay recursos de programación low-code que permiten manipular las carpetas y los archivos
-internos de la aplicación, pero también cualquier archivo y carpeta del sistema en general, es decir, fuera de la aplicación.
+internos de la aplicación, pero también cualesquiera archivos y carpetas del sistema en general, es decir, fuera de la aplicación.
 
-Es útil cuando necesitamos automatizar algún proceso que necesita tocar algún archivo cualquiera; veamos cómo.
+Es útil cuando necesitamos automatizar algún proceso que necesita tocar algún archivo cualquiera, veamos cómo.
 
 Los recursos de programación políglota low-code que permiten manipular archivos son:
 
 - `_app` - [Aplicación](/docs/library/resources/app)
-- `_storage` - [Almacenamiento](/docs/library/resources/storage)
+- `_storage` - [Storage](/docs/library/resources/storage)
 - `_os` - [Sistema Operativo](/docs/library/resources/os)
 
 A través de estos recursos tenemos los métodos para:
 
 - `.file` - Archivo existente.
 - `.folder` - Carpeta existente.
-- `.path` - Ruta genérica, que puede ser un archivo o una carpeta, que existe o no existe.
+- `.path` - Ruta genérica, tanto puede ser un archivo como una carpeta, que existe o que no existe.
 
-Con estos métodos obtenemos un objeto de tipo [File](/docs/library/objects/File), que proporciona todos los medios para
-manipular archivos, carpetas y rutas en general, lo que permite realizar operaciones como:
+Con estos métodos obtenemos un objeto del tipo [File](/docs/library/objects/File), que proporciona todos los medios para
+manipulaciones de archivos, carpetas y rutas en general, lo que permite realizar operaciones como:
 
 - Crear archivos y carpetas.
 - Borrar archivos y carpetas.
@@ -90,12 +90,12 @@ Obtiene una ruta de archivo o carpeta, independientemente de si existe o no, por
     ]}
 />
 
-## Almacenamiento
+## Storage
 
 Para realizar las operaciones principales de manipulación de archivos y carpetas dentro de la carpeta `📁 storage` de la aplicación,
 utilizamos el recurso `_storage`:
 
-#### Carpetas en el Almacenamiento
+#### Carpetas en el Storage
 
 Garantiza que se obtiene una carpeta que existe, por ejemplo:
 
@@ -106,14 +106,14 @@ Garantiza que se obtiene una carpeta que existe, por ejemplo:
             code: `
                 // La ruta real de la carpeta será:
                 // storage/filesystem/server/mi/carpeta
-                const almacenamientoMiCarpeta = _storage.filesystem("server", "mi/carpeta")
-                const miCarpeta = almacenamientoMiCarpeta.folder()
+                const storageMiCarpeta = _storage.filesystem("server", "mi/carpeta")
+                const miCarpeta = storageMiCarpeta.folder()
             `
         },
     ]}
 />
 
-#### Archivos en el Almacenamiento
+#### Archivos en el Storage
 
 Garantiza que se obtiene un archivo que existe, por ejemplo:
 
@@ -124,14 +124,14 @@ Garantiza que se obtiene un archivo que existe, por ejemplo:
             code: `
                 // La ruta real del archivo será:
                 // storage/filesystem/server/mi/carpeta/archivo.txt
-                const almacenamientoArchivo = _storage.filesystem("server", "mi/carpeta", "archivo.txt")
-                const archivo = almacenamientoArchivo.file()
+                const storageArchivo = _storage.filesystem("server", "mi/carpeta", "archivo.txt")
+                const archivo = storageArchivo.file()
             `
         },
     ]}
 />
 
-#### Rutas en el Almacenamiento
+#### Rutas en el Storage
 
 Obtiene una ruta de archivo o carpeta, independientemente de si existe o no, por ejemplo:
 
@@ -142,13 +142,13 @@ Obtiene una ruta de archivo o carpeta, independientemente de si existe o no, por
             code: `
                 // La ruta real de la nueva carpeta será:
                 // storage/filesystem/server/mi/nueva-carpeta
-                const almacenamientoCarpeta = _storage.filesystem("server", "mi/nueva-carpeta")
-                const carpeta = almacenamientoCarpeta.path()
+                const storageCarpeta = _storage.filesystem("server", "mi/nueva-carpeta")
+                const carpeta = storageCarpeta.path()
 
                 // La ruta real del nuevo archivo será:
                 // storage/filesystem/server/mi/carpeta/nuevo-archivo.txt
-                const almacenamientoArchivo = _storage.filesystem("server", "mi/carpeta", "nuevo-archivo.txt")
-                const archivo = almacenamientoArchivo.path()
+                const storageArchivo = _storage.filesystem("server", "mi/carpeta", "nuevo-archivo.txt")
+                const archivo = storageArchivo.path()
             `
         },
     ]}
@@ -208,7 +208,7 @@ Obtiene una ruta de archivo o carpeta, independientemente de si existe o no, por
 
 El método `mkdir` crea una carpeta.
 
-En el siguiente ejemplo se crea la carpeta específica en la raíz de la aplicación:
+En el ejemplo siguiente se crea la carpeta específica en la raíz de la aplicación:
 
 <PolyglotCode
     codes={[
@@ -237,7 +237,7 @@ carpetas con `/`:
     ]}
 />
 
-El `mkdirs`, en cambio, crea las carpetas anteriores y/o las subcarpetas en caso de que no existan, por lo que permite crear una estructura
+En cambio, `mkdirs` crea las carpetas anteriores y/o las subcarpetas en caso de que no existan, por lo que permite crear una estructura
 de carpetas en la aplicación, por ejemplo:
 
 <PolyglotCode
@@ -253,7 +253,7 @@ de carpetas en la aplicación, por ejemplo:
 />
 
 El recurso `_storage` tiene el método [ensurePath](/docs/library/resources/storage#ensurepath) que verifica si la
-ruta existe; en caso de que no exista, entonces la crea:
+ruta existe, en caso de que no exista, la crea:
 
 <PolyglotCode
     codes={[
@@ -276,7 +276,7 @@ Por lo tanto, `ensurePath` garantiza que la estructura de carpetas exista.
 
 ## Eliminar Archivos y Carpetas
 
-Con el método `delete` podemos eliminar tanto carpetas como archivos, teniendo en cuenta que las carpetas deben estar vacías;
+Con el método `delete` podemos tanto eliminar carpetas como archivos, teniendo en cuenta que las carpetas deben estar vacías,
 vea el ejemplo:
 
 <PolyglotCode
@@ -341,7 +341,7 @@ recibir una extensión en caso de que se quiera eliminar solo archivos con una e
 />
 
 Para eliminar solo los archivos recursivamente y mantener la estructura de carpetas, tenemos `deleteAllFiles`, que
-también permite recibir una extensión en caso de que se quiera eliminar solo un tipo de archivo específico; vea estos dos
+también permite recibir una extensión en caso de que se quiera eliminar solo un tipo de archivo específico, vea estos dos
 ejemplos:
 
 <PolyglotCode
@@ -407,10 +407,10 @@ Y para mover una subcarpeta sin cambiar su nombre, basta con indicar la nueva ru
 
 ## Guardar Contenidos en Archivos
 
-La generación de contenidos en archivos se realiza a través del método `output`, que proporciona un objeto de tipo
+La generación de contenidos en archivos se hace a través del método `output` que proporciona un objeto del tipo
 [OutputStream](/docs/library/objects/OutputStream).
 
-Para escribir los datos en el `output`, utilizamos el método [printAndClose](/docs/library/objects/OutputStream#printandclose),
+Para escribir los datos en el `output` utilizamos el método [printAndClose](/docs/library/objects/OutputStream#printandclose),
 que imprime el contenido en el archivo y cierra el archivo guardando el contenido.
 
 #### Escribir Archivo de Texto
@@ -430,7 +430,7 @@ Vea el ejemplo de cómo crear un archivo con contenido de texto:
     ]}
 />
 
-> Siempre que utilizamos el `output` se genera un nuevo archivo; por lo tanto, si se ejecuta el código de nuevo, el archivo
+> Siempre que utilizamos el `output` se genera un nuevo archivo, por lo tanto, si se ejecuta el código nuevamente el archivo
 > se volverá a crear.
 
 #### Escribir archivo JSON
@@ -460,16 +460,16 @@ Vea cómo podemos guardar datos JSON en archivos:
 />
 
 Para generar el JSON indentado, es decir, formateado en varias líneas y tabulado, podemos pasar el número de espacios
-que se utilizará para la tabulación, por ejemplo `.toJSON(4)`.
+con el que se hará la tabulación, por ejemplo `.toJSON(4)`.
 
 > Más detalles sobre el método [toJSON en Values](/docs/library/objects/Values#tojsonindentfactor-int--string).
 
 ## Leer Contenidos en Archivos
 
-La obtención de contenidos en archivos se realiza a través del método `input`, que proporciona un objeto de tipo
+La obtención de contenidos en archivos se hace a través del método `input` que proporciona un objeto del tipo
 [InputStream](/docs/library/objects/InputStream).
 
-Para leer los datos en el `input`, utilizamos el método [readAllAndClose](/docs/library/objects/InputStream#readallandclose),
+Para leer los datos en el `input` utilizamos el método [readAllAndClose](/docs/library/objects/InputStream#readallandclose),
 que procesa la lectura del contenido en el archivo y cierra el archivo.
 
 #### Leer Archivo de Texto
@@ -509,24 +509,24 @@ Vea cómo podemos procesar datos JSON obtenidos en archivos:
 
 > Más detalles sobre el método [fromJSON del recurso Val](/docs/library/resources/val#fromjson).
 
-## Particularidades del Almacenamiento
+## Particularidades del Storage
 
-El recurso de almacenamiento tiene algunos métodos para su utilización directa.
+El recurso storage tiene algunos métodos para utilización directa.
 
-Por ejemplo, podemos acceder a través del almacenamiento:
+Por ejemplo, podemos acceder a través del storage:
 
 - [Storage Output](/docs/library/resources/storage#output)
 - [Storage Input](/docs/library/resources/storage#input)
 
 Esto quiere decir que no necesitamos obtener el `file` o `path` para trabajar con el `input` o `output`.
 
-#### Escribir Archivo de Texto en el Almacenamiento
+#### Escribir Archivo de Texto en el Storage
 
-Al iniciar un almacenamiento para un archivo, podemos realizar la escritura utilizando el método [output](/docs/library/resources/storage#output), que obtiene
+Al iniciar un storage para un archivo podemos realizar la escritura utilizando el método [output](/docs/library/resources/storage#output), que obtiene
 una instancia del objeto [OutputStream](/docs/library/objects/OutputStream) que permite procesar y leer los datos.
 
 Entonces, con el `OutputStream`, el método [printAndClose](/docs/library/objects/OutputStream#printandclose),
-realiza la escritura de texto (`string`) en el archivo y lo cierra.
+hace la escritura de texto (`string`) en el archivo y lo cierra.
 
 Vea este ejemplo:
 
@@ -543,13 +543,13 @@ Vea este ejemplo:
     ]}
 />
 
-#### Leer Archivo de Texto en el Almacenamiento
+#### Leer Archivo de Texto en el Storage
 
-Al iniciar un almacenamiento para un archivo, podemos realizar la lectura utilizando el método [input](/docs/library/resources/storage#input), que obtiene
+Al iniciar un storage para un archivo podemos realizar la lectura utilizando el método [input](/docs/library/resources/storage#input), que obtiene
 una instancia del objeto [InputStream](/docs/library/objects/InputStream) que permite procesar y leer los datos.
 
 Entonces, con el `InputStream`, el método [readAllAndClose](/docs/library/objects/InputStream#readallandclose),
-realiza la lectura de todo el archivo y lo cierra, retornando los datos como texto (`string`).
+hace la lectura de todo el archivo y lo cierra, retornando los datos como texto (`string`).
 
 Vea este ejemplo:
 
@@ -565,14 +565,14 @@ Vea este ejemplo:
     ]}
 />
 
-#### Crear archivo aleatorio en el Almacenamiento
+#### Crear archivo aleatorio en el Storage
 
 El recurso `_storage` permite generar nombres de archivos aleatorios con el método [newRandomFile](/docs/library/resources/storage#newrandomfile).
 
-Se debe iniciar un almacenamiento para la ruta de una carpeta, y al ejecutar el método `newRandomFile` se pasa la extensión del
-archivo deseado.
+Se debe iniciar un storage para la ruta de una carpeta, y al ejecutar el método `newRandomFile` se pasa la extensión del
+archivo pretendido.
 
-El método retorna una nueva instancia del almacenamiento para el archivo aleatorio generado automáticamente para ser
+El método retorna una nueva instancia del storage para el archivo aleatorio generado automáticamente para ser
 utilizado en la carpeta inicial.
 
 Vea cómo generar un archivo con extensión `TXT` con nombre aleatorio:
@@ -592,16 +592,16 @@ Vea cómo generar un archivo con extensión `TXT` con nombre aleatorio:
 
 ## Conclusión
 
-Con el framework low-code políglota de Netuno podemos realizar todas las operaciones principales de carpetas y archivos
+Con el framework low-code políglota de Netuno podemos realizar todas las principales operaciones de carpetas y archivos
 directamente.
 
 Al utilizar los recursos específicos para manipular archivos y carpetas en la:
 
 - `_app` - Aplicación
-- `_storage` - Almacenamiento de la Aplicación
+- `_storage` - Storage de la Aplicación
 - `_os` - Sistema Operativo
 
-> Por cuestiones de buenas prácticas y organización, debemos priorizar la utilización del **almacenamiento**; las excepciones deben ser
+> Por cuestiones de buenas prácticas y organización debemos priorizar la utilización del **storage**, las excepciones deben ser
 > solo casos puntuales y estrictamente necesarios.
 
 Netuno procesa el cierre automático de los inputs y outputs al final del procesamiento de los servicios, pero por buenas

@@ -7,15 +7,15 @@ sidebar_label: Eventos de Ciclo de Vida
 
 ## Interfaz de Usuario (`ui`)
 
-En la interfaz de gestión de datos de Netuno es posible inyectar código a medida para realizar personalizaciones y manipulaciones personalizadas.
+En la interfaz de gestión de datos de Netuno es posible inyectar código a medida para realizar personalizaciones y manipulaciones a medida.
 
 El desarrollo se realiza en la programación dentro de la carpeta `ui` dentro de la carpeta raíz de la aplicación.
 
 ### addPageLoad()
 
-La página no puede ser manipulada con seguridad hasta que la aplicación esté "lista".
+La página no se puede manipular de forma segura hasta que la aplicación esté "lista".
 
-El método será llamado cuando la página esté cargada.
+El método se llamará cuando la página esté cargada.
 
 ```javascript
 netuno.addPageLoad(() => {
@@ -25,9 +25,9 @@ netuno.addPageLoad(() => {
 
 ### addContentLoad()
 
-Cuando se cargan formularios o informes, la interfaz se modifica con el contenido respectivo, ya sea un formulario de datos, una búsqueda o al filtrar datos de algún informe.
+Cuando se cargan formularios o informes, la interfaz cambia con el contenido correspondiente, ya sea un formulario de datos, una búsqueda o al filtrar datos de algún informe.
 
-Tan pronto como se cargue algún contenido, se llama al método y se pasa el contenedor que contendrá el contenido que se está presentando.
+En cuanto se carga algún contenido, se llama al método y se pasa el contenedor que contendrá el contenido que se está presentando.
 
 ```javascript
 netuno.addContentLoad((contenedor) => {

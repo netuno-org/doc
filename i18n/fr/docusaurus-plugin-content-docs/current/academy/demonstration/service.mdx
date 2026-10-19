@@ -2,16 +2,16 @@
 sidebar_position: 6
 id: service
 title: Service
-description: Apprenez à créer des Web Services et des APIs REST dans Netuno, à intégrer des données entre systèmes et à fournir des données dynamiques au frontend de manière asynchrone.
+description: Apprenez à créer des Web Services et des API REST dans Netuno, à intégrer des données entre systèmes et à fournir des données dynamiques au frontend de manière asynchrone.
 ---
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
 import PolyglotPath from "@site/src/components/PolyglotPath";
 
-Avec Netuno, il est possible de créer des **_Web Services_** et de construire tout type d'**APIs <a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a>** complexes pour l'intégration de données entre systèmes.
+Avec Netuno, il est possible de créer des **_Web Services_** et de construire tout type d'**API <a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a>** complexes pour l'intégration de données entre systèmes.
 
 :::info Qu'est-ce qu'un Web Service ?
-Un Web Service permet à des systèmes d'échanger des informations en ligne de manière standardisée. Dans Netuno, chaque fichier dans `server/services/` devient automatiquement un endpoint accessible via HTTP.
+Un Web Service permet aux systèmes d'échanger des informations en ligne de manière standardisée. Dans Netuno, chaque fichier dans `server/services/` devient automatiquement un endpoint accessible via HTTP.
 :::
 
 ## Pourquoi utiliser des Web Services ?
@@ -19,7 +19,7 @@ Un Web Service permet à des systèmes d'échanger des informations en ligne de 
 L'utilisation de services asynchrones apporte des bénéfices clairs pour l'expérience utilisateur :
 
 - **Chargement plus rapide :** le serveur livre la structure visuelle de la page immédiatement, sans attendre le traitement de toutes les données.
-- **Données dynamiques à la demande :** le frontend ne demande que les données nécessaires, quand c'est nécessaire.
+- **Données dynamiques à la demande :** le frontend ne demande que les données nécessaires, quand elles sont nécessaires.
 - **Intégration entre systèmes :** un service créé dans Netuno peut être consommé par n'importe quelle application externe (mobile, autre système web, etc.).
 - **Meilleure expérience utilisateur :** l'utilisateur n'a pas besoin d'attendre le traitement complet de la page avant de voir quelque chose à l'écran.
 
@@ -27,32 +27,32 @@ L'utilisation de services asynchrones apporte des bénéfices clairs pour l'exp�
 
 Avant de commencer, assurez-vous que :
 
-- Netuno est installé et en cours d'exécution localement.
-- L'application `démo` a été créée comme décrit dans [Créer une Application](../app-create).
-- Il y a des données enregistrées dans **Tâches** et liées à **Enregistrements** (nécessaire pour que le retour ne soit pas vide).
+- Netuno est installé et en cours d'exécution en local.
+- L'application `demo` a été créée comme décrit dans [Créer une application](../app-create).
+- Des données sont enregistrées dans **Tâches** et liées à **Enregistrements** (nécessaire pour que le retour ne soit pas vide).
 
-## Configurer l'Éditeur de Code
+## Configurer l'éditeur de code
 
-Pour créer et modifier des services dans Netuno, utilisez un éditeur de code de votre choix. Nous recommandons **[Visual Studio Code](https://code.visualstudio.com/download)** car il est gratuit, léger et très intuitif, mais n'importe quel éditeur compatible avec JavaScript/Python/Groovy fonctionnera normalement.
+Pour créer et modifier des services dans Netuno, utilisez un éditeur de code de votre choix. Nous recommandons **[Visual Studio Code](https://code.visualstudio.com/download)** car il est gratuit, léger et très intuitif, mais tout éditeur compatible avec JavaScript/Python/Groovy fonctionnera normalement.
 
-## Ouvrir l'Application Démo {#abrir-a-aplicacao-demo}
+## Ouvrir l'application démo {#abrir-a-aplicacao-demo}
 
 1. Ouvrez **Visual Studio Code**.
 2. Cliquez sur l'icône **Fichiers** dans le panneau latéral gauche.
-3. Sélectionnez **Ouvrir le dossier** (File > Open Folder).
+3. Sélectionnez **Ouvrir le dossier** (Fichier > Ouvrir le dossier).
 4. Naviguez jusqu'au dossier d'installation de Netuno.
-5. Sélectionnez le répertoire : **`apps/démo`**
+5. Sélectionnez le répertoire : **`apps/demo`**
 6. Cliquez sur **Ouvrir**.
 
-La structure de dossiers de l'application `démo` sera chargée dans le panneau gauche.
+La structure de dossiers de l'application `demo` sera chargée dans le panneau de gauche.
 
-## Créer le Service
+## Créer le service
 
 Les services sont traités côté **serveur**. Pour créer un nouveau service :
 
-1. Dans le panneau de fichiers, développez la structure jusqu'à trouver le dossier `server/services/`.
-2. Cliquez avec le **bouton droit** sur le dossier `services`.
-3. Sélectionnez **Nouveau Fichier** `New File`.
+1. Dans le panneau des fichiers, développez l'arborescence jusqu'à trouver le dossier `server/services/`.
+2. Faites un clic droit sur le dossier `services`.
+3. Sélectionnez **Nouveau fichier** `Nouveau fichier`.
 4. Nommez le fichier en fonction du langage que vous souhaitez utiliser :
 
 <PolyglotPath files={[
@@ -69,9 +69,9 @@ Les services sont traités côté **serveur**. Pour créer un nouveau service :
                 /**
                 *** Transforme les données de la requête en sortie JSON.
                 */
-                const dbEnregistrements = _db.query(\`
+                const dbResultats = _db.query(\`
                     SELECT DISTINCT
-                        travailleur.nom, SUM(DATEDIFF(HOUR, enregistrement.début, enregistrement.fin)) AS total
+                        travailleur.nom, SUM(DATEDIFF(HOUR, enregistrement.debut, enregistrement.fin)) AS total
                     FROM travailleur INNER JOIN enregistrement
                         ON travailleur.id = enregistrement.travailleur_id
                     WHERE travailleur.actif = true AND enregistrement.actif = true
@@ -81,11 +81,11 @@ Les services sont traités côté **serveur**. Pour créer un nouveau service :
 
                 const liste = _val.list();
 
-                for (const dbEnregistrement of dbEnregistrements) {
+                for (const dbResultat of dbResultats) {
                     liste.add(
                         _val.map()
-                            .set("nom", dbEnregistrement.getString("nom"))
-                            .set("total", dbEnregistrement.getInt("total"))
+                            .set("nom", dbResultat.getString("nom"))
+                            .set("total", dbResultat.getInt("total"))
                     );
                 }
 
@@ -98,9 +98,9 @@ Les services sont traités côté **serveur**. Pour créer un nouveau service :
                 #
                 # Transforme les données de la requête en sortie JSON.
                 #
-                dbEnregistrements = _db.query(
+                dbResultats = _db.query(
                     """SELECT DISTINCT
-                        travailleur.nom, SUM(DATEDIFF(HOUR, enregistrement.début, enregistrement.fin)) AS total
+                        travailleur.nom, SUM(DATEDIFF(HOUR, enregistrement.debut, enregistrement.fin)) AS total
                     FROM travailleur INNER JOIN enregistrement
                         ON travailleur.id = enregistrement.travailleur_id
                     WHERE travailleur.actif = true AND enregistrement.actif = true
@@ -110,11 +110,11 @@ Les services sont traités côté **serveur**. Pour créer un nouveau service :
 
                 liste = _val.list()
 
-                for dbEnregistrement in dbEnregistrements:
+                for dbResultat in dbResultats:
                     liste.add(
                         _val.map()
-                            .set("nom", dbEnregistrement.getString("nom"))
-                            .set("total", dbEnregistrement.getInt("total"))
+                            .set("nom", dbResultat.getString("nom"))
+                            .set("total", dbResultat.getInt("total"))
                     )
 
                 _out.json(liste)
@@ -126,9 +126,9 @@ Les services sont traités côté **serveur**. Pour créer un nouveau service :
                 #
                 # Transforme les données de la requête en sortie JSON.
                 #
-                dbEnregistrements = _db.query(%{
+                dbResultats = _db.query(%{
                     SELECT DISTINCT
-                        travailleur.nom, SUM(DATEDIFF(HOUR, enregistrement.début, enregistrement.fin)) AS total
+                        travailleur.nom, SUM(DATEDIFF(HOUR, enregistrement.debut, enregistrement.fin)) AS total
                     FROM travailleur INNER JOIN enregistrement
                         ON travailleur.id = enregistrement.travailleur_id
                     WHERE travailleur.actif = true AND enregistrement.actif = true
@@ -138,11 +138,11 @@ Les services sont traités côté **serveur**. Pour créer un nouveau service :
 
                 liste = _val.list()
 
-                dbEnregistrements.each do |dbEnregistrement|
+                dbResultats.each do |dbResultat|
                     liste.add(
                         _val.map()
-                            .set("nom", dbEnregistrement.getString("nom"))
-                            .set("total", dbEnregistrement.getInt("total"))
+                            .set("nom", dbResultat.getString("nom"))
+                            .set("total", dbResultat.getInt("total"))
                     )
                 end
 
@@ -155,9 +155,9 @@ Les services sont traités côté **serveur**. Pour créer un nouveau service :
                 /**
                 *** Transforme les données de la requête en sortie JSON.
                 */
-                val dbEnregistrements = _db.query(
+                val dbResultats = _db.query(
                     """SELECT DISTINCT
-                        travailleur.nom, SUM(DATEDIFF(HOUR, enregistrement.début, enregistrement.fin)) AS total
+                        travailleur.nom, SUM(DATEDIFF(HOUR, enregistrement.debut, enregistrement.fin)) AS total
                     FROM travailleur INNER JOIN enregistrement
                         ON travailleur.id = enregistrement.travailleur_id
                     WHERE travailleur.actif = true AND enregistrement.actif = true
@@ -167,7 +167,7 @@ Les services sont traités côté **serveur**. Pour créer un nouveau service :
 
                 val liste = _val.list();
 
-                dbEnregistrements.forEach {
+                dbResultats.forEach {
                     liste.add(
                         _val.map()
                             .set("nom", it.getString("nom"))
@@ -184,9 +184,9 @@ Les services sont traités côté **serveur**. Pour créer un nouveau service :
                 /**
                 *** Transforme les données de la requête en sortie JSON.
                 */
-                def dbEnregistrements = _db.query("""\\
+                def dbResultats = _db.query("""\\
                     SELECT DISTINCT
-                        travailleur.nom, SUM(DATEDIFF(HOUR, enregistrement.début, enregistrement.fin)) AS total
+                        travailleur.nom, SUM(DATEDIFF(HOUR, enregistrement.debut, enregistrement.fin)) AS total
                     FROM travailleur INNER JOIN enregistrement
                         ON travailleur.id = enregistrement.travailleur_id
                     WHERE travailleur.actif = true AND enregistrement.actif = true
@@ -196,11 +196,11 @@ Les services sont traités côté **serveur**. Pour créer un nouveau service :
 
                 def liste = _val.list();
 
-                for (dbEnregistrement in dbEnregistrements) {
+                for (dbResultat in dbResultats) {
                     liste.add(
                         _val.map()
-                            .set("nom", dbEnregistrement.getString("nom"))
-                            .set("total", dbEnregistrement.getInt("total"))
+                            .set("nom", dbResultat.getString("nom"))
+                            .set("total", dbResultat.getInt("total"))
                     );
                 }
 
@@ -210,9 +210,9 @@ Les services sont traités côté **serveur**. Pour créer un nouveau service :
     ]}
 />
 
-Implémentez le service en ajoutant le code ci-dessous au fichier créé. Ce service interroge la base de données et renvoie une liste de travailleurs avec le total des heures enregistrées, au format **JSON**.
+Implémentez le service en ajoutant le code ci-dessous au fichier créé. Ce service interroge la base de données et renvoie une liste de travailleurs avec le total d'heures enregistrées, au format **JSON**.
 
-### Comprendre le Code
+### Comprendre le code
 
 | Objet/Méthode | Description |
 |---|---|
@@ -222,15 +222,15 @@ Implémentez le service en ajoutant le code ci-dessous au fichier créé. Ce ser
 | `_out.json()` | Sérialise l'objet en JSON et envoie la réponse aux requêtes HTTP. |
 
 :::warning Données nécessaires
-Assurez-vous qu'il y a des données enregistrées dans **Tâches** et liées à **Enregistrements**. Sinon, l'endpoint renverra une liste vide `[]`.
+Assurez-vous que des données sont enregistrées dans **Tâches** et liées à **Enregistrements**. Sinon, l'endpoint renverra une liste vide `[]`.
 :::
 
-## Exécuter et Tester le Service
+## Exécuter et tester le service
 
 Avec Netuno en cours d'exécution, accédez à l'endpoint dans le navigateur :
 
 :::tip Astuce pour visualiser le JSON
-Nous recommandons **[Firefox](https://www.mozilla.org/)** pour tester les endpoints directement dans le navigateur, car il formate et affiche la réponse JSON de manière lisible avec coloration syntaxique. Alternativement, utilisez des extensions comme **JSON Viewer** dans Chrome ou des outils comme **[Postman](https://www.postman.com/)** pour des tests plus avancés.
+Nous recommandons **[Firefox](https://www.mozilla.org/)** pour tester les endpoints directement dans le navigateur, car il formate et affiche la réponse JSON de manière lisible avec coloration syntaxique. Vous pouvez également utiliser des extensions comme **JSON Viewer** dans Chrome ou des outils comme **[Postman](https://www.postman.com/)** pour des tests plus avancés.
 :::
 
 Le retour attendu sera un JSON similaire à :
@@ -239,16 +239,16 @@ Le retour attendu sera un JSON similaire à :
 [
   { "nom": "Anne Dupont", "total": 12 },
   { "nom": "Charles Martin", "total": 28 },
-  { "nom": "Jean Durand", "total": 45 }
+  { "nom": "Jean Dubois", "total": 45 }
 ]
 ```
 
-## Prochaines Étapes
+## Prochaines étapes
 
 Maintenant que votre service fonctionne, vous pouvez :
 
 - 📄 **[Interface & Design](./ui)** — intégrer ce service au frontend de l'application.
-- 📚 **[Bibliothèque de Services](../../library/overview)** — explorer les objets `_db`, `_val`, `_out` et autres disponibles dans Netuno.
+- 📚 **[Bibliothèque de services](../../library/overview)** — explorer les objets `_db`, `_val`, `_out` et d'autres disponibles dans Netuno.
 - 🔗 Ajouter **authentification** et **contrôle d'accès** à votre service.
 
 ___

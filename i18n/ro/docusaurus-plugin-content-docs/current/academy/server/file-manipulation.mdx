@@ -1,90 +1,90 @@
 ---
 id: files-manipulation
-title: Manipularea Fișierelor și Folderelor
-sidebar_label: Manipularea Fișierelor și Folderelor
+title: Manipularea fișierelor și dosarelor
+sidebar_label: Manipularea fișierelor și dosarelor
 ---
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
 
 ## Introducere
 
-În codul de backend poliglot al platformei Netuno, putem manipula orice fișier sau folder.
+În codul de backend poliglot al platformei Netuno, putem manipula orice fișier sau dosar.
 
-Manipularea constă în a putea crea, redenumi și șterge fișiere și foldere, modifica conținutul fișierelor
-și lista conținutul folderelor. În general, acestea sunt operațiile pe care de obicei trebuie să le facem programatic.
+Manipularea constă în a putea crea, redenumi și șterge fișiere și dosare, modifica conținutul fișierelor
+și lista conținutul dosarelor. În general, acestea sunt operațiile pe care de obicei trebuie să le facem programatic.
 
-În platforma Netuno există resurse de programare low-code care permit manipularea folderelor și fișierelor
-interne ale aplicației, dar și a oricăror fișiere și foldere din sistem în general, adică în afara aplicației.
+În platforma Netuno există resurse de programare low-code care permit manipularea dosarelor și fișierelor
+interne ale aplicației, dar și a oricăror fișiere și dosare din sistem în general, adică în afara aplicației.
 
-Este util când trebuie să automatizăm un proces care trebuie să modifice vreun fișier oarecare, să vedem cum.
+Este util când trebuie să automatizăm un proces care necesită să intervină asupra unui fișier oarecare; să vedem cum.
 
 Resursele de programare poliglotă low-code care permit manipularea fișierelor sunt:
 
 - `_app` - [Aplicație](/docs/library/resources/app)
 - `_storage` - [Storage](/docs/library/resources/storage)
-- `_os` - [Sistem de Operare](/docs/library/resources/os)
+- `_os` - [Sistem de operare](/docs/library/resources/os)
 
 Prin aceste resurse avem metodele pentru:
 
 - `.file` - Fișier existent.
-- `.folder` - Folder existent.
-- `.path` - Cale generică, poate fi atât un fișier, cât și un folder, care există sau nu există.
+- `.folder` - Dosar existent.
+- `.path` - Cale generică, poate fi fie un fișier, fie un dosar, care există sau nu există.
 
-Cu aceste metode obținem un obiect de tip [File](/docs/library/objects/File), care oferă toate mijloacele pentru
-manipularea fișierelor, folderelor și căilor în general, ceea ce permite realizarea operațiilor precum:
+Cu aceste metode obținem un obiect de tipul [File](/docs/library/objects/File), care oferă toate mijloacele pentru
+manipularea fișierelor, dosarelor și căilor în general, ceea ce permite realizarea operațiilor precum:
 
-- Creare de fișiere și foldere.
-- Ștergere de fișiere și foldere.
-- Listare a conținutului folderelor.
-- Redenumire de fișiere și foldere.
-- Citire și scriere de date în fișiere.
-- Eliminare de foldere și subfolderele și fișierele lor în mod recursiv.
+- Crearea de fișiere și dosare.
+- Ștergerea fișierelor și dosarelor.
+- Listarea conținutului dosarelor.
+- Redenumirea fișierelor și dosarelor.
+- Citirea și scrierea datelor în fișiere.
+- Ștergerea dosarelor și a subdosarelor și fișierelor lor în mod recursiv.
 
 ## Aplicație
 
-Pentru a realiza operațiile principale de manipulare a fișierelor și folderelor în structura aplicației,
+Pentru a realiza operațiile principale de manipulare a fișierelor și dosarelor din structura aplicației,
 folosim resursa `_app`:
 
-#### Foldere în Aplicație
+#### Dosare în aplicație
 
-Garantează obținerea unui folder care există, de exemplu:
+Asigură obținerea unui dosar existent, de exemplu:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const folderulMeu = _app.folder("meu/folder")
+                const dosarulMeu = _app.folder("dosar/principal")
             `
         },
     ]}
 />
 
-#### Fișiere în Aplicație
+#### Fișiere în aplicație
 
-Garantează obținerea unui fișier care există, de exemplu:
+Asigură obținerea unui fișier existent, de exemplu:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const fisierulMeu = _app.file("meu/folder/fisier.txt")
+                const fisierulMeu = _app.file("dosar/principal/fisier.txt")
             `
         },
     ]}
 />
 
-#### Căi în Aplicație
+#### Căi în aplicație
 
-Obține o cale de fișier sau folder, independent de faptul că există sau nu, de exemplu:
+Obține o cale de fișier sau dosar, indiferent dacă există sau nu, de exemplu:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const fisierNou = _app.path("meu/folder/fisier-nou.txt")
+                const fisierNou = _app.path("dosar/principal/fisier-nou.txt")
             `
         },
     ]}
@@ -92,22 +92,22 @@ Obține o cale de fișier sau folder, independent de faptul că există sau nu, 
 
 ## Storage
 
-Pentru a realiza operațiile principale de manipulare a fișierelor și folderelor în folderul `📁 storage` al aplicației,
+Pentru a realiza operațiile principale de manipulare a fișierelor și dosarelor din dosarul `📁 storage` al aplicației,
 folosim resursa `_storage`:
 
-#### Foldere în Storage
+#### Dosare în Storage
 
-Garantează obținerea unui folder care există, de exemplu:
+Asigură obținerea unui dosar existent, de exemplu:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                // Calea reală a folderului va fi:
-                // storage/filesystem/server/meu/folder
-                const storageFolderMeu = _storage.filesystem("server", "meu/folder")
-                const folderulMeu = storageFolderMeu.folder()
+                // Calea reală a dosarului va fi:
+                // storage/filesystem/server/dosar/principal
+                const storageDosarulMeu = _storage.filesystem("server", "dosar/principal")
+                const dosarulMeu = storageDosarulMeu.folder()
             `
         },
     ]}
@@ -115,7 +115,7 @@ Garantează obținerea unui folder care există, de exemplu:
 
 #### Fișiere în Storage
 
-Garantează obținerea unui fișier care există, de exemplu:
+Asigură obținerea unui fișier existent, de exemplu:
 
 <PolyglotCode
     codes={[
@@ -123,8 +123,8 @@ Garantează obținerea unui fișier care există, de exemplu:
             lang: 'javascript',
             code: `
                 // Calea reală a fișierului va fi:
-                // storage/filesystem/server/meu/folder/fisier.txt
-                const storageFisier = _storage.filesystem("server", "meu/folder", "fisier.txt")
+                // storage/filesystem/server/dosar/principal/fisier.txt
+                const storageFisier = _storage.filesystem("server", "dosar/principal", "fisier.txt")
                 const fisier = storageFisier.file()
             `
         },
@@ -133,120 +133,120 @@ Garantează obținerea unui fișier care există, de exemplu:
 
 #### Căi în Storage
 
-Obține o cale de fișier sau folder, independent de faptul că există sau nu, de exemplu:
+Obține o cale de fișier sau dosar, indiferent dacă există sau nu, de exemplu:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                // Calea reală a noului folder va fi:
-                // storage/filesystem/server/meu/folder-nou
-                const storageFolder = _storage.filesystem("server", "meu/folder-nou")
-                const folder = storageFolder.path()
+                // Calea reală a noului dosar va fi:
+                // storage/filesystem/server/dosar/dosar-nou
+                const storageDosar = _storage.filesystem("server", "dosar/dosar-nou")
+                const dosar = storageDosar.path()
 
                 // Calea reală a noului fișier va fi:
-                // storage/filesystem/server/meu/folder/fisier-nou.txt
-                const storageFisier = _storage.filesystem("server", "meu/folder", "fisier-nou.txt")
+                // storage/filesystem/server/dosar/principal/fisier-nou.txt
+                const storageFisier = _storage.filesystem("server", "dosar/principal", "fisier-nou.txt")
                 const fisier = storageFisier.path()
             `
         },
     ]}
 />
 
-## Sistem de Operare
+## Sistem de operare
 
-Pentru a realiza operațiile principale de manipulare a fișierelor și folderelor oriunde în sistemul de operare,
+Pentru a realiza operațiile principale de manipulare a fișierelor și dosarelor oriunde în sistemul de operare,
 folosim resursa `_os`:
 
-#### Foldere în Sistemul de Operare
+#### Dosare în sistemul de operare
 
-Garantează obținerea unui folder care există, de exemplu:
+Asigură obținerea unui dosar existent, de exemplu:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const folderulMeu = _os.folder("/tmp/meu/folder")
+                const dosarulMeu = _os.folder("/tmp/dosar/principal")
             `
         },
     ]}
 />
 
-#### Fișiere în Sistemul de Operare
+#### Fișiere în sistemul de operare
 
-Garantează obținerea unui fișier care există, de exemplu:
+Asigură obținerea unui fișier existent, de exemplu:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const fisierulMeu = _os.file("/tmp/meu/folder/fisier.txt")
+                const fisierulMeu = _os.file("/tmp/dosar/principal/fisier.txt")
             `
         },
     ]}
 />
 
-#### Căi în Sistemul de Operare
+#### Căi în sistemul de operare
 
-Obține o cale de fișier sau folder, independent de faptul că există sau nu, de exemplu:
+Obține o cale de fișier sau dosar, indiferent dacă există sau nu, de exemplu:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const fisierNou = _os.path("/tmp/meu/folder/fisier-nou.txt")
+                const fisierNou = _os.path("/tmp/dosar/principal/fisier-nou.txt")
             `
         },
     ]}
 />
 
-## Creare de Foldere
+## Crearea dosarelor
 
-Metoda `mkdir` creează un folder.
+Metoda `mkdir` creează un dosar.
 
-În exemplul următor creează folderul specificat în rădăcina aplicației:
+În exemplul următor se creează dosarul specific în rădăcina aplicației:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const folder = _app.path("temp")
-                folder.mkdir()
+                const dosar = _app.path("temporar")
+                dosar.mkdir()
             `
         },
     ]}
 />
 
-Pentru a crea un subfolder în folderul existent, indicați calea completă separând ierarhia de
-foldere cu `/`:
+Pentru a crea un subdosar în dosarul existent, indicați calea completă separând ierarhia dosarelor cu
+`/`:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const subfolder = _app.path("temp/alta")
-                subfolder.mkdir()
+                const subdosar = _app.path("temporar/altul")
+                subdosar.mkdir()
             `
         },
     ]}
 />
 
-Iar `mkdirs` creează folderele anterioare și/sau subfolderele dacă nu există, astfel permite crearea unei structuri
-de foldere în aplicație, de exemplu:
+Iar `mkdirs` creează dosarele anterioare și/sau subdosarele dacă nu există, deci permite crearea unei structuri
+de dosare în aplicație, de exemplu:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const caleFoldere = _app.path("temp/a/b/c")
-                caleFoldere.mkdirs()
+                const caleDosare = _app.path("temporar/a/b/c")
+                caleDosare.mkdirs()
             `
         },
     ]}
@@ -262,21 +262,21 @@ calea există, iar dacă nu există atunci o creează:
             code: `
                 const fisier = _storage.filesystem(
                     "public",
-                    "temp/subfolder",
+                    "temporar/subdosar",
                     "fisier.txt"
                 )
-                // Creează structura de foldere dacă nu există:
+                // Creează structura de dosare dacă nu există:
                 fisier.ensurePath()
             `
         },
     ]}
 />
 
-Prin urmare, `ensurePath` garantează că structura de foldere există.
+Prin urmare, `ensurePath` garantează că structura de dosare există.
 
-## Eliminare de Fișiere și Foldere
+## Ștergerea fișierelor și dosarelor
 
-Cu metoda `delete` putem elimina atât foldere, cât și fișiere, însă folderele trebuie să fie goale,
+Cu metoda `delete` putem elimina atât dosare, cât și fișiere, însă dosarele trebuie să fie goale;
 vedeți exemplul:
 
 <PolyglotCode
@@ -284,43 +284,43 @@ vedeți exemplul:
         {
             lang: 'javascript',
             code: `
-                // Elimină un folder gol:
-                const folderGol = _app.folder("folder/gol")
-                folderGol.delete()
+                // Elimină un dosar gol:
+                const dosarGol = _app.folder("dosar/gol")
+                dosarGol.delete()
 
                 // Elimină un fișier:
-                const fisier = _app.file("folder/fisier.txt")
+                const fisier = _app.file("dosar/fisier.txt")
                 fisier.delete()
 
-                // Elimină o cale, folder gol sau fișier:
-                const cale = _app.path("folder1/fisier-sau-folder-gol")
+                // Elimină o cale, un dosar gol sau un fișier:
+                const cale = _app.path("dosar1/fisier-sau-dosar-gol")
                 cale.delete()
             `
         },
     ]}
 />
 
-Cu `deleteAll` se permite eliminarea a tot, adică toate fișierele, folderele și subfolderele în mod recursiv:
+Cu `deleteAll` se permite eliminarea a tot, adică a tuturor fișierelor, dosarelor și subdosarelor în mod recursiv:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                // Elimină folderul și tot conținutul recursiv:
-                const folderGol = _app.folder("folder/exemplu")
-                folderGol.deleteAll()
+                // Elimină dosarul și întregul conținut în mod recursiv:
+                const dosarGol = _app.folder("dosar/exemplu")
+                dosarGol.deleteAll()
 
-                // Elimină calea unui folder și tot conținutul său intern,
-                // inclusiv subfoldere și fișiere:
-                const cale = _app.path("cale/folder")
+                // Elimină calea unui dosar și întregul său conținut intern,
+                // inclusiv subdosare și fișiere:
+                const cale = _app.path("cale/dosar")
                 cale.deleteAll()
             `
         },
     ]}
 />
 
-Pentru a elimina doar fișierele din interiorul folderului și a nu șterge nimic din subfoldere, avem `deleteFiles`, care permite
+Pentru a elimina doar fișierele din interiorul dosarului și a nu șterge nimic din subdosare, avem `deleteFiles`, care permite
 primirea unei extensii dacă doriți să eliminați doar fișierele cu o extensie specifică:
 
 <PolyglotCode
@@ -328,20 +328,20 @@ primirea unei extensii dacă doriți să eliminați doar fișierele cu o extensi
         {
             lang: 'javascript',
             code: `
-                // Elimină fișierele doar din interiorul folderului:
-                const folder = _app.folder("folder/exemplu")
-                folder.deleteFiles()
+                // Elimină fișierele doar din interiorul dosarului:
+                const dosar = _app.folder("dosar/exemplu")
+                dosar.deleteFiles()
 
-                // Elimină fișierele cu extensia JPG doar din interiorul folderului:
-                const cale = _app.path("cale/folder")
+                // Elimină fișierele cu extensia JPG doar din interiorul dosarului:
+                const cale = _app.path("cale/dosar")
                 cale.deleteFiles("jpg")
 `
         },
     ]}
 />
 
-Pentru a elimina doar fișierele în mod recursiv și a menține structura de foldere, avem `deleteAllFiles`, care
-de asemenea permite primirea unei extensii dacă doriți să eliminați doar un tip specific de fișier, vedeți aceste două
+Pentru a elimina doar fișierele în mod recursiv și a păstra structura dosarelor, avem `deleteAllFiles`, care
+permite de asemenea primirea unei extensii dacă doriți să eliminați doar un anumit tip de fișier; vedeți aceste două
 exemple:
 
 <PolyglotCode
@@ -349,91 +349,91 @@ exemple:
         {
             lang: 'javascript',
             code: `
-                // Elimină toate fișierele din folder și subfoldere:
-                const folder = _app.folder("folder/exemplu")
-                folder.deleteAllFiles()
+                // Elimină toate fișierele din dosar și subdosare:
+                const dosar = _app.folder("dosar/exemplu")
+                dosar.deleteAllFiles()
 
-                // Elimină toate fișierele cu extensia JPG din folder și subfoldere:
-                const cale = _app.path("cale/folder")
+                // Elimină toate fișierele cu extensia JPG din dosar și subdosare:
+                const cale = _app.path("cale/dosar")
                 cale.deleteAllFiles("jpg")
             `
         },
     ]}
 />
 
-## Redenumire sau Mutare
+## Redenumire sau mutare
 
-Pentru a muta un folder, este același lucru cu a-l redenumi:
-
-<PolyglotCode
-    codes={[
-        {
-            lang: 'javascript',
-            code: `
-                const folder = _app.folder("temp")
-                folder.renameTo("test")
-            `
-        },
-    ]}
-/>
-
-Pentru a redenumi un folder și a-l muta la alt nivel în ierarhia de foldere, este același lucru cu a muta folderul:
+Pentru a muta un dosar, este același lucru cu a-l redenumi:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const folder = _app.folder("temp/a/b")
-                folder.renameTo("test/z")
+                const dosar = _app.folder("temporar")
+                dosar.renameTo("test")
             `
         },
     ]}
 />
 
-Și pentru a muta un subfolder fără a-i schimba numele, este suficient să indicați noua cale în metoda `renameTo`:
+Pentru a redenumi un dosar și a-l muta la alt nivel în ierarhia dosarelor, este același lucru cu a muta dosarul:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const folder = _app.folder("test/alta")
-                folder.renameTo("alta")
+                const dosar = _app.folder("temporar/a/b")
+                dosar.renameTo("test/z")
             `
         },
     ]}
 />
 
-## Salvarea Conținuturilor în Fișiere
+Și pentru a muta un subdosar fără a-i schimba numele, este suficient să indicați noua cale în metoda `renameTo`:
 
-Generarea conținuturilor în fișiere se face prin metoda `output` care furnizează un obiect de tip
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dosar = _app.folder("test/altul")
+                dosar.renameTo("altul")
+            `
+        },
+    ]}
+/>
+
+## Salvarea conținutului în fișiere
+
+Generarea conținutului în fișiere se face prin metoda `output`, care oferă un obiect de tipul
 [OutputStream](/docs/library/objects/OutputStream).
 
-Pentru a scrie datele în `output` folosim metoda [printAndClose](/docs/library/objects/OutputStream#printandclose),
+Pentru a scrie datele în `output`, folosim metoda [printAndClose](/docs/library/objects/OutputStream#printandclose),
 care scrie conținutul în fișier și închide fișierul salvând conținutul.
 
-#### Scrierea unui Fișier Text
+#### Scrierea unui fișier text
 
-Vedeți exemplul despre cum să creați un fișier cu conținut text:
+Vedeți exemplul despre cum se creează un fișier cu conținut text:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                _app.path("temp").mkdir()
-                const scriere = _app.path("temp/fisier.txt").output()
+                _app.path("temporar").mkdir()
+                const scriere = _app.path("temporar/fisier.txt").output()
                 scriere.printAndClose("Textul meu aici...")
             `
         },
     ]}
 />
 
-> De fiecare dată când folosim `output` este generat un fișier nou, prin urmare dacă rulați din nou codul, fișierul
+> Ori de câte ori folosim `output`, se generează un fișier nou; prin urmare, dacă rulați din nou codul, fișierul
 > va fi recreat.
 
-#### Scrierea unui Fișier JSON
+#### Scrierea unui fișier JSON
 
 Vedeți cum putem salva date JSON în fișiere:
 
@@ -442,8 +442,8 @@ Vedeți cum putem salva date JSON în fișiere:
         {
             lang: 'javascript',
             code: `
-                _app.path("temp").mkdir()
-                const scriere = _app.path("temp/client.json").output()
+                _app.path("temporar").mkdir()
+                const scriere = _app.path("temporar/client.json").output()
                 scriere.printAndClose(
                     _val.map()
                         .set("nume", "Maria Ioana")
@@ -459,29 +459,29 @@ Vedeți cum putem salva date JSON în fișiere:
     ]}
 />
 
-Pentru a genera JSON indentat, adică formatat pe mai multe linii și tabulat, putem pasa numărul de spații
-cu care se va face tabularea, de exemplu `.toJSON(4)`.
+Pentru a genera JSON indentat, adică formatat pe mai multe linii și tabulat, putem transmite numărul de spații
+pentru tabulare, de exemplu `.toJSON(4)`.
 
 > Mai multe detalii despre metoda [toJSON în Values](/docs/library/objects/Values#tojsonindentfactor-int--string).
 
-## Citirea Conținuturilor din Fișiere
+## Citirea conținutului din fișiere
 
-Obținerea conținuturilor din fișiere se face prin metoda `input` care furnizează un obiect de tip
+Obținerea conținutului din fișiere se face prin metoda `input`, care oferă un obiect de tipul
 [InputStream](/docs/library/objects/InputStream).
 
-Pentru a citi datele din `input` folosim metoda [readAllAndClose](/docs/library/objects/InputStream#readallandclose),
+Pentru a citi datele din `input`, folosim metoda [readAllAndClose](/docs/library/objects/InputStream#readallandclose),
 care procesează citirea conținutului din fișier și închide fișierul.
 
-#### Citirea unui Fișier Text
+#### Citirea unui fișier text
 
-Vedeți exemplul despre cum să citiți un fișier și să obțineți conținutul text:
+Vedeți exemplul despre cum se citește un fișier și se obține conținutul text:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const fisier = _app.file("temp/fisier.txt")
+                const fisier = _app.file("temporar/fisier.txt")
                 const citire = fisier.input()
                 _log.info(citire.readAllAndClose())
             `
@@ -489,7 +489,7 @@ Vedeți exemplul despre cum să citiți un fișier și să obțineți conținutu
     ]}
 />
 
-#### Citirea unui Fișier JSON
+#### Citirea unui fișier JSON
 
 Vedeți cum putem procesa date JSON obținute din fișiere:
 
@@ -498,58 +498,35 @@ Vedeți cum putem procesa date JSON obținute din fișiere:
         {
             lang: 'javascript',
             code: `
-                const fisier = _app.file("temp/fisier.txt")
+                const fisier = _app.file("temporar/fisier.txt")
                 const citire = fisier.input()
                 const date = _val.fromJSON(citire.readAllAndClose())
-                _log.info("Date din Fișier:", date)
+                _log.info("Datele fișierului:", date)
             `
         },
     ]}
 />
 
-> Mai multe detalii despre metoda [fromJSON a resursei Val](/docs/library/resources/val#fromjson).
+> Mai multe detalii despre metoda [fromJSON al resursei Val](/docs/library/resources/val#fromjson).
 
-## Particularități ale Storage
+## Particularități ale Storage-ului
 
-Resursa storage are câteva metode pentru utilizare directă.
+Resursa Storage are câteva metode pentru utilizare directă.
 
-De exemplu, putem accesa prin storage:
+De exemplu, putem accesa prin Storage:
 
 - [Storage Output](/docs/library/resources/storage#output)
 - [Storage Input](/docs/library/resources/storage#input)
 
-Aceasta înseamnă că nu trebuie să obținem `file` sau `path` pentru a lucra cu `input` sau `output`.
+Asta înseamnă că nu trebuie să obținem `file` sau `path` pentru a lucra cu `input` sau `output`.
 
-#### Scrierea unui Fișier Text în Storage
+#### Scrierea unui fișier text în Storage
 
-La inițierea unui storage pentru un fișier putem realiza scrierea folosind metoda [output](/docs/library/resources/storage#output), care obține
-o instanță a obiectului [OutputStream](/docs/library/objects/OutputStream) care permite procesarea și citirea datelor.
+La inițializarea unui Storage pentru un fișier, putem realiza scrierea folosind metoda [output](/docs/library/resources/storage#output), care obține
+o instanță a obiectului [OutputStream](/docs/library/objects/OutputStream) ce permite procesarea și scrierea datelor.
 
-Apoi, cu `OutputStream`, metoda [printAndClose](/docs/library/objects/OutputStream#printandclose),
-face scrierea de text (`string`) în fișier și îl închide.
-
-Vedeți acest exemplu:
-
-<PolyglotCode
-    codes={[
-        {
-            lang: 'javascript',
-            code: `
-                const txt = _storage.filesystem("server", "temp", "fisier.txt")
-                txt.ensurePath()
-                txt.output().printAndClose("Textul meu aici...")
-            `
-        },
-    ]}
-/>
-
-#### Citirea unui Fișier Text în Storage
-
-La inițierea unui storage pentru un fișier putem realiza citirea folosind metoda [input](/docs/library/resources/storage#input), care obține
-o instanță a obiectului [InputStream](/docs/library/objects/InputStream) care permite procesarea și citirea datelor.
-
-Apoi, cu `InputStream`, metoda [readAllAndClose](/docs/library/objects/InputStream#readallandclose),
-face citirea întregului fișier și îl închide, returnând datele ca text (`string`).
+Astfel, cu `OutputStream`, metoda [printAndClose](/docs/library/objects/OutputStream#printandclose)
+scrie text (`string`) în fișier și îl închide.
 
 Vedeți acest exemplu:
 
@@ -558,32 +535,55 @@ Vedeți acest exemplu:
         {
             lang: 'javascript',
             code: `
-                const txt = _storage.filesystem("server", "temp", "fisier.txt")
-                _log.info(txt.input().readAllAndClose())
+                const text = _storage.filesystem("server", "temporar", "fisier.txt")
+                text.ensurePath()
+                text.output().printAndClose("Textul meu aici...")
             `
         },
     ]}
 />
 
-#### Crearea unui Fișier Aleatoriu în Storage
+#### Citirea unui fișier text din Storage
 
-Resursa `_storage` permite generarea de nume de fișiere aleatorii, cu metoda [newRandomFile](/docs/library/resources/storage#newrandomfile).
+La inițializarea unui Storage pentru un fișier, putem realiza citirea folosind metoda [input](/docs/library/resources/storage#input), care obține
+o instanță a obiectului [InputStream](/docs/library/objects/InputStream) ce permite procesarea și citirea datelor.
 
-Trebuie să inițiați un storage pentru calea unui folder, iar la executarea metodei `newRandomFile` se passează extensia
+Astfel, cu `InputStream`, metoda [readAllAndClose](/docs/library/objects/InputStream#readallandclose)
+citește întregul fișier și îl închide, returnând datele ca text (`string`).
+
+Vedeți acest exemplu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const text = _storage.filesystem("server", "temporar", "fisier.txt")
+                _log.info(text.input().readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### Crearea unui fișier aleatoriu în Storage
+
+Resursa `_storage` permite generarea de nume aleatorii de fișiere, cu metoda [newRandomFile](/docs/library/resources/storage#newrandomfile).
+
+Trebuie să inițiați un Storage pentru calea unui dosar, iar la executarea metodei `newRandomFile` se transmite extensia
 fișierului dorit.
 
-Metoda returnează o nouă instanță de storage pentru fișierul aleatoriu generat automat, pentru a fi
-utilizat în folderul inițial.
+Metoda returnează o nouă instanță de Storage pentru fișierul aleatoriu generat automat, pentru a fi
+utilizată în dosarul inițial.
 
-Vedeți cum să generați un fișier cu extensia `TXT` cu nume aleatoriu:
+Vedeți cum se generează un fișier cu extensia `TXT` și nume aleatoriu:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
             code: `
-                const folder = _storage.filesystem("server", "temp")
-                const fisier = folder.newRandomFile("txt")
+                const dosar = _storage.filesystem("server", "temporar")
+                const fisier = dosar.newRandomFile("txt")
                 fisier.output().printAndClose("Textul meu aici...")
             `
         },
@@ -592,17 +592,16 @@ Vedeți cum să generați un fișier cu extensia `TXT` cu nume aleatoriu:
 
 ## Concluzie
 
-Cu framework-ul low-code poliglot al Netuno putem realiza toate operațiile principale cu foldere și fișiere
-direct.
+Cu framework-ul low-code poliglot al Netuno putem realiza direct toate operațiile principale cu dosare și fișiere.
 
-Când utilizați resursele specifice pentru manipularea fișierelor și folderelor în:
+Folosind resursele specifice pentru manipularea fișierelor și dosarelor în:
 
 - `_app` - Aplicație
-- `_storage` - Storage al Aplicației
-- `_os` - Sistem de Operare
+- `_storage` - Storage-ul aplicației
+- `_os` - Sistem de operare
 
-> Din motive de bune practici și organizare, trebuie să prioritizăm utilizarea **storage-ului**, excepțiile trebuie să fie
+> Din motive de bune practici și organizare, ar trebui să prioritizăm utilizarea **storage**, iar excepțiile ar trebui să fie
 > doar cazuri punctuale și strict necesare.
 
-Netuno procesează închiderea automată a input-urilor și output-urilor la sfârșitul procesării serviciilor, dar pentru bune
+Netuno procesează închiderea automată a inputurilor și outputurilor la sfârșitul procesării serviciilor, dar din motive de bune
 practici ar trebui să încercăm să le închidem întotdeauna.

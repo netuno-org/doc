@@ -28,11 +28,11 @@ Vérifiez que :
 
 - L'application de démonstration a déjà été créée.
 - L'étape de configuration a déjà été terminée.
-- Vous êtes dans l'espace de développement de la plateforme.
+- Vous êtes dans la zone de développement de la plateforme.
 
 ## Créer le formulaire
 
-1. En haut à droite, cliquez sur **Construire**.
+1. Dans le coin supérieur droit, cliquez sur **Construire**.
 2. Dans le menu principal, accédez à **Gestion > Formulaires**.
 3. Dans **Titre du formulaire**, saisissez `Tâche`.
 4. Dans **Nom de la table**, activez l'option **Auto**.
@@ -59,16 +59,16 @@ Une fois le formulaire créé :
 
 :::tip
 - **Clé primaire** garantit des valeurs uniques pour chaque enregistrement.
-- **Non nul** rend la saisie obligatoire.
+- **Non nul** rend le remplissage obligatoire.
 - Le type `text` permet de stocker du texte simple.
 :::
 
 ## Valider le résultat
 
-Ouvrez l'espace de visualisation et confirmez que :
+Ouvrez la zone de visualisation et confirmez que :
 
 - Le formulaire **Tâche** est disponible.
-- Le champ **Nom** apparaît pour la saisie.
+- Le champ **Nom** apparaît pour le remplissage.
 - Il est possible de créer un nouvel enregistrement.
 - Le champ **Nom** est obligatoire.
 
@@ -76,6 +76,6 @@ Ouvrez l'espace de visualisation et confirmez que :
 Si la configuration est correcte, le formulaire sera prêt pour les opérations de création, modification, recherche et suppression d'enregistrements.
 :::
 
-## Étapes suivantes
+## Prochaines étapes
 
 Passez à l'étape suivante de **Base de données** pour explorer et modifier l'application de démonstration.

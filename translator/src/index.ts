@@ -1,6 +1,7 @@
 import path from "node:path";
 import { mkdir } from "node:fs/promises";
 
+import { fixAnchors } from "./anchors";
 import { addLocale } from "./config";
 import discovery from "./discovery";
 import { hashContent, loadHashes, saveHashes } from "./hashes";
@@ -114,11 +115,26 @@ function queueSave() {
   saving = saving.then(() => saveHashes(hashesFilePath, hashes));
 }
 
+// The category URL comes from link.slug, so it must never be translated
+function restoreCategoryLink(source: string, translated: string) {
+  const sourceLink = JSON.parse(source).link;
+  if (!sourceLink?.slug) {
+    return translated;
+  }
+  const result = JSON.parse(translated);
+  result.link = { ...result.link, type: sourceLink.type, slug: sourceLink.slug };
+  return JSON.stringify(result, null, 2) + "\n";
+}
+
 async function processFile({ relativePath, content }: PendingFile) {
-  const translatedContent = await translate({
+  let translatedContent = await translate({
     content,
     language: language.label,
   });
+
+  if (path.basename(relativePath) === "_category_.json") {
+    translatedContent = restoreCategoryLink(content, translatedContent);
+  }
 
   const destinationFilePath = path.join(
     destinationBasePath,
@@ -167,6 +183,21 @@ const workers = Array.from(
 
 await Promise.all(workers);
 await saving;
+
+// Every page is checked, a renamed heading breaks links in pages that didn't change
+const fixedAnchors = await fixAnchors({
+  sourceBasePath,
+  destinationBasePath,
+  docsRelativePath: path.relative(
+    sourceBasePath,
+    path.resolve(process.cwd(), "../i18n/pt/docusaurus-plugin-content-docs/current"),
+  ),
+  files: files.map((file) => path.relative(sourceBasePath, file)),
+});
+
+if (fixedAnchors > 0) {
+  console.log(`${fixedAnchors} âncora(s) corrigida(s).`);
+}
 
 if (failed.length > 0) {
   console.error(`\n${failed.length} ficheiro(s) falharam e serão traduzidos na próxima execução:`);

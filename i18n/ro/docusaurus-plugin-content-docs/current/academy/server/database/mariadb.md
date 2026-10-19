@@ -53,7 +53,7 @@ Sau căutați `MySQL Client` sau `MariaDB Client`.
 Rulați următoarea comandă conectat la clientul MariaDB:
 
 ```sql
-CREATE DATABASE baza_de_date_app
+CREATE DATABASE baza_de_date_aplicatie
 ```
 
 ## Crearea utilizatorului
@@ -61,13 +61,13 @@ CREATE DATABASE baza_de_date_app
 Rulați următoarea comandă conectat la clientul MariaDB:
 
 ```sql
-CREATE USER 'utilizator_app'@'localhost' IDENTIFIED BY 'S3cR3t';
+CREATE USER 'utilizator_aplicatie'@'localhost' IDENTIFIED BY 'S3cR3t';
 ```
 
-Pentru a acorda acces general utilizatorului la baza de date creată, rulați:
+Pentru a acorda utilizatorului acces general la baza de date care a fost creată, rulați:
 
 ```sql
-GRANT ALL PRIVILEGES ON baza_de_date_app.* TO 'utilizator_app'@'localhost';
+GRANT ALL PRIVILEGES ON baza_de_date_aplicatie.* TO 'utilizator_aplicatie'@'localhost';
 ```
 
 Actualizați privilegiile de acces:
@@ -94,8 +94,8 @@ Exemplu de configurare a bazei de date pentru MariaDB:
             "engine": "mariadb",
             "port": "3306",
             "host": "localhost",
-            "name": "baza_de_date_app",
-            "username": "utilizator_app",
+            "name": "baza_de_date_aplicatie",
+            "username": "utilizator_aplicatie",
             "password": "S3cR3t"
         }
     },
@@ -113,8 +113,8 @@ Pot fi utilizate configurații avansate precum:
             "engine": "mariadb",
             "port": "3306",
             "host": "localhost",
-            "name": "baza_de_date_app",
-            "username": "utilizator_app",
+            "name": "baza_de_date_aplicatie",
+            "username": "utilizator_aplicatie",
             "password": "S3cR3t",
             "maximumPoolSize": 100,
             "minimumIdle": 1,
@@ -126,4 +126,4 @@ Pot fi utilizate configurații avansate precum:
 }
 ```
 
-> Vedeți mai multe despre [configurațiile de conexiune la baza de date cu HikariCP](/docs/academy/server/database/hikaricp-database-connection-pool).
+> Aflați mai multe despre [configurațiile de conectare la baza de date cu HikariCP](/docs/academy/server/database/hikaricp-database-connection-pool).

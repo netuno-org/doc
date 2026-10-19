@@ -4,19 +4,19 @@ id: config
 title: Configuración
 ---
 
-# Configurar la aplicación
+# Configura la aplicación
 
-Esta guía presenta los pasos iniciales para configurar el idioma de la aplicación Demostración, de la base de datos y habilitar comandos automáticos ejecutados con el servidor.
+Esta guía presenta los pasos iniciales para configurar el idioma de la aplicación Demo, de la base de datos y habilitar comandos automáticos que se ejecutan con el servidor.
 
-Todos los cambios se realizan en el archivo `_development.json` de configuración de la aplicación **Demostración**, ubicado en la carpeta /apps/demostracion/**config**.
+Todas las modificaciones se realizan en el archivo `_development.json` de configuración de la aplicación **Demo**, ubicado en la carpeta /apps/demo/**config**.
 
-### Prerrequisitos
+### Requisitos previos
 
 Antes de editar la configuración, confirma estos puntos:
 
-- La aplicación Demostración ya ha sido creada e inicializada.
+- La aplicación Demo ya se ha creado e inicializado.
 - Estás en la raíz del proyecto Netuno.
-- Un editor de código está abierto en `/apps/demostracion/config/development.json`.
+- Tienes un editor de código abierto en `/apps/demo/config/development.json`.
 - Podrás reiniciar el servidor después de guardar los cambios.
 
 ## Configuración de idiomas
@@ -25,28 +25,28 @@ Antes de editar la configuración, confirma estos puntos:
 
 En el archivo de configuración, localiza los campos `language` y `locale` para cambiar el idioma de la aplicación.
 
-```json title="/apps/demostracion/config/development.json"
+```json title="/apps/demo/config/development.json"
 {
   "language": "pt_PT",
   "locale": "pt_PT",
 }
 ```
 
-Define los valores de acuerdo con el idioma deseado:
+Define los valores según el idioma deseado:
 
 - **Portugués**: `pt_PT` o `pt_BR`
 - **Inglés**: `en_GB` o `en_US`
 
 ### 2. Base de datos
 
-Localiza el objeto **"db"** y, a continuación, las configuraciones de **"default"**.
+Localiza el objeto **"db"** y, a continuación, la configuración de **"default"**.
 
 Cambia el campo **"name"** para definir la base de datos correspondiente:
 
-- `demostracion_pt`: base de datos en portugués.
-- `demostracion_en`: base de datos en inglés.
+- `demo_pt`: base de datos en portugués.
+- `demo_en`: base de datos en inglés.
 
-```json title="/apps/demostracion/config/development.json"
+```json title="/apps/demo/config/development.json"
 {
  ...
 "db": {
@@ -55,7 +55,7 @@ Cambia el campo **"name"** para definir la base de datos correspondiente:
             "engine": "h2",
             "port": "",
             "host": "",
-            "name": "demostracion_pt",
+            "name": "demo_pt",
             "username": "sa"
         }
     },
@@ -63,15 +63,15 @@ Cambia el campo **"name"** para definir la base de datos correspondiente:
 }
 ```
 
-### 3. Habilitar múltiples comandos
+### 3. Habilitar varios comandos
 
-Netuno permite ejecutar múltiples comandos simultáneamente en la inicialización del servidor, mostrando las salidas en la misma consola.
+Netuno permite ejecutar varios comandos simultáneamente al iniciar el servidor, mostrando las salidas en la misma consola.
 
-Por defecto, la aplicación **Demostración** trae el comando `bun run watch` configurado, pero desactivado. Este comando compila automáticamente cualquier cambio realizado en los archivos de código del backoffice.
+De forma predeterminada, la aplicación **Demo** incluye el comando `bun run watch` configurado, pero desactivado. Este comando compila automáticamente cualquier cambio realizado en los archivos de código del backoffice.
 
-Para activarlo, localiza en el array **"commands"** y cambia el valor del campo **enabled** de false a **true**.
+Para activarlo, localiza el array **"commands"** y cambia el valor del campo **enabled** de false a **true**.
  
-```json title="/apps/demostracion/config/development.json"
+```json title="/apps/demo/config/development.json"
 "commands": [
         {
             "enabled": true,
@@ -99,7 +99,7 @@ Después de guardar el archivo de configuración, reinicia el servidor Netuno pa
 
 Después de reiniciar el servidor, confirma los siguientes puntos:
 
-- La aplicación Demostración está en el idioma configurado.
+- La aplicación Demo está en el idioma configurado.
 - La consola muestra la ejecución del comando `bun run watch`, si está habilitado.
 
 ## Próximos pasos

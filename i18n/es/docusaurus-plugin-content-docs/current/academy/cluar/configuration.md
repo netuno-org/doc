@@ -7,13 +7,13 @@ sidebar_label: Configuración
 
 > El proceso siguiente está orientado a entornos de desarrollo Linux.
 
-## 1. Nombre de la app
+## 1. Nombre de la aplicación
 
-Renombra la carpeta del proyecto (el nombre de la app) usando solo letras minúsculas, números y guion bajo.
+Cambia el nombre de la carpeta del proyecto (el nombre de la aplicación) usando solo letras minúsculas, números y guion bajo.
 
-## 2. Fichero de configuración
+## 2. Archivo de configuración
 
-Copia el fichero de configuración de ejemplo, desde la raíz de la app:
+Copia el archivo de configuración de ejemplo desde la raíz de la aplicación:
 
 ```
 cp config/sample.json config/_development.json
@@ -25,19 +25,19 @@ Para un entorno de producción, usa en su lugar:
 cp config/sample.json config/_production.json
 ```
 
-Después, cambia la propiedad `name` en la raíz del JSON por el nombre de la app elegido en el paso 1.
+Después, cambia la propiedad `name` en la raíz del JSON por el nombre de la aplicación elegido en el paso 1.
 
-> Los ficheros `config/_development.js` y `config/_production.js` ya existen en el proyecto y sirven para configuraciones dinámicas/programáticas — normalmente no necesitas tocarlos; el que se edita es el `.json` correspondiente.
+> Los archivos `config/_development.js` y `config/_production.js` ya existen en el proyecto y sirven para configuraciones dinámicas/programáticas; normalmente no necesitas tocarlos; lo que se edita es el `.json` correspondiente.
 
 ## 3. Base de datos
 
 CLUAR necesita una conexión a una base de datos PostgreSQL. [Aprende a configurar aquí](https://doc.netuno.org/pt/docs/academy/server/database/psql/).
 
-En `config/_development.json` (o `_production.json`), localiza `db.default` y sustitúyelo por los datos de tu base de datos:
+En `config/_development.json` (o `_production.json`), localiza `db.default` y sustituye por los datos de tu base de datos:
 
 ```json
 "db": {"default": {
-    "password": "Tu-SeCr3t0-D3-BD-Aqu1",
+    "password": "Your-DB-SeCr3t-Her3",
     "engine": "pg",
     "port": "5432",
     "host": "localhost",
@@ -54,7 +54,7 @@ En `auth.jwt.secret`, define un secreto aleatorio de **32 caracteres**, usado pa
 "auth": {
     "jwt": {
         "enabled": true,
-        "secret": "EsteSecretoDebeTener32Caracteres!!!",
+        "secret": "ThisSecretMustContains32Chars!!!",
         "expires": {
             "access": 1440,
             "refresh": 1440
@@ -67,9 +67,9 @@ En `auth.jwt.secret`, define un secreto aleatorio de **32 caracteres**, usado pa
 
 ## 5. Altcha (alternativa a reCAPTCHA)
 
-CLUAR es compatible con [Altcha](https://altcha.org/) — una alternativa a Google reCAPTCHA basada en prueba de trabajo (*proof-of-work*), sin depender de servicios externos ni recopilar datos del visitante. Se usa en el inicio de sesión y en el registro de usuarios.
+CLUAR admite [Altcha](https://altcha.org/), una alternativa a Google reCAPTCHA basada en prueba de trabajo (*proof-of-work*), sin depender de servicios externos ni recopilar datos del visitante. Se usa en el inicio de sesión y en el registro de usuarios.
 
-Existen dos interruptores, en lugares diferentes del `.json`:
+Hay dos interruptores, en lugares diferentes del `.json`:
 
 ```json
 "auth": {
@@ -104,7 +104,7 @@ Existen dos interruptores, en lugares diferentes del `.json`:
 
 - `settings.cluar.website.auth.altcha` — refleja la misma opción del lado del sitio web: controla si el widget de Altcha se muestra en el formulario de inicio de sesión/registro del sitio.
 
-> Para que Altcha funcione, activa `enabled: true` **en los dos lados** — el servidor necesita validar, y el sitio web necesita mostrar el widget.
+> Para que Altcha funcione, activa `enabled: true` **en los dos lados**: el servidor necesita validar y el sitio web necesita mostrar el widget.
 
 ## 6. Definiciones de CLUAR
 
@@ -142,9 +142,9 @@ En `settings.cluar`, ajusta la configuración del sitio web:
 - `website.auth.providers` — activa/desactiva métodos de inicio de sesión social (Discord, Facebook, GitHub, Google).
 - `uglifyjs` — controla si el código del sitio web se minifica.
 
-## 7. Arranque automático del sitio web (opcional)
+## 7. Inicio automático del sitio web (opcional)
 
-El sitio web puede arrancar automáticamente junto con el servidor Netuno, a través de la lista `commands`:
+El sitio web puede iniciarse automáticamente junto con el servidor Netuno mediante la lista `commands`:
 
 ```json
 "commands": [
@@ -157,8 +157,8 @@ El sitio web puede arrancar automáticamente junto con el servidor Netuno, a tra
 ]
 ```
 
-Basta con poner `enabled` como `true` en la entrada con `"path": "website"`. Así, al ejecutar `./netuno server app=cluar`, el sitio web arranca junto sin que necesites iniciarlo manualmente en otra terminal.
+Basta con poner `enabled` como `true` en la entrada con `"path": "website"`. Así, al ejecutar `./netuno server app=cluar`, el sitio web se inicia junto sin que necesites iniciarlo manualmente en otra terminal.
 
 ## Siguiente paso
 
-Con la app configurada, continúa con [Ejecución](/docs/academy/cluar/execution).
+Con la aplicación configurada, continúa con [Ejecución](/docs/academy/cluar/execution).

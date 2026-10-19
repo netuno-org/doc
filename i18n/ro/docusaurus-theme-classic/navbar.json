@@ -4,8 +4,8 @@
     "description": "Titlul din bara de navigare"
   },
   "logo.alt": {
-    "message": "Documentația Netuno",
-    "description": "Textul alternativ al logo-ului din bara de navigare"
+    "message": "Documentație Netuno",
+    "description": "Textul alternativ al siglei din bara de navigare"
   },
   "item.label.Get Started": {
     "message": "Începeți",

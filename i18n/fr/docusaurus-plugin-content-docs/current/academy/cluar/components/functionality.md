@@ -5,7 +5,7 @@ title: Fonctionnalité
 sidebar_label: Fonctionnalité
 ---
 
-Les fonctionnalités concrètes disponibles à inclure dans une page, comme les formulaires et les cartes.
+Les fonctionnalités concrètes disponibles à inclure dans une page, comme des formulaires et des cartes.
 
 ## Introduction
 
@@ -15,7 +15,7 @@ Elle suit le même mécanisme commun à tous les composants, décrit dans [Vue d
 
 ## Champs
 
-Outre les [champs communs](/docs/academy/cluar/components/overview#campos-comuns) (Type, Ordre, Mode d'édition, Inverser le fond, Actions), la Fonctionnalité dispose de :
+En plus des [champs communs](/docs/academy/cluar/components/overview#champs-communs) (Type, Ordre, Mode d'édition, Inverser le fond, Actions), la Fonctionnalité a :
 
 | Champ | Description |
 |---|---|
@@ -27,11 +27,11 @@ Outre les [champs communs](/docs/academy/cluar/components/overview#campos-comuns
 
 ### Formulaire de contact (`ContactForm`)
 
-Présente un formulaire de contact (nom, e-mail, message), protégé par reCAPTCHA. Lorsqu'il est soumis, il envoie les données au service `contact` sur le serveur, qui enregistre dans l'entité `contact` (visible dans le backoffice) et permet de configurer des alertes par e-mail.
+Présente un formulaire de contact (nom, e-mail, message), protégé par reCAPTCHA. Lorsqu'il est soumis, il envoie les données au service `contact` sur le serveur, qui les enregistre dans l'entité `contact` (visible dans le backoffice) et permet de configurer des alertes par e-mail.
 
 ### Carte de contact (`ContactMap`)
 
-Présente une carte interactive, en utilisant [Mapbox](https://www.mapbox.com/). Utilise la configuration `settings.cluar.website.mapbox` (voir [Configuration](/docs/academy/cluar/configuration)) — notamment le `accessToken` (obligatoire pour que la carte fonctionne) et l'option `dark` (thème clair ou sombre de la carte).
+Présente une carte interactive, utilisant [Mapbox](https://www.mapbox.com/). Utilise la configuration `settings.cluar.website.mapbox` (voir [Configuration](/docs/academy/cluar/configuration)) — notamment l'`accessToken` (obligatoire pour que la carte fonctionne) et l'option `dark` (thème clair ou sombre de la carte).
 
 ## Étape suivante
 

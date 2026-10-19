@@ -4,7 +4,7 @@ title: Servicios
 sidebar_label: Servicios
 ---
 
-Los servicios Web REST en Netuno son scripts en JavaScript ejecutados en el servidor (Back-end) que permiten interactuar directamente con la base de datos de la aplicación. A través de ellos, es posible:
+Los servicios web REST en Netuno son scripts en JavaScript ejecutados en el servidor (Back-end) que permiten interactuar directamente con la base de datos de la aplicación. A través de ellos, es posible:
 
 * Leer datos de la base de datos 
 * Insertar nuevos registros 
@@ -17,7 +17,7 @@ Cada servicio se accede a través de una URL (endpoint), lo que permite que inte
 
 #### Requisitos previos
 
-* Tener nociones básicas en _**JavaScript, React.js**_ y _**HTML**_.
+* Tener nociones básicas de _**JavaScript, React.js**_ y _**HTML**_.
 * Familiaridad con SQL y con la estructura de carpetas de una aplicación. 
 * Es recomendable tener conocimientos básicos en **Formularios**, **Campos** y **Relaciones**. 
 
@@ -31,14 +31,14 @@ Si tiene dudas en estos pasos, consulte:
 
 ## Primeros pasos  
 
-Utilizaremos una aplicación de registro de horas de trabajo, cuyo objetivo es calcular el total de horas realizadas por cada trabajador.
+Utilizaremos una aplicación de registro de horas de trabajo, donde el objetivo es calcular el total de horas realizadas por cada trabajador.
 
 **Estructura de la aplicación:**
 
-![estructura-aplicacion.png](/docs/assets/academy/explore/services-web-rest/application-structure-pt.png)
+![estructura-aplicacion-es.png](/docs/assets/academy/explore/services-web-rest/application-structure-pt.png)
 
 :::note
-El campo **id** es creado y gestionado automáticamente por Netuno en todas las tablas, sin necesidad de definirlo manualmente.
+El campo **id** se crea y gestiona automáticamente por Netuno en todas las tablas, por lo que no es necesario definirlo manualmente.
 :::
 
 Los servicios de una aplicación Netuno se encuentran en la carpeta **server/services/**.
@@ -66,7 +66,7 @@ Dentro de la carpeta **server/services/**, cree un nuevo archivo que definirá l
 
 ## Consultar la base de datos
 
-Netuno proporciona el objeto global **_db** para interactuar nativamente con la base de datos. 
+Netuno proporciona el objeto global **_db** para interactuar de forma nativa con la base de datos. 
 
 Para ejecutar una consulta SQL, utilizamos el método `_db.query()`.
 
@@ -78,7 +78,7 @@ const dbRegistros = _db.query(`
         trabajador.nombre, SUM(DATEDIFF(HOUR, registro.inicio, registro.fin)) AS total
     FROM trabajador INNER JOIN registro
         ON trabajador.id = registro.trabajador_id
-    WHERE trabajador.active = true AND registro.active = true
+    WHERE trabajador.activo = true AND registro.activo = true
     GROUP BY trabajador.nombre
     ORDER BY total ASC
 `);
@@ -86,13 +86,13 @@ const dbRegistros = _db.query(`
 
 :::note Entendiendo la consulta SQL
 
-* **INNER JOIN**: Une las tablas trabajador y registro utilizando la clave externa trabajador_id.
+* **INNER JOIN**: Une las tablas trabajador y registro utilizando la clave foránea trabajador_id.
 
-* **DATEDIFF(HOUR, inicio, fin)**: Calcula la diferencia en horas entre la entrada y la salida.
+* **DATEDIFF(HOUR, inicio, fin)**: Calcula la diferencia en horas entre el inicio y el fin.
 
 * **SUM(...) AS total**: Suma todas las horas procesadas de cada trabajador.
 
-* **WHERE ... active = true**: Filtra la búsqueda para considerar solo trabajadores y registros que no han sido eliminados (activos).
+* **WHERE ... activo = true**: Filtra la búsqueda para considerar solo trabajadores y registros que no han sido eliminados (activos).
 
 * **GROUP BY trabajador.nombre**: Agrupa las sumas por el nombre de cada trabajador.
 
@@ -103,7 +103,7 @@ const dbRegistros = _db.query(`
 
 El método `_db.query()` devuelve los datos en un formato interno de Netuno. 
 
-Para enviar una respuesta limpia en formato JSON, es necesario transformar esos datos utilizando los objetos globales **_val.list()** (para arrays) y **_val.map()** (para objetos).
+Para enviar una respuesta limpia en formato JSON, es necesario transformar estos datos utilizando los objetos globales **_val.list()** (para arrays) y **_val.map()** (para objetos).
 
 ```javascript
 // Crea una lista vacía para almacenar los datos procesados
@@ -123,10 +123,10 @@ for (const dbRegistro of dbRegistros) {
 | Recurso | Descripción |
 |---------|-----------|
 | **_val.list()** | Crea una lista (equivalente a un Array en JS). |
-| **_val.map()** | Crea un objeto de clave-valor (equivalente a un Object o JSON). |
+| **_val.map()** | Crea un objeto clave-valor (equivalente a un Object o JSON). |
 | **.add(...)** | Añade un nuevo elemento al final de la lista. |
 | **.set("clave", valor)** | Define una nueva propiedad y su respectivo valor en el mapa. |
-| **.getString("columna")** | Extrae el valor de la columna especificada formateado como Texto (String). |
+| **.getString("columna")** | Extrae el valor de la columna especificada formateado como texto (String). |
 | **.getInt("columna")** | Extrae el valor de la columna especificada formateado como número entero (Integer). |
 
 ## Retorno de los datos 
@@ -142,7 +142,7 @@ _out.json(lista);
 
 En esta etapa final, consolidamos todos los conceptos aprendidos para crear un servicio funcional. 
 
-El código completo a continuación realiza una consulta a la base de datos para calcular el total de horas trabajadas y devuelve esos datos formateados en JSON.
+El código completo a continuación realiza una consulta a la base de datos para calcular el total de horas trabajadas y devuelve estos datos formateados en JSON.
 
 ```javascript
 // 1. Consulta el total de horas realizadas por cada trabajador activo
@@ -151,7 +151,7 @@ const dbRegistros = _db.query(`
         trabajador.nombre, SUM(DATEDIFF(HOUR, registro.inicio, registro.fin)) AS total
     FROM trabajador INNER JOIN registro
         ON trabajador.id = registro.trabajador_id
-    WHERE trabajador.active = true AND registro.active = true
+    WHERE trabajador.activo = true AND registro.activo = true
     GROUP BY trabajador.nombre
     ORDER BY total ASC
 `);
@@ -174,7 +174,7 @@ _out.json(lista);
 
 ### Acceder al servicio
 
-Después de crear y configurar su servicio en Netuno, estará listo para ser utilizado y probado directamente desde el navegador o para integrarlo con otras aplicaciones.
+Después de crear y configurar su servicio en Netuno, estará listo para utilizarse y probarse directamente desde el navegador o integrarlo con otras aplicaciones.
 
 #### Formas de acceso
 
@@ -184,11 +184,11 @@ El servicio se puede consumir utilizando:
 
 - **Clientes HTTP:** Herramientas como Postman, Insomnia o Thunder Client.
 
-- **Front-end:** A través de peticiones fetch o bibliotecas como Axios.
+- **Front-end:** Mediante peticiones fetch o bibliotecas como Axios.
 
 #### Estructura de la URL
 
-Por defecto, Netuno mapea automáticamente los archivos creados en la carpeta de servicios a direcciones web.
+Por defecto, Netuno asigna automáticamente los archivos creados en la carpeta de servicios a direcciones web.
 
 Si se está ejecutando localmente en el puerto predeterminado, la dirección seguirá este modelo:
 
@@ -220,7 +220,7 @@ Si existen datos compatibles en su base de datos, la respuesta devuelta por el s
         "total": 35
     },
     {
-        "nombre": "María Oliveira",
+        "nombre": "Maria Oliveira",
         "total": 45
     }
 ]
@@ -238,7 +238,7 @@ Estos objetos son instancias preconfiguradas y listas para usar en sus scripts d
 | **_val** | Creación y manipulación de estructuras de datos (list, map). |
 | **_out** | Envío de respuestas al usuario (JSON, HTML...). |
 | **_req** | Acceso a los parámetros enviados en la petición del usuario (GET, POST). |
-| **_log**|Registro de mensajes de error o depuración en la consola del servidor.|
+| **_log**| Registro de mensajes de error o depuración en la consola del servidor.|
 
 
 

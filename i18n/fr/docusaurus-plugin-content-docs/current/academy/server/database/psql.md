@@ -6,7 +6,7 @@ sidebar_label: PostgreSQL
 
 ## Introduction
 
-Le <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> est l'une des bases de données relationnelles-objet open source les plus utilisées.
+<a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> est l'une des bases de données relationnelles-objet open source les plus utilisées.
 
 ## Installation
 
@@ -64,7 +64,7 @@ create database bdd_app with owner utilisateur_app;
 
 ## Configurer la base de données
 
-Connectez-vous à la nouvelle base de données créée en utilisant l'application cliente PostgreSQL.
+Connectez-vous à la nouvelle base de données créée en utilisant l'application client PostgreSQL.
 
 #### Ubuntu
 

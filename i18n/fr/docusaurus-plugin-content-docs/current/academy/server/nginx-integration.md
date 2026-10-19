@@ -4,15 +4,15 @@ title: Intégration avec NGINX
 sidebar_label: Intégration avec NGINX
 ---
 
-NGINX est un puissant serveur web qui garantit hautes performances et polyvalence.
+NGINX est un serveur web puissant qui garantit des performances élevées et une grande polyvalence.
 
-Avec l'intégration de NGINX, nous pouvons bénéficier des techniques offertes pour résoudre des questions de répartition de charge, de proxy inverse, de cache, de sécurité, entre autres.
+Avec l'intégration de NGINX, nous pouvons bénéficier des techniques offertes pour résoudre des questions d'équilibrage de charge, de proxy inverse, de cache, de sécurité, entre autres.
 
-![integration-nginx1.png](/docs/assets/integracao-nginx1.png)
+![intégration-nginx1.png](/docs/assets/integracao-nginx1.png)
 
 ## Installer NGINX
 
-Pour installer NGINX, c'est très simple, sur toute distribution Linux, NGINX devrait être disponible dans vos paquets.
+Pour installer NGINX, c'est très simple : dans n'importe quelle distribution Linux, NGINX devrait être disponible dans vos paquets.
 
 Sur les distributions Ubuntu ou Debian :
 
@@ -32,12 +32,12 @@ Pour Windows, vous pouvez télécharger l'installateur à l'adresse : http://ngi
 
 ## Configuration
 
-Pour cet exemple, nous supposons que Netuno est déjà installé et en cours d'exécution dans `/srv/netuno`.
+Pour cet exemple, nous supposons que vous avez déjà Netuno installé et en cours d'exécution dans `/srv/netuno`.
 
 Pour configurer un nouveau site dans NGINX, naviguez jusqu'au dossier de configuration :
 
-* Les distributions Linux le placent généralement dans : `/etc/nginx`
-* MacOS X avec brew : `/usr/local/etc/nginx`
+* Sur les distributions Linux, il se trouve généralement dans : `/etc/nginx`
+* Sur MacOS X avec brew : `/usr/local/etc/nginx`
 
 Créez un nouveau fichier de configuration pour le nouveau site dans `sites-available/netuno`.
 
@@ -65,14 +65,14 @@ server {
 
 Vous pouvez modifier la ligne où il est indiqué `listen 127.0.0.1:80` pour votre IP externe et le port correspondant.
 
-Et là où se trouve `nom-de-votre-app-netuno`, il doit s'agir du nom de votre app, par exemple `monapp`.
+Et là où se trouve `nom-de-votre-app-netuno`, il doit s'agir du nom de votre application, par exemple `monapp`.
 
 > Si le nom de l'application contient un `_`, comme `mon_app`, c'est parce que Netuno n'autorise pas le `-` dans le nom des applications.
-> Donc, comme les adresses de domaine ne prennent pas en charge le `_`, vous devez le remplacer par `-`, que Netuno convertit automatiquement en `_` et trouve l'app correspondante.
+> Donc, comme les adresses de domaine ne prennent pas en charge le `_`, vous devez le remplacer par `-`, que Netuno convertit automatiquement en `_` et trouve l'application correspondante.
 
-Le `.local.netu.no` est un raccourci pour `localhost`, sinon `.localhost` peut être utilisé.
+Le `.local.netu.no` est un raccourci pour `localhost`, vous pouvez également utiliser `.localhost`.
 
-C'est parce que Netuno recherche automatiquement une app dont le nom correspond au sous-domaine ; il est donc très important, dans le `Host` qui arrive à Netuno, d'indiquer le nom de l'application en préfixe.
+En effet, Netuno recherche automatiquement une application dont le nom correspond au sous-domaine ; il est donc très important, dans le `Host` qui arrive à Netuno, d'indiquer le nom de l'application en préfixe.
 
 Dans cet exemple, nous supposons que Netuno est en cours d'exécution sur le port `9000` et dans le chemin `/src/netuno` ; vérifiez cette information et adaptez-la si nécessaire.
 
@@ -84,7 +84,7 @@ Par conséquent, les seuls dossiers exposés directement sont le dossier `core/w
 
 Maintenant, il faut créer un lien symbolique vers notre nouveau fichier de configuration pour activer notre nouveau site.
 
-C'est parce que la méthodologie de configuration de sites de NGINX sous Linux consiste à placer les fichiers de configuration dans le dossier `sites-available`, mais ce qui est actif est défini dans le dossier `sites-enabled`.
+En effet, la méthodologie de configuration de sites de NGINX sous Linux consiste à placer les fichiers de configuration dans le dossier `sites-available`, mais ce qui est actif est défini dans le dossier `sites-enabled`.
 
 Ainsi, la création du lien symbolique est importante pour éviter la duplication de fichiers et garantir que toute modification soit effectuée dans un seul fichier.
 
@@ -96,7 +96,7 @@ ln -s /etc/nginx/sites-available/netuno /etc/nginx/sites-enabled/netuno
 
 ## Rechargement des configurations de NGINX
 
-Rappelez-vous que, pour que cette configuration prenne effet, il est nécessaire de recharger les configurations de NGINX.
+Rappelez-vous que pour que cette configuration prenne effet, il est nécessaire de recharger les configurations de NGINX.
 
 Recharger :
 
@@ -117,7 +117,7 @@ Ou de la manière la plus élégante :
 service nginx restart
 ```
 
-Ou encore, arrêtez complètement le serveur et redémarrez-le :
+Ou encore arrêtez complètement le serveur et redémarrez-le :
 
 ```shell
 service nginx stop
@@ -134,16 +134,16 @@ Les fichiers de logs de NGINX se trouvent dans le dossier `/var/log/nginx`.
 
 ## Adresse locale fictive
 
-Netuno résout quelle application traite la requête (request) en fonction du préfixe de l'adresse qui figure dans le `Host` de l'en-tête HTTP, le préfixe devant contenir le nom exact de l'application Netuno.
+Netuno détermine quelle application traite la requête (request) en fonction du préfixe de l'adresse présente dans le `Host` de l'en-tête HTTP ; le préfixe doit contenir le nom exact de l'application Netuno.
 
-Alors il est possible d'utiliser une adresse fictive juste pour indiquer à Netuno qu'il doit utiliser la bonne application.
+Il est donc possible d'utiliser une adresse fictive uniquement pour indiquer à Netuno qu'il doit utiliser la bonne application.
 
-Nous avons `mon-app.local.netu.no`, qui résout toujours l'IP local.
+Nous avons `mon-app.local.netu.no`, qui résout toujours vers l'IP locale.
 
 > L'application dans Netuno doit être `mon_app`, car Netuno n'autorise pas le `-` dans le nom des applications,
-> et comme le domaine ne prend pas en charge `_`, il faut le remplacer par `-`, que Netuno convertit automatiquement en `_`.
+> et comme le domaine ne prend pas en charge le `_`, il doit être remplacé par `-`, que Netuno convertit automatiquement en `_`.
 
-Alternativement, on peut créer une adresse locale, comme par exemple `mon-app.localhost`, auquel cas il faut enregistrer cette adresse comme hôte local, vous devrez forcer la résolution de l'adresse dans votre fichier hosts, sous Linux modifiez le fichier :
+Alternativement, vous pouvez créer une adresse locale, par exemple `mon-app.localhost`, auquel cas il faut enregistrer cette adresse comme hôte local ; vous devez forcer la résolution de l'adresse dans votre fichier hosts. Sous Linux, éditez le fichier :
 
 ```plaintext
 /etc/hosts
@@ -157,7 +157,7 @@ Et ajoutez la ligne :
 
 Maintenant, cette adresse locale peut être utilisée dans NGINX.
 
-Si vous êtes dans un environnement de développement local, vérifiez simplement dans votre navigateur via l'adresse :
+Si vous êtes dans un environnement de développement local, il suffit de vérifier dans votre navigateur via l'adresse :
 
 - Via NGINX :
 
@@ -165,13 +165,13 @@ Si vous êtes dans un environnement de développement local, vérifiez simplemen
 http://mon-app.localhost
 ```
 
-- Directement vers Netuno :
+- Directement à Netuno :
 
 ```plaintext
 http://mon-app.localhost:9000
 ```
 
-Si vous êtes sur un serveur ou un conteneur via terminal, utilisez alors la commande cURL, par exemple :
+Si vous êtes sur un serveur ou dans un conteneur via terminal, utilisez alors la commande cURL, par exemple :
 
 - Via NGINX :
 
@@ -179,7 +179,7 @@ Si vous êtes sur un serveur ou un conteneur via terminal, utilisez alors la com
 curl -v http://mon-app.localhost:9000
 ```
 
-- Directement vers Netuno :
+- Directement à Netuno :
 
 ```plaintext
 curl -v http://mon-app.localhost:9000

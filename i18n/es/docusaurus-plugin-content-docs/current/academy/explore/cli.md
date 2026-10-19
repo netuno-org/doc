@@ -11,11 +11,11 @@ La interfaz de línea de comandos de Netuno es la herramienta principal para ges
 
 - **Terminal:** Debes tener un terminal (Símbolo del sistema, PowerShell o Bash) abierto en la carpeta raíz donde se instaló Netuno.
 
-Estos son los comandos iniciales para verificar si tu entorno está listo para su uso.
+Estos son los comandos iniciales para verificar si tu entorno está listo para usar.
 
 | OPCIÓN    | DESCRIPCIÓN    |
 |----------|--------------|
-| `help` | Permite visualizar todos los comandos disponibles de Netuno. |
+| `help` | Permite visualizar todos los comandos disponibles en Netuno. |
 | `version` | Permite visualizar la versión actual de Netuno. |
 
 #### Listar comandos disponibles
@@ -25,7 +25,7 @@ Si tienes dudas sobre qué operaciones puedes realizar, usa el comando de ayuda.
 ```shell
 ./netuno help
 ```
-#### Visualizar la versión de Netuno
+#### Ver la versión de Netuno
 
 Es fundamental saber qué versión estás utilizando para garantizar la compatibilidad con scripts y módulos específicos.
 
@@ -35,19 +35,19 @@ Es fundamental saber qué versión estás utilizando para garantizar la compatib
 
 ## Instalar
 
-Antes de iniciar el desarrollo, es necesario instalar el motor de Netuno en tu entorno. Para más información, accede a nuestra página de [Instalación](/docs/get-started/installation).
+Antes de comenzar el desarrollo, es necesario instalar el motor de Netuno en tu entorno. Para más información, accede a nuestra página de [Instalación](/docs/get-started/installation).
 
 Esta sección detalla los parámetros que se pueden utilizar durante el proceso de instalación para automatizar u optimizar el proceso.
 
 | OPCIÓN | DESCRIPCIÓN |
 |----------|--------------|
 | `checksum` | Actualiza el código de verificación (checksum) de todos los archivos del paquete instalado. |
-| `force` | Fuerza la sustitución de todos los archivos, incluso si existen cambios locales.|
+| `force` | Fuerza la sustitución de todos los archivos, aunque existan cambios locales.|
 | `graal=true/false` | Define el uso de GraalVM para obtener un mayor rendimiento en la ejecución de las aplicaciones. |
 | `path=[Directorio]`| Define manualmente la ruta (carpeta) donde se instalará Netuno.|
 | `remove` | Elimina completamente todos los archivos relacionados con Netuno del sistema.|
 | `version=[versión]`| Selecciona una versión específica para instalar. Usa la más reciente para la versión de desarrollo.|
-| `yes`| Responde automáticamente "SÍ" a todas las confirmaciones, ignorando avisos sobre pérdida de datos.|
+| `yes`| Responde automáticamente "SÍ" a todas las confirmaciones, ignorando los avisos sobre pérdida de datos.|
 
 #### Ejemplo de cómo actualizar el checksum:
 
@@ -55,7 +55,7 @@ Esta sección detalla los parámetros que se pueden utilizar durante el proceso 
 ./netuno install checksum
 ```
 
-#### Ejemplo de cómo forzar todos los cambios locales:
+#### Ejemplo de cómo forzar la sustitución de los cambios locales:
 
 ```shell
 ./netuno install force
@@ -80,7 +80,7 @@ Esta sección detalla los parámetros que se pueden utilizar durante el proceso 
 ./netuno install remove
 ```
 
-#### Ejemplo de cómo seleccionar la versión de Netuno que se debe instalar:
+#### Ejemplo de cómo seleccionar la versión de Netuno que debe instalarse:
 
 ```shell
 ./netuno install version='latest'
@@ -93,7 +93,7 @@ Esta sección detalla los parámetros que se pueden utilizar durante el proceso 
 
 ## Servidor
 
-Después de completar la instalación, inicia el servidor para empezar a desarrollar tus aplicaciones.
+Después de completar la instalación, inicia el servidor para comenzar a desarrollar tus aplicaciones.
 
 Para iniciar el servidor con la configuración predeterminada, ejecuta el comando siguiente en la carpeta raíz de Netuno:
 
@@ -101,19 +101,19 @@ Para iniciar el servidor con la configuración predeterminada, ejecuta el comand
 ./netuno server
 ```
 
-> Por defecto, el servidor utiliza el puerto 9000. Tan pronto como el terminal indique que el sistema está listo, podrás acceder al panel de gestión a través del enlace: http://localhost:9000/
+> Por defecto, el servidor utiliza el puerto 9000. En cuanto el terminal indique que el sistema está listo, podrás acceder al panel de gestión a través del enlace: http://localhost:9000/
 
 Esta sección detalla los parámetros que se pueden utilizar durante el proceso de inicio del servidor.
 
 OPCIÓN | DESCRIPCIÓN |
 |----------|--------------|
-| `app=[nombre_de_la_app]` | Define específicamente qué aplicación debe iniciarse |
+| `app=[nombre_de_la_aplicación]` | Define específicamente qué aplicación debe iniciarse |
 | `host=[IP/nombre del host]` | Permite cambiar el nombre del host de Netuno |
 | `launch=true/false` | Define si Netuno debe abrir automáticamente el navegador |
-| `npm` | Ejecuta el comando 'npm watch' automáticamente para compilar el frontend de la App en tiempo real |
+| `npm` | Ejecuta el comando 'npm watch' automáticamente para compilar el frontend de la app en tiempo real |
 | `port=[número]` | Define el puerto de inicio del servidor |
 | `secret=[contraseña]` | Define una contraseña de seguridad para permitir el acceso a la gestión remota del servidor |
-| `web=[carpeta]` | Cambia la carpeta raíz del proyecto (web home) predefinida |
+| `web=[carpeta]` | Cambia la carpeta raíz predefinida del proyecto (web home) |
 
 Por defecto, Netuno utiliza la carpeta **'webapp'** para almacenar todos los archivos esenciales para su funcionamiento.
 
@@ -131,13 +131,13 @@ Por defecto, Netuno utiliza la carpeta **'webapp'** para almacenar todos los arc
 ./netuno server host=localhost
 ```
 
-#### Ejemplo de cómo definir si Netuno inicia el navegador automáticamente:
+#### Ejemplo de cómo definir si Netuno inicializa el navegador automáticamente:
 
 ```shell
 ./netuno server launch=false
 ```
 
->Por defecto, Netuno abre el navegador e inicia el enlace http://localhost:9000.
+>Por defecto, Netuno abre el navegador e inicializa el enlace http://localhost:9000.
 
 #### Ejemplo de cómo ejecutar npm para construir automáticamente el frontend
 
@@ -165,7 +165,7 @@ Por defecto, Netuno utiliza la carpeta **'webapp'** para almacenar todos los arc
 
 ## Licencia
 
-Para iniciar el desarrollo con Netuno, es necesario registrar tu entorno.
+Para comenzar el desarrollo con Netuno, es necesario registrar tu entorno.
 
 Para gestionar tu licencia, utiliza el comando base:
 
@@ -212,15 +212,15 @@ Con el servidor configurado y la licencia activa, puedes ampliar tu ecosistema c
 
 Los archivos generados se organizarán automáticamente dentro de la estructura de carpetas de Netuno.
 
-Para acceder o editar los archivos de tu aplicación, navega por la siguiente ruta desde la raíz del sistema: **webapp / apps / [nombre_de_tu_app]**
+Para acceder o editar los archivos de tu aplicación, navega por la siguiente ruta desde la raíz del sistema: **webapp / apps / [nombre_de_tu_aplicación]**
 
-#### Estructura de carpetas
+#### Estructura de Carpetas
 
 - **webapp**: Es la carpeta raíz que contiene todos los archivos esenciales para el funcionamiento de Netuno.
 
 - **apps**: Carpeta específica donde se almacenan todas las aplicaciones desarrolladas o en demostración.
 
-- **[nombre_de_tu_app]**: La carpeta exclusiva de la aplicación que acabas de crear.
+- **[nombre_de_tu_aplicación]**: La carpeta exclusiva de la aplicación que acabas de crear.
 
 Por defecto, Netuno tiene una aplicación de demostración que se muestra cuando se inicia el servidor Netuno.
 
@@ -242,7 +242,7 @@ Por defecto, Netuno tiene una aplicación de demostración que se muestra cuando
 ./netuno app database=empleado
 ```
 
-> El nombre de la base de datos puede contener números y letras; si el nombre tiene más de una palabra, debe separarse por "_", de la siguiente forma.
+> El nombre de la base de datos puede contener números y letras; si el nombre tiene más de una palabra, debe separarse con "_", de la siguiente manera.
 >
 > **Ejemplo:** empleado_db
 
@@ -277,7 +277,7 @@ Existen los siguientes idiomas:
 #### Ejemplo de cómo crear una aplicación o reconstruir una aplicación existente:
 
 ```shell
-./netuno app name=demo
+./netuno app name=demostracion
 ```
 
 #### Ejemplo de cómo definir la contraseña de la base de datos:

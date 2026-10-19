@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Netuno",
+    "description": "Der Titel in der Navigationsleiste"
+  },
+  "logo.alt": {
+    "message": "Netuno-Dokumentation",
+    "description": "Der Alternativtext des Logos in der Navigationsleiste"
+  },
+  "item.label.Get Started": {
+    "message": "Loslegen",
+    "description": "Navigationsleisten-Eintrag mit der Bezeichnung „Loslegen“"
+  },
+  "item.label.Academy": {
+    "message": "Akademie",
+    "description": "Navigationsleisten-Eintrag mit der Bezeichnung „Akademie“"
+  },
+  "item.label.Library": {
+    "message": "Bibliothek",
+    "description": "Navigationsleisten-Eintrag mit der Bezeichnung „Bibliothek“"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navigationsleisten-Eintrag mit der Bezeichnung „GitHub“"
+  }
+}

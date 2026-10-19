@@ -52,15 +52,15 @@ Executați următoarea comandă în clientul PostgreSQL:
 create user utilizator_aplicatie with password 'S3cR3t';
 ```
 
-## Creare bază de date
+## Crearea bazei de date
 
 Executați următoarea comandă în clientul PostgreSQL:
 
 ```sql
-create database baza_de_date_aplicatie with owner utilizator_aplicatie;
+create database baza_aplicatie with owner utilizator_aplicatie;
 ```
 
-> Pentru a ieși, folosiți comanda: `\q`
+> Pentru a ieși, utilizați comanda: `\q`
 
 ## Configurarea bazei de date
 
@@ -71,7 +71,7 @@ Conectați-vă la noua bază de date creată folosind aplicația client PostgreS
 Executați următoarea comandă în terminal:
 
 ```shell
-sudo -u postgres psql baza_de_date_aplicatie
+sudo -u postgres psql baza_aplicatie
 ```
 
 #### Windows
@@ -102,7 +102,7 @@ Exemplu de configurare pentru PostgreSQL:
             "engine": "pg",
             "port": "5432",
             "host": "localhost",
-            "name": "baza_de_date_aplicatie",
+            "name": "baza_aplicatie",
             "username": "utilizator_aplicatie",
             "password": "S3cR3t"
         }
@@ -111,7 +111,7 @@ Exemplu de configurare pentru PostgreSQL:
 }
 ```
 
-Pot fi utilizate configurații avansate precum:
+Pot fi utilizate configurații avansate, cum ar fi:
 
 ```javascript
 {
@@ -121,7 +121,7 @@ Pot fi utilizate configurații avansate precum:
             "engine": "pg",
             "port": "5432",
             "host": "localhost",
-            "name": "baza_de_date_aplicatie",
+            "name": "baza_aplicatie",
             "username": "utilizator_aplicatie",
             "password": "S3cR3t",
             "maximumPoolSize": 100,

@@ -2,58 +2,58 @@
 sidebar_position: 6
 id: service
 title: Servicio
-description: Aprenda a crear Servicios Web y APIs REST en Netuno, integrar datos entre sistemas y proporcionar datos dinámicos al frontend de forma asíncrona.
+description: Aprenda a crear servicios web y API REST en Netuno, integrar datos entre sistemas y proporcionar datos dinámicos al frontend de forma asíncrona.
 ---
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
 import PolyglotPath from "@site/src/components/PolyglotPath";
 
-Con Netuno es posible crear **_Servicios Web_** y construir cualquier tipo de **APIs <a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a>** complejas para la integración de datos entre sistemas.
+Con Netuno es posible crear **_servicios web_** y construir cualquier tipo de **APIs <a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a> complejas** para la integración de datos entre sistemas.
 
-:::info ¿Qué es un Servicio Web?
-Un Servicio Web permite que los sistemas intercambien información en línea de forma estandarizada. En Netuno, cada archivo dentro de `server/services/` se convierte automáticamente en un endpoint accesible vía HTTP.
+:::info ¿Qué es un servicio web?
+Un servicio web permite que los sistemas intercambien información en línea de forma estandarizada. En Netuno, cada archivo dentro de `server/services/` se convierte automáticamente en un endpoint accesible vía HTTP.
 :::
 
-## ¿Por qué usar Servicios Web?
+## ¿Por qué usar servicios web?
 
 El uso de servicios asíncronos aporta beneficios claros para la experiencia del usuario:
 
-- **Carga más rápida:** el servidor entrega la estructura visual de la página inmediatamente, sin esperar el procesamiento de todos los datos.
+- **Carga más rápida:** el servidor entrega la estructura visual de la página de inmediato, sin esperar el procesamiento de todos los datos.
 - **Datos dinámicos bajo demanda:** el frontend solicita solo los datos necesarios, cuando es necesario.
 - **Integración entre sistemas:** un servicio creado en Netuno puede ser consumido por cualquier aplicación externa (móvil, otro sistema web, etc.).
-- **Mejor experiencia de usuario:** el usuario no necesita esperar el procesamiento completo de la página antes de ver algo en la pantalla.
+- **Mejor experiencia de usuario:** el usuario no necesita esperar el procesamiento completo de la página antes de ver algo en pantalla.
 
 ## Requisitos previos
 
 Antes de comenzar, asegúrese de que:
 
 - Netuno está instalado y en ejecución local.
-- La aplicación `demo` fue creada como se describe en [Crear Aplicación](../app-create).
+- La aplicación `demo` se ha creado tal como se describe en [Crear aplicación](../app-create).
 - Hay datos registrados en **Tareas** y relacionados con **Registros** (necesario para que el retorno no esté vacío).
 
-## Configurar el Editor de Código
+## Configurar el editor de código
 
 Para crear y editar servicios en Netuno, utilice un editor de código de su preferencia. Recomendamos **[Visual Studio Code](https://code.visualstudio.com/download)** por ser gratuito, ligero y altamente intuitivo, pero cualquier editor compatible con JavaScript/Python/Groovy funcionará normalmente.
 
 ## Abrir la Aplicación Demo {#abrir-a-aplicacao-demo}
 
 1. Abra **Visual Studio Code**.
-2. Haga clic en el icono de **Archivos** en el panel lateral izquierdo.
-3. Seleccione **Abrir Carpeta** (Archivo > Abrir carpeta).
+2. Haga clic en el icono de **Archivos** del panel lateral izquierdo.
+3. Seleccione **Abrir carpeta** (Archivo > Abrir carpeta).
 4. Navegue hasta la carpeta de instalación de Netuno.
 5. Seleccione el directorio: **`apps/demo`**
 6. Haga clic en **Abrir**.
 
 La estructura de carpetas de la aplicación `demo` se cargará en el panel izquierdo.
 
-## Crear el Servicio
+## Crear el servicio
 
 Los servicios se procesan en el lado del **servidor**. Para crear un nuevo servicio:
 
 1. En el panel de archivos, expanda la estructura hasta encontrar la carpeta `server/services/`.
 2. Haga clic con el **botón derecho** sobre la carpeta `services`.
-3. Seleccione **Nuevo Archivo** `New File`.
-4. Nombre el archivo de acuerdo con el lenguaje que desee usar:
+3. Seleccione **Nuevo archivo** (`Nuevo archivo`).
+4. Asigne un nombre al archivo según el lenguaje que desee usar:
 
 <PolyglotPath files={[
     'server/services/trabajadores'
@@ -210,9 +210,9 @@ Los servicios se procesan en el lado del **servidor**. Para crear un nuevo servi
     ]}
 />
 
-Implemente el servicio añadiendo el código a continuación al archivo creado. Este servicio consulta la base de datos y devuelve una lista de trabajadores con el total de horas registradas, en formato **JSON**.
+Implemente el servicio añadiendo el código siguiente al archivo creado. Este servicio consulta la base de datos y devuelve una lista de trabajadores con el total de horas registradas, en formato **JSON**.
 
-### Entendiendo el Código
+### Entendiendo el código
 
 | Objeto/Método | Descripción |
 |---|---|
@@ -225,7 +225,7 @@ Implemente el servicio añadiendo el código a continuación al archivo creado. 
 Asegúrese de que hay datos registrados en **Tareas** y vinculados a **Registros**. De lo contrario, el endpoint devolverá una lista vacía `[]`.
 :::
 
-## Ejecutar y Probar el Servicio
+## Ejecutar y probar el servicio
 
 Con Netuno en ejecución, acceda al endpoint en el navegador:
 
@@ -237,18 +237,18 @@ El retorno esperado será un JSON similar a:
 
 ```json
 [
-  { "nombre": "Ana García", "total": 12 },
-  { "nombre": "Carlos Méndez", "total": 28 },
+  { "nombre": "Ana Silva", "total": 12 },
+  { "nombre": "Carlos Mendes", "total": 28 },
   { "nombre": "Juan Costa", "total": 45 }
 ]
 ```
 
-## Próximos Pasos
+## Próximos pasos
 
 Ahora que su servicio está funcionando, puede:
 
-- 📄 **[Interfaz y Diseño](./ui)** — integrar este servicio al frontend de la aplicación.
-- 📚 **[Biblioteca de Servicios](../../library/overview)** — explorar los objetos `_db`, `_val`, `_out` y otros disponibles en Netuno.
+- 📄 **[Interfaz y diseño](./ui)** — integrar este servicio en el frontend de la aplicación.
+- 📚 **[Biblioteca de servicios](../../library/overview)** — explorar los objetos `_db`, `_val`, `_out` y otros disponibles en Netuno.
 - 🔗 Añadir **autenticación** y **control de acceso** a su servicio.
 
 ___

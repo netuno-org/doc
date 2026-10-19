@@ -6,19 +6,19 @@ sidebar_label: Încărcare
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
 
-Trimiteți fișiere către API și salvați-le într-un dosar sau în baza de date.
+Trimiterea fișierelor către API și salvarea în folder sau în baza de date.
 
 ## Introducere
 
 Când trebuie să trimitem fișiere către serviciile API REST, avem mai multe modalități
-de a realiza această dezvoltare în Netuno.
+de a realiza acest lucru în Netuno.
 
-De obicei, fișierele sunt trimise în corpul cererii HTTP structurate în format
-multipart, este procedura cea mai comună în frontend, de exemplu când completăm un
-formular și există acel câmp pentru a alege un fișier.
+De obicei fișierele sunt trimise în corpul cererii HTTP structurate în format
+multipart; este procedura cea mai comună în frontend, de exemplu când completăm un
+formular și există acel câmp pentru alegerea unui fișier.
 
 Alternativ, putem trimite octeții fișierelor codificați în Base64 ca valoare
-într-un obiect JSON, când dorim o API REST 100% JSON.
+într-un obiect JSON, atunci când dorim un API REST 100% JSON.
 
 ## Fișiere
 
@@ -36,16 +36,16 @@ care a fost trimis, vedeți cum:
     ]}
 />
 
-Adică, `_req` conține toate datele pe care le primim în corpul cererii HTTP.
+Adică `_req` conține toate datele primite în corpul cererii HTTP.
 
-Iar prin metoda `file` se poate obține obiectul care reprezintă fișierul care a fost
-trimis.
+Iar prin metoda `file` permite obținerea obiectului care reprezintă fișierul care a
+fost trimis.
 
-Valoarea obținută poate fi `null` în cazul în care nu există niciun fișier.
+Valoarea obținută poate fi `null` dacă nu există niciun fișier.
 
 ## Imagini
 
-Când primim imagini, este obișnuit să fie nevoie să le redimensionăm, pentru a garanta
+Când primim imagini, este comun să fie nevoie de redimensionarea lor, pentru a garanta
 uniformitate și pentru a reduce spațiul ocupat de imagini.
 
 <PolyglotCode
@@ -124,15 +124,15 @@ uniformitate și pentru a reduce spațiul ocupat de imagini.
 Cu resursa de programare low-code poliglotă [Image](/docs/library/resources/image),
 putem manipula imagini, decupa, redimensiona, crea altele noi etc.
 
-## Ca Base64 în JSON
+## Cum Base64 în JSON
 
-Pentru a realiza upload-ul unui fișier în JSON-ul trimis către serviciu, putem defini o proprietate cu valoarea:
+Pentru a încărca un fișier în JSON trimis către serviciu, putem defini o proprietate cu valoarea:
 
 `data:image/png;base64,...`
 
 Unde în `...` urmează secvența octeților fișierului codificați în Base64.
 
-Iar tipul fișierului urmează după `data`, de exemplu:
+Tipul fișierului apare după `data`, de exemplu:
 
 - PNG: `image/png`.
 - JPG: `image/jpeg`
@@ -140,7 +140,7 @@ Iar tipul fișierului urmează după `data`, de exemplu:
 - PDF: `application/pdf`
 - XLSX: `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
 
-Vedeți exemplul unui fișier de imagine PNG mică trimis în JSON către un serviciu:
+Vedeți exemplul unui fișier imagine PNG mic trimis în JSON către un serviciu:
 
 ```json
 {
@@ -148,7 +148,7 @@ Vedeți exemplul unui fișier de imagine PNG mică trimis în JSON către un ser
 }
 ```
 
-Putem obține fișierul trimis în modul următor:
+Putem obține fișierul trimis astfel:
 
 <PolyglotCode
     codes={[
@@ -159,17 +159,17 @@ Putem obține fișierul trimis în modul următor:
                 if (fisierulMeu != null) {
                     _out.json(
                         _val.map()
-                            .set("rezultat", true)
-                            .set("nume", fisierulMeu.name())
-                            .set("dimensiuneOcteti", fisierulMeu.size())
-                            .set("dimensiuneKB", fisierulMeu.sizeKB())
-                            .set("dimensiuneMB", fisierulMeu.sizeMB())
-                            .set("dimensiuneGB", fisierulMeu.sizeGB())
+                            .set("result", true)
+                            .set("name", fisierulMeu.name())
+                            .set("sizeBytes", fisierulMeu.size())
+                            .set("sizeKB", fisierulMeu.sizeKB())
+                            .set("sizeMB", fisierulMeu.sizeMB())
+                            .set("sizeGB", fisierulMeu.sizeGB())
                     );
                 } else {
                     _out.json(
                         _val.map()
-                            .set("rezultat", false)
+                            .set("result", false)
                     );
                 }
             `
@@ -177,21 +177,21 @@ Putem obține fișierul trimis în modul următor:
         {
             lang: 'python',
             code: `
-                fisierul_meu = _req.getFile("fisier")
-                if fisierul_meu is not None:
+                fisierulMeu = _req.getFile("fisier")
+                if fisierulMeu is not None:
                     _out.json(
                         _val.map()
-                            .set("rezultat", True)
-                            .set("nume", fisierul_meu.name())
-                            .set("dimensiuneOcteti", fisierul_meu.size())
-                            .set("dimensiuneKB", fisierul_meu.sizeKB())
-                            .set("dimensiuneMB", fisierul_meu.sizeMB())
-                            .set("dimensiuneGB", fisierul_meu.sizeGB())
+                            .set("result", True)
+                            .set("name", fisierulMeu.name())
+                            .set("sizeBytes", fisierulMeu.size())
+                            .set("sizeKB", fisierulMeu.sizeKB())
+                            .set("sizeMB", fisierulMeu.sizeMB())
+                            .set("sizeGB", fisierulMeu.sizeGB())
                     )
                 else:
                     _out.json(
                         _val.map()
-                            .set("rezultat", False)
+                            .set("result", False)
                     )
             `
         },
@@ -202,17 +202,17 @@ Putem obține fișierul trimis în modul următor:
                 if fisierul_meu.nil?
                     _out.json(
                         _val.map()
-                            .set("rezultat", true)
-                            .set("nume", fisierul_meu.name())
-                            .set("dimensiuneOcteti", fisierul_meu.size())
-                            .set("dimensiuneKB", fisierul_meu.sizeKB())
-                            .set("dimensiuneMB", fisierul_meu.sizeMB())
-                            .set("dimensiuneGB", fisierul_meu.sizeGB())
+                            .set("result", true)
+                            .set("name", fisierul_meu.name())
+                            .set("sizeBytes", fisierul_meu.size())
+                            .set("sizeKB", fisierul_meu.sizeKB())
+                            .set("sizeMB", fisierul_meu.sizeMB())
+                            .set("sizeGB", fisierul_meu.sizeGB())
                     )
                 else
                     _out.json(
                         _val.map()
-                            .set("rezultat", false)
+                            .set("result", false)
                     )
                 end
             `
@@ -220,20 +220,20 @@ Putem obține fișierul trimis în modul următor:
     ]}
 />
 
-Exemplu de output generat de serviciul de mai sus:
+Exemplu de ieșire generată de serviciul de mai sus:
 
 ```json
 {
-  "nume": "fisier.png",
-  "rezultat": true,
-  "dimensiune": 1849,
-  "dimensiuneKB": 1
+  "name": "fisier.png",
+  "result": true,
+  "size": 1849,
+  "sizeKB": 1
 }
 ```
 
 ### Obiect
 
-Dacă fișierul se află într-o structură internă a JSON-ului în subobiect:
+Dacă fișierul se află într-o structură internă a JSON, în subobiect:
 
 ```json
 {
@@ -243,7 +243,7 @@ Dacă fișierul se află într-o structură internă a JSON-ului în subobiect:
 }
 ```
 
-Poate fi obținut în modul următor:
+Poate fi obținut astfel:
 
 <PolyglotCode
     codes={[
@@ -258,7 +258,7 @@ Poate fi obținut în modul următor:
 
 ### Array
 
-Dacă fișierul se află într-o structură internă a JSON-ului în array:
+Dacă fișierul se află într-o structură internă a JSON, într-un array:
 
 ```json
 {
@@ -268,7 +268,7 @@ Dacă fișierul se află într-o structură internă a JSON-ului în array:
 }
 ```
 
-Poate fi obținut în modul următor:
+Poate fi obținut astfel:
 
 <PolyglotCode
     codes={[
@@ -283,7 +283,7 @@ Poate fi obținut în modul următor:
 
 ## OpenAPI
 
-Netuno suportă integrarea cu OpenAPI și utilizează definiția OpenAPI pentru a valida cererea HTTP.
+Netuno suportă integrarea cu OpenAPI și folosește definiția OpenAPI pentru a valida cererea HTTP.
 
 > Mai multe despre [OpenAPI în Netuno](/docs/academy/server/services/openapi).
 
@@ -295,7 +295,7 @@ Pentru a valida dacă se primește un fișier într-o proprietate a obiectului J
 
 ```json title="post.in.json"
 {
-  "summary": "Încărcare fișier",
+  "summary": "Încărcare de fișier",
   "description": "Serviciu care primește un fișier în obiectul JSON.",
   "type": "object",
   "properties": {
@@ -309,12 +309,12 @@ Pentru a valida dacă se primește un fișier într-o proprietate a obiectului J
 }
 ```
 
-Pentru a valida dacă se primește o listă de fișiere în array în JSON:
+Pentru a valida dacă se primește o listă de fișiere într-un array în JSON:
 
 ```json title="post.in.json"
 {
-  "summary": "Încărcare fișiere",
-  "description": "Serviciu care primește o listă de fișiere în array în JSON.",
+  "summary": "Încărcare de fișiere",
+  "description": "Serviciu care primește o listă de fișiere într-un array în JSON.",
   "properties": {
     "fisiere": {
       "type": "array",
@@ -334,18 +334,18 @@ Pentru a valida dacă se primește o listă de fișiere în array în JSON:
 De obicei, când primim un fișier în serviciu, trebuie să îl salvăm, de exemplu:
 
 - **Baza de date**: Fișier asociat unei înregistrări, cum ar fi a unui utilizator.
-- **Storage**: Dosar intern al aplicației care servește la gestionarea fișierelor în general.
-- **Dosar**: Plasarea fișierului într-un dosar oarecare al sistemului.
+- **Storage**: Folder intern al aplicației folosit pentru gestionarea fișierelor în general.
+- **Folder**: Plasarea fișierului într-un folder oarecare al sistemului.
 
 ### Baza de date
 
-În gestionarea câmpurilor formularelor, Netuno suportă tipul `image` și `file`, și anume:
+În gestionarea câmpurilor formularelor, Netuno suportă tipul `image` și `file`, adică:
 
-- **Image**: Fișiere de imagine în general, JPG și PNG.
+- **Image**: Fișiere imagine în general, JPG și PNG.
 - **File**: Orice tip de fișier.
 
-Imaginați-vă că aveți un câmp de tip Imagine în formularul Produs; putem salva fișierul trimis prin upload în
-modul următor:
+Imaginați-vă că există un câmp de Imagine în formularul Produs; putem salva fișierul trimis prin upload
+astfel:
 
 #### Exemplu folosind DB Form:
 
@@ -364,8 +364,8 @@ Observați utilizarea `_db.form`:
                     _header.status(400);
                     _out.json(
                         _val.map()
-                            .set("rezultat", false)
-                            .set("eroare", "imagine-obligatorie")
+                            .set("result", false)
+                            .set("error", "imagine-obligatorie")
                     );
                     _exec.stop();
                 }
@@ -378,14 +378,14 @@ Observați utilizarea `_db.form`:
                 if (dbRezultat.getInt("produs") == 1) {
                     _out.json(
                         _val.map()
-                            .set("rezultat", true)
+                            .set("result", true)
                     );
                 } else {
                     _header.status(404);
                     _out.json(
                         _val.map()
-                            .set("rezultat", false)
-                            .set("eroare", "uid-produs-nu-exista")
+                            .set("result", false)
+                            .set("error", "uid-produs-nu-exista")
                     );
                 }
             `
@@ -400,8 +400,8 @@ Observați utilizarea `_db.form`:
                     _header.status(400)
                     _out.json(
                         _val.map()
-                            .set("rezultat", False)
-                            .set("eroare", "imagine-obligatorie")
+                            .set("result", False)
+                            .set("error", "imagine-obligatorie")
                     )
                     _exec.stop()
 
@@ -415,14 +415,14 @@ Observați utilizarea `_db.form`:
                 if dbRezultat.getInt("produs") == 1:
                     _out.json(
                         _val.map()
-                            .set("rezultat", True)
+                            .set("result", True)
                     )
                 else:
                     _header.status(404)
                     _out.json(
                         _val.map()
-                            .set("rezultat", False)
-                            .set("eroare", "uid-produs-nu-exista")
+                            .set("result", False)
+                            .set("error", "uid-produs-nu-exista")
                     )
             `
         },
@@ -436,8 +436,8 @@ Observați utilizarea `_db.form`:
                   _header.status = 400
                   _out.json(
                     _val.map()
-                      .set("rezultat", false)
-                      .set("eroare", "imagine-obligatorie")
+                      .set("result", false)
+                      .set("error", "imagine-obligatorie")
                   )
                   _exec.stop
                 end
@@ -450,14 +450,14 @@ Observați utilizarea `_db.form`:
                 if db_rezultat.getInt("produs") == 1
                   _out.json(
                     _val.map()
-                      .set("rezultat", true)
+                      .set("result", true)
                   )
                 else
                   _header.status = 404
                   _out.json(
                     _val.map()
-                      .set("rezultat", false)
-                      .set("eroare", "uid-produs-nu-exista")
+                      .set("result", false)
+                      .set("error", "uid-produs-nu-exista")
                   )
                 end
             `
@@ -482,8 +482,8 @@ Observați utilizarea `_db.update`:
                     _header.status(400);
                     _out.json(
                         _val.map()
-                            .set("rezultat", false)
-                            .set("eroare", "imagine-obligatorie")
+                            .set("result", false)
+                            .set("error", "imagine-obligatorie")
                     );
                     _exec.stop();
                 }
@@ -498,14 +498,14 @@ Observați utilizarea `_db.update`:
                 if (dbRezultat == 1) {
                     _out.json(
                         _val.map()
-                            .set("rezultat", true)
+                            .set("result", true)
                     );
                 } else {
                     _header.status(404);
                     _out.json(
                         _val.map()
-                            .set("rezultat", false)
-                            .set("eroare", "uid-produs-nu-exista")
+                            .set("result", false)
+                            .set("error", "uid-produs-nu-exista")
                     );
                 }
             `
@@ -520,8 +520,8 @@ Observați utilizarea `_db.update`:
                     _header.status(400)
                     _out.json(
                         _val.map()
-                            .set("rezultat", False)
-                            .set("eroare", "imagine-obligatorie")
+                            .set("result", False)
+                            .set("error", "imagine-obligatorie")
                     )
                     _exec.stop()
 
@@ -537,14 +537,14 @@ Observați utilizarea `_db.update`:
                 if dbRezultat == 1:
                     _out.json(
                         _val.map()
-                            .set("rezultat", True)
+                            .set("result", True)
                     )
                 else:
                     _header.status(404)
                     _out.json(
                         _val.map()
-                            .set("rezultat", False)
-                            .set("eroare", "uid-produs-nu-exista")
+                            .set("result", False)
+                            .set("error", "uid-produs-nu-exista")
                     )
             `
         },
@@ -558,8 +558,8 @@ Observați utilizarea `_db.update`:
                   _header.status = 400
                   _out.json(
                     _val.map()
-                      .set("rezultat", false)
-                      .set("eroare", "imagine-obligatorie")
+                      .set("result", false)
+                      .set("error", "imagine-obligatorie")
                   )
                   _exec.stop
                 end
@@ -574,14 +574,14 @@ Observați utilizarea `_db.update`:
                 if db_rezultat == 1
                   _out.json(
                     _val.map()
-                      .set("rezultat", true)
+                      .set("result", true)
                   )
                 else
                   _header.status = 404
                   _out.json(
                     _val.map()
-                      .set("rezultat", false)
-                      .set("eroare", "uid-produs-nu-exista")
+                      .set("result", false)
+                      .set("error", "uid-produs-nu-exista")
                   )
                 end
             `
@@ -596,15 +596,16 @@ Pentru a prezenta fișierul stocat, trebuie să creăm un serviciu care furnizea
 Deoarece fișierele salvate în baza de date, ca în exemplul de mai sus, fișierul în sine este plasat în storage-ul
 aplicației, iar în baza de date este stocat doar numele final al fișierului.
 
-> Storage-ul aplicației este un dosar destinat stocării și organizării structurilor de fișiere generice.
+> Storage-ul aplicației este un folder destinat stocării și organizării structurilor de fișiere generice.
 
-Prin urmare, în exemplul de mai sus, fișierele din baza de date ale formularului `Produs` și ale câmpului `Imagine` sunt stocate în:
+Prin urmare, în exemplul de mai sus, fișierele din baza de date ale formularului `Produs` și ale câmpului `Imagine` sunt
+stocate în:
 
 - `storage/database/produs/imagine/*`
 
 > Netuno gestionează automat numele fișierului stocat pentru a evita nume de fișiere repetate.
 
-Pentru a obține fișierul, se poate crea un serviciu care prezintă fișierul de imagine al produsului, de exemplu:
+Pentru a obține fișierul, se poate crea un serviciu care prezintă fișierul imagine al produsului, de exemplu:
 
 <PolyglotCode
     file="services/produs/imagine/get"
@@ -625,8 +626,8 @@ Pentru a obține fișierul, se poate crea un serviciu care prezintă fișierul d
                 _header.status(404);
                 _out.json(
                     _val.map()
-                        .set("rezultat", false)
-                        .set("eroare", "produs-negasit")
+                        .set("result", false)
+                        .set("error", "produs-negasit")
                 );
                 _exec.stop();
             }
@@ -668,8 +669,8 @@ Pentru a obține fișierul, se poate crea un serviciu care prezintă fișierul d
                 _header.status(404)
                 _out.json(
                     _val.map()
-                        .set("rezultat", False)
-                        .set("eroare", "produs-negasit")
+                        .set("result", False)
+                        .set("error", "produs-negasit")
                 )
                 _exec.stop()
 
@@ -707,8 +708,8 @@ Pentru a obține fișierul, se poate crea un serviciu care prezintă fișierul d
                 _header.status(404)
                 _out.json(
                     _val.map()
-                        .set("rezultat", false)
-                        .set("eroare", "produs-negasit")
+                        .set("result", false)
+                        .set("error", "produs-negasit")
                 )
                 _exec.stop()
             end
@@ -759,10 +760,10 @@ obține fișierul în sine.
 
 Putem salva un fișier direct în `storage`-ul aplicației.
 
-Pentru a nu le amesteca cu fișierele din baza de date, trebuie să folosim dosarul de `filesystem`, care are
+Pentru a nu se amesteca cu fișierele din baza de date, trebuie să folosim folderul `filesystem`, care are
 scopul de a stoca fișiere generice ce nu sunt asociate în baza de date.
 
-Pentru a primi fișierul, în acest exemplu se demonstrează cum un fișier trimis în serviciul
+Pentru a primi fișierul, în acest exemplu este demonstrat cum un fișier trimis în serviciul
  `POST` este stocat direct în storage:
 
 <PolyglotCode
@@ -772,18 +773,18 @@ Pentru a primi fișierul, în acest exemplu se demonstrează cum un fișier trim
             lang: 'javascript',
             code: `
                 const fisier = _req.getFile("fisier");
-                _storage.filesystem("server", "incarcari").ensurePath();
-                fisier.save(_storage.filesystem("server", "incarcari", fisier.name()));
+                _storage.filesystem("server", "upload").ensurePath();
+                fisier.save(_storage.filesystem("server", "upload", fisier.name()));
             `
         },
     ]}
 />
 
-Fișierul este stocat în dosarul `storage` al aplicației, la:
+Fișierul este stocat în folderul `storage` al aplicației, în:
 
-- `storage/filesystem/server/incarcari/*`
+- `storage/filesystem/server/upload/*`
 
-> Resursa [Storage](/docs/library/resources/storage) este utilizată pentru a obține calea dosarului și a fișierului:
+> Resursa [Storage](/docs/library/resources/storage) este utilizată pentru a obține calea folderului și a fișierului:
 
 <PolyglotCode
     codes={[
@@ -791,8 +792,8 @@ Fișierul este stocat în dosarul `storage` al aplicației, la:
             lang: 'javascript',
             code: `
                 _storage.filesystem(
-                    "server", // Numele subdosarului din filesystem.
-                    "incarcari", // Numele sau calea subdosarului intern.
+                    "server", // Numele subfolderului din filesystem.
+                    "upload", // Numele sau calea subfolderului intern.
                     fisier.name() // Numele final al fișierului.
                 );
             `
@@ -802,7 +803,7 @@ Fișierul este stocat în dosarul `storage` al aplicației, la:
 
 > Vedeți mai multe în documentația [Storage](/docs/library/resources/storage).
 
-Pentru a descărca fișierul, în acest exemplu se demonstrează cum octeții fișierului
+Pentru a descărca fișierul, în acest exemplu este demonstrat cum octeții fișierului
 pot fi obținuți prin serviciul `GET`:
 
 <PolyglotCode
@@ -811,20 +812,20 @@ pot fi obținuți prin serviciul `GET`:
         {
             lang: 'javascript',
             code: `
-                const numeFisier = _req.getString("fisier");
+                const fisierNume = _req.getString("fisier");
 
                 const fisier = _storage.filesystem(
                     "server",
-                    "incarcari",
-                    numeFisier
+                    "upload",
+                    fisierNume
                 ).file();
 
                 if (fisier.exists() == false) {
                     _header.status(404);
                     _out.json(
                         _val.map()
-                            .set("rezultat", false)
-                            .set("eroare", "fisier-nu-exista")
+                            .set("result", false)
+                            .set("error", "fisier-nu-exista")
                     );
                     _exec.stop();
                 }
@@ -836,20 +837,20 @@ pot fi obținuți prin serviciul `GET`:
         {
             lang: 'python',
             code: `
-                nume_fisier = _req.getString("fisier")
+                fisierNume = _req.getString("fisier")
 
                 fisier = _storage.filesystem(
                     "server",
-                    "incarcari",
-                    nume_fisier
+                    "upload",
+                    fisierNume
                 ).file()
 
                 if fisier.exists() == False:
                     _header.status(404)
                     _out.json(
                         _val.map()
-                            .set("rezultat", False)
-                            .set("eroare", "fisier-nu-exista")
+                            .set("result", False)
+                            .set("error", "fisier-nu-exista")
                     )
                     _exec.stop()
 
@@ -860,20 +861,20 @@ pot fi obținuți prin serviciul `GET`:
         {
             lang: 'ruby',
             code: `
-                nume_fisier = _req.getString("fisier")
+                fisier_nume = _req.getString("fisier")
 
                 fisier = _storage.filesystem(
                     "server",
-                    "incarcari",
-                    nume_fisier
+                    "upload",
+                    fisier_nume
                 ).file()
 
                 if fisier.exists() == false
                     _header.status(404)
                     _out.json(
                         _val.map()
-                            .set("rezultat", false)
-                            .set("eroare", "fisier-nu-exista")
+                            .set("result", false)
+                            .set("error", "fisier-nu-exista")
                     )
                     _exec.stop()
                 end
@@ -885,21 +886,21 @@ pot fi obținuți prin serviciul `GET`:
     ]}
 />
 
-### Dosar
+### Folder
 
-Putem salva un fișier direct în orice dosar al calculatorului.
+Putem salva un fișier direct în orice folder al computerului.
 
-Există două resurse care sunt foarte utile în aceste cazuri:
+Există două resurse foarte utile în aceste cazuri:
 
-- `_app` - Putem obține orice dosar sau fișier din aplicație.
-- `_os` - Putem obține orice dosar sau fișier din calculator.
+- `_app` - Putem obține orice folder sau fișier din aplicație.
+- `_os` - Putem obține orice folder sau fișier din computer.
 
 > Vedeți documentația resurselor respective [App](/docs/library/resources/app) și [OS](/docs/library/resources/os);
-> ambele resurse au metodele `folder` și `file`, care permit indicarea căii dosarului sau fișierului,
+> ambele resurse au metodele `folder` și `file`, care permit indicarea căii folderului sau a fișierului,
 > respectiv.
 
-Pentru a primi fișierul, în acest exemplu se demonstrează cum un fișier trimis în serviciul
-`POST` este stocat direct într-un dosar din aplicație:
+Pentru a primi fișierul, în acest exemplu este demonstrat cum un fișier trimis în serviciul
+`POST` este stocat direct într-un folder din aplicație:
 
 <PolyglotCode
     file="services/fisier/post"
@@ -908,9 +909,9 @@ Pentru a primi fișierul, în acest exemplu se demonstrează cum un fișier trim
             lang: 'javascript',
             code: `
                 const fisier = _req.getFile("fisier");
-                const dosar = _app.folder("temp");
-                if (dosar.exists() == false) {
-                    dosar.mkdir();
+                const folder = _app.folder("temp");
+                if (folder.exists() == false) {
+                    folder.mkdir();
                 }
                 fisier.save(_app.file(\`temp/\${fisier.name()}\`));
             `
@@ -919,9 +920,9 @@ Pentru a primi fișierul, în acest exemplu se demonstrează cum un fișier trim
             lang: 'python',
             code: `
                 fisier = _req.getFile("fisier")
-                dosar = _app.folder("temp")
-                if dosar.exists() == False:
-                    dosar.mkdir()
+                folder = _app.folder("temp")
+                if folder.exists() == False:
+                    folder.mkdir()
 
                 fisier.save(_app.file(f"temp/{fisier.name()}"))
             `
@@ -930,9 +931,9 @@ Pentru a primi fișierul, în acest exemplu se demonstrează cum un fișier trim
             lang: 'ruby',
             code: `
                 fisier = _req.getFile("fisier")
-                dosar = _app.folder("temp")
-                if dosar.exists() == false
-                    dosar.mkdir()
+                folder = _app.folder("temp")
+                if folder.exists() == false
+                    folder.mkdir()
                 end
                 fisier.save(_app.file("temp/#{fisier.name()}"))
             `
@@ -941,9 +942,9 @@ Pentru a primi fișierul, în acest exemplu se demonstrează cum un fișier trim
             lang: 'kotlin',
             code: `
                 val fisier = _req.getFile("fisier")
-                val dosar = _app.folder("temp")
-                if (dosar.exists() == false) {
-                    dosar.mkdir()
+                val folder = _app.folder("temp")
+                if (folder.exists() == false) {
+                    folder.mkdir()
                 }
                 fisier.save(_app.file("temp/\${fisier.name()}"))
             `
@@ -952,9 +953,9 @@ Pentru a primi fișierul, în acest exemplu se demonstrează cum un fișier trim
             lang: 'groovy',
             code: `
                 final fisier = _req.getFile("fisier")
-                final dosar = _app.folder("temp")
-                if (dosar.exists() == false) {
-                    dosar.mkdir()
+                final folder = _app.folder("temp")
+                if (folder.exists() == false) {
+                    folder.mkdir()
                 }
                 fisier.save(_app.file("temp/\${fisier.name()}"))
             `
@@ -962,10 +963,10 @@ Pentru a primi fișierul, în acest exemplu se demonstrează cum un fișier trim
     ]}
 />
 
-Codul de mai sus va crea dosarul `temp` în cadrul aplicației și va salva fișierul primit
-în acest dosar.
+Codul de mai sus va crea folderul `temp` în aplicație și va salva fișierul primit
+în acest folder.
 
-Pentru a descărca fișierul, în acest exemplu se demonstrează cum octeții fișierului
+Pentru a descărca fișierul, în acest exemplu este demonstrat cum octeții fișierului
 pot fi obținuți prin serviciul `GET`:
 
 <PolyglotCode
@@ -974,15 +975,15 @@ pot fi obținuți prin serviciul `GET`:
         {
             lang: 'javascript',
             code: `
-                const numeFisier = _req.getString("fisier");
-                const fisier = _app.file(\`temp/\${numeFisier}\`);
+                const fisierNume = _req.getString("fisier");
+                const fisier = _app.file(\`temp/\${fisierNume}\`);
 
                 if (fisier.exists() == false) {
                     _header.status(404);
                     _out.json(
                         _val.map()
-                            .set("rezultat", false)
-                            .set("eroare", "fisier-nu-exista")
+                            .set("result", false)
+                            .set("error", "fisier-nu-exista")
                     );
                     _exec.stop();
                 }
@@ -994,15 +995,15 @@ pot fi obținuți prin serviciul `GET`:
         {
             lang: 'python',
             code: `
-                nume_fisier = _req.getString("fisier")
-                fisier = _app.file(f"temp/{nume_fisier}")
+                fisierNume = _req.getString("fisier")
+                fisier = _app.file(f"temp/{fisierNume}")
 
                 if fisier.exists() == False:
                     _header.status(404)
                     _out.json(
                         _val.map()
-                            .set("rezultat", False)
-                            .set("eroare", "fisier-nu-exista")
+                            .set("result", False)
+                            .set("error", "fisier-nu-exista")
                     )
                     _exec.stop()
 
@@ -1013,15 +1014,15 @@ pot fi obținuți prin serviciul `GET`:
         {
             lang: 'ruby',
             code: `
-                nume_fisier = _req.getString("fisier")
-                fisier = _app.file("temp/#{nume_fisier}")
+                fisier_nume = _req.getString("fisier")
+                fisier = _app.file("temp/#{fisier_nume}")
 
                 if fisier.exists() == false
                     _header.status(404)
                     _out.json(
                         _val.map()
-                            .set("rezultat", false)
-                            .set("eroare", "fisier-nu-exista")
+                            .set("result", false)
+                            .set("error", "fisier-nu-exista")
                     )
                     _exec.stop()
                 end
@@ -1033,15 +1034,15 @@ pot fi obținuți prin serviciul `GET`:
         {
             lang: 'kotlin',
             code: `
-                val numeFisier = _req.getString("fisier")
-                val fisier = _app.file("temp/\${numeFisier}")
+                val fisierNume = _req.getString("fisier")
+                val fisier = _app.file("temp/\${fisierNume}")
 
                 if (fisier.exists() == false) {
                     _header.status(404)
                     _out.json(
                         _val.map()
-                            .set("rezultat", false)
-                            .set("eroare", "fisier-nu-exista")
+                            .set("result", false)
+                            .set("error", "fisier-nu-exista")
                     )
                     _exec.stop()
                 }
@@ -1053,15 +1054,15 @@ pot fi obținuți prin serviciul `GET`:
         {
             lang: 'groovy',
             code: `
-                final numeFisier = _req.getString("fisier")
-                final fisier = _app.file("temp/\${numeFisier}")
+                final fisierNume = _req.getString("fisier")
+                final fisier = _app.file("temp/\${fisierNume}")
 
                 if (fisier.exists() == false) {
                     _header.status(404)
                     _out.json(
                         _val.map()
-                            .set("rezultat", false)
-                            .set("eroare", "fisier-nu-exista")
+                            .set("result", false)
+                            .set("error", "fisier-nu-exista")
                     )
                     _exec.stop()
                 }
@@ -1075,11 +1076,11 @@ pot fi obținuți prin serviciul `GET`:
 
 ## Concluzie
 
-După cum se poate observa, putem integra upload-ul de fișiere în serviciile API REST, inclusiv integrat cu
+După cum se poate observa, putem integra încărcarea fișierelor în serviciile API REST, inclusiv integrat cu
 OpenAPI.
 
-Putem salva fișierul în baza de date, în dosarul `storage` al aplicației sau în orice dosar al
-calculatorului.
+Putem salva fișierul în baza de date, în folderul `storage` al aplicației sau în orice folder al
+computerului.
 
 Vedeți documentația resurselor utilizate în acest tutorial care permit manipularea fișierelor:
 
@@ -1088,5 +1089,5 @@ Vedeți documentația resurselor utilizate în acest tutorial care permit manipu
 - [OS](/docs/library/resources/os)
 
 În baza de date putem salva imagini în câmpuri de tip `image` și putem salva orice tip de fișier în
-câmpuri de tip `file`; modul în care salvăm sau obținem fișiere este același în orice caz, fie imagine, fie
+câmpuri de tip `file`; modul în care salvăm sau obținem fișierele este același în orice caz, fie imagine, fie
 fișier generic.

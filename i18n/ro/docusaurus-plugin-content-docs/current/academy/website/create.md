@@ -8,12 +8,12 @@ sidebar_label: Creare cu React
 Acest proces de creare poate fi aplicat în alte contexte, de exemplu pentru a crea orice tip de proiect
 React, în acest caz făcând adaptările necesare de nume și folderul în care sunt executate comenzile.
 
-Baza înțelegerii este că va fi creat stratul web, adică frontend-ul aplicației noastre Netuno.
+Premisa este că se va crea stratul web, adică frontend-ul aplicației noastre Netuno.
 
-Prin urmare, se presupune că va fi creat în aplicația Netuno `site`, numele standard pentru stratul de frontend,
+De aceea se presupune că în aplicația Netuno va fi creat `site`, numele standard pentru stratul de frontend,
 dar care poate fi orice alt nume dorit.
 
-## Cerințe preliminare
+## Precondiții
 
 Trebuie să aveți Netuno instalat:
 
@@ -21,17 +21,17 @@ Trebuie să aveți Netuno instalat:
 
 Datorită performanței mai bune, printre alte avantaje, trebuie să aveți Bun instalat:
 
-- [Instalarea Bun.](/docs/academy/website/bun)
+- [Instalați Bun.](/docs/academy/website/bun)
 
 ## Creare
 
 Pentru a crea o aplicație React în interiorul unei aplicații Netuno, de obicei o numim `site`.
 
-Deci, cu **terminalul** în **rădăcina aplicației** dvs. Netuno, care de obicei se află în folderul:
+Astfel, cu **terminalul** în **rădăcina aplicației** Netuno, care de obicei se află în folderul:
 
-- `netuno/apps/APLICATIA_MEA`
+- `netuno/apps/APP_MEU`
 
-> Unde `APLICATIA_MEA` este numele aplicației Netuno.
+> Unde `APP_MEU` este numele aplicației Netuno.
 
 Executați comanda:
 
@@ -43,19 +43,19 @@ Apoi, la întrebarea: `Project name:`
 
 Tastați `site` și apăsați tasta `ENTER`.
 
-În continuare, apare întrebarea: `Select a framework:`
+În continuare apare întrebarea: `Select a framework:`
 
-Folosiți tastele săgeți de pe tastatură și apăsați tasta în jos până selectați opțiunea `React`, apoi apăsați tasta 
+Folosiți tastele săgeți și apăsați tasta în jos până când alegeți opțiunea `React`, apoi apăsați tasta
 `ENTER`.
 
-Pentru a finaliza, următoarea întrebare: `Select a variant:`
+Pentru final, următoarea întrebare: `Select a variant:`
 
-Folosiți tastele săgeți de pe tastatură și apăsați tasta în jos până selectați opțiunea `JavaScript`, apoi apăsați 
+Folosiți tastele săgeți și apăsați tasta în jos până când alegeți opțiunea `JavaScript`, apoi apăsați
 tasta `ENTER`.
 
-Această comandă va crea un director nou numit `📂 site` unde va fi conținut frontend-ul cu React.
+Această comandă va crea un director nou numit `📂 site` în care se va afla frontend-ul cu React.
 
-După ce ați creat frontend-ul cu React, executați după cum urmează pentru a instala dependențele:
+După ce ați creat frontend-ul cu React, rulați astfel pentru a instala dependențele:
 
 ```shell
 cd site
@@ -73,19 +73,19 @@ Acum este posibil să porniți serverul de frontend cu React folosind comanda:
 bun run dev
 ```
 
-Aceasta va face ca frontend-ul să fie disponibil la adresa [http://localhost:5173/](http://localhost:5173/); de obicei, sau la altă 
-adresă cu alt număr de port poate apărea în terminal; în orice caz, deschideți în browser adresa
+Aceasta va face ca frontend-ul să fie disponibil la adresa [http://localhost:5173/](http://localhost:5173/), de obicei, sau în terminal poate apărea o altă
+adresă cu un alt număr de port; în orice caz, deschideți în browser adresa
 afișată în terminal.
 
-> Pentru a termina execuția în terminal, apăsați simultan tastele `CTRL` și `C`.
+> Pentru a opri execuția în terminal, apăsați simultan tastele `CTRL` și `C`.
 
 ## Instalarea dependențelor
 
-Dacă rulați serverul de frontend în terminal, adică `bun run dev`, se recomandă să îl opriți; apăsați 
+Dacă rulați serverul de frontend în terminal, adică `bun run dev`, este recomandat să îl opriți; apăsați
 simultan tastele `CTRL` și `C`.
 
-Vă recomandăm insistent să instalați următoarele pachete NPM, deoarece sunt foarte utile pentru dezvoltarea de 
-aplicații React cu Netuno (faceți clic pe fiecare link pentru mai multe informații despre fiecare):
+Vă recomandăm insistent să instalați următoarele pachete NPM, deoarece sunt foarte utile pentru dezvoltarea
+aplicațiilor React cu Netuno (faceți clic pe fiecare link pentru mai multe informații despre fiecare):
 
 * [react-router](https://www.npmjs.com/package/react-router)
 * [antd](https://www.npmjs.com/package/antd)
@@ -93,7 +93,7 @@ aplicații React cu Netuno (faceți clic pe fiecare link pentru mai multe inform
 * [less](https://www.npmjs.com/package/less)
 * [@netuno/service-client](https://www.npmjs.com/package/@netuno/service-client)
 
-Pentru a instala pachetele enumerate mai sus, este suficient să executați următorul set de comenzi în terminal:
+Pentru a instala pachetele listate mai sus, trebuie doar să executați următorul set de comenzi în terminal:
 
 ```shell
 bun add react-router
@@ -111,7 +111,7 @@ bun add react-router antd @ant-design/icons less @netuno/service-client
 
 ## Configurări
 
-După executarea comenzilor de mai sus, puteți forța o adresă de port standard; mergeți la `📂 site/vite.config.js` 
+După executarea comenzilor de mai sus, puteți forța o adresă de port standard; mergeți la `📂 site/vite.config.js`
 și adăugați configurația `server` după cum urmează:
 
 ```javascript title="site/vite.config.js"
@@ -132,10 +132,10 @@ Acum, la pornirea cu comanda `bun run dev`, se va folosi întotdeauna portul `30
 
 Schimbați toate fișierele `.css` care se află în `site/src` în extensia `.less`.
 
-> Nu uitați să faceți această modificare în codul JSX la liniile care fac `import` la fișierele `.css`, schimbați 
+> Nu uitați să faceți această modificare în codul JSX pe liniile care fac `import` al fișierelor `.css`, schimbând
 > în `.less`.
 
-LESS permite o dezvoltare mai structurată și modernă a CSS-ului.
+LESS permite o dezvoltare mai structurată și mai modernă a CSS-ului.
 
 ### Personalizarea temei Ant.Design
 
@@ -151,7 +151,7 @@ function App() {
     return (
         <ConfigProvider theme={{ token: { colorPrimary: '#00b96b' } }}>
             ...
-            <Button type="primary">Butonul Meu cu Culoare Personalizată</Button>
+            <Button type="primary">Butonul meu cu culoare personalizată</Button>
             ...
         </ConfigProvider>
     );
@@ -163,8 +163,8 @@ Astfel este posibil să ajustați orice configurație de stilizare a Ant.Design.
 
 ### Temă întunecată
 
-De asemenea, este posibil să utilizați tema întunecată a Ant.Design; pentru aceasta este suficient să importați 
-`theme` care conține dark mode și să îl aplicați în `ConfigProvider`:
+De asemenea, este posibil să folosiți tema întunecată a Ant.Design; pentru aceasta trebuie doar să importați `theme`, care conține modul întunecat,
+și să îl aplicați în `ConfigProvider`:
 
 ```jsx
 import { ConfigProvider, Button, theme } from 'antd';
@@ -176,7 +176,7 @@ import { ConfigProvider, Button, theme } from 'antd';
         algorithm: theme.darkAlgorithm,
     }}>
         ...
-        <Button type="primary">Butonul Meu cu Culoare Personalizată</Button>
+        <Button type="primary">Butonul meu cu culoare personalizată</Button>
         ...
     </ConfigProvider>
 ...
@@ -184,14 +184,14 @@ import { ConfigProvider, Button, theme } from 'antd';
 
 ### Restilizare
 
-Observați că în parametrizările `ConfigProvider` de mai sus, este posibil să modificați cu ușurință stilul Ant.Design; 
+Observați că în parametrizările `ConfigProvider` de mai sus este posibil să modificați cu ușurință stilul Ant.Design;
 mai multe despre personalizarea Ant.Design:
 
 - [Personalizați tema](https://ant.design/docs/react/customize-theme)
 
-În fiecare componentă Ant.Design există configurațiile posibile de Design Token, de exemplu la butoane:
+În fiecare componentă Ant.Design aveți configurațiile posibile de Design Token, de exemplu la butoane:
 
-- [Buton - Design Token](https://ant.design/components/button#design-token)
+- [Button - Design Token](https://ant.design/components/button#design-token)
 
 ```jsx
 <ConfigProvider theme={{
@@ -209,7 +209,7 @@ mai multe despre personalizarea Ant.Design:
     }
 }}>
     ...
-    <Button type="primary">Butonul Meu cu Culoare Personalizată</Button>
+    <Button type="primary">Butonul meu cu culoare personalizată</Button>
     ...
 </ConfigProvider>
 ```
@@ -218,9 +218,9 @@ mai multe despre personalizarea Ant.Design:
 
 Netuno vă permite să porniți aplicația React împreună cu procesul de server al aplicației Netuno.
 
-> Toate mesajele de compilare ale aplicației React vor fi integrate în același terminal cu aplicația Netuno.
+> Toate mesajele de compilare ale aplicației React vor fi integrate în același terminal ca aplicația Netuno.
 
-Pentru aceasta, este suficient să adăugați la configurația `commands` a aplicației Netuno din `📂 config/_development.json` următoarele:
+Pentru aceasta, adăugați la configurația `commands` a aplicației Netuno în `📂 config/_development.json` următoarele:
 
 ```json title="config/_development.json"
 {
@@ -238,28 +238,28 @@ Pentru aceasta, este suficient să adăugați la configurația `commands` a apli
 }
 ```
 
-> Întotdeauna când editați fișierele de configurare ale aplicației Netuno, este necesar să reporniți serverul pentru a putea
-> prelua noile modificări.
+> Ori de câte ori editați fișierele de configurare ale aplicației Netuno, este necesar să reporniți serverul pentru ca acesta să
+> preia noile modificări.
 
-În final, porniți/reporțiți serverul cu aplicația dvs. Netuno pentru a verifica funcționarea acesteia.
+În final, porniți/reporțiți serverul cu aplicația dvs. Netuno pentru a verifica funcționarea.
 
-Iar acum totul va fi integrat într-un singur terminal centralizat, evitând astfel să aveți mai multe terminale 
+Și acum totul va fi integrat într-un singur terminal centralizat, evitând astfel să aveți mai multe terminale
 dispersate; mai multe despre:
 
 - [Terminal centralizat](/docs/academy/explore/centralized-terminal)
 
 ## Configurarea CORS (Cross-Origin Resource Sharing)
 
-Pentru a configura CORS și a evita posibile erori între comunicarea frontend-ului cu serviciile aplicației Netuno,
+Pentru a configura CORS și a evita posibile erori în comunicarea dintre frontend și serviciile aplicației Netuno,
 editați configurația aplicației în:
 
 - `📂 config/_development.json`
 
 Verificați dacă există deja configurația `cors` și dacă în `origins` se află `*`; atunci este potrivită pentru dezvoltare
-și poate rămâne așa.
+și poate rămâne astfel.
 
-Dacă nu există configurația `cors`, atunci adăugați pe baza acestui exemplu, iar adresa trebuie să fie aceeași
-adresă a frontend-ului:
+Dacă nu există configurația `cors`, atunci adăugați pe baza acestui exemplu, iar adresa trebuie să fie
+aceeași adresă a frontend-ului:
 
 ```json title="config/_development.json"
 {
@@ -274,18 +274,18 @@ adresă a frontend-ului:
 }
 ```
 
-> Dacă `origins` conține un `*`, înseamnă că orice adresă de front-end va fi acceptată, de exemplu:
+> Dacă `origins` conține un `*`, înseamnă că orice adresă de frontend va fi acceptată, de exemplu:
 > - `"origins": [ "*" ]`
 > De obicei folosim `*` în dezvoltare.
 
-Odată ce configurația este implementată, puteți integra serviciile API dorite cu
-frontend-ul, fără probleme de securitate CORS.
+Odată implementată configurația, puteți integra serviciile API dorite cu
+frontend-ul, fără probleme legate de securitatea CORS.
 
 > Mai multe despre [CORS](/docs/academy/server/services/cors)
 
 ## Variabile de mediu
 
-Configurația variabilelor de mediu poate fi definită prin crearea fișierului `site/.env`, cu 
+Configurația variabilelor de mediu poate fi definită prin crearea fișierului `site/.env`, cu
 definițiile variabilelor, de exemplu:
 
 ```

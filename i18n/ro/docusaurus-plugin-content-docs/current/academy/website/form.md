@@ -1,5 +1,5 @@
 ---
 id: form
-title: Formular integrat cu Serviciul
-sidebar_label: Formular și Serviciu
+title: Formular integrat cu serviciul
+sidebar_label: Formular și serviciu
 ---
