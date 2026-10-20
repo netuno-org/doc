@@ -13,25 +13,18 @@ CLUAR controls access to the backoffice through **roles** (groups), assigned to 
 
 ## Roles
 
-There are 5 pre-created roles (`user_group`):
+There are 2 pre-created roles (`user_group`):
 
 | Code | Name |
 |---|---|
 | `administrator` | Administrator |
 | `editor` | Editor |
-| `author` | Author |
-| `contributor` | Contributor |
-| `subscriber` | Subscriber |
-
-:::info Not all roles have permissions assigned yet
-Today, only **Administrator** and **Editor** actually have access to anything—they are the only roles referenced in the access rules (see below). Author, Contributor, and Subscriber already exist as options in the form, but they do not yet have any access configured; assigning one of these roles to someone does not currently give them access to anything in the backoffice.
-:::
 
 ## Organization
 
-A person only has a role **within the context of an organization**—the link is made in `Organization > Members` (`organization_people`), associating Person + Organization + Role.
+A person only has a role **within the context of an organization**—the link is made in `Organization > Members` (`organization_profile`), associating Person/Profile + Organization + Role.
 
-Currently there is only one organization, with the code `admins`, and that is where all permissions are checked. The `organization` entity supports hierarchy (`parent_id`, "parent" organizations), but this hierarchy is not yet used in the current permission rules—all checks point directly to the `admins` organization.
+Each page belongs to an **organization**. Pages can have subpages, and subpages belong to the **parent page's organization by default**. Organizations support hierarchy (`parent_id`, "parent" organizations). Permissions are inherited down the organization hierarchy - a member of an organization is also authorized in its descendant organizations, depending on their role.
 
 ## First access to edit mode
 
@@ -75,31 +68,18 @@ In both cases, the created person can already log in at `/login` and access edit
 
 ## How permissions are applied
 
-Each server service is classified into one of these categories, defined in `server/core/_service_config.js`:
+CLUAR uses the `cluar.permission` module to control access to services. Common permission methods include:
 
-| Category | Who has access | Examples |
-|---|---|---|
-| **Public** | Anyone, without login | Contact, avatar, login |
-| **Content management** | Administrator + Editor | Pages, versions, components, dictionary, actions |
-| **Site administration** | Administrator only | Settings, languages, synchronization |
-| **Access management** | Administrator only | Organizations, people, users |
+- `cluar.permission.requireUserAuthorizedInRootOrganization()` — requires the user to be an Administrator of the root organization
+- `cluar.permission.requireUserAuthorizedToEditPage(pageId)` — requires the user to be an Administrator or Editor in an organization that owns the page (or one of its ancestor organizations via hierarchy)
+- `cluar.permission.requireUserAuthorizedToManagePage(pageId)` — requires the user to be an Administrator in an organization that owns the page
+- `cluar.permission.requireUserAuthorizedInOrganization(organizationId)` — requires Administrator access in the specified organization (or its descendants, depending on context)
+- `cluar.permission.requireUserAuthorizedToEditInOrganization(organizationId)` — requires Administrator or Editor access in the specified organization
 
-Any service that is not listed in one of these categories is **denied by default**—this is a deliberate decision in the code (explicitly commented in the file), so that forgetting to classify a new service results in a block, not free access through oversight.
+Services call these methods at the beginning to enforce permissions. Pages are associated with organizations via `page_organization`, and permission checks respect organization hierarchy (inherited downwards).
 
-:::info Permissions are not applied in the development environment
-In the `dev` environment, `_service_config.js` releases all services right at the start, before any check—that is, **permissions are only actually applied in production/staging**. When testing locally, any logged-in user has access to everything, regardless of role.
-:::
+Any service without explicit permission checks will behave according to how it's written — always add appropriate permission checks when creating protected endpoints.
 
 ## Interface: the menu also filters by permission
 
-In addition to server-side blocking, the Reserved Area's side menu (`website/src/components/SideMenu`) also filters the visible items according to the logged-in person's role—so it does not show options that they would not have permission to use.
-
-:::info Keep the two lists synchronized
-The "who can see what" list in `SideMenu` is manually kept aligned with `CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS`, and `ACCESS_MANAGEMENT_PATHS` from `_service_config.js`—they are two separate lists, one on the frontend and one on the backend. When adding a new protected service, you must update both; changing only the server hides the error (the menu keeps showing an option that will actually be denied), and changing only the menu does not actually protect anything.
-:::
-
-## How to protect a new service
-
-1. Create the service normally in `server/services/`.
-2. Add the service path (`path/method`) to the correct list in `server/core/_service_config.js`—`CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS`, or `ACCESS_MANAGEMENT_PATHS`—depending on who should be able to use it. If it is public, add it to `PUBLIC_PATHS`.
-3. If the service has a corresponding item in the Reserved Area menu, also update `SideMenu` so the filter matches the actual permission.
+In addition to server-side blocking, the Reserved Area's side menu (`website/src/components/SideMenu`) filters the visible items according to the logged-in person's role and permissions—so it does not show options that they would not have permission to use.

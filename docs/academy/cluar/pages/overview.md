@@ -7,6 +7,8 @@ sidebar_label: Overview
 
 The **Page** is the central entity of CLUAR: it represents a website URL. Each page belongs to a single language — there is no single "multilingual" page; each language has its own page (with its own `link`, title, content, etc.), and they are linked to each other only through the [cloning](/docs/academy/cluar/pages/cloning) action.
 
+Each page belongs to an **organization**. Pages can have **subpages** (defined by `parent_id`), and subpages belong to the **parent page's organization by default**.
+
 ## Fields
 
 | Field | Description |
