@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-id: dictionaries
+id: translations
 title: Dictionnaires
 sidebar_label: Dictionnaires
 ---
@@ -13,8 +13,8 @@ Comment traduire les textes fixes de l'interface du site web.
 
 Cela implique deux formulaires dans le backoffice :
 
-- **Entrée** (`dictionary_entry`)
-- **Dictionnaire** (`dictionary`)
+- **Entrée** (`translation_entry`)
+- **Dictionnaire** (`translation`)
 
 ## Entrée
 
@@ -32,11 +32,11 @@ Contrairement aux [Configurations](/docs/academy/cluar/settings), le Dictionnair
 
 La classe `website/src/common/Cluar.js` met à disposition des fonctions pour lire les entrées du dictionnaire, toutes retournant le code de l'entrée comme résultat s'il n'y a pas de traduction (utile pour repérer les traductions manquantes) :
 
-- `Cluar.dictionary(entree)` — obtient la valeur traduite dans la langue actuelle, telle qu'elle a été enregistrée (peut inclure du HTML).
-- `Cluar.plainDictionary(entree)` — identique, mais supprime les balises `<p>` et `<br>`. C'est la plus utilisée dans les libellés d'interface (boutons, champs de formulaire, notifications).
+- `Cluar.translation(entree)` — obtient la valeur traduite dans la langue actuelle, telle qu'elle a été enregistrée (peut inclure du HTML).
+- `Cluar.plainTranslation(entree)` — identique, mais supprime les balises `<p>` et `<br>`. C'est la plus utilisée dans les libellés d'interface (boutons, champs de formulaire, notifications).
 - `Cluar.plainTitle(entree)` — identique, mais supprime uniquement les balises `<p>`.
 - `Cluar.plainHTML(entree)` — supprime toutes les balises HTML.
-- `Cluar.dictionaryNoParagraph(entree)` — supprime uniquement les balises `<p>` (équivalent à `plainTitle`).
+- `Cluar.translationNoParagraph(entree)` — supprime uniquement les balises `<p>` (équivalent à `plainTitle`).
 
 ## Prochaine étape
 

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-id: dictionaries
+id: translations
 title: 사전
 sidebar_label: 사전
 ---
@@ -13,8 +13,8 @@ sidebar_label: 사전
 
 백오피스의 두 가지 폼으로 구성됩니다:
 
-- **항목** (`dictionary_entry`)
-- **사전** (`dictionary`)
+- **항목** (`translation_entry`)
+- **사전** (`translation`)
 
 ## 항목
 
@@ -32,11 +32,11 @@ sidebar_label: 사전
 
 `website/src/common/Cluar.js` 클래스는 사전 항목을 읽는 함수들을 제공하며, 모두 번역이 없으면 결과로 항목의 코드를 반환합니다 (누락된 번역을 알아채는 데 유용합니다):
 
-- `Cluar.dictionary(항목)` — 현재 언어의 번역된 값을 저장된 그대로 가져옵니다 (HTML을 포함할 수 있음).
-- `Cluar.plainDictionary(항목)` — 동일하지만 `<p>` 및 `<br>` 태그를 제거합니다. 인터페이스 레이블(버튼, 폼 필드, 알림)에서 가장 많이 사용됩니다.
+- `Cluar.translation(항목)` — 현재 언어의 번역된 값을 저장된 그대로 가져옵니다 (HTML을 포함할 수 있음).
+- `Cluar.plainTranslation(항목)` — 동일하지만 `<p>` 및 `<br>` 태그를 제거합니다. 인터페이스 레이블(버튼, 폼 필드, 알림)에서 가장 많이 사용됩니다.
 - `Cluar.plainTitle(항목)` — 동일하지만 `<p>` 태그만 제거합니다.
 - `Cluar.plainHTML(항목)` — 모든 HTML 태그를 제거합니다.
-- `Cluar.dictionaryNoParagraph(항목)` — `<p>` 태그만 제거합니다 (`plainTitle`과 동일).
+- `Cluar.translationNoParagraph(항목)` — `<p>` 태그만 제거합니다 (`plainTitle`과 동일).
 
 ## 다음 단계
 

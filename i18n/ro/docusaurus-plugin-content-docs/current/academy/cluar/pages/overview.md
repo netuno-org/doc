@@ -7,6 +7,8 @@ sidebar_label: Prezentare generală
 
 **Pagina** este entitatea centrală din CLUAR: reprezintă un URL al site-ului web. Fiecare pagină aparține unei singure limbi — nu există o singură pagină „multilingvă”, fiecare limbă are propria pagină (cu propriul `link`, titlu, conținut etc.), iar acestea sunt legate între ele doar prin acțiunea de [clonare](/docs/academy/cluar/pages/cloning).
 
+Fiecare pagină aparține unei organizații. Paginile pot avea subpagini și, în mod implicit, aparțin organizației paginii părinte.
+
 ## Câmpuri
 
 | Câmp | Descriere |

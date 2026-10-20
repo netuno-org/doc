@@ -7,6 +7,8 @@ sidebar_label: Przegląd
 
 **Strona** to centralny element CLUAR: reprezentuje adres URL w witrynie. Każda strona należy do jednego języka — nie istnieje jedna „wielojęzyczna” strona; każdy język ma własną stronę (z własnym `link`, tytułem, treścią itp.), a są one ze sobą powiązane wyłącznie przez akcję [klonowania](/docs/academy/cluar/pages/cloning).
 
+Każda strona należy do organizacji. Strony mogą mieć podstrony i domyślnie należą do organizacji strony nadrzędnej.
+
 ## Pola
 
 | Pole | Opis |

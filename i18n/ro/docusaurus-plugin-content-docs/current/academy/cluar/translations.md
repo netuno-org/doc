@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-id: dictionaries
+id: translations
 title: Dicționare
 sidebar_label: Dicționare
 ---
@@ -13,8 +13,8 @@ Cum se traduc textele fixe ale interfeței site-ului.
 
 Implică două formulare în backoffice:
 
-- **Intrare** (`dictionary_entry`)
-- **Dicționar** (`dictionary`)
+- **Intrare** (`translation_entry`)
+- **Dicționar** (`translation`)
 
 ## Intrare
 
@@ -32,11 +32,11 @@ Spre deosebire de [Configurări](/docs/academy/cluar/settings), Dicționarul **n
 
 Clasa `website/src/common/Cluar.js` pune la dispoziție funcții pentru citirea intrărilor din dicționar, toate returnând codul intrării ca rezultat dacă nu există traducere (util pentru a observa traducerile lipsă):
 
-- `Cluar.dictionary(intrare)` — obține valoarea tradusă în limba curentă, exact așa cum a fost salvată (poate include HTML).
-- `Cluar.plainDictionary(intrare)` — la fel, dar elimină etichetele `<p>` și `<br>`. Este cea mai utilizată în etichetele interfeței (butoane, câmpuri de formular, notificări).
+- `Cluar.translation(intrare)` — obține valoarea tradusă în limba curentă, exact așa cum a fost salvată (poate include HTML).
+- `Cluar.plainTranslation(intrare)` — la fel, dar elimină etichetele `<p>` și `<br>`. Este cea mai utilizată în etichetele interfeței (butoane, câmpuri de formular, notificări).
 - `Cluar.plainTitle(intrare)` — la fel, dar elimină doar etichetele `<p>`.
 - `Cluar.plainHTML(intrare)` — elimină toate etichetele HTML.
-- `Cluar.dictionaryNoParagraph(intrare)` — elimină doar etichetele `<p>` (echivalent cu `plainTitle`).
+- `Cluar.translationNoParagraph(intrare)` — elimină doar etichetele `<p>` (echivalent cu `plainTitle`).
 
 ## Pasul următor
 

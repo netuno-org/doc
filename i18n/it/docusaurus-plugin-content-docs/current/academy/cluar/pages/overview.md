@@ -7,6 +7,8 @@ sidebar_label: Panoramica
 
 La **Pagina** è l'entità centrale di CLUAR: rappresenta un URL del sito web. Ogni pagina appartiene a una sola lingua — non esiste un'unica pagina "multilingue", ogni lingua ha la propria pagina (con il proprio `link`, titolo, contenuto, ecc.), e sono collegate tra loro solo tramite l'azione di [clonazione](/docs/academy/cluar/pages/cloning).
 
+Ogni pagina appartiene a un'organizzazione. Le pagine possono avere sottopagine e, per impostazione predefinita, appartengono all'organizzazione della pagina padre.
+
 ## Campi
 
 | Campo | Descrizione |

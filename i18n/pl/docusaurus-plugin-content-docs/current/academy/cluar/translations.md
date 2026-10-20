@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-id: dictionaries
+id: translations
 title: Słowniki
 sidebar_label: Słowniki
 ---
@@ -13,8 +13,8 @@ Jak tłumaczyć stałe teksty interfejsu strony internetowej.
 
 Obejmuje dwa formularze w backoffice:
 
-- **Wpis** (`dictionary_entry`)
-- **Słownik** (`dictionary`)
+- **Wpis** (`translation_entry`)
+- **Słownik** (`translation`)
 
 ## Wpis
 
@@ -32,11 +32,11 @@ W przeciwieństwie do [Konfiguracji](/docs/academy/cluar/settings), Słownik **n
 
 Klasa `website/src/common/Cluar.js` udostępnia funkcje do odczytu wpisów słownika; wszystkie zwracają kod wpisu, jeśli nie ma tłumaczenia (przydatne do zauważenia brakujących tłumaczeń):
 
-- `Cluar.dictionary(wpis)` — pobiera przetłumaczoną wartość w bieżącym języku, w postaci zapisanej (może zawierać HTML).
-- `Cluar.plainDictionary(wpis)` — to samo, ale usuwa znaczniki `<p>` i `<br>`. Jest najczęściej używana w etykietach interfejsu (przyciski, pola formularzy, powiadomienia).
+- `Cluar.translation(wpis)` — pobiera przetłumaczoną wartość w bieżącym języku, w postaci zapisanej (może zawierać HTML).
+- `Cluar.plainTranslation(wpis)` — to samo, ale usuwa znaczniki `<p>` i `<br>`. Jest najczęściej używana w etykietach interfejsu (przyciski, pola formularzy, powiadomienia).
 - `Cluar.plainTitle(wpis)` — to samo, ale usuwa tylko znaczniki `<p>`.
 - `Cluar.plainHTML(wpis)` — usuwa wszystkie znaczniki HTML.
-- `Cluar.dictionaryNoParagraph(wpis)` — usuwa tylko znaczniki `<p>` (odpowiednik `plainTitle`).
+- `Cluar.translationNoParagraph(wpis)` — usuwa tylko znaczniki `<p>` (odpowiednik `plainTitle`).
 
 ## Następny krok
 

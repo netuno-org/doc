@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-id: dictionaries
+id: translations
 title: 辞書
 sidebar_label: 辞書
 ---
@@ -13,8 +13,8 @@ sidebar_label: 辞書
 
 バックオフィスの2つのフォームが関係します:
 
-- **エントリ** (`dictionary_entry`)
-- **辞書** (`dictionary`)
+- **エントリ** (`translation_entry`)
+- **辞書** (`translation`)
 
 ## エントリ
 
@@ -32,11 +32,11 @@ sidebar_label: 辞書
 
 クラス `website/src/common/Cluar.js` は、辞書のエントリを読み取る関数を提供しており、翻訳が存在しない場合はすべてエントリのコードを結果として返します（翻訳漏れに気づくのに便利です）:
 
-- `Cluar.dictionary(エントリ)` — 現在の言語で翻訳された値を、保存されたとおりに取得します（HTMLを含む場合があります）。
-- `Cluar.plainDictionary(エントリ)` — 同じですが、`<p>` と `<br>` タグを削除します。インターフェースのラベル（ボタン、フォームフィールド、通知）で最もよく使われます。
+- `Cluar.translation(エントリ)` — 現在の言語で翻訳された値を、保存されたとおりに取得します（HTMLを含む場合があります）。
+- `Cluar.plainTranslation(エントリ)` — 同じですが、`<p>` と `<br>` タグを削除します。インターフェースのラベル（ボタン、フォームフィールド、通知）で最もよく使われます。
 - `Cluar.plainTitle(エントリ)` — 同じですが、`<p>` タグのみを削除します。
 - `Cluar.plainHTML(エントリ)` — すべてのHTMLタグを削除します。
-- `Cluar.dictionaryNoParagraph(エントリ)` — `<p>` タグのみを削除します（`plainTitle` と同等）。
+- `Cluar.translationNoParagraph(エントリ)` — `<p>` タグのみを削除します（`plainTitle` と同等）。
 
 ## 次のステップ
 

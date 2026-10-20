@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-id: dictionaries
+id: translations
 title: Dizionari
 sidebar_label: Dizionari
 ---
@@ -13,8 +13,8 @@ Come tradurre i testi fissi dell'interfaccia del sito web.
 
 Coinvolge due formulari nel backoffice:
 
-- **Voce** (`dictionary_entry`)
-- **Dizionario** (`dictionary`)
+- **Voce** (`translation_entry`)
+- **Dizionario** (`translation`)
 
 ## Voce
 
@@ -32,11 +32,11 @@ A differenza delle [Impostazioni](/docs/academy/cluar/settings), il Dizionario *
 
 La classe `website/src/common/Cluar.js` mette a disposizione funzioni per leggere voci del dizionario, tutte restituendo il codice della voce come risultato se non c'è traduzione (utile per notare traduzioni mancanti):
 
-- `Cluar.dictionary(voce)` — ottiene il valore tradotto nella lingua corrente, così come è stato salvato (può includere HTML).
-- `Cluar.plainDictionary(voce)` — uguale, ma rimuove i tag `<p>` e `<br>`. È la più usata nelle etichette dell'interfaccia (pulsanti, campi di formulario, notifiche).
+- `Cluar.translation(voce)` — ottiene il valore tradotto nella lingua corrente, così come è stato salvato (può includere HTML).
+- `Cluar.plainTranslation(voce)` — uguale, ma rimuove i tag `<p>` e `<br>`. È la più usata nelle etichette dell'interfaccia (pulsanti, campi di formulario, notifiche).
 - `Cluar.plainTitle(voce)` — uguale, ma rimuove solo i tag `<p>`.
 - `Cluar.plainHTML(voce)` — rimuove tutti i tag HTML.
-- `Cluar.dictionaryNoParagraph(voce)` — rimuove solo i tag `<p>` (equivalente a `plainTitle`).
+- `Cluar.translationNoParagraph(voce)` — rimuove solo i tag `<p>` (equivalente a `plainTitle`).
 
 ## Prossimo passo
 

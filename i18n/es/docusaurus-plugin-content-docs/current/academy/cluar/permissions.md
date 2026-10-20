@@ -13,19 +13,12 @@ CLUAR controla el acceso al backoffice mediante **roles** (grupos), asignados a 
 
 ## Roles
 
-Existen 5 roles precreados (`user_group`):
+There are 2 pre-created roles (`user_group`):
 
-| Código | Nombre |
+| Code | Name |
 |---|---|
-| `administrator` | Administrador |
+| `administrator` | Administrator |
 | `editor` | Editor |
-| `author` | Autor |
-| `contributor` | Colaborador |
-| `subscriber` | Suscriptor |
-
-:::info No todos los roles tienen permisos asignados todavía
-Hoy, solo **Administrador** y **Editor** tienen acceso a algo realmente: son los únicos roles referenciados en las reglas de acceso (ver abajo). Autor, Colaborador y Suscriptor ya existen como opción en el formulario, pero aún no tienen ningún acceso configurado; asignar uno de estos roles a alguien no le da, hoy, acceso a nada en el backoffice.
-:::
 
 ## Organización
 
@@ -75,7 +68,7 @@ En ambos casos, la persona creada ya puede entrar en `/login` y tener acceso al 
 
 ## Cómo se aplican los permisos
 
-Cada servicio del servidor se clasifica en una de estas categorías, definidas en `server/core/_service_config.js`:
+Cada servicio del servidor se clasifica en una de estas categorías, definidas en `server/core/cluar.permission.*`:
 
 | Categoría | Quién tiene acceso | Ejemplos |
 |---|---|---|
@@ -87,7 +80,7 @@ Cada servicio del servidor se clasifica en una de estas categorías, definidas e
 Cualquier servicio que no esté listado en una de estas categorías se **deniega por defecto**; es una decisión deliberada del código (comentada explícitamente en el archivo), para que olvidar clasificar un servicio nuevo dé como resultado un bloqueo, y no un acceso libre por descuido.
 
 :::info Los permisos no se aplican en el entorno de desarrollo
-En el entorno `dev`, `_service_config.js` libera todos los servicios nada más empezar, antes de cualquier comprobación; es decir, **los permisos solo se aplican realmente en producción/staging**. Al probar localmente, cualquier usuario con sesión iniciada tiene acceso a todo, independientemente del rol.
+En el entorno `dev`, `cluar.permission.*` libera todos los servicios nada más empezar, antes de cualquier comprobación; es decir, **los permisos solo se aplican realmente en producción/staging**. Al probar localmente, cualquier usuario con sesión iniciada tiene acceso a todo, independientemente del rol.
 :::
 
 ## Interfaz: el menú también filtra por permisos
@@ -95,11 +88,11 @@ En el entorno `dev`, `_service_config.js` libera todos los servicios nada más e
 Además del bloqueo en el servidor, el menú lateral de la Área Reservada (`website/src/components/SideMenu`) también filtra los elementos visibles según el rol de la persona con sesión iniciada, para no mostrar opciones que no tendría permiso para usar.
 
 :::info Mantener las dos listas sincronizadas
-La lista de «quién puede ver qué» en `SideMenu` se mantiene alineada manualmente con `CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS` y `ACCESS_MANAGEMENT_PATHS` de `_service_config.js`: son dos listas separadas, una en el frontend y otra en el backend. Al añadir un nuevo servicio protegido, hay que actualizar las dos; cambiar solo el servidor oculta el error (el menú sigue mostrando una opción que en la práctica se denegará), y cambiar solo el menú no protege nada en realidad.
+La lista de «quién puede ver qué» en `SideMenu` se mantiene alineada manualmente con `cluar.permission.*`, `cluar.permission.*` y `cluar.permission.*` de `cluar.permission.*`: son dos listas separadas, una en el frontend y otra en el backend. Al añadir un nuevo servicio protegido, hay que actualizar las dos; cambiar solo el servidor oculta el error (el menú sigue mostrando una opción que en la práctica se denegará), y cambiar solo el menú no protege nada en realidad.
 :::
 
 ## Cómo proteger un nuevo servicio
 
 1. Crea el servicio con normalidad en `server/services/`.
-2. Añade la ruta del servicio (`path/method`) a la lista correcta en `server/core/_service_config.js` —`CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS` o `ACCESS_MANAGEMENT_PATHS`— según quién deba poder usarlo. Si es público, añádelo a `PUBLIC_PATHS`.
+2. Añade la ruta del servicio (`path/method`) a la lista correcta en `server/core/cluar.permission.*` —`cluar.permission.*`, `cluar.permission.*` o `cluar.permission.*`— según quién deba poder usarlo. Si es público, añádelo a `cluar.permission.*`.
 3. Si el servicio tiene un elemento correspondiente en el menú de la Área Reservada, actualiza también el `SideMenu` para que el filtro coincida con el permiso real.

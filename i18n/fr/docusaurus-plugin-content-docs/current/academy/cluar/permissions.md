@@ -75,7 +75,7 @@ Dans les deux cas, la personne créée peut déjà se connecter à `/login` et a
 
 ## Comment les permissions sont appliquées
 
-Chaque service du serveur est classé dans l'une de ces catégories, définies dans `server/core/_service_config.js` :
+Chaque service du serveur est classé dans l'une de ces catégories, définies dans `server/core/cluar.permission.*` :
 
 | Catégorie | Qui a accès | Exemples |
 |---|---|---|
@@ -87,7 +87,7 @@ Chaque service du serveur est classé dans l'une de ces catégories, définies d
 Tout service qui n'est pas listé dans l'une de ces catégories est **refusé par défaut** — il s'agit d'une décision délibérée du code (commentée explicitement dans le fichier), afin qu'oublier de classer un nouveau service entraîne un blocage, et non un accès libre par négligence.
 
 :::info Les permissions ne sont pas appliquées en environnement de développement
-En environnement `dev`, le fichier `_service_config.js` libère tous les services dès le début, avant toute vérification — autrement dit, **les permissions ne sont réellement appliquées qu'en production/staging**. Lors de tests locaux, tout utilisateur connecté a accès à tout, quel que soit son rôle.
+En environnement `dev`, le fichier `cluar.permission.*` libère tous les services dès le début, avant toute vérification — autrement dit, **les permissions ne sont réellement appliquées qu'en production/staging**. Lors de tests locaux, tout utilisateur connecté a accès à tout, quel que soit son rôle.
 :::
 
 ## Interface : le menu filtre aussi selon la permission
@@ -95,11 +95,11 @@ En environnement `dev`, le fichier `_service_config.js` libère tous les service
 Outre le blocage côté serveur, le menu latéral de la Zone Réservée (`website/src/components/SideMenu`) filtre également les éléments visibles en fonction du rôle de la personne connectée — afin de ne pas afficher des options qu'elle n'aurait pas la permission d'utiliser.
 
 :::info Garder les deux listes synchronisées
-La liste de « qui peut voir quoi » dans `SideMenu` est maintenue manuellement en phase avec `CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS` et `ACCESS_MANAGEMENT_PATHS` du `_service_config.js` — ce sont deux listes séparées, une dans le frontend et une dans le backend. Lors de l'ajout d'un nouveau service protégé, il faut mettre à jour les deux ; ne changer que le serveur masque l'erreur (le menu continue d'afficher une option qui, en pratique, sera refusée), et ne changer que le menu ne protège rien de facto.
+La liste de « qui peut voir quoi » dans `SideMenu` est maintenue manuellement en phase avec `cluar.permission.*`, `cluar.permission.*` et `cluar.permission.*` du `cluar.permission.*` — ce sont deux listes séparées, une dans le frontend et une dans le backend. Lors de l'ajout d'un nouveau service protégé, il faut mettre à jour les deux ; ne changer que le serveur masque l'erreur (le menu continue d'afficher une option qui, en pratique, sera refusée), et ne changer que le menu ne protège rien de facto.
 :::
 
 ## Comment protéger un nouveau service
 
 1. Créez le service normalement dans `server/services/`.
-2. Ajoutez le chemin du service (`path/method`) à la liste correcte dans `server/core/_service_config.js` — `CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS` ou `ACCESS_MANAGEMENT_PATHS` — selon qui doit pouvoir l'utiliser. S'il est public, ajoutez-le à `PUBLIC_PATHS`.
+2. Ajoutez le chemin du service (`path/method`) à la liste correcte dans `server/core/cluar.permission.*` — `cluar.permission.*`, `cluar.permission.*` ou `cluar.permission.*` — selon qui doit pouvoir l'utiliser. S'il est public, ajoutez-le à `cluar.permission.*`.
 3. Si le service a un élément correspondant dans le menu de la Zone Réservée, mettez également à jour le `SideMenu` pour que le filtre corresponde à la permission réelle.

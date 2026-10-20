@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-id: dictionaries
+id: translations
 title: Wörterbücher
 sidebar_label: Wörterbücher
 ---
@@ -13,8 +13,8 @@ Wie die festen Texte der Website-Oberfläche übersetzt werden.
 
 Es umfasst zwei Formulare im Backoffice:
 
-- **Eintrag** (`dictionary_entry`)
-- **Wörterbuch** (`dictionary`)
+- **Eintrag** (`translation_entry`)
+- **Wörterbuch** (`translation`)
 
 ## Eintrag
 
@@ -32,11 +32,11 @@ Anders als bei den [Einstellungen](/docs/academy/cluar/settings) hat das Wörter
 
 Die Klasse `website/src/common/Cluar.js` stellt Funktionen zum Lesen von Wörterbucheinträgen bereit; alle geben den Code des Eintrags als Ergebnis zurück, wenn keine Übersetzung vorhanden ist (nützlich, um fehlende Übersetzungen zu bemerken):
 
-- `Cluar.dictionary(eintrag)` – ruft den übersetzten Wert in der aktuellen Sprache ab, so wie er gespeichert wurde (kann HTML enthalten).
-- `Cluar.plainDictionary(eintrag)` – dasselbe, entfernt aber Tags `<p>` und `<br>`. Wird am häufigsten in Oberflächenbeschriftungen verwendet (Schaltflächen, Formularfelder, Benachrichtigungen).
+- `Cluar.translation(eintrag)` – ruft den übersetzten Wert in der aktuellen Sprache ab, so wie er gespeichert wurde (kann HTML enthalten).
+- `Cluar.plainTranslation(eintrag)` – dasselbe, entfernt aber Tags `<p>` und `<br>`. Wird am häufigsten in Oberflächenbeschriftungen verwendet (Schaltflächen, Formularfelder, Benachrichtigungen).
 - `Cluar.plainTitle(eintrag)` – dasselbe, entfernt aber nur Tags `<p>`.
 - `Cluar.plainHTML(eintrag)` – entfernt alle HTML-Tags.
-- `Cluar.dictionaryNoParagraph(eintrag)` – entfernt nur Tags `<p>` (entspricht `plainTitle`).
+- `Cluar.translationNoParagraph(eintrag)` – entfernt nur Tags `<p>` (entspricht `plainTitle`).
 
 ## Nächster Schritt
 

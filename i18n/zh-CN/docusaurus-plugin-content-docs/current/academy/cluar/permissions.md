@@ -75,7 +75,7 @@ CLUAR 的 `server/setup/030-people.js` 默认已经创建了一个与 `id: 2` �
 
 ## 权限如何生效
 
-服务器上的每个服务都被归入以下类别之一，这些类别在 `server/core/_service_config.js` 中定义：
+服务器上的每个服务都被归入以下类别之一，这些类别在 `server/core/cluar.permission.*` 中定义：
 
 | 类别 | 谁可以访问 | 示例 |
 |---|---|---|
@@ -87,7 +87,7 @@ CLUAR 的 `server/setup/030-people.js` 默认已经创建了一个与 `id: 2` �
 任何未列入这些类别的服务都**默认被拒绝** —— 这是代码中有意为之的决定（文件中已明确注释），以便在忘记归类某个新服务时导致阻塞，而不是因疏忽而开放访问。
 
 :::info 权限在开发环境中不生效
-在 `dev` 环境中，`_service_config.js` 会在任何校验之前就放开所有服务 —— 也就是说，**权限只在生产/预发布环境中才真正生效**。在本地测试时，任何已登录用户都可以访问一切，无论其角色如何。
+在 `dev` 环境中，`cluar.permission.*` 会在任何校验之前就放开所有服务 —— 也就是说，**权限只在生产/预发布环境中才真正生效**。在本地测试时，任何已登录用户都可以访问一切，无论其角色如何。
 :::
 
 ## 界面：菜单也会按权限过滤
@@ -95,11 +95,11 @@ CLUAR 的 `server/setup/030-people.js` 默认已经创建了一个与 `id: 2` �
 除了服务器端的封锁之外，保留区域的侧边菜单（`website/src/components/SideMenu`）也会根据已登录人员的角色过滤可见项目 —— 以免显示该人员无权使用的选项。
 
 :::info 保持两份列表同步
-`SideMenu` 中的“谁能看到什么”列表是手动与 `_service_config.js` 中的 `CONTENT_MANAGEMENT_PATHS`、`SITE_ADMIN_PATHS` 和 `ACCESS_MANAGEMENT_PATHS` 保持一致的 —— 它们是两份独立的列表，一份在前端，一份在后端。添加新的受保护服务时，需要同时更新两者；只改服务器会掩盖错误（菜单仍会显示一个实际上会被拒绝的选项），而只改菜单则实际上起不到任何保护作用。
+`SideMenu` 中的“谁能看到什么”列表是手动与 `cluar.permission.*` 中的 `cluar.permission.*`、`cluar.permission.*` 和 `cluar.permission.*` 保持一致的 —— 它们是两份独立的列表，一份在前端，一份在后端。添加新的受保护服务时，需要同时更新两者；只改服务器会掩盖错误（菜单仍会显示一个实际上会被拒绝的选项），而只改菜单则实际上起不到任何保护作用。
 :::
 
 ## 如何保护新服务
 
 1. 照常在 `server/services/` 中创建服务。
-2. 将服务的路径（`path/method`）添加到 `server/core/_service_config.js` 中正确的列表 —— `CONTENT_MANAGEMENT_PATHS`、`SITE_ADMIN_PATHS` 或 `ACCESS_MANAGEMENT_PATHS` —— 视谁应当能够使用它而定。如果是公开的，则添加到 `PUBLIC_PATHS`。
+2. 将服务的路径（`path/method`）添加到 `server/core/cluar.permission.*` 中正确的列表 —— `cluar.permission.*`、`cluar.permission.*` 或 `cluar.permission.*` —— 视谁应当能够使用它而定。如果是公开的，则添加到 `cluar.permission.*`。
 3. 如果该服务在保留区域的菜单中有对应项，还要更新 `SideMenu`，以使过滤结果与实际权限一致。

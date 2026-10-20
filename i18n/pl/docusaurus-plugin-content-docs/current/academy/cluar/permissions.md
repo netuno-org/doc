@@ -75,7 +75,7 @@ W obu przypadkach utworzona osoba może od razu zalogować się do `/login` i uz
 
 ## Jak stosowane są uprawnienia
 
-Każda usługa serwera jest klasyfikowana do jednej z tych kategorii zdefiniowanych w `server/core/_service_config.js`:
+Każda usługa serwera jest klasyfikowana do jednej z tych kategorii zdefiniowanych w `server/core/cluar.permission.*`:
 
 | Kategoria | Kto ma dostęp | Przykłady |
 |---|---|---|
@@ -87,7 +87,7 @@ Każda usługa serwera jest klasyfikowana do jednej z tych kategorii zdefiniowan
 Każda usługa niewymieniona w żadnej z tych kategorii jest **domyślnie odrzucana** — to celowa decyzja w kodzie (wyraźnie skomentowana w pliku), aby zapomnienie o sklasyfikowaniu nowej usługi skutkowało zablokowaniem, a nie przypadkowym wolnym dostępem.
 
 :::info Uprawnienia nie są stosowane w środowisku deweloperskim
-W środowisku `dev` plik `_service_config.js` zwalnia wszystkie usługi od razu na początku, przed jakąkolwiek weryfikacją — czyli **uprawnienia są naprawdę stosowane tylko w środowisku produkcyjnym/staging**. Podczas testów lokalnych każdy zalogowany użytkownik ma dostęp do wszystkiego, niezależnie od roli.
+W środowisku `dev` plik `cluar.permission.*` zwalnia wszystkie usługi od razu na początku, przed jakąkolwiek weryfikacją — czyli **uprawnienia są naprawdę stosowane tylko w środowisku produkcyjnym/staging**. Podczas testów lokalnych każdy zalogowany użytkownik ma dostęp do wszystkiego, niezależnie od roli.
 :::
 
 ## Interfejs: menu również filtruje według uprawnień
@@ -95,11 +95,11 @@ W środowisku `dev` plik `_service_config.js` zwalnia wszystkie usługi od razu 
 Oprócz blokady po stronie serwera, menu boczne Strefy zastrzeżonej (`website/src/components/SideMenu`) również filtruje widoczne pozycje zgodnie z rolą zalogowanej osoby — aby nie pokazywać opcji, których nie miałaby ona uprawnień używać.
 
 :::info Utrzymuj obie listy zsynchronizowane
-Lista „kto może co widzieć” w `SideMenu` jest ręcznie utrzymywana w zgodzie z `CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS` i `ACCESS_MANAGEMENT_PATHS` z `_service_config.js` — to dwie osobne listy, jedna we frontendzie, druga w backendzie. Przy dodawaniu nowej chronionej usługi trzeba zaktualizować obie; zmiana tylko serwera ukrywa błąd (menu nadal pokazuje opcję, która w praktyce zostanie odrzucona), a zmiana tylko menu tak naprawdę niczego nie chroni.
+Lista „kto może co widzieć” w `SideMenu` jest ręcznie utrzymywana w zgodzie z `cluar.permission.*`, `cluar.permission.*` i `cluar.permission.*` z `cluar.permission.*` — to dwie osobne listy, jedna we frontendzie, druga w backendzie. Przy dodawaniu nowej chronionej usługi trzeba zaktualizować obie; zmiana tylko serwera ukrywa błąd (menu nadal pokazuje opcję, która w praktyce zostanie odrzucona), a zmiana tylko menu tak naprawdę niczego nie chroni.
 :::
 
 ## Jak chronić nową usługę
 
 1. Utwórz usługę normalnie w `server/services/`.
-2. Dodaj ścieżkę usługi (`path/method`) do właściwej listy w `server/core/_service_config.js` — `CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS` lub `ACCESS_MANAGEMENT_PATHS` — w zależności od tego, kto powinien móc jej używać. Jeśli usługa jest publiczna, dodaj ją do `PUBLIC_PATHS`.
+2. Dodaj ścieżkę usługi (`path/method`) do właściwej listy w `server/core/cluar.permission.*` — `cluar.permission.*`, `cluar.permission.*` lub `cluar.permission.*` — w zależności od tego, kto powinien móc jej używać. Jeśli usługa jest publiczna, dodaj ją do `cluar.permission.*`.
 3. Jeśli usługa ma odpowiadającą jej pozycję w menu Strefy zastrzeżonej, zaktualizuj także `SideMenu`, aby filtr odpowiadał rzeczywistemu uprawnieniu.

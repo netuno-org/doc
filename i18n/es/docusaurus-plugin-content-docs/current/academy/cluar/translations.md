@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-id: dictionaries
+id: translations
 title: Diccionarios
 sidebar_label: Diccionarios
 ---
@@ -13,8 +13,8 @@ Cómo traducir los textos fijos de la interfaz del sitio web.
 
 Involucra dos formularios en el backoffice:
 
-- **Entrada** (`dictionary_entry`)
-- **Diccionario** (`dictionary`)
+- **Entrada** (`translation_entry`)
+- **Diccionario** (`translation`)
 
 ## Entrada
 
@@ -32,11 +32,11 @@ A diferencia de las [Configuraciones](/docs/academy/cluar/settings), el Dicciona
 
 La clase `website/src/common/Cluar.js` proporciona funciones para leer entradas del diccionario, todas devolviendo el código de la entrada como resultado si no hay traducción (útil para detectar traducciones que faltan):
 
-- `Cluar.dictionary(entrada)` — obtiene el valor traducido en el idioma actual, tal como se guardó (puede incluir HTML).
-- `Cluar.plainDictionary(entrada)` — igual, pero elimina las etiquetas `<p>` y `<br>`. Es la más usada en etiquetas de interfaz (botones, campos de formulario, notificaciones).
+- `Cluar.translation(entrada)` — obtiene el valor traducido en el idioma actual, tal como se guardó (puede incluir HTML).
+- `Cluar.plainTranslation(entrada)` — igual, pero elimina las etiquetas `<p>` y `<br>`. Es la más usada en etiquetas de interfaz (botones, campos de formulario, notificaciones).
 - `Cluar.plainTitle(entrada)` — igual, pero elimina solo las etiquetas `<p>`.
 - `Cluar.plainHTML(entrada)` — elimina todas las etiquetas HTML.
-- `Cluar.dictionaryNoParagraph(entrada)` — elimina solo las etiquetas `<p>` (equivalente a `plainTitle`).
+- `Cluar.translationNoParagraph(entrada)` — elimina solo las etiquetas `<p>` (equivalente a `plainTitle`).
 
 ## Siguiente paso
 

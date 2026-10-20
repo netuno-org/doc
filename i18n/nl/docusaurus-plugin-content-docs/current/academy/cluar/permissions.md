@@ -75,7 +75,7 @@ In beide gevallen kan de aangemaakte persoon al inloggen op `/login` en toegang 
 
 ## Hoe machtigingen worden toegepast
 
-Elke service van de server wordt ingedeeld in een van deze categorieën, gedefinieerd in `server/core/_service_config.js`:
+Elke service van de server wordt ingedeeld in een van deze categorieën, gedefinieerd in `server/core/cluar.permission.*`:
 
 | Categorie | Wie heeft toegang | Voorbeelden |
 |---|---|---|
@@ -87,7 +87,7 @@ Elke service van de server wordt ingedeeld in een van deze categorieën, gedefin
 Elke service die niet in een van deze categorieën staat, wordt **standaard geweigerd** — een bewuste keuze in de code (expliciet als commentaar in het bestand vermeld), zodat vergeten een nieuwe service te classificeren tot blokkering leidt, en niet tot vrije toegang door onoplettendheid.
 
 :::info Machtigingen worden niet toegepast in de ontwikkelomgeving
-In de `dev`-omgeving geeft `_service_config.js` alle services meteen aan het begin vrij, vóór enige controle — met andere woorden, **de machtigingen worden alleen echt toegepast in productie/staging**. Bij lokaal testen heeft elke ingelogde gebruiker toegang tot alles, ongeacht de rol.
+In de `dev`-omgeving geeft `cluar.permission.*` alle services meteen aan het begin vrij, vóór enige controle — met andere woorden, **de machtigingen worden alleen echt toegepast in productie/staging**. Bij lokaal testen heeft elke ingelogde gebruiker toegang tot alles, ongeacht de rol.
 :::
 
 ## Interface: het menu filtert ook op machtiging
@@ -95,11 +95,11 @@ In de `dev`-omgeving geeft `_service_config.js` alle services meteen aan het beg
 Naast de blokkering op de server filtert ook het zijmenu van het besloten gedeelte (`website/src/components/SideMenu`) de zichtbare items op basis van de rol van de ingelogde persoon — om geen opties te tonen die deze persoon niet zou mogen gebruiken.
 
 :::info Houd de twee lijsten gesynchroniseerd
-De lijst met 'wie wat mag zien' in de `SideMenu` wordt handmatig afgestemd op `CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS` en `ACCESS_MANAGEMENT_PATHS` uit `_service_config.js` — het zijn twee afzonderlijke lijsten, één in de frontend en één in de backend. Bij het toevoegen van een nieuwe beveiligde service moeten beide worden bijgewerkt; alleen de server aanpassen verbergt de fout (het menu blijft een optie tonen die in de praktijk wordt geweigerd), en alleen het menu aanpassen beveiligt feitelijk niets.
+De lijst met 'wie wat mag zien' in de `SideMenu` wordt handmatig afgestemd op `cluar.permission.*`, `cluar.permission.*` en `cluar.permission.*` uit `cluar.permission.*` — het zijn twee afzonderlijke lijsten, één in de frontend en één in de backend. Bij het toevoegen van een nieuwe beveiligde service moeten beide worden bijgewerkt; alleen de server aanpassen verbergt de fout (het menu blijft een optie tonen die in de praktijk wordt geweigerd), en alleen het menu aanpassen beveiligt feitelijk niets.
 :::
 
 ## Hoe een nieuwe service te beveiligen
 
 1. Maak de service normaal aan in `server/services/`.
-2. Voeg het pad van de service (`path/method`) toe aan de juiste lijst in `server/core/_service_config.js` — `CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS` of `ACCESS_MANAGEMENT_PATHS` — afhankelijk van wie hem moet kunnen gebruiken. Als de service openbaar is, voeg je hem toe aan `PUBLIC_PATHS`.
+2. Voeg het pad van de service (`path/method`) toe aan de juiste lijst in `server/core/cluar.permission.*` — `cluar.permission.*`, `cluar.permission.*` of `cluar.permission.*` — afhankelijk van wie hem moet kunnen gebruiken. Als de service openbaar is, voeg je hem toe aan `cluar.permission.*`.
 3. Als de service een overeenkomstig item in het menu van het besloten gedeelte heeft, werk dan ook de `SideMenu` bij zodat het filter overeenkomt met de werkelijke machtiging.

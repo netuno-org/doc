@@ -75,7 +75,7 @@ Există două căi posibile:
 
 ## Cum sunt aplicate permisiunile
 
-Fiecare serviciu al serverului este clasificat într-una dintre aceste categorii, definite în `server/core/_service_config.js`:
+Fiecare serviciu al serverului este clasificat într-una dintre aceste categorii, definite în `server/core/cluar.permission.*`:
 
 | Categorie | Cine are acces | Exemple |
 |---|---|---|
@@ -87,7 +87,7 @@ Fiecare serviciu al serverului este clasificat într-una dintre aceste categorii
 Orice serviciu care nu este listat într-una dintre aceste categorii este **refuzat implicit** — este o decizie deliberată a codului (comentată explicit în fișier), astfel încât uitarea clasificării unui serviciu nou să ducă la blocare, nu la acces liber din neatenție.
 
 :::info Permisiunile nu sunt aplicate în mediul de dezvoltare
-În mediul `dev`, `_service_config.js` eliberează toate serviciile chiar de la început, înainte de orice verificare — cu alte cuvinte, **permisiunile sunt aplicate cu adevărat doar în producție/staging**. La testarea locală, orice utilizator autentificat are acces la tot, indiferent de rol.
+În mediul `dev`, `cluar.permission.*` eliberează toate serviciile chiar de la început, înainte de orice verificare — cu alte cuvinte, **permisiunile sunt aplicate cu adevărat doar în producție/staging**. La testarea locală, orice utilizator autentificat are acces la tot, indiferent de rol.
 :::
 
 ## Interfața: meniul filtrează și după permisiune
@@ -95,11 +95,11 @@ Orice serviciu care nu este listat într-una dintre aceste categorii este **refu
 Pe lângă blocarea la nivelul serverului, meniul lateral din Zona Rezervată (`website/src/components/SideMenu`) filtrează de asemenea elementele vizibile în funcție de rolul persoanei autentificate — pentru a nu afișa opțiuni pe care aceasta nu ar avea permisiunea să le folosească.
 
 :::info Menține cele două liste sincronizate
-Lista „cine poate vedea ce” din `SideMenu` este menținută manual aliniată cu `CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS` și `ACCESS_MANAGEMENT_PATHS` din `_service_config.js` — sunt două liste separate, una în frontend și alta în backend. Când adaugi un serviciu protejat nou, trebuie actualizate ambele; doar modificarea serverului ascunde eroarea (meniul continuă să afișeze o opțiune care în practică va fi refuzată), iar doar modificarea meniului nu protejează nimic în realitate.
+Lista „cine poate vedea ce” din `SideMenu` este menținută manual aliniată cu `cluar.permission.*`, `cluar.permission.*` și `cluar.permission.*` din `cluar.permission.*` — sunt două liste separate, una în frontend și alta în backend. Când adaugi un serviciu protejat nou, trebuie actualizate ambele; doar modificarea serverului ascunde eroarea (meniul continuă să afișeze o opțiune care în practică va fi refuzată), iar doar modificarea meniului nu protejează nimic în realitate.
 :::
 
 ## Cum să protejezi un serviciu nou
 
 1. Creează serviciul în mod normal în `server/services/`.
-2. Adaugă calea serviciului (`path/method`) la lista corectă din `server/core/_service_config.js` — `CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS` sau `ACCESS_MANAGEMENT_PATHS` — în funcție de cine trebuie să îl poată folosi. Dacă este public, adaugă la `PUBLIC_PATHS`.
+2. Adaugă calea serviciului (`path/method`) la lista corectă din `server/core/cluar.permission.*` — `cluar.permission.*`, `cluar.permission.*` sau `cluar.permission.*` — în funcție de cine trebuie să îl poată folosi. Dacă este public, adaugă la `cluar.permission.*`.
 3. Dacă serviciul are un element corespunzător în meniul Zonei Rezervate, actualizează și `SideMenu` pentru ca filtrul să corespundă permisiunii reale.

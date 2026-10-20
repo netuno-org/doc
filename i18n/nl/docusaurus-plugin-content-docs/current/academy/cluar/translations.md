@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-id: dictionaries
+id: translations
 title: Woordenboeken
 sidebar_label: Woordenboeken
 ---
@@ -13,8 +13,8 @@ Hoe u de vaste teksten van de website-interface vertaalt.
 
 Het omvat twee formulieren in de backoffice:
 
-- **Woordenboekitem** (`dictionary_entry`)
-- **Woordenboek** (`dictionary`)
+- **Woordenboekitem** (`translation_entry`)
+- **Woordenboek** (`translation`)
 
 ## Woordenboekitem
 
@@ -32,11 +32,11 @@ Anders dan bij de [Instellingen](/docs/academy/cluar/settings) heeft het Woorden
 
 De klasse `website/src/common/Cluar.js` biedt functies om woordenboekitems te lezen; ze retourneren allemaal de code van het item als er geen vertaling is (handig om ontbrekende vertalingen op te merken):
 
-- `Cluar.dictionary(item)` — haalt de vertaalde waarde in de huidige taal op, zoals opgeslagen (kan HTML bevatten).
-- `Cluar.plainDictionary(item)` — hetzelfde, maar verwijdert `<p>`- en `<br>`-tags. Deze wordt het meest gebruikt in interfacelabels (knoppen, formuliervelden, meldingen).
+- `Cluar.translation(item)` — haalt de vertaalde waarde in de huidige taal op, zoals opgeslagen (kan HTML bevatten).
+- `Cluar.plainTranslation(item)` — hetzelfde, maar verwijdert `<p>`- en `<br>`-tags. Deze wordt het meest gebruikt in interfacelabels (knoppen, formuliervelden, meldingen).
 - `Cluar.plainTitle(item)` — hetzelfde, maar verwijdert alleen `<p>`-tags.
 - `Cluar.plainHTML(item)` — verwijdert alle HTML-tags.
-- `Cluar.dictionaryNoParagraph(item)` — verwijdert alleen `<p>`-tags (gelijk aan `plainTitle`).
+- `Cluar.translationNoParagraph(item)` — verwijdert alleen `<p>`-tags (gelijk aan `plainTitle`).
 
 ## Volgende stap
 

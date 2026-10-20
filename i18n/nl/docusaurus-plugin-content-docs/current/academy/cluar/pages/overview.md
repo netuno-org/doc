@@ -7,6 +7,8 @@ sidebar_label: Overzicht
 
 De **Pagina** is de centrale entiteit van CLUAR: vertegenwoordigt een URL van de website. Elke pagina behoort tot één taal — er bestaat niet één "meertalige" pagina, elke taal heeft zijn eigen pagina (met zijn eigen `link`, titel, inhoud, enz.), en ze worden alleen via de [kloonactie](/docs/academy/cluar/pages/cloning) aan elkaar gekoppeld.
 
+Elke pagina behoort toe aan een organisatie. Pagina's kunnen subpagina's hebben en behoren standaard toe aan de organisatie van de bovenliggende pagina.
+
 ## Velden
 
 | Veld | Beschrijving |

@@ -75,7 +75,7 @@ In beiden Fällen kann sich die erstellte Person bereits bei `/login` anmelden u
 
 ## Wie die Berechtigungen angewendet werden
 
-Jeder Dienst des Servers wird einer der folgenden Kategorien zugeordnet, die in `server/core/_service_config.js` definiert sind:
+Jeder Dienst des Servers wird einer der folgenden Kategorien zugeordnet, die in `server/core/cluar.permission.*` definiert sind:
 
 | Kategorie | Wer Zugriff hat | Beispiele |
 |---|---|---|
@@ -87,7 +87,7 @@ Jeder Dienst des Servers wird einer der folgenden Kategorien zugeordnet, die in 
 Jeder Dienst, der in keiner dieser Kategorien aufgeführt ist, wird **standardmäßig verweigert** – das ist eine bewusste Entscheidung des Codes (explizit in der Datei kommentiert), damit das Vergessen der Klassifizierung eines neuen Dienstes zu einer Sperre und nicht versehentlich zu freiem Zugriff führt.
 
 :::info Die Berechtigungen werden in der Entwicklungsumgebung nicht angewendet
-In der Umgebung `dev` gibt `_service_config.js` alle Dienste sofort am Anfang frei, noch vor jeder Prüfung – das heißt, **die Berechtigungen werden nur in Produktion/Staging tatsächlich angewendet**. Beim lokalen Testen hat jeder angemeldete Benutzer unabhängig von seiner Rolle Zugriff auf alles.
+In der Umgebung `dev` gibt `cluar.permission.*` alle Dienste sofort am Anfang frei, noch vor jeder Prüfung – das heißt, **die Berechtigungen werden nur in Produktion/Staging tatsächlich angewendet**. Beim lokalen Testen hat jeder angemeldete Benutzer unabhängig von seiner Rolle Zugriff auf alles.
 :::
 
 ## Oberfläche: Das Menü filtert ebenfalls nach Berechtigung
@@ -95,11 +95,11 @@ In der Umgebung `dev` gibt `_service_config.js` alle Dienste sofort am Anfang fr
 Neben der Sperre auf dem Server filtert auch das Seitenmenü des Geschützten Bereichs (`website/src/components/SideMenu`) die sichtbaren Einträge entsprechend der Rolle der angemeldeten Person – damit keine Optionen angezeigt werden, für die sie keine Berechtigung hätte.
 
 :::info Die beiden Listen synchron halten
-Die Liste „wer was sehen darf“ im `SideMenu` wird manuell mit `CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS` und `ACCESS_MANAGEMENT_PATHS` aus `_service_config.js` abgeglichen – es sind zwei getrennte Listen, eine im Frontend und eine im Backend. Wenn du einen neuen geschützten Dienst hinzufügst, musst du beide aktualisieren; nur den Server zu ändern verbirgt den Fehler (das Menü zeigt weiterhin eine Option an, die in der Praxis verweigert wird), und nur das Menü zu ändern schützt tatsächlich nichts.
+Die Liste „wer was sehen darf“ im `SideMenu` wird manuell mit `cluar.permission.*`, `cluar.permission.*` und `cluar.permission.*` aus `cluar.permission.*` abgeglichen – es sind zwei getrennte Listen, eine im Frontend und eine im Backend. Wenn du einen neuen geschützten Dienst hinzufügst, musst du beide aktualisieren; nur den Server zu ändern verbirgt den Fehler (das Menü zeigt weiterhin eine Option an, die in der Praxis verweigert wird), und nur das Menü zu ändern schützt tatsächlich nichts.
 :::
 
 ## So schützt du einen neuen Dienst
 
 1. Erstelle den Dienst wie gewohnt in `server/services/`.
-2. Füge den Pfad des Dienstes (`path/method`) der richtigen Liste in `server/core/_service_config.js` hinzu – `CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS` oder `ACCESS_MANAGEMENT_PATHS` – je nachdem, wer ihn verwenden darf. Wenn er öffentlich ist, füge ihn zu `PUBLIC_PATHS` hinzu.
+2. Füge den Pfad des Dienstes (`path/method`) der richtigen Liste in `server/core/cluar.permission.*` hinzu – `cluar.permission.*`, `cluar.permission.*` oder `cluar.permission.*` – je nachdem, wer ihn verwenden darf. Wenn er öffentlich ist, füge ihn zu `cluar.permission.*` hinzu.
 3. Wenn der Dienst einen entsprechenden Eintrag im Menü des Geschützten Bereichs hat, aktualisiere auch das `SideMenu`, damit der Filter mit der tatsächlichen Berechtigung übereinstimmt.

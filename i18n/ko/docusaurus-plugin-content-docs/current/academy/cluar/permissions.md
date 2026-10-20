@@ -75,7 +75,7 @@ CLUAR의 `server/setup/030-people.js`는 기본적으로 `id: 2`인 Netuno 사�
 
 ## 권한이 적용되는 방식
 
-서버의 각 서비스는 `server/core/_service_config.js`에 정의된 다음 범주 중 하나로 분류됩니다:
+서버의 각 서비스는 `server/core/cluar.permission.*`에 정의된 다음 범주 중 하나로 분류됩니다:
 
 | 범주 | 접근 가능 대상 | 예시 |
 |---|---|---|
@@ -87,7 +87,7 @@ CLUAR의 `server/setup/030-people.js`는 기본적으로 `id: 2`인 Netuno 사�
 이 범주 중 어디에도 나열되지 않은 서비스는 **기본적으로 거부**됩니다. 이는 코드의 의도적인 결정으로(파일에 명시적으로 주석 처리됨), 새 서비스 분류를 잊어버렸을 때 부주의로 자유롭게 접근되는 대신 차단되도록 하기 위한 것입니다.
 
 :::info 개발 환경에서는 권한이 적용되지 않습니다
-`dev` 환경에서 `_service_config.js`는 어떤 검사보다도 먼저 시작 부분에서 모든 서비스를 허용합니다. 즉, **권한은 운영/스테이징 환경에서만 실제로 적용됩니다**. 로컬에서 테스트할 때는 역할과 관계없이 로그인한 모든 사용자가 모든 것에 접근할 수 있습니다.
+`dev` 환경에서 `cluar.permission.*`는 어떤 검사보다도 먼저 시작 부분에서 모든 서비스를 허용합니다. 즉, **권한은 운영/스테이징 환경에서만 실제로 적용됩니다**. 로컬에서 테스트할 때는 역할과 관계없이 로그인한 모든 사용자가 모든 것에 접근할 수 있습니다.
 :::
 
 ## 인터페이스: 메뉴도 권한으로 필터링
@@ -95,11 +95,11 @@ CLUAR의 `server/setup/030-people.js`는 기본적으로 `id: 2`인 Netuno 사�
 서버에서의 차단 외에도, 전용 영역의 사이드 메뉴(`website/src/components/SideMenu`)는 로그인한 사람의 역할에 따라 표시되는 항목을 필터링합니다. 사용 권한이 없는 옵션을 표시하지 않기 위해서입니다.
 
 :::info 두 목록을 동기화된 상태로 유지하세요
-`SideMenu`의 "누가 무엇을 볼 수 있는지" 목록은 `_service_config.js`의 `CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS`, `ACCESS_MANAGEMENT_PATHS`와 수동으로 정렬된 상태로 유지됩니다. 이들은 프런트엔드와 백엔드에 각각 하나씩 있는 별도의 목록입니다. 새 보호 서비스를 추가할 때는 두 목록을 모두 업데이트해야 합니다. 서버만 변경하면 오류가 숨겨지고(메뉴에는 실제로는 거부될 옵션이 계속 표시됨), 메뉴만 변경하면 실제로 아무것도 보호되지 않습니다.
+`SideMenu`의 "누가 무엇을 볼 수 있는지" 목록은 `cluar.permission.*`의 `cluar.permission.*`, `cluar.permission.*`, `cluar.permission.*`와 수동으로 정렬된 상태로 유지됩니다. 이들은 프런트엔드와 백엔드에 각각 하나씩 있는 별도의 목록입니다. 새 보호 서비스를 추가할 때는 두 목록을 모두 업데이트해야 합니다. 서버만 변경하면 오류가 숨겨지고(메뉴에는 실제로는 거부될 옵션이 계속 표시됨), 메뉴만 변경하면 실제로 아무것도 보호되지 않습니다.
 :::
 
 ## 새 서비스를 보호하는 방법
 
 1. `server/services/`에 서비스를 평소처럼 생성합니다.
-2. 서비스 경로(`path/method`)를 누가 사용할 수 있어야 하는지에 따라 `server/core/_service_config.js`의 올바른 목록(`CONTENT_MANAGEMENT_PATHS`, `SITE_ADMIN_PATHS` 또는 `ACCESS_MANAGEMENT_PATHS`)에 추가합니다. 공개 서비스라면 `PUBLIC_PATHS`에 추가합니다.
+2. 서비스 경로(`path/method`)를 누가 사용할 수 있어야 하는지에 따라 `server/core/cluar.permission.*`의 올바른 목록(`cluar.permission.*`, `cluar.permission.*` 또는 `cluar.permission.*`)에 추가합니다. 공개 서비스라면 `cluar.permission.*`에 추가합니다.
 3. 서비스에 전용 영역 메뉴의 대응 항목이 있다면, 필터가 실제 권한과 정확히 일치하도록 `SideMenu`도 업데이트합니다.

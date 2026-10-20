@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-id: dictionaries
+id: translations
 title: Словари
 sidebar_label: Словари
 ---
@@ -13,8 +13,8 @@ sidebar_label: Словари
 
 Она включает две формы в бэк-офисе:
 
-- **Запись** (`dictionary_entry`)
-- **Словарь** (`dictionary`)
+- **Запись** (`translation_entry`)
+- **Словарь** (`translation`)
 
 ## Запись
 
@@ -32,11 +32,11 @@ sidebar_label: Словари
 
 Класс `website/src/common/Cluar.js` предоставляет функции для чтения записей словаря; все они возвращают код записи, если перевода нет (это помогает заметить отсутствующие переводы):
 
-- `Cluar.dictionary(zapis)` — получает переведённое значение на текущем языке в том виде, в котором оно сохранено (может содержать HTML).
-- `Cluar.plainDictionary(zapis)` — то же, но удаляет теги `<p>` и `<br>`. Чаще всего используется в подписях интерфейса (кнопки, поля форм, уведомления).
+- `Cluar.translation(zapis)` — получает переведённое значение на текущем языке в том виде, в котором оно сохранено (может содержать HTML).
+- `Cluar.plainTranslation(zapis)` — то же, но удаляет теги `<p>` и `<br>`. Чаще всего используется в подписях интерфейса (кнопки, поля форм, уведомления).
 - `Cluar.plainTitle(zapis)` — то же, но удаляет только теги `<p>`.
 - `Cluar.plainHTML(zapis)` — удаляет все HTML-теги.
-- `Cluar.dictionaryNoParagraph(zapis)` — удаляет только теги `<p>` (эквивалентно `plainTitle`).
+- `Cluar.translationNoParagraph(zapis)` — удаляет только теги `<p>` (эквивалентно `plainTitle`).
 
 ## Следующий шаг
 

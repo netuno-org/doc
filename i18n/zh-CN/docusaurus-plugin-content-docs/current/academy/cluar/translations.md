@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-id: dictionaries
+id: translations
 title: 字典
 sidebar_label: 字典
 ---
@@ -13,8 +13,8 @@ sidebar_label: 字典
 
 涉及后台中的两个表单：
 
-- **条目**（`dictionary_entry`）
-- **字典**（`dictionary`）
+- **条目**（`translation_entry`）
+- **字典**（`translation`）
 
 ## 条目
 
@@ -32,11 +32,11 @@ sidebar_label: 字典
 
 类 `website/src/common/Cluar.js` 提供了读取字典条目的函数，如果没有翻译，它们都会返回条目代码作为结果（有助于发现缺失的翻译）：
 
-- `Cluar.dictionary(条目)` —— 获取当前语言中的翻译值，与保存时的样子一致（可能包含 HTML）。
-- `Cluar.plainDictionary(条目)` —— 相同，但会移除 `<p>` 和 `<br>` 标签。这是界面标签（按钮、表单字段、通知）中最常用的。
+- `Cluar.translation(条目)` —— 获取当前语言中的翻译值，与保存时的样子一致（可能包含 HTML）。
+- `Cluar.plainTranslation(条目)` —— 相同，但会移除 `<p>` 和 `<br>` 标签。这是界面标签（按钮、表单字段、通知）中最常用的。
 - `Cluar.plainTitle(条目)` —— 相同，但只移除 `<p>` 标签。
 - `Cluar.plainHTML(条目)` —— 移除所有 HTML 标签。
-- `Cluar.dictionaryNoParagraph(条目)` —— 只移除 `<p>` 标签（等同于 `plainTitle`）。
+- `Cluar.translationNoParagraph(条目)` —— 只移除 `<p>` 标签（等同于 `plainTitle`）。
 
 ## 下一步
 

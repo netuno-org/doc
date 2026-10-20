@@ -7,6 +7,8 @@ sidebar_label: Übersicht
 
 Die **Seite** ist die zentrale Entität von CLUAR: Sie repräsentiert eine URL der Website. Jede Seite gehört zu genau einer Sprache — es gibt keine einzelne „mehrsprachige“ Seite; jede Sprache hat ihre eigene Seite (mit ihrem eigenen `link`, Titel, Inhalt usw.), und sie sind untereinander nur durch die Aktion [Klonen](/docs/academy/cluar/pages/cloning) verbunden.
 
+Jede Seite gehört zu einer Organisation. Seiten können Unterseiten haben und gehören standardmäßig zur Organisation der übergeordneten Seite.
+
 ## Felder
 
 | Feld | Beschreibung |
