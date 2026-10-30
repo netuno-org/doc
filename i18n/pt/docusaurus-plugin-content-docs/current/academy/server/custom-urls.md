@@ -1,7 +1,7 @@
 ---
 id: custom-urls
-title: Custom URLs
-sidebar_label: Custom URLs
+title: Custom URLs e Hosts
+sidebar_label: Custom URLs e Hosts
 ---
 
 ## Introdução
@@ -9,16 +9,17 @@ sidebar_label: Custom URLs
 O Netuno permite alterar os endereços padrão, por exemplo:
 
 - O endereço da interface de administração, `admin`.
-- O endereço de ficheiros públicos, como imagens, CSS e JS, `public`.
+- O endereço de arquivos públicos, como imagens, CSS e JS, `public`.
 - O endereço dos serviços da API REST, `services`.
+- O endereço do endpoint do protocolo MCP, `mcp`.
 
-## Configuração
+## URLs
 
-Navegue dentro da aplicação que está a desenvolver até ao ficheiro de configuração de ambiente. Neste exemplo, iremos utilizar o ficheiro de ambiente de desenvolvimento localizado em:
+Navegue dentro da aplicação que está a desenvolver até ao arquivo de configuração de ambiente. Neste exemplo, iremos utilizar o arquivo de ambiente de desenvolvimento localizado em:
 
 - 📂 `config/_development.json`
 
-Verifique se já não existe a configuração de URL, se não existir adicione no fim do ficheiro de configuração (em formato JSON) os parâmetros de configuração de URL, como por exemplo:
+Verifique se já não existe a configuração de URL, se não existir adicione no fim do arquivo de configuração (em formato JSON) os parâmetros de configuração de URL, por exemplo:
 
 ```json
 {
@@ -26,23 +27,89 @@ Verifique se já não existe a configuração de URL, se não existir adicione n
     "url": {
         "admin": "/admin/",
         "public": "/public/",
-        "services": "/api/"
+        "services": "/api/",
+        "mcp": "/mcp/"
     },
     ...
 }
 ```
 
-### admin
+#### admin
 
 Define o prefixo do endereço da URL da interface de administração, o padrão é apenas `/`.
 
-### public
+#### public
 
 Define o prefixo do endereço da URL dos ficheiros estáticos que são públicos como imagens, estilo CSS e de código JavaScript, o padrão é `/public`.
 
-### services
+#### services
 
 Define o endereço da URL inicial dos serviços web da API REST, o padrão é `/services`.
+
+#### mcp
+
+Define o endereço da URL inicial do endpoint web do protocolo MCP, o padrão é `/mcp`.
+
+## Hosts
+
+Navegue dentro da aplicação que está a desenvolver até ao arquivo de configuração de ambiente. Neste exemplo, iremos utilizar o arquivo de ambiente de desenvolvimento localizado em:
+
+- 📂 `config/_development.json`
+
+Verifique se já não existe a configuração de Host (Domínios), se não existir adicione no fim do arquivo de configuração (em formato JSON) os parâmetros de configuração de Host, por exemplo:
+
+- Caso seja apenas um host utilize uma string como valor:
+
+```json
+{
+    ...
+    "host": "meu-projeto.com",
+    ...
+}
+```
+
+- Caso tenha múltiplos hosts utilize um array de strings como valor:
+
+```json
+{
+    ...
+    "host": [
+        "meu-projeto.com",
+        "www.meu-projeto.com"
+    ],
+    ...
+}
+```
+
+Desta forma define os hosts/domínios globais da aplicação, qualquer pedido com um destes hosts que chegue ao Netuno será processado pela aplicação.
+
+Também pode definir hosts/domínios específicos para cada tipo de servidor de serviços globais que o Netuno fornece, por exemplo:
+
+```json
+{
+    ...
+    "host": {
+        "admin": "admin.meu-projeto.com",
+        "services": ["api.meu-projeto.com", "services.meu-projeto.com"],
+        "mcp": "mcp.meu-projeto.com"
+    },
+    ...
+}
+```
+
+Caso seja apenas um domínio utilize o valor do tipo string, caso seja múltiplos hosts/domínios utilize um array com strings.
+
+#### admin
+
+Define o endereço de domínio ou host do endereço da interface de administração.
+
+#### services
+
+Define o endereço de domínio ou host do endereço dos serviços web da API REST.
+
+#### mcp
+
+Define o endereço de domínio ou host do endereço do endpoint do protocolo MCP.
 
 ## Conclusão
 
