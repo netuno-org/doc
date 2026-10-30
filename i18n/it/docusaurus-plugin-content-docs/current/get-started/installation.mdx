@@ -1,0 +1,81 @@
+---
+sidebar_position: 1
+id: installation
+title: Installazione Rapida
+sidebar_label: Installazione Rapida
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Introduzione
+
+Benvenuto nella guida di installazione di **Netuno**, la piattaforma *low-code*, poliglotta e *open source* sviluppata per accelerare la creazione dei tuoi progetti e semplificare la configurazione dell'ambiente di sviluppo.
+
+Qui puoi costruire applicazioni full-stack robuste in modo agile, combinando la velocità del low-code con la potenza della programmazione tradizionale.
+
+## Installazione Rapida
+
+Il modo più semplice per installare Netuno è tramite lo script di installazione fornito dalla piattaforma. Basta eseguire i comandi nel terminale in base al tuo Sistema Operativo.
+
+<Tabs groupId="os">
+    <TabItem value="linux-mac" label="Linux or macOS" default>
+
+```bash
+bash <(curl -fsSL https://netu.no/install.sh)
+```
+
+    </TabItem>
+    <TabItem value="windows" label="Windows">
+
+```powershell
+powershell -c "irm https://netu.no/install.ps1|iex"
+```
+
+    </TabItem>
+</Tabs>
+
+## Avviare l'App DEMO
+
+Al termine dell'installazione, esegui il comando qui sotto all'interno della cartella `netuno` per avviare il server con l'applicazione dimostrativa:
+
+```bash
+./netuno server
+```
+
+### Aprire l'Applicazione nel Browser
+
+Dopo l'avvio, il browser si aprirà automaticamente con l'indirizzo del server locale. Se ciò non accade, accedi manualmente a uno degli indirizzi seguenti:
+
+- [http://demo.local.netu.no:9000](http://demo.local.netu.no:9000)
+- [http://localhost:9000](http://localhost:9000)
+
+## Fermare il Server
+
+Per arrestare il server premi nel terminale i tasti:
+
+**CTRL + C**
+
+Per avviarlo nuovamente, utilizza lo stesso comando `./netuno server`.
+
+## Prossimi Passi
+
+Alcune idee su cosa puoi fare adesso.
+
+### Principiante
+
+Se sei nuovo a Netuno, inizia creando il tuo primo formulario:
+
+[Creare il mio primo formulario](/docs/academy/demonstration/config)
+
+### Tutorial
+
+Esplora tutorial pratici di sviluppo con Netuno:
+
+[Vedi i tutorial di sviluppo](/docs/get-started/tutorials)
+
+### Progetti
+
+Scopri come applicare Netuno in progetti aziendali reali:
+
+[Esplora progetti e casi d'uso](/docs/academy/understand/backoffice)

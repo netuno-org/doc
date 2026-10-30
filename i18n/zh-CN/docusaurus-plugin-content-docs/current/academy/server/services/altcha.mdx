@@ -1,0 +1,324 @@
+---
+id: altcha
+title: Altcha
+sidebar_label: Altcha
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+reCaptcha 的开源替代方案。
+
+## 简介
+
+使用 captcha 安全机制非常重要，原因如下：
+
+- 防止机器人自动访问 API 地址。
+- 确保访问由真实用户发起。
+- 同时确保访问来自浏览器。
+
+长期以来，captcha 机制会向用户提供一个需要完成的挑战。
+
+如今已不再需要这样做，因为使用的是加密密钥机制，结合必须由算法解决的挑战，并利用浏览器中的交互来判断是人类交互还是机器人交互。
+
+> 该方法巧妙且可靠，只需一次点击即可检测是人类还是机器人。
+
+[Altcha](https://altcha.org/) 是一个实现该安全流程的开源项目，提供可集成到 React 的前端小部件，以及 Netuno 提供的后端能力。
+
+## 限制
+
+[Altcha](https://altcha.org/) 使用 [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API)，仅能在带 SSL 证书的安全 HTTPS 地址或本地运行。
+
+> 在前端，如果域名不是 `localhost`，则 URL 必须为带 SSL 证书的安全 HTTPS 地址。
+
+当前端通过本地访问时，浏览器仅允许在本地地址（必须为 `localhost`）使用 [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API)，否则就需要带 SSL 证书的安全 HTTPS。
+
+## 后台
+
+要在 Netuno 应用的后台中启用 [Altcha](https://altcha.org/) 认证，请在应用中使用以下配置：
+
+```json title="config/_[环境].json"
+{
+  ...
+  "auth": {
+    "altcha": {
+      "admin": {
+        "enabled": true
+      }
+    }
+  },
+  ...
+}
+```
+
+完成。现在只需访问后台登录页面，就会看到 [Altcha](https://altcha.org/) 的_复选框_正常工作。
+
+### 工作原理
+
+Netuno 在 REST API 中提供了一个默认服务，用于向前端提供 [Altcha](https://altcha.org/) 参数，该服务的地址通常为：
+
+- `http://localhost:9000/services/_altcha`
+
+前端中的 [Altcha](https://altcha.org/) 小部件会使用这些参数生成经过数字签名的挑战结果，并将其通过表单的隐藏字段 `altcha` 发送到后端。
+
+后端会验证结果和数字签名是否确实正确。
+
+### HTML 中的小部件
+
+以下示例展示如何将小部件集成到后台登录页的 HTML 中：
+
+```html title="login.html"
+<script type="text/javascript" src="/scripts/plugins/altcha/altcha.i18n.umd.min.cjs"></script>
+<form ...>
+  <input id="inputAltcha" type="hidden" name="altcha" value="">
+  <altcha-widget id="widgetAltcha"
+    challenge="/services/_altcha" language="zh"
+    hideLogo hideFooter></altcha-widget>
+  <script>
+    document.getElementById("widgetAltcha").addEventListener("statechange", function (e) {
+      if (e.detail.state === "verified") {
+        document.getElementById("inputAltcha").value = e.detail.payload;
+      }
+    }, false);
+  </script>
+  ...
+</form>
+```
+
+请注意，小部件 `challenge` 属性中使用的 URL 是 Netuno 自动生成的服务，其中包含挑战参数。
+
+## 外部认证
+
+通常实现的安全 JWT 认证会使用 REST API 的默认认证服务，该服务通常为：
+
+- `http://localhost:9000/services/_auth`
+
+这个由 Netuno 自动生成的服务可确保使用原生 JWT 进行外部认证的安全性，同时还会验证 captcha 小部件的挑战结果。
+
+要在认证中启用 [Altcha](https://altcha.org/)，请添加以下配置：
+
+```json title="config/_[环境].json"
+{
+  ...
+  "auth": {
+    "altcha": {
+      "enabled": true
+    }
+  },
+  ...
+}
+```
+
+这样，只有发送了由 [Altcha](https://altcha.org/) 生成且有效的挑战结果载荷的认证请求（即登录请求）才能成功认证，否则登录将被拦截。
+
+> 必须在前端集成 [Altcha](https://altcha.org/) 小部件，并在 `altcha` 字段中发送挑战结果载荷。
+
+### React 中的小部件
+
+下面介绍如何在 React 中集成该小部件：
+
+添加 [Altcha](https://altcha.org/) 依赖：
+
+- `bun add altcha`
+
+在代码中导入 [Altcha](https://altcha.org/)：
+
+```jsx title="website/src/pages/Login/index.jsx"
+import "altcha/i18n";
+```
+
+创建用于存储挑战结果载荷的状态：
+
+```jsx title="website/src/pages/Login/index.jsx"
+const [altchaPayload, setAltchaPayload] = useState(null);
+```
+
+在 React 组件中为小部件创建一个内部引用：
+
+```jsx title="website/src/pages/Login/index.jsx"
+const altcha = useRef(null);
+```
+
+添加组件加载副作用，使用小部件的引用，并通过事件监听小部件复选框何时被点击，以便将挑战结果载荷加载到状态中：
+
+```jsx title="website/src/pages/Login/index.jsx"
+useEffect(() => {
+  if (altcha && altcha.current) {
+    function altchaVerified(ev) {
+      if (ev.detail.state === "verified") {
+        setAltchaPayload(ev.detail.payload);
+      }
+    }
+    altcha.current.addEventListener("statechange", altchaVerified, false);
+    return () => {
+      if (altcha.current != null) {
+        altcha.current.removeEventListener("statechange", altchaVerified, false);
+      }
+    }
+  }
+}, [altcha]);
+```
+
+React 组件“HTML”中小部件的示例：
+
+```jsx title="website/src/pages/Login/index.jsx"
+<altcha-widget
+    ref={altcha}
+    challenge={_service.url('/_altcha')}
+    language="zh"
+    delay={1}
+    hideLogo={true}
+    hideFooter={true}
+></altcha-widget>
+```
+
+### Auth Client
+
+了解如何在 [Auth Client](https://www.npmjs.com/package/@netuno/auth-client) 中集成 [Altcha](https://altcha.org/)。
+
+在将登录表单数据发送到后端的事件中使用以下代码，例如 `onSubmit`、`onClick` 事件，或 Ant.Design 表单的 `onFinish`：
+
+```jsx title="website/src/pages/Login/index.jsx"
+_auth.login({
+  username,
+  password,
+  data: (data) => {
+    data.altcha = altchaPayload;
+    return data;
+  },
+  success: ({json}) => {
+    ...
+  },
+  fail: (data) => {
+    ...
+  }
+});
+```
+
+请注意，`altchaPayload` 是保存 captcha 挑战结果载荷的状态。
+
+ReAuthKit 登录页的完整示例：
+
+- [ReAuthKit 登录页源代码。](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Login/index.jsx)
+
+## 在服务中集成
+
+除了上面介绍的认证之外，任何其他类型的服务也都可以集成基于 [Altcha](https://altcha.org/) 的 captcha 机制。
+
+建议在任何可能成为攻击目标的公共服务中集成 captcha，例如防止机器人通过穷举式自动化进行大规模数据注册。
+
+在前端，集成 REST API 服务的页面中也必须实现 [Altcha](https://altcha.org/) 安全小部件，也就是说，在调用服务的地方应使用该小部件。
+
+### Service Client
+
+下面介绍如何在 [Service Client](https://www.npmjs.com/package/@netuno/service-client) 中集成 [Altcha](https://altcha.org/)。
+
+前端中小部件的集成方式与上面已说明的内容类似：
+
+- [HTML 中的小部件](#html-中的小部件)
+- [React 中的小部件](#react-中的小部件)
+
+我们需要像上面的示例一样获取小部件的载荷，过程与登录认证相同。
+
+载荷可以通过 URL 参数、表单字段，或作为 JSON 属性发送到后端，具体取决于 HTTP 方法和服务的实现方式。
+
+以下示例展示如何将载荷发送到注册服务，即创建新用户账号的服务：
+
+```jsx title="pages/Register/index.jsx"
+_service({
+  method: 'POST',
+  url: 'register',
+  data: {
+    name,
+    email,
+    password,
+    altcha: altchaPayload
+  },
+  success: (response) => {
+    ...
+  },
+  fail: (e) => {
+    ...
+  }
+});
+```
+
+请注意，`altchaPayload` 是保存 captcha 挑战结果载荷的状态。
+
+ReAuthKit 注册页的完整示例：
+
+- [ReAuthKit 注册页源代码。](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Register/index.jsx)
+
+### 后端
+
+载荷发送到 REST API 服务后，我们需要在服务代码的后端侧对其进行验证，如下所示：
+
+<PolyglotCode
+    file="server/services/register/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+            const altchaPayload = _req.getString("altcha");
+
+            if (_auth.altchaEnabled() && !_altcha.verifySolution(altchaPayload)) {
+              _header.status(409);
+              _out.json(
+                _val.map()
+                  .set("error", "invalid-altcha-payload")
+              );
+              _exec.stop();
+            }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+            altchaPayload = _req.getString("altcha")
+
+            if _auth.altchaEnabled() and _altcha.verifySolution(altchaPayload) == False:
+                _header.status(409)
+                _out.json(
+                    _val.map()
+                        .set("error", "invalid-altcha-payload")
+                )
+                _exec.stop()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                altchaPayload = _req.getString("altcha")
+
+                if _auth.altchaEnabled() and _altcha.verifySolution(altchaPayload) == false
+                    _header.status(409)
+                    _out.json(
+                        _val.map()
+                            .set("error", "invalid-altcha-payload")
+                    )
+                    _exec.stop()
+                end
+            `
+        },
+    ]}
+/>
+
+ReAuthKit 注册服务的完整示例：
+
+- [ReAuthKit 注册服务源代码。](https://github.com/netuno-org/reauthkit/blob/main/server/services/profile/post.js)
+
+进一步了解低代码和多语言编程能力：
+
+- [Altcha](/docs/library/resources/altcha)
+- [Auth](/docs/library/resources/auth)
+
+## 结论
+
+我们可以用非常简单的方式为 API 服务创建安全机制，以防止机器人并确保浏览器中的交互来自人类。
+
+> 建议在较敏感的公共服务中使用基于 [Altcha](https://altcha.org/) 的 captcha 机制，例如注册和认证服务。
+
+借助 Netuno 提供的原生实现，在任何 REST API 服务中启用和使用该机制都非常简单。
+
+> 建议 Netuno 自动生成的后台在生产环境中始终启用 [Altcha](https://altcha.org/) 认证，并使用 HTTPS 和 SSL 证书。
+
+请尽可能使用 [Altcha](https://altcha.org/)，以确保 API 公共服务的安全性和健壮性。

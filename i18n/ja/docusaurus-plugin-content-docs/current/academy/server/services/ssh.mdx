@@ -1,0 +1,468 @@
+---
+id: ssh
+title: SSHクライアント
+sidebar_label: SSHクライアント
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+サーバー上でコマンドを実行し、ファイルを転送します。
+
+## はじめに
+
+NetunoはローコードフレームワークにSSHクライアントを統合しており、サーバーへの接続、コマンドの実行、ファイルの送受信、フォルダーの変更など、その他のリモート操作が可能です。
+
+複数の同時接続をサポートし、さらにSCPとSFTPにも対応します。
+
+これは、オープンソースのJava実装である
+<a target="_blank" href="https://github.com/hierynomus/sshj/tree/master">SSHJ</a>のおかげであり、Netunoが`_ssh`リソースを通じてすべてのスクリプト言語にこれらの機能を提供できる理由です。
+
+> Netunoの[SSH](/docs/library/resources/ssh)リソースの詳細。
+
+## 設定
+
+最初のステップは、Netunoが接続に使用するSSHアクセス情報を設定することです。
+
+開発中のアプリケーション内で、環境設定ファイルまで移動します。この例では、次の場所にある開発用ファイルを使用します:
+
+- `config/_development.json`
+
+SSHの設定があるか確認し、存在しない場合は設定ファイル（JSON形式）の末尾にSSH設定パラメータを追加します。例:
+
+```json
+{
+  ...
+  "ssh": {
+    "default": {
+      "enabled": true,
+      "host": "my.server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+変更を保存した後、設定変更を反映するにはNetunoを再起動するだけです。これらは、キー名`default`が示すとおり、接続のデフォルト設定です。
+
+JSON内で他のキーを使ってSSH接続設定をさらに追加できます。
+
+SSH接続設定をさらに追加するには、デフォルト設定ブロックを繰り返し、`default`キーを任意の別名に置き換えるだけです。例:
+
+```json
+{
+  ...
+  "ssh": {
+    "default": {
+      "enabled": true,
+      "host": "my.server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    },
+    "other": {
+      "enabled": true,
+      "host": "my.other-server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+上記の設定により、次のようにコーディングした場合は`default`アカウントを使用できます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ssh = _ssh.init()
+            `
+        },
+    ]}
+/>
+
+`other`設定を使用するには、設定キーを`_ssh.init()`関数のパラメータとして追加するだけです。次のようにします:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshOther = _ssh.init("other")
+            `
+        },
+    ]}
+/>
+
+> パラメータとして設定名を追加しない場合は、`default`アカウントの設定が使用されます。
+
+## 接続
+
+何かを行う前に、SSH接続を開始する必要があります:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ssh.connect()
+            `
+        },
+    ]}
+/>
+
+## コマンド
+
+コマンドを実行するには、コマンドセッションを開始する必要があります:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSession = ssh.initSession()
+            `
+        },
+    ]}
+/>
+
+コマンドを実行すると、実行状態と対応する出力データ（output）を含むオブジェクトが提供されます。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshCommandResult = sshSession.exec("ls -rato")
+                if (sshCommandResult.ok) {
+                    _out.println("正常に実行されました:")
+                    _out.println(sshCommandResult.output())
+                } else {
+                    _out.println("コマンドが失敗しました:")
+                    _out.println(sshCommandResult.error())
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                sshCommandResult = sshSession.exec("ls -rato")
+                if sshCommandResult.ok:
+                    _out.println("正常に実行されました:")
+                    _out.println(sshCommandResult.output())
+                else:
+                    _out.println("コマンドが失敗しました:")
+                    _out.println(sshCommandResult.error())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                sshCommandResult = sshSession.exec("ls -rato")
+                if sshCommandResult.ok
+                    _out.println("正常に実行されました:")
+                    _out.println(sshCommandResult.output())
+                else
+                    _out.println("コマンドが失敗しました:")
+                    _out.println(sshCommandResult.error())
+                end
+            `
+        },
+    ]}
+/>
+
+> コマンドによって返されるオブジェクトは[SSHExecResult](/docs/library/objects/SSHExecResult)です。
+
+セッションは常に閉じるようにしてください:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sshSession.close()
+            `
+        },
+    ]}
+/>
+
+## SCP
+
+SCPを介してファイルを送受信できます。
+
+文字列からテキストファイルを作成し、作成したファイルの内容をダウンロードする例を次に示します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // テキストファイルを作成します。
+                sshSCP.uploadText("hello.txt", "こんにちは！ここに内容があります...")
+                // ファイルの内容をダウンロードして出力します。
+                _out.println(sshSCP.downloadText("hello.txt"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+アプリケーション内に存在するファイルをアップロードするには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // storage/filesystem にあるファイルを送信します。
+                sshSCP.upload("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // アプリケーションのルートにあるファイルを送信します。
+                sshSCP.upload("document.pdf", _app.file("document.pdf"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+サーバーからアプリケーションへファイルをダウンロードするには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // ファイルを storage/filesystem にダウンロードします。
+                sshSCP.download("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // ファイルをアプリケーションのルートにダウンロードします。
+                sshSCP.download("document.pdf", _app.file("document.pdf"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+## SFTP
+
+SFTPはファイルとフォルダーの転送および操作の一形態で、FTPと同じ機能をサポートしますが、SSHを使用します。
+
+新しいSFTPセッションを開始するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sftp = ssh.initSFTP()
+            `
+        },
+    ]}
+/>
+
+> セッションのクライアントである[SSHSFTP](/docs/library/objects/SSHSFTP)オブジェクトを開始します。
+
+リモートで新しいフォルダーを作成します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.createDirectory("path/new-folder")
+            `
+        },
+    ]}
+/>
+
+渡されたテキスト内容でリモートファイルを作成または置換します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.uploadText("folder/file.txt", "私の内容！")
+            `
+        },
+    ]}
+/>
+
+リモートファイルのテキスト内容を取得します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remoteFileContent = sftp.downloadText("folder/file.txt")
+                _out.println(remoteFileContent)
+            `
+        },
+    ]}
+/>
+
+リモートファイルを完全に削除します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.deleteFile("folder/file.txt")
+            `
+        },
+    ]}
+/>
+
+リモートフォルダーを完全に削除します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.deleteDirectory("folder")
+            `
+        },
+    ]}
+/>
+
+フォルダーのすべての内容を一覧表示します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const i of sftp.list("path/folder")) {
+                    if (i.directory) {
+                        _out.print("フォルダー: ")
+                    } else if (i.regularFile) {
+                        _out.print("ファイル: ")
+                    } else {
+                        _out.print("その他: ")
+                    }
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for i in sftp.list("path/folder"):
+                    if i.directory:
+                        _out.print("フォルダー: ")
+                    elif i.regularFile:
+                        _out.print("ファイル: ")
+                    else:
+                        _out.print("その他: ")
+                    _out.println(i.name)
+                    _out.println("<br/>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                sftp.list("path/folder").each do |i|
+                    if i.directory
+                        _out.print("フォルダー: ")
+                    elsif i.regularFile
+                        _out.print("ファイル: ")
+                    else
+                        _out.print("その他: ")
+                    end
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                sftp.list("path/folder").forEach {
+                    if (it.directory) {
+                        _out.print("フォルダー: ")
+                    } else if (it.regularFile) {
+                        _out.print("ファイル: ")
+                    } else {
+                        _out.print("その他: ")
+                    }
+                    _out.println(it.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (i in sftp.list("path/folder")) {
+                    if (i.directory) {
+                        _out.print("フォルダー: ")
+                    } else if (i.regularFile) {
+                        _out.print("ファイル: ")
+                    } else {
+                        _out.print("その他: ")
+                    }
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+    ]}
+/>
+
+> [SSHFile](/docs/library/objects/SSHFile)型のオブジェクトのリストを返します。
+
+アプリケーション内に存在するファイルをアップロードするには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // storage/filesystem にあるファイルを送信します。
+                sftp.upload("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // アプリケーションのルートにあるファイルを送信します。
+                sftp.upload("document.pdf", _app.file("document.pdf"))
+            `
+        },
+    ]}
+/>
+
+サーバーからアプリケーションへファイルをダウンロードするには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // ファイルを storage/filesystem にダウンロードします。
+                sftp.download("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // ファイルをアプリケーションのルートにダウンロードします。
+                sftp.download("document.pdf", _app.file("document.pdf"))
+            `
+        },
+    ]}
+/>
+
+SFTPセッションは常に閉じるようにしてください:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.close()
+            `
+        },
+    ]}
+/>

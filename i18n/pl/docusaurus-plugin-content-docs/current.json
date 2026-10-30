@@ -1,0 +1,126 @@
+{
+  "version.label": {
+    "message": "Następna",
+    "description": "Etykieta dla bieżącej wersji"
+  },
+  "sidebar.academySidebar.category.Demonstration": {
+    "message": "Demonstracja",
+    "description": "Etykieta dla kategorii Demonstracja w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Demonstration.link.generated-index.description": {
+    "message": "Zapoznaj się z procesem tworzenia, modyfikując domyślną aplikację demonstracyjną.",
+    "description": "Opis strony generated-index dla kategorii Demonstracja w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.User Interface": {
+    "message": "Interfejs użytkownika",
+    "description": "Etykieta dla kategorii Interfejs użytkownika w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.User Interface.link.generated-index.description": {
+    "message": "Jak działa interfejs użytkownika, tworzenie formularzy i zarządzanie danymi.",
+    "description": "Opis strony generated-index dla kategorii Interfejs użytkownika w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Explore": {
+    "message": "Eksploracja",
+    "description": "Etykieta dla kategorii Eksploracja w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Explore.link.generated-index.description": {
+    "message": "Odkryj wybrane funkcje i ogólne koncepcje.",
+    "description": "Opis strony generated-index dla kategorii Eksploracja w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Understand": {
+    "message": "Zrozumienie",
+    "description": "Etykieta dla kategorii Zrozumienie w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Understand.link.generated-index.description": {
+    "message": "Ogólne zastosowanie platformy i potencjał strategiczny.",
+    "description": "Opis strony generated-index dla kategorii Zrozumienie w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Server Backend": {
+    "message": "Backend serwera",
+    "description": "Etykieta dla kategorii Backend serwera w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Server Backend.link.generated-index.description": {
+    "message": "Samouczki dotyczące backendu zintegrowanego z wielojęzycznym tworzeniem low-code.",
+    "description": "Opis strony generated-index dla kategorii Backend serwera w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Database": {
+    "message": "Baza danych",
+    "description": "Etykieta dla kategorii Baza danych w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Database.link.generated-index.description": {
+    "message": "Samouczki dotyczące zarządzania bazą danych.",
+    "description": "Opis strony generated-index dla kategorii Baza danych w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Service": {
+    "message": "Usługa",
+    "description": "Etykieta dla kategorii Usługa w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Service.link.generated-index.description": {
+    "message": "Samouczki dotyczące zasobów używanych w usługach.",
+    "description": "Opis strony generated-index dla kategorii Usługa w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Java Core": {
+    "message": "Java Core",
+    "description": "The label for category Java Core in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Java Core.link.generated-index.description": {
+    "message": "Samouczki dotyczące backendu zintegrowanego z wielojęzycznym tworzeniem low-code.",
+    "description": "The generated-index page description for category Java Core in sidebar academySidebar"
+  },
+  "sidebar.academySidebar.category.Website Frontend": {
+    "message": "Frontend witryny",
+    "description": "Etykieta dla kategorii Frontend witryny w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Website Frontend.link.generated-index.description": {
+    "message": "Zaawansowany rozwój frontendu i integracje.",
+    "description": "Opis strony generated-index dla kategorii Frontend witryny w sidebarze academySidebar"
+  },
+  "sidebar.librarySidebar.category.App Structure": {
+    "message": "Struktura aplikacji",
+    "description": "Etykieta dla kategorii Struktura aplikacji w sidebarze librarySidebar"
+  },
+  "sidebar.librarySidebar.category.App Structure.link.generated-index.description": {
+    "message": "Struktura folderów i plików aplikacji w szczegółach.",
+    "description": "Opis strony generated-index dla kategorii Struktura aplikacji w sidebarze librarySidebar"
+  },
+  "sidebar.librarySidebar.category.Resources": {
+    "message": "Zasoby",
+    "description": "Etykieta dla kategorii Zasoby w sidebarze librarySidebar"
+  },
+  "sidebar.librarySidebar.category.Resources.link.generated-index.description": {
+    "message": "Wszystkie dostępne zasoby low-code.",
+    "description": "Opis strony generated-index dla kategorii Zasoby w sidebarze librarySidebar"
+  },
+  "sidebar.librarySidebar.category.Objects": {
+    "message": "Obiekty",
+    "description": "Etykieta dla kategorii Obiekty w sidebarze librarySidebar"
+  },
+  "sidebar.librarySidebar.category.Objects.link.generated-index.description": {
+    "message": "Główne dostępne obiekty low-code.",
+    "description": "Opis strony generated-index dla kategorii Obiekty w sidebarze librarySidebar"
+  },
+  "sidebar.academySidebar.category.CLUAR": {
+    "message": "CLUAR",
+    "description": "Etykieta dla kategorii CLUAR w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.CLUAR.link.generated-index.description": {
+    "message": "Gotowe do użycia rozwiązanie do zarządzania treścią i wielojęzycznymi witrynami.",
+    "description": "Opis strony generated-index dla kategorii CLUAR w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Components": {
+    "message": "Komponenty",
+    "description": "Etykieta dla kategorii Komponenty w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Components.link.generated-index.description": {
+    "message": "Samouczki dotyczące komponentów treści CLUAR — Banner, Conteúdo, Listagem, Slider i Funcionalidade.",
+    "description": "Opis strony generated-index dla kategorii Komponenty w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Pages": {
+    "message": "Strony",
+    "description": "Etykieta dla kategorii Strony w sidebarze academySidebar"
+  },
+  "sidebar.academySidebar.category.Pages.link.generated-index.description": {
+    "message": "Samouczki dotyczące encji Strona w CLUAR — pola, wersjonowanie, publikacja i klonowanie.",
+    "description": "Opis strony generated-index dla kategorii Strony w sidebarze academySidebar"
+  }
+}

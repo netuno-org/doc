@@ -6,53 +6,49 @@ title: Interface & Design
 
 ## Introduction
 
-The user interface _(UI)_ is the point of human-computer interaction and communication in a device. Will be performed inside the **ui** folder and is also the way through which a user interacts with an application or a website.
+Frontend development, that is, what is visually processed by the browser, is done inside the **ui** folder.
 
-The _UI_ folder contains by default the development environment in <a href="https://reactjs.org/" target="_blank">ReactJS</a>, with <a href="https://ant.design/" target="_blank">Ant.Design</a> and <a href="http://lesscss.org/" target="_blank">Less</a>, while using <a href="https://vite.dev/" target="_blank">Vite</a>.
+By default, this folder contains the development environment built with <a href="https://reactjs.org/" target="_blank">ReactJS</a> with <a href="https://ant.design/" target="_blank">Ant.Design</a> and <a href="http://lesscss.org/" target="_blank">Less</a>, compiled using <a href="https://vite.dev/" target="_blank">Vite</a>.
 
-These technologies are widely used today, however, this pre-defined environment will be not limited to these technologies themselves.
+Although the default environment is configured for these technologies, since they are widely used today, it is not limited to them.
 
-The user is free to use any other technology like **VueJS**, **MaterialUI**, **Sass**, **Bootstrap**, **TypeScript**, others. They can just change within the `📂 folder ui` the settings of `📂 package.json` and `📂 vite.config.js` for the technologies they will choose.
+If you want to use another technology such as **VueJS**, **MaterialUI**, **Sass**, **Bootstrap**, **TypeScript**, etc... simply change the `📂 package.json` and `📂 vite.config.js` settings inside the `📂 ui` folder to the technologies you prefer.
 
-> ### Integrated Terminal
->
-> Always when _Netuno_ server starts it will also execute the <a href="https://www.npmjs.com/" target="_blank">NPM</a> with the command `➡️ npm run watch` inside the `📂 ui` folder of the running application. In this case it will be the application **demo**_nstraction_.
->
-> The output of <a href="https://www.npmjs.com/" target="_blank">NPM</a> is integrated in the same output of the _Netuno_ server, so there is only one terminal with the integrated output of the server and the compilation of **U**_ser_ **I**_nterface_.
+> More about the [integrated and centralized terminal](/docs/academy/explore/centralized-terminal).
 
 ## Prerequisites
 
-Before you begin, it's important to make sure you have [Bun](https://bun.sh/) installed.
+Before starting, it is important to make sure you have [Bun](https://bun.sh/) installed.
 
 > See how to [install Bun](/docs/academy/website/bun).
 
 To better understand how the user interface works, we recommend:
 
-- [More about the Front-End UI Layer.](/docs/academy/ui/ui-layer)
+- [More about the front-end UI Layer.](/docs/academy/ui/ui-layer)
 
-## Consume the Service
+## Expanding the Service
 
-As it was already created in the previous step the service **workers** in `📂 server/services/workers.js` through the Visual Studio Code, which provides the information in <a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank">JSON</a> in the address:
+After the **workers** service has been created in `📂 server/services/workers.js` through Visual Studio Code, which provides the information in <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a> at the address:
 
-* <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/trabalhadores</a>
+* <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/workers</a>
 
-Now the next step is to run out of it to display the data on the browser's interface.
+The next step is to expand it to display the data in the browser interface.
 
-This data will be presented into a table and a graph.
+With this data, we will display it in a table and a chart.
 
-Assuming you have Visual Studio Code or another editor open with the **Demo** app.
+Assuming you have Visual Studio Code or another text editor open with the **Demo** application.
 
-Open the file below in the editor:
+Open the following file in the editor:
 
 `📂 ui/src/containers/DashboardContainer/index.jsx`
 
-Next step will be to change this existing code.
+Let's change this existing code.
 
-### Preparing the `state`
+### Prepare the `state`
 
-Right at the very beginning of the `DashboardContainer` component within the `function` is the definition of your _state_.
+Right at the beginning of the `DashboardContainer` component inside the `function` is its _state_ definition.
 
-Add a new entry to save the task data, like this:
+Add a new entry to store the workers' data as follows:
 
 ```jsx
             // 👇 Add the new lines of code below:
@@ -60,43 +56,43 @@ Add a new entry to save the task data, like this:
             const [loading, setLoading] = useState(false);
 ```
 
-In other words, add the new `const [workers, setWorkers] = useState([]);` state line.
+That is, add the new state line `const [workers, setWorkers] = useState([]);`.
 
-### Creating the `loadWorkers` function
+### Create the `loadWorkers` function
 
-Note that there is a function called `loadWorkers`, this function performs the data retrieval of the workers that currently appears on the dashboard.
+Further down, notice that there is a function called `loadWorkers`; this function retrieves the data of the workers currently shown in the dashboard.
 
-> This function is used to load the workers data.
+> This function is used to load the workers' data.
 
 Insert the code below:
 
 ```jsx
     /**
-    *** 🚀 Load the Workers data.
-    ***    Through the execution of the service:
+    *** 🚀 Loads the Workers' data.
+    ***    By running the service:
     **     http://localhost:9000/services/workers
     */
     const loadWorkers = () => {
         setWorkers([]);
         setLoading(true);
         _service({
-            url: intl.locale.indexOf('pt') == 0 ? '/services/trabalhadores' : '/services/workers',
+            url: intl.locale.indexOf('pt') == 0 ? '/services/workers' : '/services/workers',
             success: (response) => {
                 setWorkers(response.json);
                 setLoading(false);
             },
             fail: (e) => {
                 setLoading(false);
-                console.error('Workers service failed.', e);
+                console.error('Workers service failure.', e);
                 message.error(intl.formatMessage({ id: `${messages}.loading_error` }));
             }
         });
     };
 ```
 
-What this code does is to perform the service **workers** and with the obtained data from the <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a> stores in the _state_ of the component <a href="https://reactjs.org/" target="_blank">ReactJS</a> in **workers**, performing the execution of `setWorkers` passing the workers data.
+What the code above does is pass the **workers** data to the component's _state_ in <a href="https://reactjs.org/" target="_blank">ReactJS</a>, by running the **workers** service, which, upon receiving the data as <a href="https://pt.wikipedia.org/wiki/JSON" target="_blank">JSON</a>, stores it in _state_ by running `setWorkers`.
 
-The final code should be structured in this way, for example:
+The final code should be structured as follows:
 
 ```jsx
     useEffect(() => {
@@ -112,13 +108,13 @@ The final code should be structured in this way, for example:
     );
 ```
 
-> Where the `...` are the various lines of code within their respective block.
+> Where the `...` are the various omitted lines of code within the respective blocks.
 
 ### Run the `useEffect` hook
 
-Now we need to run our `useEffect` hook when the component is "assembled", this hook runs when the component is built in the visual presentation of the browser.
+Now we just need to run our `useEffect` hook when the component is "mounted"; this hook runs when the component is built in the browser's visual presentation.
 
-To do this just on the top add the line of code `loadWorkers();` within the `useEffect` hook, which will look like this:
+To do this, a little further up, simply add the code line `loadWorkers();` inside the `useEffect` hook as follows:
 
 ```jsx
     useEffect(() => {
@@ -126,13 +122,13 @@ To do this just on the top add the line of code `loadWorkers();` within the `use
     }, []);
 ```
 
-This will call the function that runs the service <a href="http://localhost:9000/services/workers" target="_blank">http://localhost:9000/services/workers</a> that was created to get the data in JSON and save it to the `state` (_status_) of the component to be presented in the render (_view_).
+This new code line will call the function that runs the <a href="http://localhost:9000/services/trabalhadores" target="_blank">http://localhost:9000/services/workers</a> service, which was created earlier, to get the data as JSON and store it in the component's `state` (_state_) to be displayed in the return (_view_).
 
 ### Compilation
 
-**Save** the file and then notice that at the **terminal** where you have Netuno running it will appear the result of the new compilation of the **ui**, adding lines from the compilation result of the <a href="https://reactjs.org/" target="_blank">ReactJS</a> + <a href="https://vite.dev/" target="_blank">Vite</a>.
+**Save** the file and right after notice that in the **terminal** where Netuno is running, the result of the new **ui** compilation will appear, with new lines from the <a href="https://reactjs.org/" target="_blank">ReactJS</a> + <a href="https://vite.dev/" target="_blank">Vite</a> compilation output.
 
-The expected outcome into **terminal** should be like this:
+The expected output in the **terminal** should be similar to the following:
 
 ```
 > ui@1.0.0 watch netuno/apps/demo/ui
@@ -155,19 +151,19 @@ computing gzip size...
 built in 2128ms.
 ```
 
-If there is an error with the compilation then it will appear into the **terminal** with an indication issue.
+If there is any compilation error, the problem indication will appear in the **terminal**.
 
-So far we have consumed our **workers** service in which the data obtained is stored in the `state` of the `DashboardContainer` component, which is then available to be used in the `return`.
+So far we have consumed our **workers** service, with the obtained data stored in the `state` of the `DashboardContainer` component, which is thus available to be used in the `return`.
 
-## Present the Data
+## Displaying the Data
 
-It is necessary to present the data visually in the interface that the user sees in the browser.
+Now we need to display the data visually in the interface the user sees in the browser.
 
-To present the data on your browser should be change the `return`, which processes the visual aspect of the components in <a href="https://reactjs.org/" target="_blank">ReactJS</a>.
+To display the data in the browser, we have to change the `return`, which handles the visual appearance of components in <a href="https://reactjs.org/" target="_blank">ReactJS</a>.
 
 At the end of the `DashboardContainer` code you will find: `return ( ... );`
 
-For this step you just need to add one more line of code to contain one more `DataVisualization` component, but now to display the **workers** data, the code should look like this:
+Let's change it by adding just one more line of code to contain one more `DataVisualization` component that will display the data referring to the **workers**; the code should look as follows:
 
 ```jsx
     // 🔍 Search the existing code for:
@@ -188,25 +184,24 @@ Note that only the line below should be added:
 <DataVisualization data={workers} />
 ```
 
-This way the `DataVisualization` will receive the obtained data through the service **workers** via JSON and which are stored in the `state`.
+This way, `DataVisualization` will receive the data obtained through the **workers** service via JSON that were stored in `state`.
 
 ### Final Compilation
 
 **Save** the file with all the changes made so far.
 
-Make sure there are no errors into the **terminal** output.
+Make sure there are no errors in the **terminal** output.
 
-**Refresh** your browser and you should see the final result, or you can also click the link below:
+Now refresh the page in the browser and you should see the final result, or alternatively, click the link below:
 
 * <a href="http://localhost:9000" target="_blank">http://localhost:9000</a>
 
-> If the dashboard appears blank it means there are errors in the code.
+> If the dashboard appears blank, it means there are errors in the code.
 >
-> Check the **browser** console on the **programmer tools**.
+> Check the **browser** console in the **developer tools** for errors.
 
-## Would Like to Know More 👇
+## Learn more 👇
 
-Quick introduction to <a href="https://reactjs.org/" target="_blank">ReactJS</a>:
+A quick introduction to <a href="https://reactjs.org/" target="_blank">ReactJS</a>:
 
-* <a href="https://medium.com/rocketseat/um-guia-para-iniciantes-no-react-js-80e1ac357649" target="_blank"> A Beginner's Guide to ReactJS.</a>
-* <a href="https://www.youtube.com/watch?v=Ke90Tje7VS0&t=3104s" target=" _blank"> React JS - React Tutorial for Beginners</a>
+* <a href="https://medium.com/rocketseat/um-guia-para-iniciantes-no-react-js-80e1ac357649" target="_blank">A Beginner's Guide to ReactJS.</a>

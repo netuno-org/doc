@@ -10,28 +10,27 @@ Upload and download files, manage remote folders.
 
 ## Introduction
 
-Netuno integrates an FTP client into its low-code framework, allowing you to connect to servers, send and receive
-files, modify folders, and perform other remote operations.
+Netuno has integrated into its low-code framework an FTP client, which allows connecting to servers, sending and
+receiving files, modifying folders, among other remote operations.
 
-It supports multiple simultaneous connections, including FTPS.
+It supports multiple simultaneous connections, and also FTPS.
 
-This is thanks to its Java and open-source [Apache Commons Net](https://github.com/apache/commons-net)
-implementation, which allows Netuno to provide these features in all scripting languages through the `_ftp`
-feature.
+This is thanks to the Java and open-source implementation [Apache Commons Net](https://github.com/apache/commons-net), which
+allows Netuno to provide these functionalities in all _script_ languages through the `_ftp` resource.
 
-> More about Netuno's [FTP](/docs/library/resources/ftp) feature.
+> More about Netuno's [FTP](/docs/library/resources/ftp) resource.
 
 ## Configuration
 
-The first step will be to configure the FTP access data that Netuno will use to establish the connection.
+The first step is to configure the FTP access credentials that Netuno will use to establish the connection.
 
 Navigate within the application you are developing to the environment configuration file. In this example,
 we will use the development environment file located at:
 
 - `config/_development.json`
 
-Check if it already contains FTP settings. If it doesn't already exist, add the FTP configuration parameters at
-the end of the configuration file (in JSON format):
+Check whether the FTP configurations are already present; if they do not exist yet, then at the end of the
+configuration file (in JSON format) add the FTP configuration parameters:
 
 ```json title="config/_development.json"
 {
@@ -49,13 +48,13 @@ the end of the configuration file (in JSON format):
 }
 ```
 
-After saving your changes, simply restart Netuno to apply the configuration changes. These are the default
-connection settings, as indicated by the name `default`.
+After saving the changes, simply restart Netuno to apply the configuration changes. These are the
+default settings for the connection, as indicated by the name `default`.
 
-You can add more FTP connection settings, but only one can be set as the default.
+You can add more FTP connection settings, but only one can be defined as default.
 
-To add more FTP connection settings, simply repeat the default configuration block and replace the name `default`
-with another name of your choice. See the example:
+To add more FTP connection settings, simply repeat the default configuration block and change the name
+`default` to another name of your choice, see the example:
 
 ```json title="config/_development.json"
 {
@@ -80,8 +79,8 @@ with another name of your choice. See the example:
 }
 ```
 
-A configuration similar to the example above will allow you to use the default account when called as follows
-in the code:
+A configuration similar to the example above will allow you to use the default account when it is invoked as
+follows in the code:
 
 <PolyglotCode
     codes={[
@@ -118,8 +117,8 @@ in the code:
     ]}
 />
 
-And to use the `other` configuration, simply add the configuration name as a parameter to the `_ftp.init()`
-function as follows:
+And to use the `other` configuration, simply add the configuration name as a parameter to the
+`_ftp.init()` function as follows:
 
 <PolyglotCode
     codes={[
@@ -173,13 +172,13 @@ Before doing anything, you need to start the FTP connection:
     ]}
 />
 
-## Working Folder
+## Working Directory
 
-When performing FTP operations, you need to define which folder will be used.
+When performing operations on FTP, you need to define which folder will be used.
 
-By defining the working folder, we can perform various operations from this base folder.
+By defining the working directory, we will be able to perform the various manipulations from this base folder.
 
-To change the working folder:
+To change the working directory:
 
 <PolyglotCode
     codes={[
@@ -196,7 +195,7 @@ Now any operation will be performed in or from this folder.
 
 ## Creating and Deleting Folders
 
-When creating a folder, simply specify the path to this folder:
+To create a folder, simply indicate the path of this folder:
 
 <PolyglotCode
     codes={[
@@ -226,7 +225,7 @@ To delete or remove folders:
 
 ## Rename
 
-You can rename files or folders by passing the old path and then the new path:
+It is possible to rename files or folders; the old path is passed followed by the new path:
 
 <PolyglotCode
     codes={[
@@ -239,7 +238,7 @@ You can rename files or folders by passing the old path and then the new path:
     ]}
 />
 
-## Upload Files
+## Uploading Files
 
 To submit a text file:
 
@@ -256,7 +255,7 @@ To submit a text file:
 
 ## Receiving Files
 
-To receive a text file:
+To get a text file:
 
 <PolyglotCode
     codes={[
@@ -298,9 +297,9 @@ To receive a text file:
     ]}
 />
 
-## List Items in Folder
+## Listing Folder Items
 
-Lists all the contents of a folder:
+Lists all the content of a folder:
 
 <PolyglotCode
     codes={[

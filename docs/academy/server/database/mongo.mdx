@@ -9,13 +9,13 @@ import PolyglotPath from "@site/src/components/PolyglotPath";
 
 ## Introduction
 
-<a href="https://www.mongodb.com/" target="_blank">MongoDB</a> is a NoSQL document-oriented database. Instead of tables and rows, data is stored in documents in a JSON-like format, which allows a great flexibility in the data model.
+<a href="https://www.mongodb.com/" target="_blank">MongoDB</a> is a document-oriented NoSQL database. Instead of tables and rows, data is stored in documents in a JSON-like format, which allows great flexibility in the data model.
 
-Netuno provides the [_mongo](/docs/library/resources/mongo) resource for MongoDB integration, with a low-code abstraction over the official MongoDB Java driver, available for the various programming languages supported by Netuno: **JavaScript, Python, Ruby, Kotlin and Groovy**.
+Netuno provides the [_mongo](/docs/library/resources/mongo) resource for integration with MongoDB, with a low-code abstraction over the official MongoDB client for Java, available for the various programming languages supported by Netuno: **JavaScript, Python, Ruby, Kotlin, and Groovy**.
 
-> Before moving on, make sure you know how to create services in Netuno, see the [REST - Web Services](/docs/academy/server/services/rest) tutorial.
+> Before proceeding, it is recommended that you know how to create services in Netuno; see the tutorial [REST - Web Services](/docs/academy/server/services/rest).
 
-An implementation example of the operations presented here is available in the `mongo.js` service sample located at:
+An example implementation of the operations presented here is available in the sample service `mongo.js`, located at:
 
 <PolyglotPath files={[
     `apps/demo/server/services/samples/javascript/mongo`
@@ -25,14 +25,14 @@ An implementation example of the operations presented here is available in the `
 
 ### With Docker
 
-Assuming you have Docker installed, just download the MongoDB image and start a new container:
+Assuming you have Docker installed, simply download the MongoDB image and start a new container:
 
 ```shell
 docker pull mongo
 docker run -d --name mongo -p 27017:27017 mongo
 ```
 
-This way MongoDB becomes available at `localhost:27017` without authentication.
+This way, MongoDB is accessible at `localhost:27017` without authentication.
 
 To create the database user according to the application configuration, run:
 
@@ -42,7 +42,7 @@ docker exec -it mongo mongosh products_db --eval 'db.createUser({ user: "product
 
 ### With Ubuntu
 
-MongoDB is not included in the official Ubuntu repositories, so you need to add the official repository before installing:
+MongoDB is not included in the official Ubuntu repositories, so it is necessary to add the official repository before installation:
 
 ```shell
 sudo apt-get install gnupg curl
@@ -52,7 +52,7 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 ```
 
-After installing, you can start the service with:
+After installation, you can start the service with:
 
 ```shell
 sudo systemctl start mongod
@@ -62,17 +62,17 @@ sudo systemctl start mongod
 
 - <a href="https://www.mongodb.com/try/download/community" target="_blank">Download MongoDB Community Server</a>.
 
-Run the downloaded installer and, in the **Service Configuration** step, enable **Install MongoD as a Service** so MongoDB starts automatically. MongoDB becomes available at `localhost:27017` without authentication.
+Run the downloaded installer and, in the **Service Configuration** step, enable **Install MongoD as a Service** so that MongoDB starts automatically. MongoDB is accessible at `localhost:27017` without authentication.
 
-> Check the [official MongoDB documentation](https://www.mongodb.com/docs/manual/installation/) for other distributions and versions.
+> See the [official MongoDB documentation](https://www.mongodb.com/docs/manual/installation/) for other distributions and versions.
 
 ## Application Configuration
 
-The MongoDB connection configuration is done in the application configuration file, according to the environment:
+MongoDB connections are configured in the application configuration file, according to the environment:
 
 - `config/_development.json`
 
-> See more about the application [configuration files](/docs/academy/explore/configuration).
+> Learn more about the application's [configuration files](/docs/academy/explore/configuration).
 
 Inside the configuration file, add the `mongo` block, where each key identifies a connection:
 
@@ -103,13 +103,13 @@ A connection can be defined in two ways:
   - `host` — the server address, by default `localhost`.
   - `port` — the connection port, by default `27017`.
   - `database` — the database name, by default the connection key name.
-  - `params` — additional connection parameters appended to the URL, for example `{ "authSource": "admin" }`. Only applied when the URL is built from the object fields.
+  - `params` — additional connection parameters appended to the URL, for example `{ "authSource": "admin" }`. They are only applied when the URL is built from the object fields.
 
-> The connection does not need to be the application's main database. Unlike the `db` configuration, the `mongo` block is independent and allows several connections at the same time.
+> The connection does not have to be the application's main database. Unlike the `db` configuration, the `mongo` block is independent and allows multiple simultaneous connections.
 
-## Initializing the Connection
+## Initialize the Connection
 
-The first step is to initialize the MongoDB client with the `_mongo.init(...)` resource, passing the configuration key name or directly a connection URL:
+The first step is to initialize the MongoDB client with the `_mongo.init(...)` resource, passing the configuration key name or a connection URL directly:
 
 <PolyglotCode
     codes={[
@@ -183,7 +183,7 @@ You can also initialize the connection directly with a URL:
     ]}
 />
 
-> When calling `_mongo.init()` without arguments the `default` configuration key is used. It is recommended to always pass the key name or the URL, to make the used connection explicit.
+> Calling `_mongo.init()` without arguments uses the `default` configuration key. It is recommended to always pass the key name or the URL so that the connection used is explicit.
 
 ## Database and Collections
 
@@ -291,7 +291,7 @@ You can test the database connection with `ping()`, and list all existing collec
     ]}
 />
 
-You can rename a collection with `renameCollection()`, passing the full name with the database, or the database name and the new collection name separately:
+You can rename a collection with `renameCollection()`, passing the full name including the database, or the database name and the new collection name separately:
 
 <PolyglotCode
     codes={[
@@ -319,11 +319,11 @@ To remove a collection and all its documents, use `drop()`:
     ]}
 />
 
-## Inserting Documents
+## Insert Documents
 
-Data is represented with the `_val` resource, using `_val.map()` for documents and `_val.list()` for lists of values.
+Data is represented with the `_val` resource, through `_val.map()` for documents and `_val.list()` for lists of values.
 
-### Inserting a single document
+### Insert a single document
 
 With `insertOne()` you insert a document and get the generated ID:
 
@@ -418,9 +418,9 @@ Documents can contain nested structures, such as lists and other documents:
     ]}
 />
 
-### Inserting multiple documents
+### Insert multiple documents
 
-With `insertMany()` you insert several documents at once, receiving the list of generated IDs:
+With `insertMany()` you insert multiple documents at once, receiving the list of generated IDs:
 
 <PolyglotCode
     codes={[
@@ -517,7 +517,7 @@ With `insertMany()` you insert several documents at once, receiving the list of 
     ]}
 />
 
-## Querying Documents
+## Query Documents
 
 The `find()` method returns a [MongoFindIterable](/docs/library/objects/MongoFindIterable), from which you get the documents with `all()` (all) or `first()` (the first one, or `null` if there is none).
 
@@ -612,25 +612,25 @@ The `_mongo.filters()` factory provides the main MongoDB query operators:
 | Operator | Description |
 |---|---|
 | `eq("field", value)` | Equal to the value. |
-| `ne("field", value)` | Different from the value. |
+| `ne("field", value)` | Not equal to the value. |
 | `gt("field", value)` | Greater than the value. |
 | `gte("field", value)` | Greater than or equal to the value. |
 | `lt("field", value)` | Less than the value. |
 | `lte("field", value)` | Less than or equal to the value. |
 | `in("field", value1, value2, ...)` | Equal to any of the values. |
-| `nin("field", value1, value2, ...)` | Different from all the values. |
-| `and(filter1, filter2, ...)` | Matches all the filters. |
+| `nin("field", value1, value2, ...)` | Not equal to any of the values. |
+| `and(filter1, filter2, ...)` | Matches all filters. |
 | `or(filter1, filter2, ...)` | Matches at least one of the filters. |
 | `not(filter)` | Does not match the filter. |
 | `regex("field", "pattern")` | Matches the regular expression. |
 | `exists("field")` | The field exists in the document. |
-| `text("search")` | Text search. |
+| `text("query")` | Text search. |
 | `type("field", "type")` | The field is of the specified type. |
-| `mod("field", divisor, remainder)` | The field modulo the divisor equals the remainder. |
-| `where("expression")` | Matches documents using a JavaScript expression, for example `"this.price > 100"`. |
+| `mod("field", divisor, remainder)` | The remainder of dividing the field by the divisor equals the value. |
+| `where("expression")` | Matches documents that satisfy a JavaScript expression, for example `"this.price > 100"`. |
 | `size("field", n)` | The array field has exactly `n` elements. |
 
-For example, to get the products with price greater than 50 and quantity less than 30:
+For example, to get products with a price greater than 50 and a quantity less than 30:
 
 <PolyglotCode
     codes={[
@@ -692,7 +692,7 @@ For example, to get the products with price greater than 50 and quantity less th
     ]}
 />
 
-Or to get the products whose name matches a regular expression:
+Or to get products whose name matches a regular expression:
 
 <PolyglotCode
     codes={[
@@ -739,9 +739,9 @@ Or to get the products whose name matches a regular expression:
     ]}
 />
 
-## Iterating over the Results
+## Iterate Over Results
 
-With the query result you can iterate over all the documents found:
+With the query result, you can iterate over all the documents found:
 
 <PolyglotCode
     codes={[
@@ -787,7 +787,7 @@ With the query result you can iterate over all the documents found:
     ]}
 />
 
-You can also iterate over the results with `forEach()` passing a function:
+You can also iterate over the results with `forEach()` by passing a function:
 
 <PolyglotCode
     codes={[
@@ -836,7 +836,7 @@ You can also iterate over the results with `forEach()` passing a function:
 
 ## Sorting
 
-With the `_mongo.sorts()` factory you define the order of the results, ascending or descending:
+With the `_mongo.sorts()` factory, you define the order of the results, ascending or descending:
 
 <PolyglotCode
     codes={[
@@ -883,7 +883,7 @@ With the `_mongo.sorts()` factory you define the order of the results, ascending
     ]}
 />
 
-To sort by several fields, use `orderBy()`:
+To sort by multiple fields, use `orderBy()`:
 
 <PolyglotCode
     codes={[
@@ -945,9 +945,9 @@ To sort by several fields, use `orderBy()`:
     ]}
 />
 
-## Projecting Fields
+## Field Projection
 
-With the `_mongo.projections()` factory you limit the fields returned in the documents:
+With the `_mongo.projections()` factory, you limit the fields returned in documents:
 
 <PolyglotCode
     codes={[
@@ -994,7 +994,7 @@ With the `_mongo.projections()` factory you limit the fields returned in the doc
     ]}
 />
 
-To combine projections:
+To combine multiple projections:
 
 <PolyglotCode
     codes={[
@@ -1056,7 +1056,7 @@ To combine projections:
     ]}
 />
 
-The projection types available are the following:
+The available projection types are the following:
 
 | Projection | Description |
 |---|---|
@@ -1065,14 +1065,14 @@ The projection types available are the following:
 | `excludeId()` | Excludes the `_id` field. |
 | `fields(projection1, ...)` | Combines projections. |
 | `slice("field", n)` | Includes only the first `n` elements of the array field. |
-| `slice("field", skip, n)` | Includes `n` elements of the array field, starting after the `skip` first elements. |
+| `slice("field", skip, n)` | Includes `n` elements of the array field, starting after the first `skip` elements. |
 | `elemMatch("field")` | Includes only the first element of the array field. |
 | `elemMatch("field", filter)` | Includes only the first array element that matches the filter. |
 | `computed("field", expression)` | Adds a computed field based on an aggregation expression. |
 
 ## Limits and Skips
 
-With `limit()` and `skip()` you control the number of results returned:
+With `limit()` and `skip()` you control the number of returned results:
 
 <PolyglotCode
     codes={[
@@ -1124,70 +1124,14 @@ With `limit()` and `skip()` you control the number of results returned:
     ]}
 />
 
-## Updating Documents
+## Update Documents
 
-With the `_mongo.updates()` factory you define the changes to apply, and with `updateOne()` or `updateMany()` you apply the changes to the documents that match the filter:
+With the `_mongo.updates()` factory, you define the changes to apply, and with `updateOne()` or `updateMany()` you apply the changes to documents that match the filter:
 
 <PolyglotCode
     codes={[
         {
             lang: 'javascript',
-            code: `
-                collection.updateOne(
-                    _mongo.filters().eq("name", "Laptop"),
-                    _mongo.updates().set("quantity", 42)
-                )
-
-                collection.updateMany(
-                    _mongo.filters().eq("category", "computers"),
-                    _mongo.updates().set("category", "featured")
-                )
-            `
-        },
-        {
-            lang: 'python',
-            code: `
-                collection.updateOne(
-                    _mongo.filters().eq("name", "Laptop"),
-                    _mongo.updates().set("quantity", 42)
-                )
-
-                collection.updateMany(
-                    _mongo.filters().eq("category", "computers"),
-                    _mongo.updates().set("category", "featured")
-                )
-            `
-        },
-        {
-            lang: 'ruby',
-            code: `
-                collection.updateOne(
-                    _mongo.filters().eq("name", "Laptop"),
-                    _mongo.updates().set("quantity", 42)
-                )
-
-                collection.updateMany(
-                    _mongo.filters().eq("category", "computers"),
-                    _mongo.updates().set("category", "featured")
-                )
-            `
-        },
-        {
-            lang: 'kotlin',
-            code: `
-                collection.updateOne(
-                    _mongo.filters().eq("name", "Laptop"),
-                    _mongo.updates().set("quantity", 42)
-                )
-
-                collection.updateMany(
-                    _mongo.filters().eq("category", "computers"),
-                    _mongo.updates().set("category", "featured")
-                )
-            `
-        },
-        {
-            lang: 'groovy',
             code: `
                 collection.updateOne(
                     _mongo.filters().eq("name", "Laptop"),
@@ -1211,9 +1155,9 @@ The `_mongo.updates()` factory provides the update operators:
 | `unset("field")` | Removes a field from the document. |
 | `rename("field", "newName")` | Renames a field. |
 | `push("field", value)` | Adds a value to an array. |
-| `combine(update1, update2, ...)` | Combines several updates into a single one. |
+| `combine(update1, update2, ...)` | Combines multiple updates into one. |
 
-To apply several changes at once, use `combine()`:
+To apply multiple changes at once, use `combine()`:
 
 <PolyglotCode
     codes={[
@@ -1344,9 +1288,9 @@ With `findOneAndUpdate()` you find and update a document atomically, returning t
     ]}
 />
 
-## Replacing Documents
+## Replace Documents
 
-With `replaceOne()` you replace the whole document (unlike updates, it cannot contain update operators):
+With `replaceOne()` you replace the entire document (unlike updates, it cannot contain update operators):
 
 <PolyglotCode
     codes={[
@@ -1428,7 +1372,7 @@ To find and replace atomically, returning the old document, use `findOneAndRepla
     ]}
 />
 
-## Deleting Documents
+## Delete Documents
 
 With `deleteOne()` and `deleteMany()` you delete the documents that match the filter:
 
@@ -1436,54 +1380,6 @@ With `deleteOne()` and `deleteMany()` you delete the documents that match the fi
     codes={[
         {
             lang: 'javascript',
-            code: `
-                collection.deleteOne(
-                    _mongo.filters().eq("name", "Laptop")
-                )
-
-                collection.deleteMany(
-                    _mongo.filters().eq("category", "inactive")
-                )
-            `
-        },
-        {
-            lang: 'python',
-            code: `
-                collection.deleteOne(
-                    _mongo.filters().eq("name", "Laptop")
-                )
-
-                collection.deleteMany(
-                    _mongo.filters().eq("category", "inactive")
-                )
-            `
-        },
-        {
-            lang: 'ruby',
-            code: `
-                collection.deleteOne(
-                    _mongo.filters().eq("name", "Laptop")
-                )
-
-                collection.deleteMany(
-                    _mongo.filters().eq("category", "inactive")
-                )
-            `
-        },
-        {
-            lang: 'kotlin',
-            code: `
-                collection.deleteOne(
-                    _mongo.filters().eq("name", "Laptop")
-                )
-
-                collection.deleteMany(
-                    _mongo.filters().eq("category", "inactive")
-                )
-            `
-        },
-        {
-            lang: 'groovy',
             code: `
                 collection.deleteOne(
                     _mongo.filters().eq("name", "Laptop")
@@ -1557,9 +1453,9 @@ To delete all documents in the collection, pass an empty filter with the help of
     ]}
 />
 
-## Counting Documents
+## Count Documents
 
-With `countDocuments()` you get the number of documents in the collection, optionally with a filter. `estimatedDocumentCount()` is faster since it uses the collection metadata, but without a filter:
+With `countDocuments()` you get the number of documents in the collection, optionally with a filter. Meanwhile, `estimatedDocumentCount()` is faster because it uses the collection metadata, but without a filter:
 
 <PolyglotCode
     codes={[
@@ -1628,7 +1524,7 @@ With `countDocuments()` you get the number of documents in the collection, optio
 
 ## Indexes
 
-With the `_mongo.indexes()` factory you create indexes to improve the performance of the queries. To create an index just pass the specifications to `createIndex()`:
+With the `_mongo.indexes()` factory, you create indexes to improve query performance. To create an index, simply pass the specifications to `createIndex()`:
 
 <PolyglotCode
     codes={[
@@ -1707,7 +1603,7 @@ You can tell MongoDB which index to use in a query with `hint()`:
     ]}
 />
 
-With `min()` and `max()` you constrain the range of index values scanned by the query:
+With `min()` and `max()` you limit the range of index values traversed by the query:
 
 <PolyglotCode
     codes={[
@@ -1801,9 +1697,9 @@ With `min()` and `max()` you constrain the range of index values scanned by the 
 
 ## Aggregations
 
-For more advanced analysis, `aggregate()` allows you to run an aggregation pipeline, where each stage is defined with the `_mongo.aggregates()` factory and the accumulators with `_mongo.accumulators()`.
+For more advanced analysis, `aggregate()` allows you to run an aggregation pipeline, where each stage is defined with the `_mongo.aggregates()` factory and accumulators with `_mongo.accumulators()`.
 
-For example, to group the products by category and sum the price of each group:
+For example, to group products by category and sum the price of each group:
 
 <PolyglotCode
     codes={[
@@ -1899,10 +1795,10 @@ The available aggregation stages are the following:
 
 | Stage | Description |
 |---|---|
-| `match(filter)` | Selects only the documents that match the filter. |
-| `group("$field", accumulators)` | Groups the documents by the field and applies the accumulators. |
-| `project(projection)` | Adds, removes or alters fields in the documents. |
-| `sort(sort)` | Sorts the documents. |
+| `match(filter)` | Selects only documents that match the filter. |
+| `group("$field", accumulators)` | Groups documents by the field and applies the accumulators. |
+| `project(projection)` | Adds, removes, or changes fields in documents. |
+| `sort(sorting)` | Sorts the documents. |
 | `limit(n)` | Limits to the first `n` documents. |
 | `skip(n)` | Skips the first `n` documents. |
 | `count()` | Counts the number of documents. |
@@ -1916,16 +1812,16 @@ And the most used accumulators:
 | `avg("field", "$expression")` | Average of the values. |
 | `min("field", "$expression")` | Minimum value. |
 | `max("field", "$expression")` | Maximum value. |
-| `first("field", "$expression")` | Value of the first document. |
-| `last("field", "$expression")` | Value of the last document. |
-| `top("field", sort, "$expression")` | Top value according to the sort. |
-| `bottom("field", sort, "$expression")` | Bottom value according to the sort. |
+| `first("field", "$expression")` | Value from the first document. |
+| `last("field", "$expression")` | Value from the last document. |
+| `top("field", sorting, "$expression")` | Top value according to the sorting. |
+| `bottom("field", sorting, "$expression")` | Bottom value according to the sorting. |
 
-> In the accumulators, the expression with the `$` prefix refers to a field of an input document, for example `"$price"`.
+> In accumulators, the expression prefixed with `$` refers to a field of an input document, for example `"$price"`.
 
-## Converting between Values and BSON
+## Conversion Between Values and BSON
 
-Sometimes you need to convert between the Netuno `_val` objects and the MongoDB BSON documents:
+Sometimes it is necessary to convert between Netuno `_val` objects and MongoDB BSON documents:
 
 <PolyglotCode
     codes={[
@@ -1984,7 +1880,7 @@ Sometimes you need to convert between the Netuno `_val` objects and the MongoDB 
 
 ## Operations with Options
 
-The `*Options()` factories of the `_mongo` resource return the standard MongoDB driver options objects, and you can chain their methods directly. For example, `upsert(true)` inserts the document when the filter does not match any existing document:
+The `*Options()` factories of the `_mongo` resource return the default option objects of the MongoDB driver, and you can chain their methods directly. For example, `upsert(true)` inserts the document when the filter does not match any existing document:
 
 <PolyglotCode
     codes={[
@@ -2043,11 +1939,11 @@ The `*Options()` factories of the `_mongo` resource return the standard MongoDB 
 
 When the document is inserted, `findOneAndUpdate()` returns `null`.
 
-The available options factories are: `insertOneOptions()`, `insertManyOptions()`, `updateOptions()`, `findOneAndUpdateOptions()`, `replaceOptions()`, `findOneAndReplaceOptions()`, `deleteOptions()`, `findOneAndDeleteOptions()`, `countOptions()`, `estimatedDocumentCountOptions()`, `dropCollectionOptions()` and `textSearchOptions()`.
+The available option factories are: `insertOneOptions()`, `insertManyOptions()`, `updateOptions()`, `findOneAndUpdateOptions()`, `replaceOptions()`, `findOneAndReplaceOptions()`, `deleteOptions()`, `findOneAndDeleteOptions()`, `countOptions()`, `estimatedDocumentCountOptions()`, `dropCollectionOptions()`, and `textSearchOptions()`.
 
-## Closing the Connection
+## Close the Connection
 
-When you finish, it is a good practice to close the MongoDB connection:
+When finished, it is good practice to close the MongoDB connection:
 
 <PolyglotCode
     codes={[
@@ -2062,8 +1958,8 @@ When you finish, it is a good practice to close the MongoDB connection:
 
 ## Conclusion
 
-With the `_mongo` resource, Netuno provides a low-code and polyglot abstraction over the official MongoDB Java driver, allowing you to work with documents, filters, sorts, projections, updates, indexes and aggregations in JavaScript, Python, Ruby, Kotlin and Groovy.
+With the `_mongo` resource, Netuno offers a low-code, polyglot abstraction over the official MongoDB client for Java, allowing you to work with documents, filters, sorting, projections, updates, indexes, and aggregations in JavaScript, Python, Ruby, Kotlin, and Groovy.
 
-For more details about all the available methods, check the documentation of the [_mongo](/docs/library/resources/mongo) resource and of the [MongoCollection](/docs/library/objects/MongoCollection) class.
+For more details on all available methods, see the documentation for the [_mongo](/docs/library/resources/mongo) resource and the [MongoCollection](/docs/library/objects/MongoCollection) class.
 
 Happy coding!

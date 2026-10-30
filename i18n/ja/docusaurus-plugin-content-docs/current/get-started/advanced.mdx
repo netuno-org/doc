@@ -1,0 +1,248 @@
+---
+sidebar_position: 2
+id: advanced
+title: 高度なインストール
+sidebar_label: 高度なインストール
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# 高度なインストール 
+
+スクリプトによるクイックインストールで問題が発生した場合、Netunoのインストールの仕組みをよりよく理解したい場合、またはその他の理由がある場合は、手動インストールを実行できます。
+
+希望するバージョンを選択してください。ここでの選択は、このページのすべてのコマンドブロックに適用されます。
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="安定版" default>
+
+**安定版**はNetunoの認定エディションです。厳格なテストを経ており、本番環境で完全に使用できる状態です。
+
+</TabItem>
+  <TabItem value="testing" label="テスト版">
+
+:::danger 本番環境では使用しないでください
+**テスト版**には最新の機能と進行中の実装が含まれています。実験的なため、不安定になる可能性があります。新しい機能を試したり、テストを行ったり、プラットフォームのエコシステムに貢献したりする目的でのみ使用することをお勧めします。
+:::
+
+  </TabItem>
+</Tabs>
+
+## 前提条件
+
+始める前に、コンピューターにインストールが必要なものを確認してください:
+
+- **Java** *（インストーラーのみ）*
+
+オペレーティングシステムに**Java**が事前にインストールされている必要があります。これはNetunoの初期インストールスクリプトを実行するため**のみ**使用されます。
+
+- **GraalVM** *（自動インストール）* 
+
+インストール中に、**GraalVM**エンジンがNetunoのフォルダー内に自動的にダウンロードおよび設定されます。以降、分離されたGraalVMのJavaがプラットフォームの実行に使用され、マシンのグローバル設定に影響を与えることなく、安定性と高いパフォーマンスを保証します。
+
+技術の詳細については、[GraalVM](https://www.graalvm.org/)をご覧ください。
+
+:::info フロントエンドの要件は任意です
+フロントエンドツール（Node.js、NPM、Yarnなど）のインストールは完全に任意です。フルスタックモードで高度なインターフェースを開発する場合にのみ設定が必要です。
+:::
+
+### バックエンド - Java
+
+このステップでは、プラットフォームのインストーラーを実行できるように環境を準備します。**Javaバージョン11以上**がインストールされている必要があります。
+
+ターミナルで以下のコマンドを実行して、Javaがすでにインストールされているか確認してください:
+
+```bash
+java -version
+```
+
+インストールされていない場合は、**オープンソースのJava**のインストールをお勧めします:
+
+- WindowsおよびmacOS: [Java OpenJDK Eclipse Temurin](https://adoptium.net/pt-BR)
+
+- Linux（Ubuntu / Debian）:
+
+```bash
+apt install default-jdk-headless
+```
+
+### フロントエンド - Bun
+
+ユーザーインターフェース（UI / フロントエンド）を開発するには、Netunoエコシステムのフロントエンドコンパイル用公式標準ツールである**Bun**の使用をお勧めします。
+
+#### なぜBunを使うのか？
+
+**Bun**は、Node.jsに対する現代的で高度に最適化された代替手段です。Netuno環境では次の点で優れています:
+
+- **高いパフォーマンス:** 依存関係の実行とインストールが明らかに高速です。
+- **生産性:** 日々のインターフェース開発フローでのパフォーマンスが向上します。
+- **ネイティブ統合:** Netunoのすべてのサンプルプロジェクトとテンプレートは、Bunで動作するように事前設定されています。
+
+ガイドはこちら: [Bunのインストール](/docs/academy/website/bun)
+
+Netunoは技術選択を固定しません。必要であれば、**Node.jsをNPM、PNPM、Yarn**、またはその他のパッケージマネージャーとともに使用できます。フロントエンドスタックの選択は完全にあなたの判断に委ねられます。
+
+:::tip ツールを常に最新の状態に保つ
+選択した技術に関係なく、互換性、セキュリティ、パフォーマンスを確保するために常に最新バージョンを使用してください。
+:::
+
+## LinuxまたはmacOS
+
+ほとんどのLinuxディストリビューションとmacOSには、**cURL**または**Wget**が標準で含まれています。どちらが利用可能か確認してください:
+
+```bash
+curl --version
+```
+```bash
+wget --version
+```
+
+以下の手順に従ってください:
+
+**1. フォルダーを作成して移動します:**
+
+```bash
+mkdir -p netuno && cd netuno
+```
+
+**2. インストーラーをダウンロードします**（方法は1つだけ選択してください）:
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="安定版" default>
+
+**cURLを使用する場合:**
+```bash
+curl -L https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -o netuno-setup.jar
+```
+
+**Wgetを使用する場合:**
+```bash
+wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -O netuno-setup.jar
+```
+
+  </TabItem>
+  <TabItem value="testing" label="テスト版">
+
+**cURLを使用する場合:**
+```bash
+curl -L https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -o netuno-setup.jar
+```
+
+**Wgetを使用する場合:**
+```bash
+wget https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -O netuno-setup.jar
+```
+
+  </TabItem>
+</Tabs>
+
+**3. インストールを実行します:**
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="安定版" default>
+
+```bash
+java -jar netuno-setup.jar install
+```
+
+  </TabItem>
+  <TabItem value="testing" label="テスト版">
+
+```bash
+java -jar netuno-setup.jar install version=testing
+```
+
+  </TabItem>
+</Tabs>
+
+:::caution 注意 
+macOSには、ターミナル経由でダウンロードしたアプリケーションをブロックする可能性があるネイティブのセキュリティメカニズム（Gatekeeper）があります。
+:::
+
+**macOS**でNetunoが権限エラーなしで動作するようにするには、手順3の直後に、引き続き`netuno`フォルダー内で以下のコマンドを実行してください。
+
+```bash
+sudo xattr -r -d com.apple.quarantine .
+```
+
+システムが確認のためにMacの管理者パスワードを要求します。
+
+## Windows
+
+ダウンロードとインストールには**PowerShell**を使用します。スタートメニューで`powershell`と入力してPowerShellを開きます。
+
+**1. フォルダーを作成し、移動して、インストーラーをダウンロードします**。ブロック全体をコピーしてEnterキーを押してください:
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="安定版" default>
+
+```powershell
+md netuno; cd netuno
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar" -OutFile "netuno-setup.jar"
+```
+
+  </TabItem>
+  <TabItem value="testing" label="テスト版">
+
+```powershell
+md netuno; cd netuno
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar" -OutFile "netuno-setup.jar"
+```
+
+  </TabItem>
+</Tabs>
+
+**2. インストールを実行します:**
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="安定版" default>
+
+```powershell
+java -jar netuno-setup.jar install
+```
+
+  </TabItem>
+  <TabItem value="testing" label="テスト版">
+
+```powershell
+java -jar netuno-setup.jar install version=testing
+```
+
+  </TabItem>
+</Tabs>
+
+:::caution 注意 
+標準のインストールでは通常、管理者権限は必要ありません。ただし、「アクセスが拒否されました」というメッセージが表示された場合は、PowerShellを閉じ、**管理者**として再度開き、コマンドを再実行してください。
+:::
+
+## ゼロからやり直す
+
+環境をクリーンアップしてゼロからやり直すには:
+
+**1. ターミナルで1つ上の階層に戻ります:**
+
+```bash
+cd ..
+```
+
+**2. 失敗したフォルダーを削除します:**
+
+<Tabs groupId="os">
+  <TabItem value="linux-mac" label="LinuxまたはmacOS" default>
+
+```bash
+rm -rf netuno
+```
+
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+
+```powershell
+rmdir /s /q netuno
+```
+
+  </TabItem>
+</Tabs>
+
+**3. インストールを再開します**。

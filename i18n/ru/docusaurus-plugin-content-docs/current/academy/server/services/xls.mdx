@@ -1,0 +1,1002 @@
+---
+id: xls
+title: XLS - Excel
+sidebar_label: XLS - Excel
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Обработка пользовательских файлов Excel.
+
+## Введение
+
+Netuno генерирует файлы EXCEL, совместимые с LibreOffice, OpenOffice, Microsoft Office, Google Drive и т. д., через ресурс [XLS](/docs/library/resources/xls), который предоставляет low-code-абстракцию над [Apache POI](https://poi.apache.org/) для различных языков программирования, поддерживаемых Netuno.
+
+Можно генерировать файлы XLSX, XLS или ODS.
+
+Приложение, поставляемое с Netuno и называемое **demo** (демонстрационное приложение), содержит множество примеров возможных реализаций кода на разных языках, включая демонстрацию экспорта электронных таблиц через сервис `export-excel`, который находится в:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/export-excel`
+]} />
+
+## Инициализация
+
+Для инициализации ресурса XLS:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.create()
+            `
+        },
+    ]}
+/>
+
+Создаёт объект, содержащий контекст нового файла, который будет построен, с пустым листом.
+
+## Форматирование
+
+Определение стилей визуального форматирования, то есть формата дат, времени, денежных значений и т. д., должно выполняться до определения значений ячеек, потому что при определении значений ячеек можно связать с ними стиль форматирования.
+
+Как показано в примере из приложения `demo`, форматирования определяются в начале кода.
+
+Для форматирования дат:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const стильДата = excel.cellStyleFormat("dd/mm/yy")
+            `
+        },
+    ]}
+/>
+
+Для форматирования времени:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const стильВремя = excel.cellStyleFormat("hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+Для форматирования дат со временем:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const стильДатаВремя = excel.cellStyleFormat("dd/mm/yyyy hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+Для форматирования денежных значений в **евро**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const стильДеньгиЕвро = excel.cellStyleFormat("€#,##0.00;\\-€#,##0.00")
+            `
+        },
+    ]}
+/>
+
+Для форматирования денежных значений в **реалах**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const стильДеньгиРеал = excel.cellStyleFormat("R$#,##0.00;\\-R$#,##0.00")
+            `
+        },
+    ]}
+/>
+
+Для форматирования значений в **процентах**:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const стильПроцент = excel.cellStyleFormat("0.00%")
+            `
+        },
+    ]}
+/>
+
+## Внешний вид
+
+Определение стилей визуального оформления, то есть внешнего вида ячеек, такого как цвета, шрифт, границы, выравнивание и другие, должно выполняться до определения значений ячеек, потому что при задании значений ячеек можно связать с ними стиль оформления.
+
+Как показано в примере из приложения `demo`, оформление определяется в начале кода.
+
+Пример определения цветов и выравнивания:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const стильЗаголовка = excel.cellStyle()
+                стильЗаголовка.setFillPattern(_xls.fillPattern("solid-foreground"))
+                стильЗаголовка.setFillBackgroundColor(excel.color("black"))
+                стильЗаголовка.setAlignment(_xls.horizontalAlignment("center"))
+            `
+        },
+    ]}
+/>
+
+> Документация со всеми методами объекта <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Стили в Apache POI</a>.
+
+Определение стиля границ:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const стильДанных = excel.cellStyle()
+                стильДанных.setBorderBottom(_xls.borderStyle("thin"))
+                стильДанных.setBorderTop(_xls.borderStyle("thin"))
+                стильДанных.setBorderLeft(_xls.borderStyle("thin"))
+                стильДанных.setBorderRight(_xls.borderStyle("thin"))
+            `
+        },
+    ]}
+/>
+
+> Документация со всеми методами объекта <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Стили в Apache POI</a>.
+
+Создаёт новый стиль шрифта для текста и связывает определения шрифта с определённым уже существующим стилем ячейки:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const шрифтЗаголовка = excel.font()
+                шрифтЗаголовка.setBold(true)
+                шрифтЗаголовка.setFontHeightInPoints(14)
+                шрифтЗаголовка.setColor(excel.color("yellow"))
+                // Задаёт шрифт для стильЗаголовка
+                стильЗаголовка.setFont(шрифтЗаголовка)
+            `
+        },
+    ]}
+/>
+
+> Документация со всеми методами объекта <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFFont.html" target="_blank">Шрифт в Apache POI</a>.
+
+## Изображение
+
+Чтобы вставить изображение в лист, которое находится в `storage/samples/export-excel/logo.png` внутри приложения:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _storage.filesystem("server", "samples/export-excel", "logo.png"),
+                    1, // Номер столбца
+                    1  // Номер строки
+                ).resize(2.3)
+            `
+        },
+    ]}
+/>
+
+Чтобы вставить изображение, которое находится в приложении по пути `public/images/logo.png`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _app.file("public/images/logo.png"),
+                    10, // Номер столбца
+                    1  // Номер строки
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+> Документация со всеми методами объекта <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/ss/usermodel/Picture.html" target="_blank">Изображение в Apache POI</a>.
+
+## Объединение ячеек
+
+Для объединения ячеек в области используется метод `mergedRegion`.
+
+Порядок параметров следующий:
+
+1. Начальная строка
+2. Начальный столбец
+3. Конечная строка
+4. Конечный столбец
+
+> Числовые ссылки позиционирования всегда начинаются с **нуля**.
+
+В примере ниже будут объединены все ячейки с 10-го по 15-й столбец, находящиеся в строке 3:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.mergedRegion(2, 9, 2, 14)
+            `
+        },
+    ]}
+/>
+
+## Ячейки
+
+Чтобы получить объект, представляющий ячейку:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Получает ячейку в столбце B и строке 2:
+                const клетка = excel.cell(1, 1)
+            `
+        },
+    ]}
+/>
+
+> Числовые ссылки позиционирования всегда начинаются с **нуля**.
+
+Пример вывода в лог формулы ячейки:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Записывает в лог формулу строки 2 и столбца B.
+                _log.info(
+                    "Формула ячейки B2: "+ excel.cell(1, 1).getCellFormula()
+                )
+            `
+        },
+    ]}
+/>
+
+Пример получения текстового значения ячейки:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Записывает в лог текстовое значение ячейки строки 2 и столбца B.
+                _log.info(
+                    "Значение ячейки B2: "+ excel.cell(1, 1).getStringCellValue()
+                )
+            `
+        },
+    ]}
+/>
+
+> Документация со всеми методами объекта <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCell.html" target="_blank">Ячейка в Apache POI</a>.
+
+## Строки
+
+Чтобы получить объект, представляющий строку:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Получает объект, представляющий строку 2.
+                const строка = excel.row(1)
+            `
+        },
+    ]}
+/>
+
+> Числовые ссылки позиционирования всегда начинаются с **нуля**.
+
+В примере выше, если строка не существует, новая строка будет создана автоматически.
+
+> Документация со всеми методами объекта <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFRow.html" target="_blank">Строка в Apache POI</a>.
+
+## Вставка табличных данных
+
+Можно вставить таблицу данных с помощью метода `addDataTable`.
+
+Первые два параметра определяют позицию, в которую должна быть вставлена таблица данных: это номера строк и столбцов.
+
+> Обратите внимание, что позиционирование строк и столбцов в коде всегда начинается с **нуля**.
+>
+> То есть строка 1 — это позиция `0`, и столбец A также является позицией `0`.
+
+Далее передаётся список строк, где каждая строка содержит другой список для столбцов, и только затем добавляется карта со значением ячейки.
+
+Полный пример:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list() // Строки
+                        .add(
+                            _val.list() // Столбец
+                                .add(
+                                    _val.map() // Ячейка
+                                        .set("value", "Имя")
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "Возраст")
+                                )
+                        )
+                        .add( // Другая строка
+                            _val.list()
+                                .add( // Первый столбец
+                                    _val.map()
+                                        .set("value", "Мария")
+                                )
+                                .add( // Второй столбец
+                                    _val.map()
+                                        .set("value", 26)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Внешний вид
+
+В карте ячеек можно связать уже созданные стили, используя, например, стили, определённые в разделе о внешнем виде и форматировании, которые рассматривались ранее.
+
+Ниже пример того, как связать стили с ячейками:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map()
+                                        .set("value", "Имя")
+                                        .set("style", стильЗаголовка)
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "Возраст")
+                                        .set("style", стильЗаголовка)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Формулы
+
+Для вставки формул используется ключ `formula` в карте определений ячейки.
+
+В этом примере в последней ячейке будет выполнено суммирование всех значений других ячеек:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Итого")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+Для получения буквы столбца из номера столбца можно использовать метод `columnReference`, что может помочь при определении формул. Этот же метод также можно использовать для получения номера столбца из буквенной ссылки, например:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, _xls.columnReference('B'),
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Итого")
+                                )
+                                .add(
+                                    _val.map().set(
+                                        "formula",
+                                        "SUM("+ _xls.columnReference(1) +"7:"+ _xls.columnReference(2) +"8)"
+                                )
+                            )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+## Листы
+
+Чтобы создать новый лист (_sheet_) в самом документе, рассмотрите следующий пример:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const новыйЛист = excel.createSheet("Новый лист")
+            `
+        },
+    ]}
+/>
+
+> В методах работы с ячейками, изображениями и данными в первый параметр можно добавить ссылку на объект листа.
+>
+> В зависимости от того, какой лист активен, можно изменить активный лист с помощью метода [activeSheet](/docs/library/resources/xls#activesheet).
+
+Пример вставки изображения в новый лист:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    новыйЛист,
+                    _app.file("public/images/logo.png"),
+                    10, // Номер столбца
+                    1  // Номер строки
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+Пример вставки таблицы данных в новый лист:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    новыйЛист,
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "Итого")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### Активация
+
+Таким образом, чтобы не указывать постоянно в методах, какой лист должен обрабатываться, как в примерах выше, можно альтернативно указать активный лист.
+
+> Все методы работы с ячейками, изображениями и данными используют активированный лист, когда конкретный лист **не** указан.
+
+Ниже два способа активации конкретного листа: сначала по ссылке на объект, затем по индексу листа:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.activeSheet(мойЛист) // Объект-ссылка на лист.
+                excel.activeSheet(1) // Индекс листа, который будет активирован.
+            `
+        },
+    ]}
+/>
+
+### Полезные возможности
+
+Примеры других полезных методов для работы с листами.
+
+Получение листа по имени:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Получает лист по его имени.
+                const мойЛист = excel.getSheet("Имя листа")
+            `
+        },
+    ]}
+/>
+
+Получение листа по индексу:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Получает лист по его номеру.
+                const мойЛист = excel.getSheet(1)
+            `
+        },
+    ]}
+/>
+
+Для получения общего количества листов:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Общее количество листов.
+                const всегоЛистов = excel.getNumberOfSheets()
+            `
+        },
+    ]}
+/>
+
+Для вывода списка всех существующих в документе листов.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Список всех листов.
+                const всеЛисты = excel.getAllSheets()
+                for (const лист of всеЛисты) {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                # Список всех листов.
+                всеЛисты = excel.getAllSheets()
+                for лист in всеЛисты:
+                    ...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                # Список всех листов.
+                всеЛисты = excel.getAllSheets()
+                всеЛисты.each do |лист|
+                    ...
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                // Список всех листов.
+                val всеЛисты = excel.getAllSheets()
+                всеЛисты.forEach {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                // Список всех листов.
+                def всеЛисты = excel.getAllSheets()
+                for (лист in всеЛисты) {
+                    ...
+                }
+            `
+        },
+    ]}
+/>
+
+> Документация со всеми методами объекта <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFSheet.html" target="_blank">Лист в Apache POI</a>.
+
+## Генерация файла
+
+В методах `save` и `output` создаётся двоичное содержимое итогового файла.
+
+Отправляет сгенерированный файл как вывод данных (`output`) сервиса:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.output("файл.xlsx")
+            `
+        },
+    ]}
+/>
+
+Чтобы сохранить сгенерированный файл в папку `storage/filesystem` приложения:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_storage.filesystem("server", "файл.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Чтобы сохранить сгенерированный файл в папку `/tmp` файловой системы жёсткого диска:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_os.file("/tmp/файл.xlsx"))
+            `
+        },
+    ]}
+/>
+
+## Редактирование файла
+
+Можно редактировать файлы, открывая их, внося необходимые изменения и затем сохраняя новый отредактированный файл.
+
+Ниже приведены некоторые примеры того, как можно открывать файлы.
+
+Открытие файла в корне приложения:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_app.file("файл.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Чтобы открыть файл, сгенерированный в папке `storage/filesystem` приложения:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_storage.filesystem("server", "файл.xlsx"))
+            `
+        },
+    ]}
+/>
+
+А также чтобы открыть файл в папке `/tmp` файловой системы жёсткого диска:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_os.file("/tmp/файл.xlsx"))
+            `
+        },
+    ]}
+/>
+
+В примерах выше константа `excel` будет содержать объект редактирования с контекстом соответствующего файла, поэтому можно выполнять любые виды манипуляций.
+
+После завершения изменений выполните генерацию нового файла.
+
+> Невозможно напрямую изменить тот же открытый файл; необходимо сгенерировать новый файл с другим путём.
+
+Чтобы напрямую изменить тот же файл, это можно сделать с помощью `inputStream`.
+
+Ниже пример изменения значения ячейки:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const файлВвода = _app.file("файл.xlsx").inputStream()
+                const excel = _xls.open(файлВвода)
+
+                excel.setCellData(
+                    10, 1,
+                    _val.map()
+                        .set(
+                            "value",
+                            excel.getCellData(10, 1).getInt("value") + 10
+                        )
+                )
+
+                файлВвода.close() // Закрывает открытый файл.
+                excel.save(_app.file("файл.xlsx")) // Сохраняет новую версию.
+                `
+        },
+    ]}
+/>
+
+## Чтение файла
+
+Извлечение данных из файлов Excel выполняется методом `read`.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const данные = _xls.read(_app.file("файл.xlsx"))
+            `
+        },
+    ]}
+/>
+
+Данные получаются в структуре объектов типа Values, которая содержит списки для листов, строк и столбцов и карты (ключ и значение) для ячеек.
+
+Чтобы просмотреть все данные, можно вывести их как вывод данных сервиса:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.json(данные)
+            `
+        },
+    ]}
+/>
+
+Для выполнения итерации нужно учитывать, что структура данных организована в следующем порядке:
+
+1. `sheets` — Листы
+2. `rows` — Строки
+3. `columns` — Столбцы
+
+Пример полной итерации:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const лист of данные.getValues("sheets")) {
+                    _out.println(\`<h4>Лист: \${лист.getInt("index")} - \${лист.getString("name")}</h4>\`)
+                    for (const строка of лист.getValues("rows")) {
+                        _out.println(\`<h4>Строка: \${строка.getInt("row")}</h4>\`)
+                        _out.println("<p>")
+                        for (const столбец of строка.getValues("columns")) {
+                            _out.print(\`\${столбец.getInt("row")}:\${столбец.getInt("column")}\`)
+                            _out.print(\` # \${столбец.getString("address")}\`)
+                            _out.print(\` # \${столбец.getString("type")}\`)
+                            _out.print(\` # \${столбец.getString("value")}\`)
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for лист in данные.getValues("sheets"):
+                    _out.println(f"<h4>Лист: {лист.getInt('index')} - {лист.getString('name')}</h4>")
+                    for строка in лист.getValues("rows"):
+                        _out.println(f"<h4>Строка: {строка.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for столбец in строка.getValues("columns"):
+                            _out.print(f"{столбец.getInt('row')}:{столбец.getInt('column')}")
+                            _out.print(f" # {столбец.getString('address')}")
+                            _out.print(f" # {столбец.getString('type')}")
+                            _out.print(f" # {столбец.getString('value')}")
+                            _out.println("<br>")
+                        _out.println("</p>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                данные.getValues("sheets").each do |лист|
+                    _out.println("<h4>Лист: #{лист.getInt("index")} - #{лист.getString("name")}</h4>")
+                    лист.getValues("rows").each do |строка|
+                        _out.println("<h4>Строка: #{строка.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        строка.getValues("columns").each do |столбец|
+                            _out.print("#{столбец.getInt("row")}:#{столбец.getInt("column")}")
+                            _out.print(" # #{столбец.getString("address")}")
+                            _out.print(" # #{столбец.getString("type")}")
+                            _out.print(" # #{столбец.getString("value")}")
+                            _out.println("<br>")
+                        end
+                        _out.println("</p>")
+                    end
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                данные.getValues("sheets").forEach {
+                    val лист = it
+                    _out.println("<h4>Лист: \${лист.getInt("index")} - \${лист.getString("name")}</h4>")
+                    лист.getValues("rows").forEach {
+                        val строка = it
+                        _out.println("<h4>Строка: \${строка.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        строка.getValues("columns").forEach {
+                            val столбец = it
+                            _out.print("\${столбец.getInt("row")}:\${столбец.getInt("column")}")
+                            _out.print(" # \${столбец.getString("address")}")
+                            _out.print(" # \${столбец.getString("type")}")
+                            _out.print(" # \${столбец.getString("value")}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (лист in данные.getValues("sheets")) {
+                    _out.println("<h4>Лист: \${лист.getInt('index')} - \${лист.getString('name')}</h4>")
+                    for (строка in лист.getValues("rows")) {
+                        _out.println("<h4>Строка: \${строка.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for (столбец in строка.getValues("columns")) {
+                            _out.print("\${столбец.getInt('row')}:\${столбец.getInt('column')}")
+                            _out.print(" # \${столбец.getString('address')}")
+                            _out.print(" # \${столбец.getString('type')}")
+                            _out.print(" # \${столбец.getString('value')}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+    ]}
+/>
+
+Тип ячейки получается с помощью кода:
+
+- `столбец.getString("type")`
+
+Поддерживаемые типы:
+
+- `string` — Текстовое содержимое.
+- `numeric` — Числовое содержимое или дата и/или время.
+- `boolean` — Истина или ложь.
+- `blank` — Пустая ячейка.
+- `formula` — Ячейка, содержащая формулу.
+- `error` — Ошибка при обработке ячейки.
+
+### Дополнительные параметры
+
+Для каждого типа ячейки есть некоторые дополнительные параметры.
+
+`string` — Тип ячейки с текстовым содержимым.
+
+- `value` — Текст ячейки.
+- `richValue` — Форматирование ячейки.
+
+`numeric` — Тип ячейки с числовым содержимым, а также датами и временем.
+
+- `value` — Значение числового содержимого ячейки.
+  
+В случае дат и времени есть ещё следующие дополнительные параметры:
+
+- `localDateTime` — Объект Java Time LocalDateTime, представляющий значение даты и времени ячейки.
+- `localDate` — Объект Java Time LocalDate, представляющий значение даты ячейки.
+- `localTime` — Объект Java Time LocalTime, представляющий значение времени ячейки.
+- `instant` — Объект Java Time Instant, представляющий значение даты и/или времени ячейки.
+- `date` — Объект Date из Java, представляющий значение даты и/или времени ячейки.
+
+`boolean` — Тип ячейки с логическим содержимым, то есть истина или ложь.
+
+- `value` — Значение типа _boolean_, `true` или `false`.
+
+`blank` — Тип ячейки без содержимого, поэтому не содержит дополнительных параметров.
+
+`formula` — Тип ячейки, содержащей формулы вычисления.
+
+- `value` — Итоговое значение результата вычисления.
+- `formula` — Содержит выражение формулы, использованной для вычисления.
+
+`error` — Тип ячейки, содержащей ошибку.
+
+- `value` — Байтовое значение возникшей ошибки.
+- `code` — Если при вычислении формулы возникли ошибки, здесь указывается код возникшей ошибки.
+
+## Видео
+
+Ниже несколько примеров видео о том, как программно генерировать файлы Excel/XLSX:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/nTnoqEpLghQ?si=8engICqRqNFUPi_i" title="Проигрыватель видео YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -1,0 +1,9 @@
+{
+  "label": "애플리케이션 폴더",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/category/app-structure",
+    "description": "애플리케이션의 폴더와 파일을 자세히 설명합니다."
+  }
+}

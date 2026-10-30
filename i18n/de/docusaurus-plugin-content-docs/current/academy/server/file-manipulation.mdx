@@ -1,0 +1,580 @@
+---
+id: files-manipulation
+title: Datei- und Ordnerverwaltung
+sidebar_label: Datei- und Ordnerverwaltung
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+## Einführung
+
+Im polyglotten Backend-Code der Netuno-Plattform können wir jede Datei oder jeden Ordner manipulieren.
+
+Die Manipulation besteht darin, Dateien und Ordner erstellen, umbenennen und löschen, Dateiinhalte ändern und Ordnerinhalte auflisten zu können. Im Allgemeinen sind dies die Operationen, die wir normalerweise programmatisch ausführen müssen.
+
+Die Netuno-Plattform verfügt über Low-Code-Programmierfunktionen, mit denen Ordner und Dateien innerhalb der Anwendung manipuliert werden können, aber auch beliebige Dateien und Ordner des Systems im Allgemeinen, also außerhalb der Anwendung.
+
+Das ist nützlich, wenn wir einen Prozess automatisieren müssen, der eine beliebige Datei bearbeiten muss; sehen wir uns an, wie.
+
+Die polyglotten Low-Code-Programmierressourcen, die die Manipulation von Dateien ermöglichen, sind:
+
+- `_app` - [Anwendung](/docs/library/resources/app)
+- `_storage` - [Storage](/docs/library/resources/storage)
+- `_os` - [Betriebssystem](/docs/library/resources/os)
+
+Über diese Ressourcen verfügen wir über Methoden für:
+
+- `.file` - Vorhandene Datei.
+- `.folder` - Vorhandener Ordner.
+- `.path` - Generischer Pfad, der sowohl eine Datei als auch ein Ordner sein kann, der existiert oder nicht existiert.
+
+Mit diesen Methoden erhalten wir ein Objekt vom Typ [File](/docs/library/objects/File), das alle Mittel für die Manipulation von Dateien, Ordnern und Pfaden im Allgemeinen bereitstellt und Operationen wie die folgenden ermöglicht:
+
+- Dateien und Ordner erstellen.
+- Dateien und Ordner löschen.
+- Ordnerinhalte auflisten.
+- Dateien und Ordner umbenennen.
+- Daten in Dateien lesen und schreiben.
+- Ordner und ihre jeweiligen Unterordner und Dateien rekursiv löschen.
+
+## Anwendung
+
+Um die wichtigsten Operationen zur Manipulation von Dateien und Ordnern innerhalb der Anwendungsstruktur auszuführen, verwenden wir die Ressource `_app`:
+
+#### Ordner in der Anwendung
+
+Stellt sicher, dass ein vorhandener Ordner abgerufen wird, zum Beispiel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const meinOrdner = _app.folder("mein/ordner")
+            `
+        },
+    ]}
+/>
+
+#### Dateien in der Anwendung
+
+Stellt sicher, dass eine vorhandene Datei abgerufen wird, zum Beispiel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const meineDatei = _app.file("mein/ordner/datei.txt")
+            `
+        },
+    ]}
+/>
+
+#### Pfade in der Anwendung
+
+Ruft einen Datei- oder Ordnerpfad ab, unabhängig davon, ob er existiert oder nicht, zum Beispiel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const neueDatei = _app.path("mein/ordner/neue-datei.txt")
+            `
+        },
+    ]}
+/>
+
+## Storage
+
+Um die wichtigsten Operationen zur Manipulation von Dateien und Ordnern innerhalb des Ordners `📁 storage` der Anwendung auszuführen, verwenden wir die Ressource `_storage`:
+
+#### Ordner im Storage
+
+Stellt sicher, dass ein vorhandener Ordner abgerufen wird, zum Beispiel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Der tatsächliche Pfad des Ordners lautet:
+                // storage/filesystem/server/mein/ordner
+                const storageMeinOrdner = _storage.filesystem("server", "mein/ordner")
+                const meinOrdner = storageMeinOrdner.folder()
+            `
+        },
+    ]}
+/>
+
+#### Dateien im Storage
+
+Stellt sicher, dass eine vorhandene Datei abgerufen wird, zum Beispiel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Der tatsächliche Pfad der Datei lautet:
+                // storage/filesystem/server/mein/ordner/datei.txt
+                const storageDatei = _storage.filesystem("server", "mein/ordner", "datei.txt")
+                const datei = storageDatei.file()
+            `
+        },
+    ]}
+/>
+
+#### Pfade im Storage
+
+Ruft einen Datei- oder Ordnerpfad ab, unabhängig davon, ob er existiert oder nicht, zum Beispiel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Der tatsächliche Pfad des neuen Ordners lautet:
+                // storage/filesystem/server/mein/neuer-ordner
+                const storageOrdner = _storage.filesystem("server", "mein/neuer-ordner")
+                const ordner = storageOrdner.path()
+
+                // Der tatsächliche Pfad der neuen Datei lautet:
+                // storage/filesystem/server/mein/ordner/neue-datei.txt
+                const storageDatei = _storage.filesystem("server", "mein/ordner", "neue-datei.txt")
+                const datei = storageDatei.path()
+            `
+        },
+    ]}
+/>
+
+## Betriebssystem
+
+Um die wichtigsten Operationen zur Manipulation von Dateien und Ordnern an beliebiger Stelle im Betriebssystem auszuführen, verwenden wir die Ressource `_os`:
+
+#### Ordner im Betriebssystem
+
+Stellt sicher, dass ein vorhandener Ordner abgerufen wird, zum Beispiel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const meinOrdner = _os.folder("/tmp/mein/ordner")
+            `
+        },
+    ]}
+/>
+
+#### Dateien im Betriebssystem
+
+Stellt sicher, dass eine vorhandene Datei abgerufen wird, zum Beispiel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const meineDatei = _os.file("/tmp/mein/ordner/datei.txt")
+            `
+        },
+    ]}
+/>
+
+#### Pfade im Betriebssystem
+
+Ruft einen Datei- oder Ordnerpfad ab, unabhängig davon, ob er existiert oder nicht, zum Beispiel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const neueDatei = _os.path("/tmp/mein/ordner/neue-datei.txt")
+            `
+        },
+    ]}
+/>
+
+## Ordner erstellen
+
+Die Methode `mkdir` erstellt einen Ordner.
+
+Im folgenden Beispiel wird der angegebene Ordner im Stammverzeichnis der Anwendung erstellt:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ordner = _app.path("temp")
+                ordner.mkdir()
+            `
+        },
+    ]}
+/>
+
+Um einen Unterordner innerhalb des vorhandenen Ordners zu erstellen, geben Sie den vollständigen Pfad an und trennen die Ordnerhierarchie mit `/`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const unterordner = _app.path("temp/andere")
+                unterordner.mkdir()
+            `
+        },
+    ]}
+/>
+
+`mkdirs` hingegen erstellt die übergeordneten Ordner und/oder die Unterordner, falls sie nicht existieren; somit lässt sich eine Ordnerstruktur in der Anwendung erstellen, zum Beispiel:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ordnerPfad = _app.path("temp/a/b/c")
+                ordnerPfad.mkdirs()
+            `
+        },
+    ]}
+/>
+
+Die Ressource `_storage` verfügt über die Methode [ensurePath](/docs/library/resources/storage#ensurepath), die prüft, ob der Pfad existiert, und ihn andernfalls erstellt:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const datei = _storage.filesystem(
+                    "public",
+                    "temp/unterordner",
+                    "datei.txt"
+                )
+                // Erstellt die Ordnerstruktur, falls sie nicht existiert:
+                datei.ensurePath()
+            `
+        },
+    ]}
+/>
+
+Daher stellt `ensurePath` sicher, dass die Ordnerstruktur existiert.
+
+## Dateien und Ordner löschen
+
+Mit der Methode `delete` können wir sowohl Ordner als auch Dateien entfernen, wobei die Ordner leer sein müssen; sehen Sie sich das Beispiel an:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Entfernt einen leeren Ordner:
+                const leererOrdner = _app.folder("ordner/leer")
+                leererOrdner.delete()
+
+                // Entfernt eine Datei:
+                const datei = _app.file("ordner/datei.txt")
+                datei.delete()
+
+                // Entfernt einen Pfad, einen leeren Ordner oder eine Datei:
+                const pfad = _app.path("ordner1/datei-oder-leerer-ordner")
+                pfad.delete()
+            `
+        },
+    ]}
+/>
+
+Mit `deleteAll` können Sie alles löschen, also alle Dateien, Ordner und Unterordner rekursiv:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Entfernt den Ordner und den gesamten Inhalt rekursiv:
+                const ordner = _app.folder("ordner/beispiel")
+                ordner.deleteAll()
+
+                // Entfernt den Pfad eines Ordners und seinen gesamten Inhalt,
+                // einschließlich Unterordnern und Dateien:
+                const pfad = _app.path("pfad/ordner")
+                pfad.deleteAll()
+            `
+        },
+    ]}
+/>
+
+Um nur die Dateien innerhalb des Ordners zu löschen und nichts in den Unterordnern zu löschen, gibt es `deleteFiles`, das eine Erweiterung entgegennehmen kann, wenn nur Dateien mit einer bestimmten Erweiterung entfernt werden sollen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Entfernt die Dateien nur innerhalb des Ordners:
+                const ordner = _app.folder("ordner/beispiel")
+                ordner.deleteFiles()
+
+                // Entfernt die Dateien mit der Erweiterung JPG nur innerhalb des Ordners:
+                const pfad = _app.path("pfad/ordner")
+                pfad.deleteFiles("jpg")
+`
+        },
+    ]}
+/>
+
+Um nur die Dateien rekursiv zu löschen und die Ordnerstruktur beizubehalten, gibt es `deleteAllFiles`, das ebenfalls eine Erweiterung entgegennehmen kann, wenn nur ein bestimmter Dateityp entfernt werden soll; sehen Sie sich diese beiden Beispiele an:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Entfernt alle Dateien innerhalb des Ordners und der Unterordner:
+                const ordner = _app.folder("ordner/beispiel")
+                ordner.deleteAllFiles()
+
+                // Entfernt alle Dateien mit der Erweiterung JPG innerhalb des Ordners und der Unterordner:
+                const pfad = _app.path("pfad/ordner")
+                pfad.deleteAllFiles("jpg")
+            `
+        },
+    ]}
+/>
+
+## Umbenennen oder Verschieben
+
+Um einen Ordner zu verschieben, ist es dasselbe wie ihn umzubenennen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ordner = _app.folder("temp")
+                ordner.renameTo("test")
+            `
+        },
+    ]}
+/>
+
+Um einen Ordner umzubenennen und seine Ebene in der Ordnerhierarchie zu ändern, ist es dasselbe wie den Ordner zu verschieben:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ordner = _app.folder("temp/a/b")
+                ordner.renameTo("test/z")
+            `
+        },
+    ]}
+/>
+
+Und um einen Unterordner zu verschieben, ohne seinen Namen zu ändern, geben Sie einfach den neuen Pfad in der Methode `renameTo` an:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ordner = _app.folder("test/andere")
+                ordner.renameTo("neu/andere")
+            `
+        },
+    ]}
+/>
+
+## Inhalte in Dateien speichern
+
+Die Generierung von Inhalten in Dateien erfolgt über die Methode `output`, die ein Objekt vom Typ [OutputStream](/docs/library/objects/OutputStream) bereitstellt.
+
+Um die Daten in den `output` zu schreiben, verwenden wir die Methode [printAndClose](/docs/library/objects/OutputStream#printandclose), die den Inhalt in die Datei schreibt und die Datei schließt, wodurch der Inhalt gespeichert wird.
+
+#### Textdatei schreiben
+
+Sehen Sie sich das Beispiel an, wie eine Datei mit Textinhalt erstellt wird:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _app.path("temp").mkdir()
+                const ausgabe = _app.path("temp/datei.txt").output()
+                ausgabe.printAndClose("Mein Text hier...")
+            `
+        },
+    ]}
+/>
+
+> Immer wenn wir `output` verwenden, wird eine neue Datei erzeugt; wenn Sie den Code also erneut ausführen, wird die Datei neu erstellt.
+
+#### JSON-Datei schreiben
+
+Sehen Sie, wie wir JSON-Daten in Dateien speichern können:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _app.path("temp").mkdir()
+                const ausgabe = _app.path("temp/kunde.json").output()
+                ausgabe.printAndClose(
+                    _val.map()
+                        .set("name", "Maria Johanna")
+                        .set(
+                            "eintraege",
+                            _val.list()
+                                .add(1).add(2).add(3)
+                        )
+                        .toJSON()
+                )
+            `
+        },
+    ]}
+/>
+
+Um das JSON eingerückt zu generieren, also über mehrere Zeilen formatiert und tabellarisch, können wir die Anzahl der Leerzeichen übergeben, mit denen die Einrückung vorgenommen wird, zum Beispiel `.toJSON(4)`.
+
+> Weitere Details zur Methode [toJSON in Values](/docs/library/objects/Values#tojsonindentfactor-int--string).
+
+## Inhalte aus Dateien lesen
+
+Das Abrufen von Inhalten aus Dateien erfolgt über die Methode `input`, die ein Objekt vom Typ [InputStream](/docs/library/objects/InputStream) bereitstellt.
+
+Um die Daten im `input` zu lesen, verwenden wir die Methode [readAllAndClose](/docs/library/objects/InputStream#readallandclose), die den Lesevorgang des Inhalts in der Datei verarbeitet und die Datei schließt.
+
+#### Textdatei lesen
+
+Sehen Sie sich das Beispiel an, wie eine Datei gelesen und der Textinhalt abgerufen wird:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const datei = _app.file("temp/datei.txt")
+                const eingabe = datei.input()
+                _log.info(eingabe.readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### JSON-Datei lesen
+
+Sehen Sie, wie wir JSON-Daten verarbeiten können, die aus Dateien abgerufen wurden:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const datei = _app.file("temp/datei.txt")
+                const eingabe = datei.input()
+                const daten = _val.fromJSON(eingabe.readAllAndClose())
+                _log.info("Dateidaten:", daten)
+            `
+        },
+    ]}
+/>
+
+> Weitere Details zur Methode [fromJSON der Ressource Val](/docs/library/resources/val#fromjson).
+
+## Besonderheiten des Storage
+
+Die Storage-Ressource verfügt über einige Methoden zur direkten Verwendung.
+
+Zum Beispiel können wir über den Storage zugreifen auf:
+
+- [Storage Output](/docs/library/resources/storage#output)
+- [Storage Input](/docs/library/resources/storage#input)
+
+Das bedeutet, dass wir nicht das `file` oder `path` abrufen müssen, um mit `input` oder `output` zu arbeiten.
+
+#### Textdatei im Storage schreiben
+
+Beim Initialisieren eines Storage für eine Datei können wir das Schreiben mit der Methode [output](/docs/library/resources/storage#output) durchführen, die eine Instanz des Objekts [OutputStream](/docs/library/objects/OutputStream) abruft, mit der die Daten verarbeitet und gelesen werden können.
+
+Mit dem `OutputStream` schreibt die Methode [printAndClose](/docs/library/objects/OutputStream#printandclose) den Text (`string`) in die Datei und schließt sie.
+
+Sehen Sie sich dieses Beispiel an:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const txt = _storage.filesystem("server", "temp", "datei.txt")
+                txt.ensurePath()
+                txt.output().printAndClose("Mein Text hier...")
+            `
+        },
+    ]}
+/>
+
+#### Textdatei im Storage lesen
+
+Beim Initialisieren eines Storage für eine Datei können wir das Lesen mit der Methode [input](/docs/library/resources/storage#input) durchführen, die eine Instanz des Objekts [InputStream](/docs/library/objects/InputStream) abruft, mit der die Daten verarbeitet und gelesen werden können.
+
+Mit dem `InputStream` liest die Methode [readAllAndClose](/docs/library/objects/InputStream#readallandclose) die gesamte Datei und schließt sie, wobei die Daten als Text (`string`) zurückgegeben werden.
+
+Sehen Sie sich dieses Beispiel an:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const txt = _storage.filesystem("server", "temp", "datei.txt")
+                _log.info(txt.input().readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### Zufällige Datei im Storage erstellen
+
+Die Ressource `_storage` ermöglicht das Generieren zufälliger Dateinamen mit der Methode [newRandomFile](/docs/library/resources/storage#newrandomfile).
+
+Sie müssen einen Storage für den Pfad eines Ordners initialisieren, und bei Ausführung der Methode `newRandomFile` wird die Erweiterung der gewünschten Datei übergeben.
+
+Die Methode gibt eine neue Storage-Instanz für die automatisch generierte Zufallsdatei zurück, die im Ausgangsordner verwendet werden soll.
+
+Sehen Sie, wie eine Datei mit der Erweiterung `TXT` mit zufälligem Namen generiert wird:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ordner = _storage.filesystem("server", "temp")
+                const datei = ordner.newRandomFile("txt")
+                datei.output().printAndClose("Mein Text hier...")
+            `
+        },
+    ]}
+/>
+
+## Fazit
+
+Mit dem polyglotten Low-Code-Framework von Netuno können wir alle wichtigen Ordner- und Dateioperationen direkt ausführen.
+
+Bei der Verwendung der spezifischen Ressourcen zur Manipulation von Dateien und Ordnern in:
+
+- `_app` - Anwendung
+- `_storage` - Storage der Anwendung
+- `_os` - Betriebssystem
+
+> Aus Gründen bewährter Praktiken und der Organisation sollten wir die Verwendung des **Storage** priorisieren; Ausnahmen sollten nur punktuelle und unbedingt notwendige Fälle sein.
+
+Netuno übernimmt das automatische Schließen der Inputs und Outputs am Ende der Verarbeitung der Dienste, aber aus bewährten Praktiken sollten wir versuchen, sie immer zu schließen.

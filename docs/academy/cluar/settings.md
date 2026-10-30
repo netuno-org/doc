@@ -9,7 +9,7 @@ The key/value parameter system managed by the content editor, without needing co
 
 ## Introduction
 
-**Settings** is a key/value parameter system, managed by the content editor in the backoffice — designed for website values that change frequently or vary by language (e.g., phone number, address, social media links, a logo image), without needing to touch code.
+**Settings** is a key/value parameter system, managed by the content editor in the backoffice — designed for website values that change frequently or vary by language (e.g.: phone number, address, social media links, a logo image), without having to touch code.
 
 It involves three forms in the backoffice:
 
@@ -19,7 +19,7 @@ It involves three forms in the backoffice:
 
 ## Type
 
-Defines what kind of value a Parameter accepts. It only has **Code** (`code`) and **Name** (`name`). These come pre-created by default:
+Defines what kind of value a Parameter accepts. It only has **Code** (`code`) and **Name** (`name`). The following come pre-created by default:
 
 | Code | Name |
 |---|---|
@@ -36,20 +36,20 @@ Defines a configuration "key" — **Code** (`code`, used in the code to fetch th
 
 ## Configuration
 
-This is the **value** of a Parameter, for a given **Language** — **Value** (`value`, text) or **Image** (`value_img`), depending on the parameter's type.
+It is the **value** of a Parameter, for a given **Language** — **Value** (`value`, text) or **Image** (`value_img`), depending on the parameter type.
 
-### Values without a language (generic fallback)
+### Values without language (generic fallback)
 
-If a Configuration's **Language** field is left blank, that value is used as a **fallback for all languages** that don't have their own value set for that parameter. This avoids having to duplicate the same value (e.g., a phone number that's the same across all languages) separately for each language — it's set once, with no language attached, and a language-specific value is only set where it's actually different.
+If the **Language** field of a Configuration is left blank, that value becomes the **fallback for all languages** that do not have their own value defined for that parameter. This avoids having to duplicate the same value (e.g.: a phone number that is the same in all languages) in each language separately — you define it once, without an associated language, and define a specific value per language only where it is actually different.
 
 ## Programmatically
 
-The `website/src/common/Cluar.js` class provides functions to read settings:
+The `website/src/common/Cluar.js` class provides functions to read configurations:
 
-- `Cluar.configuration(parameter)` — gets a parameter's value in the current language; if there's no value for that language, it uses the value without a language (fallback); if neither exists, it returns the parameter's own name (useful to quickly notice a missing setting).
-- `Cluar.configurationNumber(parameter)` — same, but converts the value to a number (0 if it's not numeric).
+- `Cluar.configuration(parameter)` — gets the value of a parameter in the current language; if there is no value for that language, it uses the value without language (fallback); if neither exists, it returns the parameter name itself (useful to quickly notice a missing configuration).
+- `Cluar.configurationNumber(parameter)` — same, but converts the value to a number (0 if it is not numeric).
 - `Cluar.configurationMultilines(parameter)` — same, but converts line breaks into `<br>`.
 
 ## Next step
 
-Explore [Dictionaries](/docs/academy/cluar/dictionaries).
+Explore the [Dictionaries](/docs/academy/cluar/dictionaries).

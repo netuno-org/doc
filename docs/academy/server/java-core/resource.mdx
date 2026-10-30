@@ -1,31 +1,31 @@
 ---
 id: resource 
-title: Polyglot Low-Code Resource 
+title: Low-Code Polyglot Resource 
 sidebar_label: Resource 
 sidebar_position: 5
 ---
 
 import PolyglotCode from "@site/src/components/PolyglotCode";
 
-In this tutorial, we will create a native resource for Netuno. This means we will create a Java class that will be placed in Netuno's base directory and can be used by any application inside the `apps` folder using the syntax `_foo.methodName(args)`.
+In this tutorial, we will create a native resource for Netuno. This means we will create a Java class that will reside in Netuno's base directory and can be used by any application inside the `apps` folder using the syntax `_foo.methodName(args)`.
 
-The example we will create, following the previous tutorials, is the `_calc` resource, which is a sample resource for performing simple arithmetic operations.
+The example we will create, following the previous tutorials, is the `_calc` resource, which is an example resource for performing simple arithmetic operations.
 
-To begin, we first need to create the project's folder structure. In this example, we'll assume the project will be created inside a folder named `Calc`. We need to create the folder structure that mirrors the package name (in our example, `org.netuno.addon.calc`). Therefore, our folder structure will be:
+To start, you first need to create the project's folder structure. In this example, we will consider that the project will be created inside a folder called `Calc`. So you need to create the folder structure that mirrors the package name (in our example, `org.netuno.addon.calc`). Our folder structure will therefore be:
 
 - `Calc/src/main/java/org/netuno/addon/calc/resource/`
 
-Inside this structure, we'll create a Java class named `CalcResource`, which will define our custom native resource.
+Inside this structure, we will create a Java class called `CalcResource`, which will define our custom native resource.
 
-- `Calc/src/main/java/org/netuno/addon/calc/resource/CalcResource.java`
+- ` Calc/src/main/java/org/netuno/addon/calc/resource/CalcResource.java`
 
-The package declaration inside the class will be:
+Then the package defined inside the class will be:
 
 ```java
 package org.netuno.addon.calc.resource;
 ```
 
-For the class to define a custom native resource, it must be annotated with the `org.netuno.tritao.Resource` annotation. The `name` parameter defines the resource name, which can be accessed by prefixing it with an underscore (`_`) (in our case, `_calc`). The easiest way to create the resource is by extending the `org.netuno.tritao.resource.ResourceBase` class:
+For the class to define a custom native resource, it must be annotated with the `org.netuno.tritao.ResourceBase` annotation. The `name` parameter will be the name of the resource, which can be accessed with an underscore (`_`) before the name (in our case, `_calc`). The easiest way to create the resource is by extending the `org.netuno.tritao.resource.ResourceBase` class:
 
 ```java
 package org.netuno.addon.calc.resource;
@@ -39,7 +39,7 @@ public class CalcResource extends ResourceBase {
 }
 ```
 
-Extending the `ResourceBase` class saves us from having to initialize the resource ourselves. We only need to call `super` with the appropriate arguments:
+Extending the `ResourceBase` class saves us from having to initialize the resource, and we just need to call `super` with the correct arguments:
 
 ```java
 package org.netuno.addon.calc.resource;
@@ -58,7 +58,7 @@ public class CalcResource extends ResourceBase {
 }
 ```
 
-The `init` method is required. Inside it, we initialize the resource by calling our class constructor with the getters provided by the parent class:
+The `init` function is mandatory, and inside it we will initialize the resource by calling our class's constructor with the parent class's getters:
 
 ```java
 package org.netuno.addon.calc.resource;
@@ -81,7 +81,7 @@ public class CalcResource extends ResourceBase {
 }
 ```
 
-After that, we can define our own fields and methods:
+After that, we will define our own fields and functions:
 
 ```java
 package org.netuno.addon.calc.resource;
@@ -124,23 +124,22 @@ public class CalcResource extends ResourceBase {
 }
 ```
 
-Now you just need to compile the class, making sure that the `CalcResource.class` file is located in:
+Now you just need to compile the class, making sure that the `CalcResource.class` file is in the folder:
 
 - `netuno/core/web/WEB-INF/classes/org/netuno/addon/calc/resource/`
 
-Or build a JAR file, making sure it is located in:
+Or produce a JAR file, making sure that it is in the folder:
 
 - `netuno/lib/`
 
-Next, let's create a test application that uses this resource:
+Let's create a test application to use this resource:
 
 ```bash
 ./netuno app name=calc
 ```
 
-We'll also create a service in this application to use the resource.
-
-In this example, create the file `netuno/apps/calc/server/services/calc-test.js`:
+Let's also create a service in this application to use the resource.
+In the example, we will create the `netuno/apps/calc/server/services/calc-test.js` file:
 
 <PolyglotCode
     codes={[
@@ -157,19 +156,20 @@ In this example, create the file `netuno/apps/calc/server/services/calc-test.js`
     ]}
 />
 
-Now start the application:
+Let's start our application:
 
 ```bash
 ./netuno server app=calc
 ```
 
-Finally, make a request to the service:
+And now, when we make a call to this service:
 
 - `http://localhost:9000/services/calc-test`
 
-The service will return the value `130`.
+It will return the value `130`.
 
-To use a resource while coding in Java, some classes such as `org.netuno.tritao.Web` and `org.netuno.tritao.event.EventBase` provide the `resource` function, which initializes this resource. 
+To use a resource in Java code, some classes such as `org.netuno.tritao.Web`
+and `org.netuno.tritao.event.EventBase` provide the `resource` function, which initializes this resource.
 In the class where you want to use the `calc` resource, do:
 
 ```java
@@ -183,4 +183,4 @@ import org.netuno.addon.calc.resource.CalcResource;
 // ...
 ```
 
-You can view the complete project files in this [link](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/resource).
+You can see the complete project files at this [link](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/resource).

@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Netuno",
+    "description": "De titel in de navigatiebalk"
+  },
+  "logo.alt": {
+    "message": "Netuno-documentatie",
+    "description": "De alt-tekst van het navigatielogo"
+  },
+  "item.label.Get Started": {
+    "message": "Aan de slag",
+    "description": "Navigatie-item met label Aan de slag"
+  },
+  "item.label.Academy": {
+    "message": "Academie",
+    "description": "Navigatie-item met label Academie"
+  },
+  "item.label.Library": {
+    "message": "Bibliotheek",
+    "description": "Navigatie-item met label Bibliotheek"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navigatie-item met label GitHub"
+  }
+}

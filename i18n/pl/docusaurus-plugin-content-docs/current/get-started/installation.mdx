@@ -1,0 +1,81 @@
+---
+sidebar_position: 1
+id: installation
+title: Szybka instalacja
+sidebar_label: Szybka instalacja
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Wprowadzenie
+
+Witamy w przewodniku instalacji **Netuno**, platformy *low-code*, wielojęzycznej i *open source*, stworzonej, aby przyspieszyć tworzenie projektów i ułatwić konfigurację środowiska programistycznego.
+
+Tutaj w szybki sposób tworzysz solidne aplikacje full-stack, łącząc szybkość low-code z mocą tradycyjnego kodowania.
+
+## Szybka instalacja
+
+Najłatwiejszym sposobem instalacji Netuno jest skrypt instalacyjny udostępniany przez platformę. Wystarczy wykonać polecenia w terminalu odpowiednio dla swojego systemu operacyjnego.
+
+<Tabs groupId="os">
+    <TabItem value="linux-mac" label="Linux lub macOS" default>
+
+```bash
+bash <(curl -fsSL https://netu.no/install.sh)
+```
+
+    </TabItem>
+    <TabItem value="windows" label="Windows">
+
+```powershell
+powershell -c "irm https://netu.no/install.ps1|iex"
+```
+
+    </TabItem>
+</Tabs>
+
+## Uruchamianie aplikacji DEMO
+
+Po zakończeniu instalacji wykonaj poniższe polecenie w folderze `netuno`, aby uruchomić serwer z aplikacją demonstracyjną:
+
+```bash
+./netuno server
+```
+
+### Otwieranie aplikacji w przeglądarce
+
+Po uruchomieniu przeglądarka automatycznie otworzy się z adresem lokalnego serwera. Jeśli tak się nie stanie, ręcznie otwórz jeden z poniższych adresów:
+
+- [http://demo.local.netu.no:9000](http://demo.local.netu.no:9000)
+- [http://localhost:9000](http://localhost:9000)
+
+## Zatrzymywanie serwera
+
+Aby zatrzymać serwer, naciśnij w terminalu klawisze:
+
+**CTRL + C**
+
+Aby uruchomić go ponownie, użyj tego samego polecenia `./netuno server`.
+
+## Następne kroki
+
+Kilka pomysłów na to, co możesz teraz zrobić.
+
+### Początkujący
+
+Jeśli dopiero zaczynasz z Netuno, zacznij od utworzenia pierwszego formularza:
+
+[Utwórz mój pierwszy formularz](/docs/academy/demonstration/config)
+
+### Samouczki
+
+Poznaj praktyczne samouczki tworzenia z Netuno:
+
+[Zobacz samouczki tworzenia](/docs/get-started/tutorials)
+
+### Projekty
+
+Zobacz, jak zastosować Netuno w rzeczywistych projektach biznesowych:
+
+[Poznaj projekty i przypadki użycia](/docs/academy/understand/backoffice)

@@ -1,0 +1,628 @@
+---
+id: websocket
+title: WebSocket
+sidebar_label: WebSocket
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+服务器与客户端之间的即时消息。
+
+## 简介
+
+使用 WebSocket 可以在服务器和客户端浏览器之间建立持久连接。
+
+这意味着浏览器可以随时使用已建立的 WebSocket 连接向服务器发送数据，而不需要获得响应。服务器也是如此，可以立即向客户端浏览器发送数据。
+
+> 通信是即时完成的，任何一方都可以随时独立、即时地传输数据。
+
+它非常适合通过即时通信执行实时操作，就像浏览器与服务器之间的聊天，任何一方都可以随时发送消息，另一方接收。
+
+例如，从一般的聊天解决方案到游戏都广泛使用它，我们也用它来实时展示数据变更，也就是在需要尽可能即时通信的时候。
+
+简而言之，经典 HTTP 通信与 WebSocket 的区别如下：
+
+![经典 HTTP 与 WebSocket 对比](/docs/assets/academy/server/services/websocket/comparison-pt.png)
+
+服务器端会创建一个 `endpoint`，即允许建立 WebSocket 连接的地址。
+
+服务器能够只向特定连接发送数据，也就是说，可以向某个聊天参与者发送新消息。
+
+服务器还可以执行 `broadcast`，即向某个地址上的所有活动连接发送数据，也就是向某个房间或群组中的所有聊天参与者发送消息。
+
+## 启用与配置
+
+要在 Netuno 应用中启用并配置 WebSocket，需要编辑应用对应当前环境的配置文件，例如：
+
+- `📂 config/_development.json`
+- `📂 config/_production.json`
+
+插入并调整以下参数：
+
+```json
+    ...
+    "ws": {
+        "hosts": [...], "<-- 可选": "更多内容见下方文档。",
+        "endpoints": [
+            {
+                "name": "lianjiechi",
+                "enabled": true,
+                "sendTimeout": 10000,
+                "idleTimeout": 0,
+                "maxText": 15000,
+                "public": "/ws/lianjiechi",
+                "path": "/",
+                "service": "/services/ws/lianjiechi"
+            },
+            {
+                "name": "fangjian",
+                "enabled": true,
+                "sendTimeout": 10000,
+                "idleTimeout": 0,
+                "maxText": 15000,
+                "public": "/ws/fangjian",
+                "path": "/{yonghu_id}",
+                "service": "/services/ws/fangjian"
+            }
+        ]
+    },
+    ...
+```
+
+#### endpoints
+
+它是一个数组，用于定义服务器将通过多个指定的公共地址（_endpoints_）支持 WebSocket，因此每个 endpoint 都是一个公共地址，支持接收来自浏览器的 WebSocket 连接。
+
+#### name
+
+端点的标识名称。
+
+#### enabled
+
+用于启用和禁用端点，默认值为 `true`（启用）。
+
+#### sendTimeout
+
+向客户端发送消息的最大时间限制，默认值为 `60000` 毫秒，即 1 分钟。
+
+#### idleTimeout
+
+连接空闲的最大时间限制，默认值为 `300000` 毫秒，即 5 分钟。
+
+#### maxText
+
+消息长度上限，以字节为单位，默认值为 `1048576`，相当于 1 兆字节。
+
+#### public
+
+定义公共地址的基础部分，用于接收来自浏览器的 WebSocket 连接。
+
+最终地址由配置值 `public` 后跟 `path` 中定义的内容组成。
+
+#### path
+
+定义公共地址路径的最后部分，可以是动态的，这允许例如创建多个独立通道，例如用于创建多个房间。
+
+> 注意：`path` 必须始终以 `/` 开头，并且在前端连接配置中，必须完全按照 `path` 中定义的内容包含斜杠，这一点非常重要。
+
+在前端，最终地址为 `public` + `path`，请看示例：
+
+```json
+    ...
+    "public": "/ws/lianjiechi",
+    "path": "/",
+    ...
+```
+
+因此前端的最终地址为 `/ws/lianjiechi/`，末尾带有斜杠。
+
+##### service
+
+应用中处理后端连接和 WebSocket 通信的后端服务基础地址。
+
+#### hosts
+
+可选地，我们可以定义端点可用的主机。也就是说，连接时 HTTP 头中会带有 Host 地址，其中仅使用域名或 IP 信息，丢弃端口信息，用于关联并找到对应的端点。
+
+> 因此，端点为正常工作需要组合 `host` 与 `public` + `path`，如下所示：
+>
+> `ws://[host]:9000[public][path]`
+>
+> 在生产环境中使用 NGINX、反向代理和 SSL 时，应如下所示：
+>
+> `wss://[host][public][path]`
+
+Netuno 定义了一些带有应用名称前缀的本地域名，并会自动将其关联为端点主机的默认值；此外，在开发环境的应用中还会将 `localhost` 和 `127.0.0.1` 添加到默认主机中，因此主机定义是可选的，因为存在这种自动配置。
+
+如果应用名称为 `wodeyingyong`，则会为端点自动定义以下主机：
+
+- 此项直接指向本地 IP 127.0.0.1：
+  - `wodeyingyong.local.netu.no`
+- 以下各项要在操作系统的 hosts 文件中注册后才能工作：
+  - `wodeyingyong.localhost`
+  - `wodeyingyong.local`
+
+如果应用名称为 `wode_yingyong`，则自动主机变为：
+
+- 此项直接指向本地 IP 127.0.0.1：
+  - `wode-yingyong.local.netu.no`
+- 以下各项要在操作系统的 hosts 文件中注册后才能工作：
+  - `wode-yingyong.localhost`
+  - `wode-yingyong.local`
+
+> 域名中不允许使用 `_`（下划线），应用名称中不允许使用 `-`（连字符），因此对外地址中使用 `-`（连字符），但 Netuno 会自动将 `-`（连字符）转换为 `_`（下划线）以找到正确的应用。
+
+默认应用或在 Netuno 服务器启动时定义的应用还会额外拥有以下主机：
+
+- `localhost`
+- `127.0.0.1`
+
+要定义自定义主机，请使用以下配置：
+
+```json
+    ...
+    "ws": {
+        "endpoints": [
+            {
+                "hosts": ["wode-yuming1.com", "www.wode-yuming1.com"],
+                ...
+            },
+            {
+                "hosts": ["wode-yuming2.com", "www.wode-yuming2.com"],
+                ...
+            }
+        ]
+    },
+    ...
+```
+
+如果所有端点都使用相同的主机，则可以这样全局定义：
+
+```json
+    ...
+    "ws": {
+        "hosts": ["wode-yuming.com", "www.wode-yuming1.com"],
+        "endpoints": [
+            ...
+        ]
+    },
+    ...
+```
+
+请确保 WebSocket 的最终地址始终使用有效主机对应的域名或 IP，否则将无法工作，因为内部无法找到该端点。
+
+## 端点服务
+
+### POST = 新连接
+
+当建立新连接时，会执行配置为 `POST` 方法的服务，例如：
+
+<PolyglotCode
+    file="server/services/ws/fangjian/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fangjianId = _ws.path().getString("yonghu_id")
+                const dbFangjian = _db.get("fangjian", fangjianId)
+
+                if (dbFangjian == null) {
+                    _log.warn(\`无效的房间 \${fangjianId}。\`)
+                    _ws.close()
+                } else {
+                    _log.info(\`新的 WebSocket 会话：\${_ws.sessionId()}\`)
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                fangjianId = _ws.path().getString("yonghu_id")
+                dbFangjian = _db.get("fangjian", fangjianId)
+
+                if dbFangjian == null:
+                    _log.warn(f"无效的房间 {fangjianId}。")
+                    _ws.close()
+                else:
+                    _log.info(f"新的 WebSocket 会话：{_ws.sessionId()}")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fangjianId = _ws.path().getString("yonghu_id")
+                dbFangjian = _db.get("fangjian", fangjianId)
+
+                if dbFangjian == null
+                    _log.warn("无效的房间 #{fangjianId}。")
+                    _ws.close()
+                else
+                    _log.info("新的 WebSocket 会话：#{_ws.sessionId()}")
+                end
+`
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val fangjianId = _ws.path().getString("yonghu_id")
+                val dbFangjian = _db.get("fangjian", fangjianId)
+
+                if (dbFangjian == null) {
+                    _log.warn("无效的房间 \${fangjianId}。")
+                    _ws.close()
+                } else {
+                    _log.info("新的 WebSocket 会话：\${_ws.sessionId()}")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def fangjianId = _ws.path().getString("yonghu_id")
+                def dbFangjian = _db.get("fangjian", fangjianId)
+
+                if (dbFangjian == null) {
+                    _log.warn("无效的房间 \${fangjianId}。")
+                    _ws.close()
+                } else {
+                    _log.info("新的 WebSocket 会话：\${_ws.sessionId()}")
+                }
+            `
+        },
+    ]}
+/>
+
+> 通常会将 `_ws.sessionId()` 保存到数据库中，以便在后续通信中使用。
+
+### PUT = 新消息
+
+如果收到的消息不是 JSON 格式，或者是 JSON 但不符合执行特定服务（`service`）所支持的格式，则会执行这个通用服务：
+
+<PolyglotCode
+    file="server/services/ws/fangjian/put"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(\`会话 \${_ws.sessionId()} 发送了此消息：\${_ws.message()}\`)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _log.info(f"会话 {_ws.sessionId()} 发送了此消息：{_ws.message()}")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _log.info("会话 #{_ws.sessionId()} 发送了此消息：#{_ws.message()}")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _log.info("会话 \${_ws.sessionId()} 发送了此消息：\${_ws.message()}")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _log.info("会话 \${_ws.sessionId()} 发送了此消息：\${_ws.message()}")
+            `
+        },
+    ]}
+/>
+
+### DELETE = 连接已关闭
+
+当客户端浏览器断开连接时执行。
+
+<PolyglotCode
+    file="server/services/ws/fangjian/delete"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(\`会话 \${_ws.sessionId()} 已断开连接。\`)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _log.info(f"会话 {_ws.sessionId()} 已断开连接。")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _log.info("会话 #{_ws.sessionId()} 已断开连接。")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _log.info("会话 \${_ws.sessionId()} 已断开连接。")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _log.info("会话 \${_ws.sessionId()} 已断开连接。")
+            `
+        },
+    ]}
+/>
+
+
+### GET = 连续消息流
+
+当客户端浏览器建立新连接时开始执行，并一直保持执行直到连接结束。
+
+也就是说，HTTP `GET` 方法对应的服务会以 `stream` 方式持续接收来自客户端的消息，即一个开放且连续的消息流，既可以接收也可以发送。
+
+<PolyglotCode
+    file="server/services/ws/fangjian/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_ws.isStream()) {
+                    while (_ws.awaitStream()) {
+                        if (_ws.isBinaryStreamed()) {
+                            _log.info("收到新的二进制消息：" + _convert.textFromBytes(_ws.binaryStreamed()))
+                        } else if (_ws.isTextStreamed()) {
+                            _log.info("收到新的文本消息：" + _ws.textStreamed())
+                        }
+                        _ws.sendText("好的！消息已成功接收。")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _ws.isStream():
+                    while _ws.awaitStream():
+                        if _ws.isBinaryStreamed():
+                            _log.info("收到新的二进制消息：" + _convert.textFromBytes(_ws.binaryStreamed()))
+                        elif _ws.isTextStreamed():
+                            _log.info("收到新的文本消息：" + _ws.textStreamed())
+                        _ws.sendText("好的！消息已成功接收。")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _ws.isStream()
+                    while _ws.awaitStream()
+                        if _ws.isBinaryStreamed()
+                            _log.info("收到新的二进制消息：" + _convert.textFromBytes(_ws.binaryStreamed()))
+                        elsif _ws.isTextStreamed()
+                            _log.info("收到新的文本消息：" + _ws.textStreamed())
+                        end
+                        _ws.sendText("好的！消息已成功接收。")
+                    end
+                end
+            `
+        },
+    ]}
+/>
+
+带有 `_ws.isStream()` 的 `if` 会检查这是否确实是由 WebSocket 管理的内部流式请求。
+
+在带有 `_ws.awaitStream()` 的 `while` 中会等待新的消息流到达，也就是等待新消息到达。一旦有新消息，就会执行 `while` 内部的代码。
+
+> `_ws.awaitStream()` 会像无限循环一样等待新消息。
+
+然后在 `while` 内部的 `if` 中检查消息类型，是二进制消息还是文本消息；两种情况都会在日志中显示这些消息的内容。请注意，可以使用任何消息格式，并可按任意方便的方式处理。
+
+最后，在 `_ws.sendText` 中向客户端发送响应消息，确认已接收。
+
+> 每次执行 `GET` 服务都会对应一个活动连接。
+
+当与 WebSocket 端点的连接结束时，此服务的执行也会在内部结束。
+
+## 通信
+
+### sendService
+
+执行服务，并将生成的输出发送到通过 WebSocket 连接的指定客户端，使用客户端的连接 ID（`sessionId`）。
+
+#### 服务调用示例
+
+下面的代码可用于端点的 PUT 方法服务（`service`）；请注意使用了 `_ws.sessionId()` 来获取客户端连接会话 ID，如果会话标识已保存到数据库，那么 `sendService` 可以在任何时候从任何其他服务中执行。
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const yonghuId = _ws.path().getString("yonghu_id")
+                _ws.sendService(
+                    _ws.sessionId(), // 当前 WebSocket 连接的标识。
+                    _val.map() // 将要执行的服务的参数。
+                        .set("method", "POST")
+                        .set("service", "/services/fangjian/canyuzhe/xinjian")
+                        .set(
+                            "data", // 将传递给服务并通过 _req 接收的参数。
+                            _val.map()
+                                .set("yonghu_id", yonghuId)
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+也就是说，端点配置中的 `path` 值为 `/{yonghu_id}`，因此允许客户端通过以下公共地址连接：
+
+- `/ws/fangjian/d641f095-30eb-4025-a39c-b2e3e497eab7`
+
+因此 `yonghu_id` 的值将是 `d641f095-30eb-4025-a39c-b2e3e497eab7`。
+
+随后将执行位于 URL `/services/fangjian/canyuzhe/xinjian` 的服务，并传递 `yonghu_id` 的值。
+
+`yonghu_id` 可以在被执行服务的代码中作为 HTTP 请求参数获取，请看示例：
+
+<PolyglotCode
+    file="/server/services/fangjian/canyuzhe/xinjian"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 发送的 yonghu_id 直接从请求中获取。
+                const yonghuId = _req.getString('yonghu_id')
+            `
+        },
+    ]}
+/>
+
+### broadcastService
+
+要执行广播，需要 WebSocket 端点的名称，如适用则定义路径（`path`），以及将要执行的服务。
+
+> 服务的输出将发送到指定 `endpoint` 上的所有活动连接。
+
+#### 广播示例
+
+<PolyglotCode
+    file="/server/services/fangjian/canyuzhe/xinjian"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _ws.broadcastService(
+                    "guanliyuan", // WebSocket 端点的名称。
+                    "/", // 端点中配置的路径（path）。
+                    _val.map() // 将要执行的服务的参数。
+                        .set("service", "/services/fangjian/canyuzhe/liebiao")
+                )
+            `
+        },
+    ]}
+/>
+
+在此示例中，由服务 `fangjian/canyuzhe/liebiao` 生成的输出内容将发送给所有连接到端点 `guanliyuan` 的客户端。
+
+## WS Client - NPM
+
+为了便于与前端集成，提供了 NPM 模块：
+
+- https://www.npmjs.com/package/@netuno/ws-client
+
+安装命令：
+
+- `bun install @netuno/ws-client`
+
+```js
+import _ws from '@netuno/ws-client';
+
+_ws.config({
+    url: 'ws://localhost:9000/ws/shili/',
+    servicesPrefix: '/services',
+    autoReconnect: true,
+    connect: (shijian) => {
+        console.info('WebSocket 已连接', shijian);
+    },
+    close: (shijian) => {
+        console.warn('WebSocket 已关闭', shijian);
+    },
+    error: (cuowu) => {
+        console.error('WebSocket 错误', cuowu);
+    },
+    message: (shuju, shijian) => {
+        console.debug('WebSocket 消息', shuju);
+    }
+});
+```
+
+> 请确保 URL 正确组合了端点中配置的 `host` 与 `public` + `path` 值，如下所示：
+>
+> `ws://[host]:9000[public][path]`
+>
+> 而集成 NGINX、反向代理和 SSL 的生产环境 URL 可能如下所示：
+>
+> `wss://[host][public][path]`
+
+接下来可以启动连接：
+
+```js
+_ws.connect();
+```
+
+### 通过 WebSocket 执行服务
+
+我们可以通过 WebSocket 连接执行 REST API 服务，这意味着不会发出任何 HTTP 请求，请求数据会作为消息发送，而服务的响应则作为返回消息接收。
+
+在开始之前，我们应该创建一个服务响应监听器，例如：
+
+```js
+const jianTingQiRef = _ws.addListener({
+    method: 'GET', // 可选；省略则监听所有方法。
+    service: 'lujing/wo/de/fuwu/zai/zheli',
+    success: (shuju) => {
+        console.log('通过 WebSocket 执行的服务响应：', shuju);
+    },
+    fail: (cuowu) => {
+        console.log('通过 WebSocket 执行的服务失败：', cuowu);
+    }
+});
+```
+
+现在可以发送服务执行请求，服务的响应将在上面创建的监听器中获取，如下执行服务：
+
+```js
+_ws.sendService({
+    method: 'GET', // 可选；省略时请求使用 GET。
+    service: 'lujing/wo/de/fuwu/zai/zheli',
+    data: {
+        xiaoxi: '你好...'
+    }
+});
+```
+
+要移除已添加的监听器，请使用：
+
+```js
+_ws.removeListener(jianTingQiRef);
+```
+
+要关闭 WebSocket 连接：
+
+```js
+_ws.close();
+```
+
+## NGINX 反向代理
+
+在 NGINX 中，反向代理可以这样配置：
+
+```
+    location /ws {
+        proxy_pass http://localhost:9000;
+        proxy_set_header Host wode-yingyong.local.netu.no;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        add_header X-Frame-Options "";
+    }
+```
+
+> 第 3 行定义 `Host` 的位置，需要将 `wode-yingyong` 部分调整为对应的 Netuno 应用名称。如果应用名称中包含 `_`，则 `Host` 地址中会替换为 `-`，例如应用 `wode_yingyong` 的 `Host` 值将变为 `wode-yingyong.local.netu.no`。
+
+重新启动 NGINX 以使配置生效。
+
+NGINX 中配置的域名，也就是 `server_name` 参数，不需要出现在 Netuno 应用端点的 hosts 中，因为上面的代理配置会将 HTTP 头中的 Host 改为一个 Netuno 始终自动配置的默认地址，只要应用名称前缀正确即可。
+
+如果 NGINX 服务器使用 80 端口，则最终 URL 为：
+
+- `ws://[host][public][path]`
+
+如果使用 SSL/HTTPS，且 NGINX 服务器使用 443 端口，则最终 URL 为：
+
+- `wss://[host][public][path]`

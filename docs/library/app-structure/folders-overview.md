@@ -4,18 +4,19 @@ id: folders-overview
 title: Folders Overview
 sidebar_label: Overview
 ---
-Explore and learn about the application folders and files.
+
+Explore and get to know the folders and files of the applications.
 
 ## Structure
 
-From the root folder where Netuno is installed, we can find the `📂 apps` folder.
+Starting from the root where Netuno is installed, we can find the `📂 apps` folder.
 
-Inside the `📂 apps` folder is where all the applications available on the Netuno platform are located.
+Inside the `📂 apps` folder is where all applications available on the Netuno platform are located.
 
-Some applications can be created locally, while others can be external, for example, applications that
+There are applications that can be created locally while others can be external, for example applications that
 are clones of GIT repositories.
 
-See the complete structure of a newly created application from the Netuno root folder:
+See from the Netuno root the complete structure of a newly created application:
 
 <pre class="doc-structure__tree">
 <span>./<b>netuno</b>/</span>
@@ -47,23 +48,24 @@ See the complete structure of a newly created application from the Netuno root f
 &nbsp;<span>└─ ./...</span>
 </pre>
 
-> The `apps` folder contains all the applications available on Netuno.
+> The `apps` folder contains all applications available in Netuno.
 
-Initially, this folder already contains the `demo` application, which, as the name suggests, is a demonstration of Netuno's features.
+Initially in this folder there is already the `demo` application, which as the name indicates is a **demo**
+_nstration_ of Netuno features.
 
-When a new application is created, a new folder is added containing the same hierarchy of subfolders, as shown above.
+When a new application is created, a new folder is added containing the same hierarchy of subfolders, as was
+presented above.
 
 ## Main Folders
 
-Within the application folder, we have the main folders, each with a specific purpose.
+Inside the application folder we have the main folders, where each one of them has a specific purpose.
 
 The main folders are:
 
-- [📂 config](config) - General settings;
-- [📂 dbs](dbs) - Database-related items;
+- [📂 config](config) - General configurations;
+- [📂 dbs](dbs) - Things related to the database;
 - [📂 docs](docs) - Documentation and other documents in general;
-- [📂 public](public) - Public content available directly via URL, such as images, JavaScript, and CSS;
+- [📂 public](public) - Public content available directly through URL, such as images, JavaScript and CSS;
 - [📂 server](server) - Backend code, such as services, jobs, templates, reports, and the entire API in general.
-- [📂 storage](storage) - Organization of files related to data or used in code.
+- [📂 storage](storage) - Organization of files that are related to data or that are used in code.
 - [📂 ui](ui) - Backoffice user interface, frontend code such as dashboards and other features.
-- 

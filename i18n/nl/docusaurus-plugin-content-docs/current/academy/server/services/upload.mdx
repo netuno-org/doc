@@ -1,0 +1,1069 @@
+---
+id: upload
+title: Upload
+sidebar_label: Upload
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Bestanden naar de API sturen en in een map of in de database opslaan.
+
+## Inleiding
+
+Wanneer we bestanden naar de services van de REST API moeten sturen, hebben we in Netuno verschillende manieren om dit te ontwikkelen.
+
+Meestal worden bestanden in de body van het HTTP-verzoek verzonden, gestructureerd in multipart-formaat; dit is de meest voorkomende procedure in de frontend, bijvoorbeeld wanneer we een formulier invullen met een veld om een bestand te kiezen.
+
+Als alternatief kunnen we de bytes van de bestanden als Base64-gecodeerde waarde in een JSON-object sturen, wanneer we een 100% JSON REST API willen.
+
+## Bestanden
+
+Via `_req.file` kunnen we de veldnaam doorgeven en zo het object van het verzonden bestand verkrijgen, zie hoe:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mijnBestand = _req.file("bestand");
+            `
+        },
+    ]}
+/>
+
+Met andere woorden, `_req` bevat alle gegevens die we in de body van het HTTP-verzoek ontvangen.
+
+En via de methode `file` kunnen we het object verkrijgen dat het verzonden bestand vertegenwoordigt.
+
+De verkregen waarde kan `null` zijn als er geen bestand is.
+
+## Afbeeldingen
+
+Wanneer we afbeeldingen ontvangen, is het vaak nodig om het formaat ervan aan te passen, om uniformiteit te garanderen en de ruimte die de afbeeldingen innemen te verkleinen.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mijnBestand = _req.getFile("afbeelding");
+                if (mijnBestand != null
+                    && (mijnBestand.isExtension("jpeg")
+                        || mijnBestand.isExtension("jpg")
+                        || mijnBestand.isExtension("png")
+                    )) {
+                    const mijnAfbeelding = _image.init(mijnBestand)
+                        .resize(200, 200)
+                        .file(mijnBestand.baseName() +".jpg", "jpeg");
+                    _header.contentTypeJPG();
+                    _out.copy(mijnAfbeelding);
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                mijn_bestand = _req.getFile("afbeelding")
+                if mijn_bestand is not None and (
+                    mijn_bestand.isExtension("jpeg")
+                    or mijn_bestand.isExtension("jpg")
+                    or mijn_bestand.isExtension("png")):
+                    mijn_afbeelding = (
+                        _image.init(mijn_bestand)
+                            .resize(200, 200)
+                            .file(mijn_bestand.baseName() +".jpg", "jpeg")
+                    )
+                    _header.contentTypeJPG()
+                    _out.copy(mijn_afbeelding)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                mijn_bestand = _req.getFile("afbeelding")
+                if !mijn_bestand.nil? && (
+                    mijn_bestand.isExtension("jpeg") ||
+                    mijn_bestand.isExtension("jpg") ||
+                    mijn_bestand.isExtension("png")
+                )
+                    mijn_afbeelding = _image.init(mijn_bestand)
+                        .resize(200, 200)
+                        .file(mijn_bestand.baseName() +".jpg", "jpeg")
+                    _header.contentTypeJPG()
+                    _out.copy(mijn_afbeelding)
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val mijnBestand = _req.getFile("afbeelding")
+                if (mijnBestand != null
+                    && (mijnBestand.isExtension("jpeg")
+                        || mijnBestand.isExtension("jpg")
+                        || mijnBestand.isExtension("png")
+                    )) {
+                    val mijnAfbeelding = _image.init(mijnBestand.input())
+                        .resize(200, 200)
+                        .file(mijnBestand.baseName() +".jpg", "jpeg")
+                    _header.contentTypeJPG()
+                    _out.copy(mijnAfbeelding.input())
+                }
+            `
+        }
+    ]}
+/>
+
+Met de polyglot low-code programmeerfunctie [Image](/docs/library/resources/image) kunnen we afbeeldingen bewerken, bijsnijden, het formaat wijzigen, nieuwe maken, enz.
+
+## Base64 in JSON
+
+Om een bestand te uploaden in de JSON die naar de service wordt gestuurd, kunnen we een eigenschap met de volgende waarde definiëren:
+
+`data:image/png;base64,...`
+
+Waarbij in `...` de reeks bytes van het bestand volgt, gecodeerd in Base64.
+
+Het bestandstype komt na `data`, bijvoorbeeld:
+
+- PNG: `image/png`.
+- JPG: `image/jpeg`
+- TXT: `text/plain`
+- PDF: `application/pdf`
+- XLSX: `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
+
+Zie het voorbeeld van een klein PNG-afbeeldingsbestand dat in de JSON naar een service wordt gestuurd:
+
+```json
+{
+  "bestand": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAFIGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpDb2xvclNwYWNlPSIxIgogICBleGlmOlBpeGVsWERpbWVuc2lvbj0iMyIKICAgZXhpZjpQaXhlbFlEaW1lbnNpb249IjMiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMyIKICAgdGlmZjpJbWFnZVdpZHRoPSIzIgogICB0aWZmOlJlc29sdXRpb25Vbml0PSIyIgogICB0aWZmOlhSZXNvbHV0aW9uPSI3Mi8xIgogICB0aWZmOllSZXNvbHV0aW9uPSI3Mi8xIgogICB4bXA6TWV0YWRhdGFEYXRlPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMTItMjlUMTk6MTI6MjdaIj4KICAgPHhtcE1NOkhpc3Rvcnk+CiAgICA8cmRmOlNlcT4KICAgICA8cmRmOmxpCiAgICAgIHhtcE1NOmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHhtcE1NOnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IERlc2lnbmVyIDEuMTAuNSIKICAgICAgeG1wTU06d2hlbj0iMjAyNS0wMi0yM1QyMjoxNDozM1oiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IDMuMC4xIgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+UGhcxwAAAYFpQ0NQc1JHQiBJRUM2MTk2Ni0yLjEAACiRdZG7SwNBEIe/JEqCRhS0sFAIEq3iG4I2ggmigkiIEXw1yZmHkMdxlyDBVrANKIg2vgr9C7QVrAVBUQSx1lbRRuWc84QEMbPMzre/3Rl2Z8EeSSsZvaYPMtm8Fh4PeObmFzzOZ9y004yL3qiiq6Oh0BRV7f0Wmxmvu81a1c/9a/XLcV0Bm0t4RFG1vPCE8NRqXjV5S7hFSUWXhU+EfZpcUPjG1GMWP5mctPjTZC0SDoK9SdiTrOBYBSspLSMsL8ebSReU3/uYL3HHs7MzEjvE29AJM04AD5OMEcRPP8My++lmgB5ZUSW/7yd/mpzkKjKrFNFYIUmKPD5RC1I9LjEhelxGmqLZ/7991RODA1Z1dwBqHw3jtROcm/BVMoyPA8P4OgTHA5xny/m5fRh6E71U1rx70LgOpxdlLbYNZxvQeq9GteiP5BC3JxLwcgwN89B8BXWLVs9+9zm6g8iafNUl7OxCl5xvXPoGe8Rn71E5kqUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAySURBVAiZAScA2P8BJYrEogr//l3h5+qlBP4HCF3n/AAA/wP7WwLu7PKk+eHWAPzWyKSmfRbbIj23ZQAAAABJRU5ErkJggg=="
+}
+```
+
+We kunnen het verzonden bestand als volgt verkrijgen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mijnBestand = _req.getFile("bestand");
+                if (mijnBestand != null) {
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", true)
+                            .set("naam", mijnBestand.name())
+                            .set("grootteBytes", mijnBestand.size())
+                            .set("grootteKB", mijnBestand.sizeKB())
+                            .set("grootteMB", mijnBestand.sizeMB())
+                            .set("grootteGB", mijnBestand.sizeGB())
+                    );
+                } else {
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", false)
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                mijn_bestand = _req.getFile("bestand")
+                if mijn_bestand is not None:
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", True)
+                            .set("naam", mijn_bestand.name())
+                            .set("grootteBytes", mijn_bestand.size())
+                            .set("grootteKB", mijn_bestand.sizeKB())
+                            .set("grootteMB", mijn_bestand.sizeMB())
+                            .set("grootteGB", mijn_bestand.sizeGB())
+                    )
+                else:
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", False)
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                mijn_bestand = _req.getFile("bestand")
+                if mijn_bestand.nil?
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", true)
+                            .set("naam", mijn_bestand.name())
+                            .set("grootteBytes", mijn_bestand.size())
+                            .set("grootteKB", mijn_bestand.sizeKB())
+                            .set("grootteMB", mijn_bestand.sizeMB())
+                            .set("grootteGB", mijn_bestand.sizeGB())
+                    )
+                else
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", false)
+                    )
+                end
+            `
+        },
+    ]}
+/>
+
+Voorbeeld van de uitvoer die door de bovenstaande service wordt gegenereerd:
+
+```json
+{
+  "naam": "bestand.png",
+  "resultaat": true,
+  "grootte": 1849,
+  "grootteKB": 1
+}
+```
+
+### Object
+
+Als het bestand zich in een interne JSON-structuur binnen het subobject bevindt:
+
+```json
+{
+  "persoon": {
+    "bestand": "data:image/png;base64,..."
+  }
+}
+```
+
+Kan als volgt worden verkregen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mijnBestand = _req.getValues("persoon").getFile("avatar");
+            `
+        },
+    ]}
+/>
+
+### Array
+
+Als het bestand zich in een interne JSON-structuur binnen de array bevindt:
+
+```json
+{
+  "bestanden": [
+    "data:image/png;base64,..."
+  ]
+}
+```
+
+Kan als volgt worden verkregen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mijnBestand = _req.getValues("bestanden").getFile(0);
+            `
+        },
+    ]}
+/>
+
+## OpenAPI
+
+Netuno ondersteunt integratie met OpenAPI en gebruikt de OpenAPI-definitie om het HTTP-verzoek te valideren.
+
+> Meer over [OpenAPI in Netuno](/docs/academy/server/services/openapi).
+
+Met het type `file` valideert Netuno of de waarde begint met het bestandsformaat in de JSON, bijvoorbeeld:
+
+- `data:image/png;base64,...`
+
+Om te valideren of een bestand in een eigenschap van het JSON-object wordt ontvangen:
+
+```json title="post.in.json"
+{
+  "summary": "Bestand uploaden",
+  "description": "Service die een bestand in het JSON-object ontvangt.",
+  "type": "object",
+  "properties": {
+    "bestand": {
+      "type": "file"
+    }
+  },
+  "required": [
+    "bestand"
+  ]
+}
+```
+
+Om te valideren of een lijst met bestanden in een array in de JSON wordt ontvangen:
+
+```json title="post.in.json"
+{
+  "summary": "Bestanden uploaden",
+  "description": "Service die een lijst met bestanden in een array in de JSON ontvangt.",
+  "properties": {
+    "bestanden": {
+      "type": "array",
+      "items": {
+        "type": "file"
+      }
+    }
+  },
+  "required": [
+    "bestanden"
+  ]
+}
+```
+
+## Het bestand opslaan
+
+Meestal moeten we een bestand dat we in de service ontvangen opslaan, bijvoorbeeld:
+
+- **Database**: Een bestand dat aan een record is gekoppeld, bijvoorbeeld van een gebruiker.
+- **Storage**: Interne map van de applicatie die dient om bestanden in het algemeen te beheren.
+- **Map**: Het bestand in een willekeurige map van het systeem plaatsen.
+
+### Database
+
+Bij het beheren van formuliervelden ondersteunt Netuno de typen `image` en `file`, namelijk:
+
+- **Image**: Afbeeldingsbestanden in het algemeen, JPG en PNG.
+- **File**: Elk type bestand.
+
+Stel dat er een Afbeelding-veld in het formulier Product is; we kunnen het via upload verzonden bestand als volgt opslaan:
+
+#### Voorbeeld met DB Form:
+
+Let op het gebruik van `_db.form`:
+
+<PolyglotCode
+    file="services/product/afbeelding/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const productId = _req.getString("id");
+                const productAfbeelding = _req.getFile("afbeelding");
+
+                if (productAfbeelding == null) {
+                    _header.status(400);
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", false)
+                            .set("fout", "afbeelding-verplicht")
+                    );
+                    _exec.stop();
+                }
+
+                const dbResultaat = _db.form("product")
+                    .set("afbeelding", productAfbeelding)
+                    .where(_db.where("id").equals(productId))
+                    .update();
+
+                if (dbResultaat.getInt("product") == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", true)
+                    );
+                } else {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", false)
+                            .set("fout", "id-product-bestaat-niet")
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                productId = _req.getString("id")
+                productAfbeelding = _req.getFile("afbeelding")
+
+                if productAfbeelding is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", False)
+                            .set("fout", "afbeelding-verplicht")
+                    )
+                    _exec.stop()
+
+                dbResultaat = (
+                    _db.form("product")
+                        .set("afbeelding", productAfbeelding)
+                        .where(_db.where("id").equals(productId))
+                        .update()
+                )
+
+                if dbResultaat.getInt("product") == 1:
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", False)
+                            .set("fout", "id-product-bestaat-niet")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                productId = _req.getString("id")
+                productAfbeelding = _req.getFile("afbeelding")
+
+                if productAfbeelding.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("resultaat", false)
+                      .set("fout", "afbeelding-verplicht")
+                  )
+                  _exec.stop
+                end
+
+                dbResultaat = _db.form("product")
+                  .set("afbeelding", productAfbeelding)
+                  .where(_db.where("id").equals(productId))
+                  .update()
+
+                if dbResultaat.getInt("product") == 1
+                  _out.json(
+                    _val.map()
+                      .set("resultaat", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("resultaat", false)
+                      .set("fout", "id-product-bestaat-niet")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### Voorbeeld met de klassieke update:
+
+Let op het gebruik van `_db.update`:
+
+<PolyglotCode
+    file="services/product/afbeelding/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const productId = _req.getString("id");
+                const productAfbeelding = _req.getFile("afbeelding");
+
+                if (productAfbeelding == null) {
+                    _header.status(400);
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", false)
+                            .set("fout", "afbeelding-verplicht")
+                    );
+                    _exec.stop();
+                }
+
+                const dbResultaat = _db.update(
+                    "product",
+                    productId,
+                    _val.map()
+                        .set("afbeelding", productAfbeelding)
+                );
+
+                if (dbResultaat == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", true)
+                    );
+                } else {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", false)
+                            .set("fout", "id-product-bestaat-niet")
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                productId = _req.getString("id")
+                productAfbeelding = _req.getFile("afbeelding")
+
+                if productAfbeelding is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", False)
+                            .set("fout", "afbeelding-verplicht")
+                    )
+                    _exec.stop()
+
+                dbResultaat = (
+                    _db.update(
+                        "product",
+                        productId,
+                        _val.map()
+                            .set("afbeelding", productAfbeelding)
+                    )
+                )
+
+                if dbResultaat == 1:
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", False)
+                            .set("fout", "id-product-bestaat-niet")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                productId = _req.getString("id")
+                productAfbeelding = _req.getFile("afbeelding")
+
+                if productAfbeelding.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("resultaat", false)
+                      .set("fout", "afbeelding-verplicht")
+                  )
+                  _exec.stop
+                end
+
+                dbResultaat = _db.update(
+                  "product",
+                  productId,
+                  _val.map()
+                    .set("afbeelding", productAfbeelding)
+                )
+
+                if dbResultaat == 1
+                  _out.json(
+                    _val.map()
+                      .set("resultaat", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("resultaat", false)
+                      .set("fout", "id-product-bestaat-niet")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### Bestand downloaden uit de database
+
+Om het opgeslagen bestand te tonen, moeten we een service maken die de bytes van het bestand levert.
+
+Bij bestanden die in de database worden opgeslagen, zoals in het bovenstaande voorbeeld, wordt het bestand zelf in de storage van de applicatie geplaatst en wordt in de database alleen de uiteindelijke bestandsnaam opgeslagen.
+
+> De storage van de applicatie is een map die bedoeld is om generieke bestandsstructuren op te slaan en te organiseren.
+
+Daarom worden in het bovenstaande voorbeeld de databasebestanden van het formulier `Product` en het veld `Afbeelding` opgeslagen in:
+
+- `storage/database/product/afbeelding/*`
+
+> Netuno beheert automatisch de naam van het opgeslagen bestand om dubbele bestandsnamen te voorkomen.
+
+Om het bestand te verkrijgen, kan een service worden gemaakt die het afbeeldingsbestand van het product toont, bijvoorbeeld:
+
+<PolyglotCode
+    file="services/product/afbeelding/get"
+    codes={[
+    {
+        lang: 'javascript',
+        code: `
+            const productId = _req.getString("id");
+
+            // DB Form:
+            const dbProduct = _db.form("product")
+                .where(_db.where("id").equals(productId))
+                .first();
+            // Alternatief met klassieke DB:
+            // const dbProduct = _db.get("product", productId)
+
+            if (dbProduct == null) {
+                _header.status(404);
+                _out.json(
+                    _val.map()
+                        .set("resultaat", false)
+                        .set("fout", "product-niet-gevonden")
+                );
+                _exec.stop();
+            }
+
+            const dbProductAfbeeldingNaam = dbProduct.getString("afbeelding");
+
+            const storageProductAfbeeldingBestand = _storage.database(
+                "product",
+                "afbeelding",
+                dbProductAfbeeldingNaam
+            );
+
+            if (storageProductAfbeeldingBestand.extension() == "jpg" || storageProductAfbeeldingBestand.extension() == "jpeg") {
+                _header.contentTypeJPG();
+            } else {
+                _header.contentTypePNG();
+            }
+
+            _header.noCache();
+
+            _out.copy(storageProductAfbeeldingBestand.inputStream());
+        `
+    },
+    {
+        lang: 'python',
+        code: `
+            productId = _req.getString("id")
+
+            # DB Form:
+            dbProduct = (
+                _db.form("product")
+                    .where(_db.where("id").equals(productId))
+                    .first()
+            )
+            # Alternatief met klassieke DB:
+            # dbProduct = _db.get("product", productId)
+
+            if dbProduct is None:
+                _header.status(404)
+                _out.json(
+                    _val.map()
+                        .set("resultaat", False)
+                        .set("fout", "product-niet-gevonden")
+                )
+                _exec.stop()
+
+            dbProductAfbeeldingNaam = dbProduct.getString("afbeelding")
+
+            storageProductAfbeeldingBestand = _storage.database(
+                "product",
+                "afbeelding",
+                dbProductAfbeeldingNaam
+            )
+
+            if storageProductAfbeeldingBestand.extension() == "jpg" or storageProductAfbeeldingBestand.extension() == "jpeg":
+                _header.contentTypeJPG()
+            else:
+                _header.contentTypePNG()
+
+            _header.noCache()
+
+            _out.copy(storageProductAfbeeldingBestand.inputStream())
+        `
+    },
+    {
+        lang: 'ruby',
+        code: `
+            productId = _req.getString("id")
+
+            # DB Form:
+            dbProduct = _db.form("product")
+                .where(_db.where("id").equals(productId))
+                .first()
+            # Alternatief met klassieke DB:
+            # dbProduct = _db.get("product", productId)
+
+            if dbProduct.nil?
+                _header.status(404)
+                _out.json(
+                    _val.map()
+                        .set("resultaat", false)
+                        .set("fout", "product-niet-gevonden")
+                )
+                _exec.stop()
+            end
+
+            dbProductAfbeeldingNaam = dbProduct.getString("afbeelding")
+
+            storageProductAfbeeldingBestand = _storage.database(
+                "product",
+                "afbeelding",
+                dbProductAfbeeldingNaam
+            )
+
+            if storageProductAfbeeldingBestand.extension() == "jpg" || storageProductAfbeeldingBestand.extension() == "jpeg"
+                _header.contentTypeJPG()
+            else
+                _header.contentTypePNG()
+            end
+
+            _header.noCache()
+
+            _out.copy(storageProductAfbeeldingBestand.inputStream())
+        `
+    },
+]}
+/>
+
+Let op dat de functie `_storage` ([Storage](/docs/library/resources/storage)) wordt gebruikt om het bestand te verkrijgen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _storage.database(
+                    "product", // Naam van het formulier/de tabel.
+                    "afbeelding", // Naam van het veld/de kolom.
+                    dbProductAfbeeldingNaam // Naam van het bestand.
+                );
+            `
+        },
+    ]}
+/>
+
+In de database wordt alleen de bestandsnaam opgeslagen; via `_storage.database` kunnen we het bestand zelf verkrijgen.
+
+### Storage
+
+We kunnen een bestand direct in de `storage` van de applicatie opslaan.
+
+Om ze niet te mengen met databasebestanden, moeten we de map `filesystem` gebruiken, die bedoeld is om generieke bestanden op te slaan die niet aan de database zijn gekoppeld.
+
+Om het bestand te ontvangen, wordt in dit voorbeeld getoond hoe een bestand dat via de `POST`-service wordt verzonden, direct in de storage wordt opgeslagen:
+
+<PolyglotCode
+    file="services/bestand/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const bestand = _req.getFile("bestand");
+                _storage.filesystem("server", "upload").ensurePath();
+                bestand.save(_storage.filesystem("server", "upload", bestand.name()));
+            `
+        },
+    ]}
+/>
+
+Het bestand wordt opgeslagen in de `storage`-map van de applicatie, in:
+
+- `storage/filesystem/server/upload/*`
+
+> De functie [Storage](/docs/library/resources/storage) wordt gebruikt om het pad van de map en het bestand te verkrijgen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _storage.filesystem(
+                    "server", // Naam van de submap in het filesystem.
+                    "upload", // Naam of pad van de interne submap.
+                    bestand.name() // Uiteindelijke naam van het bestand.
+                );
+            `
+        },
+    ]}
+/>
+
+> Zie meer in de documentatie over [Storage](/docs/library/resources/storage).
+
+Om het bestand te downloaden, wordt in dit voorbeeld getoond hoe de bytes van het bestand via de `GET`-service kunnen worden verkregen:
+
+<PolyglotCode
+    file="services/bestand/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const bestandNaam = _req.getString("bestand");
+
+                const bestand = _storage.filesystem(
+                    "server",
+                    "upload",
+                    bestandNaam
+                ).file();
+
+                if (bestand.exists() == false) {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", false)
+                            .set("fout", "bestand-bestaat-niet")
+                    );
+                    _exec.stop();
+                }
+
+                _header.downloadFile(bestand.name());
+                _out.copy(bestand.input());
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                bestandNaam = _req.getString("bestand")
+
+                bestand = _storage.filesystem(
+                    "server",
+                    "upload",
+                    bestandNaam
+                ).file()
+
+                if bestand.exists() == False:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", False)
+                            .set("fout", "bestand-bestaat-niet")
+                    )
+                    _exec.stop()
+
+                _header.downloadFile(bestand.name())
+                _out.copy(bestand.input())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                bestand_naam = _req.getString("bestand")
+
+                bestand = _storage.filesystem(
+                    "server",
+                    "upload",
+                    bestand_naam
+                ).file()
+
+                if bestand.exists() == false
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", false)
+                            .set("fout", "bestand-bestaat-niet")
+                    )
+                    _exec.stop()
+                end
+
+                _header.downloadFile(bestand.name())
+                _out.copy(bestand.input())
+            `
+        },
+    ]}
+/>
+
+### Map
+
+We kunnen een bestand direct in een willekeurige map van de computer opslaan.
+
+Er zijn twee functies die in deze gevallen erg nuttig zijn:
+
+- `_app` - We kunnen elke map of elk bestand in de applicatie pakken.
+- `_os` - We kunnen elke map of elk bestand op de computer pakken.
+
+> Zie de documentatie van de respectieve functies [App](/docs/library/resources/app) en [OS](/docs/library/resources/os); beide functies hebben de methoden `folder` en `file`, waarmee het pad van respectievelijk de map of het bestand kan worden aangegeven.
+
+Om het bestand te ontvangen, wordt in dit voorbeeld getoond hoe een bestand dat via de `POST`-service wordt verzonden, direct in een map in de applicatie wordt opgeslagen:
+
+<PolyglotCode
+    file="services/bestand/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const bestand = _req.getFile("bestand");
+                const map = _app.folder("tijdelijk");
+                if (map.exists() == false) {
+                    map.mkdir();
+                }
+                bestand.save(_app.file(\`tijdelijk/\${bestand.name()}\`));
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                bestand = _req.getFile("bestand")
+                map = _app.folder("tijdelijk")
+                if map.exists() == False:
+                    map.mkdir()
+
+                bestand.save(_app.file(f"tijdelijk/{bestand.name()}"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                bestand = _req.getFile("bestand")
+                map = _app.folder("tijdelijk")
+                if map.exists() == false
+                    map.mkdir()
+                end
+                bestand.save(_app.file("tijdelijk/#{bestand.name()}"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val bestand = _req.getFile("bestand")
+                val map = _app.folder("tijdelijk")
+                if (map.exists() == false) {
+                    map.mkdir()
+                }
+                bestand.save(_app.file("tijdelijk/\${bestand.name()}"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                final bestand = _req.getFile("bestand")
+                final map = _app.folder("tijdelijk")
+                if (map.exists() == false) {
+                    map.mkdir()
+                }
+                bestand.save(_app.file("tijdelijk/\${bestand.name()}"))
+            `
+        },
+    ]}
+/>
+
+De bovenstaande code maakt de map `tijdelijk` in de applicatie aan en slaat het ontvangen bestand in deze map op.
+
+Om het bestand te downloaden, wordt in dit voorbeeld getoond hoe de bytes van het bestand via de `GET`-service kunnen worden verkregen:
+
+<PolyglotCode
+    file="services/bestand/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const bestandNaam = _req.getString("bestand");
+                const bestand = _app.file(\`tijdelijk/\${bestandNaam}\`);
+
+                if (bestand.exists() == false) {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", false)
+                            .set("fout", "bestand-bestaat-niet")
+                    );
+                    _exec.stop();
+                }
+
+                _header.downloadFile(bestand.name());
+                _out.copy(bestand.input());
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                bestandNaam = _req.getString("bestand")
+                bestand = _app.file(f"tijdelijk/{bestandNaam}")
+
+                if bestand.exists() == False:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", False)
+                            .set("fout", "bestand-bestaat-niet")
+                    )
+                    _exec.stop()
+
+                _header.downloadFile(bestand.name())
+                _out.copy(bestand.input())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                bestand_naam = _req.getString("bestand")
+                bestand = _app.file("tijdelijk/#{bestand_naam}")
+
+                if bestand.exists() == false
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", false)
+                            .set("fout", "bestand-bestaat-niet")
+                    )
+                    _exec.stop()
+                end
+
+                _header.downloadFile(bestand.name())
+                _out.copy(bestand.input())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val bestandNaam = _req.getString("bestand")
+                val bestand = _app.file("tijdelijk/\${bestandNaam}")
+
+                if (bestand.exists() == false) {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", false)
+                            .set("fout", "bestand-bestaat-niet")
+                    )
+                    _exec.stop()
+                }
+
+                _header.downloadFile(bestand.name())
+                _out.copy(bestand.input())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                final bestandNaam = _req.getString("bestand")
+                final bestand = _app.file("tijdelijk/\${bestandNaam}")
+
+                if (bestand.exists() == false) {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("resultaat", false)
+                            .set("fout", "bestand-bestaat-niet")
+                    )
+                    _exec.stop()
+                }
+
+                _header.downloadFile(bestand.name())
+                _out.copy(bestand.input())
+            `
+        },
+    ]}
+/>
+
+## Conclusie
+
+Zoals te zien is, kunnen we het uploaden van bestanden integreren in de services van de REST API, inclusief integratie met OpenAPI.
+
+We kunnen het bestand in de database opslaan, in de `storage`-map van de applicatie of in een willekeurige map op de computer.
+
+Zie de documentatie van de functies die in deze tutorial worden gebruikt en waarmee bestanden kunnen worden beheerd:
+
+- [Storage](/docs/library/resources/storage)
+- [App](/docs/library/resources/app)
+- [OS](/docs/library/resources/os)
+
+In de database kunnen we afbeeldingen opslaan in velden van het type `image`, en we kunnen elk type bestand opslaan in velden van het type `file`; hoe we bestanden opslaan of verkrijgen is in beide gevallen hetzelfde, of het nu om een afbeelding of een generiek bestand gaat.

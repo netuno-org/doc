@@ -1,0 +1,580 @@
+---
+id: files-manipulation
+title: ファイルとフォルダの操作
+sidebar_label: ファイルとフォルダの操作
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+## はじめに
+
+Netuno プラットフォームのポリグロット・バックエンドコードでは、任意のファイルやフォルダを操作できます。
+
+操作とは、ファイルやフォルダの作成、名前の変更、削除、ファイル内容の変更、フォルダ内容の一覧表示などです。一般的に、プログラムから実行する必要があるのはこれらの操作です。
+
+Netuno プラットフォームには、アプリケーション内部のフォルダやファイルだけでなく、アプリケーション外のシステム全体の任意のファイルやフォルダも操作できるローコードプログラミング機能があります。
+
+何らかのファイルを扱う必要がある処理を自動化したい場合に便利です。具体的な方法を見ていきましょう。
+
+ファイルを操作できるポリグロット・ローコードプログラミング機能は次のとおりです:
+
+- `_app` - [アプリケーション](/docs/library/resources/app)
+- `_storage` - [ストレージ](/docs/library/resources/storage)
+- `_os` - [オペレーティングシステム](/docs/library/resources/os)
+
+これらのリソースでは、次のメソッドを利用できます:
+
+- `.file` - 既存のファイル。
+- `.folder` - 既存のフォルダ。
+- `.path` - 汎用パス。ファイルまたはフォルダのいずれかで、存在する場合も存在しない場合もあります。
+
+これらのメソッドでは [File](/docs/library/objects/File) 型のオブジェクトを取得できます。このオブジェクトは、ファイル、フォルダ、パス全般を操作するためのすべての手段を提供し、次のような操作を実行できます:
+
+- ファイルとフォルダの作成。
+- ファイルとフォルダの削除。
+- フォルダ内容の一覧表示。
+- ファイルとフォルダの名前変更。
+- ファイルへのデータの読み書き。
+- フォルダとそのサブフォルダおよびファイルの再帰的な削除。
+
+## アプリケーション
+
+アプリケーション構造内でファイルとフォルダを操作する主要な処理には、`_app` リソースを使用します:
+
+#### アプリケーション内のフォルダ
+
+存在するフォルダを取得することを保証します。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const myFolder = _app.folder("my/folder")
+            `
+        },
+    ]}
+/>
+
+#### アプリケーション内のファイル
+
+存在するファイルを取得することを保証します。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const myFile = _app.file("my/folder/file.txt")
+            `
+        },
+    ]}
+/>
+
+#### アプリケーション内のパス
+
+ファイルまたはフォルダのパスを、存在するかどうかに関係なく取得します。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const newFile = _app.path("my/folder/new-file.txt")
+            `
+        },
+    ]}
+/>
+
+## ストレージ
+
+アプリケーションの `📁 storage` フォルダ内でファイルとフォルダを操作する主要な処理には、`_storage` リソースを使用します:
+
+#### ストレージ内のフォルダ
+
+存在するフォルダを取得することを保証します。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // フォルダの実際のパスは次のようになります:
+                // storage/filesystem/server/my/folder
+                const storageMyFolder = _storage.filesystem("server", "my/folder")
+                const myFolder = storageMyFolder.folder()
+            `
+        },
+    ]}
+/>
+
+#### ストレージ内のファイル
+
+存在するファイルを取得することを保証します。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // ファイルの実際のパスは次のようになります:
+                // storage/filesystem/server/my/folder/file.txt
+                const storageFile = _storage.filesystem("server", "my/folder", "file.txt")
+                const file = storageFile.file()
+            `
+        },
+    ]}
+/>
+
+#### ストレージ内のパス
+
+ファイルまたはフォルダのパスを、存在するかどうかに関係なく取得します。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 新しいフォルダの実際のパスは次のようになります:
+                // storage/filesystem/server/my/new-folder
+                const storageFolder = _storage.filesystem("server", "my/new-folder")
+                const folder = storageFolder.path()
+
+                // 新しいファイルの実際のパスは次のようになります:
+                // storage/filesystem/server/my/folder/new-file.txt
+                const storageFile = _storage.filesystem("server", "my/folder", "new-file.txt")
+                const file = storageFile.path()
+            `
+        },
+    ]}
+/>
+
+## オペレーティングシステム
+
+オペレーティングシステム上の任意の場所でファイルとフォルダを操作する主要な処理には、`_os` リソースを使用します:
+
+#### オペレーティングシステム内のフォルダ
+
+存在するフォルダを取得することを保証します。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const myFolder = _os.folder("/tmp/my/folder")
+            `
+        },
+    ]}
+/>
+
+#### オペレーティングシステム内のファイル
+
+存在するファイルを取得することを保証します。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const myFile = _os.file("/tmp/my/folder/file.txt")
+            `
+        },
+    ]}
+/>
+
+#### オペレーティングシステム内のパス
+
+ファイルまたはフォルダのパスを、存在するかどうかに関係なく取得します。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const newFile = _os.path("/tmp/my/folder/new-file.txt")
+            `
+        },
+    ]}
+/>
+
+## フォルダの作成
+
+`mkdir` メソッドはフォルダを作成します。
+
+次の例では、アプリケーションのルートに特定のフォルダを作成します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const folder = _app.path("temp")
+                folder.mkdir()
+            `
+        },
+    ]}
+/>
+
+既存のフォルダ内にサブフォルダを作成するには、フォルダ階層を `/` で区切った完全なパスを指定します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const subfolder = _app.path("temp/other")
+                subfolder.mkdir()
+            `
+        },
+    ]}
+/>
+
+一方、`mkdirs` は、存在しない場合に前のフォルダやサブフォルダを作成するため、アプリケーション内にフォルダ構造を作成できます。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const folderPath = _app.path("temp/a/b/c")
+                folderPath.mkdirs()
+            `
+        },
+    ]}
+/>
+
+`_storage` リソースには [ensurePath](/docs/library/resources/storage#ensurepath) メソッドがあり、パスが存在するかを確認し、存在しない場合は作成します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const file = _storage.filesystem(
+                    "public",
+                    "temp/subfolder",
+                    "file.txt"
+                )
+                // フォルダ構造が存在しない場合は作成します:
+                file.ensurePath()
+            `
+        },
+    ]}
+/>
+
+したがって、`ensurePath` はフォルダ構造が存在することを保証します。
+
+## ファイルとフォルダの削除
+
+`delete` メソッドでは、フォルダとファイルの両方を削除できます。ただしフォルダは空である必要があります。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 空のフォルダを削除します:
+                const emptyFolder = _app.folder("folder/empty")
+                emptyFolder.delete()
+
+                // ファイルを削除します:
+                const file = _app.file("folder/file.txt")
+                file.delete()
+
+                // パス（空のフォルダまたはファイル）を削除します:
+                const targetPath = _app.path("folder1/file-or-empty-folder")
+                targetPath.delete()
+            `
+        },
+    ]}
+/>
+
+`deleteAll` では、すべて、つまりすべてのファイル、フォルダ、サブフォルダを再帰的に削除できます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // フォルダとその内容をすべて再帰的に削除します:
+                const emptyFolder = _app.folder("folder/example")
+                emptyFolder.deleteAll()
+
+                // フォルダのパスとその内部のすべての内容を削除します。
+                // サブフォルダとファイルを含みます:
+                const targetPath = _app.path("path/folder")
+                targetPath.deleteAll()
+            `
+        },
+    ]}
+/>
+
+フォルダ内のファイルだけを削除し、サブフォルダ内の何も削除しない場合は、`deleteFiles` を使用します。特定の拡張子のファイルだけを削除したい場合は拡張子を指定できます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // フォルダ内のファイルのみを削除します:
+                const folder = _app.folder("folder/example")
+                folder.deleteFiles()
+
+                // フォルダ内のJPG拡張子のファイルのみを削除します:
+                const targetPath = _app.path("path/folder")
+                targetPath.deleteFiles("jpg")
+`
+        },
+    ]}
+/>
+
+ファイルだけを再帰的に削除し、フォルダ構造を維持する場合は、`deleteAllFiles` を使用します。特定の種類のファイルだけを削除したい場合は拡張子を指定できます。次の2つの例を見てください:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // フォルダ内とサブフォルダ内のすべてのファイルを削除します:
+                const folder = _app.folder("folder/example")
+                folder.deleteAllFiles()
+
+                // フォルダ内とサブフォルダ内のJPG拡張子のすべてのファイルを削除します:
+                const targetPath = _app.path("path/folder")
+                targetPath.deleteAllFiles("jpg")
+            `
+        },
+    ]}
+/>
+
+## 名前の変更または移動
+
+フォルダを移動することは、名前を変更することと同じです:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const folder = _app.folder("temp")
+                folder.renameTo("test")
+            `
+        },
+    ]}
+/>
+
+フォルダの名前を変更し、フォルダ階層内でのレベルを変更することは、フォルダを移動することと同じです:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const folder = _app.folder("temp/a/b")
+                folder.renameTo("test/z")
+            `
+        },
+    ]}
+/>
+
+また、名前を変更せずにサブフォルダを移動するには、`renameTo` メソッドで新しいパスを指定するだけです:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const folder = _app.folder("test/other")
+                folder.renameTo("new-other")
+            `
+        },
+    ]}
+/>
+
+## ファイルへの内容の保存
+
+ファイルへの内容の生成は、`output` メソッドを通じて行います。このメソッドは [OutputStream](/docs/library/objects/OutputStream) 型のオブジェクトを提供します。
+
+`output` にデータを書き込むには、[printAndClose](/docs/library/objects/OutputStream#printandclose) メソッドを使用します。このメソッドはファイルに内容を出力し、ファイルを閉じて内容を保存します。
+
+#### テキストファイルへの書き込み
+
+テキスト内容を持つファイルを作成する例を見てください:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _app.path("temp").mkdir()
+                const writer = _app.path("temp/file.txt").output()
+                writer.printAndClose("ここにテキストを書きます...")
+            `
+        },
+    ]}
+/>
+
+> `output` を使用するたびに新しいファイルが生成されるため、コードを再度実行するとファイルは再作成されます。
+
+#### JSONファイルへの書き込み
+
+JSON データをファイルに保存する方法を見てください:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _app.path("temp").mkdir()
+                const writer = _app.path("temp/customer.json").output()
+                writer.printAndClose(
+                    _val.map()
+                        .set("name", "山田 花子")
+                        .set(
+                            "records",
+                            _val.list()
+                                .add(1).add(2).add(3)
+                        )
+                        .toJSON()
+                )
+            `
+        },
+    ]}
+/>
+
+インデントされた JSON、つまり複数行に整形されタブ区切りされた JSON を生成するには、例えば `.toJSON(4)` のようにインデントに使用するスペース数を渡します。
+
+> 詳細は [Values の toJSON](/docs/library/objects/Values#tojsonindentfactor-int--string) を参照してください。
+
+## ファイルからの内容の読み取り
+
+ファイルの内容の取得は、`input` メソッドを通じて行います。このメソッドは [InputStream](/docs/library/objects/InputStream) 型のオブジェクトを提供します。
+
+`input` のデータを読み取るには、[readAllAndClose](/docs/library/objects/InputStream#readallandclose) メソッドを使用します。このメソッドはファイルの内容の読み取りを処理し、ファイルを閉じます。
+
+#### テキストファイルの読み取り
+
+ファイルを読み取り、テキスト内容を取得する例を見てください:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const file = _app.file("temp/file.txt")
+                const reader = file.input()
+                _log.info(reader.readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### JSONファイルの読み取り
+
+ファイルから取得した JSON データを処理する方法を見てください:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const file = _app.file("temp/file.txt")
+                const reader = file.input()
+                const data = _val.fromJSON(reader.readAllAndClose())
+                _log.info("ファイルのデータ:", data)
+            `
+        },
+    ]}
+/>
+
+> 詳細は [Val リソースの fromJSON](/docs/library/resources/val#fromjson) を参照してください。
+
+## ストレージの特性
+
+ストレージリソースには、直接使用できるいくつかのメソッドがあります。
+
+例えば、ストレージを通じて次のものにアクセスできます:
+
+- [ストレージの出力](/docs/library/resources/storage#output)
+- [ストレージの入力](/docs/library/resources/storage#input)
+
+つまり、`input` や `output` を扱うために `file` や `path` を取得する必要はありません。
+
+#### ストレージ内のテキストファイルへの書き込み
+
+ファイルに対してストレージを開始すると、[output](/docs/library/resources/storage#output) メソッドを使用して書き込みを実行できます。このメソッドは、データを処理して書き込むための [OutputStream](/docs/library/objects/OutputStream) オブジェクトのインスタンスを取得します。
+
+そして `OutputStream` では、[printAndClose](/docs/library/objects/OutputStream#printandclose) メソッドがテキスト（`string`）をファイルに書き込み、ファイルを閉じます。
+
+次の例を見てください:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const txtFile = _storage.filesystem("server", "temp", "file.txt")
+                txtFile.ensurePath()
+                txtFile.output().printAndClose("ここにテキストを書きます...")
+            `
+        },
+    ]}
+/>
+
+#### ストレージ内のテキストファイルの読み取り
+
+ファイルに対してストレージを開始すると、[input](/docs/library/resources/storage#input) メソッドを使用して読み取りを実行できます。このメソッドは、データを処理して読み取るための [InputStream](/docs/library/objects/InputStream) オブジェクトのインスタンスを取得します。
+
+そして `InputStream` では、[readAllAndClose](/docs/library/objects/InputStream#readallandclose) メソッドがファイル全体を読み取って閉じ、データをテキスト（`string`）として返します。
+
+次の例を見てください:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const txtFile = _storage.filesystem("server", "temp", "file.txt")
+                _log.info(txtFile.input().readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### ストレージ内でのランダムファイルの作成
+
+`_storage` リソースでは、[newRandomFile](/docs/library/resources/storage#newrandomfile) メソッドを使用してランダムなファイル名を生成できます。
+
+フォルダのパスに対してストレージを開始し、`newRandomFile` メソッドを実行する際に目的のファイル拡張子を渡します。
+
+このメソッドは、開始フォルダ内で使用するために自動生成されたランダムファイルの新しいストレージインスタンスを返します。
+
+ランダムな名前で拡張子 `TXT` のファイルを生成する方法を見てみましょう:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const folder = _storage.filesystem("server", "temp")
+                const file = folder.newRandomFile("txt")
+                file.output().printAndClose("ここにテキストを書きます...")
+            `
+        },
+    ]}
+/>
+
+## まとめ
+
+Netuno のポリグロット低コードフレームワークを使用すると、フォルダとファイルの主要な操作をすべて直接実行できます。
+
+ファイルとフォルダを操作するための専用リソースを使用する場合:
+
+- `_app` - アプリケーション
+- `_storage` - アプリケーションのストレージ
+- `_os` - オペレーティングシステム
+
+> ベストプラクティスと整理の観点から、**ストレージ** の使用を優先する必要があります。例外は、限定的で厳密に必要な場合にのみとすべきです。
+
+Netuno はサービスの処理終了時に input と output の自動クローズを処理しますが、ベストプラクティスとして常に明示的に閉じるようにしてください。

@@ -1,0 +1,173 @@
+---
+id: debug
+title: 디버깅 (Debug)
+sidebar_label: 디버그
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+코드 실행을 실시간으로 분석할 수 있습니다.
+
+## 소개
+
+코딩을 하다 보면 코드 실행을 분석해야 하는 경우가 자주 있습니다.
+
+Netuno에서는 다음을 사용할 수 있습니다:
+
+- `_out.print` - 데이터 출력(_output_)에 어떤 정보를 표시합니다.
+- `_log.info` - Netuno 서버 터미널에 어떤 정보를 표시합니다.
+
+하지만 더 복잡한 시나리오에서 더 깊이 분석하고 싶을 때가 있습니다. 예를 들어 여러 객체와 변수의 값을 동시에 확인하거나, 특정 코드 실행을 이 컨텍스트에서 테스트하여 동작을 더 잘 이해하려는 경우입니다.
+
+이런 더 복잡한 경우에도 위에서 보여 준 `_out.print`와 `_log.info` 같은 메서드를 항상 사용할 수 있지만, 무슨 일이 일어나고 있는지 잘 이해하기까지 매우 번거롭고 혼란스러운 과정을 거칠 수 있습니다.
+
+디버깅(_debug_)은 바로 이런 일, 특히 더 복잡한 상황에서 무슨 일이 일어나고 있는지 잘 이해할 수 있도록 도와줍니다.
+
+> 디버깅(영어: _debugging_, _debug_)은 개발 과정에서 결함, 오류, 잘못된 동작 등을 찾아 줄이는 데 사용되는 과정입니다.
+
+디버깅은 3가지 중요한 메커니즘으로 나눌 수 있습니다:
+
+- 중단점(_Break Point_): 코드 실행을 멈추게 하여 코드가 멈춰 있는 위치에서 조사를 시작할 수 있습니다.
+- 관찰(_Watch_): 코드가 멈춰 있는 위치에서 변수 값을 관찰할 수 있습니다.
+- 코드 실행(_Code Execution_): 디버깅을 위해 실행이 멈춰 있는 지점에서 임시로 cualquier 코드를 실행하여 테스트할 수 있습니다.
+
+## 중단점 (_Breakpoint_)
+
+중단점(_breakpoint_)은 디버깅 과정을 시작하기 위해 코드 실행을 일시 중지해야 하는 위치입니다.
+
+Netuno가 지원하는 모든 언어(JavaScript, Python, Ruby, Kotlin, Groovy 등)의 코드에서 디버깅을 시작하려면, 디버깅을 시작할 위치에 다음 코드를 넣으십시오:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _exec.debug()
+            `
+        },
+    ]}
+/>
+
+> Netuno는 폴리글랏이므로 JavaScript, Python, Kotlin, Ruby, Groovy 등 지원되는 모든 언어에서 작동합니다.
+
+이제 디버깅을 시작하려면 코드를 실행하면 실행이 멈추고 일시 중지됩니다.
+
+그런 다음 개발 인터페이스, 즉 백오피스의 `빌드`로 이동하면 왼쪽 메뉴에 다음 옵션이 있습니다:
+
+- **디버그**
+
+여기에서 초록색 이중 화살표를 찾을 수 있으며, 이를 클릭하면 실행이 계속될 수 있음을 나타냅니다:
+
+![디버그 - 계속 진행](/docs/assets/academy/server/debug/step-over-pt.jpg "디버그 - 계속 진행")
+
+> 초록색 이중 화살표는 디버깅 일시 중지를 해제하여 코드 실행이 멈춘 지점부터 정상적으로 계속되도록 합니다.
+
+## 관찰 (_Watch_)
+
+변수 값을 보려면 노란색 돋보기를 사용합니다.
+
+노란색 돋보기를 클릭하면 값을 관찰하려는 변수의 이름을 입력할 수 있습니다.
+
+![디버그 - 관찰](/docs/assets/academy/server/debug/watch-pt.jpg "디버그 - 관찰")
+
+변수 이름과 현재 값이 목록에 나타나며, 여러 변수의 값을 관찰할 수 있습니다. 변수가 존재하지 않으면 값이 표시되지 않습니다.
+
+## 코드 실행 (_Execute Code_)
+
+중단점의 컨텍스트, 즉 디버깅이 진행 중인 위치에서 실행할 코드를 주입할 수 있습니다.
+
+파란색 코드 기호를 클릭하고 실행하려는 코드를 입력할 수 있습니다.
+
+![디버그 - 코드 실행](/docs/assets/academy/server/debug/execute-code-pt.jpg "디버그 - 코드 실행")
+
+실행된 코드는 아래 목록에 표시되며 코드가 성공적으로 실행되었음을 나타냅니다. 오류가 있으면 코드와 함께 오류 메시지가 표시됩니다.
+
+## 원격 디버깅 설정
+
+Netuno를 로컬에서 실행할 때는 일반적으로 구성이 필요하지 않습니다.
+
+로컬 개발에서는 WebSocket 주소의 `host`가 자동으로 구성되기 때문입니다.
+
+로컬 주소에서는 일반적으로 다음 값을 `host`로 사용합니다:
+
+- `localhost`
+- `127.0.0.1`
+- `192.168.1.*` - 로컬 네트워크 IP의 예입니다.
+- `my-app.local.netu.no`
+
+> 로컬 주소는 구성이 필요하지 않으므로 이 단계를 건너뛸 수 있습니다.
+
+반면 프로덕션 또는 컨테이너나 VPN과 같은 원격 개발 환경에서는 WebSocket 연결에 사용되는 외부 주소(IP 또는 도메인)를 정의해야 할 수 있습니다.
+
+이 경우 개발 중인 애플리케이션 내에서 환경 구성 파일로 이동하십시오. 이 예에서는 다음 위치에 있는 개발 환경 파일을 사용합니다:
+
+- 📂 `config/_development.json`
+
+구성이 이미 존재하지 않는지 확인하고, 존재하지 않으면 구성 파일(JSON 형식) 끝에 WebSocket 연결에 사용할 외부 주소 구성 매개변수를 추가하십시오. 예:
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": "dev.netuno.org"
+        }
+    },
+    ...
+}
+```
+
+> 포트 정보는 WebSocket의 `host` 주소에 추가해서는 안 됩니다.
+
+여러 `host` 주소를 배열로 전달할 수도 있습니다:
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": [ "my-container.dev.netuno.org", "my-project.com" ]
+        }
+    },
+    ...
+}
+```
+
+### 프로덕션 프록시 (NGINX)
+
+프로덕션에서는 NGINX와 같은 리버스 프록시를 수행하는 웹 서버를 사용하는 것이 일반적입니다.
+
+프록시를 통해 디버깅이 작동하려면 WebSocket 주소와 관련된 트래픽을 전달하기 위한 특정 구성을 추가해야 합니다:
+
+```
+server {
+    listen 443 ssl;
+    server_name my-project.com;
+    
+    ...
+    
+    location /dev/ws/ {
+        proxy_pass http://127.0.0.1:9000;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        add_header X-Frame-Options "";
+    }
+}
+```
+
+## 결론
+
+디버깅 인터페이스와 `_exec.debug()` 명령을 사용하면 현재 일어나고 있는 일에 대해 깊이 조사할 수 있습니다.
+
+대부분의 언어와 백엔드 기술, 특히 스크립트 기술에서는 디버그가 불가능하거나 복잡한 경우가 많습니다.
+
+Netuno는 JavaScript, Python, Ruby, Kotlin, Groovy와 같이 지원되는 다양한 언어에서 작동하는 폴리글랏 코드를 디버그하는 간단한 방법을 제공합니다.
+
+> 원격 환경과 프로덕션 환경에서도 폴리글랏 디버깅을 가능하게 합니다.
+
+디버깅을 사용하면 문제를 해결하는 정확도를 높여 개발 속도를 크게 향상시키므로 필수 도구가 됩니다. 직접 사용해 보십시오.

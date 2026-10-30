@@ -6,35 +6,35 @@ sidebar_label: PostgreSQL
 
 ## Introduction
 
-<a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> is a powerful, open source object-relational database system that has earned it a strong reputation for reliability, feature robustness, and performance.
+<a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> is one of the most widely used open source object-relational databases.
 
 ## Installation
 
-How to Installed PostgreSQL.
+Information on how to install PostgreSQL.
 
-#### With Ubuntu
+#### Ubuntu
 
-Run into the Terminal 👇:
+Run in the terminal:
 
 ```shell
 sudo apt install postgresql
 ```
 
-#### With Windows
+#### Windows
 
-Installing Database Server:
+Install the database server:
 
-- <a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads" target="_blank">Download PostgreSQL Database </a>.
+- <a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads" target="_blank">PostgreSQL Database Download</a>.
 
-Client PostgreSQL Installation <a href="https://www.pgadmin.org/" target="_blank">pgAdmin</a>.
+Install the PostgreSQL client <a href="https://www.pgadmin.org/" target="_blank">pgAdmin</a>.
 
 ## Client
 
-To run management commands lines into the database server, you will need to connect to PostgreSQL.
+Connect to PostgreSQL to run management commands on the database server.
 
 #### Ubuntu
 
-Run into the terminal the below command line:
+Run in the terminal:
 
 ```shell
 sudo -u postgres psql
@@ -42,33 +42,33 @@ sudo -u postgres psql
 
 #### Windows
 
-Use and Install <a href="https://www.pgadmin.org/" target="_blank">pgAdmin</a>.
+Install and use <a href="https://www.pgadmin.org/" target="_blank">pgAdmin</a>.
 
-## Create an User
+## Create User
 
-Run the following command line that is conneted to the Client PostgreSQL:
+Run the following command connected to the PostgreSQL client:
 
 ```sql
 create user app_user with password 'S3cR3t';
 ```
 
-## Building a Database
+## Create the Database
 
-For this step the user will need to run the below command line that is conneted to the client PostgreSQL:
+Run the following command connected to the PostgreSQL client:
 
 ```sql
 create database app_db with owner app_user;
 ```
 
-> To Exit use the command line: `\q`
+> To exit, use the command: `\q`
 
-## Database Set up
+## Configure the Database
 
-Using the client app PostgreSQL, you can also connect yourself to the new database that you built.
+Connect to the newly created database using the PostgreSQL client application.
 
 #### Ubuntu
 
-Run the below line command into the terminal:
+Run the following command in the terminal:
 
 ```shell
 sudo -u postgres psql app_db
@@ -76,23 +76,23 @@ sudo -u postgres psql app_db
 
 #### Windows
 
-Use and Install <a href="https://www.pgadmin.org/" target="_blank">pgAdmin</a>.
+Install and use <a href="https://www.pgadmin.org/" target="_blank">pgAdmin</a>.
 
-### UUID Extension and Installation
+### Install the UUID extension
 
-Is required to install into PostgreSQL an extension to generate UUID.
+The extension to generate UUIDs must be installed in PostgreSQL.
 
 ```sql
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 ```
 
-## Application Set up
+## Configure the Application
 
-You must edit the configuration file of the application according to the environment:
+Edit the application's configuration file according to the environment:
 
 - `config/_development.json`
 
-PostgreSQL example and Configuration:
+Example of the configuration for PostgreSQL:
 
 ```javascript
 {
@@ -111,7 +111,7 @@ PostgreSQL example and Configuration:
 }
 ```
 
-Also can be used advanced setups as you can see below 👇:
+Advanced configurations can be used, such as:
 
 ```javascript
 {

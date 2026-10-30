@@ -1,0 +1,662 @@
+---
+sidebar_position: 3
+id: app-create
+title: Anwendung erstellen
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Dieser Leitfaden bietet einen Überblick über die Erstkonfiguration und behandelt Frontend, Datenbank und API-Dienst.
+Wir erstellen schnell und praxisnah eine neue Fullstack-Anwendung.
+
+## Einführung
+
+Obwohl die Plattform polyglot ist und mehrere Programmiersprachen unterstützt, konzentrieren wir uns in diesem Tutorial ausschließlich auf die Verwendung von JavaScript. Daher erstellen wir eine praktische Anwendung, die aus einem in einem modalen Fenster (Pop-up) angezeigten Formular mit der Funktion zum Export von Daten nach PDF besteht.
+
+#### Voraussetzungen
+
+Bevor Sie beginnen, stellen Sie sicher, dass Sie Folgendes haben:
+
+- Die Netuno-Plattform ist bereits auf Ihrem Rechner installiert. Bei Fragen zu diesem Schritt lesen Sie den Leitfaden [Installation der Plattform](/docs/get-started/installation).
+
+- Zugriff auf das Terminal oder die Eingabeaufforderung der Entwicklungsumgebung.
+
+## Eine neue Anwendung erstellen
+
+Befolgen Sie die folgenden Anweisungen, um Ihre neue Anwendung zu initialisieren:
+
+Öffnen Sie das Terminal und navigieren Sie zum Stammordner, in dem Netuno installiert wurde.
+
+Führen Sie den Befehl zum Erstellen der Anwendung aus:
+
+```shell
+./netuno app
+```
+
+### Erstellung mit Parameter
+
+Sie können den Namen der Anwendung direkt bei der Ausführung des Befehls festlegen, zum Beispiel:
+
+```shell
+./netuno app name=meine_anwendung
+```
+
+:::info Best Practices für die Benennung
+Vermeiden Sie bei der Definition des Namens Ihrer Anwendung Leerzeichen, Akzente oder Sonderzeichen. Bevorzugen Sie Kleinbuchstaben, getrennt durch Bindestriche oder Unterstriche (Beispiel: **app-verkauf** oder **personal_verwaltung**), um die Kompatibilität mit URLs und Systemordnern zu gewährleisten.
+:::
+
+## Erstkonfiguration
+
+Der Befehlszeilenassistent stellt einige Fragen zur Konfiguration Ihres Projekts. Geben Sie an:
+
+- **Name der Anwendung**: Die Kennung Ihres Projekts.
+- **Datenbanktyp**: Das Datenbankverwaltungssystem, das verwendet wird.
+- **Sprache**: Die Standardsprache der Oberfläche Ihrer Anwendung.
+
+:::tip Tipps und Best Practices
+
+**Empfehlung für Datenbanken für Einsteiger**
+
+Während des Assistenten wird nach dem Datenbanktyp gefragt; wir empfehlen die Option **H2 Database**.
+
+H2 Database ist eine eingebettete Datenbank, die bereits in den Netuno-Server integriert ist. Der große Vorteil ist, dass keine Installation oder Konfiguration externer Server (wie PostgreSQL oder MySQL) erforderlich ist, was die ersten Entwicklungen und Tests deutlich praktischer und schneller macht.
+:::
+
+### Befehl zum Starten des Servers
+
+Nachdem Sie Ihre neue Anwendung erstellt haben, starten Sie den Server der Netuno-Plattform. Dadurch wird Ihr Projekt im Browser erreichbar und für die kontinuierliche Entwicklung bereit.
+
+Führen Sie den folgenden Befehl in Ihrem Terminal aus und warten Sie auf die Initialisierung.
+
+```shell
+./netuno server app=meine_anwendung
+```
+
+Durch Übergabe des Parameters **app=meine_anwendung** erkennt der Server, dass dies die Standardanwendung ist, die in dieser Instanz ausgeführt wird. Sobald der Server läuft, können Sie bereits mit der Bearbeitung Ihres Projekts beginnen.
+
+Alle Dateien und Quellcodes Ihrer Anwendung werden im Ordner `📂 apps/meineapp` gespeichert und organisiert.
+
+:::info Zugangsdaten (Backoffice)
+Wenn Sie zum ersten Mal auf die Verwaltungsoberfläche **Backoffice** Ihrer Anwendung zugreifen, fordert das System eine Authentifizierung an. Verwenden Sie für lokale Entwicklungsumgebungen die folgenden Standard-Zugangsdaten:
+
+**Benutzer:** dev
+
+**Passwort:** dev
+
+*Wir empfehlen, diese Zugangsdaten zu ändern, bevor Sie Ihre Anwendung in eine Produktionsumgebung verschieben.*
+:::
+
+
+### Code-Editor
+
+Für die beste Entwicklungserfahrung empfehlen wir moderne, leichtgewichtige Code-Editoren mit einem guten Erweiterungs-Ökosystem.
+
+Falls Sie noch keinen bevorzugten Editor haben, empfehlen wir folgende kostenlose und von der Community weit verbreitete Optionen:
+
+- VS Codium: <a href="https://vscodium.com/" target="_blank">vscodium.com</a>
+- VS Code: <a href="https://vscodium.com/" target="_blank">code.visualstudio.com</a>
+- WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">jetbrains.com/webstorm</a>
+
+> Hinweis: Wenn Sie robustere Werkzeuge bevorzugen und bereit sind, in Lizenzen zu investieren, ist WebStorm von JetBrains eine hervorragende Premium-Option.
+
+Öffnen Sie den Anwendungsordner in Ihrem Editor:
+
+- `📂 apps/meine_anwendung`
+
+Alle Dateien der Anwendung werden in diesem Ordner gespeichert und organisiert. Die gesamte Entwicklung, das Erstellen von Routen, Datenbanklogiken und visuellen Oberflächen findet in diesem Ordner statt.
+
+:::info Architektur verstehen
+Um genau zu wissen, wo Sie welchen Dateityp erstellen und wie Netuno Backend und Frontend organisiert, empfehlen wir die detaillierte Dokumentation zur Ordnerstruktur der Anwendung:
+
+**Siehe Leitfaden: [Anwendungsordner](/docs/category/app-structure)**
+:::
+
+### Zusammenfassung der Schritte
+
+Mit den gefestigten Grundkenntnissen von Netuno wenden wir diese Konzepte in der Praxis an und erstellen eine vollständige Funktionalität von Anfang bis Ende.
+
+Das praktische Ziel ist es, zwei neue interaktive Komponenten zur Oberfläche hinzuzufügen:
+
+* Ein Button, der das Kundenformular in einem schwebenden Fenster (Modal) lädt und anzeigt.
+* Ein Button, der die Liste der registrierten Kunden generiert und als PDF-Datei exportiert.
+
+Um dieses Ergebnis organisiert und klar zu erreichen, haben wir die Entwicklung in eine logische Abfolge von Schritten unterteilt. Wir folgen diesem Fahrplan:
+
+- **Oberflächenzuordnung**: Analysieren der Ordnerstruktur der Anwendung, um zu ermitteln, wo das Haupt-HTML des Dashboards definiert ist.
+
+- **React-Integration**: Konfigurieren und Hinzufügen der Basis der beiden neuen Buttons mit dem React-Framework im Frontend.
+
+- **Modal-Logik**: Erstellen und Programmieren des Verhaltens des Buttons, damit das Kundenformular korrekt geöffnet wird.
+
+- **Export-Oberfläche**: Erstellen und Positionieren des Buttons, der den Download der PDF-Datei in der Oberfläche auslöst.
+
+- **Entwicklung des Dienstes (API)**: Programmieren des Backends und Erstellen des Dienstes, der die Daten liest und die PDF-Datei mit der Kundenliste dynamisch generiert.
+
+Legen wir los!
+
+## Dashboard-Template
+
+Navigieren Sie zum Ordner `server/templates` und öffnen Sie die Datei, die das HTML der Dashboard-Ansicht bereitstellt.
+
+```plaintext
+server/templates/dashboard.html
+```
+
+Wenn Sie den Code der Datei dashboard.html durchsuchen, scrollen Sie bis zum Ende der Seite. Sie finden ein einzelnes `<div>`-Element. Genau an dieser Stelle „injiziert“ die Netuno-Plattform und startet die gesamte interaktive, mit React erstellte Oberfläche.
+
+```html title="server/templates/dashboard.html"
+...
+<div id="app-dashboard"></div>
+```
+
+Obwohl das HTML-Gerüst im Ordner server/templates liegt, finden die eigentliche Entwicklung der Oberfläche und die visuelle Logik nicht dort statt.
+
+Um das Verhalten des Dashboards zu ändern oder neue Komponenten mit React hinzuzufügen, müssen Sie den für die Frontend-Entwicklung vorgesehenen Ordner aufrufen.
+
+In diesem Ordner `📂 ui/` finden Sie die Dashboard-Komponenten und können die neuen visuellen Funktionen Ihrer Anwendung entwickeln.
+
+
+## Formular erstellen
+
+In diesem Schritt erstellen wir die für dieses Tutorial erforderliche Datenbankstruktur: ein Formular namens **Kunde** mit einem Textfeld namens **Name**.
+
+* Greifen Sie im Backoffice über den Button **Erstellen** (oben rechts) auf den Entwicklungsbereich zu.
+* Navigieren Sie im Seitenmenü zu **Verwaltung > Formulare** und erstellen Sie das neue Formular mit dem **Titel:** Kunde.
+* Klicken Sie auf **Speichern**.
+
+Der Tabellenname wird automatisch mit **kunde** befüllt (in Kleinbuchstaben belassen, wie für Datenbanken empfohlen).
+
+:::info Siehe Leitfaden
+Bei Fragen zu den erweiterten Einstellungen dieser Ansicht lesen Sie die vollständige Dokumentation unter **[Formulare](/docs/academy/ui/forms)**.
+:::
+
+## Feld erstellen
+Nachdem das Formular erstellt wurde, erscheint es im linken Seitenmenü in der Kategorie **Felder**.
+
+* Klicken Sie auf **Kunde**, um eine neue Spalte hinzuzufügen:
+* Geben Sie den Text **"Name"** im Feldtitel ein.
+* Wählen Sie den Datentyp **"text"** im Feld **Typ**.
+* Aktivieren Sie die Optionen **Filtern erlauben** (um die Suche zu ermöglichen) und **Im Ergebnis anzeigen** (um in der Tabelle zu erscheinen).
+* Klicken Sie auf **Speichern**.
+
+
+:::info Siehe Leitfaden
+Um alle verfügbaren Datentypen und ihre Eigenschaften zu verstehen, lesen Sie die detaillierte Dokumentation unter **[Felder](/docs/academy/ui/fields)**.
+:::
+
+#### Testdaten einfügen
+Damit wir in den nächsten Schritten den PDF-Export testen können, benötigen wir echte Daten im System.
+
+* Klicken Sie auf den Button **Anzeigen** (oben rechts), um zum Backoffice für die Nutzung der Anwendung zurückzukehren.
+* Rufen Sie das neu erstellte Menü **Kunde** in der Seitenleiste auf.
+* Verwenden Sie den Button **+ Hinzufügen**, um einige Testkunden im System zu registrieren.
+* Klicken Sie auf **Speichern**.
+
+
+## Datenbank abfragen
+
+Netuno bietet ein integriertes Werkzeug, mit dem Sie SQL-Befehle direkt in der Datenbank Ihrer Anwendung ausführen können. Es ist unerlässlich für schnelle Abfragen, die Validierung von Informationen oder die zügige Manipulation von Systemdaten.
+
+Um auf die Abfrageoberfläche zuzugreifen und Ihre Befehle auszuführen, befolgen Sie die folgenden Schritte:
+
+* Greifen Sie in der Hauptoberfläche über den Button **Erstellen** auf den Entwicklungsbereich zu.
+* Suchen Sie im seitlichen Navigationsmenü den Bereich **Verwaltung**.
+* Klicken Sie auf die Option **Abfrage**, um die Datenbankkonsole zu öffnen.
+* Geben Sie im Texteditor, der auf dem Bildschirm erscheint, den SQL-Befehl ein, den Sie ausführen möchten.
+* Bestätigen Sie die Ausführung des Befehls.
+
+Führen Sie den folgenden Befehl aus, um die registrierten Kunden abzufragen:
+
+```sql
+SELECT * FROM kunde
+```
+
+Wenn Sie die Abfragen beendet haben und zur Benutzeroberfläche des Systems (Backoffice) zurückkehren möchten, klicken Sie einfach auf den Button **Anzeigen**.
+
+## Buttons mit React hinzufügen
+
+In diesem Schritt konfigurieren wir die Hauptdatei des **Dashboard**-Panels, um zwei neue Buttons anzuzeigen.
+
+In der Oberflächenarchitektur verwenden wir das Konzept der **Container**, um übergreifende Bereiche des Systems zu definieren, die größere Funktionalitäten umfassen und mehrere kleinere Komponenten gruppieren.
+
+- Navigieren Sie in Ihrem Code-Editor zum Container-Ordner unter `📂 ui/src/containers`.
+
+- Suchen Sie die Hauptdatei des Dashboards und öffnen Sie sie: `📂 DashboardContainer/index.jsx`.
+
+- Fügen Sie den Code zum Importieren und Rendern der Komponenten gemäß dem folgenden Beispiel ein.
+
+```javascript title="ui/src/containers/DashboardContainer/index.jsx"
+import { Space } from 'antd';
+
+import KundeModalButton from '../../components/KundeModalButton';
+import PDFButton from '../../components/PDFButton';
+
+import "./index.less";
+
+function DashboardContainer() {
+    return (
+        <div className="mein-dashboard">
+            <Space>
+                <KundeModalButton />
+                <PDFButton />
+            </Space>
+        </div>
+    );
+}
+
+export default DashboardContainer;
+```
+
+Beachten Sie, dass diese Button-Dateien in Ihrem Projekt noch nicht physisch existieren. Da es sich um kleinere und wiederverwendbare Komponenten handelt, erstellen wir sie im Ordner für dedizierte Komponenten.
+
+:::tip Architekturorganisation
+Achten Sie stets auf die Trennung zwischen **Containern** (Bereiche mit großem Umfang, wie ganze Seiten oder Dashboards) und **Komponenten** (isolierte Oberflächenelemente wie Buttons und Modals). Dadurch wird Ihr Code in Netuno deutlich sauberer, wartbarer und skalierbarer.
+:::
+
+### Button für Formular
+
+Rufen Sie den Ordner `ui/src/components/` auf und erstellen Sie einen neuen Ordner namens `KundeModalButton`.
+
+Erstellen Sie im Ordner **KundeModalButton** die Hauptdatei der Komponente mit dem Namen `index.jsx`.
+
+`📂 ui/src/components/KundeModalButton/index.jsx`
+
+Öffnen Sie die Datei und fügen Sie den folgenden Code ein:
+
+```javascript title="ui/src/components/KundeModalButton/index.jsx"
+import { Button } from 'antd';
+
+function KundeModalButton() {
+    const onClick = () => {
+        netuno.modal.create({
+            name: 'kunde',
+            callback: function (modal) {
+                let form = modal.find('[netuno-form]');
+
+                form.on('netuno:new', () => {
+                    console.log('Ein neuer Kunde wird erstellt.');
+                });
+
+                form.on('netuno:save', () => {
+                    netuno.modal.hide(modal)
+                    console.log('Ein Kunde wurde gespeichert.');
+                });
+
+                form.on('netuno:delete', () => {
+                    netuno.modal.hide(modal)
+                    console.log('Ein Kunde wurde entfernt.');
+                });
+
+                form.on('netuno:back', () => {
+                    console.log('Auf Zurück geklickt');
+                });
+
+                netuno.loadForm(form);
+                netuno.modal.show(modal);
+            }
+        });
+    };
+    return (
+        <div>
+            <Button type="primary" onClick={ onClick }>
+                Kundenformular öffnen
+            </Button>
+        </div>
+    );
+}
+
+export default KundeModalButton;
+```
+
+#### Den Code verstehen
+Die Magie dieser Komponente geschieht innerhalb der Funktion onClick, die die globalen Oberflächenwerkzeuge von Netuno verwendet:
+
+- **netuno.modal.create()**: Diese Methode instanziiert das modale Fenster auf dem Bildschirm und verknüpft das gewünschte Formular damit (in diesem Fall das Formular namens kunde).
+
+- **Formularereignisse (form.on)**: Der callback-Block ermöglicht es uns, die Aktionen des Benutzers zu „lauschen“ (listen). Wir können benutzerdefinierte Aktionen auslösen, wenn der Benutzer einen Datensatz erstellt (netuno:new), speichert (netuno:save), löscht (netuno:delete) oder auf Zurück klickt (netuno:back).
+
+- **netuno.modal.hide() / show()**: Methoden zum Ausblenden des Modals nach einer erfolgreichen Aktion oder zum Anzeigen, sobald das Formular geladen wurde.
+
+:::info Integration abgeschlossen
+Nachdem die Komponente **KundeModalButton** erfolgreich erstellt wurde, funktioniert der zuvor in Ihrem **DashboardContainer** vorgenommene Import ohne Fehler, und der Button sollte bereits auf Ihrem Bildschirm gerendert werden!
+:::
+
+### Button zum PDF-Export
+
+In diesem Schritt erstellen wir den zweiten Button des Dashboards: den Button zum PDF-Export.
+
+Die Hauptfunktion dieser Komponente in der Oberfläche besteht darin, als Auslöser zu fungieren: Beim Klicken stellt sie eine Anfrage an einen Backend-Dienst, der die Systemdaten verarbeitet und die PDF-Datei mit der Liste der registrierten Kunden generiert.
+
+- Rufen Sie den Ordner `ui/src/components/` auf und erstellen Sie einen neuen Ordner namens **PDFButton**.
+
+- Erstellen Sie darin eine Datei namens **index.jsx**.
+
+`ui/src/components/PDFButton/index.jsx`
+
+Öffnen Sie die Datei und fügen Sie den folgenden Code ein:
+
+```javascript title="ui/src/components/PDFButton/index.jsx"
+import { Button } from 'antd';
+
+function PDFButton() {
+    return (
+        <div>
+            <Button
+                type="primary"
+                href="/services/kunde/exportiere-pdf"
+                target="blank">
+                PDF exportieren
+            </Button>
+        </div>
+    );
+}
+
+export default PDFButton;
+```
+
+Mit der Erstellung der Komponente PDFButton sind beide in Ihrem DashboardContainer deklarierten Buttons fertig.
+
+:::tip Nächste Schritte
+Die visuelle Struktur und die Komponenten sind abgeschlossen. Kompilieren Sie das Frontend, um das Rendern der Oberfläche zu testen.
+
+Der Aufbau des Backend-Dienstes, der tatsächlich das PDF generiert, wird im nächsten Schritt behandelt.
+:::
+
+## Frontend kompilieren
+
+Internetbrowser verstehen von Natur aus keinen in React geschriebenen Code, keine `.jsx`- oder `.tsx`-Dateien und keine CSS-Präprozessoren wie `.less`. Damit Ihre Oberfläche korrekt funktioniert, ist ein Kompilierungsprozess (Build) erforderlich. Dieser Prozess übersetzt, bündelt und optimiert Ihren gesamten Code zu finalen statischen Dateien (Standard-JavaScript und -CSS), die der Browser mit maximaler Effizienz verarbeiten kann.
+
+#### Voraussetzungen
+
+Bevor Sie mit der Kompilierung beginnen, stellen Sie sicher, dass:
+
+- das Terminal oder die Eingabeaufforderung in Ihrer Entwicklungsumgebung geöffnet ist.
+
+- der Paketmanager `Bun` korrekt auf Ihrem System installiert ist.
+
+## Kompilierungsbeispiele
+
+Netuno stellt je nach Entwicklungsphase unterschiedliche Befehle bereit. Navigieren Sie vom Netuno-Stammordner zum Ordner `ui` Ihrer Anwendung.
+
+Führen Sie die Befehle im Oberflächenordner Ihrer Anwendung aus: `📂 apps/meineapp/ui`
+
+### Produktionskompilierung
+
+Führt die vollständige und optimierte Kompilierung der Dateien durch. Dieser Befehl ist ideal, wenn Sie die Entwicklung einer Ansicht oder Komponente abgeschlossen haben und leichte finale Dateien mit besserer Performance erzeugen möchten.
+
+```bash
+bun run build
+```
+
+### Entwicklungskompilierung
+
+Der Befehl **watch** führt eine schnelle Kompilierung durch und überwacht den Ordner. Immer wenn Sie eine Datei in Ihrem Editor speichern, führt das Terminal die Kompilierung automatisch aus.
+
+```bash
+bun run watch
+```
+Unabhängig davon, ob Sie den Befehl **build** oder **watch** verwenden, erscheinen die Änderungen nicht sofort auf dem Bildschirm des Benutzers. Aktualisieren Sie die Backoffice-Seite in Ihrem Browser, um die neu generierten Dateien zu laden.
+
+:::tip Fehlerüberwachung und Debugging
+Während der Entwicklung können Fehler in zwei verschiedenen Phasen auftreten. Achten Sie darauf, wo Sie danach suchen:
+
+- **Kompilierungsfehler**: Syntaxfehler im React-Code oder nicht deklarierte Variablen werden direkt in Ihrem Terminal angezeigt, in dem der Befehl **bun** ausgeführt wird.
+
+- **Laufzeitfehler**: Fehler, die während der Nutzung der Anwendung auftreten, werden in der Browserkonsole angezeigt. Denken Sie immer daran, die Seite zu prüfen, um festzustellen, ob es Warnungen oder Fehler gibt.
+:::
+
+### Integrierte Kompilierung
+
+Die integrierte Kompilierung ermöglicht es, Terminalbefehle automatisch zusammen mit dem Start des Servers auszuführen. Dies optimiert den Arbeitsablauf, indem alle Logs und Überwachungen in einem einzigen zentralen Terminal zusammengefasst werden.
+
+Um die integrierte Kompilierung zu aktivieren, müssen Sie die Entwicklungseinstellungen Ihrer Anwendung ändern:
+
+- Rufen Sie den Stammordner Ihrer Anwendung auf.
+
+- Öffnen Sie die Entwicklungskonfigurationsdatei: `_development.json`.
+
+- Suchen Sie den Codeblock für „**commands**“.
+
+- Ändern Sie den Wert der Eigenschaft „enabled“ von **false** auf **true**.
+
+- Speichern Sie die Datei.
+
+Ihre Datei `_development.json` sollte eine Struktur ähnlich der folgenden haben:
+
+```json title="config/_development.json"
+  ...
+  "commands": [{
+    "command": "bun run watch",
+    "enabled": true,
+    "install": "bun install",
+    "path": "ui"
+  }],
+  ...
+```
+
+Damit Netuno die aktualisierte Datei liest und die neue Konfiguration anwendet, muss der Server neu gestartet werden:
+
+- Gehen Sie zum Terminal, in dem der Netuno-Server ausgeführt wird.
+
+- Beenden Sie den Prozess, indem Sie gleichzeitig die Tasten STRG + C drücken.
+
+- Starten Sie den Server erneut und geben Sie den Namen Ihrer Anwendung an:
+
+```shell
+./netuno server app=meineapp
+```
+
+:::tip Ein einziges Terminal
+Beobachten Sie nach dem Neustart des Servers die Logs im Terminal. Ihnen wird auffallen, dass Netuno nun automatisch die Frontend-Kompilierungsbefehle **bun run watch** im Hintergrund ausführt. Ab jetzt funktioniert alles integriert im selben Fenster.
+:::
+
+## API-Dienst zum Generieren von PDF
+
+Im vorherigen Schritt haben wir den Button **PDF exportieren** im Frontend mit dem Attribut „**href**“ konfiguriert, das auf die Adresse `services/kunde/exportiere-pdf` verweist. Wenn Sie jedoch jetzt darauf klicken, wird nichts passieren. Das liegt daran, dass der API-Dienst, der die Datei generiert, noch nicht existiert.
+
+Die gesamte API-Entwicklung findet im Ordner `📂 server` statt.
+In diesem Abschnitt erstellen wir das Skript, das die Datensätze aus der Datenbank abruft und das PDF-Dokument visuell aufbaut.
+
+#### Voraussetzungen
+
+- Die Komponente PDFButton im Frontend erstellt haben, die auf die korrekte URL verweist.
+- Der Netuno-Server ausgeführt wird.
+
+
+Netuno leitet die URLs Ihrer API automatisch basierend auf der Ordnerstruktur innerhalb von **server/services/** weiter. Um den Dienst zu erstellen, befolgen Sie die Schritte:
+
+- Navigieren Sie zum Dienstordner des Backends: `server/services/`. Erstellen Sie einen Ordner namens **kunde**.
+
+- Erstellen Sie in diesem Ordner eine Datei namens `exportiere-pdf.js`.
+
+> Netuno ist polyglot. Wir verwenden in diesem Beispiel JavaScript; verwenden Sie die Erweiterung, die Ihrer bevorzugten Sprache entspricht.
+
+Öffnen Sie die Datei und fügen Sie den folgenden Code ein, um die Struktur Ihres PDFs zu generieren:
+
+<PolyglotPath files={[
+    'server/services/kunde/exportiere-pdf'
+]} />
+
+<PolyglotCode
+    file="server/services/kunde/exportiere-pdf"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("pdf")
+
+                const pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Kundenliste:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                const dbKunden = _db.form("kunde").all()
+
+                for (const dbKunde of dbKunden) {
+                    pdfDocument.add(
+                        _pdf.paragraph(dbKunde.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Kundenliste:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                dbKunden = _db.form("kunde").all()
+
+                for dbKunde in dbKunden:
+                    pdfDocument.add(
+                        _pdf.paragraph(dbKunde.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _header.contentType("pdf")
+
+                pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Kundenliste:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                dbKunden = _db.form("kunde").all()
+
+                dbKunden.each do |dbKunde|
+                    pdfDocument.add(
+                        _pdf.paragraph(dbKunde.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                end
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _header.contentType("pdf")
+
+                val pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Kundenliste:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                val dbKunden = _db.form("kunde").all()
+
+                dbKunden.forEach {
+                    pdfDocument.add(
+                        _pdf.paragraph(it.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                pdfDocument.close()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _header.contentType("pdf")
+
+                def pdfDocument = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                pdfDocument.add(
+                    _pdf.paragraph("Kundenliste:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                def dbKunden = _db.form("kunde").all()
+
+                for (dbKunde in dbKunden) {
+                    pdfDocument.add(
+                        _pdf.paragraph(dbKunde.getString("name"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                pdfDocument.close()
+            `
+        },
+    ]}
+/>
+
+
+#### Den Code verstehen
+
+- **_header.contentType("pdf")**: Teilt dem Browser mit, dass die Antwort dieser Anfrage kein gewöhnlicher Text oder JSON ist, sondern eine PDF-Datei.
+
+- **_pdf**: Ist die native Netuno-Ressource zur Bearbeitung von PDFs. Damit definieren wir die Seitengröße (A5), erstellen Absätze und passen Schriftgrößen (setFontSize) sowie Farben (setFontColor) an.
+
+- **_db.form("kunde").all()**: Fragt die Datenbank ab und gibt alle im Formular „kunde“ gespeicherten Datensätze zurück. Die Wiederholungsschleife (for) durchläuft jeden dieser Kunden und extrahiert die Information des Feldes „name“, um sie im Dokument auszugeben.
+
+- **pdfDocument.close()**: Schließt den Aufbau des Dokuments ab und sendet es als Antwort.
+
+#### Validierung und Tests
+
+Es ist nicht erforderlich, jedes Mal auf den Dashboard-Button zu klicken, wenn Sie Ihren Dienst testen möchten. Da es sich um eine einfache Anfrage (GET) handelt, können Sie die Ausführung validieren, indem Sie die API-URL direkt im Browser aufrufen.
+
+Rufen Sie für dieses Beispiel die folgende Adresse auf:
+http://localhost:9000/services/kunde/exportiere-pdf
+
+Wenn die PDF-Datei generiert und auf dem Bildschirm mit der Kundenliste angezeigt wird, funktioniert der Dienst einwandfrei! Folglich funktioniert der Button PDF exportieren in Ihrem Dashboard automatisch.
+
+:::tip Fehlerverfolgung im Backend
+Wenn die Seite leer bleibt oder beim Aufrufen der URL eine Fehlermeldung zurückgibt, prüfen Sie sofort das Terminal, in dem der Netuno-Server läuft. Anders als im Frontend, dessen Fehler in der Browserkonsole erscheinen, werden Ausführungsfehler in den Skripten des Ordners server ausführlich im Terminal des Backend-Servers angezeigt.
+:::
+
+## Fazit
+
+In diesem Tutorial haben Sie eine praktische Fullstack-Entwicklungsreise mit Netuno durchlaufen.
+
+Das Hauptziel war zu zeigen, wie die Plattform die Erstellung visueller Oberflächen mit der Robustheit des Servers integriert und dabei stets auf hohe Produktivität ausgerichtet ist.
+
+Rückblick auf die abgeschlossenen Schritte:
+
+- **Frontend-Entwicklung**: Sie haben das Dashboard in React angepasst und Oberflächenkomponenten sowie interaktive Buttons modular erstellt.
+
+- **Datenverwaltung und -struktur**: Sie haben gesehen, wie schnell Formulare und Felder im Panel erstellt werden können, um Informationen zu erfassen und zu bearbeiten, ohne komplexe Persistenzroutinen schreiben zu müssen.
+
+- **Direkte Abfragen**: Sie haben die Abfragefunktion genutzt, um SQL-Befehle zügig auszuführen und die Datenbank zu testen.
+
+- **Erstellung von APIs im Backend**: Sie haben einen Dienst zur PDF-Generierung entwickelt und eine der großen Stärken von Netuno kennengelernt: Hot-Reload. Sie müssen den Server nicht bei jeder Änderung am Backend-Code neu starten, was die Programmierung erheblich beschleunigt.
+
+- **Optimierte Umgebung**: Sie haben die integrierte Kompilierung konfiguriert und die Frontend- und Backend-Prozesse in einem einzigen Terminal zusammengeführt, um den Fokus zu behalten und Ablenkungen zu vermeiden.
+
+Die Plattform wurde von Grund auf dafür konzipiert, die Softwareentwicklung zu optimieren und zu beschleunigen. Jetzt, da Sie den grundlegenden Integrationsablauf zwischen Low-Code und benutzerdefiniertem Code verstehen, sind Sie bereit, deutlich komplexere und skalierbarere Anwendungen zu erstellen.
+
+Erkunden Sie weiter die nächsten Abschnitte der Dokumentation, um neue Funktionen zu beherrschen.
+
+Die Entwicklung ist viel einfacher, wenn Sie Teil einer aktiven Community sind. Besuchen Sie die Links zu den sozialen Netzwerken im Footer dieser Seite.

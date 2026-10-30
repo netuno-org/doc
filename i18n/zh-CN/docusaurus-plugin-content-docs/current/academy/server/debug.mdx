@@ -1,0 +1,173 @@
+---
+id: debug
+title: 调试 (Debug)
+sidebar_label: 调试
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+允许实时分析代码的执行过程。
+
+## 简介
+
+在编写代码时,经常需要分析代码的执行情况。
+
+在 Netuno 中,我们可以使用:
+
+- `_out.print` - 用于在数据输出(_output_)中显示某些信息。
+- `_log.info` - 用于在 Netuno 服务器终端中显示某些信息。
+
+但在某些更复杂的场景中,例如我们需要更深入地进行调试,例如同时查看多个对象和变量的值、在此上下文中测试某段代码的执行,以便更好地理解其行为。
+
+在这些更复杂的情况下,始终可以使用上面提到的 `_out.print` 和 `_log.info` 方法,但这样过程可能会变得非常繁琐且混乱,难以获得对实际发生情况的清晰理解。
+
+调试(_debug_)正是为了在这种情况下提供对实际发生情况的良好理解,尤其是在较为复杂的情境中。
+
+> 调试(英文:_debugging_、_debug_)是在开发过程中用于查找并减少缺陷、故障、错误行为等的过程。
+
+调试可分为 3 个重要机制:
+
+- 断点(_Break Point_):使代码的执行暂停,然后我们可以从代码停止的位置开始调查。
+- 监视(_Watch_):用于观察代码停止处变量的值。
+- 执行代码(_Code Execution_):我们可以临时执行任意代码,以便在调试暂停的位置进行测试。
+
+## 断点 (_Breakpoint_)
+
+断点是代码执行应被暂停以启动调试过程的位置。
+
+要开始对 Netuno 支持的任何语言(如 JavaScript、Python、Ruby、Kotlin 或 Groovy)的代码进行调试,在希望开始调试的位置加入以下代码:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _exec.debug()
+            `
+        },
+    ]}
+/>
+
+> 由于 Netuno 是多种语言的,因此可与任何受支持的语言一起使用,例如:JavaScript、Python、Kotlin、Ruby 或 Groovy。
+
+现在要开始调试,请执行代码,执行过程会被挂起并暂停。
+
+然后我们进入开发界面,在后台的 `构建 (Construir)` 中,在左侧菜单里有以下选项:
+
+- **调试**
+
+在这里我们可以找到绿色双箭头,点击它即可让执行继续:
+
+![Debug - 继续执行](/docs/assets/academy/server/debug/step-over-pt.jpg "Debug - 继续执行")
+
+> 绿色双箭头会中断调试的暂停状态,使代码从暂停的位置继续正常运行。
+
+## 监视 (_Watch_)
+
+要查看变量的值,我们使用黄色放大镜。
+
+点击黄色放大镜后,我们可以输入要观察其值的变量名称。
+
+![Debug - 监视](/docs/assets/academy/server/debug/watch-pt.jpg "Debug - 监视")
+
+变量的名称和当前值会显示在列表中,我们可以观察多个变量的值,如果某个变量不存在,则不会显示值。
+
+## 执行代码 (_Execute Code_)
+
+我们可以注入代码,使其在断点的上下文中执行,即调试正在进行的位置。
+
+点击蓝色代码符号,即可输入我们想要执行的代码。
+
+![Debug - 执行代码](/docs/assets/academy/server/debug/execute-code-pt.jpg "Debug - 执行代码")
+
+执行的代码会显示在下方列表,并指示代码已成功执行;如果出现错误,则错误消息会与代码一起显示。
+
+## 远程调试配置
+
+在本地运行 Netuno 时,通常不需要任何配置。
+
+因为在本地开发中,WebSocket 地址的 `host` 会被自动配置。
+
+本地地址通常使用以下值作为 `host`:
+
+- `localhost`
+- `127.0.0.1`
+- `192.168.1.*` - 任何本地网络 IP 的示例。
+- `my-app.local.netu.no`
+
+> 本地地址不需要任何配置,因此可以跳过此步骤。
+
+而在生产环境或通过容器、VPN 等进行的远程开发中,可能需要为 WebSocket 连接定义所使用的外部地址(IP 或域名)。
+
+在这种情况下,在正在开发的应用中导航至环境配置文件。在本示例中,我们将使用开发环境文件,它位于:
+
+- 📂 `config/_development.json`
+
+检查是否已经存在此配置,如果不存在,请在配置文件(JSON 格式)末尾添加用于 WebSocket 连接的外部地址配置参数,例如:
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": "dev.netuno.org"
+        }
+    },
+    ...
+}
+```
+
+> 不应将端口信息添加到 WebSocket 的 `host` 地址中。
+
+也可以将多个 `host` 地址以数组形式传入:
+
+```json
+{
+    ...
+    "dev": {
+        "ws": {
+          "host": [ "my-container.dev.netuno.org", "my-project.com" ]
+        }
+    },
+    ...
+}
+```
+
+### 生产环境中的代理 (NGINX)
+
+在生产环境中,通常会使用某些进行反向代理的 Web 服务器,例如 NGINX。
+
+要通过代理使调试正常工作,需要添加特定配置以转发与 WebSocket 地址相关的流量:
+
+```
+server {
+    listen 443 ssl;
+    server_name my-project.com;
+    
+    ...
+    
+    location /dev/ws/ {
+        proxy_pass http://127.0.0.1:9000;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        add_header X-Frame-Options "";
+    }
+}
+```
+
+## 结论
+
+借助调试界面和 `_exec.debug()` 命令,我们可以对实际发生的情况进行深入调查。
+
+在大多数语言和后端技术中,尤其是脚本类技术,调试通常是不可能的或非常复杂的。
+
+Netuno 提供了一种简单的方式来调试多语言代码,适用于 JavaScript、Python、Ruby、Kotlin 和 Groovy 等多种受支持的语言。
+
+> 支持在远程环境和生产环境中进行多语言调试。
+
+使用调试可以大大加快开发速度,提供更高的精确度来解决问题,已成为一项必不可少的工具,不妨试一试。

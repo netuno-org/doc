@@ -1,8 +1,9 @@
 {
-  "label": "App Structure",
+  "label": "Application Folders",
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "The application's folder and file structure in detail."
+    "slug": "/category/app-structure",
+    "description": "The application's folders and files in detail."
   }
 }

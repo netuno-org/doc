@@ -9,45 +9,34 @@ import PolyglotPath from "@site/src/components/PolyglotPath";
 
 ## Introduction
 
-With Netuno, application development begins with building the database, through the construction of forms and
-fields.
+With Netuno, application development starts with building the database, through the creation of forms and fields.
 
-And when working in a team or when it's necessary to move application development to another environment, it's
-necessary to create a backup of the database along with the code.
+And when working as a team or when the application development needs to be moved to another environment, it is necessary to create a database backup along with the code.
 
-Thus, at the destination, it will be necessary to reconfigure the database so that the application can be
-implemented as it was developed in its origin.
+So at the destination, the database will need to be reconfigured, and then the application can run as it was developed at its origin.
 
-The problem with this process is the effort of always remembering to create a new backup every time there is
-a change in the database. And the more people involved in development and/or the more environments there are
-to publish the application, the more complicated this process becomes.
+The problem with this process is the effort of always remembering to create a new backup whenever there is a change in the database. And the more people involved in development and/or the more environments there are for publishing the application, the more complicated this process becomes.
 
-So Netuno, to solve this problem, provides an application *setup* system, which automatically generates a database
-structure (*schema*), and additionally allows the manual programming of the loading of initial data through
-additional *scripts*.
+So to solve this problem, Netuno provides an application *setup* system, which automatically generates the database structure (*schema*) and additionally allows the loading of initial data to be programmed manually through additional *scripts*.
 
-It also allows you to change the database server type, ensuring that the *setup* runs normally and the application
-runs without any problems. This means that an application can be developed in H2DataBase and, with the generated
-schemas, the application's database connection can be automatically changed to PostgreSQL or MariaDB. On the
-first execution of the application on a new database, everything will be rebuilt, regardless of any change in
-the database server type.
+It also allows changing the database server type, ensuring that the *setup* runs normally and the application runs without any problems. This means that the application can be developed in H2DataBase and, with the schemas generated automatically, you can change the application's database connection to PostgreSQL or MariaDB. On the first run of the application on the new database, everything will be rebuilt, regardless of the database server type change.
 
-Therefore, it allows the database to be completely changed without impacting the development already carried out.
+Thus, it allows the database to be completely changed without impacting the development already done.
 
-The _setup_ programming files are located within the application folder at:
+The _setup_ programming files are located inside the application folder at:
 
 - `server/setup`
 
 ## Setup Configuration
 
-In the application environment settings located at:
+In the application environment configurations located at:
 
 - `/apps/MY_APP/config/_development.json`
 - `/apps/MY_APP/config/_production.json`
 
-You can manipulate the behavior of the 'setup' through the settings:
+You can control the behavior of 'setup' through the following configurations:
 
-```
+```json
     ...
     "setup": {
         "enabled": true,
@@ -62,73 +51,59 @@ You can manipulate the behavior of the 'setup' through the settings:
     ...
 ```
 
-##### enabled: boolean | default true
+##### `enabled`: boolean > _default true_
 
-It defines whether the setup is active or not, and thus activates or deactivates, the first time the application
-is run, the execution of data setup operations.
+Defines whether setup is active or not, and thus enables or disables the execution of data setup operations on the first run of the application.
 
-##### schema.auto_create: boolean | default true
+##### `schema.auto_create`: boolean > _default true_
 
-It allows Neptune to know whether or not to generate database schema files whenever a form or field is created
-or modified.
+Allows Netuno to know whether it should generate database schema files whenever a form or field is created or changed.
 
-##### schema.execution: boolean | default true
+##### `schema.execution`: boolean > _default true_
 
-Controls whether the schema should be executed or not during setup operations performed on the first execution
-of the application.
+Controls whether the schema should be executed during setup operations performed on the first run of the application.
 
-##### scripts.execution: boolean | default true
+##### `scripts.execution`: boolean > _default true_
 
-Enables or disables the execution of additional scripts during setup operations performed on the first run of
-the application.
+Enables or disables the execution of additional scripts during setup operations performed on the first run of the application.
 
 ## Schema
 
-During the creation or modification of forms and fields in the Netuno web interface, schema files will be
-generated within the setup folder as follows:
+When forms and fields are created or changed in the Netuno web interface, schema files are generated inside the setup folder as follows:
 
 <PolyglotPath files={[
     "server/setup/_schema-FORM_NAME"
 ]} />
 
-There will be a `_schema-***` file for each form in the application.
+There will be one `_schema-***` file for each form in the application.
 
-These files should not be manually modified because they are automatically generated by Netuno.
+These files should not be changed manually because they are generated automatically by Netuno.
 
-Therefore, if you change the content of these files, in a subsequent generation of schemas they will be
-automatically replaced, and the changes made directly to the files will be lost.
+So, if you change the content of these files, on the next schema generation they will be replaced automatically, and changes made directly to the files will be lost.
 
-For the automatic generation of the database schema to be executed, it is necessary to ensure that the
-configuration __schema.auto_create__ is active, and that the __setup__ folder exists inside the __server__ folder.
+For automatic database schema generation to run, make sure that the __schema.auto_create__ configuration is active and that the __setup__ folder exists inside the __server__ folder.
 
 ## Scripts
 
-Custom-programmed code scripts are files located in the __setup__ folder that do not begin with `_`.
+Custom programmed code scripts are files located in the __setup__ folder that do not start with `_`.
 
-The main purpose of these scripts is to load the data, ensuring that the database contains the minimum information
-necessary for the application to function correctly.
+The main goal of these scripts is to load data, ensuring that the database contains the minimum information required for the application to work correctly.
 
-Thus, when the application is reconfigured in another environment, it will be automatically loaded with the
-initial data, becoming ready to start its use.
+So when the application is reconfigured in another environment, it will be automatically loaded with the initial data and will be ready to start being used.
 
 To perform these data loading operations, you should use the functions of the *_db* resource.
 
-The __scripts__ are executed after the execution of the __schemas__ in alphanumeric order of the file names that do not begin with `_`.
+The __scripts__ are executed after the __schemas__ are executed, in alphanumeric order of the names of files that do not start with `_`.
 
-> Starting filenames with a numeric sequence is ideal for defining the execution order, therefore
-> custom scripts are executed in the order of filenames that do not start with `_`.
+> Starting file names with a numeric sequence is ideal for defining the execution order, so custom scripts are executed in the order of the file names that do not start with `_`.
 
 ### Insert Custom Data
 
-And, to save the work of performing database queries to check whether or not an __insert__ data can be performed,
-Netuno provides the `insertIfNotExists` function.
+And to save the work of making database queries to check whether data __insert__ can be performed or not, Netuno provides the `insertIfNotExists` function.
 
-This function checks if the data exists exactly as it is defined in the database; if it does not exist, then it
-creates it.
+This function checks whether the data exists exactly as defined in the database; if it does not exist, it creates it.
 
-An example of its use would be to load the __Code__ and __Name__ fields from the __Territory Type__ form, where
-the table name is __territory\_type__ and it has the columns __code__ and __name__. To do this, simply create
-the file with the following content:
+An example of its use is loading the __Code__ and __Name__ fields of the __Territory Type__ form, where the table name is __territory\_type__ and it has the __code__ and __name__ columns; to do so, simply create the file with the following content:
 
 <PolyglotCode
     file="server/setup/001-territory_type"
@@ -141,7 +116,7 @@ the file with the following content:
             );
             _db.insertIfNotExists("territory_type", _val.map()
                 .set("code", "1002")
-                .set("name", "Archipelago")
+                .set("name", "Archipelagic")
             );
             _db.insertIfNotExists("territory_type", _val.map()
                 .set("code", "2003")
@@ -157,41 +132,38 @@ the file with the following content:
 
 ## Processing Cycle
 
-As previously explained, *setup* is only executed on the first run of the application.
+As explained, the *setup* only runs on the first run of the application.
 
-And it's execution order is:
+And the execution order is:
 
-1. `_start` - executes the initialization file, which can contain any type of custom programming:
+1. `_start` - runs the initialization file, which can contain any type of custom programming:
     <PolyglotPath files={["MY_APP/server/setup/_start"]} />
-2. `_cleanup` - performs the removal of forms, reports, and their respective fields programmatically:
+2. `_cleanup` - runs the removal of forms, reports, and their respective fields programmatically:
     <PolyglotPath files={["MY_APP/server/setup/_cleanup"]} />
-3. `_schema-*` - Executes all scripts with the prefix *_schema-*, containing the commands for creating forms,
-  reports, and their respective fields:
+3. `_schema-*` - runs all scripts with the *_schema-* prefix; contains the commands for creating forms, reports, and their respective fields:
     <PolyglotPath files={[
-      "MY_APP/server/setup/_schema-autogenerated_structure",
-      "MY_APP/server/setup/_schema-category",
-      "MY_APP/server/setup/_schema-product",
-      "MY_APP/server/setup/_schema-client",
+        "MY_APP/server/setup/_schema-autogenerated_structure",
+        "MY_APP/server/setup/_schema-category",
+        "MY_APP/server/setup/_schema-product",
+        "MY_APP/server/setup/_schema-customer",
     ]} />
-4. `001-others_scripts` - executes custom-programmed *script* files; these are all files that do not begin with
-  `_` and that will likely contain the necessary initial data __inserts__ or other custom developments, for
-  example:
+4. `001-other_scripts` - runs the custom programmed *scripts* files; these are all files that do not start with `_` and that will likely contain the necessary initial data __inserts__ or other custom developments, for example:
     <PolyglotPath files={[
-      "MY_APP/server/setup/001-insert_custom_data",
-      "MY_APP/server/setup/002-category",
-      "MY_APP/server/setup/003-product",
-      "MY_APP/server/setup/004-client",
+        "MY_APP/server/setup/001-insert_custom_data",
+        "MY_APP/server/setup/002-category",
+        "MY_APP/server/setup/003-product",
+        "MY_APP/server/setup/004-customer",
     ]} />
-5. `_end` - executes the finalization file, which can contain any type of custom programming:
+5. *_end* - runs the finalization file, which can contain any type of custom programming:
     <PolyglotPath files={["MY_APP/server/setup/_end"]} />
 
-That is, it is allowed to create custom code in the *start* and *end* scripts to perform some operations that make sense to be executed before the setup or even when it is completed.
+In other words, custom code can be created in the *start* and *end* scripts to perform some operations that make sense to run before setup or even when it is completed.
 
-It is important to emphasize that this processing cycle is executed every time the application is run for the first time, which is why it is necessary to make sure of the existence of then data before it is created.
+It is worth reinforcing that this processing cycle runs whenever the application is run for the first time, which is why it is necessary to ensure that data existence is checked before creating it.
 
-Make sure the following *environmental settings* are active to allow this process to run in the `MY_APP/config/_development.json` or `MY_APP/config/_production.json` files depending on the environment:
+Make sure the following environment *configurations* are active to allow this process to run in the `MY_APP/config/_development.json` or `MY_APP/config/_production.json` files, depending on the environment:
 
-* Enables or disables completely the execution of any setup operation:
+* Enables or completely disables the execution of any setup operation:
 
   `setup.enabled = true|false`
 
@@ -203,10 +175,9 @@ Make sure the following *environmental settings* are active to allow this proces
 
   `setup.scripts.execution = true|false`
 
-## Cleaning
+## Cleanup
 
-To schedule the removal of forms and fields, we must use the `_cleanup.js` script, which ensures that the
-structure will be removed, if it exists, from all environments that synchronize project files during setup.
+To program the removal of forms and fields, we should use the `_cleanup.js` script, which ensures that for all environments that synchronize the project files, when setup runs, the structure will be removed if it exists.
 
 Example of the cleanup script:
 
@@ -228,21 +199,19 @@ Whenever Netuno runs the data setup, the following file is generated:
 
 - `server/setup/_db-schema.dbml`
 
-This is the file containing the entire data structure that can be used with Artificial Intelligence.
+This is the file with the entire data structure that can be used with Artificial Intelligence.
 
-Based on the DBML content, Artificial Intelligence understands the data structure and can generate precise SQL
-queries.
+Based on the DBML content, Artificial Intelligence understands the data structure and can generate accurate SQL queries.
 
-Try using this file as an attachment in the command prompt and ask it to generate complex SQL queries; you will
-be able to obtain good results.
+Try using this file as an attachment in the prompt and ask it to generate complex SQL queries; you will get good results.
 
 ## Conclusion
 
-The *setup* process of applications in Netuno has as main functions:
+The application *setup* process in Netuno has the following main functions:
 
-* *_schema-*: automatically generates the entire structure of forms and reports with their respective fields, which allows you to ensure the entire consistency of the structure of the application database, especially when the application is run with a new empty database.
-* *scripts*: perform database operations to ensure that the application contains the mandatory data previously loaded each time it is run for the first time.
+* *_schema-*: automatically generates the entire structure of forms and reports with their respective fields, which helps ensure the consistency of the application's database structure, especially when the application runs against a new empty database.
+* *scripts*: perform database operations to ensure that the application contains the required data preloaded whenever it is run for the first time.
 
-This way Netuno allows applications to work in new environments, even if you change the type of database, ensuring the correct operation of the application without the need to perform __backups__ and __restore__ of the database.
+This way, Netuno allows applications to work in new environments, even if the database type changes, ensuring the application works correctly without the need to perform database __backups__ and __restore__.
 
-Additionally allowing all automatically and manually generated configuration code to be versioned with GIT, for example.
+Additionally, it allows all configuration code generated automatically and manually to be versioned with GIT, for example.

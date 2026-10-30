@@ -1,0 +1,209 @@
+---
+id: csv 
+title: CSV 
+sidebar_label: CSV 
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+处理自定义 PDF 文件。
+
+## 简介
+
+Netuno 通过 [CSV](/docs/library/resources/csv) 资源生成 CSV 文件，该资源为 Netuno 支持的各种编程语言提供对 [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/) 的低代码抽象。
+
+Netuno 自带的名为 **demo**（演示应用）的应用包含大量用多种语言实现代码的示例，其中包括通过位于以下位置的服务 `csv` 导出为 CSV 的演示：
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/csv`
+]} />
+
+## 创建 CSV 文件
+
+要创建 CSV 文件，首先需要初始化 `Apache Commons CSV` 的 `CSVPrinter`。
+为此，我们需要传入文件夹名称、文件名以及 CSV 格式。
+在示例中，我们将在应用的 `storage` 内生成该文件：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const csvPrinter = _csv.printer(
+                  _storage.filesystem("server", "data.csv"),
+                  _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                csv_printer = _csv.printer(
+                    _storage.filesystem("server", "data.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                csv_printer = _csv.printer(
+                    _storage.filesystem("server", "data.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val csvPrinter = _csv.printer(
+                    _storage.filesystem("server", "data.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def csvPrinter = _csv.printer(
+                    _storage.filesystem("server", "data.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        }
+    ]}
+/>
+
+支持的格式见[此处](https://doc.netuno.org/pt/docs/library/resources/csv/#format)。
+
+### 写入
+
+要向 CSV 文件中写入行：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvPrinter.printRecord("id", "userName", "firstName", "lastName", "birthday")
+                csvPrinter.printRecord(1, "john73", "John", "Doe", 123)
+            `
+        }
+    ]}
+/>
+
+### 关闭
+
+最后需要关闭 `CSVPrinter`：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvPrinter.close()
+            `
+        }
+    ]}
+/>
+
+
+## 读取 CSV 文件
+
+要读取 CSV 文件，首先需要初始化 `Apache Commons CSV` 的 `CSVParser`。
+为此，我们需要传入文件夹名称和文件名。
+在示例中，我们将读取应用 `storage` 内的文件：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const csvParser = _csv.parser(_storage.filesystem("server", "data.csv"))
+            `
+        }
+    ]}
+/>
+
+### 行
+
+现在可以遍历 `Apache Commons CSV` 的 `CSVRecord`，它们表示 CSV 文件中的每一行：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const record of csvParser) {
+                    const columnOne = record.get(0)
+                    const columnTwo = record.get(1)
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for record in csvParser:
+                    columnOne = record.get(0)
+                    columnTwo = record.get(1)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                csvParser.each do |record|
+                    columnOne = record.get(0)
+                    columnTwo = record.get(1)
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                for (record in csvParser) {
+                    val columnOne = record.get(0)
+                    val columnTwo = record.get(1)
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (record in csvParser) {
+                    def columnOne = record.get(0)
+                    def columnTwo = record.get(1)
+                }
+            `
+        },
+    ]}
+/>
+
+或者使用 `Apache Commons CSV` 的 `getRecord` 方法获取每一行。
+在此示例中，第一个 `get` 获取第一行。第二个 `get` 获取该行的第一个字段/值：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvParser.getRecords().get(0).get(0)
+            `
+        }
+    ]}
+/>
+
+### 关闭
+
+最后需要关闭 `CSVParser`：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvParser.close()
+            `
+        }
+    ]}
+/>

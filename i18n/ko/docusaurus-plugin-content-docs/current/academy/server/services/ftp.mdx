@@ -1,0 +1,386 @@
+---
+id: ftp
+title: FTP 클라이언트
+sidebar_label: FTP 클라이언트
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+파일 업로드 및 다운로드, 원격 폴더 관리.
+
+## 소개
+
+Netuno는 로우코드 프레임워크에 FTP 클라이언트를 내장하고 있어, 서버에 연결하여 파일을 보내고 받고, 폴더를
+변경하는 등의 원격 작업을 수행할 수 있습니다.
+
+여러 개의 동시 연결과 FTPS도 지원합니다.
+
+이는 Java 기반의 오픈소스 [Apache Commons Net](https://github.com/apache/commons-net) 구현 덕분이며, 이를 통해 Netuno는 모든
+_스크립트_ 언어에서 `_ftp` 리소스를 통해 이러한 기능을 제공할 수 있습니다.
+
+> Netuno의 [FTP](/docs/library/resources/ftp) 리소스에 대해 더 알아보세요.
+
+## 설정
+
+첫 번째 단계는 Netuno가 연결을 수행하는 데 사용할 FTP 접속 정보를 설정하는 것입니다.
+
+개발 중인 애플리케이션 내에서 환경 설정 파일로 이동합니다. 이 예제에서는 다음 위치에 있는 개발 환경
+파일을 사용합니다:
+
+- `config/_development.json`
+
+FTP 설정이 이미 포함되어 있지 않은지 확인하고, 아직 없다면 설정 파일(JSON 형식)의 끝에 FTP 설정
+매개변수를 추가합니다:
+
+```json title="config/_development.json"
+{
+  ...
+  "ftp": {
+    "gibon": {
+      "enabled": true,
+      "host": "nae.seobeo.net",
+      "port": 21,
+      "username": "imsi",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+변경 사항을 저장한 후 Netuno를 재시작하면 설정 변경 사항이 적용됩니다. 이름 `gibon`이 나타내듯이
+이것이 연결의 기본 설정입니다.
+
+FTP 연결 설정을 더 추가할 수 있지만, 기본으로 지정할 수 있는 것은 하나뿐입니다.
+
+FTP 연결 설정을 더 추가하려면 기본 설정 블록을 반복하고 `gibon`이라는 이름을 원하는 다른 이름으로
+바꾸면 됩니다. 다음 예제를 참고하세요:
+
+```json title="config/_development.json"
+{
+  ...
+  "ftp": {
+    "gibon": {
+      "enabled": true,
+      "host": "nae.seobeo.net",
+      "port": 22,
+      "username": "imsi",
+      "password": "$eCr37"
+    },
+    "dareun": {
+      "enabled": true,
+      "host": "nae.dareun-seobeo.net",
+      "port": 22,
+      "username": "imsi",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+위 예제와 같은 설정을 사용하면 코드에서 다음과 같이 호출할 때 기본 계정을 사용할 수 있습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ftp = _ftp.init()
+            `
+        },
+    ]}
+/>
+
+그리고 `dareun` 설정을 사용하려면 다음과 같이 `_ftp.init()` 함수에 설정 이름을 매개변수로 추가하면
+됩니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ftpDareun = _ftp.init("dareun")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ftpDareun = _ftp.init("dareun")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftpDareun = _ftp.init("dareun")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ftpDareun = _ftp.init("dareun")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ftpDareun = _ftp.init("dareun")
+            `
+        },
+    ]}
+/>
+
+> 설정 이름을 매개변수로 추가하지 않으면 항상 기본 계정이 사용됩니다.
+
+## 연결
+
+무엇이든 하기 전에 FTP 연결을 시작해야 합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.connect()
+            `
+        },
+    ]}
+/>
+
+## 작업 폴더
+
+FTP에서 작업을 수행할 때는 어떤 폴더를 사용할지 정의해야 합니다.
+
+작업 폴더를 정의하면 이 기준 폴더에서 다양한 조작을 수행할 수 있습니다.
+
+작업 폴더를 변경하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.changeWorkingDirectory("nae/paseu/gibon")
+            `
+        },
+    ]}
+/>
+
+이제 모든 작업은 이 폴더에서 또는 이 폴더를 기준으로 수행됩니다.
+
+## 폴더 생성 및 삭제
+
+폴더를 생성할 때는 폴더의 경로만 지정하면 됩니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.createDirectory("imsi-paseu")
+                ftp.createDirectory("imsi-paseu/hab-paseu")
+            `
+        },
+    ]}
+/>
+
+폴더를 삭제하거나 제거하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.deleteDirectory("imsi-paseu/hab-paseu")
+                ftp.deleteDirectory("imsi-paseu")
+            `
+        },
+    ]}
+/>
+
+## 이름 변경
+
+파일이나 폴더의 이름을 변경할 수 있으며, 이전 경로와 그다음에 새 경로를 전달합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.rename("ijeon-ireum", "sae-ireum")
+            `
+        },
+    ]}
+/>
+
+## 파일 업로드
+
+텍스트 파일을 전송하려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.uploadText("nae-paeil.txt", "안녕하세요 FTP! 이것은 제 내용입니다...")
+            `
+        },
+    ]}
+/>
+
+## 파일 다운로드
+
+텍스트 파일을 가져오려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const paeilNaeyong = ftp.downloadText("nae-paeil.txt")
+                _out.println(paeilNaeyong)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                paeilNaeyong = ftp.downloadText("nae-paeil.txt")
+                _out.println(paeilNaeyong)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                paeilNaeyong = ftp.downloadText("nae-paeil.txt")
+                _out.println(paeilNaeyong)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val paeilNaeyong = ftp.downloadText("nae-paeil.txt")
+                _out.println(paeilNaeyong)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def paeilNaeyong = ftp.downloadText("nae-paeil.txt")
+                _out.println(paeilNaeyong)
+            `
+        },
+    ]}
+/>
+
+## 폴더 내 항목 나열
+
+폴더의 모든 내용을 나열합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const i of ftp.list("gyeongno/paseu")) {
+                    if (i.isDirectory()) {
+                        _out.print("폴더: ")
+                    } else if (i.isFile()) {
+                        _out.print("파일: ")
+                    } else {
+                        _out.print("기타: ")
+                    }
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for i in ftp.list("gyeongno/paseu"):
+                    if i.isDirectory():
+                        _out.print("폴더: ")
+                    elif i.isFile():
+                        _out.print("파일: ")
+                    else:
+                        _out.print("기타: ")
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftp.list("gyeongno/paseu").each do |i|
+                    if i.isDirectory()
+                        _out.print("폴더: ")
+                    elsif i.isFile()
+                        _out.print("파일: ")
+                    else
+                        _out.print("기타: ")
+                    end
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                ftp.list("gyeongno/paseu").forEach {
+                    if (it.isDirectory()) {
+                        _out.print("폴더: ")
+                    } else if (it.isFile()) {
+                        _out.print("파일: ")
+                    } else {
+                        _out.print("기타: ")
+                    }
+                    _out.println(it.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (i in ftp.list("gyeongno/paseu")) {
+                    if (i.isDirectory()) {
+                        _out.print("폴더: ")
+                    } else if (i.isFile()) {
+                        _out.print("파일: ")
+                    } else {
+                        _out.print("기타: ")
+                    }
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+    ]}
+/>
+
+> [FTPFile](/docs/library/objects/FTPFile) 유형의 객체 목록을 반환합니다.

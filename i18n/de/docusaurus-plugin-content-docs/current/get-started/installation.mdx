@@ -1,0 +1,81 @@
+---
+sidebar_position: 1
+id: installation
+title: Schnellinstallation
+sidebar_label: Schnellinstallation
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Einführung
+
+Willkommen im Installationshandbuch von **Netuno**, der *Low-Code*-Plattform, polyglott und *Open Source*, entwickelt, um die Erstellung Ihrer Projekte zu beschleunigen und die Einrichtung der Entwicklungsumgebung zu erleichtern.
+
+Hier erstellen Sie robuste Full-Stack-Anwendungen auf agile Weise und kombinieren die Geschwindigkeit von Low-Code mit der Leistungsfähigkeit der traditionellen Programmierung.
+
+## Schnellinstallation
+
+Der einfachste Weg, Netuno zu installieren, ist über das von der Plattform bereitgestellte Installationsskript. Führen Sie einfach die Befehle im Terminal entsprechend Ihrem Betriebssystem aus.
+
+<Tabs groupId="os">
+    <TabItem value="linux-mac" label="Linux oder macOS" default>
+
+```bash
+bash <(curl -fsSL https://netu.no/install.sh)
+```
+
+    </TabItem>
+    <TabItem value="windows" label="Windows">
+
+```powershell
+powershell -c "irm https://netu.no/install.ps1|iex"
+```
+
+    </TabItem>
+</Tabs>
+
+## Demo-App starten
+
+Führen Sie nach Abschluss der Installation den untenstehenden Befehl im Ordner `netuno` aus, um den Server mit der Demonstrationsanwendung zu starten:
+
+```bash
+./netuno server
+```
+
+### Anwendung im Browser öffnen
+
+Nach dem Start wird der Browser automatisch mit der Adresse des lokalen Servers geöffnet. Falls dies nicht geschieht, rufen Sie manuell eine der untenstehenden Adressen auf:
+
+- [http://demo.local.netu.no:9000](http://demo.local.netu.no:9000)
+- [http://localhost:9000](http://localhost:9000)
+
+## Server stoppen
+
+Um den Server zu beenden, drücken Sie im Terminal die Tasten:
+
+**STRG + C**
+
+Um ihn erneut zu starten, verwenden Sie denselben Befehl `./netuno server`.
+
+## Nächste Schritte
+
+Einige Ideen, was Sie jetzt tun können.
+
+### Einsteiger
+
+Wenn Sie neu bei Netuno sind, beginnen Sie mit der Erstellung Ihres ersten Formulars:
+
+[Mein erstes Formular erstellen](/docs/academy/demonstration/config)
+
+### Tutorials
+
+Entdecken Sie praktische Entwicklungstutorials mit Netuno:
+
+[Entwicklungstutorials ansehen](/docs/get-started/tutorials)
+
+### Projekte
+
+Sehen Sie, wie Sie Netuno in realen Geschäftsprojekten einsetzen:
+
+[Projekte und Anwendungsfälle erkunden](/docs/academy/understand/backoffice)

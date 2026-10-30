@@ -1,0 +1,1091 @@
+---
+id: upload
+title: Przesyłanie plików
+sidebar_label: Przesyłanie plików
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Wysyłanie plików do API i zapisywanie ich w folderze lub w bazie danych.
+
+## Wprowadzenie
+
+Gdy musimy wysyłać pliki do usług API REST, mamy kilka sposobów
+na realizację tego zadania w Netuno.
+
+Zwykle pliki są wysyłane w treści żądania HTTP w formacie
+multipart; to najczęstszy sposób w frontendzie, na przykład gdy wypełniamy
+formularz i znajduje się w nim pole do wyboru pliku.
+
+Alternatywnie możemy wysłać bajty plików zakodowane w Base64 jako wartość
+w obiekcie JSON, gdy chcemy mieć API REST w 100% oparte na JSON.
+
+## Pliki
+
+Za pomocą `_req.file` możemy podać nazwę pola i w ten sposób uzyskać obiekt pliku,
+który został wysłany. Zobacz jak:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mojPlik = _req.file("plik");
+            `
+        },
+    ]}
+/>
+
+Czyli `_req` zawiera wszystkie dane, które otrzymaliśmy w treści żądania HTTP.
+
+A dzięki metodzie `file` można uzyskać obiekt reprezentujący plik, który został
+wysłany.
+
+Otrzymana wartość może być `null`, jeśli nie ma żadnego pliku.
+
+## Obrazy
+
+Gdy otrzymujemy obrazy, często zachodzi potrzeba zmiany ich rozmiaru, aby zapewnić
+jednolitość i zmniejszyć miejsce zajmowane przez obrazy.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mojPlik = _req.getFile("obraz");
+                if (mojPlik != null
+                    && (mojPlik.isExtension("jpeg")
+                        || mojPlik.isExtension("jpg")
+                        || mojPlik.isExtension("png")
+                    )) {
+                    const mojObraz = _image.init(mojPlik)
+                        .resize(200, 200)
+                        .file(mojPlik.baseName() +".jpg", "jpeg");
+                    _header.contentTypeJPG();
+                    _out.copy(mojObraz);
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                mojPlik = _req.getFile("obraz")
+                if mojPlik is not None and (
+                    mojPlik.isExtension("jpeg")
+                    or mojPlik.isExtension("jpg")
+                    or mojPlik.isExtension("png")):
+                    mojObraz = (
+                        _image.init(mojPlik)
+                            .resize(200, 200)
+                            .file(mojPlik.baseName() +".jpg", "jpeg")
+                    )
+                    _header.contentTypeJPG()
+                    _out.copy(mojObraz)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                moj_plik = _req.getFile("obraz")
+                if !moj_plik.nil? && (
+                    moj_plik.isExtension("jpeg") ||
+                    moj_plik.isExtension("jpg") ||
+                    moj_plik.isExtension("png")
+                )
+                    moj_obraz = _image.init(moj_plik)
+                        .resize(200, 200)
+                        .file(moj_plik.baseName() +".jpg", "jpeg")
+                    _header.contentTypeJPG()
+                    _out.copy(moj_obraz)
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val mojPlik = _req.getFile("obraz")
+                if (mojPlik != null
+                    && (mojPlik.isExtension("jpeg")
+                        || mojPlik.isExtension("jpg")
+                        || mojPlik.isExtension("png")
+                    )) {
+                    val mojObraz = _image.init(mojPlik.input())
+                        .resize(200, 200)
+                        .file(mojPlik.baseName() +".jpg", "jpeg")
+                    _header.contentTypeJPG()
+                    _out.copy(mojObraz.input())
+                }
+            `
+        }
+    ]}
+/>
+
+Dzięki poliglotycznemu zasobowi programowania low-code [Image](/docs/library/resources/image)
+możemy manipulować obrazami, przycinać je, zmieniać rozmiar, tworzyć nowe itd.
+
+## Base64 w JSON
+
+Aby przesłać plik w JSON wysyłanym do usługi, możemy zdefiniować właściwość o wartości:
+
+`data:image/png;base64,...`
+
+Gdzie w `...` następuje sekwencja bajtów pliku zakodowanych w Base64.
+
+Typ pliku występuje po `data`, na przykład:
+
+- PNG: `image/png`.
+- JPG: `image/jpeg`
+- TXT: `text/plain`
+- PDF: `application/pdf`
+- XLSX: `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
+
+Zobacz przykład małego pliku obrazu PNG wysyłanego w JSON do usługi:
+
+```json
+{
+  "plik": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAFIGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpDb2xvclNwYWNlPSIxIgogICBleGlmOlBpeGVsWERpbWVuc2lvbj0iMyIKICAgZXhpZjpQaXhlbFlEaW1lbnNpb249IjMiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMyIKICAgdGlmZjpJbWFnZVdpZHRoPSIzIgogICB0aWZmOlJlc29sdXRpb25Vbml0PSIyIgogICB0aWZmOlhSZXNvbHV0aW9uPSI3Mi8xIgogICB0aWZmOllSZXNvbHV0aW9uPSI3Mi8xIgogICB4bXA6TWV0YWRhdGFEYXRlPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMTItMjlUMTk6MTI6MjdaIj4KICAgPHhtcE1NOkhpc3Rvcnk+CiAgICA8cmRmOlNlcT4KICAgICA8cmRmOmxpCiAgICAgIHhtcE1NOmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHhtcE1NOnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IERlc2lnbmVyIDEuMTAuNSIKICAgICAgeG1wTU06d2hlbj0iMjAyNS0wMi0yM1QyMjoxNDozM1oiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IDMuMC4xIgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+UGhcxwAAAYFpQ0NQc1JHQiBJRUM2MTk2Ni0yLjEAACiRdZG7SwNBEIe/JEqCRhS0sFAIEq3iG4I2ggmigkiIEXw1yZmHkMdxlyDBVrANKIg2vgr9C7QVrAVBUQSx1lbRRuWc84QEMbPMzre/3Rl2Z8EeSSsZvaYPMtm8Fh4PeObmFzzOZ9y004yL3qiiq6Oh0BRV7f0Wmxmvu81a1c/9a/XLcV0Bm0t4RFG1vPCE8NRqXjV5S7hFSUWXhU+EfZpcUPjG1GMWP5mctPjTZC0SDoK9SdiTrOBYBSspLSMsL8ebSReU3/uYL3HHs7MzEjvE29AJM04AD5OMEcRPP8My++lmgB5ZUSW/7yd/mpzkKjKrFNFYIUmKPD5RC1I9LjEhelxGmqLZ/7991RODA1Z1dwBqHw3jtROcm/BVMoyPA8P4OgTHA5xny/m5fRh6E71U1rx70LgOpxdlLbYNZxvQeq9GteiP5BC3JxLwcgwN89B8BXWLVs9+9zm6g8iafNUl7OxCl5xvXPoGe8Rn71E5kqUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAySURBVAiZAScA2P8BJYrEogr//l3h5+qlBP4HCF3n/AAA/wP7WwLu7PKk+eHWAPzWyKSmfRbbIj23ZQAAAABJRU5ErkJggg=="
+}
+```
+
+Możemy uzyskać wysłany plik w następujący sposób:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mojPlik = _req.getFile("plik");
+                if (mojPlik != null) {
+                    _out.json(
+                        _val.map()
+                            .set("wynik", true)
+                            .set("nazwa", mojPlik.name())
+                            .set("rozmiarBajty", mojPlik.size())
+                            .set("rozmiarKB", mojPlik.sizeKB())
+                            .set("rozmiarMB", mojPlik.sizeMB())
+                            .set("rozmiarGB", mojPlik.sizeGB())
+                    );
+                } else {
+                    _out.json(
+                        _val.map()
+                            .set("wynik", false)
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                mojPlik = _req.getFile("plik")
+                if mojPlik is not None:
+                    _out.json(
+                        _val.map()
+                            .set("wynik", True)
+                            .set("nazwa", mojPlik.name())
+                            .set("rozmiarBajty", mojPlik.size())
+                            .set("rozmiarKB", mojPlik.sizeKB())
+                            .set("rozmiarMB", mojPlik.sizeMB())
+                            .set("rozmiarGB", mojPlik.sizeGB())
+                    )
+                else:
+                    _out.json(
+                        _val.map()
+                            .set("wynik", False)
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                moj_plik = _req.getFile("plik")
+                if moj_plik.nil?
+                    _out.json(
+                        _val.map()
+                            .set("wynik", true)
+                            .set("nazwa", moj_plik.name())
+                            .set("rozmiarBajty", moj_plik.size())
+                            .set("rozmiarKB", moj_plik.sizeKB())
+                            .set("rozmiarMB", moj_plik.sizeMB())
+                            .set("rozmiarGB", moj_plik.sizeGB())
+                    )
+                else
+                    _out.json(
+                        _val.map()
+                            .set("wynik", false)
+                    )
+                end
+            `
+        },
+    ]}
+/>
+
+Przykład danych wyjściowych wygenerowanych przez powyższą usługę:
+
+```json
+{
+  "nazwa": "plik.png",
+  "wynik": true,
+  "rozmiar": 1849,
+  "rozmiarKB": 1
+}
+```
+
+### Obiekt
+
+Jeśli plik znajduje się w wewnętrznej strukturze JSON w podobiekcie:
+
+```json
+{
+  "osoba": {
+    "plik": "data:image/png;base64,..."
+  }
+}
+```
+
+Można go uzyskać w następujący sposób:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mojPlik = _req.getValues("osoba").getFile("avatar");
+            `
+        },
+    ]}
+/>
+
+### Tablica
+
+Jeśli plik znajduje się w wewnętrznej strukturze JSON w tablicy:
+
+```json
+{
+  "pliki": [
+    "data:image/png;base64,..."
+  ]
+}
+```
+
+Można go uzyskać w następujący sposób:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mojPlik = _req.getValues("pliki").getFile(0);
+            `
+        },
+    ]}
+/>
+
+## OpenAPI
+
+Netuno obsługuje integrację z OpenAPI i wykorzystuje definicję OpenAPI do walidacji żądania HTTP.
+
+> Więcej o [OpenAPI w Netuno](/docs/academy/server/services/openapi).
+
+Za pomocą typu `file` Netuno sprawdza, czy wartość zaczyna się od formatu pliku w JSON, na przykład:
+
+- `data:image/png;base64,...`
+
+Aby zweryfikować, czy odbierany jest plik we właściwości obiektu JSON:
+
+```json title="post.in.json"
+{
+  "summary": "Przesyłanie pliku",
+  "description": "Usługa, która otrzymuje plik w obiekcie JSON.",
+  "type": "object",
+  "properties": {
+    "plik": {
+      "type": "file"
+    }
+  },
+  "required": [
+    "plik"
+  ]
+}
+```
+
+Aby zweryfikować, czy odbierana jest lista plików w tablicy JSON:
+
+```json title="post.in.json"
+{
+  "summary": "Przesyłanie plików",
+  "description": "Usługa, która otrzymuje listę plików w tablicy JSON.",
+  "properties": {
+    "pliki": {
+      "type": "array",
+      "items": {
+        "type": "file"
+      }
+    }
+  },
+  "required": [
+    "pliki"
+  ]
+}
+```
+
+## Zapisywanie pliku
+
+Zwykle gdy odbieramy plik w usłudze, musimy go zapisać, na przykład:
+
+- **Baza danych**: plik powiązany z rekordem, np. użytkownika.
+- **Storage**: wewnętrzny folder aplikacji służący do ogólnego zarządzania plikami.
+- **Folder**: umieszczenie pliku w dowolnym folderze systemu.
+
+### Baza danych
+
+W zarządzaniu polami formularzy Netuno obsługuje typy `image` i `file`, czyli:
+
+- **Image**: ogólnie pliki obrazów, JPG i PNG.
+- **File**: dowolny typ pliku.
+
+Załóżmy, że w formularzu Produkt jest pole Obraz; możemy zapisać plik przesłany przez upload w następujący sposób:
+
+#### Przykład z użyciem DB Form:
+
+Zwróć uwagę na użycie `_db.form`:
+
+<PolyglotCode
+    file="services/produkt/obraz/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const produktUid = _req.getString("uid");
+                const produktObraz = _req.getFile("obraz");
+
+                if (produktObraz == null) {
+                    _header.status(400);
+                    _out.json(
+                        _val.map()
+                            .set("wynik", false)
+                            .set("blad", "obraz-wymagany")
+                    );
+                    _exec.stop();
+                }
+
+                const dbWynik = _db.form("produkt")
+                    .set("obraz", produktObraz)
+                    .where(_db.where("uid").equals(produktUid))
+                    .update();
+
+                if (dbWynik.getInt("produkt") == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("wynik", true)
+                    );
+                } else {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("wynik", false)
+                            .set("blad", "uid-produkt-nie-istnieje")
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                produktUid = _req.getString("uid")
+                produktObraz = _req.getFile("obraz")
+
+                if produktObraz is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("wynik", False)
+                            .set("blad", "obraz-wymagany")
+                    )
+                    _exec.stop()
+
+                dbWynik = (
+                    _db.form("produkt")
+                        .set("obraz", produktObraz)
+                        .where(_db.where("uid").equals(produktUid))
+                        .update()
+                )
+
+                if dbWynik.getInt("produkt") == 1:
+                    _out.json(
+                        _val.map()
+                            .set("wynik", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("wynik", False)
+                            .set("blad", "uid-produkt-nie-istnieje")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                produkt_uid = _req.getString("uid")
+                produkt_obraz = _req.getFile("obraz")
+
+                if produkt_obraz.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("wynik", false)
+                      .set("blad", "obraz-wymagany")
+                  )
+                  _exec.stop
+                end
+
+                db_wynik = _db.form("produkt")
+                  .set("obraz", produkt_obraz)
+                  .where(_db.where("uid").equals(produkt_uid))
+                  .update()
+
+                if db_wynik.getInt("produkt") == 1
+                  _out.json(
+                    _val.map()
+                      .set("wynik", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("wynik", false)
+                      .set("blad", "uid-produkt-nie-istnieje")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### Przykład z użyciem klasycznego update:
+
+Zwróć uwagę na użycie `_db.update`:
+
+<PolyglotCode
+    file="services/produkt/obraz/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const produktUid = _req.getString("uid");
+                const produktObraz = _req.getFile("obraz");
+
+                if (produktObraz == null) {
+                    _header.status(400);
+                    _out.json(
+                        _val.map()
+                            .set("wynik", false)
+                            .set("blad", "obraz-wymagany")
+                    );
+                    _exec.stop();
+                }
+
+                const dbWynik = _db.update(
+                    "produkt",
+                    produktUid,
+                    _val.map()
+                        .set("obraz", produktObraz)
+                );
+
+                if (dbWynik == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("wynik", true)
+                    );
+                } else {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("wynik", false)
+                            .set("blad", "uid-produkt-nie-istnieje")
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                produktUid = _req.getString("uid")
+                produktObraz = _req.getFile("obraz")
+
+                if produktObraz is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("wynik", False)
+                            .set("blad", "obraz-wymagany")
+                    )
+                    _exec.stop()
+
+                dbWynik = (
+                    _db.update(
+                        "produkt",
+                        produktUid,
+                        _val.map()
+                            .set("obraz", produktObraz)
+                    )
+                )
+
+                if dbWynik == 1:
+                    _out.json(
+                        _val.map()
+                            .set("wynik", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("wynik", False)
+                            .set("blad", "uid-produkt-nie-istnieje")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                produkt_uid = _req.getString("uid")
+                produkt_obraz = _req.getFile("obraz")
+
+                if produkt_obraz.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("wynik", false)
+                      .set("blad", "obraz-wymagany")
+                  )
+                  _exec.stop
+                end
+
+                db_wynik = _db.update(
+                  "produkt",
+                  produkt_uid,
+                  _val.map()
+                    .set("obraz", produkt_obraz)
+                )
+
+                if db_wynik == 1
+                  _out.json(
+                    _val.map()
+                      .set("wynik", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("wynik", false)
+                      .set("blad", "uid-produkt-nie-istnieje")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### Pobieranie pliku z bazy danych
+
+Aby wyświetlić przechowywany plik, musimy utworzyć usługę, która dostarcza bajty pliku.
+
+W przypadku plików zapisywanych w bazie danych, jak w powyższym przykładzie, sam plik jest umieszczany w storage
+aplikacji, a w bazie danych przechowywana jest tylko końcowa nazwa pliku.
+
+> Storage aplikacji to folder przeznaczony do przechowywania i organizowania struktur ogólnych plików.
+
+Dlatego w powyższym przykładzie pliki bazy danych formularza `Produkt` i pola `Obraz` są
+przechowywane w:
+
+- `storage/database/produkt/obraz/*`
+
+> Netuno automatycznie zarządza nazwą przechowywanego pliku, aby uniknąć zduplikowanych nazw plików.
+
+Aby uzyskać plik, można utworzyć usługę, która wyświetla plik obrazu produktu, na przykład:
+
+<PolyglotCode
+    file="services/produkt/obraz/get"
+    codes={[
+    {
+        lang: 'javascript',
+        code: `
+            const produktUid = _req.getString("uid");
+
+            // DB Form:
+            const dbProdukt = _db.form("produkt")
+                .where(_db.where("uid").equals(produktUid))
+                .first();
+            // Alternatywa z klasycznym DB:
+            // const dbProdukt = _db.get("produkt", produktUid)
+
+            if (dbProdukt == null) {
+                _header.status(404);
+                _out.json(
+                    _val.map()
+                        .set("wynik", false)
+                        .set("blad", "produkt-nie-znaleziony")
+                );
+                _exec.stop();
+            }
+
+            const dbProduktObrazNazwa = dbProdukt.getString("obraz");
+
+            const storageProduktObrazPlik = _storage.database(
+                "produkt",
+                "obraz",
+                dbProduktObrazNazwa
+            );
+
+            if (storageProduktObrazPlik.extension() == "jpg" || storageProduktObrazPlik.extension() == "jpeg") {
+                _header.contentTypeJPG();
+            } else {
+                _header.contentTypePNG();
+            }
+
+            _header.noCache();
+
+            _out.copy(storageProduktObrazPlik.inputStream());
+        `
+    },
+    {
+        lang: 'python',
+        code: `
+            produktUid = _req.getString("uid")
+
+            # DB Form:
+            dbProdukt = (
+                _db.form("produkt")
+                    .where(_db.where("uid").equals(produktUid))
+                    .first()
+            )
+            # Alternatywa z klasycznym DB:
+            # dbProdukt = _db.get("produkt", produktUid)
+
+            if dbProdukt is None:
+                _header.status(404)
+                _out.json(
+                    _val.map()
+                        .set("wynik", False)
+                        .set("blad", "produkt-nie-znaleziony")
+                )
+                _exec.stop()
+
+            dbProduktObrazNazwa = dbProdukt.getString("obraz")
+
+            storageProduktObrazPlik = _storage.database(
+                "produkt",
+                "obraz",
+                dbProduktObrazNazwa
+            )
+
+            if storageProduktObrazPlik.extension() == "jpg" or storageProduktObrazPlik.extension() == "jpeg":
+                _header.contentTypeJPG()
+            else:
+                _header.contentTypePNG()
+
+            _header.noCache()
+
+            _out.copy(storageProduktObrazPlik.inputStream())
+        `
+    },
+    {
+        lang: 'ruby',
+        code: `
+            produkt_uid = _req.getString("uid")
+
+            # DB Form:
+            db_produkt = _db.form("produkt")
+                .where(_db.where("uid").equals(produkt_uid))
+                .first()
+            # Alternatywa z klasycznym DB:
+            # db_produkt = _db.get("produkt", produkt_uid)
+
+            if db_produkt.nil?
+                _header.status(404)
+                _out.json(
+                    _val.map()
+                        .set("wynik", false)
+                        .set("blad", "produkt-nie-znaleziony")
+                )
+                _exec.stop()
+            end
+
+            db_produkt_obraz_nazwa = db_produkt.getString("obraz")
+
+            storage_produkt_obraz_plik = _storage.database(
+                "produkt",
+                "obraz",
+                db_produkt_obraz_nazwa
+            )
+
+            if storage_produkt_obraz_plik.extension() == "jpg" || storage_produkt_obraz_plik.extension() == "jpeg"
+                _header.contentTypeJPG()
+            else
+                _header.contentTypePNG()
+            end
+
+            _header.noCache()
+
+            _out.copy(storage_produkt_obraz_plik.inputStream())
+        `
+    },
+]}
+/>
+
+Zwróć uwagę, że zasób `_storage` ([Storage](/docs/library/resources/storage)) służy do uzyskania pliku:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _storage.database(
+                    "produkt", // Nazwa formularza/tabeli.
+                    "obraz", // Nazwa pola/kolumny.
+                    dbProduktObrazNazwa // Nazwa pliku.
+                );
+            `
+        },
+    ]}
+/>
+
+W bazie danych przechowywana jest tylko nazwa pliku; za pomocą `_storage.database` możemy
+uzyskać sam plik.
+
+### Storage
+
+Możemy zapisać plik bezpośrednio w `storage` aplikacji.
+
+Aby nie mieszać ich z plikami bazy danych, powinniśmy użyć folderu `filesystem`, który
+służy do przechowywania ogólnych plików niezwiązanych z bazą danych.
+
+Aby odebrać plik, w tym przykładzie pokazano, jak plik przesłany w usłudze
+`POST` jest przechowywany bezpośrednio w storage:
+
+<PolyglotCode
+    file="services/plik/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const plik = _req.getFile("plik");
+                _storage.filesystem("server", "przesylanie").ensurePath();
+                plik.save(_storage.filesystem("server", "przesylanie", plik.name()));
+            `
+        },
+    ]}
+/>
+
+Plik jest przechowywany w folderze `storage` aplikacji, w:
+
+- `storage/filesystem/server/przesylanie/*`
+
+> Zasób [Storage](/docs/library/resources/storage) służy do uzyskania ścieżki folderu i pliku:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _storage.filesystem(
+                    "server", // Nazwa podfolderu w filesystem.
+                    "przesylanie", // Nazwa lub ścieżka wewnętrznego podfolderu.
+                    plik.name() // Końcowa nazwa pliku.
+                );
+            `
+        },
+    ]}
+/>
+
+> Zobacz więcej w dokumentacji [Storage](/docs/library/resources/storage).
+
+Aby pobrać plik, w tym przykładzie pokazano, jak bajty pliku
+można uzyskać przez usługę `GET`:
+
+<PolyglotCode
+    file="services/plik/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nazwaPliku = _req.getString("plik");
+
+                const plik = _storage.filesystem(
+                    "server",
+                    "przesylanie",
+                    nazwaPliku
+                ).file();
+
+                if (plik.exists() == false) {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("wynik", false)
+                            .set("blad", "plik-nie-istnieje")
+                    );
+                    _exec.stop();
+                }
+
+                _header.downloadFile(plik.name());
+                _out.copy(plik.input());
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                nazwaPliku = _req.getString("plik")
+
+                plik = _storage.filesystem(
+                    "server",
+                    "przesylanie",
+                    nazwaPliku
+                ).file()
+
+                if plik.exists() == False:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("wynik", False)
+                            .set("blad", "plik-nie-istnieje")
+                    )
+                    _exec.stop()
+
+                _header.downloadFile(plik.name())
+                _out.copy(plik.input())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                nazwa_pliku = _req.getString("plik")
+
+                plik = _storage.filesystem(
+                    "server",
+                    "przesylanie",
+                    nazwa_pliku
+                ).file()
+
+                if plik.exists() == false
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("wynik", false)
+                            .set("blad", "plik-nie-istnieje")
+                    )
+                    _exec.stop()
+                end
+
+                _header.downloadFile(plik.name())
+                _out.copy(plik.input())
+            `
+        },
+    ]}
+/>
+
+### Folder
+
+Możemy zapisać plik bezpośrednio w dowolnym folderze komputera.
+
+W takich przypadkach bardzo przydatne są dwa zasoby:
+
+- `_app` – możemy pobrać dowolny folder lub plik w aplikacji.
+- `_os` – możemy pobrać dowolny folder lub plik na komputerze.
+
+> Zobacz dokumentację odpowiednich zasobów [App](/docs/library/resources/app) i [OS](/docs/library/resources/os);
+> oba zasoby mają metody `folder` i `file`, które pozwalają wskazać odpowiednio ścieżkę folderu lub pliku.
+
+Aby odebrać plik, w tym przykładzie pokazano, jak plik przesłany w usłudze
+`POST` jest przechowywany bezpośrednio w folderze aplikacji:
+
+<PolyglotCode
+    file="services/plik/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const plik = _req.getFile("plik");
+                const folder = _app.folder("tymczasowe");
+                if (folder.exists() == false) {
+                    folder.mkdir();
+                }
+                plik.save(_app.file(\`tymczasowe/\${plik.name()}\`));
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                plik = _req.getFile("plik")
+                folder = _app.folder("tymczasowe")
+                if folder.exists() == False:
+                    folder.mkdir()
+
+                plik.save(_app.file(f"tymczasowe/{plik.name()}"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                plik = _req.getFile("plik")
+                folder = _app.folder("tymczasowe")
+                if folder.exists() == false
+                    folder.mkdir()
+                end
+                plik.save(_app.file("tymczasowe/#{plik.name()}"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val plik = _req.getFile("plik")
+                val folder = _app.folder("tymczasowe")
+                if (folder.exists() == false) {
+                    folder.mkdir()
+                }
+                plik.save(_app.file("tymczasowe/\${plik.name()}"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                final plik = _req.getFile("plik")
+                final folder = _app.folder("tymczasowe")
+                if (folder.exists() == false) {
+                    folder.mkdir()
+                }
+                plik.save(_app.file("tymczasowe/\${plik.name()}"))
+            `
+        },
+    ]}
+/>
+
+Powyższy kod utworzy folder `tymczasowe` w aplikacji i zapisze odebrany plik
+w tym folderze.
+
+Aby pobrać plik, w tym przykładzie pokazano, jak bajty pliku
+można uzyskać przez usługę `GET`:
+
+<PolyglotCode
+    file="services/plik/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nazwaPliku = _req.getString("plik");
+                const plik = _app.file(\`tymczasowe/\${nazwaPliku}\`);
+
+                if (plik.exists() == false) {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("wynik", false)
+                            .set("blad", "plik-nie-istnieje")
+                    );
+                    _exec.stop();
+                }
+
+                _header.downloadFile(plik.name());
+                _out.copy(plik.input());
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                nazwaPliku = _req.getString("plik")
+                plik = _app.file(f"tymczasowe/{nazwaPliku}")
+
+                if plik.exists() == False:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("wynik", False)
+                            .set("blad", "plik-nie-istnieje")
+                    )
+                    _exec.stop()
+
+                _header.downloadFile(plik.name())
+                _out.copy(plik.input())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                nazwa_pliku = _req.getString("plik")
+                plik = _app.file("tymczasowe/#{nazwa_pliku}")
+
+                if plik.exists() == false
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("wynik", false)
+                            .set("blad", "plik-nie-istnieje")
+                    )
+                    _exec.stop()
+                end
+
+                _header.downloadFile(plik.name())
+                _out.copy(plik.input())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val nazwaPliku = _req.getString("plik")
+                val plik = _app.file("tymczasowe/\${nazwaPliku}")
+
+                if (plik.exists() == false) {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("wynik", false)
+                            .set("blad", "plik-nie-istnieje")
+                    )
+                    _exec.stop()
+                }
+
+                _header.downloadFile(plik.name())
+                _out.copy(plik.input())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                final nazwaPliku = _req.getString("plik")
+                final plik = _app.file("tymczasowe/\${nazwaPliku}")
+
+                if (plik.exists() == false) {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("wynik", false)
+                            .set("blad", "plik-nie-istnieje")
+                    )
+                    _exec.stop()
+                }
+
+                _header.downloadFile(plik.name())
+                _out.copy(plik.input())
+            `
+        },
+    ]}
+/>
+
+## Podsumowanie
+
+Jak widać, możemy zintegrować przesyłanie plików z usługami API REST, w tym
+z OpenAPI.
+
+Możemy zapisać plik w bazie danych, w folderze `storage` aplikacji lub w dowolnym folderze
+komputera.
+
+Zobacz dokumentację zasobów użytych w tym samouczku, które pozwalają manipulować plikami:
+
+- [Storage](/docs/library/resources/storage)
+- [App](/docs/library/resources/app)
+- [OS](/docs/library/resources/os)
+
+W bazie danych możemy zapisywać obrazy w polach typu `image` oraz dowolny typ pliku w
+polach typu `file`; sposób zapisywania i uzyskiwania plików jest taki sam w każdym przypadku, zarówno dla obrazu, jak i
+pliku ogólnego.

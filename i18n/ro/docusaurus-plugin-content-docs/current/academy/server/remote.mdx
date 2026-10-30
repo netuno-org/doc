@@ -1,0 +1,545 @@
+---
+id: remote
+title: Remote - Client HTTP
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+## Introducere
+
+De multe ori, în aplicațiile noastre, trebuie să facem cereri HTTP către servicii externe. Acest lucru se poate face folosind resursa `_remote`.
+
+Pentru a face apeluri HTTP intern către alte servicii sau servere interne pe calculator, ori pentru a apela un serviciu de pe internet, utilizarea resursei Remote este esențială.
+
+> Vezi documentația resursei [Remote](/docs/library/resources/remote).
+
+Putem chiar trimite și primi date în JSON și încărca sau descărca fișiere.
+
+## Inițializare
+
+Pentru a putea realiza un apel HTTP, trebuie mai întâi să-l inițializăm; pentru aceasta vom folosi metoda init a `_remote` și apoi vom stoca rezultatul acestei operații într-o variabilă numită `client`, astfel încât să putem referenția cererea:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Suportă trimiterea de parametri HTTP
+                const clientSimplu = _remote.init();
+                // Suportă trimiterea de JSON:
+                const clientJSON = _remote.init().asJSON();
+            `
+        },
+    ]}
+/>
+
+## Configurare
+
+De asemenea, putem defini configurații globale în aplicație; observă acest exemplu complet:
+
+```json
+  ...
+  "remote": { 
+    "exemplu-basic-auth": {
+      "url": "https://exemplo.com/api/rest/exemplo",
+      "form": true,
+      "authorization": {
+        "username": "admin",
+        "password": "parola"
+      },
+      "data": {
+        "parametru1": "valoare 1...",
+        "parametru2": "valoare 2..."
+      }
+    },
+    "exemplu-auth-token": {
+      "urlPrefix": "https://exemplo.com/api",
+      "json": true,
+      "authorization": "Bearer AUTH-TOKEN-AICI",
+      "connectTimeout": 5000,
+      "readTimeout": 60000,
+    }
+  },
+  ...
+```
+
+Putem configura un prefix de URL (`urlPrefix`) sau URL-ul complet (`url`).
+
+Putem stabili dacă cererea trebuie să trimită datele implicit ca Form sau JSON.
+
+Suportă trimiterea de autorizare basic cu login și parolă sau token.
+
+De asemenea, este posibil să definim datele implicite care vor fi trimise (`data`) și timpii limită de conectare (`connectTimeout`) și citire (`readTimeout`).
+
+### Cum se utilizează
+
+Pentru a utiliza resursa Remote cu configurațiile definite în aplicație, este suficient să inițializezi resursa cu cheia configurației, de exemplu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const raspuns = _remote.init("exemplu-basic-auth").post();
+            `
+        },
+    ]}
+/>
+
+Iar dacă este definit URL-ul de prefix:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const client = _remote.init("exemplu-auth-token");
+                const raspuns = client.post(
+                  "/services/incarca-date",
+                  _val.map()
+                    .set("parametru1", "valoare 1")
+                    .set("parametru2", "valoare 2")
+                );
+            `
+        },
+    ]}
+/>
+
+## Cerere HTTP
+
+Vezi cum putem iniția o cerere HTTP folosind resursa [Remote](/docs/library/resources/remote).
+
+### Trimitere JSON
+
+Pentru a trimite date în format JSON trebuie să semnalăm tipul de conținut ca JSON:
+
+Cea mai simplă modalitate de a face acest lucru este utilizarea metodei `asJSON()`, de exemplu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const client = _remote.init().asJSON();
+                client.setURL("http://exemplo.com/salva");
+                const raspuns = client.post(
+                  _val.map()
+                    .set("date", "exemplu")
+                    .set("json", true)
+                );
+            `
+        },
+    ]}
+/>
+
+Astfel, datele vor fi trimise ca JSON pentru metodele HTTP POST și PUT, însă pentru GET și DELETE datele sunt întotdeauna trimise în querystring, deoarece pentru aceste metode protocolul HTTP nu permite un corp cu date.
+
+### Metode HTTP
+
+Nu trebuie să indicăm explicit în antetul apelului metoda HTTP; pentru aceasta referința apelului nostru are o funcție proprie pentru fiecare tip de metodă HTTP:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const client = _remote.init();
+
+                client.setURL("http://exemplo.com");
+
+                client.get(); // pentru apeluri GET
+                client.post(); // pentru apeluri POST
+                client.put(); // pentru apeluri PUT
+                client.delete(); // pentru apeluri DELETE
+            `
+        },
+    ]}
+/>
+
+#### Antet HTTP
+
+Pentru a configura parametrii antetului HTTP, putem defini cheile cu metoda `getHeader()`, de exemplu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const client = _remote.init();
+
+                client.getHeader().set("CHEIE", "VALOARE");
+            `
+        },
+    ]}
+/>
+
+#### URL-ul cererii
+
+Pentru a indica URL-ul cererii, este suficient să îl transmitem ca prim parametru al funcțiilor metodelor HTTP respective:
+
+```js
+const client = _remote.init().asJSON()
+
+client.get("http://exemplo.com") // pentru apeluri GET
+client.post("http://exemplo.com") // pentru apeluri POST
+client.put("http://exemplo.com") // pentru apeluri PUT
+client.delete("http://exemplo.com") // pentru apeluri DELETE
+```
+
+#### Adăugarea de date în cerere
+
+Dacă trebuie să adaugi date în corpul cererii, este suficient să le transmiți ca al doilea parametru al funcției metodei respective:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const client = _remote.init().asJSON();
+
+                client.get("http://exemplo.com", _val.map().set("id_utilizator", 1)); // pentru apeluri GET
+                client.post("http://exemplo.com", _val.map().set("id_utilizator", 1)); // pentru apeluri POST
+                client.put("http://exemplo.com", _val.map().set("id_utilizator", 1)); // pentru apeluri PUT
+                client.delete("http://exemplo.com", _val.map().set("id_utilizator", 1)); // pentru apeluri DELETE
+            `
+        },
+    ]}
+/>
+
+## Răspuns
+
+După ce primim răspunsul cererii, putem citi datele acestuia folosind metoda `json` sau `content`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const client = _remote.init().asJSON();
+
+                const raspuns = client.post(
+                  "http://exemplo.com",
+                  _val.map().set("id_utilizator", 1)
+                );
+
+                if (raspuns.ok()) {
+                  _log.info("Răspuns în JSON", raspuns.json());
+                } else {
+                  _log.info("A eșuat cu statusul: "+ raspuns.statusCode(), raspuns.content());
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                client = _remote.init().asJSON()
+
+                raspuns = client.post(
+                    "http://exemplo.com",
+                    _val.map().set("id_utilizator", 1)
+                )
+
+                if raspuns.ok():
+                    _log.info("Răspuns în JSON", raspuns.json())
+                else:
+                    _log.info(
+                        f"A eșuat cu statusul: {raspuns.statusCode()}",
+                        raspuns.content()
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                client = _remote.init().asJSON()
+
+                raspuns = client.post(
+                    "http://exemplo.com",
+                    _val.map().set("id_utilizator", 1)
+                )
+
+                if raspuns.ok()
+                    _log.info("Răspuns în JSON", raspuns.json())
+                else
+                    _log.info(
+                        "A eșuat cu statusul: #{raspuns.statusCode()}",
+                        raspuns.content()
+                    )
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val client = _remote.init().asJSON()
+
+                val raspuns = client.post(
+                    "http://exemplo.com",
+                    _val.map().set("id_utilizator", 1)
+                )
+
+                if (raspuns.ok()) {
+                    _log.info("Răspuns în JSON", raspuns.json())
+                } else {
+                    _log.info(
+                        "A eșuat cu statusul: \${raspuns.statusCode()}",
+                        raspuns.content()
+                    )
+                }
+            `
+        },
+    ]}
+/>
+
+În răspuns, cu funcția `json()` obținem array-ul sau obiectul furnizat ca Values, iar cu funcția `content()`
+obținem conținut ca text brut sau HTML; numărul codului de status primit se află în `statusCode()`, iar `ok()`
+returnează o valoare booleană adevărată dacă codul de status este în intervalul 200–299.
+
+## Descărcare
+
+Pentru a descărca fișiere, folosim remote cu `asBinary()` pentru a indica faptul că
+transferul trebuie să fie binar.
+
+Vezi acest exemplu complet de serviciu:
+
+<PolyglotCode
+    file="server/services/file-download"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const descarcare = _remote.asBinary()
+                  .get('https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png');
+
+                if (!descarcare.ok()) {
+                  _log.error(\`Status descărcare fișier: \${descarcare.statusCode()}\\n\${descarcare.toString()}\`);
+                  _header.status(500);
+                  _out.json({rezultat: false, eroare: 'descarcare-fisier-esuata'});
+                  _exec.stop();
+                }
+
+                const fisier = descarcare.file();
+                _log.info(\`Numele fișierului descărcat: \${fisier.name()}\`);
+
+                fisier.save(_app.file(\`storage/filesystem/server/\${fisier.name()}\`));
+                fisier.save(_storage.filesystem("server", "altul.png").file());
+                fisier.save(_os.file("/tmp/descarcare.png"));
+                _out.json({rezultat: true});
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                descarcare = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                if not descarcare.ok():
+                    _log.error(f"Status descărcare fișier: {descarcare.statusCode()}\\n{descarcare.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("rezultat", False).set("eroare", "descarcare-fisier-esuata"))
+                    _exec.stop()
+
+                fisier = descarcare.file()
+                _log.info(f"Numele fișierului descărcat: {fisier.name()}")
+
+                fisier.save(_app.file(f"storage/filesystem/server/{fisier.name()}"))
+                fisier.save(_storage.filesystem("server", "altul.png").file())
+                fisier.save(_os.file("/tmp/descarcare.png"))
+                _out.json(_val.map().set("rezultat", True))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                descarcare = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                unless descarcare.ok()
+                    _log.error("Status descărcare fișier: #{descarcare.statusCode()}\\n#{descarcare.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("rezultat", false).set("eroare", "descarcare-fisier-esuata"))
+                    _exec.stop()
+                end
+
+                fisier = descarcare.file()
+                _log.info("Numele fișierului descărcat: #{fisier.name()}")
+
+                fisier.save(_app.file("storage/filesystem/server/#{fisier.name()}"))
+                fisier.save(_storage.filesystem("server", "altul.png").file())
+                fisier.save(_os.file("/tmp/descarcare.png"))
+                _out.json(_val.map().set("rezultat", true))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val descarcare = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                if (!descarcare.ok()) {
+                    _log.error("Status descărcare fișier: \${descarcare.statusCode()}\\n\${descarcare.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("rezultat", false).set("eroare", "descarcare-fisier-esuata"))
+                    _exec.stop()
+                }
+
+                fisier = descarcare.file()
+                _log.info("Numele fișierului descărcat: \${fisier.name()}")
+
+                fisier.save(_app.file("storage/filesystem/server/\${fisier.name()}"))
+                fisier.save(_storage.filesystem("server", "altul.png").file())
+                fisier.save(_os.file("/tmp/descarcare.png"))
+                _out.json(_val.map().set("rezultat", true))
+            `
+        },
+    ]}
+/>
+
+> Metoda `file.save` este folosită de 3 ori intenționat; pentru a afla mai multe despre `_app.file`, `_storage` și `_os.file`,
+> vezi tutorialul despre [Manipularea fișierelor și folderelor](/docs/academy/server/files-manipulation).
+
+## Încărcare
+
+Pentru a trimite un fișier structurat ca formular în format multipart, folosim `asMultipartFormData()`.
+
+Vezi exemplul complet al unui serviciu:
+
+<PolyglotCode
+    file="server/services/file-upload"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fisier = _app.file("public/images/logo.png");
+
+                const incarcare = _remote.asMultipartFormData()
+                  .post(
+                    'http://localhost:9000/services/file-receiver',
+                    _val.map()
+                      .set("fisier", fisier)
+                  );
+
+                if (incarcare.ok()) {
+                  _log.info(\`Încărcat cu succes: \${fisier.name()}\`);
+                  _out.json({rezultat: true});
+                } else {
+                  _log.error(\`Status încărcare fișier: \${incarcare.statusCode()}\\n\${incarcare.toString()}\`);
+                  _header.status(500);
+                  _out.json({rezultat: false, eroare: 'incarcare-fisier-esuata'});
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                fisier = _app.file("public/images/logo.png")
+
+                incarcare = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("fisier", fisier)
+                );
+
+                if incarcare.ok():
+                    _log.info(f"Încărcat cu succes: {fisier.name()}")
+                    _out.json(_val.map().set("rezultat", True))
+                else:
+                    _log.error(f"Status încărcare fișier: {incarcare.statusCode()}\\n{incarcare.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("rezultat", False).set("eroare", "incarcare-fisier-esuata"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fisier = _app.file("public/images/logo.png")
+
+                incarcare = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("fisier", fisier)
+                );
+
+                if incarcare.ok()
+                    _log.info("Încărcat cu succes: #{fisier.name()}")
+                    _out.json(_val.map().set("rezultat", true))
+                else
+                    _log.error("Status încărcare fișier: #{incarcare.statusCode()}\\n#{incarcare.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("rezultat", false).set("eroare", "incarcare-fisier-esuata"))
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val fisier = _app.file("public/images/logo.png")
+
+                val incarcare = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("fisier", fisier)
+                );
+
+                if (incarcare.ok()) {
+                    _log.info("Încărcat cu succes: \${fisier.name()}")
+                    _out.json(_val.map().set("rezultat", true))
+                } else {
+                    _log.error("Status încărcare fișier: \${incarcare.statusCode()}\\n\${incarcare.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("rezultat", false).set("eroare", "incarcare-fisier-esuata"))
+                }
+            `
+        }
+    ]}
+/>
+
+Observă că în exemplul de mai sus fișierul este trimis către un alt serviciu; vezi cum poate fi implementat în Netuno acest alt serviciu care primește fișierul:
+
+<PolyglotCode
+    file="server/services/file-receiver"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fisier = _req.getFile("fisier");
+                _log.info(\`Numele fișierului primit: \${fisier.name()}\`);
+                fisier.save(_storage.filesystem("server", "primit.png").file());
+                _out.json({rezultat: true});
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                fisier = _req.getFile("fisier")
+                _log.info(f"Numele fișierului primit: {fisier.name()}")
+                fisier.save(_storage.filesystem("server", "primit.png").file())
+                _out.json(_val.map().set("rezultat", True))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fisier = _req.getFile("fisier")
+                _log.info("Numele fișierului primit: #{fisier.name()}")
+                fisier.save(_storage.filesystem("server", "primit.png").file())
+                _out.json(_val.map().set("rezultat", true))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val fisier = _req.getFile("fisier")
+                _log.info("Numele fișierului primit: \${fisier.name()}")
+                fisier.save(_storage.filesystem("server", "primit.png").file())
+                _out.json(_val.map().set("rezultat", true))
+            `
+        }
+    ]}
+/>
+
+## Concluzie
+
+Cu resursa [Remote](/docs/library/resources/remote) putem integra API-uri externe, putem exporta, importa sau sincroniza date.
+
+Putem chiar integra servicii implementate în alte tehnologii, ceea ce permite realizarea unor operații specifice oferite de alte limbaje.

@@ -1,0 +1,81 @@
+---
+sidebar_position: 1
+id: installation
+title: Instalación rápida
+sidebar_label: Instalación rápida
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Introducción
+
+Bienvenido a la guía de instalación de **Netuno**, la plataforma *low-code*, políglota y *open source* desarrollada para acelerar la creación de tus proyectos y facilitar la configuración del entorno de desarrollo.
+
+Aquí construyes aplicaciones full-stack robustas de forma ágil, combinando la velocidad del low-code con la potencia de la codificación tradicional.
+
+## Instalación rápida
+
+La forma más sencilla de instalar Netuno es mediante el script de instalación que ofrece la plataforma. Basta con ejecutar los comandos en la terminal según tu sistema operativo.
+
+<Tabs groupId="os">
+    <TabItem value="linux-mac" label="Linux o macOS" default>
+
+```bash
+bash <(curl -fsSL https://netu.no/install.sh)
+```
+
+    </TabItem>
+    <TabItem value="windows" label="Windows">
+
+```powershell
+powershell -c "irm https://netu.no/install.ps1|iex"
+```
+
+    </TabItem>
+</Tabs>
+
+## Iniciar la aplicación DEMO
+
+Al finalizar la instalación, ejecuta el siguiente comando dentro de la carpeta `netuno` para iniciar el servidor con la aplicación de demostración:
+
+```bash
+./netuno server
+```
+
+### Abrir la aplicación en el navegador
+
+Tras el inicio, el navegador se abrirá automáticamente con la dirección del servidor local. Si esto no ocurre, accede manualmente a una de las siguientes direcciones:
+
+- [http://demo.local.netu.no:9000](http://demo.local.netu.no:9000)
+- [http://localhost:9000](http://localhost:9000)
+
+## Detener el servidor
+
+Para detener el servidor, pulsa en la terminal las teclas:
+
+**CTRL + C**
+
+Para volver a iniciarlo, utiliza el mismo comando `./netuno server`.
+
+## Próximos pasos
+
+Algunas ideas de lo que puedes hacer ahora.
+
+### Principiante
+
+Si eres nuevo en Netuno, empieza creando tu primer formulario:
+
+[Crear mi primer formulario](/docs/academy/demonstration/config)
+
+### Tutoriales
+
+Explora tutoriales prácticos de desarrollo con Netuno:
+
+[Ver tutoriales de desarrollo](/docs/get-started/tutorials)
+
+### Proyectos
+
+Descubre cómo aplicar Netuno en proyectos reales de negocio:
+
+[Explorar proyectos y casos de uso](/docs/academy/understand/backoffice)

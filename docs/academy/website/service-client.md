@@ -1,22 +1,22 @@
 ---
 sidebar_position: 4
 id: service-client
-title: Service Client for HTTP and API REST
-sidebar_label: Service Client
+title: Client for HTTP Services and REST API
+sidebar_label: Client for Services
 ---
 
 ## Introduction
 
-The Netuno technology ecosystem provides several modules on NPM, such as:
+In the Netuno technology ecosystem, some modules are provided on NPM, such as:
 
 - [Service Client](https://www.npmjs.com/package/@netuno/service-client)
 
-> See alo the [Service Client GIT](https://github.com/netuno-org/service-client).
+> See also the [Service Client GIT repository](https://github.com/netuno-org/service-client).
 
-Este módulo serve para realizar as integrações com os serviços desenvolvidos no Netuno, ou seja, os endpoints 
-da API REST desenvolvidos no backend do Netuno, dentro da pasta `server/services` nas aplicações Netuno.
+This module is used to perform integrations with services developed in Netuno, that is, the REST API endpoints
+developed in the Netuno backend, inside the `server/services` folder in Netuno applications.
 
-É comum no desenvolvimento dos serviços utilizar programas como:
+It is common when developing services to use programs such as:
 
 - [Pororoca](https://pororoca.io/) 
 - [Yaak](https://yaak.app/)
@@ -27,25 +27,27 @@ da API REST desenvolvidos no backend do Netuno, dentro da pasta `server/services
 - [Insomnia](https://insomnia.rest/)
 - [Postman](https://www.postman.com/)
 
-To perform HTTP request tests on services.
+To test HTTP requests against the services.
 
-In the frontend code to integrate these services, we could use fetch, requests, AXIOS, and many others.
+In frontend code, to integrate these services, we could use fetch, requests, AXIOS, and many others.
 
-However, Netuno provides its own client, which works in both JavaScript frontend development and NodeJS backend development.
+However, Netuno provides its own client, which works in JavaScript frontend development as
+well as in NodeJS backend development.
 
-The reason Netuno has its own HTTP client implementation for services is to provide greater practicality, simplifying code implementation and ensuring greater agility in development.
+The reason Netuno has its own HTTP client implementation for services is to provide greater
+convenience, simplifying code implementation and ensuring greater agility in development.
 
 ## Installation
 
-Installing the services client is like installing any other module.
+Installing the service client is like installing any other module.
 
-Where we have the `package.json` file we execute the installation command:
+Where we have the `package.json` file, we run the installation command:
 
 ```bash
 bun add @netuno/service-client
 ```
 
-## Importing
+## Import
 
 To import the service client in modern JavaScript development:
 
@@ -61,15 +63,15 @@ const _service = require('@netuno/service-client');
 
 Note that the internal name in the code is `_service`.
 
-> By default, Neptune uses `_` as a prefix to indicate that it is something internal or specific, such as a 
-> resource or a tool, within its ecosystem.
+> By default, Netuno uses `_` as a prefix to indicate that something is internal or specific, such as a resource
+> or a tool from its ecosystem.
 
-Therefore, to maintain consistency, we should always use the name `_service`.
+Therefore, to keep the standard, we should always use the name `_service`.
 
 ## Configuration
 
-The configuration is done globally; it is defined only once. It is advisable to execute it at an initial point in 
-the overall code.
+Configuration is done globally; the configuration is defined once,
+and it is convenient to run it at an initial point in the general code.
 
 This will be the minimum configuration:
 
@@ -79,12 +81,15 @@ _service.config({
 });
 ```
 
-In other words, it defines the prefix for service addresses, which avoids the need to always include the complete 
-URL, so when calling services we can indicate only the rest of the URL.
+That is, it defines the prefix for service addresses, which avoids
+the need to always include the full URL, so in service
+calls we can indicate only the rest of the URL.
 
-### Full Setup
+### Complete Configuration
 
-We can configure default values for all service calls, and in each service call we can override these values.
+We can configure default values for all service
+calls, and in each service call we can override
+these values.
 
 See all the parameters we can configure:
 
@@ -111,60 +116,67 @@ It is the global URL prefix.
 
 #### url
 
-It's the part of the URL that's added to the prefix, the specific address of the service.
+It is the part of the URL that is appended to the prefix, the specific
+address of the service.
 
 #### method
 
-The HTTP method that will be used in the HTTP request is, by default, `GET`.
+The HTTP method that will be used in the HTTP request, by
+default it is `GET`.
 
 #### credentials
 
 Defines the behavior of credentials in HTTP calls:
 
 - `omit` - Never sends or receives credentials.
-- `same-origin` - Only sends and includes credentials when requests are on the same domain.
-- `include` - Must always include credentials, even if the domain is different.
+- `same-origin` - Only sends and includes credentials when
+requests are made to the same domain.
+- `include` - Should always include credentials, even if the domain is different.
 
-By default, the value is `include`, as it makes the most sense in
-standard development, the backend may or may not be in the same domain
-it depends on the architecture, and in local development it sometimes differs
-from production, so to avoid surprises we recommend using `include`.
+By default, the value is `include`, because it makes the most sense in
+standard development; the backend may or may not be on the same domain
+depending on the architecture, and in local development it sometimes differs
+from production, so to avoid surprises we recommend using
+`include`.
 
 #### headers
 
-In the `headers` section, we can define keys and values in the HTTP header.
+In `headers` we can define keys and values in the HTTP header.
 
-By default, it is defined that data will be sent and received in JSON format.
+By default, it is defined that data will be sent and received in
+JSON format.
 
 #### start
 
-Callback function executed when the HTTP request is about to begin.
+A `callback` function executed when the HTTP request is about to start.
 
 #### success
 
-The `callback` function is executed when the HTTP request has been successfully executed on the backend server.
+A `callback` function executed when the HTTP request was executed
+successfully on the backend server.
 
-The response content is obtained from the function's first argument.
+The response content is obtained in the first argument of the function.
 
 #### fail
 
-The `callback` function is executed when the HTTP request generates an error.
+A `callback` function executed when the HTTP request generated some
+error.
 
-The error details are obtained from the function's first argument.
+The error details are obtained in the first argument of the function.
 
 #### end
 
-The `callback` function is executed when the HTTP request is completed.
+A `callback` function executed when the HTTP request has completed.
 
-It is always executed, regardless of whether the request was successful or resulted in an error.
+It is always executed, regardless of whether there was success or error.
 
 ## Usage
 
-To execute a service with an HTTP request, we define the values of the parameters that configure the service 
-requirements.
+To execute a service with an HTTP request, we define the values
+of the parameters that configure the requirements of the service.
 
-In the `data` key, we send the data itself, that is, all the data parameters that we will send to the backend 
-service.
+In the `data` key we send the data itself, that is, all the data
+parameters that we will send to the backend service.
 
 See the basic example of a request:
 
@@ -173,35 +185,37 @@ import _service from '@netuno/service-client';
 
 _service({
   url: "my-service",
-  data: { id: 1, exemplo: "Hi backend." },
+  data: { id: 1, example: "Hello backend." },
   start: () => {
-    console.log("The request will begin.");
+    console.log("The request is about to start.");
   },
   success: (response) => {
     if (response.text) {
-      console.info("Text response:", response.text);
+      console.info("Responded in text:", response.text);
     }
     if (response.json) {
-      console.info("JSON response:", response.json);
+      console.info("Responded in JSON:", response.json);
     }
   },
   fail: (error) => {
-    console.error("It failed due to error:", error);
+    console.error("Failed with error:", error);
   },
   end: () => {
-    console.log("The request has been completed.");
+    console.log("The request has completed.");
   }
 });
 ```
 
-The final URL will take into account the prefix defined globally in the general configuration.
+The final URL will take into account the prefix defined globally in the
+general configuration.
 
-Since the HTTP method was not defined, it will be sent using the default method defined in the general 
-configuration, which by default is `GET`.
+Since the HTTP method was not defined, it will be sent with the
+default method defined in the general configuration, which by
+default is `GET`.
 
 ### Simple
 
-A simple example of how to execute a `POST` request:
+Simple example of how to execute a `POST` request:
 
 ```js
 import _service from '@netuno/service-client';
@@ -209,9 +223,9 @@ import _service from '@netuno/service-client';
 _service({
   method: "POST",
   url: "product",
-  data: { nome: "Straw Hat", quantidade: 20 },
+  data: { name: "Straw Hat", quantity: 20 },
   success: ({json}) => {
-    console.info("Product successfully created:", json);
+    console.info("Product created successfully:", json);
   },
   fail: (error) => {
     console.error("Failed to create product:", error);
@@ -221,21 +235,21 @@ _service({
 
 ### Form
 
-When using forms, we can load the FormData class with the form's content, see the example:
+When we use forms, we can load the FormData class with the form contents; see the example:
 
 ```js
 import _service from '@netuno/service-client';
 
-const formData = new FormData(document.getElementById("formulario"));
+const formData = new FormData(document.getElementById("form"));
 _service({
   method: "PUT",
-  url: "client",
+  url: "customer",
   data: formData,
   success: ({json}) => {
     if (json.result === true) {
-      alert("Client updated successfully.");
+      alert("Customer updated successfully.");
     } else {
-      alert("Invalid reponse.");
+      alert("Invalid response.");
     }
   },
   fail: (e) => {
@@ -246,7 +260,7 @@ _service({
 
 ### Upload
 
-A simple example of how to upload files using the `FormData` class:
+Simple example of how to upload files using the `FormData` class:
 
 ```js
 import _service from '@netuno/service-client';
@@ -260,22 +274,23 @@ _service({
   url: "/upload",
   data: formData,
   success: ({json}) => {
-    alert('File sent successfully.');
+    alert('File uploaded successfully.');
   },
   fail: (e) => {
-    console.log("Reponse Error", e);
+    console.log("Error in Response", e);
   }
 });
 ```
 
 ### Download
 
-We can download files dynamically generated by services in an integrated way within the context of the page.
+We can download files generated dynamically by services in an integrated way within the
+page context.
 
-#### BLOB - Large Binary Object
+#### BLOB - Binary Large Object
 
-To download binary responses, we must set `blob` to the value `true` in the base parameterization,
-and obtain the bytes generated in the response's `blob`.
+To download binary responses, we must define `blob` with the value `true` in the base parameters,
+and we obtain the generated bytes in the response's `blob`.
 
 ```js
 import _service from '@netuno/service-client';
@@ -284,7 +299,7 @@ _service({
   url: "/download",
   method: 'POST',
   data: { uid: "98e25c93-d662-4b5c-8b89-d19b42e2c998", type: "pdf" },
-  blob: true, // It defines the response as binary.
+  blob: true, // Defines that the response is binary.
   success: ({blob}) => {
     if (blob) {
       const file = window.URL.createObjectURL(blob);
@@ -309,7 +324,7 @@ Install the [DownloadJS](https://www.npmjs.com/package/downloadjs) dependency:
 bun add downloadjs
 ```
 
-In the code, it can be used as follows:
+In the code it can be used as follows:
 
 ```js
 import _service from '@netuno/service-client';
@@ -344,23 +359,23 @@ _service({
 
 ### URL for Services
 
-There are situations where we need to generate service URLs, for example, when there are services that provide 
-resources that need to be integrated into the HTML or CSS.
+There are situations where we need to generate the URL for services, for example, when there are services that provide resources
+that must be integrated into HTML or CSS.
 
-A clear example is the Avatar; the user defines their avatar image, and to display it we can generate the 
-final URL as follows:
+A clear example is the Avatar; the user defines their avatar image, and to display it we can generate the final URL
+as follows:
 
 ```js
 const avatarLink = _service.url(`/profile/avatar?uid=${user.uid}`)
 ```
 
-The generated URL can be injected into the HTML or into a CSS property, such as the background.
+The generated URL can be injected into HTML or into a CSS property, such as background.
 
 ### React & Ant.Design
 
 Since we use React and Ant.Design a lot, here are some useful tips.
 
-Classic imports:
+The classic imports:
 
 ```js
 import React, {useState} from "react";
@@ -374,18 +389,18 @@ Define the processing state:
 const [loading, setLoading] = useState(false);
 ```
 
-Implementation of the event to save a form, which will send the object with the filled values in JSON format:
+Implementation of the event to save a form, which will send the object with the filled-in values in JSON format:
 
 ```js
 const onFinish = (values) => {
   const onFail = () => {
     notification.error({
       title: 'Error',
-      description: 'The data could not be saved.'
+      description: 'Could not save the data.'
     });
   };
   _service({
-    url: '/client',
+    url: '/services/customer',
     method: 'POST',
     data: values,
     start: () => {
@@ -395,7 +410,7 @@ const onFinish = (values) => {
       if (json.result === true) {
         notification.success({
           title: 'Success',
-          description: 'The data was saved successfully.'
+          description: 'Data saved successfully.'
         });
         return;
       }
@@ -412,8 +427,8 @@ const onFinish = (values) => {
 };
 ```
 
-In the Ant.Design form component, the action property that sends the data is defined using the previously 
-implemented event, for example:
+In the Ant.Design form component, you define the action property that sends the data with the event
+previously implemented, for example:
 
 ```jsx
   <Form onFinish={onFinish}>
@@ -423,7 +438,8 @@ implemented event, for example:
 
 #### Upload
 
-Here is a complete example of how to upload files using a form in Ant.Design and with FormData:
+Here is a complete example of how to upload files using an Ant.Design form and
+FormData:
 
 ```jsx
 import {useState} from 'react';
@@ -446,15 +462,15 @@ function UploadForm() {
       },
       success: () => {
         notification.success({
-          title: 'Upload Form',
-          description: 'Your data was successfully saved.'
+          title: 'Form',
+          description: 'Your data was saved successfully.'
         });
       },
       fail: (e) => {
         console.error("Upload Form Failed", e);
         notification.error({
-          title: 'Upload Form',
-          description: 'Unable to save your data.'
+          title: 'Form',
+          description: 'Could not save your data.'
         });
       },
       end: () => {
@@ -465,12 +481,12 @@ function UploadForm() {
   return (
     <Form onFinish={onFinish} layout="vertical">
       <Form.Item label="Title" name="title"
-        rules={[{ required: true, message: 'Please input your title.' }]}
+        rules={[{ required: true, message: 'Please enter the title.' }]}
       >
         <Input />
       </Form.Item>
       <Form.Item label="File" name="file"
-        rules={[{ required: true, message: 'Please choose your file.' }]}
+        rules={[{ required: true, message: 'Please enter the file.' }]}
       >
         <Upload listType="text" maxCount={1}>
           <button type="button" style={{color: 'inherit', cursor: 'inherit', border: 0, background: 'inherit'}}>
@@ -481,7 +497,7 @@ function UploadForm() {
       </Form.Item>
       <Form.Item label={null}>
         <Button type="primary" htmlType="submit" loading={loading}>
-          Submit
+          Save
         </Button>
       </Form.Item>
     </Form>
@@ -493,16 +509,16 @@ export default UploadForm;
 
 ## Conclusion
 
-The Service Client streamlines backend integration for retrieving and sending data and files.
+The Service Client speeds up backend integration to obtain and send data and files.
 
-While it's possible to use any other native method or dependency to perform these operations, the Service Client 
-is designed to facilitate and expedite integrations, being flexible and highly intuitive.
+It is possible to use any other native method or another dependency to perform these operations; however, the
+Service Client is developed to make integrations easier and faster, being flexible and very intuitive.
 
-The main goal of Netuno providing the Service Client within its ecosystem is to ensure clear and fast development.
+The main purpose of Netuno providing the Service Client in its ecosystem is to ensure that development is
+clear and fast.
 
-If you encounter any problems while using the Service Client, please report them in the project's 
-[Issues](https://github.com/netuno-org/service-client/issues).
+When using the Service Client, if you encounter any problem, report it in the project's [Issues](https://github.com/netuno-org/service-client/issues).
 
-⭐ Remember to star the project on GitHub:
+⭐ Remember to give your star on the project's GitHub:
 
 - [netuno-org/service-client](https://github.com/netuno-org/service-client).

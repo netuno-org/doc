@@ -1,49 +1,50 @@
 ---
-sidebar_position: 6
-id: polyglot
+sidebar_position: 4
+id: polyglota
 title: Polyglot
 ---
 
-_Netuno_ has polyglot service which allows you to run services simultaneously that are built in different languages, database and operating systems, without increase of processing weight.
+Netuno is polyglot at both the database level and the programming code level, but also at the operating system level.
 
-With all these options there's no excuses to not be implemented into your Business.
+With all this diversity, the options for where it can be used increase.
 
-All these advantages, makes easier the development as _Netuno_ can adapt himself in any situation and environment.
+By supporting various databases, programming languages, and operating systems, it facilitates development by adapting to each situation while ensuring a cohesive environment for development work.
 
-## DataBase
+## Database
 
-_Netuno_ also can integrated the most types of Database and be developed in different programming languages in the same project.
+It can be used to integrate several different types of databases and can even be developed with different programming languages in the same project.
 
-Integrating different databases is very common to perform data integration when doing queries or changing data in another database system's.
+Integrating different databases is quite common to perform data integration when querying or changing data in another system's database.
 
-![Logos das Bases de Dados](/docs/assets/business/databases.jpg "Multiplas Bases de Dados")
+![Database Logos](/docs/assets/business/databases.jpg "Multiple Databases")
 
-Below the followinf list of database supported with _Netuno_:
+Netuno supports the following databases:
 
 - H2 Database
 - PostgreSQL
 - MariaDB
+- MySQL
 - Microsoft SQL Server
 - Oracle
 
 ## Programming Languages
 
-For the user cannot make sense to use multiple proragramming languages and mix it up, however can bring some benefits and advantages as this allows for easy modification by both the developers so they can test out new interface designs without messing with the highly complex physics and graphics engines underneath.
+Supporting different programming languages may not seem very interesting in the sense of mixing programming languages, but it is possible and does not mean it should be done that way.
 
-Projects end up using multiple languages for six main reasons:
+In practice, it is often complicated to carry out projects where there is a dominant technology limited to one programming language; therefore, one must find people exclusively skilled in that particular programming language.
 
-- Cost benefits of reusing code written in other languages;
-- The need to include and accommodate legacy code;
-- Availability of coders for specific languages;
-- The need for special languages for specialty needs;
-- Legacy language biases;
-- Poor project management (unplanned multi-language use).
+With Netuno, we end up having a larger offering, where all the work is not wasted if it becomes necessary to use a new programming language resulting from a strategy change, a lack of skilled technicians, or to gain greater agility when developing something specific, among other situations that may make sense.
 
-With _Netuno_ none of the projects are wasted and if needed a new programming language because somehow the company strategy has changed or there is a lack of staff to develope technical projects or any other specific situation, any staff will be able to take the project and analyze and move foward with it as is a low-code solution, resources end up to be used in the same independent way and a very similar one to another.
+As a rule, this would be unthinkable because maintaining a system with several programming languages starts to become a concern, but since this is low-code, that concern becomes much less relevant, because:
 
-![Logos das Linguagens de Programação](/docs/assets/business/languages.jpg "Linguagens de programação")
+* Programming languages end up being similar in terms of logic and algorithm.
+* The programming language may be different, but Netuno's resources are the same and are used in the same way regardless of the language.
 
-_Netuno_ offers developement with the following programming languages:
+Thus, even if a technician is very accustomed to working with one programming language, nothing will prevent them from performing maintenance in another; if they need to extend their involvement much further or even redo it, they can choose to develop in their preferred language and integrate their development into the language already in use.
+
+![Programming Language Logos](/docs/assets/business/languages.jpg "Programming languages")
+
+Netuno supports development in the following programming languages:
 
 - Groovy
 - Java
@@ -54,16 +55,14 @@ _Netuno_ offers developement with the following programming languages:
 
 ## Operating Systems
 
-_Netuno_ ensure the correct functioning of developments across the board and organize in environments of development, testing, quality, production as is supported by multilple Operating Systems.
+By working with multiple operating systems and supporting environment configurations, Netuno ensures the correct operation of development work across the board and allows organizing them into development, test, quality, production, and other environments.
 
-![Logos dos Sistemas Operacionais](/docs/assets/business/operationsystems.jpg "Multiplos Sistemas Operacionais")
+Changing the operating system or environment makes no difference to the correct operation of Netuno and applications.
 
-Operating Systems supported by _Netuno_:
+![Operating System Logos](/docs/assets/business/operationsystems.jpg "Multiple Operating Systems")
+
+The operating systems supported by Netuno are:
 
 * Linux
 * Mac OS X
 * Windows
-
-
-
-

@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Blog",
+    "description": "Tytuł bloga używany w SEO"
+  },
+  "description": {
+    "message": "Blog",
+    "description": "Opis bloga używany w SEO"
+  },
+  "sidebar.title": {
+    "message": "Ostatnie wpisy",
+    "description": "Etykieta lewego paska bocznego"
+  }
+}

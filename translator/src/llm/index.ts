@@ -1,5 +1,7 @@
 import OpenAI from "openai";
 
+import { LIBRARY_FOLDERS } from "../library";
+
 export const deepseek = new OpenAI({
   baseURL: "https://api.deepseek.com",
   apiKey: process.env.DEEPSEEK_API_KEY,
@@ -26,8 +28,26 @@ const PROTECT_PATTERNS: RegExp[] = [
 
 const PLACEHOLDER = /%%URL_(\d+)%%/g;
 
-function protectReferences(content: string) {
+// http://, https://, mailto:, ...: their anchors don't come from our headings
+const EXTERNAL = /^[a-z][a-z0-9+.-]*:/i;
+
+// Library pages are copied, not translated, so their anchors stay as they are
+const LIBRARY = new RegExp(`/library/(?:${LIBRARY_FOLDERS.join("|")})/`);
+
+export function protectReferences(content: string) {
   const references: string[] = [];
+
+  // The same reference always gets the same placeholder, so the model
+  // can't lose one by merging repeated links
+  function protect(reference: string) {
+    let index = references.indexOf(reference);
+
+    if (index === -1) {
+      index = references.push(reference) - 1;
+    }
+
+    return `%%URL_${index}%%`;
+  }
 
   const protectedContent = content
     .split(FENCE)
@@ -38,8 +58,18 @@ function protectReferences(content: string) {
       return PROTECT_PATTERNS.reduce(
         (text, pattern) =>
           text.replace(pattern, (match) => {
-            references.push(match);
-            return `%%URL_${references.length - 1}%%`;
+            const anchorIndex = match.indexOf("#");
+
+            if (anchorIndex === -1 || EXTERNAL.test(match) || LIBRARY.test(match)) {
+              return protect(match);
+            }
+
+            // Internal anchors follow the translated headings, so the model sees them
+            const anchor = match.slice(anchorIndex);
+
+            return anchorIndex === 0
+              ? anchor
+              : protect(match.slice(0, anchorIndex)) + anchor;
           }),
         part,
       );
@@ -66,7 +96,7 @@ function restoreReferences(content: string, references: string[]) {
   );
 }
 
-async function translate({
+async function translateOnce({
   content,
   language,
 }: Props): Promise<string> {
@@ -96,6 +126,33 @@ They stand for real files, images and pages that exist on disk.
 - Never translate, rename, reformat, merge, split or remove a placeholder.
 - Never replace a placeholder with a URL or a path.
 
+ANCHORS:
+A link target may contain a heading anchor: "#text" right after a
+placeholder (%%URL_3%%#campos-comuns) or alone ([label](#organização)).
+The anchor is generated from a Portuguese heading, so it MUST be translated
+to the anchor Docusaurus generates from that heading translated to ${language}:
+- lowercase
+- spaces become "-"
+- punctuation is removed (. , : ; ( ) ? ! ' " / etc.)
+- accented letters and non-Latin scripts are kept as they are: never
+  remove accents (é stays é, ç stays ç, ã stays ã)
+- digits are kept
+
+Examples when translating to English:
+#campos-comuns -> #common-fields
+%%URL_2%%#7-arranque-automático-do-website-opcional -> %%URL_2%%#7-automatic-website-startup-optional
+#infojson-e-configjson -> #infojson-and-configjson
+
+Example when translating to French (accents kept):
+#7-arranque-automático-do-website-opcional -> #7-démarrage-automatique-du-site-web-facultatif
+
+- When the heading is in this document, the anchor MUST match the slug of
+  its translated heading exactly.
+- Translate the same anchor the same way everywhere in the document.
+- Keep the placeholder before the anchor unchanged.
+- Never translate a heading anchor written explicitly as {#anchor}, nor
+  links pointing to it.
+
 GENERAL RULES:
 - Translate all human-readable text naturally.
 - Preserve the exact Markdown and MDX structure.
@@ -121,7 +178,7 @@ Translate:
 - example identifiers written inside bold text
 
 Do NOT translate:
-- link and image targets
+- link and image targets (except the #anchor part, see ANCHORS)
 - src / href attribute values
 - MDX import / require paths
 - front matter keys and the values of: id, slug, sidebar_position, image
@@ -279,6 +336,7 @@ preserve the protected content exactly.
 JSON:
 - Preserve JSON syntax.
 - Preserve technical/configuration keys.
+- Never translate the values of: slug, type, position, id.
 - Translate human-readable values.
 - Translate example identifiers used as values.
 - Keep the resulting JSON valid.
@@ -299,7 +357,7 @@ Do not assume that text inside backticks, code fences, paths, snake_case,
 kebab-case or camelCase must be preserved.
 
 Determine whether it is:
-1. a placeholder %%URL_n%% -> copy it exactly
+1. a placeholder %%URL_n%% -> copy it exactly (translate a #anchor after it)
 2. a reference to a real file of this site -> preserve it
 3. a framework/system/external identifier -> preserve it
 4. a user-defined example identifier -> translate it
@@ -321,7 +379,39 @@ Return ONLY the translated content.
     throw new Error("DeepSeek não retornou conteúdo.");
   }
 
-  return restoreReferences(translatedContent, references);
+  return restoreReferences(
+    unwrapFence(content, translatedContent),
+    references,
+  );
+}
+
+const WRAPPING_FENCE = /^\s*(```|~~~)[\w-]*\r?\n([\s\S]*?)\r?\n\1\s*$/;
+
+// The model sometimes returns the whole document inside a ```mdx block,
+// which hides the front matter and the imports
+function unwrapFence(source: string, translated: string) {
+  const match = translated.match(WRAPPING_FENCE);
+
+  if (!match || WRAPPING_FENCE.test(source)) {
+    return translated;
+  }
+
+  return match[2] + "\n";
+}
+
+const ATTEMPTS = 3;
+
+// The model sometimes drops a placeholder, a new attempt usually keeps them all
+async function translate(props: Props): Promise<string> {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      return await translateOnce(props);
+    } catch (error) {
+      if (attempt >= ATTEMPTS) {
+        throw error;
+      }
+    }
+  }
 }
 
 export default translate;

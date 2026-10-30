@@ -1,17 +1,17 @@
 ---
 id: introduction 
 title: Introduction
-sidebar_label: Introduction
+sidebar_label: Introduction 
 sidebar_position: 1
 ---
 
-Netuno is made in Java, so we can create new functionalities using Java.
+Netuno is developed in Java, so from Java we can create new functionalities.
 
-For example, we can create new native services, or even new low-code programming resources that are going to
-be available in every polyglot programming languages, like JavaScript, Python, Ruby, Groovy and Kotlin.
+For example, we can create new native services, or even new low-code programming features that are
+available in all polyglot programming languages, such as JavaScript, Python, Ruby, Groovy and Kotlin.
 
-We can also create multi-applicational web services that become available in every Netuno application.
+In Java we can also create multi-application web services that are available in all Netuno applications.
 
-Any Java ecosystem technique or library can be used to create any kind of functionality.
+Any technique or library from the Java ecosystem can be used to create any type of functionality.
 
-> We advise having basic notions of Java starting this tutorial.
+> We advise that before starting this tutorial you have some basic knowledge of _Java_.

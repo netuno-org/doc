@@ -1,32 +1,32 @@
 ---
 id: h2database
-title: H2 Database
+title: H2Database
 sidebar_label: H2Database
 ---
 
 ## Introduction
 
-H2 Database has many advantages: an open-source and a very fast database engine, also has strong security features and Embedded and Server mode, Clustering support.
+The big advantage of H2Database is that it does not require a database server because it allows running embedded within applications.
 
-> Therefore, H2 Database is recommended only for developement and tests and in the process has to be used another type of database more compatible.
+> H2Database is recommended only for development and testing purposes; in production, another more reliable database type should be used.
 
-## Recomendations and Limitations
+## Recommendations and Limitations
 
-H2 Database will not allow more than a process to access the database file.
+H2Database does not allow more than a single process to access the database file.
 
-Thus, in case the user needs to manipulate any file or have access throught the web console, they will need to stop _Netuno_.
+So if you need to manipulate the file or access it through the web console, you must stop Netuno from running.
 
-## Database Filesg
+## Database Files
 
-H2 Database can be found in the folder `dbs`, which is inside the `app`. See the below example:
+H2Database database files are stored inside the `dbs` folder, which is inside the application, for example:
 
 - `apps/my_app/dbs`
 
-To give another name to the Database, the user will need to rename the file and amend the applications settings. See the example below into de **Development Enviroment** 👇
+If you want to rename the database, change the file name and update the application settings, for example in the _development_ environment:
 
 - `config/_development.json`
 
-This adjusment should be made inside the configuration area as can be seen below 👇
+The correction must be made in the database connection configuration section:
 
 ```
     ...
@@ -45,40 +45,41 @@ This adjusment should be made inside the configuration area as can be seen below
 
 ## Web Console
 
-The user can have access to H2 Database by the web console, wil need to execute directly _jar_ of the H2 Database, see the example below 👇
+You may need to access the database directly; in this case, you can do so through the H2Database web console.
+
+The web console is started by running the H2Database _jar_ directly as follows:
 
 `java -cp web/WEB-INF/lib/h2-*.jar org.h2.tools.Server`
 
-> It is assumed to be at the _Netuno_ root.
+> It is assumed that you are at the Netuno root.
 
-To view available options:
+To view the available options:
 
 `java -cp web/WEB-INF/lib/h2-*.jar org.h2.tools.Server -?`
 
-Start your web console on the port **9000**  _Netuno_, giving you access to all external IP's:
+Starts the web console on Netuno's port **9000** and allows access from external IPs:
 
 `java -cp web/WEB-INF/lib/h2-*.jar org.h2.tools.Server -webPort 9000 -tcpAllowOthers`
 
-> You should STOP _Netuno_ execution before to prevent multiple processes from manipulating the database file.
+> You must stop Netuno execution first to prevent multiple processes from manipulating the database file.
 
-The following link JDBC URL will be to connect to the database:
+The JDBC URL to connect to the database should be:
 
 `jdbc:h2:./apps/my_app/dbs/my_db;MODE=PostgreSQL;CASE_INSENSITIVE_IDENTIFIERS=TRUE;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;DB_CLOSE_ON_EXIT=TRUE;`
 
-> Replace `my_app` with any name You like to give to your  `app` and `my_db` by any name that you wish to give to your `database`.
+> Replace the `my_app` part with the app name and `my_db` with the corresponding database name.
 
-The user `sa` will be your _Authentication_ but without a password.
+Authentication will be with the `sa` user but without a password.
 
 
-### Reset Access
+### Resetting Access
 
-This step will help especially when `dev` user access is lost.
+Especially when you lose access for the `dev` user.
 
-Access through the H2 Database web console as described above.
+Access it through the H2Database web console as described above.
 
-To create access you must delete table data `netuno_user`, as an example:
+To recreate the access, delete the data from the `netuno_user` table, for example:
 
-> `delete from netuno_user`
+- `delete from netuno_user`
  
-Therefore, _Netuno_ will rebuilt users with their default passwords when started again.
-
+This way, Netuno will recreate the users with their respective default passwords when it is started again.

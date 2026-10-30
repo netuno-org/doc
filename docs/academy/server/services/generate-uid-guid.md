@@ -1,26 +1,26 @@
 ---
 id: generate-uid-guid
-title: Generate Unique ID's (UID/GUID)
-sidebar_label: Generate Unique ID's (UID/GUID)
+title: Generate Unique IDs (UID/GUID)
+sidebar_label: Generate Unique IDs (UID/GUID)
 ---
 
-## Before proceeding
+## Before you begin
 
-Before proceeding make sure you know how to create **REST Web Services**, in case you don't visit the following link:
+Before proceeding, make sure you know how to create **REST Web Services**; if you do not, visit the following link:
 
-* [Web Rest Services](/docs/academy/server/services/rest)
+* [REST Web Services](/docs/academy/server/services/rest)
 
-It is also advisable that, before you start this tutorial, you make sure you have some basic notions in _**JavaScript**_.
+It is also advisable, before starting this tutorial, to make sure you have basic knowledge of _**JavaScript**_.
 
-## What's a UID
+## What is a UID
 
-A UID (_unique identifier_), as it indicates, is a single string throughout your application. It is also known as GUID (_global unique identifier_).
+A UID (_unique identifier_), as the name implies, is a unique string across your entire application. It is also known as a GUID (_global unique identifier_).
 
-In order to exemplify the generation of UID's we are going to create a service.
+To demonstrate UID generation, let's create a service.
 
-## UID generation
+## Generating UIDs
 
-Let's now demonstrate the generation of a random UID, it is quite simple because Netuno already brings with it a function specifically created for this purpose:
+We will now demonstrate creating a random UID; it is quite simple because Netuno already includes a function specifically created for this purpose:
 
 ```javascript
 _out.println(
@@ -28,8 +28,8 @@ _out.println(
 )
 ```
 
-> Note that the `_out.println()` function is just here to allow the display of the result on screen when calling the service in the browser
+> Note that the `_out.println()` function is only to allow viewing the result on screen when calling the service in the browser
 
-If you have any questions, please do not hesitate to contact us through the means presented at the bottom of the page.
+If you have any questions, do not hesitate to contact us through the means presented at the end of the page.
 
-Good development!
+Happy development!

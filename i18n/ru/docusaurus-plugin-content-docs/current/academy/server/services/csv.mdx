@@ -1,0 +1,209 @@
+---
+id: csv 
+title: CSV 
+sidebar_label: CSV 
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Обработка пользовательских PDF-файлов.
+
+## Введение
+
+Netuno генерирует CSV-файлы с помощью ресурса [CSV](/docs/library/resources/csv), который предоставляет low-code-абстракцию [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/) для различных языков программирования, поддерживаемых Netuno.
+
+Приложение, поставляемое с Netuno и называемое **demo** (демонстрационное приложение), содержит множество примеров возможных реализаций кода на разных языках, включая демонстрацию экспорта в CSV через сервис `csv`, который находится в:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/csv`
+]} />
+
+## Создание CSV-файла
+
+Чтобы создать CSV-файл, сначала нужно инициализировать `CSVPrinter` из `Apache Commons CSV`.
+Для этого нужно передать имя папки и имя файла, а также формат CSV.
+В примере мы создадим файл в `storage` приложения:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const csvПринтер = _csv.printer(
+                  _storage.filesystem("server", "данные.csv"),
+                  _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                csv_принтер = _csv.printer(
+                    _storage.filesystem("server", "данные.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                csv_принтер = _csv.printer(
+                    _storage.filesystem("server", "данные.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val csvПринтер = _csv.printer(
+                    _storage.filesystem("server", "данные.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def csvПринтер = _csv.printer(
+                    _storage.filesystem("server", "данные.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        }
+    ]}
+/>
+
+Поддерживаемые форматы описаны [здесь](https://doc.netuno.org/pt/docs/library/resources/csv/#format).
+
+### Запись
+
+Чтобы записать строки в CSV-файл:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvПринтер.printRecord("идентификатор", "имяПользователя", "имя", "фамилия", "датаРождения")
+                csvПринтер.printRecord(1, "иван73", "Иван", "Иванов", 123)
+            `
+        }
+    ]}
+/>
+
+### Закрытие
+
+В конце необходимо закрыть `CSVPrinter`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvПринтер.close()
+            `
+        }
+    ]}
+/>
+
+
+## Чтение CSV-файла
+
+Чтобы прочитать CSV-файл, сначала нужно инициализировать `CSVParser` из `Apache Commons CSV`.
+Для этого нужно передать имя папки и имя файла.
+В примере мы прочитаем файл в `storage` приложения:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const csvПарсер = _csv.parser(_storage.filesystem("server", "данные.csv"))
+            `
+        }
+    ]}
+/>
+
+### Строки 
+
+Теперь можно перебирать `CSVRecord` из `Apache Commons CSV`, которые представляют каждую строку CSV-файла:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const запись of csvПарсер) {
+                    const первыйСтолбец = запись.get(0)
+                    const второйСтолбец = запись.get(1)
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for запись in csvПарсер:
+                    первыйСтолбец = запись.get(0)
+                    второйСтолбец = запись.get(1)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                csvПарсер.each do |запись|
+                    первыйСтолбец = запись.get(0)
+                    второйСтолбец = запись.get(1)
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                for (запись in csvПарсер) {
+                    val первыйСтолбец = запись.get(0)
+                    val второйСтолбец = запись.get(1)
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (запись in csvПарсер) {
+                    def первыйСтолбец = запись.get(0)
+                    def второйСтолбец = запись.get(1)
+                }
+            `
+        },
+    ]}
+/>
+
+Или получить каждую строку с помощью метода `getRecord` из `Apache Commons CSV`.
+В этом примере первый `get` получает первую строку. Второй `get` получает первое поле/значение этой строки:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvПарсер.getRecords().get(0).get(0)
+            `
+        }
+    ]}
+/>
+
+### Закрытие
+
+В конце необходимо закрыть `CSVParser`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvПарсер.close()
+            `
+        }
+    ]}
+/>

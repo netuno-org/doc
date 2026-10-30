@@ -1,0 +1,9 @@
+{
+  "label": "Cartelle dell'Applicazione",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/category/app-structure",
+    "description": "Le cartelle e i file dell'applicazione in dettaglio."
+  }
+}

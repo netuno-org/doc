@@ -10,12 +10,8 @@ Documentation and documents in general.
 
 The `📂 docs` folder is where we organize the application's general documents.
 
-It serves to organize useful files such as documentation, design, architecture, integrations, etc.
+It is used to organize useful files such as documentation, design, architecture, integrations, etc.
 
-Anything that is useful to other people also working on the application's development, or that
-is useful in development, maintenance, or evolution.
+Anything that is useful to other people who also work on application development, or that is useful for maintenance or evolution development.
 
-You should keep in mind that overly large binary files can pollute and permanently clutter the
-code repository, i.e., GIT. Because any overly large file sent to GIT considerably increases
-the change history, video files, zip files, or any other very large documents
-should be avoided to avoid overloading GIT and creating future constraints.
+Keep in mind that overly large binary files can permanently pollute and clutter the code repository, that is, GIT. Because any overly large file that goes into GIT considerably increases the change history, so video files, zips, or any other very extensive documents should be avoided so as not to overload GIT and create future constraints.

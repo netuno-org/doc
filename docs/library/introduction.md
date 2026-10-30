@@ -4,28 +4,28 @@ id: introduction
 title: Introduction
 ---
 
-This section contains the vast majority of back-end logic about Netuno. You will find definitions, explanations and code snippets that will help you go through a functional logic on how to build your WebSite from Netuno.
+This section contains the vast majority of the back-end logic about Netuno. You will find definitions, explanations, and code snippets that will help you walk through functional logic on how to build your website from Netuno.
 
-> The Netuno platform is free, [start now](/docs/get-started/installation).
+> The Netuno platform is free, [get started now](/docs/get-started/installation).
 
-### Tutorials
+## Tutorials
 
-Discover how to explore the development in Netuno:
+Discover how to explore development in Netuno:
 
-* [Know More](/docs/get-started/tutorials)
+[Learn More](/docs/get-started/tutorials)
 
 ## Objects
-This section contains information about the Netuno Objects, namely Values.
+
+This section contains information about Netuno Objects, namely Values.
 
 * [Values](/docs/library/objects/Values)
 
 ## Resources
+Contains all the information about the programming support resources provided by Netuno.
 
-It contains all the information about the programming support resources available from Netuno.
+Using Netuno resources, it is possible to do more in less time, saving lines of code and headaches.
 
-Using Netuno's resources you can do more in less time, save on lines of code and headaches.
-
-Explore and discover the various types of resources available on Netuno. 
+Explore and discover the various types of resources available in Netuno.
 
 * [App](/docs/library/resources/app)
 * [Auth](/docs/library/resources/auth)

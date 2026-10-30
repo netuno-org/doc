@@ -1,0 +1,58 @@
+{
+  "link.title.Open Source": {
+    "message": "Código abierto",
+    "description": "El título de la columna de enlaces del pie de página con título=Código abierto en el pie de página"
+  },
+  "link.title.Community": {
+    "message": "Comunidad",
+    "description": "El título de la columna de enlaces del pie de página con título=Comunidad en el pie de página"
+  },
+  "link.title.More": {
+    "message": "Más",
+    "description": "El título de la columna de enlaces del pie de página con título=Más en el pie de página"
+  },
+  "link.item.label.Installation": {
+    "message": "Instalación",
+    "description": "La etiqueta del enlace del pie de página con etiqueta=Instalación que enlaza a /docs/get-started/installation"
+  },
+  "link.item.label.Releases": {
+    "message": "Versiones",
+    "description": "La etiqueta del enlace del pie de página con etiqueta=Versiones que enlaza a https://github.com/netuno-org/platform/releases"
+  },
+  "link.item.label.Documentation": {
+    "message": "Documentación",
+    "description": "La etiqueta del enlace del pie de página con etiqueta=Documentación que enlaza a https://github.com/netuno-org/doc"
+  },
+  "link.item.label.YouTube": {
+    "message": "YouTube",
+    "description": "La etiqueta del enlace del pie de página con etiqueta=YouTube que enlaza a https://www.youtube.com/channel/UCYY1Nz6T2NJtP29vba2fqkg"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "La etiqueta del enlace del pie de página con etiqueta=Discord que enlaza a https://discord.gg/4sfXG6YWFu"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "La etiqueta del enlace del pie de página con etiqueta=LinkedIn que enlaza a https://www.linkedin.com/company/netuno-org/"
+  },
+  "link.item.label.Instagram": {
+    "message": "Instagram",
+    "description": "La etiqueta del enlace del pie de página con etiqueta=Instagram que enlaza a https://www.instagram.com/netuno_org/"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "La etiqueta del enlace del pie de página con etiqueta=GitHub que enlaza a https://github.com/netuno-org/"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "La etiqueta del enlace del pie de página con etiqueta=Twitter que enlaza a https://twitter.com/netuno_org"
+  },
+  "link.item.label.Facebook": {
+    "message": "Facebook",
+    "description": "La etiqueta del enlace del pie de página con etiqueta=Facebook que enlaza a https://www.facebook.com/netuno.org/"
+  },
+  "copyright": {
+    "message": "Copyright © 2025 <a target=\"_blank\" href=\"https://www.sitana.pt/pt\">Sitana</a>",
+    "description": "El copyright del pie de página"
+  }
+}

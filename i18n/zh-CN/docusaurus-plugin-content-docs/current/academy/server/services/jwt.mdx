@@ -1,0 +1,424 @@
+---
+id: jwt
+title: JWT 认证（JSON Web Token）
+sidebar_label: JWT 认证
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+基于令牌的认证的配置与使用。
+
+## 简介
+
+JWT（JSON Web Token）是一种标准，用于确保前端与后端解耦的 Web 应用中的认证安全性和上下文。
+
+当 Web 应用的前端使用 ReactJS、AngularJS、VueJS 等开发，而后端提供 API REST 来提供和接收应用的动态数据时，通常会使用它。
+
+> 令牌（JWT）是用于标识用户的安全代码。
+
+借助 JWT（JSON Web Token），后端的 API REST 允许私有服务获取认证上下文，以了解已认证用户是谁；也就是说，通过令牌我们可以知道用户是谁，而这里的令牌就是 JWT（JSON Web Token）。
+
+![JWT 流程](/docs/assets/academy/server/services/jwt/flow-pt.png)
+
+## CORS
+
+API REST 可能位于与网站不同的子域名下，这意味着需要进行 [CORS（跨源资源共享）](/docs/academy/server/services/cors) 配置，才能访问这些服务。
+
+因此，如果 API REST 位于与前端不同的域/子域中，即使使用 JWT，也必须正确配置 CORS。
+
+> CORS 是一种安全策略，用于控制跨不同域、子域或端口消费资源，以确保一个地址确实可以与另一个地址集成。
+
+这是因为浏览器会阻止在外部地址使用服务或其他类型的资源，以避免获取机密数据的攻击。
+
+## 激活与配置
+
+要在 Netuno 应用中激活并配置 JWT，需要编辑应用配置文件中与当前使用环境对应的文件，例如：
+
+- `config/_development.json`
+- `config/_production.json`
+
+> 这取决于 Netuno 中配置的环境，请在 `netuno/config.js` 文件中查看 `config.env` 的参数设置。
+
+插入并调整以下参数：
+
+```json
+    ...
+    "auth": {
+        "jwt": {
+            "enabled": true,
+            "secret": "密钥必须为32位字符的复杂字符串!!!",
+            "expires": {
+                "access": 1440,
+                "refresh": 1440
+            }
+        }
+    },
+    ...
+```
+
+在 `secret` 参数中填写一段复杂且随机的字符序列，它是保证 JWT 加密安全性的密钥。
+
+`expires` 参数以分钟为单位，例如：`60` 相当于 1 小时，`1440` 相当于一天。
+
+### 按组限制访问
+
+此外，还可以传入 `groups` 参数，用于定义允许使用 JWT 认证的用户组代码，例如：
+
+```json
+    ...
+    "auth": {
+        "jwt": {
+            ...
+            "groups": ["客户", "供应商"],
+            ...
+        }
+    },
+    ...
+```
+
+在上面的示例中，只有属于以下组的用户：
+
+- 客户，组代码为 `客户`。
+- 供应商，组代码为 `供应商`
+
+只有这些组中的用户才能使用 JWT 进行认证。
+
+## 如何获取 Access Token
+
+要获取 JWT 的 _Access Token_，Netuno 提供了 `_auth` 服务，该服务会验证认证信息，如果认证成功，则返回 _Access Token_ 和 _Refresh Token_。
+
+获取 _Access Token_ 的方式如下：
+
+<script dangerouslySetInnerHTML={{ __html: `window.addEventListener("message", function(e) {var i = e.data.split(":")[1];var h = e.data.split(":")[2];if (e.data.split(":")[0] == "swimlanes-io" && i && h) {document.getElementById("__sw-io-" + i).setAttribute("style","height:" + h + "px");}}, false);`}}></script>
+<div id="__sw-io-hVPQ">
+    <iframe style={{border:'none', width:'100%', height:'100%'}} scrolling="no" src="https://cdn.swimlanes.io/dist/embeded.html#hVPLjtNAELzPV7RyjrMIEAeLhwLLos0BhMgKaS9x42nwBHvGmUf2gfYD+IwVhxUHvsI/Ro8fiUkOzMGyZ7rKVdU9Z9Zon5CWkLyE9+SDNjCv6xTmwZP2KsfmofllYPF5CdL0FUIbTym8KbBCMODIblXzYEAS4L+wHSQVIjtpC3NyJysuK16tr/wLbwNlQrzVW8VUDiTK+CQILjT3Vhkg5tcFRoIsWzujxQ8BvCaB6TRWNElhImk7mXbbNTp3ZawctsVdBApxtnP6PEnGVns3zU+w5A1TytbuFHJTRUnefCfdakLW7qIifrf01ZIrjmVhHqtWLSpqoJtF8eVdrj6oxfnF7cVsNhuUMj6UnmtiCLu9lnYPX24eX56eP9XfPvrL5WKEbitW/qZuA3hNaMkOZ3RdK6ZZqUjx5NmjuI5zOOx45w7Z8qe+o7EffFgO/RwaH4OBzmgXDzS/oTbONX+2VAJdUx48WtgELDeB7GhEEHDP1/+/jdowgY3Qqi4PxqWikHQfhg2ckuP8mRZiq+lQCduJ02WsukWvjIaCUJKdHtJnWeF9Lebj2hS6HOG4af8boiEa5AhNL8XRGmHb3JdKske+F9Hy6L5waH1UPHLttO3HfneRpJn9BQ==#hVPQ"></iframe>
+</div>
+
+## Fetch - 纯 JavaScript
+
+浏览器中的 JavaScript 提供 `fetch` 来与后端 API REST 服务集成。
+
+以下是一些使用 JWT 进行认证以及刷新令牌的示例。
+
+### 认证
+
+使用 [fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API) 获取 _Access Token_ 的示例：
+
+```javascript
+fetch("http://localhost:9000/services/_auth", {
+    method: 'post',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+        username: payload.username,
+        password: payload.password,
+        jwt: true
+    })
+}).then((response) => {
+	if (response.status != 200) {
+        if (response.status != 403) {
+            console.log('认证失败，出现意外状态：', response.status);
+        }
+        alert('登录无效。');
+        return null;
+    }
+    return response.json();
+}).then((res) => {
+    if (res && res.result === true) {
+        console.log(`我的 Access Token：${res.access_token}`);
+        console.log(`我的 Refresh Token：${res.refresh_token}`);
+        console.log(`将在 ${res.expires_in} 分钟后过期`);
+        sessionStorage.setItem('token', JSON.stringify(res));
+    }
+}).catch((error)=> {
+    console.log(error);
+    alert('发生技术问题，请稍后重试。');
+});
+```
+
+请注意，`token` 应作为会话保存，因此为了更高的安全性，建议使用 [sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) 而不是 [localStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage)。
+
+通过 `refresh_token`，可以在过期时间（`expires_in`，单位为分钟）之前生成新的 `token`。
+
+### 在其他服务中使用 _Access Token_
+
+要在 Netuno 应用中执行需要预先认证的自定义编程服务，必须将 _Access Token_ 放在 HTTP 协议 Header 中，作为 _Authorization_ 键的值，例如：
+
+`Authorization: Bearer eyJhbGciOiJIUzU...`
+
+以下示例展示如何通过前端使用 [fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API) 执行自定义编程服务，其中 `Authorization` 通过 `headers` 传递：
+
+```javascript
+const token = JSON.parse(sessionStorage.getItem("token"));
+
+fetch("http://localhost:9000/services/我的服务", {
+    method: 'post',
+    credentials: 'include',
+    headers: {
+        'Authorization': `${token.token_type} ${token.access_token}`,
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        我的参数1: '...',
+        我的参数2: '...'
+    })
+}).then((response) => {
+    if (response.status != 200) {
+    	console.log(`服务失败，状态为 ${response.status}。`);
+        if (response.status == 403) {
+            alert('未认证。');
+        } else {
+            alert('服务发生故障。');
+        }
+        return null;
+    }
+    return response.json();
+}).then((res) => {
+    if (res) {
+        console.log(`我的服务的响应数据：`, res);
+        alert('服务执行成功。');
+    }
+}).catch((error)=> {
+    console.log(error);
+    alert('发生技术问题，请稍后重试。');
+});
+```
+
+请注意，在 HTTP Headers 中，`Authorization` 参数使用了之前认证时保存在 [sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) 中的 JWT 对象里的 `token_type` 和 `access_token`。
+
+### 使用 _Refresh Token_ 更新
+
+要更新令牌并延长认证，必须再次调用 `_auth` 服务；除了 `jwt: true` 参数外，还需要传入 `refresh_token` 参数，其值为之前成功认证时收到的值。
+
+令牌更新必须在过期时间（`expires_in`，单位为分钟）之前完成。
+
+那么，要延长认证并刷新令牌，请参见示例：
+
+```javascript
+const token = JSON.parse(sessionStorage.getItem("token"));
+
+fetch("http://localhost:9000/services/_auth", {
+    method: 'post',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+        refresh_token: token.refresh_token,
+        jwt: true
+    })
+}).then((response) => {
+    if (response.status != 200) {
+        if (response.status != 403) {
+            console.log('令牌刷新失败，出现意外状态：', response.status);
+        }
+        alert('使用无效令牌刷新访问。');
+        return null;
+    }
+    return response.json();
+}).then((res) => {
+    if (res && res.result === true) {
+        console.log(`我的新 Access Token：${res.access_token}`);
+        console.log(`我的新 Refresh Token：${res.refresh_token}`);
+        console.log(`将在 ${res.expires_in} 分钟后过期`);
+        sessionStorage.setItem("token", JSON.stringify(res));
+    }
+}).catch((error)=> {
+    console.log(error);
+    alert('发生技术问题，请稍后重试。');
+});
+```
+
+获取新令牌后，在后续服务调用中应使用它，而不是之前的（旧）令牌。
+
+通过不断刷新令牌，认证得以延长，这是一种确保用户持续保持认证状态的方式。
+
+## Auth Client - NPM
+
+为了方便与前端集成，提供了 NPM 模块：
+
+- [@netuno/auth-client](https://www.npmjs.com/package/@netuno/auth-client)
+
+在前端可以使用 [Bun](https://bun.sh) 安装：
+
+- `bun install @netuno/auth-client`
+
+> 也可以使用其他前端依赖管理工具，如 PNPM、NPM、YARN 等。
+
+### 配置
+
+此模块依赖 [@netuno/service-client](https://www.npmjs.com/package/@netuno/service-client)，在设置服务地址时，例如：
+
+```javascript
+import _service from '@netuno/service-client';
+...
+_service.config({
+    prefix: 'http://localhost:9000/services/'
+});
+```
+
+`auth-client` 使用 `service-client` 的前缀在内部构建 `_auth` 服务的地址；在本例中，按照示例将是：
+
+- `http://localhost:9000/services/_auth`
+
+因此，这个地址是使用 Netuno 应用 API REST 服务的地址前缀自动构建的。
+
+查看如何自定义 `auth-client` 的配置：
+
+在 ES module 版本中，`config()` 是异步的。请等待其完成后再使用已配置的客户端：
+
+```javascript
+import _auth from '@netuno/auth-client';
+
+await _auth.config({
+    storage: 'local', // session 是默认值。
+    onLogin: () => { alert("已登录！"); },
+    onLogout: () => { alert("已登出！"); }
+});
+```
+
+如果希望将令牌保存到 `localStorage`，则需要在配置中设置 `storage: 'local'`，因为默认是 `storage: 'session'`，即使用 `sessionStorage`。
+
+### 认证
+
+要使用 `_auth` 执行登录：
+
+```javascript
+import _auth from '@netuno/auth-client';
+...
+_auth.login({
+    username: "admin",
+    password: "secret",
+    success: ()=> {
+        alert("成功。");
+    },
+    fail: ()=> {
+        alert("失败。");
+    }
+});
+```
+
+令牌会自动保存到 `session`（`sessionStorage`）或 `local`（`localStorage`），具体取决于配置，默认为 `session`。
+
+### 更新 Token
+
+更新令牌的示例：
+
+```javascript
+import _auth from '@netuno/auth-client';
+...
+_auth.refreshToken({
+    success: ()=> {
+        alert("成功。");
+    },
+    fail: ()=> {
+        alert("失败。");
+    }
+});
+```
+
+令牌会自动保存到 `session`（`sessionStorage`）或 `local`（`localStorage`），具体取决于配置，默认为 `session`。
+
+### 移除 Token
+
+结束会话，即退出并删除令牌的示例：
+
+```javascript
+import _auth from '@netuno/auth-client';
+...
+_auth.logout();
+```
+
+令牌会从 `sessionStorage` 或 `localStorage` 中移除，具体取决于配置，默认为 `sessionStorage`。
+
+## 后端 - API REST 服务
+
+如果在与服务集成时，在 header 中传入了带有有效令牌的 `Authorization`，则可以识别用户和组。
+
+在后端，我们可以使用 `_user` 和 `_group` 资源，它们分别标识用户和组。
+
+要查看已认证用户的数据，我们使用 [User](/docs/library/resources/user) 资源，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(
+                    "已认证用户：",
+                    _val.map()
+                        .set("id", _user.id())
+                        .set("姓名", _user.name())
+                        .set("代码", _user.code())
+                        .set("全部", _user.data())
+                )
+            `
+        },
+    ]}
+/>
+
+要查看已认证用户的组，我们使用 [Group](/docs/library/resources/group) 资源，例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(
+                    "已认证组：",
+                    _val.map()
+                        .set("id", _group.id())
+                        .set("姓名", _group.name())
+                        .set("代码", _group.code())
+                        .set("全部", _group.data())
+                )
+            `
+        },
+    ]}
+/>
+
+### 安全性
+
+如果令牌无效，或者没有传入 `Authorization`，那么 Netuno 会确保该服务不会被执行，除非该服务被配置为公共访问；默认情况下，服务是私有的。
+
+> 要管理服务是公共还是私有，请在应用中配置：`server/core/_service_config.js`
+
+在开发环境中，Netuno 允许直接执行私有服务而无需认证，这是出于便利考虑，因为大多数自定义编程服务通常不需要认证上下文，因此总体上开发和测试会更简单。
+
+如果不是开发环境，例如生产环境，那么服务显然只能通过认证执行。
+
+### 认证资源
+
+通常 `_user` 和 `_group` 资源已经足够，但在某些情况下我们想执行更高级的操作，这时可以使用 `_auth` 资源。
+
+`_auth` 资源是主要的认证资源，负责管理配置，并包含与认证过程相关的所有操作。
+
+> 要了解更多，请参阅 [Auth](/docs/library/resources/auth) 资源的文档。
+
+## ReAuthKit
+
+Netuno 提供了一个基础项目，用于创建具有在线认证的平台，其中包括账户创建、登录、个人资料、头像、密码恢复等功能。
+
+在 GitHub 上查看：
+
+- [ReAuthKit](https://github.com/netuno-org/reauthkit)
+
+> ReAuthKit 是一个 Netuno 应用，前端使用 React、Ant.Design 和 React Router 构建，数据库使用 PostgreSQL。
+
+使用 ReAuthKit 可以大大加快创建带认证的新项目，因为它已经具备任何需要认证的项目所需的所有机制。
+
+## 结论
+
+简而言之，可以在应用中配置并启用 JWT（JSON Web Token）认证。
+
+> 使用 JWT 认证来在 API REST 中开发安全的服务。
+
+前端中的 JWT 集成可以直接使用 `fetch`。
+
+为了加快并标准化实现，提供了 NPM 模块 [@netuno/auth-client](https://www.npmjs.com/package/@netuno/auth-client)，它可与任何前端技术一起使用。
+
+每当需要在执行 API REST 服务时识别用户，请使用 JWT 认证。
+
+在后端，配置和获取已认证用户非常简单。

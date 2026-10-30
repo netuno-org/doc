@@ -1,0 +1,545 @@
+---
+id: remote
+title: Remote - Client HTTP
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+## Introduction
+
+Souvent, dans nos applications, nous devons effectuer des requêtes HTTP vers des services externes. Cela peut être fait en utilisant la ressource `_remote`.
+
+Pour effectuer des appels HTTP en interne vers d'autres services ou serveurs internes sur l'ordinateur, ou pour appeler un service sur Internet, l'utilisation de la ressource Remote est essentielle.
+
+> Voir la documentation de la ressource [Remote](/docs/library/resources/remote).
+
+Nous pouvons même envoyer et recevoir des données en JSON et téléverser ou télécharger des fichiers.
+
+## Initialisation
+
+Pour pouvoir effectuer un appel HTTP, nous devons d'abord l'initialiser, pour cela nous utiliserons la méthode init de _remote et nous stockerons ensuite le résultat de cette opération dans une variable appelée remote afin de pouvoir référencer la requête :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Prend en charge l'envoi de paramètres HTTP
+                const remoteSimple = _remote.init();
+                // Prend en charge l'envoi de JSON :
+                const remoteJSON = _remote.init().asJSON();
+            `
+        },
+    ]}
+/>
+
+## Configuration
+
+Nous pouvons également définir des configurations globales dans l'application, remarquez cet exemple complet :
+
+```json
+  ...
+  "remote": { 
+    "exemple-basic-auth": {
+      "url": "https://exemple.com/api/rest/exemple",
+      "form": true,
+      "authorization": {
+        "username": "admin",
+        "password": "motdepasse"
+      },
+      "data": {
+        "param1": "valeur 1...",
+        "param2": "valeur 2..."
+      }
+    },
+    "exemple-auth-token": {
+      "urlPrefix": "https://exemple.com/api",
+      "json": true,
+      "authorization": "Bearer JETON-AUTH-ICI",
+      "connectTimeout": 5000,
+      "readTimeout": 60000,
+    }
+  },
+  ...
+```
+
+Nous pouvons configurer un préfixe d'URL (`urlPrefix`) ou l'URL complète (`url`).
+
+Nous pouvons définir si la requête par défaut doit envoyer les données sous forme de Form ou JSON.
+
+Prend en charge l'envoi d'une autorisation de base avec identifiant et mot de passe ou jeton.
+
+Et il est possible de définir les données par défaut qui seront envoyées (`data`), ainsi que les délais limites de connexion (`connectTimeout`) et de lecture (`readTimeout`).
+
+### Utilisation
+
+Pour utiliser la ressource Remote avec les configurations définies dans l'application, il suffit d'initialiser la ressource avec la clé de configuration, par exemple :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const reponse = _remote.init("exemple-basic-auth").post();
+            `
+        },
+    ]}
+/>
+
+Et si l'URL de préfixe est définie :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init("exemple-auth-token");
+                const reponse = remote.post(
+                  "/services/charge-donnees",
+                  _val.map()
+                    .set("param1", "valeur 1")
+                    .set("param2", "valeur 2")
+                );
+            `
+        },
+    ]}
+/>
+
+## Requête HTTP
+
+Voyez comment nous pouvons initier une requête HTTP en utilisant la ressource [Remote](/docs/library/resources/remote).
+
+### Envoyer du JSON
+
+Pour envoyer des données au format JSON, nous devons indiquer le type de contenu comme JSON :
+
+La façon simple de le faire est d'utiliser la méthode `asJSON()`, par exemple :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init().asJSON();
+                remote.setURL("http://exemple.com/enregistrer");
+                const reponse = remote.post(
+                  _val.map()
+                    .set("donnees", "exemple")
+                    .set("json", true)
+                );
+            `
+        },
+    ]}
+/>
+
+Ainsi, les données seront envoyées en JSON pour les méthodes HTTP POST et PUT, mais pour GET et DELETE, les données sont toujours envoyées dans la chaîne de requête car ces méthodes ne supportent pas, selon le protocole HTTP, un corps avec des données.
+
+### Méthodes HTTP
+
+Nous n'avons pas besoin d'indiquer explicitement dans l'en-tête de l'appel sa méthode HTTP, pour cela notre référence d'appel possède une fonction propre pour chaque type de méthode HTTP :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init();
+
+                remote.setURL("http://exemple.com");
+
+                remote.get(); // pour les appels GET
+                remote.post(); // pour les appels POST
+                remote.put(); // pour les appels PUT
+                remote.delete(); // pour les appels DELETE
+            `
+        },
+    ]}
+/>
+
+#### En-tête HTTP
+
+Pour configurer les paramètres de l'en-tête HTTP, nous pouvons définir les clés avec la méthode `getHeader()`, par exemple :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init();
+
+                remote.getHeader().set("CLE", "VALEUR");
+            `
+        },
+    ]}
+/>
+
+#### URL de la requête
+
+Pour indiquer l'URL de la requête, il suffit de la passer comme premier paramètre des fonctions des méthodes HTTP respectives :
+
+```js
+const remote = _remote.init().asJSON()
+
+remote.get("http://exemple.com") // pour les appels GET
+remote.post("http://exemple.com") // pour les appels POST
+remote.put("http://exemple.com") // pour les appels PUT
+remote.delete("http://exemple.com") // pour les appels DELETE
+```
+
+#### Ajout de données à la requête
+
+Si vous devez ajouter des données au corps de la requête, il suffit de les passer comme deuxième paramètre de la fonction de la méthode respective :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init().asJSON();
+
+                remote.get("http://exemple.com", _val.map().set("id_utilisateur", 1)); // pour les appels GET
+                remote.post("http://exemple.com", _val.map().set("id_utilisateur", 1)); // pour les appels POST
+                remote.put("http://exemple.com", _val.map().set("id_utilisateur", 1)); // pour les appels PUT
+                remote.delete("http://exemple.com", _val.map().set("id_utilisateur", 1)); // pour les appels DELETE
+            `
+        },
+    ]}
+/>
+
+## Réponse
+
+Après avoir reçu la réponse de la requête, nous pouvons lire ses données en utilisant la méthode `json` ou `content` :
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remote = _remote.init().asJSON();
+
+                const reponse = remote.post(
+                  "http://exemple.com",
+                  _val.map().set("id_utilisateur", 1)
+                );
+
+                if (reponse.ok()) {
+                  _log.info("Réponse en JSON", reponse.json());
+                } else {
+                  _log.info("Échec avec le statut : "+ reponse.statusCode(), reponse.content());
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                remote = _remote.init().asJSON()
+
+                reponse = remote.post(
+                    "http://exemple.com",
+                    _val.map().set("id_utilisateur", 1)
+                )
+
+                if reponse.ok():
+                    _log.info("Réponse en JSON", reponse.json())
+                else:
+                    _log.info(
+                        f"Échec avec le statut : {reponse.statusCode()}",
+                        reponse.content()
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                remote = _remote.init().asJSON()
+
+                reponse = remote.post(
+                    "http://exemple.com",
+                    _val.map().set("id_utilisateur", 1)
+                )
+
+                if reponse.ok()
+                    _log.info("Réponse en JSON", reponse.json())
+                else
+                    _log.info(
+                        "Échec avec le statut : #{reponse.statusCode()}",
+                        reponse.content()
+                    )
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val remote = _remote.init().asJSON()
+
+                val reponse = remote.post(
+                    "http://exemple.com",
+                    _val.map().set("id_utilisateur", 1)
+                )
+
+                if (reponse.ok()) {
+                    _log.info("Réponse en JSON", reponse.json())
+                } else {
+                    _log.info(
+                        "Échec avec le statut : \${reponse.statusCode()}",
+                        reponse.content()
+                    )
+                }
+            `
+        },
+    ]}
+/>
+
+Dans la réponse, avec la fonction `json()`, nous obtenons le tableau ou l'objet fourni comme Values, et avec la fonction `content()`
+nous obtenons le contenu en texte brut ou le HTML, et le numéro du code de statut reçu se trouve dans `statusCode()`, sachant que `ok()`
+renvoie une valeur booléenne qui est vraie si le code de statut est dans l'intervalle de 200 à 299.
+
+## Téléchargement
+
+Pour télécharger des fichiers, nous utilisons le remote avec `asBinary()` pour indiquer qu'il doit s'agir d'un transfert binaire.
+
+Voyez cet exemple de service complet :
+
+<PolyglotCode
+    file="server/services/file-download"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const telechargement = _remote.asBinary()
+                  .get('https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png');
+
+                if (!telechargement.ok()) {
+                  _log.error(\`Statut du téléchargement du fichier : \${telechargement.statusCode()}\\n\${telechargement.toString()}\`);
+                  _header.status(500);
+                  _out.json({resultat: false, erreur: 'echec-telechargement-fichier'});
+                  _exec.stop();
+                }
+
+                const fichier = telechargement.file();
+                _log.info(\`Nom du fichier téléchargé : \${fichier.name()}\`);
+
+                fichier.save(_app.file(\`storage/filesystem/server/\${fichier.name()}\`));
+                fichier.save(_storage.filesystem("server", "autre.png").file());
+                fichier.save(_os.file("/tmp/telechargement.png"));
+                _out.json({resultat: true});
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                telechargement = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                if not telechargement.ok():
+                    _log.error(f"Statut du téléchargement du fichier : {telechargement.statusCode()}\\n{telechargement.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("resultat", False).set("erreur", "echec-telechargement-fichier"))
+                    _exec.stop()
+
+                fichier = telechargement.file()
+                _log.info(f"Nom du fichier téléchargé : {fichier.name()}")
+
+                fichier.save(_app.file(f"storage/filesystem/server/{fichier.name()}"))
+                fichier.save(_storage.filesystem("server", "autre.png").file())
+                fichier.save(_os.file("/tmp/telechargement.png"))
+                _out.json(_val.map().set("resultat", True))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                telechargement = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                unless telechargement.ok()
+                    _log.error("Statut du téléchargement du fichier : #{telechargement.statusCode()}\\n#{telechargement.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("resultat", false).set("erreur", "echec-telechargement-fichier"))
+                    _exec.stop()
+                end
+
+                fichier = telechargement.file()
+                _log.info("Nom du fichier téléchargé : #{fichier.name()}")
+
+                fichier.save(_app.file("storage/filesystem/server/#{fichier.name()}"))
+                fichier.save(_storage.filesystem("server", "autre.png").file())
+                fichier.save(_os.file("/tmp/telechargement.png"))
+                _out.json(_val.map().set("resultat", true))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val telechargement = _remote.asBinary().get(
+                    "https://raw.githubusercontent.com/netuno-org/platform/main/docs/images/overview.png"
+                );
+
+                if (!telechargement.ok()) {
+                    _log.error("Statut du téléchargement du fichier : \${telechargement.statusCode()}\\n\${telechargement.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("resultat", false).set("erreur", "echec-telechargement-fichier"))
+                    _exec.stop()
+                }
+
+                fichier = telechargement.file()
+                _log.info("Nom du fichier téléchargé : \${fichier.name()}")
+
+                fichier.save(_app.file("storage/filesystem/server/\${fichier.name()}"))
+                fichier.save(_storage.filesystem("server", "autre.png").file())
+                fichier.save(_os.file("/tmp/telechargement.png"))
+                _out.json(_val.map().set("resultat", true))
+            `
+        },
+    ]}
+/>
+
+> Le `fichier.save` est utilisé 3 fois volontairement, pour en savoir plus sur `_app.file`, `_storage` et `_os.file`,
+> consultez le tutoriel sur [Manipulation de fichiers et dossiers](/docs/academy/server/files-manipulation).
+
+## Téléversement
+
+Pour envoyer un fichier structuré comme formulaire au format multipart, nous utilisons `asMultipartFormData()`.
+
+Voyez l'exemple complet d'un service :
+
+<PolyglotCode
+    file="server/services/file-upload"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fichier = _app.file("public/images/logo.png");
+
+                const televersement = _remote.asMultipartFormData()
+                  .post(
+                    'http://localhost:9000/services/file-receiver',
+                    _val.map()
+                      .set("fichier", fichier)
+                  );
+
+                if (televersement.ok()) {
+                  _log.info(\`Téléversé avec succès : \${fichier.name()}\`);
+                  _out.json({resultat: true});
+                } else {
+                  _log.error(\`Statut du téléversement du fichier : \${televersement.statusCode()}\\n\${televersement.toString()}\`);
+                  _header.status(500);
+                  _out.json({resultat: false, erreur: 'echec-televersement-fichier'});
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                fichier = _app.file("public/images/logo.png")
+
+                televersement = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("fichier", fichier)
+                );
+
+                if televersement.ok():
+                    _log.info(f"Téléversé avec succès : {fichier.name()}")
+                    _out.json(_val.map().set("resultat", True))
+                else:
+                    _log.error(f"Statut du téléversement du fichier : {televersement.statusCode()}\\n{televersement.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("resultat", False).set("erreur", "echec-televersement-fichier"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fichier = _app.file("public/images/logo.png")
+
+                televersement = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("fichier", fichier)
+                );
+
+                if televersement.ok()
+                    _log.info("Téléversé avec succès : #{fichier.name()}")
+                    _out.json(_val.map().set("resultat", true))
+                else
+                    _log.error("Statut du téléversement du fichier : #{televersement.statusCode()}\\n#{televersement.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("resultat", false).set("erreur", "echec-televersement-fichier"))
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val fichier = _app.file("public/images/logo.png")
+
+                val televersement = _remote.asMultipartFormData().post(
+                    "http://localhost:9000/services/file-receiver",
+                    _val.map().set("fichier", fichier)
+                );
+
+                if (televersement.ok()) {
+                    _log.info("Téléversé avec succès : \${fichier.name()}")
+                    _out.json(_val.map().set("resultat", true))
+                } else {
+                    _log.error("Statut du téléversement du fichier : \${televersement.statusCode()}\\n\${televersement.toString()}")
+                    _header.status(500)
+                    _out.json(_val.map().set("resultat", false).set("erreur", "echec-televersement-fichier"))
+                }
+            `
+        }
+    ]}
+/>
+
+Remarquez que dans l'exemple ci-dessus, le fichier est envoyé vers un autre service, voyez comment cet autre service qui reçoit le
+fichier peut être implémenté dans Netuno :
+
+<PolyglotCode
+    file="server/services/file-receiver"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fichier = _req.getFile("fichier");
+                _log.info(\`Nom du fichier reçu : \${fichier.name()}\`);
+                fichier.save(_storage.filesystem("server", "recu.png").file());
+                _out.json({resultat: true});
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                fichier = _req.getFile("fichier")
+                _log.info(f"Nom du fichier reçu : {fichier.name()}")
+                fichier.save(_storage.filesystem("server", "recu.png").file())
+                _out.json(_val.map().set("resultat", True))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                fichier = _req.getFile("fichier")
+                _log.info("Nom du fichier reçu : #{fichier.name()}")
+                fichier.save(_storage.filesystem("server", "recu.png").file())
+                _out.json(_val.map().set("resultat", true))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val fichier = _req.getFile("fichier")
+                _log.info("Nom du fichier reçu : \${fichier.name()}")
+                fichier.save(_storage.filesystem("server", "recu.png").file())
+                _out.json(_val.map().set("resultat", true))
+            `
+        }
+    ]}
+/>
+
+## Conclusion
+
+Avec la ressource [Remote](/docs/library/resources/remote), nous pouvons intégrer des API externes, nous pouvons exporter, importer ou synchroniser des données.
+
+Nous pouvons même intégrer des services implémentés dans d'autres technologies, ce qui permet de réaliser des opérations spécifiques fournies par d'autres langages.

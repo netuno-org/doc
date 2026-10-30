@@ -1,0 +1,628 @@
+---
+id: websocket
+title: WebSocket
+sidebar_label: WebSocket
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+서버와 클라이언트 간의 즉시 메시지.
+
+## 소개
+
+WebSocket을 사용하면 서버와 클라이언트 브라우저 간에 영구적인 연결을 설정할 수 있습니다.
+
+즉, 브라우저는 언제든지 WebSocket을 통해 설정된 연결을 사용하여 서버로 데이터를 보낼 수 있으며, 반드시 응답을 받을 필요는 없습니다. 서버 역시 즉시 데이터를 전송하여 클라이언트 브라우저와 통신할 수 있습니다.
+
+> 통신은 즉시 이루어지며, 언제든지 양쪽 간에 독립적이고 즉각적인 방식으로 데이터를 주고받을 수 있습니다.
+
+실시간 작업과 즉각적인 통신을 수행하는 데 매우 유용하며, 브라우저와 서버 간의 채팅처럼 언제든지 한쪽이 메시지를 보내면 다른 쪽이 받을 수 있습니다.
+
+예를 들어 일반적인 채팅 솔루션부터 게임까지 널리 사용되며, 데이터 변경 사항을 실시간으로 표시해야 할 때, 즉 가능한 한 즉각적인 통신이 필요한 경우에도 사용됩니다.
+
+간단히 말해 기존 HTTP 통신과 WebSocket의 차이는 다음과 같습니다:
+
+![기존 HTTP와 WebSocket 비교](/docs/assets/academy/server/services/websocket/comparison-pt.png)
+
+서버 측에는 WebSocket 연결을 설정할 수 있는 주소인 `endpoint`가 생성됩니다.
+
+서버는 특정 연결에만 데이터를 보낼 수 있습니다. 즉, 특정 채팅 참가자에게 새 메시지를 보낼 수 있습니다.
+
+또한 서버는 `broadcast`를 수행할 수 있으며, 이는 특정 주소의 모든 활성 연결로 데이터를 보내는 것입니다. 즉, 채팅방이나 그룹에 있는 모든 참가자에게 메시지를 보내는 경우입니다.
+
+## 활성화 및 구성
+
+Netuno 애플리케이션에서 WebSocket을 활성화하고 구성하려면 사용 중인 환경에 해당하는 애플리케이션 구성 파일을 편집해야 합니다. 예:
+
+- `📂 config/_development.json`
+- `📂 config/_production.json`
+
+다음 매개변수를 삽입하고 조정합니다:
+
+```json
+    ...
+    "ws": {
+        "hosts": [...], "<-- 선택 사항": "아래 문서에서 자세히 설명합니다.",
+        "endpoints": [
+            {
+                "name": "pool",
+                "enabled": true,
+                "sendTimeout": 10000,
+                "idleTimeout": 0,
+                "maxText": 15000,
+                "public": "/ws/pool",
+                "path": "/",
+                "service": "/services/ws/pool"
+            },
+            {
+                "name": "room",
+                "enabled": true,
+                "sendTimeout": 10000,
+                "idleTimeout": 0,
+                "maxText": 15000,
+                "public": "/ws/room",
+                "path": "/{uid}",
+                "service": "/services/ws/room"
+            }
+        ]
+    },
+    ...
+```
+
+#### endpoints
+
+서버가 여러 개의 지정된 공용 주소(_endpoints_)를 통해 WebSocket을 지원하도록 정의할 수 있는 배열입니다. 따라서 각 엔드포인트는 브라우저에서 WebSocket을 통한 연결을 수신할 수 있는 공용 주소입니다.
+
+#### name
+
+엔드포인트의 식별 이름입니다.
+
+#### enabled
+
+엔드포인트를 활성화하거나 비활성화할 수 있으며, 기본값은 `true`(활성)입니다.
+
+#### sendTimeout
+
+클라이언트에 메시지를 보낼 때의 최대 시간 제한이며, 기본값은 `60000`밀리초로 1분에 해당합니다.
+
+#### idleTimeout
+
+연결 비활성 상태의 최대 시간 제한이며, 기본값은 `300000`밀리초로 5분에 해당합니다.
+
+#### maxText
+
+메시지 길이의 최대 크기에 대한 바이트 제한이며, 기본값은 `1048576`으로 1메가바이트에 해당합니다.
+
+#### public
+
+브라우저에서 오는 WebSocket 연결을 수신할 수 있는 공용 주소의 기본값을 정의합니다.
+
+최종 주소는 `public` 구성 값 뒤에 `path`에 정의된 값이 이어져 구성됩니다.
+
+#### path
+
+공용 주소 경로의 마지막 부분을 정의합니다. 동적일 수 있어 예를 들어 여러 개의 분리된 채널을 만들 수 있으며, 다수의 방을 만드는 데 유용합니다.
+
+> 주의: `path`는 항상 `/`로 시작해야 하며, 프런트엔드의 연결 구성에서는 `path`에 정의된 대로 슬래시를 정확히 포함하는 것이 매우 중요합니다.
+
+프런트엔드에서 최종 주소는 `public` + `path`가 됩니다. 예를 참고하세요:
+
+```json
+    ...
+    "public": "/ws/pool",
+    "path": "/",
+    ...
+```
+
+따라서 프런트엔드의 최종 주소는 끝에 슬래시가 붙은 `/ws/pool/`가 됩니다.
+
+##### service
+
+WebSocket을 통한 연결과 통신을 처리하는 애플리케이션 백엔드 서비스의 기본 주소입니다.
+
+#### hosts
+
+선택적으로 엔드포인트가 사용 가능한 호스트를 정의할 수 있습니다. 즉, 연결 시 HTTP 헤더의 Host 주소가 전달되며, 이 호스트에서 포트 표시는 제외하고 도메인 또는 IP 정보만 사용하여 해당 엔드포인트를 연결하고 찾습니다.
+
+> 따라서 엔드포인트가 올바르게 동작하려면 `host`와 `public` + `path`를 다음과 같이 조합해야 합니다:
+>
+> `ws://[host]:9000[public][path]`
+>
+> 프로덕션에서 NGINX, 리버스 프록시 및 SSL을 사용하는 경우에는 다음과 같아야 합니다:
+>
+> `wss://[host][public][path]`
+
+Netuno는 앱 이름을 접두사로 한 일부 로컬 도메인을 정의하며, 이를 엔드포인트 호스트의 기본값으로 자동 연결합니다. 또한 개발 중인 앱에는 `localhost`와 `127.0.0.1`도 기본 호스트에 추가되므로 이러한 자동 구성 덕분에 호스트 정의는 선택 사항입니다.
+
+앱 이름이 `naeapp`인 경우 다음 호스트가 엔드포인트에 자동으로 정의됩니다:
+
+- 이 호스트는 로컬 IP 127.0.0.1로 직접 연결됩니다:
+  - `naeapp.local.netu.no`
+- 이 호스트들이 동작하려면 운영 체제의 hosts 파일에 등록해야 합니다:
+  - `naeapp.localhost`
+  - `naeapp.local`
+
+앱 이름이 `nae_app`인 경우 자동 호스트는 다음과 같습니다:
+
+- 이 호스트는 로컬 IP 127.0.0.1로 직접 연결됩니다:
+  - `nae-app.local.netu.no`
+- 이 호스트들이 동작하려면 운영 체제의 hosts 파일에 등록해야 합니다:
+  - `nae-app.localhost`
+  - `nae-app.local`
+
+> 도메인에는 `_`(밑줄)을 사용할 수 없고 앱 이름에는 `-`(하이픈)을 사용할 수 없습니다. 따라서 외부 주소에서는 `-`(하이픈)를 사용하지만, Netuno는 올바른 애플리케이션을 찾기 위해 `-`(하이픈)를 자동으로 `_`(밑줄)로 변환합니다.
+
+기본 애플리케이션 또는 Netuno 서버 시작 시 정의된 애플리케이션에는 다음 호스트가 추가로 있습니다:
+
+- `localhost`
+- `127.0.0.1`
+
+사용자 지정 호스트를 정의하려면 다음 구성을 사용합니다:
+
+```json
+    ...
+    "ws": {
+        "endpoints": [
+            {
+                "hosts": ["nae-domain1.com", "www.nae-domain1.com"],
+                ...
+            },
+            {
+                "hosts": ["nae-domain2.com", "www.nae-domain2.com"],
+                ...
+            }
+        ]
+    },
+    ...
+```
+
+모든 엔드포인트가 동일한 호스트에서 동작하는 경우 다음과 같이 전역으로 정의할 수 있습니다:
+
+```json
+    ...
+    "ws": {
+        "hosts": ["nae-domain.com", "www.nae-domain1.com"],
+        "endpoints": [
+            ...
+        ]
+    },
+    ...
+```
+
+WebSocket의 최종 주소에서 항상 유효한 호스트인 도메인 또는 IP를 사용해야 합니다. 그렇지 않으면 내부에서 엔드포인트를 찾을 수 없어 동작하지 않습니다.
+
+## 엔드포인트를 위한 서비스
+
+### POST = 새 연결
+
+새 연결이 설정되면 `POST` 메서드로 구성된 서비스가 실행됩니다. 예:
+
+<PolyglotCode
+    file="server/services/ws/room/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const uidRoom = _ws.path().getString("uid")
+                const dbRoom = _db.get("room", uidRoom)
+
+                if (dbRoom == null) {
+                    _log.warn(\`유효하지 않은 room \${uidRoom}.\`)
+                    _ws.close()
+                } else {
+                    _log.info(\`새 WebSocket 세션: \${_ws.sessionId()}\`)
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                uidRoom = _ws.path().getString("uid")
+                dbRoom = _db.get("room", uidRoom)
+
+                if dbRoom == null:
+                    _log.warn(f"유효하지 않은 room {uidRoom}.")
+                    _ws.close()
+                else:
+                    _log.info(f"새 WebSocket 세션: {_ws.sessionId()}")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                uidRoom = _ws.path().getString("uid")
+                dbRoom = _db.get("room", uidRoom)
+
+                if dbRoom == null
+                    _log.warn("유효하지 않은 room #{uidRoom}.")
+                    _ws.close()
+                else
+                    _log.info("새 WebSocket 세션: #{_ws.sessionId()}")
+                end
+`
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val uidRoom = _ws.path().getString("uid")
+                val dbRoom = _db.get("room", uidRoom)
+
+                if (dbRoom == null) {
+                    _log.warn("유효하지 않은 room \${uidRoom}.")
+                    _ws.close()
+                } else {
+                    _log.info("새 WebSocket 세션: \${_ws.sessionId()}")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def uidRoom = _ws.path().getString("uid")
+                def dbRoom = _db.get("room", uidRoom)
+
+                if (dbRoom == null) {
+                    _log.warn("유효하지 않은 room \${uidRoom}.")
+                    _ws.close()
+                } else {
+                    _log.info("새 WebSocket 세션: \${_ws.sessionId()}")
+                }
+            `
+        },
+    ]}
+/>
+
+> 일반적으로 `_ws.sessionId()`는 향후 통신에 사용하기 위해 데이터베이스에 저장됩니다.
+
+### PUT = 새 메시지
+
+수신된 메시지가 JSON 형식이 아니거나, 특정 서비스(`service`) 실행을 위해 지원되는 형식의 JSON이 아니면 다음 일반 서비스가 실행됩니다:
+
+<PolyglotCode
+    file="server/services/ws/room/put"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(\`세션 \${_ws.sessionId()}에서 다음 메시지를 보냈습니다: \${_ws.message()}\`)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _log.info(f"세션 {_ws.sessionId()}에서 다음 메시지를 보냈습니다: {_ws.message()}")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _log.info("세션 #{_ws.sessionId()}에서 다음 메시지를 보냈습니다: #{_ws.message()}")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _log.info("세션 \${_ws.sessionId()}에서 다음 메시지를 보냈습니다: \${_ws.message()}")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _log.info("세션 \${_ws.sessionId()}에서 다음 메시지를 보냈습니다: \${_ws.message()}")
+            `
+        },
+    ]}
+/>
+
+### DELETE = 연결 종료
+
+클라이언트 브라우저의 연결이 끊어질 때 실행됩니다.
+
+<PolyglotCode
+    file="server/services/ws/room/delete"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(\`세션 \${_ws.sessionId()}의 연결이 끊어졌습니다.\`)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _log.info(f"세션 {_ws.sessionId()}의 연결이 끊어졌습니다.")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _log.info("세션 #{_ws.sessionId()}의 연결이 끊어졌습니다.")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _log.info("세션 \${_ws.sessionId()}의 연결이 끊어졌습니다.")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _log.info("세션 \${_ws.sessionId()}의 연결이 끊어졌습니다.")
+            `
+        },
+    ]}
+/>
+
+
+### GET = 연속 메시지 스트림
+
+클라이언트 브라우저의 새 연결이 발생하면 실행을 시작하며, 연결이 종료될 때까지 실행이 유지됩니다.
+
+즉, HTTP `GET` 메서드용 서비스는 클라이언트에서 지속적으로 들어오는 메시지를 `stream`으로 계속 수신합니다. 다시 말해, 수신과 전송이 모두 가능한 열린 연속 메시지 흐름입니다.
+
+<PolyglotCode
+    file="server/services/ws/room/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_ws.isStream()) {
+                    while (_ws.awaitStream()) {
+                        if (_ws.isBinaryStreamed()) {
+                            _log.info("새 바이너리 메시지 수신: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        } else if (_ws.isTextStreamed()) {
+                            _log.info("새 텍스트 메시지 수신: "+ _ws.textStreamed())
+                        }
+                        _ws.sendText("확인! 메시지가 성공적으로 수신되었습니다.")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _ws.isStream():
+                    while _ws.awaitStream():
+                        if _ws.isBinaryStreamed():
+                            _log.info("새 바이너리 메시지 수신: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        elif _ws.isTextStreamed():
+                            _log.info("새 텍스트 메시지 수신: "+ _ws.textStreamed())
+                        _ws.sendText("확인! 메시지가 성공적으로 수신되었습니다.")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _ws.isStream()
+                    while _ws.awaitStream()
+                        if _ws.isBinaryStreamed()
+                            _log.info("새 바이너리 메시지 수신: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        elsif _ws.isTextStreamed()
+                            _log.info("새 텍스트 메시지 수신: "+ _ws.textStreamed())
+                        end
+                        _ws.sendText("확인! 메시지가 성공적으로 수신되었습니다.")
+                    end
+                end
+            `
+        },
+    ]}
+/>
+
+`_ws.isStream()`이 포함된 `if`는 실제로 스트림을 수행하기 위해 WebSocket이 관리하는 내부 요청인지 확인합니다.
+
+`_ws.awaitStream()`이 포함된 `while`은 새로운 메시지 흐름이 도착하기를 기다립니다. 즉, 새 메시지의 도착을 기다립니다. 새 메시지가 있으면 `while` 내부 코드가 실행됩니다.
+
+> `_ws.awaitStream()`은 새 메시지를 기다리는 무한 루프처럼 동작합니다.
+
+그런 다음 `while` 내부의 `if`에서 메시지 유형이 바이너리인지 텍스트인지 확인하며, 두 경우 모두 해당 메시지의 내용이 로그에 표시됩니다. 어떤 메시지 형식이든 사용할 수 있고, 편리한 방식으로 처리할 수 있습니다.
+
+마지막으로 `_ws.sendText`에서 클라이언트로 응답 메시지를 보내 수신을 확인합니다.
+
+> `GET` 서비스의 각 실행은 하나의 활성 연결이 됩니다.
+
+WebSocket 엔드포인트와의 연결이 종료되면 이 서비스의 실행도 내부적으로 종료됩니다.
+
+## 통신
+
+### sendService
+
+서비스를 실행하고 생성된 출력을 WebSocket을 통해 연결된 특정 클라이언트로 보냅니다. 클라이언트 연결 ID(`sessionId`)를 사용합니다.
+
+#### 서비스 호출 예시
+
+아래 코드는 엔드포인트(`service`)의 PUT 메서드 서비스에서 사용할 수 있습니다. 클라이언트 연결 세션 ID를 가져오는 `_ws.sessionId()`를 사용하고 있으며, 세션 식별자가 데이터베이스에 저장되어 있다면 `sendService`는 언제든지 다른 서비스에서도 실행할 수 있습니다.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const uid = _ws.path().getString("uid")
+                _ws.sendService(
+                    _ws.sessionId(), // 현재 WebSocket 연결 식별자.
+                    _val.map() // 실행할 서비스의 매개변수 설정.
+                        .set("method", "POST")
+                        .set("service", "/services/room/participant/new")
+                        .set(
+                            "data", // 서비스로 전달되고 _req를 통해 수신될 매개변수.
+                            _val.map()
+                                .set("uid", uid)
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+즉, 구성에서 `endpoint`에 설정된 `path` 값이 `/{uid}`이므로 클라이언트는 다음 공용 주소를 통해 연결할 수 있습니다:
+
+- `/ws/room/d641f095-30eb-4025-a39c-b2e3e497eab7`
+
+그러면 `uid` 값은 `d641f095-30eb-4025-a39c-b2e3e497eab7`이 됩니다.
+
+그다음 URL `/services/room/participant/new`에 있는 서비스가 실행되고 `uid` 값이 전달됩니다.
+
+`uid`는 실행되는 서비스 코드에서 HTTP 요청 매개변수로 가져올 수 있습니다. 예를 참고하세요:
+
+<PolyglotCode
+    file="/server/services/room/participant/new"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 전송된 UID는 요청에서 직접 가져옵니다.
+                const uid = _req.getString('uid')
+            `
+        },
+    ]}
+/>
+
+### broadcastService
+
+브로드캐스트를 수행하려면 WebSocket 엔드포인트 이름, 해당되는 경우 경로(`path`), 실행할 서비스가 필요합니다.
+
+> 서비스의 출력은 지정된 `endpoint`의 모든 활성 연결로 전송됩니다.
+
+#### 브로드캐스트 예시
+
+<PolyglotCode
+    file="/server/services/room/participant/new"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _ws.broadcastService(
+                    "admin", // WebSocket 엔드포인트 이름.
+                    "/", // 엔드포인트에 구성된 경로(path).
+                    _val.map() // 실행할 서비스의 매개변수 설정.
+                        .set("service", "/services/room/participant/list")
+                )
+            `
+        },
+    ]}
+/>
+
+이 예에서 `room/participant/list` 서비스가 생성한 출력 내용은 `admin` 엔드포인트에 연결된 모든 대상에게 전송됩니다.
+
+## WS Client - NPM
+
+프런트엔드와 쉽게 통합할 수 있도록 NPM 모듈이 제공됩니다:
+
+- https://www.npmjs.com/package/@netuno/ws-client
+
+설치 명령:
+
+- `bun install @netuno/ws-client`
+
+```js
+import _ws from '@netuno/ws-client';
+
+_ws.config({
+    url: 'ws://localhost:9000/ws/example/',
+    servicesPrefix: '/services',
+    autoReconnect: true,
+    connect: (event) => {
+        console.info('WebSocket 연결됨', event);
+    },
+    close: (event) => {
+        console.warn('WebSocket 종료됨', event);
+    },
+    error: (error) => {
+        console.error('WebSocket 오류', error);
+    },
+    message: (data, event) => {
+        console.debug('WebSocket 메시지', data);
+    }
+});
+```
+
+> URL이 엔드포인트에 구성된 `host` 및 `public` + `path` 값을 다음과 같이 올바르게 조합하는지 확인하세요:
+>
+> `ws://[host]:9000[public][path]`
+>
+> NGINX, 리버스 프록시 및 SSL이 통합된 프로덕션 URL은 아마 다음과 같을 것입니다:
+>
+> `wss://[host][public][path]`
+
+그다음 연결을 시작할 수 있습니다:
+
+```js
+_ws.connect();
+```
+
+### WebSocket을 통한 서비스 실행
+
+WebSocket 연결을 통해 REST API 서비스를 실행할 수 있습니다. 즉, HTTP 요청은 수행되지 않으므로 요청 데이터가 메시지로 전송되고, 서비스 응답은 되돌아오는 메시지로 수신됩니다.
+
+시작하기 전에 서비스 응답을 관찰할 리스너를 만들어야 합니다. 예:
+
+```js
+const listenerRef = _ws.addListener({
+    method: 'GET', // 선택 사항. 모든 메서드를 수신하려면 생략합니다.
+    service: 'nae/seobiseu/gyeongno',
+    success: (data) => {
+        console.log('WebSocket을 통해 실행된 서비스 응답:', data);
+    },
+    fail: (error)=> {
+        console.log('WebSocket을 통해 실행된 서비스가 실패했습니다:', error);
+    }
+});
+```
+
+이제 서비스 실행 요청을 보낼 수 있으며, 서비스 응답은 위에서 생성한 리스너에서 수신됩니다. 서비스는 다음과 같이 실행합니다:
+
+```js
+_ws.sendService({
+    method: 'GET', // 선택 사항. 생략하면 요청은 GET을 사용합니다.
+    service: 'nae/seobiseu/gyeongno',
+    data: {
+        message: '안녕하세요...'
+    }
+});
+```
+
+추가한 리스너를 제거하려면 다음을 사용합니다:
+
+```js
+_ws.removeListener(listenerRef);
+```
+
+WebSocket 연결을 닫으려면:
+
+```js
+_ws.close();
+```
+
+## NGINX 리버스 프록시
+
+NGINX에서는 리버스 프록시를 다음과 같이 구성할 수 있습니다:
+
+```
+    location /ws {
+        proxy_pass http://localhost:9000;
+        proxy_set_header Host nae-app.local.netu.no;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        add_header X-Frame-Options "";
+    }
+```
+
+> `Host`를 정의하는 3번째 줄에서 `nae-app` 부분을 해당 Netuno 애플리케이션 이름에 맞게 조정해야 합니다. 애플리케이션 이름에 `_`가 있으면 `Host` 주소에서는 `-`로 대체됩니다. 예를 들어 `nae_app` 애플리케이션의 `Host` 값은 `nae-app.local.netu.no`가 됩니다.
+
+구성이 적용되도록 NGINX를 다시 시작합니다.
+
+NGINX에 구성된 도메인, 즉 `server_name` 매개변수는 Netuno 애플리케이션의 엔드포인트 호스트에 있을 필요가 없습니다. 위 프록시 구성에서는 HTTP 헤더의 Host를 Netuno가 항상 자동으로 구성하는 기본 주소로 변경하며, 애플리케이션 이름 접두사만 올바르면 됩니다.
+
+NGINX 서버가 포트 80을 사용하는 경우 최종 URL은 다음과 같습니다:
+
+- `ws://[host][public][path]`
+
+SSL/HTTPS를 사용하고 NGINX 서버가 포트 443을 사용하는 경우 최종 URL은 다음과 같습니다:
+
+- `wss://[host][public][path]`

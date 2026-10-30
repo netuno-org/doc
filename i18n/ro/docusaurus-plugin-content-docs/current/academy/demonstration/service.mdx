@@ -1,0 +1,254 @@
+---
+sidebar_position: 6
+id: service
+title: Serviciu
+description: Învațați să creați servicii web și API-uri REST în Netuno, să integrați date între sisteme și să furnizați date dinamice frontendului în mod asincron.
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Cu Netuno puteți crea **_servicii web_** și construi orice tip de **API-uri <a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a>** complexe pentru integrarea datelor între sisteme.
+
+:::info Ce este un serviciu web?
+Un serviciu web permite sistemelor să facă schimb de informații online într-un mod standardizat. În Netuno, fiecare fișier din `server/services/` devine automat un endpoint accesibil prin HTTP.
+:::
+
+## De ce să folosiți servicii web?
+
+Utilizarea serviciilor asincrone aduce beneficii clare pentru experiența utilizatorului:
+
+- **Încărcare mai rapidă:** serverul livrează structura vizuală a paginii imediat, fără să aștepte procesarea tuturor datelor.
+- **Date dinamice la cerere:** frontendul solicită doar datele necesare, atunci când este necesar.
+- **Integrare între sisteme:** un serviciu creat în Netuno poate fi consumat de orice aplicație externă (mobilă, alt sistem web etc.).
+- **Experiență mai bună pentru utilizator:** utilizatorul nu trebuie să aștepte procesarea completă a paginii înainte de a vedea ceva pe ecran.
+
+## Cerințe preliminare
+
+Înainte de a începe, asigurați-vă că:
+
+- Netuno este instalat și rulează local.
+- Aplicația `demo` a fost creată conform descrierii din [Creați aplicația](../app-create).
+- Există date înregistrate în **Sarcini** și asociate cu **Înregistrări** (necesar pentru ca răspunsul să nu fie gol).
+
+## Configurați editorul de cod
+
+Pentru a crea și edita servicii în Netuno, utilizați un editor de cod preferat. Recomandăm **[Visual Studio Code](https://code.visualstudio.com/download)** deoarece este gratuit, ușor și foarte intuitiv, însă orice editor compatibil cu JavaScript/Python/Groovy va funcționa normal.
+
+## Deschideți aplicația demo {#abrir-a-aplicacao-demo}
+
+1. Deschideți **Visual Studio Code**.
+2. Faceți clic pe pictograma **Fișiere** din panoul lateral stâng.
+3. Selectați **Deschideți folderul** (File > Open Folder).
+4. Navigați până la folderul de instalare Netuno.
+5. Selectați directorul: **`apps/demo`**
+6. Faceți clic pe **Deschideți**.
+
+Structura de foldere a aplicației `demo` va fi încărcată în panoul din stânga.
+
+## Creați serviciul
+
+Serviciile sunt procesate pe partea de **server**. Pentru a crea un serviciu nou:
+
+1. În panoul de fișiere, extindeți structura până când găsiți folderul `server/services/`.
+2. Faceți clic dreapta pe folderul `services`.
+3. Selectați **Fișier nou** `New File`.
+4. Denumiți fișierul în funcție de limbajul pe care doriți să îl utilizați:
+
+<PolyglotPath files={[
+    'server/services/lucratori'
+]} />
+
+
+<PolyglotCode
+    file="server/services/lucratori"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                /**
+                *** Transformă datele interogării în ieșire JSON.
+                */
+                const dbInregistrari = _db.query(\`
+                    SELECT DISTINCT
+                        lucrator.nume, SUM(DATEDIFF(HOUR, inregistrare.inceput, inregistrare.sfarsit)) AS total
+                    FROM lucrator INNER JOIN inregistrare
+                        ON lucrator.id = inregistrare.lucrator_id
+                    WHERE lucrator.activ = true AND inregistrare.activ = true
+                    GROUP BY lucrator.nume
+                    ORDER BY total ASC
+                \`);
+
+                const lista = _val.list();
+
+                for (const dbInregistrare of dbInregistrari) {
+                    lista.add(
+                        _val.map()
+                            .set("nume", dbInregistrare.getString("nume"))
+                            .set("total", dbInregistrare.getInt("total"))
+                    );
+                }
+
+                _out.json(lista);
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                #
+                # Transformă datele interogării în ieșire JSON.
+                #
+                dbInregistrari = _db.query(
+                    """SELECT DISTINCT
+                        lucrator.nume, SUM(DATEDIFF(HOUR, inregistrare.inceput, inregistrare.sfarsit)) AS total
+                    FROM lucrator INNER JOIN inregistrare
+                        ON lucrator.id = inregistrare.lucrator_id
+                    WHERE lucrator.activ = true AND inregistrare.activ = true
+                    GROUP BY lucrator.nume
+                    ORDER BY total ASC"""
+                )
+
+                lista = _val.list()
+
+                for dbInregistrare in dbInregistrari:
+                    lista.add(
+                        _val.map()
+                            .set("nume", dbInregistrare.getString("nume"))
+                            .set("total", dbInregistrare.getInt("total"))
+                    )
+
+                _out.json(lista)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                #
+                # Transformă datele interogării în ieșire JSON.
+                #
+                dbInregistrari = _db.query(%{
+                    SELECT DISTINCT
+                        lucrator.nume, SUM(DATEDIFF(HOUR, inregistrare.inceput, inregistrare.sfarsit)) AS total
+                    FROM lucrator INNER JOIN inregistrare
+                        ON lucrator.id = inregistrare.lucrator_id
+                    WHERE lucrator.activ = true AND inregistrare.activ = true
+                    GROUP BY lucrator.nume
+                    ORDER BY total ASC
+                })
+
+                lista = _val.list()
+
+                dbInregistrari.each do |dbInregistrare|
+                    lista.add(
+                        _val.map()
+                            .set("nume", dbInregistrare.getString("nume"))
+                            .set("total", dbInregistrare.getInt("total"))
+                    )
+                end
+
+                _out.json(lista)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                /**
+                *** Transformă datele interogării în ieșire JSON.
+                */
+                val dbInregistrari = _db.query(
+                    """SELECT DISTINCT
+                        lucrator.nume, SUM(DATEDIFF(HOUR, inregistrare.inceput, inregistrare.sfarsit)) AS total
+                    FROM lucrator INNER JOIN inregistrare
+                        ON lucrator.id = inregistrare.lucrator_id
+                    WHERE lucrator.activ = true AND inregistrare.activ = true
+                    GROUP BY lucrator.nume
+                    ORDER BY total ASC"""
+                );
+
+                val lista = _val.list();
+
+                dbInregistrari.forEach {
+                    lista.add(
+                        _val.map()
+                            .set("nume", it.getString("nume"))
+                            .set("total", it.getInt("total"))
+                    );
+                }
+
+                _out.json(lista);
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                /**
+                *** Transformă datele interogării în ieșire JSON.
+                */
+                def dbInregistrari = _db.query("""\\
+                    SELECT DISTINCT
+                        lucrator.nume, SUM(DATEDIFF(HOUR, inregistrare.inceput, inregistrare.sfarsit)) AS total
+                    FROM lucrator INNER JOIN inregistrare
+                        ON lucrator.id = inregistrare.lucrator_id
+                    WHERE lucrator.activ = true AND inregistrare.activ = true
+                    GROUP BY lucrator.nume
+                    ORDER BY total ASC
+                """);
+
+                def lista = _val.list();
+
+                for (dbInregistrare in dbInregistrari) {
+                    lista.add(
+                        _val.map()
+                            .set("nume", dbInregistrare.getString("nume"))
+                            .set("total", dbInregistrare.getInt("total"))
+                    );
+                }
+
+                _out.json(lista);
+            `
+        },
+    ]}
+/>
+
+Implementați serviciul adăugând codul de mai jos în fișierul creat. Acest serviciu interoghează baza de date și returnează o listă de lucrători cu totalul orelor înregistrate, în format **JSON**.
+
+### Înțelegerea codului
+
+| Obiect/Metodă | Descriere |
+|---|---|
+| `_db.query()` | Execută o interogare SQL și returnează o listă de obiecte în format cheie-valoare (coloană → valoare). |
+| `_val.list()` | Creează o listă mutabilă pentru acumularea rezultatelor. |
+| `_val.map()` | Creează un obiect de mapare (cheie-valoare) pentru fiecare rând de rezultat. |
+| `_out.json()` | Serializează obiectul în JSON și trimite răspunsul la cererile HTTP. |
+
+:::warning Date necesare
+Asigurați-vă că există date înregistrate în **Sarcini** și asociate cu **Înregistrări**. În caz contrar, endpointul va returna o listă goală `[]`.
+:::
+
+## Rulați și testați serviciul
+
+Cu Netuno în execuție, accesați endpointul în browser:
+
+:::tip Sfat pentru vizualizarea JSON
+Recomandăm **[Firefox](https://www.mozilla.org/)** pentru testarea endpointurilor direct în browser, deoarece formatează și afișează răspunsul JSON într-un mod lizibil, cu evidențierea sintaxei. Alternativ, utilizați extensii precum **JSON Viewer** în Chrome sau instrumente precum **[Postman](https://www.postman.com/)** pentru teste mai avansate.
+:::
+
+Răspunsul așteptat va fi un JSON similar cu:
+
+```json
+[
+  { "nume": "Ana Popescu", "total": 12 },
+  { "nume": "Mihai Ionescu", "total": 28 },
+  { "nume": "Ion Dumitrescu", "total": 45 }
+]
+```
+
+## Pașii următori
+
+Acum că serviciul dumneavoastră funcționează, puteți:
+
+- 📄 **[Interfață și design](./ui)** — integrați acest serviciu în frontendul aplicației.
+- 📚 **[Biblioteca de servicii](../../library/overview)** — explorați obiectele `_db`, `_val`, `_out` și altele disponibile în Netuno.
+- 🔗 Adăugați **autentificare** și **control de acces** la serviciul dumneavoastră.
+
+___

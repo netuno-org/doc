@@ -4,23 +4,19 @@ title: OpenAPI
 sidebar_label: OpenAPI
 ---
 
-Definition of the service schema.
+Service schema definition.
 
 ## Introduction
 
-An open API, also called public API, is an application programming interface made publicly available to software developers. 
+OpenAPI is a specification that standardizes the services offered by REST APIs, helping to understand how services are defined, including address, inputs, and outputs.
 
-Open APIs are published on the internet and shared freely, allowing the owner of a network-accessible service to give a universal access to consumers.
+It allows generating a testing interface and automatically generating clients to integrate with other technologies.
 
-An API is a software intermediary that makes it possible for application programs to interact with each other and share data. 
+> More about <a href="https://www.openapis.org/" target="_blank">OpenAPI</a>.
 
-It's often used regarding REST APIs that expose a specific service or software functionality while protecting the rest of the application.
+## Activation and Configuration
 
-> About <a href="https://www.openapis.org/" target="_blank">OpenAPI</a>.
-
-## Configure and Activation
-
-To activate and configure OpenAPI in your application on _Netuno_ you need to edit the application settings file for the environment you are using, such as:
+To activate and configure OpenAPI in your Netuno application, you must edit the application configuration file for the environment you are using, such as:
 
 - `📂 config/_development.json`
 - `📂 config/_production.json`
@@ -43,25 +39,25 @@ Enter and adjust the following parameters:
 ...
 ```
 
-Make sure the settings make sense, the example above is for the environment _development_.
+Make sure the settings make sense; the example above is for the _development_ environment.
 
-> `https` should be used in production.
+> In production, it is advisable to use `https`.
 
 ### _openapi.json in Services
 
-In the service root configure the file `_openapi.json`.
+At the root of the services, configure the `_openapi.json` file.
 
-The complete way within application is:
+The full path inside the application is:
 
 - `📂 server/services/_openapi.json`
 
-Below you can see an example of how is the content of this file:
+The content of this file will be like this example:
 
 ```
 {
   "info": {
-    "title": "My application",
-    "description": "REST API of My Application use sparingly.",
+    "title": "My Application",
+    "description": "My Application REST API, use sparingly.",
     "version": "1.0"
   },
   "components": {
@@ -75,31 +71,31 @@ Below you can see an example of how is the content of this file:
 }
 ```
 
-Adjust the title and description to what makes sense for you.
+Adjust the title and description to what makes sense in your case.
 
 ## Input
 
-When configuring _schema_ files for inputs, it allows _Netuno_ to validate the parameters received when comparing them with the JSON Schema rules.
+When configuring input _schema_ files, it allows Netuno to validate the received parameters by comparing them with the JSON Schema rules.
 
 > More about <a href="https://json-schema.org/" target="blank">JSON Schema</a>.
 
-If there is any failure in the validation, the execution of the service is prevented and an error is presented in the _Netuno_ `log` and, for those who consume the service the HTTP Status Code ** 400 ** (_Bad Request_) is returned.
+If there is any validation failure, execution of the service is prevented and an error is shown in the Netuno `log`, and the HTTP Status Code **400** (_Bad Request_) is returned to the service consumer.
 
-To configure the rules of the input parameters will be necessary to create a file with the extension `in.json` next to the service code file, the name should be the same.
+To configure input parameter rules, you must create a file with the `in.json` extension alongside the service code file; the name must be the same.
 
-- The service `detalhe.js` should have a file `detalhe.in.json`.
-- The service `detalhe.post.js` should have a file `detalhe.post.in.json`.
-- The service `detalhe/post.js` Should have a file `detalhe/post.in.json`.
+- The `detail.js` service would have the `detail.in.json` file.
+- The `detail.post.js` service would have the `detail.post.in.json` file.
+- The `detail/post.js` service would have the `detail/post.in.json` file.
 
-Example of the content in `in.json`:
+Example of `in.json` content:
 
 ```
 {
     "tags":[
       "product services"
     ],
-    "summary": "Product Details",
-    "description": "All detail fields for the specified product are obtained.",
+    "summary": "Product Detail",
+    "description": "All detail fields of the specified product are obtained.",
     "type": "object",
     "properties": {
       "uid": {
@@ -112,28 +108,28 @@ Example of the content in `in.json`:
 }
 ```
 
-_Netuno_ is supported by some additional types that are not supported by JSON Schema, such as `string-not-empty`,` array-not-empty`, `id` and` uid` (or `uuid` or` guid` ).
+Netuno supports some additional types that are not supported by JSON Schema, such as `string-not-empty`, `array-not-empty`, `id`, and `uid` (or `uuid` or even `guid`).
 
-> Learn about <a href="https://json-schema.org/learn/" target="_blank">JSON Schema Learn</a>.
+> More about this specification at <a href="https://json-schema.org/learn/" target="_blank">JSON Schema Learn</a>.
 
 ## Output
 
-When configuring output _schema files, it allows _Netuno_ to validate the parameters sent when comparing them with JSON Schema rules.
+When configuring output _schema_ files, it allows Netuno to validate the sent parameters by comparing them with the JSON Schema rules.
 
-> About <a href="https://json-schema.org/" target="blank">JSON Schema</a>.
+> More about <a href="https://json-schema.org/" target="blank">JSON Schema</a>.
 
-In case there is any failure in the validation the output is still sent to those who consume the service, but the messages of validation failures are presented in the `log` of _Netuno_.
+If there is any validation failure, the output is still sent to the service consumer, but validation failure messages are shown in the Netuno `log`.
 
-To configure the rules of the output parameters, it is necessary to create a file with the extension `out.200.json` next to the service code file, the name should be the same as the service.
+To configure output parameter rules, you must create a file with the `out.200.json` extension alongside the service code file; the name must be the same as the service.
 
-Where the **200** is the HTTP Status Code that goes as and response, to support multiple HTTP Status Code just add more JSON files with the different number.
+Where **200** is the HTTP Status Code in the response; to support multiple HTTP Status Codes, simply add more JSON files with a different number.
 
 Some examples:
-- The service `guardar.js` would have to have the file `guardar.out.200.json`.
-- The service `guardar.post.js` would have to have the file`guardar.post.out.200.json`.
-- The service `guardar/post.js` would have to have the file `guardar/post.out.200.json`.
+- The `save.js` service would have the `save.out.200.json` file.
+- The `save.post.js` service would have the `save.post.out.200.json` file.
+- The `save/post.js` service would have the `save/post.out.200.json` file.
 
-Example of the content `out.200.json`:
+Example of `out.200.json` content:
 
 ```
 {
@@ -149,94 +145,94 @@ Example of the content `out.200.json`:
 }
 ```
 
-_Netuno_ is supported by some additional types that are not supported by JSON Schema, such as `string-not-empty`,` array-not-empty`, `id` and` uid` (or `uuid` or` guid`).
+Netuno supports some additional types that are not supported by JSON Schema, such as `string-not-empty`, `array-not-empty`, `id`, and `uid` (or `uuid` or even `guid`).
 
-> More about this specification <a href="https://json-schema.org/learn/" target="_blank">JSON Schema Learn</a>.
+> More about this specification at <a href="https://json-schema.org/learn/" target="_blank">JSON Schema Learn</a>.
 
 ## Schema Import
 
-_Netuno_ supports importing _schemas_, which allows to use part of _schema_ in multiple JSONs.
+Netuno supports importing _schemas_, which allows reusing part of a _schema_ across multiple JSONs.
 
-> Avoid code repetition importing _schemas_ .
+> By importing _schemas_, you avoid code duplication.
 
-Create a file `_schema` at the root of the services folder:
+Create the `_schema` folder at the root of the services folder, in:
 
 - `📂 server/services/_schema`
 
-Now in the JSON configuration it is possible to import _schemas_ with the parameter `_schema` in JSON, for example:
+Now, in the JSON configuration, it is possible to import _schemas_ with the `_schema` parameter in the JSON, for example:
 
 ```
 {
     "summary": "Delete Products",
-    "description": "Allows you to permanently eliminate products.",
+    "description": "Allows permanently deleting products.",
     "_schema": "get/only-code.in"
 }
 ```
 
-This means that the file `_schema/get/only-code.in.json` will be imported where the parameter` _schema` is.
+This means that the `_schema/get/only-code.in.json` file will be imported where the `_schema` parameter is.
 
-## Tests and Specifications
+## Specification and Testing
 
-To generate the complete specification of all services that support OpenAPI with JSON Schema, click on the example:
+To generate the complete specification of all services that support OpenAPI with JSON Schema, access for example:
 
 - http://localhost:9000/services/_openapi
 
-A JSON will be presented with the entire specification.
+A JSON with the entire specification will be displayed.
 
-To test just copy all the generated JSON.
+To test, copy the entire generated JSON.
 
-Open the Swagger editor: https://editor.swagger.io/
+Open the Swagger Editor: https://editor.swagger.io/
 
-Delete the content on the left and paste the JSON and answer yes in the question of converting from JSON to YAML.
+Delete the existing content on the left side, paste the JSON, and answer yes to the question about converting JSON to YAML.
 
-With the generated interface on the right side it is possible a better understanding of all available services and perform tests.
+With the generated interface on the right side, it is possible to better understand all available services and perform tests.
 
-It also allows you to automatically generate customers for other technologies.
+It also allows automatically generating clients for other technologies.
 
 ## Programmatically
 
-In the `_schema` folder, we can use `.js` files that will be executed together with the generation of the OpenAI definition, but also in the process of validating input and output of the services.
+In the `_schema` folder, we can use `.js` files that will be executed together with the generation of the OpenAPI definition, but also in the input and output validation process of services.
 
 Through schema programming, we can generate dynamic validations, for example:
 - Only accept a code that exists in the database.
-- With the `UID`, it obtains the record in the database and shares it with the services.
-- If it is `POST` or `PUT`, it generates a different type of schema than the one generated in the case of `DELETE`.
+- With the `UID`, retrieve the database record and share it with the services.
+- If it is `POST` or `PUT`, generate a different type of schema from the one generated for `DELETE`.
 
-### Example with List of Values
+### Example with Value List
 
-Imagine we have a service that receives the code of a certain category.
+Imagine we have a service that receives the code of a specific category.
 
-We cannot receive any value as a code, because it may be a value that does not correspond to a valid category code.
+We cannot accept any value as a code, because it may be a value that does not correspond to a valid category code.
 
-So we can restrict the accepted codes to only those registered in the database.
+So we can restrict accepted codes to only those registered in the database.
 
-The schema is created in: `server/services/_schema/category/codes.js`
+Create the schema in: `server/services/_schema/category/codes.js`
 
 ```javascript
 const dbCategories = _db.query("SELECT code FROM category")
 
-const listCodes = _val.list()
+const codeList = _val.list()
 
 for (const dbCategory of dbCategories) {
-    listCodes.add(dbCategory.getString("code"))
+    codeList.add(dbCategory.getString("code"))
 }
 
 _dataSchema
     .set('type', 'string')
     .set(
         'enum',
-        listCodes
+        codeList
     )
 ```
 
-> The `listCodes` will contain all category codes registered in the database.
+> `codeList` will contain all category codes registered in the database.
 
-In the service we can have the following `JSON` that uses the `category/codes` schema:
+In the service, we can have the following `JSON` that uses the `category/codes` schema:
 
 ```json
 {
-  "summary": "List Products in Category",
-  "description": "Gets all products associated with a given category.",
+  "summary": "Lists the Products in the Category",
+  "description": "Gets all products associated with a specific category.",
   "type": "object",
   "properties": {
     "category": {
@@ -257,35 +253,35 @@ In the service we can have the following `JSON` that uses the `category/codes` s
 }
 ```
 
-This way we can ensure that the service is only executed if the code is valid.
+This way, we can ensure that the service only executes if the code is valid.
 
 ### Example with Global Object
 
-Imagine that we have several services that receive the client's `UID` and in each service we have to access the database to obtain the client's data related to its `UID`.
+Imagine that we have several services that receive the customer's `UID`, and in each service we have to access the database to obtain the data of the customer related to their `UID`.
 
-We can centralize this in a programmed schema that, through the client's `UID` received, obtains the client's data from the database and stores it in a global object that is accessible in the services' code.
+We can centralize this in a programmed schema that, through the received customer `UID`, retrieves the customer data from the database and stores it in a global object that is accessible in the service code.
 
-This way, the client's data is always loaded globally and automatically when we receive a client's `UID`.
+Thus, customer data is always loaded globally and automatically when we receive a customer `UID`.
 
-We create a programmed schema in: `server/services/_schema/client.js`
+Create a programmed schema in: `server/services/_schema/customer.js`
 
 ```javascript
-const client = _req.getValues('client', _val.map())
+const customer = _req.getValues('customer', _val.map())
 
 if (!_service.isGeneratingOpenAPIDefinition()) {
-    const dbClient = _db.get('client', client.getString("uid"))
+    const dbCustomer = _db.get('customer', customer.getString("uid"))
     
-    if (dbClient == null) {
+    if (dbCustomer == null) {
         _header.status(404)
         _out.json(
             _val.map()
                 .set('error', true)
-                .set('code', 'client-not-found')
+                .set('code', 'customer-not-found')
         )
         _service.cancel()
     }
     
-    _val.global().set('client', dbClient)
+    _val.global().set('customer', dbCustomer)
 }
 
 _dataSchema.set('type', 'object')
@@ -305,15 +301,15 @@ _dataSchema.set('type', 'object')
     )
 ```
 
-> With `_service.isGeneratingOpenAPIDefinition()` we can validate whether it is the generation of the OpenAPI definition, otherwise it is the execution of an HTTP request.
->
-> If the client's `UID` is not found, then it returns 404 and stops the execution of the service.
->
-> Note that we use `_val.global()`, which allows sharing data globally between all code files that are executed in the processing of the HTTP request.
+> With `_service.isGeneratingOpenAPIDefinition()` we can check whether it is the generation of the OpenAPI definition; otherwise, it is the execution of an HTTP request.
+> 
+> If the customer `UID` is not found, then it returns 404 and interrupts service execution.
+> 
+> Note that we use `_val.global()`, which allows sharing data globally among all code files executed during HTTP request processing.
 
-In the following example, we have a service that lists the purchases made by the client.
+Following the example, we have a service that lists the purchases made by the customer.
 
-We have the input validation for the service in: `server/services/client/purchase/post.in.json`
+We have the input validation for the service in: `server/services/customer/purchases/post.in.json`
 
 ```json
 {
@@ -321,36 +317,36 @@ We have the input validation for the service in: `server/services/client/purchas
     "description": "Lists the purchases made by the customer.",
     "type": "object",
     "properties": {
-        "cliente": {
-            "_schema": "client"
+        "customer": {
+            "_schema": "customer"
         }
     },
     "required": [
-        "client"
+        "customer"
     ]
 }
 ```
 
-> Note that the value of the client's `"_schema"` is the name of the code file that we programmed in the schema previously.
+> Note that the customer's `"_schema"` value is the name of the code file we programmed in the schema earlier.
 
-And in the code of the client purchase service in: `server/services/client/purchases/post.js`
+And in the customer purchases service code in: `server/services/customer/purchases/post.js`
 
 ```javascript
-const dbClient = _val.global().getValues('client')
+const dbCustomer = _val.global().getValues('customer')
 ...
 ```
 
-Through `_val.global()` we obtain the customer data from the database that was loaded by the schema code automatically.
+Through `_val.global()`, we obtain the customer data from the database that was automatically loaded by the schema code.
 
 ### Example with HTTP Method
 
 We can return a different schema for each type of HTTP method.
 
-For example, we can generate a schema by code for operations to create, edit or remove network ports:
+For example, we can generate a schema by code for operations to create, edit, or remove network ports:
 
-- If it is POST, it performs the creation operation, so it does not contain the UID but requires the name and port number.
-- If it is PUT, it performs the editing operation, it needs to require the UID, the name and the number of the network port.
-- When it is PUT or DELETE, it needs the UID to perform the respective editing and deletion operations.
+- If it is POST, it performs the create operation, so it does not contain the UID but requires the name and port number.
+- If it is PUT, it performs the edit operation and must require the UID, the name, and the network port number.
+- When it is PUT or DELETE, it requires the UID to perform the respective edit and remove operations.
 
 ```javascript
 const properties = _val.map()
@@ -396,11 +392,17 @@ _dataSchema.set('type', 'object')
     )
 ```
 
-## Summarize
+## Videos
 
-Therefore with OpenAPI support we can create validation rules using JSON Schema, which offers the following advantages:
+Below are some example videos on how to develop an API integrated with OpenAPI:
 
-- Ensure greater security data that is injected into the services.
-- Alert in `log` if the service output is not as specified.
-- Easily generate a navigation interface for services and tests.
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/SaeaMh_zwRg?si=oNt_rOcL8Xuu4qE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
+## Conclusion
+
+With OpenAPI support, we can create validation rules using JSON Schema, which offers the following advantages:
+
+- Ensure greater security for data injected into services.
+- Alert in the `log` if the service output is not as specified.
+- Easily generate a service navigation and testing interface.

@@ -1,0 +1,209 @@
+---
+id: csv 
+title: CSV 
+sidebar_label: CSV 
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+カスタムPDFファイルを処理します。
+
+## はじめに
+
+Netunoは、[CSV](/docs/library/resources/csv)リソースを通じてCSVファイルを生成します。このリソースにより、Netunoがサポートするさまざまなプログラミング言語に対して[Apache Commons CSV](https://commons.apache.org/proper/commons-csv/)のローコード抽象化が可能になります。
+
+Netunoに付属する**demo**というアプリケーション（デモアプリケーション）には、さまざまな言語で可能なコード実装の例が多数含まれています。これには、次の場所にある`csv`サービスを介したCSVエクスポートのデモも含まれます:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/csv`
+]} />
+
+## CSVファイルを作成する
+
+CSVファイルを作成するには、まず`Apache Commons CSV`の`CSVPrinter`を初期化する必要があります。
+そのためには、フォルダ名とファイル名、およびCSVの形式を渡す必要があります。
+例では、アプリケーションの`storage`内にファイルを生成します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const csvPrinter = _csv.printer(
+                  _storage.filesystem("server", "データ.csv"),
+                  _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                csv_printer = _csv.printer(
+                    _storage.filesystem("server", "データ.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                csv_printer = _csv.printer(
+                    _storage.filesystem("server", "データ.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val csvPrinter = _csv.printer(
+                    _storage.filesystem("server", "データ.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def csvPrinter = _csv.printer(
+                    _storage.filesystem("server", "データ.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        }
+    ]}
+/>
+
+サポートされている形式については、[こちら](https://doc.netuno.org/pt/docs/library/resources/csv/#format)に記載されています。
+
+### 書き込み
+
+CSVファイルに行を書き込むには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvPrinter.printRecord("id", "ユーザー名", "名", "姓", "生年月日")
+                csvPrinter.printRecord(1, "taro73", "太郎", "山田", 123)
+            `
+        }
+    ]}
+/>
+
+### 閉じる
+
+最後に、`CSVPrinter`を閉じる必要があります:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvPrinter.close()
+            `
+        }
+    ]}
+/>
+
+
+## CSVファイルを読み取る
+
+CSVファイルを読み取るには、まず`Apache Commons CSV`の`CSVParser`を初期化する必要があります。
+そのためには、フォルダ名とファイル名を渡す必要があります。
+例では、アプリケーションの`storage`内にあるファイルを読み取ります:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const csvParser = _csv.parser(_storage.filesystem("server", "データ.csv"))
+            `
+        }
+    ]}
+/>
+
+### 行
+
+これで、CSVファイルの各行を表す`Apache Commons CSV`の`CSVRecord`を反復処理できます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const record of csvParser) {
+                    const columnOne = record.get(0)
+                    const columnTwo = record.get(1)
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for record in csvParser:
+                    columnOne = record.get(0)
+                    columnTwo = record.get(1)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                csvParser.each do |record|
+                    columnOne = record.get(0)
+                    columnTwo = record.get(1)
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                for (record in csvParser) {
+                    val columnOne = record.get(0)
+                    val columnTwo = record.get(1)
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (record in csvParser) {
+                    def columnOne = record.get(0)
+                    def columnTwo = record.get(1)
+                }
+            `
+        },
+    ]}
+/>
+
+または、`Apache Commons CSV`の`getRecord`メソッドで各行を取得できます。
+この例では、最初の`get`が最初の行を取得します。2番目の`get`はその行の最初のフィールド/値を取得します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvParser.getRecords().get(0).get(0)
+            `
+        }
+    ]}
+/>
+
+### 閉じる
+
+最後に、`CSVParser`を閉じる必要があります:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvParser.close()
+            `
+        }
+    ]}
+/>

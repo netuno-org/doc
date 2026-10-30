@@ -1,0 +1,254 @@
+---
+sidebar_position: 6
+id: service
+title: Usługa
+description: Dowiedz się, jak tworzyć usługi sieciowe i API REST w Netuno, integrować dane między systemami i asynchronicznie dostarczać dynamiczne dane do frontendu.
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Za pomocą Netuno można tworzyć **_usługi sieciowe_** i budować dowolnego rodzaju złożone **API <a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a>** do integracji danych między systemami.
+
+:::info Czym jest usługa sieciowa?
+Usługa sieciowa pozwala systemom wymieniać informacje online w ustandaryzowany sposób. W Netuno każdy plik w `server/services/` automatycznie staje się punktem końcowym dostępnym przez HTTP.
+:::
+
+## Dlaczego warto używać usług sieciowych?
+
+Korzystanie z asynchronicznych usług przynosi wyraźne korzyści dla doświadczenia użytkownika:
+
+- **Szybsze ładowanie:** serwer natychmiast dostarcza strukturę wizualną strony, nie czekając na przetworzenie wszystkich danych.
+- **Dane dynamiczne na żądanie:** frontend żąda tylko potrzebnych danych, gdy są potrzebne.
+- **Integracja między systemami:** usługa utworzona w Netuno może być używana przez dowolną aplikację zewnętrzną (mobilną, inny system webowy itp.).
+- **Lepsze doświadczenie użytkownika:** użytkownik nie musi czekać na pełne przetworzenie strony, zanim zobaczy cokolwiek na ekranie.
+
+## Wymagania wstępne
+
+Przed rozpoczęciem upewnij się, że:
+
+- Netuno jest zainstalowane i uruchomione lokalnie.
+- Aplikacja `demo` została utworzona zgodnie z opisem w [Tworzenie aplikacji](../app-create).
+- W **Zadaniach** i powiązanych **Rejestrach** są zapisane dane (potrzebne, aby odpowiedź nie była pusta).
+
+## Konfiguracja edytora kodu
+
+Aby tworzyć i edytować usługi w Netuno, użyj edytora kodu według własnych preferencji. Polecamy **[Visual Studio Code](https://code.visualstudio.com/download)**, ponieważ jest darmowy, lekki i bardzo intuicyjny, ale każdy edytor zgodny z JavaScript/Python/Groovy będzie działał normalnie.
+
+## Otwieranie aplikacji demo {#abrir-a-aplicacao-demo}
+
+1. Otwórz **Visual Studio Code**.
+2. Kliknij ikonę **Pliki** w lewym panelu bocznym.
+3. Wybierz **Otwórz folder** (menu Plik > Otwórz folder).
+4. Przejdź do folderu instalacyjnego Netuno.
+5. Wybierz katalog: **`apps/demo`**
+6. Kliknij **Otwórz**.
+
+Struktura folderów aplikacji `demo` zostanie wczytana w lewym panelu.
+
+## Tworzenie usługi
+
+Usługi są przetwarzane po stronie **serwera**. Aby utworzyć nową usługę:
+
+1. W panelu plików rozwiń strukturę, aż znajdziesz folder `server/services/`.
+2. Kliknij **prawym przyciskiem myszy** na folderze `services`.
+3. Wybierz **Nowy plik** `New File`.
+4. Nazwij plik zgodnie z językiem, którego chcesz użyć:
+
+<PolyglotPath files={[
+    'server/services/pracownicy'
+]} />
+
+
+<PolyglotCode
+    file="server/services/pracownicy"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                /**
+                *** Przekształca dane zapytania w wynik JSON.
+                */
+                const dbRejestry = _db.query(\`
+                    SELECT DISTINCT
+                        pracownik.imie, SUM(DATEDIFF(HOUR, rejestr.poczatek, rejestr.koniec)) AS suma
+                    FROM pracownik INNER JOIN rejestr
+                        ON pracownik.id = rejestr.pracownik_id
+                    WHERE pracownik.aktywny = true AND rejestr.aktywny = true
+                    GROUP BY pracownik.imie
+                    ORDER BY suma ASC
+                \`);
+
+                const lista = _val.list();
+
+                for (const dbRejestr of dbRejestry) {
+                    lista.add(
+                        _val.map()
+                            .set("imie", dbRejestr.getString("imie"))
+                            .set("suma", dbRejestr.getInt("suma"))
+                    );
+                }
+
+                _out.json(lista);
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                #
+                # Przekształca dane zapytania w wynik JSON.
+                #
+                dbRejestry = _db.query(
+                    """SELECT DISTINCT
+                        pracownik.imie, SUM(DATEDIFF(HOUR, rejestr.poczatek, rejestr.koniec)) AS suma
+                    FROM pracownik INNER JOIN rejestr
+                        ON pracownik.id = rejestr.pracownik_id
+                    WHERE pracownik.aktywny = true AND rejestr.aktywny = true
+                    GROUP BY pracownik.imie
+                    ORDER BY suma ASC"""
+                )
+
+                lista = _val.list()
+
+                for dbRejestr in dbRejestry:
+                    lista.add(
+                        _val.map()
+                            .set("imie", dbRejestr.getString("imie"))
+                            .set("suma", dbRejestr.getInt("suma"))
+                    )
+
+                _out.json(lista)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                #
+                # Przekształca dane zapytania w wynik JSON.
+                #
+                dbRejestry = _db.query(%{
+                    SELECT DISTINCT
+                        pracownik.imie, SUM(DATEDIFF(HOUR, rejestr.poczatek, rejestr.koniec)) AS suma
+                    FROM pracownik INNER JOIN rejestr
+                        ON pracownik.id = rejestr.pracownik_id
+                    WHERE pracownik.aktywny = true AND rejestr.aktywny = true
+                    GROUP BY pracownik.imie
+                    ORDER BY suma ASC
+                })
+
+                lista = _val.list()
+
+                dbRejestry.each do |dbRejestr|
+                    lista.add(
+                        _val.map()
+                            .set("imie", dbRejestr.getString("imie"))
+                            .set("suma", dbRejestr.getInt("suma"))
+                    )
+                end
+
+                _out.json(lista)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                /**
+                *** Przekształca dane zapytania w wynik JSON.
+                */
+                val dbRejestry = _db.query(
+                    """SELECT DISTINCT
+                        pracownik.imie, SUM(DATEDIFF(HOUR, rejestr.poczatek, rejestr.koniec)) AS suma
+                    FROM pracownik INNER JOIN rejestr
+                        ON pracownik.id = rejestr.pracownik_id
+                    WHERE pracownik.aktywny = true AND rejestr.aktywny = true
+                    GROUP BY pracownik.imie
+                    ORDER BY suma ASC"""
+                );
+
+                val lista = _val.list();
+
+                dbRejestry.forEach {
+                    lista.add(
+                        _val.map()
+                            .set("imie", it.getString("imie"))
+                            .set("suma", it.getInt("suma"))
+                    );
+                }
+
+                _out.json(lista);
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                /**
+                *** Przekształca dane zapytania w wynik JSON.
+                */
+                def dbRejestry = _db.query("""\\
+                    SELECT DISTINCT
+                        pracownik.imie, SUM(DATEDIFF(HOUR, rejestr.poczatek, rejestr.koniec)) AS suma
+                    FROM pracownik INNER JOIN rejestr
+                        ON pracownik.id = rejestr.pracownik_id
+                    WHERE pracownik.aktywny = true AND rejestr.aktywny = true
+                    GROUP BY pracownik.imie
+                    ORDER BY suma ASC
+                """);
+
+                def lista = _val.list();
+
+                for (dbRejestr in dbRejestry) {
+                    lista.add(
+                        _val.map()
+                            .set("imie", dbRejestr.getString("imie"))
+                            .set("suma", dbRejestr.getInt("suma"))
+                    );
+                }
+
+                _out.json(lista);
+            `
+        },
+    ]}
+/>
+
+Zaimplementuj usługę, dodając poniższy kod do utworzonego pliku. Ta usługa odpytuje bazę danych i zwraca listę pracowników z łączną liczbą zarejestrowanych godzin w formacie **JSON**.
+
+### Zrozumienie kodu
+
+| Obiekt/Metoda | Opis |
+|---|---|
+| `_db.query()` | Wykonuje zapytanie SQL i zwraca listę obiektów w formacie klucz-wartość (kolumna → dana). |
+| `_val.list()` | Tworzy mutowalną listę do gromadzenia wyników. |
+| `_val.map()` | Tworzy obiekt mapowania (klucz-wartość) dla każdego wiersza wyniku. |
+| `_out.json()` | Serializuje obiekt do JSON i wysyła odpowiedź na żądania HTTP. |
+
+:::warning Wymagane dane
+Upewnij się, że w **Zadaniach** i powiązanych **Rejestrach** są zapisane dane. W przeciwnym razie punkt końcowy zwróci pustą listę `[]`.
+:::
+
+## Uruchamianie i testowanie usługi
+
+Gdy Netuno jest uruchomione, otwórz punkt końcowy w przeglądarce:
+
+:::tip Wskazówka dotycząca wyświetlania JSON
+Polecamy **[Firefox](https://www.mozilla.org/)** do testowania punktów końcowych bezpośrednio w przeglądarce, ponieważ formatuje i wyświetla odpowiedź JSON w czytelny sposób z podświetlaniem składni. Alternatywnie użyj rozszerzeń takich jak **JSON Viewer** w Chrome lub narzędzi takich jak **[Postman](https://www.postman.com/)** do bardziej zaawansowanych testów.
+:::
+
+Oczekiwany wynik będzie podobny do poniższego JSON:
+
+```json
+[
+  { "imie": "Anna Kowalska", "suma": 12 },
+  { "imie": "Karol Nowak", "suma": 28 },
+  { "imie": "Jan Kowalski", "suma": 45 }
+]
+```
+
+## Następne kroki
+
+Teraz, gdy Twoja usługa działa, możesz:
+
+- 📄 **[Interfejs i design](./ui)** — zintegrować tę usługę z frontendem aplikacji.
+- 📚 **[Biblioteka usług](../../library/overview)** — poznać obiekty `_db`, `_val`, `_out` i inne dostępne w Netuno.
+- 🔗 Dodać **uwierzytelnianie** i **kontrolę dostępu** do swojej usługi.
+
+___

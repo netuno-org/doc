@@ -1,0 +1,1069 @@
+---
+id: upload
+title: Upload
+sidebar_label: Upload
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Dateien an die API senden und in einem Ordner oder in der Datenbank speichern.
+
+## Einführung
+
+Wenn wir Dateien an die Dienste der REST-API senden müssen, gibt es in Netuno mehrere Möglichkeiten, dies zu implementieren.
+
+Normalerweise werden Dateien im Body der HTTP-Anfrage im multipart-Format strukturiert gesendet; dies ist das gängigste Verfahren im Frontend, zum Beispiel wenn wir ein Formular ausfüllen, das ein Feld zur Auswahl einer Datei enthält.
+
+Alternativ können wir die Bytes der Dateien als Base64-kodierten Wert in einem JSON-Objekt senden, wenn wir eine zu 100 % auf JSON basierende REST-API wünschen.
+
+## Dateien
+
+Über `_req.file` können wir den Feldnamen angeben und so das Objekt der gesendeten Datei abrufen; sehen Sie hier:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const meineDatei = _req.file("datei");
+            `
+        },
+    ]}
+/>
+
+Das heißt, `_req` enthält alle Daten, die wir im Body der HTTP-Anfrage empfangen.
+
+Und über die Methode `file` lässt sich das Objekt abrufen, das die gesendete Datei repräsentiert.
+
+Der erhaltene Wert kann `null` sein, wenn keine Datei vorhanden ist.
+
+## Bilder
+
+Wenn wir Bilder empfangen, ist es oft notwendig, sie zu skalieren, um Einheitlichkeit zu gewährleisten und den von den Bildern belegten Speicherplatz zu reduzieren.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const meineDatei = _req.getFile("bild");
+                if (meineDatei != null
+                    && (meineDatei.isExtension("jpeg")
+                        || meineDatei.isExtension("jpg")
+                        || meineDatei.isExtension("png")
+                    )) {
+                    const meinBild = _image.init(meineDatei)
+                        .resize(200, 200)
+                        .file(meineDatei.baseName() +".jpg", "jpeg");
+                    _header.contentTypeJPG();
+                    _out.copy(meinBild);
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                meineDatei = _req.getFile("bild")
+                if meineDatei is not None and (
+                    meineDatei.isExtension("jpeg")
+                    or meineDatei.isExtension("jpg")
+                    or meineDatei.isExtension("png")):
+                    meinBild = (
+                        _image.init(meineDatei)
+                            .resize(200, 200)
+                            .file(meineDatei.baseName() +".jpg", "jpeg")
+                    )
+                    _header.contentTypeJPG()
+                    _out.copy(meinBild)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                meine_datei = _req.getFile("bild")
+                if !meine_datei.nil? && (
+                    meine_datei.isExtension("jpeg") ||
+                    meine_datei.isExtension("jpg") ||
+                    meine_datei.isExtension("png")
+                )
+                    mein_bild = _image.init(meine_datei)
+                        .resize(200, 200)
+                        .file(meine_datei.baseName() +".jpg", "jpeg")
+                    _header.contentTypeJPG()
+                    _out.copy(mein_bild)
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val meineDatei = _req.getFile("bild")
+                if (meineDatei != null
+                    && (meineDatei.isExtension("jpeg")
+                        || meineDatei.isExtension("jpg")
+                        || meineDatei.isExtension("png")
+                    )) {
+                    val meinBild = _image.init(meineDatei.input())
+                        .resize(200, 200)
+                        .file(meineDatei.baseName() +".jpg", "jpeg")
+                    _header.contentTypeJPG()
+                    _out.copy(meinBild.input())
+                }
+            `
+        }
+    ]}
+/>
+
+Mit der polyglotten Low-Code-Programmierressource [Image](/docs/library/resources/image) können wir Bilder bearbeiten, zuschneiden, skalieren, neue erstellen usw.
+
+## Als Base64 im JSON
+
+Um eine Datei im an den Dienst gesendeten JSON hochzuladen, können wir eine Eigenschaft mit folgendem Wert definieren:
+
+`data:image/png;base64,...`
+
+Dabei folgt in `...` die Folge der Base64-kodierten Bytes der Datei.
+
+Der Dateityp folgt dabei nach `data`, zum Beispiel:
+
+- PNG: `image/png`.
+- JPG: `image/jpeg`
+- TXT: `text/plain`
+- PDF: `application/pdf`
+- XLSX: `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
+
+Sehen Sie das Beispiel einer kleinen PNG-Bilddatei, die im JSON an einen Dienst gesendet wird:
+
+```json
+{
+  "datei": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAFIGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpDb2xvclNwYWNlPSIxIgogICBleGlmOlBpeGVsWERpbWVuc2lvbj0iMyIKICAgZXhpZjpQaXhlbFlEaW1lbnNpb249IjMiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMyIKICAgdGlmZjpJbWFnZVdpZHRoPSIzIgogICB0aWZmOlJlc29sdXRpb25Vbml0PSIyIgogICB0aWZmOlhSZXNvbHV0aW9uPSI3Mi8xIgogICB0aWZmOllSZXNvbHV0aW9uPSI3Mi8xIgogICB4bXA6TWV0YWRhdGFEYXRlPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMTItMjlUMTk6MTI6MjdaIj4KICAgPHhtcE1NOkhpc3Rvcnk+CiAgICA8cmRmOlNlcT4KICAgICA8cmRmOmxpCiAgICAgIHhtcE1NOmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHhtcE1NOnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IERlc2lnbmVyIDEuMTAuNSIKICAgICAgeG1wTU06d2hlbj0iMjAyNS0wMi0yM1QyMjoxNDozM1oiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0icHJvZHVjZWQiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFmZmluaXR5IDMuMC4xIgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTEyLTI5VDE5OjEyOjI3WiIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+UGhcxwAAAYFpQ0NQc1JHQiBJRUM2MTk2Ni0yLjEAACiRdZG7SwNBEIe/JEqCRhS0sFAIEq3iG4I2ggmigkiIEXw1yZmHkMdxlyDBVrANKIg2vgr9C7QVrAVBUQSx1lbRRuWc84QEMbPMzre/3Rl2Z8EeSSsZvaYPMtm8Fh4PeObmFzzOZ9y004yL3qiiq6Oh0BRV7f0Wmxmvu81a1c/9a/XLcV0Bm0t4RFG1vPCE8NRqXjV5S7hFSUWXhU+EfZpcUPjG1GMWP5mctPjTZC0SDoK9SdiTrOBYBSspLSMsL8ebSReU3/uYL3HHs7MzEjvE29AJM04AD5OMEcRPP8My++lmgB5ZUSW/7yd/mpzkKjKrFNFYIUmKPD5RC1I9LjEhelxGmqLZ/7991RODA1Z1dwBqHw3jtROcm/BVMoyPA8P4OgTHA5xny/m5fRh6E71U1rx70LgOpxdlLbYNZxvQeq9GteiP5BC3JxLwcgwN89B8BXWLVs9+9zm6g8iafNUl7OxCl5xvXPoGe8Rn71E5kqUAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAySURBVAiZAScA2P8BJYrEogr//l3h5+qlBP4HCF3n/AAA/wP7WwLu7PKk+eHWAPzWyKSmfRbbIj23ZQAAAABJRU5ErkJggg=="
+}
+```
+
+Wir können die gesendete Datei wie folgt abrufen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const meineDatei = _req.getFile("datei");
+                if (meineDatei != null) {
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", true)
+                            .set("name", meineDatei.name())
+                            .set("groesseBytes", meineDatei.size())
+                            .set("groesseKB", meineDatei.sizeKB())
+                            .set("groesseMB", meineDatei.sizeMB())
+                            .set("groesseGB", meineDatei.sizeGB())
+                    );
+                } else {
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", false)
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                meineDatei = _req.getFile("datei")
+                if meineDatei is not None:
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", True)
+                            .set("name", meineDatei.name())
+                            .set("groesseBytes", meineDatei.size())
+                            .set("groesseKB", meineDatei.sizeKB())
+                            .set("groesseMB", meineDatei.sizeMB())
+                            .set("groesseGB", meineDatei.sizeGB())
+                    )
+                else:
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", False)
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                meine_datei = _req.getFile("datei")
+                if meine_datei.nil?
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", true)
+                            .set("name", meine_datei.name())
+                            .set("groesseBytes", meine_datei.size())
+                            .set("groesseKB", meine_datei.sizeKB())
+                            .set("groesseMB", meine_datei.sizeMB())
+                            .set("groesseGB", meine_datei.sizeGB())
+                    )
+                else
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", false)
+                    )
+                end
+            `
+        },
+    ]}
+/>
+
+Beispiel der vom obigen Dienst erzeugten Ausgabe:
+
+```json
+{
+  "name": "datei.png",
+  "ergebnis": true,
+  "groesse": 1849,
+  "groesseKB": 1
+}
+```
+
+### Objekt
+
+Wenn sich die Datei in einer internen JSON-Struktur innerhalb des Unterobjekts befindet:
+
+```json
+{
+  "person": {
+    "datei": "data:image/png;base64,..."
+  }
+}
+```
+
+Kann wie folgt abgerufen werden:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const meineDatei = _req.getValues("person").getFile("avatar");
+            `
+        },
+    ]}
+/>
+
+### Array
+
+Wenn sich die Datei in einer internen JSON-Struktur innerhalb des Arrays befindet:
+
+```json
+{
+  "dateien": [
+    "data:image/png;base64,..."
+  ]
+}
+```
+
+Kann wie folgt abgerufen werden:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const meineDatei = _req.getValues("dateien").getFile(0);
+            `
+        },
+    ]}
+/>
+
+## OpenAPI
+
+Netuno unterstützt die Integration mit OpenAPI und verwendet die OpenAPI-Definition zur Validierung der HTTP-Anfrage.
+
+> Mehr über [OpenAPI in Netuno](/docs/academy/server/services/openapi).
+
+Mit dem Typ `file` validiert Netuno, ob der Wert mit dem Dateiformat im JSON beginnt, zum Beispiel:
+
+- `data:image/png;base64,...`
+
+Um zu validieren, ob eine Datei in einer Eigenschaft des JSON-Objekts empfangen wird:
+
+```json title="post.in.json"
+{
+  "summary": "Datei-Upload",
+  "description": "Dienst, der eine Datei im JSON-Objekt empfängt.",
+  "type": "object",
+  "properties": {
+    "datei": {
+      "type": "file"
+    }
+  },
+  "required": [
+    "datei"
+  ]
+}
+```
+
+Um zu validieren, ob eine Liste von Dateien als Array im JSON empfangen wird:
+
+```json title="post.in.json"
+{
+  "summary": "Datei-Uploads",
+  "description": "Dienst, der eine Liste von Dateien als Array im JSON empfängt.",
+  "properties": {
+    "dateien": {
+      "type": "array",
+      "items": {
+        "type": "file"
+      }
+    }
+  },
+  "required": [
+    "dateien"
+  ]
+}
+```
+
+## Die Datei speichern
+
+Normalerweise müssen wir eine im Dienst empfangene Datei speichern, zum Beispiel:
+
+- **Datenbank**: Datei, die zu einem Datensatz gehört, z. B. zu einem Benutzer.
+- **Storage**: Interner Ordner der Anwendung, der allgemein zur Verwaltung von Dateien dient.
+- **Ordner**: Die Datei in einem beliebigen Ordner des Systems ablegen.
+
+### Datenbank
+
+Bei der Verwaltung der Formularfelder unterstützt Netuno die Typen `image` und `file`, wobei:
+
+- **Image**: Allgemeine Bilddateien, JPG und PNG.
+- **File**: Jeder Dateityp.
+
+Angenommen, es gibt ein Bildfeld im Formular Produkt; wir können die per Upload gesendete Datei wie folgt speichern:
+
+#### Beispiel mit DB Form:
+
+Beachten Sie die Verwendung von `_db.form`:
+
+<PolyglotCode
+    file="services/produkt/bild/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const produktUid = _req.getString("uid");
+                const produktBild = _req.getFile("bild");
+
+                if (produktBild == null) {
+                    _header.status(400);
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", false)
+                            .set("fehler", "bild-erforderlich")
+                    );
+                    _exec.stop();
+                }
+
+                const dbErgebnis = _db.form("produkt")
+                    .set("bild", produktBild)
+                    .where(_db.where("uid").equals(produktUid))
+                    .update();
+
+                if (dbErgebnis.getInt("produkt") == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", true)
+                    );
+                } else {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", false)
+                            .set("fehler", "uid-produkt-existiert-nicht")
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                produktUid = _req.getString("uid")
+                produktBild = _req.getFile("bild")
+
+                if produktBild is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", False)
+                            .set("fehler", "bild-erforderlich")
+                    )
+                    _exec.stop()
+
+                dbErgebnis = (
+                    _db.form("produkt")
+                        .set("bild", produktBild)
+                        .where(_db.where("uid").equals(produktUid))
+                        .update()
+                )
+
+                if dbErgebnis.getInt("produkt") == 1:
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", False)
+                            .set("fehler", "uid-produkt-existiert-nicht")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                produkt_uid = _req.getString("uid")
+                produkt_bild = _req.getFile("bild")
+
+                if produkt_bild.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("ergebnis", false)
+                      .set("fehler", "bild-erforderlich")
+                  )
+                  _exec.stop
+                end
+
+                db_ergebnis = _db.form("produkt")
+                  .set("bild", produkt_bild)
+                  .where(_db.where("uid").equals(produkt_uid))
+                  .update()
+
+                if db_ergebnis.getInt("produkt") == 1
+                  _out.json(
+                    _val.map()
+                      .set("ergebnis", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("ergebnis", false)
+                      .set("fehler", "uid-produkt-existiert-nicht")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### Beispiel mit dem klassischen Update:
+
+Beachten Sie die Verwendung von `_db.update`:
+
+<PolyglotCode
+    file="services/produkt/bild/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const produktUid = _req.getString("uid");
+                const produktBild = _req.getFile("bild");
+
+                if (produktBild == null) {
+                    _header.status(400);
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", false)
+                            .set("fehler", "bild-erforderlich")
+                    );
+                    _exec.stop();
+                }
+
+                const dbErgebnis = _db.update(
+                    "produkt",
+                    produktUid,
+                    _val.map()
+                        .set("bild", produktBild)
+                );
+
+                if (dbErgebnis == 1) {
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", true)
+                    );
+                } else {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", false)
+                            .set("fehler", "uid-produkt-existiert-nicht")
+                    );
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                produktUid = _req.getString("uid")
+                produktBild = _req.getFile("bild")
+
+                if produktBild is None:
+                    _header.status(400)
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", False)
+                            .set("fehler", "bild-erforderlich")
+                    )
+                    _exec.stop()
+
+                dbErgebnis = (
+                    _db.update(
+                        "produkt",
+                        produktUid,
+                        _val.map()
+                            .set("bild", produktBild)
+                    )
+                )
+
+                if dbErgebnis == 1:
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", True)
+                    )
+                else:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", False)
+                            .set("fehler", "uid-produkt-existiert-nicht")
+                    )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                produkt_uid = _req.getString("uid")
+                produkt_bild = _req.getFile("bild")
+
+                if produkt_bild.nil?
+                  _header.status = 400
+                  _out.json(
+                    _val.map()
+                      .set("ergebnis", false)
+                      .set("fehler", "bild-erforderlich")
+                  )
+                  _exec.stop
+                end
+
+                db_ergebnis = _db.update(
+                  "produkt",
+                  produkt_uid,
+                  _val.map()
+                    .set("bild", produkt_bild)
+                )
+
+                if db_ergebnis == 1
+                  _out.json(
+                    _val.map()
+                      .set("ergebnis", true)
+                  )
+                else
+                  _header.status = 404
+                  _out.json(
+                    _val.map()
+                      .set("ergebnis", false)
+                      .set("fehler", "uid-produkt-existiert-nicht")
+                  )
+                end
+            `
+        },
+    ]}
+/>
+
+#### Download der Datei aus der Datenbank
+
+Um die gespeicherte Datei bereitzustellen, müssen wir einen Dienst erstellen, der die Bytes der Datei liefert.
+
+Bei in der Datenbank gespeicherten Dateien, wie im obigen Beispiel, wird die Datei selbst im Storage der Anwendung abgelegt und in der Datenbank nur der endgültige Dateiname gespeichert.
+
+> Der Storage der Anwendung ist ein Ordner zum Speichern und Organisieren allgemeiner Dateistrukturen.
+
+Daher werden im obigen Beispiel die Datenbankdateien des Formulars `Produkt` und des Feldes `Bild` gespeichert unter:
+
+- `storage/database/produkt/bild/*`
+
+> Netuno verwaltet den Namen der gespeicherten Datei automatisch, um doppelte Dateinamen zu vermeiden.
+
+Um die Datei abzurufen, kann ein Dienst erstellt werden, der die Bilddatei des Produkts bereitstellt, zum Beispiel:
+
+<PolyglotCode
+    file="services/produkt/bild/get"
+    codes={[
+    {
+        lang: 'javascript',
+        code: `
+            const produktUid = _req.getString("uid");
+
+            // DB Form:
+            const dbProdukt = _db.form("produkt")
+                .where(_db.where("uid").equals(produktUid))
+                .first();
+            // Alternative mit klassischer DB:
+            // const dbProdukt = _db.get("produkt", produktUid)
+
+            if (dbProdukt == null) {
+                _header.status(404);
+                _out.json(
+                    _val.map()
+                        .set("ergebnis", false)
+                        .set("fehler", "produkt-nicht-gefunden")
+                );
+                _exec.stop();
+            }
+
+            const dbProduktBildName = dbProdukt.getString("bild");
+
+            const storageProduktBildDatei = _storage.database(
+                "produkt",
+                "bild",
+                dbProduktBildName
+            );
+
+            if (storageProduktBildDatei.extension() == "jpg" || storageProduktBildDatei.extension() == "jpeg") {
+                _header.contentTypeJPG();
+            } else {
+                _header.contentTypePNG();
+            }
+
+            _header.noCache();
+
+            _out.copy(storageProduktBildDatei.inputStream());
+        `
+    },
+    {
+        lang: 'python',
+        code: `
+            produktUid = _req.getString("uid")
+
+            # DB Form:
+            dbProdukt = (
+                _db.form("produkt")
+                    .where(_db.where("uid").equals(produktUid))
+                    .first()
+            )
+            # Alternative mit klassischer DB:
+            # dbProdukt = _db.get("produkt", produktUid)
+
+            if dbProdukt is None:
+                _header.status(404)
+                _out.json(
+                    _val.map()
+                        .set("ergebnis", False)
+                        .set("fehler", "produkt-nicht-gefunden")
+                )
+                _exec.stop()
+
+            dbProduktBildName = dbProdukt.getString("bild")
+
+            storageProduktBildDatei = _storage.database(
+                "produkt",
+                "bild",
+                dbProduktBildName
+            )
+
+            if storageProduktBildDatei.extension() == "jpg" or storageProduktBildDatei.extension() == "jpeg":
+                _header.contentTypeJPG()
+            else:
+                _header.contentTypePNG()
+
+            _header.noCache()
+
+            _out.copy(storageProduktBildDatei.inputStream())
+        `
+    },
+    {
+        lang: 'ruby',
+        code: `
+            produktUid = _req.getString("uid")
+
+            # DB Form:
+            dbProdukt = _db.form("produkt")
+                .where(_db.where("uid").equals(produktUid))
+                .first()
+            # Alternative mit klassischer DB:
+            # dbProdukt = _db.get("produkt", produktUid)
+
+            if dbProdukt.nil?
+                _header.status(404)
+                _out.json(
+                    _val.map()
+                        .set("ergebnis", false)
+                        .set("fehler", "produkt-nicht-gefunden")
+                )
+                _exec.stop()
+            end
+
+            dbProduktBildName = dbProdukt.getString("bild")
+
+            storageProduktBildDatei = _storage.database(
+                "produkt",
+                "bild",
+                dbProduktBildName
+            )
+
+            if storageProduktBildDatei.extension() == "jpg" || storageProduktBildDatei.extension() == "jpeg"
+                _header.contentTypeJPG()
+            else
+                _header.contentTypePNG()
+            end
+
+            _header.noCache()
+
+            _out.copy(storageProduktBildDatei.inputStream())
+        `
+    },
+]}
+/>
+
+Beachten Sie, dass die Ressource `_storage` ([Storage](/docs/library/resources/storage)) verwendet wird, um die Datei abzurufen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _storage.database(
+                    "produkt", // Name des Formulars/der Tabelle.
+                    "bild", // Name des Feldes/der Spalte.
+                    dbProduktBildName // Name der Datei.
+                );
+            `
+        },
+    ]}
+/>
+
+In der Datenbank wird nur der Dateiname gespeichert; über `_storage.database` können wir die Datei selbst abrufen.
+
+### Storage
+
+Wir können eine Datei direkt im `storage` der Anwendung speichern.
+
+Um sie nicht mit den Datenbankdateien zu vermischen, sollten wir den Ordner `filesystem` verwenden, der zum Speichern allgemeiner Dateien dient, die nicht mit der Datenbank verknüpft sind.
+
+Um die Datei zu empfangen, wird in diesem Beispiel gezeigt, wie eine im Dienst `POST` gesendete Datei direkt im Storage gespeichert wird:
+
+<PolyglotCode
+    file="services/datei/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const datei = _req.getFile("datei");
+                _storage.filesystem("server", "upload").ensurePath();
+                datei.save(_storage.filesystem("server", "upload", datei.name()));
+            `
+        },
+    ]}
+/>
+
+Die Datei wird im Ordner `storage` der Anwendung gespeichert, unter:
+
+- `storage/filesystem/server/upload/*`
+
+> Die Ressource [Storage](/docs/library/resources/storage) wird verwendet, um den Ordner- und Dateipfad abzurufen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _storage.filesystem(
+                    "server", // Name des Unterordners im Filesystem.
+                    "upload", // Name oder Pfad des internen Unterordners.
+                    datei.name() // Endgültiger Name der Datei.
+                );
+            `
+        },
+    ]}
+/>
+
+> Weitere Informationen finden Sie in der Dokumentation zu [Storage](/docs/library/resources/storage).
+
+Um die Datei herunterzuladen, wird in diesem Beispiel gezeigt, wie die Bytes der Datei über den Dienst `GET` abgerufen werden können:
+
+<PolyglotCode
+    file="services/datei/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dateiName = _req.getString("datei");
+
+                const datei = _storage.filesystem(
+                    "server",
+                    "upload",
+                    dateiName
+                ).file();
+
+                if (datei.exists() == false) {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", false)
+                            .set("fehler", "datei-existiert-nicht")
+                    );
+                    _exec.stop();
+                }
+
+                _header.downloadFile(datei.name());
+                _out.copy(datei.input());
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dateiName = _req.getString("datei")
+
+                datei = _storage.filesystem(
+                    "server",
+                    "upload",
+                    dateiName
+                ).file()
+
+                if datei.exists() == False:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", False)
+                            .set("fehler", "datei-existiert-nicht")
+                    )
+                    _exec.stop()
+
+                _header.downloadFile(datei.name())
+                _out.copy(datei.input())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                datei_name = _req.getString("datei")
+
+                datei = _storage.filesystem(
+                    "server",
+                    "upload",
+                    datei_name
+                ).file()
+
+                if datei.exists() == false
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", false)
+                            .set("fehler", "datei-existiert-nicht")
+                    )
+                    _exec.stop()
+                end
+
+                _header.downloadFile(datei.name())
+                _out.copy(datei.input())
+            `
+        },
+    ]}
+/>
+
+### Ordner
+
+Wir können eine Datei direkt in einem beliebigen Ordner des Computers speichern.
+
+Zwei Ressourcen sind in diesen Fällen sehr nützlich:
+
+- `_app` - Wir können jeden Ordner oder jede Datei in der Anwendung abrufen.
+- `_os` - Wir können jeden Ordner oder jede Datei auf dem Computer abrufen.
+
+> Siehe die Dokumentation der jeweiligen Ressourcen [App](/docs/library/resources/app) und [OS](/docs/library/resources/os); beide Ressourcen haben die Methoden `folder` und `file`, mit denen der Pfad des Ordners bzw. der Datei angegeben werden kann.
+
+Um die Datei zu empfangen, wird in diesem Beispiel gezeigt, wie eine im Dienst `POST` gesendete Datei direkt in einem Ordner der Anwendung gespeichert wird:
+
+<PolyglotCode
+    file="services/datei/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const datei = _req.getFile("datei");
+                const ordner = _app.folder("temp");
+                if (ordner.exists() == false) {
+                    ordner.mkdir();
+                }
+                datei.save(_app.file(\`temp/\${datei.name()}\`));
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                datei = _req.getFile("datei")
+                ordner = _app.folder("temp")
+                if ordner.exists() == False:
+                    ordner.mkdir()
+
+                datei.save(_app.file(f"temp/{datei.name()}"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                datei = _req.getFile("datei")
+                ordner = _app.folder("temp")
+                if ordner.exists() == false
+                    ordner.mkdir()
+                end
+                datei.save(_app.file("temp/#{datei.name()}"))
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val datei = _req.getFile("datei")
+                val ordner = _app.folder("temp")
+                if (ordner.exists() == false) {
+                    ordner.mkdir()
+                }
+                datei.save(_app.file("temp/\${datei.name()}"))
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                final datei = _req.getFile("datei")
+                final ordner = _app.folder("temp")
+                if (ordner.exists() == false) {
+                    ordner.mkdir()
+                }
+                datei.save(_app.file("temp/\${datei.name()}"))
+            `
+        },
+    ]}
+/>
+
+Der obige Code erstellt den Ordner `temp` innerhalb der Anwendung und speichert die empfangene Datei in diesem Ordner.
+
+Um die Datei herunterzuladen, wird in diesem Beispiel gezeigt, wie die Bytes der Datei über den Dienst `GET` abgerufen werden können:
+
+<PolyglotCode
+    file="services/datei/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dateiName = _req.getString("datei");
+                const datei = _app.file(\`temp/\${dateiName}\`);
+
+                if (datei.exists() == false) {
+                    _header.status(404);
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", false)
+                            .set("fehler", "datei-existiert-nicht")
+                    );
+                    _exec.stop();
+                }
+
+                _header.downloadFile(datei.name());
+                _out.copy(datei.input());
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dateiName = _req.getString("datei")
+                datei = _app.file(f"temp/{dateiName}")
+
+                if datei.exists() == False:
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", False)
+                            .set("fehler", "datei-existiert-nicht")
+                    )
+                    _exec.stop()
+
+                _header.downloadFile(datei.name())
+                _out.copy(datei.input())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                datei_name = _req.getString("datei")
+                datei = _app.file("temp/#{datei_name}")
+
+                if datei.exists() == false
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", false)
+                            .set("fehler", "datei-existiert-nicht")
+                    )
+                    _exec.stop()
+                end
+
+                _header.downloadFile(datei.name())
+                _out.copy(datei.input())
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val dateiName = _req.getString("datei")
+                val datei = _app.file("temp/\${dateiName}")
+
+                if (datei.exists() == false) {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", false)
+                            .set("fehler", "datei-existiert-nicht")
+                    )
+                    _exec.stop()
+                }
+
+                _header.downloadFile(datei.name())
+                _out.copy(datei.input())
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                final dateiName = _req.getString("datei")
+                final datei = _app.file("temp/\${dateiName}")
+
+                if (datei.exists() == false) {
+                    _header.status(404)
+                    _out.json(
+                        _val.map()
+                            .set("ergebnis", false)
+                            .set("fehler", "datei-existiert-nicht")
+                    )
+                    _exec.stop()
+                }
+
+                _header.downloadFile(datei.name())
+                _out.copy(datei.input())
+            `
+        },
+    ]}
+/>
+
+## Fazit
+
+Wie man sehen kann, können wir den Datei-Upload in die Dienste der REST-API integrieren, einschließlich der Integration mit OpenAPI.
+
+Wir können die Datei in der Datenbank, im Ordner `storage` der Anwendung oder in einem beliebigen Ordner des Computers speichern.
+
+Siehe die Dokumentation der in diesem Tutorial verwendeten Ressourcen, mit denen Dateien bearbeitet werden können:
+
+- [Storage](/docs/library/resources/storage)
+- [App](/docs/library/resources/app)
+- [OS](/docs/library/resources/os)
+
+In der Datenbank können wir Bilder in Feldern vom Typ `image` speichern und jeden Dateityp in Feldern vom Typ `file` speichern; wie wir Dateien speichern oder abrufen, ist in jedem Fall gleich, ob es sich um ein Bild oder eine allgemeine Datei handelt.

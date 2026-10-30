@@ -1,0 +1,254 @@
+---
+sidebar_position: 6
+id: service
+title: 服务
+description: 了解如何在 Netuno 中创建 Web Services 和 REST API，在系统之间集成数据，并以异步方式为前端提供动态数据。
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+使用 Netuno，可以创建 **_Web Services_**，并构建任意类型的复杂 **<a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a> API**，用于系统之间的数据集成。
+
+:::info 什么是 Web Service？
+Web Service 允许系统以标准化方式在线交换信息。在 Netuno 中，`server/services/` 内的每个文件都会自动成为可通过 HTTP 访问的端点。
+:::
+
+## 为什么使用 Web Services？
+
+使用异步服务可为用户体验带来明显好处：
+
+- **更快的加载速度：** 服务器立即返回页面的视觉结构，而无需等待所有数据处理完成。
+- **按需获取动态数据：** 前端仅在需要时请求必要的数据。
+- **系统集成：** 在 Netuno 中创建的服务可被任何外部应用（移动端、其他 Web 系统等）调用。
+- **更好的用户体验：** 用户无需等待页面完整处理完成即可在屏幕上看到内容。
+
+## 前提条件
+
+开始之前，请确保：
+
+- Netuno 已安装并在本地运行。
+- 已按照 [创建应用](../app-create) 中的说明创建了 `demo` 应用。
+- **任务** 中已有注册数据，并与 **记录** 关联（这样返回结果才不会为空）。
+
+## 配置代码编辑器
+
+在 Netuno 中创建和编辑服务时，请使用你喜欢的代码编辑器。我们推荐 **[Visual Studio Code](https://code.visualstudio.com/download)**，因为它免费、轻量且非常直观；不过任何兼容 JavaScript/Python/Groovy 的编辑器都可以正常使用。
+
+## 打开 Demo 应用 {#abrir-a-aplicacao-demo}
+
+1. 打开 **Visual Studio Code**。
+2. 点击左侧边栏中的 **文件** 图标。
+3. 选择 **打开文件夹**（File > Open Folder）。
+4. 导航到 Netuno 的安装目录。
+5. 选择目录：**`apps/demo`**
+6. 点击 **打开**。
+
+`demo` 应用的文件夹结构将加载到左侧面板中。
+
+## 创建服务
+
+服务在 **服务器** 端处理。要创建新服务：
+
+1. 在文件面板中，展开目录结构，找到 `server/services/` 文件夹。
+2. 右键点击 `services` 文件夹。
+3. 选择 **新建文件** `New File`。
+4. 根据你想使用的语言为文件命名：
+
+<PolyglotPath files={[
+    'server/services/工人'
+]} />
+
+
+<PolyglotCode
+    file="server/services/工人"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                /**
+                *** 将查询数据转换为 JSON 输出。
+                */
+                const db记录 = _db.query(\`
+                    SELECT DISTINCT
+                        工人.姓名, SUM(DATEDIFF(HOUR, 记录.开始, 记录.结束)) AS 总时长
+                    FROM 工人 INNER JOIN 记录
+                        ON 工人.id = 记录.工人_id
+                    WHERE 工人.启用 = true AND 记录.启用 = true
+                    GROUP BY 工人.姓名
+                    ORDER BY 总时长 ASC
+                \`);
+
+                const json列表 = _val.list();
+
+                for (const db记录项 of db记录) {
+                    json列表.add(
+                        _val.map()
+                            .set("姓名", db记录项.getString("姓名"))
+                            .set("总时长", db记录项.getInt("总时长"))
+                    );
+                }
+
+                _out.json(json列表);
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                #
+                # 将查询数据转换为 JSON 输出。
+                #
+                db记录 = _db.query(
+                    """SELECT DISTINCT
+                        工人.姓名, SUM(DATEDIFF(HOUR, 记录.开始, 记录.结束)) AS 总时长
+                    FROM 工人 INNER JOIN 记录
+                        ON 工人.id = 记录.工人_id
+                    WHERE 工人.启用 = true AND 记录.启用 = true
+                    GROUP BY 工人.姓名
+                    ORDER BY 总时长 ASC"""
+                )
+
+                json列表 = _val.list()
+
+                for db记录项 in db记录:
+                    json列表.add(
+                        _val.map()
+                            .set("姓名", db记录项.getString("姓名"))
+                            .set("总时长", db记录项.getInt("总时长"))
+                    )
+
+                _out.json(json列表)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                #
+                # 将查询数据转换为 JSON 输出。
+                #
+                db记录 = _db.query(%{
+                    SELECT DISTINCT
+                        工人.姓名, SUM(DATEDIFF(HOUR, 记录.开始, 记录.结束)) AS 总时长
+                    FROM 工人 INNER JOIN 记录
+                        ON 工人.id = 记录.工人_id
+                    WHERE 工人.启用 = true AND 记录.启用 = true
+                    GROUP BY 工人.姓名
+                    ORDER BY 总时长 ASC
+                })
+
+                json列表 = _val.list()
+
+                db记录.each do |db记录项|
+                    json列表.add(
+                        _val.map()
+                            .set("姓名", db记录项.getString("姓名"))
+                            .set("总时长", db记录项.getInt("总时长"))
+                    )
+                end
+
+                _out.json(json列表)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                /**
+                *** 将查询数据转换为 JSON 输出。
+                */
+                val db记录 = _db.query(
+                    """SELECT DISTINCT
+                        工人.姓名, SUM(DATEDIFF(HOUR, 记录.开始, 记录.结束)) AS 总时长
+                    FROM 工人 INNER JOIN 记录
+                        ON 工人.id = 记录.工人_id
+                    WHERE 工人.启用 = true AND 记录.启用 = true
+                    GROUP BY 工人.姓名
+                    ORDER BY 总时长 ASC"""
+                );
+
+                val json列表 = _val.list();
+
+                db记录.forEach {
+                    json列表.add(
+                        _val.map()
+                            .set("姓名", it.getString("姓名"))
+                            .set("总时长", it.getInt("总时长"))
+                    );
+                }
+
+                _out.json(json列表);
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                /**
+                *** 将查询数据转换为 JSON 输出。
+                */
+                def db记录 = _db.query("""\\
+                    SELECT DISTINCT
+                        工人.姓名, SUM(DATEDIFF(HOUR, 记录.开始, 记录.结束)) AS 总时长
+                    FROM 工人 INNER JOIN 记录
+                        ON 工人.id = 记录.工人_id
+                    WHERE 工人.启用 = true AND 记录.启用 = true
+                    GROUP BY 工人.姓名
+                    ORDER BY 总时长 ASC
+                """);
+
+                def json列表 = _val.list();
+
+                for (db记录项 in db记录) {
+                    json列表.add(
+                        _val.map()
+                            .set("姓名", db记录项.getString("姓名"))
+                            .set("总时长", db记录项.getInt("总时长"))
+                    );
+                }
+
+                _out.json(json列表);
+            `
+        },
+    ]}
+/>
+
+将下面的代码添加到已创建的文件中来实现该服务。该服务查询数据库，并以 **JSON** 格式返回工人列表及其登记的总小时数。
+
+### 理解代码
+
+| 对象/方法 | 说明 |
+|---|---|
+| `_db.query()` | 执行 SQL 查询，并返回键值格式（列 → 数据）的对象列表。 |
+| `_val.list()` | 创建一个可变列表以累积结果。 |
+| `_val.map()` | 为每一行结果创建一个映射对象（键值）。 |
+| `_out.json()` | 将对象序列化为 JSON，并向 HTTP 请求发送响应。 |
+
+:::warning 需要数据
+请确保 **任务** 中已有注册数据，并已关联到 **记录**。否则，端点将返回空列表 `[]`。
+:::
+
+## 运行并测试服务
+
+在 Netuno 运行的情况下，在浏览器中访问该端点：
+
+:::tip 查看 JSON 的小技巧
+我们推荐使用 **[Firefox](https://www.mozilla.org/)** 直接在浏览器中测试端点，因为它会以可读的方式格式化并显示 JSON 响应，并提供语法高亮。或者，你也可以使用 Chrome 中的 **JSON Viewer** 等扩展，或 **[Postman](https://www.postman.com/)** 等工具进行更高级的测试。
+:::
+
+预期返回的 JSON 类似于：
+
+```json
+[
+  { "姓名": "张伟", "总时长": 12 },
+  { "姓名": "李强", "总时长": 28 },
+  { "姓名": "王芳", "总时长": 45 }
+]
+```
+
+## 后续步骤
+
+现在你的服务已经可以运行，你可以：
+
+- 📄 **[界面与设计](./ui)** — 将此服务集成到应用前端。
+- 📚 **[服务库](../../library/overview)** — 探索 Netuno 中可用的 `_db`、`_val`、`_out` 及其他对象。
+- 🔗 为你的服务添加 **身份验证** 和 **访问控制**。
+
+___

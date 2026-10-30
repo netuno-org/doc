@@ -1,0 +1,478 @@
+---
+id: ssh
+title: Client SSH
+sidebar_label: Client SSH
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Eseguire comandi sul server e trasferire file.
+
+## Introduzione
+
+Netuno ha integrato nella sua framework low-code un client SSH, che permette di connettersi a server, eseguire
+comandi, inviare e ricevere file, modificare cartelle e altre operazioni remote.
+
+Supporta più connessioni simultanee, oltre a SCP e SFTP.
+
+Ciò grazie all'implementazione Java e open-source
+<a target="_blank" href="https://github.com/hierynomus/sshj/tree/master">SSHJ</a>, che consente a Netuno
+di fornire queste funzionalità a tutti i linguaggi di script tramite la risorsa `_ssh`.
+
+> Maggiori informazioni sulla risorsa [SSH](/docs/library/resources/ssh) di Netuno.
+
+## Configurazione
+
+Il primo passo sarà configurare i dati di accesso SSH che Netuno utilizzerà per effettuare la connessione.
+
+Naviga all'interno dell'applicazione che stai sviluppando fino al file di configurazione dell'ambiente. In questo esempio
+utilizzeremo il file di sviluppo, situato in:
+
+- `config/_development.json`
+
+Verifica se ci sono configurazioni per SSH; se non esistono, alla fine del file di configurazione (in formato JSON)
+aggiungi i parametri di configurazione SSH, per esempio:
+
+```json
+{
+  ...
+  "ssh": {
+    "default": {
+      "enabled": true,
+      "host": "mio.server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+Dopo aver salvato le modifiche, è sufficiente riavviare Netuno per applicare le modifiche alla configurazione. Queste sono le
+configurazioni predefinite per la connessione, come indica il nome della chiave `default`.
+
+È possibile aggiungere altre configurazioni di connessione SSH con altre chiavi nel JSON.
+
+Per aggiungere altre configurazioni di connessione SSH basta ripetere il blocco di configurazione predefinito e sostituire la chiave
+`default` con un'altra a tua scelta, per esempio:
+
+```json
+{
+  ...
+  "ssh": {
+    "default": {
+      "enabled": true,
+      "host": "mio.server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    },
+    "altro": {
+      "enabled": true,
+      "host": "mio.altro-server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+La configurazione sopra permette di utilizzare l'account `default` quando viene codificato nel modo seguente:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ssh = _ssh.init()
+            `
+        },
+    ]}
+/>
+
+Per utilizzare la configurazione `altro` basta aggiungere la chiave della configurazione come parametro della funzione
+`_ssh.init()`, nel modo seguente:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshAltro = _ssh.init("altro")
+            `
+        },
+    ]}
+/>
+
+> Se non si aggiunge un nome di configurazione come parametro, verrà utilizzata la configurazione dell'account `default`.
+
+## Connessione
+
+Prima di fare qualsiasi cosa è necessario avviare la connessione SSH:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ssh.connect()
+            `
+        },
+    ]}
+/>
+
+## Comandi
+
+Per eseguire comandi è necessario avviare una sessione di comandi:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sessioneSsh = ssh.initSession()
+            `
+        },
+    ]}
+/>
+
+Quando si esegue un comando viene fornito un oggetto che contiene lo stato dell'esecuzione e il relativo output dei dati,
+per esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const risultatoComandoSsh = sessioneSsh.exec("ls -rato")
+                if (risultatoComandoSsh.ok) {
+                    _out.println("Eseguito con successo:")
+                    _out.println(risultatoComandoSsh.output())
+                } else {
+                    _out.println("Il comando non è riuscito:")
+                    _out.println(risultatoComandoSsh.error())
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                risultatoComandoSsh = sessioneSsh.exec("ls -rato")
+                if risultatoComandoSsh.ok:
+                    _out.println("Eseguito con successo:")
+                    _out.println(risultatoComandoSsh.output())
+                else:
+                    _out.println("Il comando non è riuscito:")
+                    _out.println(risultatoComandoSsh.error())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                risultatoComandoSsh = sessioneSsh.exec("ls -rato")
+                if risultatoComandoSsh.ok
+                    _out.println("Eseguito con successo:")
+                    _out.println(risultatoComandoSsh.output())
+                else
+                    _out.println("Il comando non è riuscito:")
+                    _out.println(risultatoComandoSsh.error())
+                end
+            `
+        },
+    ]}
+/>
+
+> L'oggetto restituito dal comando è [SSHExecResult](/docs/library/objects/SSHExecResult).
+
+Ricorda di chiudere sempre la sessione:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sessioneSsh.close()
+            `
+        },
+    ]}
+/>
+
+## SCP
+
+Tramite SCP possiamo inviare e ricevere file.
+
+Per creare un file di testo da una stringa e scaricare il contenuto del file creato, vedi l'esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // Crea il file di testo.
+                sshSCP.uploadText("ciao.txt", "Ciao! Il mio contenuto qui...")
+                // Scarica e stampa il contenuto del file.
+                _out.println(sshSCP.downloadText("ciao.txt"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+Per eseguire l'invio (upload) di file esistenti nell'applicazione:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // Invia un file che si trova nello storage/filesystem.
+                sshSCP.upload("foglio_di_calcolo.xlsx", _storage.filesystem("server", "foglio_di_calcolo.xlsx").file())
+                // Invia un file che si trova nella radice dell'applicazione.
+                sshSCP.upload("documento.pdf", _app.file("documento.pdf"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+Per scaricare (download) file dal server all'applicazione:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // Scarica il file nello storage/filesystem.
+                sshSCP.download("foglio_di_calcolo.xlsx", _storage.filesystem("server", "foglio_di_calcolo.xlsx").file())
+                // Scarica il file nella radice dell'applicazione.
+                sshSCP.download("documento.pdf", _app.file("documento.pdf"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+## SFTP
+
+SFTP è una modalità di trasferimento e manipolazione di file e cartelle che supporta le stesse funzionalità
+di FTP, ma utilizzando SSH.
+
+Per avviare una nuova sessione SFTP:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sftp = ssh.initSFTP()
+            `
+        },
+    ]}
+/>
+
+> Avvia l'oggetto [SSHSFTP](/docs/library/objects/SSHSFTP) che è il client della sessione.
+
+Creare una nuova cartella in remoto:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.createDirectory("percorso/nuova-cartella")
+            `
+        },
+    ]}
+/>
+
+Crea o sostituisce il file remoto con il contenuto di testo passato:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.uploadText("cartella/file.txt", "Il mio contenuto!")
+            `
+        },
+    ]}
+/>
+
+Ottiene il contenuto di testo di un file remoto:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const contenutoFileRemoto = sftp.downloadText("cartella/file.txt"))
+                _out.println(contenutoFileRemoto)
+            `
+        },
+    ]}
+/>
+
+Elimina definitivamente un file remoto:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.deleteFile("cartella/file.txt")
+            `
+        },
+    ]}
+/>
+
+Elimina definitivamente la cartella remota:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.deleteDirectory("cartella")
+            `
+        },
+    ]}
+/>
+
+Elenca tutto il contenuto di una cartella:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const i of sftp.list("percorso/cartella")) {
+                    if (i.directory) {
+                        _out.print("Cartella: ")
+                    } else if (i.regularFile) {
+                        _out.print("File: ")
+                    } else {
+                        _out.print("Altro: ")
+                    }
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for i in sftp.list("percorso/cartella":
+                    if i.directory:
+                        _out.print("Cartella: ")
+                    elif i.regularFile:
+                        _out.print("File: ")
+                    else:
+                        _out.print("Altro: ")
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                sftp.list("percorso/cartella").each do |i|
+                    if i.directory
+                        _out.print("Cartella: ")
+                    elsif i.regularFile
+                        _out.print("File: ")
+                    else
+                        _out.print("Altro: ")
+                    end
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                sftp.list("percorso/cartella").forEach {
+                    if (it.directory) {
+                        _out.print("Cartella: ")
+                    } else if (it.regularFile) {
+                        _out.print("File: ")
+                    } else {
+                        _out.print("Altro: ")
+                    }
+                    _out.println(it.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (i in sftp.list("percorso/cartella")) {
+                    if (i.directory) {
+                        _out.print("Cartella: ")
+                    } else if (i.regularFile) {
+                        _out.print("File: ")
+                    } else {
+                        _out.print("Altro: ")
+                    }
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+    ]}
+/>
+
+> Restituisce un elenco di oggetti di tipo [SSHFile](/docs/library/objects/SSHFile).
+
+Per eseguire l'invio (upload) di file esistenti nell'applicazione:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Invia un file che si trova nello storage/filesystem.
+                sftp.upload("foglio_di_calcolo.xlsx", _storage.filesystem("server", "foglio_di_calcolo.xlsx").file())
+                // Invia un file che si trova nella radice dell'applicazione.
+                sftp.upload("documento.pdf", _app.file("documento.pdf"))
+            `
+        },
+    ]}
+/>
+
+Per scaricare (download) file dal server all'applicazione:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Scarica il file nello storage/filesystem.
+                sftp.download("foglio_di_calcolo.xlsx", _storage.filesystem("server", "foglio_di_calcolo.xlsx").file())
+                // Scarica il file nella radice dell'applicazione.
+                sftp.download("documento.pdf", _app.file("documento.pdf"))
+            `
+        },
+    ]}
+/>
+
+Ricorda di chiudere sempre la sessione SFTP:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.close()
+            `
+        },
+    ]}
+/>

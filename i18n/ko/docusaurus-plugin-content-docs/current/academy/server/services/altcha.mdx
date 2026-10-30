@@ -1,0 +1,324 @@
+---
+id: altcha
+title: Altcha
+sidebar_label: Altcha
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+reCaptcha에 해당하는 오픈 소스 대안입니다.
+
+## 소개
+
+캡차 보안 메커니즘 구현은 매우 중요하며, 관련 이유는 다음과 같습니다.
+
+- 로봇이 API 주소에 자동으로 계속 접근하는 것을 방지합니다.
+- 실제 사람이 접근하도록 보장합니다.
+- 또한 브라우저를 통해 접근했음을 보장합니다.
+
+오랫동안 캡차 메커니즘은 사용자가 풀어야 하는 챌린지를 제공했습니다.
+
+오늘날에는 이것이 필요하지 않습니다. 암호화된 키 메커니즘과 브라우저에서의 상호 작용을 활용하는 알고리즘으로 해결해야 하는 챌린지를 결합하여 인간의 상호 작용인지 로봇화된 상호 작용인지 감지하기 때문입니다.
+
+> 이 방법은 정교하고 신뢰할 수 있으며, 단 한 번의 클릭으로 인간인지 로봇인지 감지합니다.
+
+[Altcha](https://altcha.org/)는 이 보안 프로세스를 구현한 오픈 소스 프로젝트로, React와도 통합되는 프런트엔드 위젯과 Netuno가 제공하는 백엔드 기능을 갖추고 있습니다.
+
+## 제한 사항
+
+[Altcha](https://altcha.org/)는 [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API)를 사용하므로, SSL 인증서가 있는 보안 HTTPS 주소 또는 로컬에서만 작동합니다.
+
+> 프런트엔드에서 도메인이 `localhost`가 아닌 경우 URL은 반드시 SSL 인증서가 있는 보안 HTTPS여야 합니다.
+
+프런트엔드에 로컬로 접근할 때 브라우저는 반드시 `localhost`인 로컬 주소에서만 [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API) 사용을 허용하므로, 그렇지 않은 경우 SSL 인증서가 있는 보안 HTTPS가 필요합니다.
+
+## 백오피스
+
+Netuno 애플리케이션의 백오피스에서 [Altcha](https://altcha.org/) 인증을 활성화하려면 애플리케이션에 다음 구성을 사용하세요:
+
+```json title="config/_[환경].json"
+{
+  ...
+  "auth": {
+    "altcha": {
+      "admin": {
+        "enabled": true
+      }
+    }
+  },
+  ...
+}
+```
+
+이제 백오피스 로그인 화면에 접근하기만 하면 [Altcha](https://altcha.org/)의 _체크박스_ 가 정상적으로 작동하는 것을 볼 수 있습니다.
+
+### 작동 방식
+
+Netuno는 API REST에서 [Altcha](https://altcha.org/)의 매개변수를 프런트엔드에 제공하는 표준 서비스를 제공하며, 일반적으로 이 서비스의 주소는 다음과 같습니다:
+
+- `http://localhost:9000/services/_altcha`
+
+매개변수를 사용하여 프런트엔드의 [Altcha](https://altcha.org/) 위젯이 디지털 서명된 챌린지 결과를 생성하며, 이는 폼의 숨겨진 `altcha` 필드로 백엔드에 전송됩니다.
+
+백엔드에서는 결과와 디지털 서명이 실제로 올바른지 검증합니다.
+
+### HTML 위젯
+
+백오피스 로그인 HTML에 위젯을 통합하는 예시:
+
+```html title="login.html"
+<script type="text/javascript" src="/scripts/plugins/altcha/altcha.i18n.umd.min.cjs"></script>
+<form ...>
+  <input id="inputAltcha" type="hidden" name="altcha" value="">
+  <altcha-widget id="widgetAltcha"
+    challenge="/services/_altcha" language="ko"
+    hideLogo hideFooter></altcha-widget>
+  <script>
+    document.getElementById("widgetAltcha").addEventListener("statechange", function (e) {
+      if (e.detail.state === "verified") {
+        document.getElementById("inputAltcha").value = e.detail.payload;
+      }
+    }, false);
+  </script>
+  ...
+</form>
+```
+
+위젯의 `challenge` 속성에 사용된 URL은 Netuno가 자동 생성한 서비스이며 챌린지 매개변수를 포함합니다.
+
+## 외부 인증
+
+일반적으로 구현되는 안전한 JWT 인증은 인증을 위해 API REST의 표준 서비스를 사용하며, 보통 다음과 같습니다:
+
+- `http://localhost:9000/services/_auth`
+
+Netuno가 자동 생성하는 이 서비스는 네이티브 JWT를 사용한 외부 인증의 보안을 보장하며, 캡차 위젯의 챌린지 결과도 검증합니다.
+
+[Altcha](https://altcha.org/)를 인증에 활성화하려면 다음 구성을 추가하세요:
+
+```json title="config/_[환경].json"
+{
+  ...
+  "auth": {
+    "altcha": {
+      "enabled": true
+    }
+  },
+  ...
+}
+```
+
+따라서 [Altcha](https://altcha.org/)에서 생성된 챌린지 결과 키를 전송하고 그것이 유효한 인증 요청, 즉 로그인만 성공적으로 인증할 수 있으며, 그렇지 않으면 로그인이 차단됩니다.
+
+> 프런트엔드에 [Altcha](https://altcha.org/) 위젯을 통합하고 `altcha` 필드에 챌린지 결과 키를 전송해야 합니다.
+
+### React 위젯
+
+아래에서 React에 위젯을 통합하는 방법을 확인하세요:
+
+[Altcha](https://altcha.org/) 의존성을 추가합니다:
+
+- `bun add altcha`
+
+코드에서 [Altcha](https://altcha.org/)를 가져옵니다:
+
+```jsx title="website/src/pages/Login/index.jsx"
+import "altcha/i18n";
+```
+
+챌린지 결과 키를 저장할 상태를 생성합니다:
+
+```jsx title="website/src/pages/Login/index.jsx"
+const [altchaPayload, setAltchaPayload] = useState(null);
+```
+
+React 컴포넌트에서 위젯에 대한 내부 참조를 생성합니다:
+
+```jsx title="website/src/pages/Login/index.jsx"
+const altcha = useRef(null);
+```
+
+위젯 참조를 사용하는 컴포넌트의 로딩 효과를 추가하고, 위젯 체크박스가 클릭될 때 챌린지 결과 키를 상태에 로드하는 이벤트를 관찰하도록 합니다:
+
+```jsx title="website/src/pages/Login/index.jsx"
+useEffect(() => {
+  if (altcha && altcha.current) {
+    function altchaVerified(ev) {
+      if (ev.detail.state === "verified") {
+        setAltchaPayload(ev.detail.payload);
+      }
+    }
+    altcha.current.addEventListener("statechange", altchaVerified, false);
+    return () => {
+      if (altcha.current != null) {
+        altcha.current.removeEventListener("statechange", altchaVerified, false);
+      }
+    }
+  }
+}, [altcha]);
+```
+
+React 컴포넌트의 "HTML"에서 위젯 예시:
+
+```jsx title="website/src/pages/Login/index.jsx"
+<altcha-widget
+    ref={altcha}
+    challenge={_service.url('/_altcha')}
+    language="ko"
+    delay={1}
+    hideLogo={true}
+    hideFooter={true}
+></altcha-widget>
+```
+
+### Auth Client
+
+[Auth Client](https://www.npmjs.com/package/@netuno/auth-client)에 [Altcha](https://altcha.org/)를 통합하는 방법을 확인하세요.
+
+로그인 폼 데이터를 백엔드로 전송하는 이벤트, 예를 들어 `onSubmit`, `onClick` 또는 Ant.Design 폼의 `onFinish` 이벤트에서 아래 코드를 사용하세요:
+
+```jsx title="website/src/pages/Login/index.jsx"
+_auth.login({
+  username,
+  password,
+  data: (data) => {
+    data.altcha = altchaPayload;
+    return data;
+  },
+  success: ({json}) => {
+    ...
+  },
+  fail: (data) => {
+    ...
+  }
+});
+```
+
+`altchaPayload`는 캡차의 챌린지 결과 키를 담고 있는 상태입니다.
+
+ReAuthKit의 로그인 페이지 전체 예시:
+
+- [ReAuthKit의 로그인 페이지 소스 코드.](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Login/index.jsx)
+
+## 서비스 통합
+
+위에서 살펴본 인증 외에도, 다른 모든 유형의 서비스에 [Altcha](https://altcha.org/)를 사용한 캡차 메커니즘을 통합할 수 있습니다.
+
+대량 데이터 등록을 위한 로봇의 반복 자동화처럼 공격 대상이 될 수 있는 모든 공개 서비스에 캡차를 통합하는 것이 권장됩니다.
+
+프런트엔드에서 API REST 서비스가 통합되는 화면에도 [Altcha](https://altcha.org/) 보안 위젯을 구현해야 합니다. 즉, 서비스가 호출되는 곳에서 위젯을 사용해야 합니다.
+
+### Service Client
+
+다음에서 [Service Client](https://www.npmjs.com/package/@netuno/service-client)에 [Altcha](https://altcha.org/)를 통합하는 방법을 확인하세요.
+
+프런트엔드 위젯 통합은 위에서 이미 설명한 다음 항목과 유사합니다:
+
+- [HTML 위젯](#html-위젯)
+- [React 위젯](#react-위젯)
+
+위에서 예시로 보여 준 것과 똑같이 위젯의 페이로드를 가져와야 하며, 로그인 인증과 동일한 과정을 따릅니다.
+
+페이로드는 URL 매개변수, Form 필드 또는 JSON 속성으로 백엔드에 전송되며, 이는 HTTP 메서드와 서비스 구현 방식에 따라 달라집니다.
+
+등록 서비스, 즉 새 사용자 계정 생성 서비스로 페이로드를 전송하는 예시:
+
+```jsx title="pages/Register/index.jsx"
+_service({
+  method: 'POST',
+  url: 'register',
+  data: {
+    name,
+    email,
+    password,
+    altcha: altchaPayload
+  },
+  success: (response) => {
+    ...
+  },
+  fail: (e) => {
+    ...
+  }
+});
+```
+
+`altchaPayload`는 캡차의 챌린지 결과 키를 담고 있는 상태입니다.
+
+ReAuthKit의 등록 페이지 전체 예시:
+
+- [ReAuthKit의 등록 페이지 소스 코드.](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Register/index.jsx)
+
+### 백엔드
+
+페이로드가 API REST 서비스로 전송되면, 백엔드 쪽의 서비스 코드에서 이를 검증해야 합니다. 방법은 다음과 같습니다:
+
+<PolyglotCode
+    file="server/services/register/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+            const altchaPayload = _req.getString("altcha");
+
+            if (_auth.altchaEnabled() && !_altcha.verifySolution(altchaPayload)) {
+              _header.status(409);
+              _out.json(
+                _val.map()
+                  .set("error", "invalid-altcha-payload")
+              );
+              _exec.stop();
+            }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+            altchaPayload = _req.getString("altcha")
+
+            if _auth.altchaEnabled() and _altcha.verifySolution(altchaPayload) == False:
+                _header.status(409)
+                _out.json(
+                    _val.map()
+                        .set("error", "invalid-altcha-payload")
+                )
+                _exec.stop()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                altchaPayload = _req.getString("altcha")
+
+                if _auth.altchaEnabled() and _altcha.verifySolution(altchaPayload) == false
+                    _header.status(409)
+                    _out.json(
+                        _val.map()
+                            .set("error", "invalid-altcha-payload")
+                    )
+                    _exec.stop()
+                end
+            `
+        },
+    ]}
+/>
+
+ReAuthKit의 등록 서비스 전체 예시:
+
+- [ReAuthKit의 등록 서비스 소스 코드.](https://github.com/netuno-org/reauthkit/blob/main/server/services/profile/post.js)
+
+로우코드 및 폴리글랏 프로그래밍 기능에 대해 더 알아보세요:
+
+- [Altcha](/docs/library/resources/altcha)
+- [Auth](/docs/library/resources/auth)
+
+## 결론
+
+매우 간단하게 API 서비스에 보안 메커니즘을 만들어 로봇을 방지하고 브라우저에서 인간의 상호 작용을 보장할 수 있습니다.
+
+> 등록 및 인증 서비스처럼 가장 민감한 공개 서비스에는 [Altcha](https://altcha.org/)를 사용한 캡차 메커니즘을 사용하는 것이 권장됩니다.
+
+Netuno가 제공하는 네이티브 구현 덕분에 모든 API REST 서비스에서 이 메커니즘을 활성화하고 사용하는 것이 매우 간단해집니다.
+
+> Netuno가 자동 생성하는 백오피스는 운영 환경에서 항상 [Altcha](https://altcha.org/) 인증이 활성화되어 있어야 하며, HTTPS와 SSL 인증서를 사용해야 합니다.
+
+가능할 때마다 [Altcha](https://altcha.org/)를 사용하여 API의 공개 서비스에 보안과 견고성을 보장하세요.

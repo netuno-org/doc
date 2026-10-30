@@ -1,0 +1,387 @@
+---
+id: ftp
+title: FTP-клиент
+sidebar_label: FTP-клиент
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Загрузка и скачивание файлов, управление удалёнными папками.
+
+## Введение
+
+В свой low-code-фреймворк Netuno интегрировал FTP-клиент, который позволяет подключаться к серверам, отправлять и
+получать файлы, изменять папки и выполнять другие удалённые операции.
+
+Поддерживает несколько одновременных подключений, а также FTPS.
+
+Это возможно благодаря реализации на Java с открытым исходным кодом [Apache Commons Net](https://github.com/apache/commons-net), которая
+позволяет Netuno предоставлять эти возможности на всех языках скриптов через ресурс `_ftp`.
+
+> Подробнее о ресурсе [FTP](/docs/library/resources/ftp) в Netuno.
+
+## Настройка
+
+Первым шагом будет настройка данных доступа к FTP, которые Netuno будет использовать для подключения.
+
+Перейдите в приложении, которое разрабатываете, к файлу конфигурации окружения. В этом примере
+мы будем использовать файл окружения разработки, расположенный по пути:
+
+- `config/_development.json`
+
+Проверьте, нет ли уже настроек FTP; если их ещё нет, то в конце файла
+конфигурации (в формате JSON) добавьте параметры настройки FTP:
+
+```json title="config/_development.json"
+{
+  ...
+  "ftp": {
+    "default": {
+      "enabled": true,
+      "host": "мой.сервер.net",
+      "port": 21,
+      "username": "temp",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+После сохранения изменений достаточно перезапустить Netuno, чтобы применить изменения конфигурации. Это
+настройки подключения по умолчанию, как указывает имя `default`.
+
+Можно добавить больше конфигураций подключения FTP, но только одна может быть определена как конфигурация по умолчанию.
+
+Чтобы добавить больше конфигураций подключения FTP, достаточно повторить блок конфигурации по умолчанию и заменить имя
+`default` на другое имя по вашему выбору, см. пример:
+
+```json title="config/_development.json"
+{
+  ...
+  "ftp": {
+    "default": {
+      "enabled": true,
+      "host": "мой.сервер.net",
+      "port": 22,
+      "username": "temp",
+      "password": "$eCr37"
+    },
+    "другой": {
+      "enabled": true,
+      "host": "мой.другой-сервер.net",
+      "port": 22,
+      "username": "temp",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+Конфигурация, аналогичная примеру выше, позволит использовать учётную запись по умолчанию, когда она вызывается следующим
+образом в коде:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ftp = _ftp.init()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ftp = _ftp.init()
+            `
+        },
+    ]}
+/>
+
+А чтобы использовать конфигурацию `другой`, достаточно добавить имя конфигурации как параметр в функцию
+`_ftp.init()` следующим образом:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ftpДругой = _ftp.init("другой")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ftpДругой = _ftp.init("другой")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftpДругой = _ftp.init("другой")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ftpДругой = _ftp.init("другой")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ftpДругой = _ftp.init("другой")
+            `
+        },
+    ]}
+/>
+
+> Если не добавить имя конфигурации как параметр, всегда будет использоваться учётная запись по умолчанию.
+
+## Подключение
+
+Прежде чем что-либо делать, нужно установить FTP-подключение:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.connect()
+            `
+        },
+    ]}
+/>
+
+## Рабочая папка
+
+При выполнении операций по FTP нужно определить, какая папка будет использоваться.
+
+Задав рабочую папку, мы сможем выполнять различные манипуляции относительно этой базовой папки.
+
+Чтобы изменить рабочую папку:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.changeWorkingDirectory("моя/папка/база")
+            `
+        },
+    ]}
+/>
+
+Теперь любая операция будет выполняться в этой папке или относительно неё.
+
+## Создание и удаление папок
+
+Чтобы создать папку, достаточно указать путь к ней:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.createDirectory("временная-папка")
+                ftp.createDirectory("временная-папка/под-папка")
+            `
+        },
+    ]}
+/>
+
+Чтобы удалить папки:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.deleteDirectory("временная-папка/под-папка")
+                ftp.deleteDirectory("временная-папка")
+            `
+        },
+    ]}
+/>
+
+## Переименование
+
+Можно переименовывать файлы или папки: передаётся старый путь, а затем новый путь:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.rename("старое-имя", "новое-имя")
+            `
+        },
+    ]}
+/>
+
+## Отправка файлов
+
+Чтобы отправить текстовый файл:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ftp.uploadText("мой-файл.txt", "Привет, FTP! Это моё содержимое...")
+            `
+        },
+    ]}
+/>
+
+## Получение файлов
+
+Чтобы получить текстовый файл:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const содержимоеФайла = ftp.downloadText("мой-файл.txt")
+                _out.println(содержимоеФайла)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                содержимоеФайла = ftp.downloadText("мой-файл.txt")
+                _out.println(содержимоеФайла)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                содержимоеФайла = ftp.downloadText("мой-файл.txt")
+                _out.println(содержимоеФайла)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val содержимоеФайла = ftp.downloadText("мой-файл.txt")
+                _out.println(содержимоеФайла)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def содержимоеФайла = ftp.downloadText("мой-файл.txt")
+                _out.println(содержимоеФайла)
+            `
+        },
+    ]}
+/>
+
+## Список элементов в папке
+
+Выводит всё содержимое папки:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const i of ftp.list("путь/папка")) {
+                    if (i.isDirectory()) {
+                        _out.print("Папка: ")
+                    } else if (i.isFile()) {
+                        _out.print("Файл: ")
+                    } else {
+                        _out.print("Другое: ")
+                    }
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for i in ftp.list("путь/папка"):
+                    if i.isDirectory():
+                        _out.print("Папка: ")
+                    elif i.isFile():
+                        _out.print("Файл: ")
+                    else:
+                        _out.print("Другое: ")
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ftp.list("путь/папка").each do |i|
+                    if i.isDirectory()
+                        _out.print("Папка: ")
+                    elsif i.isFile()
+                        _out.print("Файл: ")
+                    else
+                        _out.print("Другое: ")
+                    end
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                ftp.list("путь/папка").forEach {
+                    if (it.isDirectory()) {
+                        _out.print("Папка: ")
+                    } else if (it.isFile()) {
+                        _out.print("Файл: ")
+                    } else {
+                        _out.print("Другое: ")
+                    }
+                    _out.println(it.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (i in ftp.list("путь/папка")) {
+                    if (i.isDirectory()) {
+                        _out.print("Папка: ")
+                    } else if (i.isFile()) {
+                        _out.print("Файл: ")
+                    } else {
+                        _out.print("Другое: ")
+                    }
+                    _out.println(i.getName())
+                    _out.println("<br/>")
+                }
+            `
+        },
+    ]}
+/>
+
+> Возвращает список объектов типа [FTPFile](/docs/library/objects/FTPFile).

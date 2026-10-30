@@ -1,5 +1,6 @@
 {
   "label": "Website Frontend",
+  "key": "Website Frontend",
   "position": 10,
   "link": {
     "type": "generated-index",

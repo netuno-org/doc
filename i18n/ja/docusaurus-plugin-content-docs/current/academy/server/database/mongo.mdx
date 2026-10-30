@@ -1,0 +1,1965 @@
+---
+id: mongo
+title: MongoDB
+sidebar_label: MongoDB
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+## はじめに
+
+<a href="https://www.mongodb.com/" target="_blank">MongoDB</a> はドキュメント指向の NoSQL データベースです。テーブルや行の代わりに、JSON に似た形式のドキュメントにデータを保存するため、データモデルに大きな柔軟性を持たせることができます。
+
+Netuno は MongoDB との統合のために [_mongo](/docs/library/resources/mongo) リソースを提供しており、MongoDB 公式 Java クライアントに対するローコード抽象化として、Netuno がサポートする各種プログラミング言語で利用できます: **JavaScript、Python、Ruby、Kotlin、Groovy**。
+
+> 先に進む前に、Netuno でサービスを作成する方法を理解しておくことをおすすめします。チュートリアル [REST - Web サービス](/docs/academy/server/services/rest) を参照してください。
+
+ここで紹介する操作の実装例は、次の場所にあるサンプルサービス `mongo.js` で利用できます:
+
+<PolyglotPath files={[
+    `apps/demo/server/services/samples/javascript/mongo`
+]} />
+
+## MongoDB のインストール
+
+### Docker を使用する
+
+Docker がインストールされていると仮定して、MongoDB イメージをダウンロードし、新しいコンテナを起動するだけです:
+
+```shell
+docker pull mongo
+docker run -d --name mongo -p 27017:27017 mongo
+```
+
+これにより、MongoDB は認証なしで `localhost:27017` からアクセスできるようになります。
+
+アプリケーションの設定に合わせてデータベースユーザーを作成するには、次を実行します:
+
+```shell
+docker exec -it mongo mongosh products_db --eval 'db.createUser({ user: "products_user", pwd: "12345678", roles: [{ role: "readWrite", db: "products_db" }] })'
+```
+
+### Ubuntu を使用する
+
+MongoDB は Ubuntu の公式リポジトリに含まれていないため、インストール前に公式リポジトリを追加する必要があります:
+
+```shell
+sudo apt-get install gnupg curl
+curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg --dearmor
+echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] http://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+```
+
+インストール後、次のコマンドでサービスを開始できます:
+
+```shell
+sudo systemctl start mongod
+```
+
+### Windows を使用する
+
+- <a href="https://www.mongodb.com/try/download/community" target="_blank">MongoDB Community Server をダウンロード</a>。
+
+ダウンロードしたインストーラーを実行し、**Service Configuration** の手順で **Install MongoD as a Service** を有効にすると、MongoDB が自動的に起動します。MongoDB は認証なしで `localhost:27017` からアクセスできます。
+
+> その他のディストリビューションやバージョンについては、[MongoDB 公式ドキュメント](https://www.mongodb.com/docs/manual/installation/) を参照してください。
+
+## アプリケーションの設定
+
+MongoDB 接続の設定は、環境に応じてアプリケーションの設定ファイルで行います:
+
+- `config/_development.json`
+
+> アプリケーションの[設定ファイル](/docs/academy/explore/configuration)について詳しくはこちらをご覧ください。
+
+設定ファイル内に `mongo` ブロックを追加し、各キーが接続を識別します:
+
+```javascript
+{
+    ...
+    "mongo": {
+        "store": "mongodb://store_user:12345678@localhost/store_db",
+        "products": {
+            "username": "products_user",
+            "password": "12345678",
+            "host": "127.0.0.1",
+            "port": "27017",
+            "database": "products_db"
+        }
+    },
+    ...
+}
+```
+
+接続は次の 2 つの方法で定義できます:
+
+- **接続 URL として** — 値は単なる文字列です。例: `"mongodb://store_user:12345678@localhost/store_db"`。
+- **設定オブジェクトとして** — 次のフィールドを持ちます:
+  - `url` — 定義されている場合、他のフィールドを無視して接続 URL として直接使用されます。
+  - `protocol` — 接続プロトコル。デフォルトは `mongodb`。
+  - `username` と `password` — アクセス資格情報。
+  - `host` — サーバーアドレス。デフォルトは `localhost`。
+  - `port` — 接続ポート。デフォルトは `27017`。
+  - `database` — データベース名。デフォルトは接続キーの名前。
+  - `params` — URL に追加される接続の追加パラメータ。例: `{ "authSource": "admin" }`。URL がオブジェクトのフィールドから構築される場合にのみ適用されます。
+
+> 接続はアプリケーションのメインデータベースである必要はありません。`db` 設定とは異なり、`mongo` ブロックは独立しており、複数の接続を同時に扱えます。
+
+## 接続の初期化
+
+最初のステップは、設定キー名または接続 URL を渡して `_mongo.init(...)` リソースで MongoDB クライアントを初期化することです:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mongo = _mongo.init("products")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                mongo = _mongo.init("products")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                mongo = _mongo.init("products")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val mongo = _mongo.init("products")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def mongo = _mongo.init("products")
+            `
+        }
+    ]}
+/>
+
+接続 URL を直接渡して初期化することもできます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mongo = _mongo.init("mongodb://localhost:27017/products_db")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                mongo = _mongo.init("mongodb://localhost:27017/products_db")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                mongo = _mongo.init("mongodb://localhost:27017/products_db")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val mongo = _mongo.init("mongodb://localhost:27017/products_db")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def mongo = _mongo.init("mongodb://localhost:27017/products_db")
+            `
+        }
+    ]}
+/>
+
+> 引数なしで `_mongo.init()` を呼び出すと、設定キー `default` が使用されます。使用する接続を明確にするため、常にキー名または URL を渡すことをおすすめします。
+
+## データベースとコレクション
+
+クライアントを初期化したら、`database("名前")` でデータベースインスタンスを取得します。その後、コレクションを作成し、既存のコレクションにアクセスできます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const db = mongo.database("products_db")
+
+                db.createCollection("product")
+
+                const collection = db.collection("product")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                db = mongo.database("products_db")
+
+                db.createCollection("product")
+
+                collection = db.collection("product")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                db = mongo.database("products_db")
+
+                db.createCollection("product")
+
+                collection = db.collection("product")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val db = mongo.database("products_db")
+
+                db.createCollection("product")
+
+                val collection = db.collection("product")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def db = mongo.database("products_db")
+
+                db.createCollection("product")
+
+                def collection = db.collection("product")
+            `
+        }
+    ]}
+/>
+
+`ping()` でデータベースへの接続をテストし、`collectionNames()` で既存のコレクションをすべて一覧表示できます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                db.ping()
+
+                const names = db.collectionNames()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                db.ping()
+
+                names = db.collectionNames()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                db.ping()
+
+                names = db.collectionNames()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                db.ping()
+
+                val names = db.collectionNames()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                db.ping()
+
+                def names = db.collectionNames()
+            `
+        }
+    ]}
+/>
+
+`renameCollection()` でコレクションの名前を変更できます。データベースを含む完全な名前を渡すか、データベース名と新しいコレクション名を別々に渡します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                collection.renameCollection("products_db.product_archive")
+
+                collection.renameCollection("archive_db", "product_archive")
+            `
+        }
+    ]}
+/>
+
+コレクションとそのすべてのドキュメントを削除するには、`drop()` を使用します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                collection.drop()
+            `
+        }
+    ]}
+/>
+
+## ドキュメントの挿入
+
+データは `_val` リソースで表現します。ドキュメントには `_val.map()`、値のリストには `_val.list()` を使用します。
+
+### 単一ドキュメントの挿入
+
+`insertOne()` でドキュメントを挿入し、生成された ID を取得します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const id = collection.insertOne(
+                    _val.map()
+                        .set("name", "ノートPC")
+                        .set("quantity", 22)
+                        .set("price", 100)
+                        .set("category", "コンピュータ")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                id = collection.insertOne(
+                    _val.map()
+                        .set("name", "ノートPC")
+                        .set("quantity", 22)
+                        .set("price", 100)
+                        .set("category", "コンピュータ")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                id = collection.insertOne(
+                    _val.map()
+                        .set("name", "ノートPC")
+                        .set("quantity", 22)
+                        .set("price", 100)
+                        .set("category", "コンピュータ")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val id = collection.insertOne(
+                    _val.map()
+                        .set("name", "ノートPC")
+                        .set("quantity", 22)
+                        .set("price", 100)
+                        .set("category", "コンピュータ")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def id = collection.insertOne(
+                    _val.map()
+                        .set("name", "ノートPC")
+                        .set("quantity", 22)
+                        .set("price", 100)
+                        .set("category", "コンピュータ")
+                )
+            `
+        }
+    ]}
+/>
+
+ドキュメントには、リストや他のドキュメントなどのネストされた構造を含めることができます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                collection.insertOne(
+                    _val.map()
+                        .set("name", "タブレット")
+                        .set("tags",
+                            _val.list()
+                                .add("プロモ")
+                                .add("新着")
+                        )
+                        .set("details",
+                            _val.map()
+                                .set("color", "青")
+                                .set("stock", 10)
+                        )
+                )
+            `
+        }
+    ]}
+/>
+
+### 複数ドキュメントの挿入
+
+`insertMany()` で複数のドキュメントを一度に挿入し、生成された ID のリストを受け取ります:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ids = collection.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("name", "スマートフォン")
+                                .set("quantity", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("name", "モニター")
+                                .set("quantity", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ids = collection.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("name", "スマートフォン")
+                                .set("quantity", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("name", "モニター")
+                                .set("quantity", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ids = collection.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("name", "スマートフォン")
+                                .set("quantity", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("name", "モニター")
+                                .set("quantity", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ids = collection.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("name", "スマートフォン")
+                                .set("quantity", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("name", "モニター")
+                                .set("quantity", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ids = collection.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("name", "スマートフォン")
+                                .set("quantity", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("name", "モニター")
+                                .set("quantity", 8)
+                        )
+                )
+            `
+        }
+    ]}
+/>
+
+## ドキュメントの検索
+
+`find()` メソッドは [MongoFindIterable](/docs/library/objects/MongoFindIterable) を返し、そこから `all()`（すべて）または `first()`（最初のドキュメント、存在しない場合は `null`）でドキュメントを取得します。
+
+コレクション内のすべてのドキュメントを取得するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const docs = collection.find().all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find().all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find().all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find().all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find().all()
+            `
+        }
+    ]}
+/>
+
+フィルタを指定して検索するには、[_mongo.filters()](/docs/library/objects/MongoFilters) ファクトリを使用します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const docs = collection.find(
+                    _mongo.filters().eq("name", "ノートPC")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find(
+                    _mongo.filters().eq("name", "ノートPC")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find(
+                    _mongo.filters().eq("name", "ノートPC")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find(
+                    _mongo.filters().eq("name", "ノートPC")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find(
+                    _mongo.filters().eq("name", "ノートPC")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+### フィルタ
+
+`_mongo.filters()` ファクトリは、MongoDB の主要なクエリ演算子を提供します:
+
+| 演算子 | 説明 |
+|---|---|
+| `eq("フィールド", 値)` | 値と等しい。 |
+| `ne("フィールド", 値)` | 値と等しくない。 |
+| `gt("フィールド", 値)` | 値より大きい。 |
+| `gte("フィールド", 値)` | 値以上。 |
+| `lt("フィールド", 値)` | 値より小さい。 |
+| `lte("フィールド", 値)` | 値以下。 |
+| `in("フィールド", 値1, 値2, ...)` | いずれかの値と等しい。 |
+| `nin("フィールド", 値1, 値2, ...)` | すべての値と等しくない。 |
+| `and(フィルタ1, フィルタ2, ...)` | すべてのフィルタに一致する。 |
+| `or(フィルタ1, フィルタ2, ...)` | 少なくとも 1 つのフィルタに一致する。 |
+| `not(フィルタ)` | フィルタに一致しない。 |
+| `regex("フィールド", "パターン")` | 正規表現に一致する。 |
+| `exists("フィールド")` | ドキュメントにフィールドが存在する。 |
+| `text("検索")` | テキスト検索。 |
+| `type("フィールド", "型")` | フィールドが指定された型である。 |
+| `mod("フィールド", 除数, 余り)` | フィールドを除数で割った余りが値と等しい。 |
+| `where("式")` | JavaScript 式を満たすドキュメントに一致する。例: `"this.price > 100"`。 |
+| `size("フィールド", n)` | 配列フィールドの要素数が正確に `n` である。 |
+
+たとえば、価格が 50 より大きく、数量が 30 より少ない商品を取得するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const docs = collection.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("price", 50),
+                        _mongo.filters().lt("quantity", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("price", 50),
+                        _mongo.filters().lt("quantity", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("price", 50),
+                        _mongo.filters().lt("quantity", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("price", 50),
+                        _mongo.filters().lt("quantity", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("price", 50),
+                        _mongo.filters().lt("quantity", 30)
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+または、名前が正規表現に一致する商品を取得するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const docs = collection.find(
+                    _mongo.filters().regex("name", "^(ノート|スマート)")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find(
+                    _mongo.filters().regex("name", "^(ノート|スマート)")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find(
+                    _mongo.filters().regex("name", "^(ノート|スマート)")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find(
+                    _mongo.filters().regex("name", "^(ノート|スマート)")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find(
+                    _mongo.filters().regex("name", "^(ノート|スマート)")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+## 結果の走査
+
+検索結果から、見つかったすべてのドキュメントを走査できます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const doc of collection.find().all()) {
+                    _out.println(doc.getString("name"))
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for doc in collection.find().all():
+                    _out.println(doc.getString("name"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                collection.find().all().each do |doc|
+                    _out.println(doc.getString("name"))
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                for (doc in collection.find().all()) {
+                    _out.println(doc.getString("name"))
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (doc in collection.find().all()) {
+                    _out.println(doc.getString("name"))
+                }
+            `
+        }
+    ]}
+/>
+
+関数を渡して `forEach()` で結果を走査することもできます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                collection.find().forEach((doc) =>
+                    _out.println(doc.getString("name"))
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                collection.find().forEach(
+                    lambda doc: _out.println(doc.getString("name"))
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                collection.find().forEach do |doc|
+                    _out.println(doc.getString("name"))
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                collection.find().forEach { doc ->
+                    _out.println(doc.getString("name"))
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                collection.find().forEach { doc ->
+                    _out.println(doc.getString("name"))
+                }
+            `
+        }
+    ]}
+/>
+
+## 並べ替え
+
+`_mongo.sorts()` ファクトリで、結果の順序を昇順または降順に定義できます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const docs = collection.find().sort(
+                    _mongo.sorts().descending("price")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find().sort(
+                    _mongo.sorts().descending("price")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find().sort(
+                    _mongo.sorts().descending("price")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find().sort(
+                    _mongo.sorts().descending("price")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find().sort(
+                    _mongo.sorts().descending("price")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+複数のフィールドで並べ替えるには、`orderBy()` を使用します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const docs = collection.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("price"),
+                        _mongo.sorts().ascending("quantity")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("price"),
+                        _mongo.sorts().ascending("quantity")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("price"),
+                        _mongo.sorts().ascending("quantity")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("price"),
+                        _mongo.sorts().ascending("quantity")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("price"),
+                        _mongo.sorts().ascending("quantity")
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+## フィールドの射影
+
+`_mongo.projections()` ファクトリで、ドキュメントで返されるフィールドを制限できます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const docs = collection.find().projection(
+                    _mongo.projections().include("name", "quantity")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find().projection(
+                    _mongo.projections().include("name", "quantity")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find().projection(
+                    _mongo.projections().include("name", "quantity")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find().projection(
+                    _mongo.projections().include("name", "quantity")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find().projection(
+                    _mongo.projections().include("name", "quantity")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+複数の射影を結合するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const docs = collection.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("name", "quantity"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("name", "quantity"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("name", "quantity"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("name", "quantity"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("name", "quantity"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+利用可能な射影の種類は次のとおりです:
+
+| 射影 | 説明 |
+|---|---|
+| `include("フィールド", ...)` | 指定したフィールドのみを含める。 |
+| `exclude("フィールド", ...)` | 指定したフィールドを除外する。 |
+| `excludeId()` | `_id` フィールドを除外する。 |
+| `fields(射影1, ...)` | 射影を結合する。 |
+| `slice("フィールド", n)` | 配列フィールドの最初の `n` 要素のみを含める。 |
+| `slice("フィールド", スキップ, n)` | 最初の `スキップ` 要素の後から `n` 要素を配列フィールドに含める。 |
+| `elemMatch("フィールド")` | 配列フィールドの最初の要素のみを含める。 |
+| `elemMatch("フィールド", フィルタ)` | フィルタに一致する配列の最初の要素のみを含める。 |
+| `computed("フィールド", 式)` | 集計式に基づく計算フィールドを追加する。 |
+
+## 制限とスキップ
+
+`limit()` と `skip()` で、返される結果の数を制御できます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const docs = collection.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        }
+    ]}
+/>
+
+## ドキュメントの更新
+
+`_mongo.updates()` ファクトリで適用する変更を定義し、`updateOne()` または `updateMany()` でフィルタに一致するドキュメントに変更を適用します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                collection.updateOne(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    _mongo.updates().set("quantity", 42)
+                )
+
+                collection.updateMany(
+                    _mongo.filters().eq("category", "コンピュータ"),
+                    _mongo.updates().set("category", "注目")
+                )
+            `
+        }
+    ]}
+/>
+
+`_mongo.updates()` ファクトリは、更新演算子を提供します:
+
+| 演算子 | 説明 |
+|---|---|
+| `set("フィールド", 値)` | フィールドの値を設定する。 |
+| `unset("フィールド")` | ドキュメントからフィールドを削除する。 |
+| `rename("フィールド", "新しい名前")` | フィールドの名前を変更する。 |
+| `push("フィールド", 値)` | 配列に値を追加する。 |
+| `combine(更新1, 更新2, ...)` | 複数の更新を 1 つに結合する。 |
+
+複数の変更を一度に適用するには、`combine()` を使用します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const combined = _mongo.updates().combine(
+                    _mongo.updates().set("quantity", 42),
+                    _mongo.updates().rename("other", "more")
+                )
+
+                collection.updateOne(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    combined
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                combined = _mongo.updates().combine(
+                    _mongo.updates().set("quantity", 42),
+                    _mongo.updates().rename("other", "more")
+                )
+
+                collection.updateOne(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    combined
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                combined = _mongo.updates().combine(
+                    _mongo.updates().set("quantity", 42),
+                    _mongo.updates().rename("other", "more")
+                )
+
+                collection.updateOne(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    combined
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val combined = _mongo.updates().combine(
+                    _mongo.updates().set("quantity", 42),
+                    _mongo.updates().rename("other", "more")
+                )
+
+                collection.updateOne(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    combined
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def combined = _mongo.updates().combine(
+                    _mongo.updates().set("quantity", 42),
+                    _mongo.updates().rename("other", "more")
+                )
+
+                collection.updateOne(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    combined
+                )
+            `
+        }
+    ]}
+/>
+
+### 検索と更新
+
+`findOneAndUpdate()` でドキュメントをアトミックに検索して更新し、元のドキュメント（存在しない場合は `null`）を返します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    _mongo.updates().set("quantity", 42)
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    _mongo.updates().set("quantity", 42)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    _mongo.updates().set("quantity", 42)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    _mongo.updates().set("quantity", 42)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    _mongo.updates().set("quantity", 42)
+                )
+            `
+        }
+    ]}
+/>
+
+## ドキュメントの置換
+
+`replaceOne()` でドキュメント全体を置換します（更新とは異なり、更新演算子を含めることはできません）:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                collection.replaceOne(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    _val.map()
+                        .set("name", "ノートPC")
+                        .set("quantity", 50)
+                        .set("price", 150)
+                        .set("category", "注目")
+                )
+            `
+        }
+    ]}
+/>
+
+古いドキュメントを返しながらアトミックに検索して置換するには、`findOneAndReplace()` を使用します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const old = collection.findOneAndReplace(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    _val.map()
+                        .set("name", "ノートPC")
+                        .set("quantity", 50)
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                old = collection.findOneAndReplace(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    _val.map()
+                        .set("name", "ノートPC")
+                        .set("quantity", 50)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                old = collection.findOneAndReplace(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    _val.map()
+                        .set("name", "ノートPC")
+                        .set("quantity", 50)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val old = collection.findOneAndReplace(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    _val.map()
+                        .set("name", "ノートPC")
+                        .set("quantity", 50)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def old = collection.findOneAndReplace(
+                    _mongo.filters().eq("name", "ノートPC"),
+                    _val.map()
+                        .set("name", "ノートPC")
+                        .set("quantity", 50)
+                )
+            `
+        }
+    ]}
+/>
+
+## ドキュメントの削除
+
+`deleteOne()` と `deleteMany()` で、フィルタに一致するドキュメントを削除します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                collection.deleteOne(
+                    _mongo.filters().eq("name", "ノートPC")
+                )
+
+                collection.deleteMany(
+                    _mongo.filters().eq("category", "非アクティブ")
+                )
+            `
+        }
+    ]}
+/>
+
+削除されたドキュメントを返しながらアトミックに検索して削除するには、`findOneAndDelete()` を使用します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const old = collection.findOneAndDelete(
+                    _mongo.filters().eq("name", "タブレット")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                old = collection.findOneAndDelete(
+                    _mongo.filters().eq("name", "タブレット")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                old = collection.findOneAndDelete(
+                    _mongo.filters().eq("name", "タブレット")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val old = collection.findOneAndDelete(
+                    _mongo.filters().eq("name", "タブレット")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def old = collection.findOneAndDelete(
+                    _mongo.filters().eq("name", "タブレット")
+                )
+            `
+        }
+    ]}
+/>
+
+コレクション内のすべてのドキュメントを削除するには、`_mongo.valToDoc()` を利用して空のフィルタを渡します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                collection.deleteMany(_mongo.valToDoc(_val.map()))
+            `
+        }
+    ]}
+/>
+
+## ドキュメントのカウント
+
+`countDocuments()` でコレクション内のドキュメント数を取得できます。オプションでフィルタを指定できます。一方、`estimatedDocumentCount()` はコレクションのメタデータを使用するため高速ですが、フィルタは指定できません:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const total = collection.countDocuments()
+
+                const totalMain = collection.countDocuments(
+                    _mongo.filters().eq("category", "コンピュータ")
+                )
+
+                const estimated = collection.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                total = collection.countDocuments()
+
+                totalMain = collection.countDocuments(
+                    _mongo.filters().eq("category", "コンピュータ")
+                )
+
+                estimated = collection.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                total = collection.countDocuments()
+
+                totalMain = collection.countDocuments(
+                    _mongo.filters().eq("category", "コンピュータ")
+                )
+
+                estimated = collection.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val total = collection.countDocuments()
+
+                val totalMain = collection.countDocuments(
+                    _mongo.filters().eq("category", "コンピュータ")
+                )
+
+                val estimated = collection.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def total = collection.countDocuments()
+
+                def totalMain = collection.countDocuments(
+                    _mongo.filters().eq("category", "コンピュータ")
+                )
+
+                def estimated = collection.estimatedDocumentCount()
+            `
+        }
+    ]}
+/>
+
+## インデックス
+
+`_mongo.indexes()` ファクトリで、クエリのパフォーマンスを向上させるためのインデックスを作成できます。インデックスを作成するには、仕様を `createIndex()` に渡すだけです:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                collection.createIndex(
+                    _mongo.indexes().ascending("quantity")
+                )
+
+                collection.createIndex(
+                    _mongo.indexes().compoundIndex(
+                        _mongo.indexes().descending("price"),
+                        _mongo.indexes().ascending("quantity")
+                    )
+                )
+            `
+        }
+    ]}
+/>
+
+`hint()` で、クエリで使用するインデックスを MongoDB に指示できます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const docs = collection.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("quantity", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("quantity", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("quantity", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("quantity", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("quantity", 1)
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+`min()` と `max()` で、クエリが走査するインデックス値の範囲を制限できます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const docs = collection.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("quantity", 50)
+                        )
+                    )
+                    .all()
+            `
+        }
+    ]}
+/>
+
+## 集計
+
+より高度な分析には、`aggregate()` で集計パイプラインを実行できます。各ステージは `_mongo.aggregates()` ファクトリで定義し、アキュムレータは `_mongo.accumulators()` で定義します。
+
+たとえば、商品をカテゴリごとにグループ化し、各グループの価格を合計するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const docs = collection.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("category", "コンピュータ")
+                    ),
+                    _mongo.aggregates().group(
+                        "$category",
+                        _mongo.accumulators().sum("total", "$price")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("total")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                docs = collection.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("category", "コンピュータ")
+                    ),
+                    _mongo.aggregates().group(
+                        "$category",
+                        _mongo.accumulators().sum("total", "$price")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("total")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                docs = collection.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("category", "コンピュータ")
+                    ),
+                    _mongo.aggregates().group(
+                        "$category",
+                        _mongo.accumulators().sum("total", "$price")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("total")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val docs = collection.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("category", "コンピュータ")
+                    ),
+                    _mongo.aggregates().group(
+                        "$category",
+                        _mongo.accumulators().sum("total", "$price")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("total")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def docs = collection.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("category", "コンピュータ")
+                    ),
+                    _mongo.aggregates().group(
+                        "$category",
+                        _mongo.accumulators().sum("total", "$price")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("total")
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+利用可能な集計ステージは次のとおりです:
+
+| ステージ | 説明 |
+|---|---|
+| `match(フィルタ)` | フィルタに一致するドキュメントのみを選択する。 |
+| `group("$フィールド", アキュムレータ)` | フィールドでドキュメントをグループ化し、アキュムレータを適用する。 |
+| `project(射影)` | ドキュメントのフィールドを追加、削除、変更する。 |
+| `sort(並べ替え)` | ドキュメントを並べ替える。 |
+| `limit(n)` | 最初の `n` ドキュメントに制限する。 |
+| `skip(n)` | 最初の `n` ドキュメントをスキップする。 |
+| `count()` | ドキュメント数をカウントする。 |
+| `lookup("コレクション", "ローカルフィールド", "外部フィールド", "as")` | 別のコレクションとの結合を実行する。 |
+
+よく使用されるアキュムレータ:
+
+| アキュムレータ | 説明 |
+|---|---|
+| `sum("フィールド", "$式")` | 値の合計。 |
+| `avg("フィールド", "$式")` | 値の平均。 |
+| `min("フィールド", "$式")` | 最小値。 |
+| `max("フィールド", "$式")` | 最大値。 |
+| `first("フィールド", "$式")` | 最初のドキュメントの値。 |
+| `last("フィールド", "$式")` | 最後のドキュメントの値。 |
+| `top("フィールド", 並べ替え, "$式")` | 並べ替えに従った先頭の値。 |
+| `bottom("フィールド", 並べ替え, "$式")` | 並べ替えに従った末尾の値。 |
+
+> アキュムレータでは、`$` 接頭辞付きの式は入力ドキュメントのフィールドを参照します。例: `"$price"`。
+
+## Values と BSON の変換
+
+Netuno の `_val` オブジェクトと MongoDB の BSON ドキュメントの間で変換が必要になる場合があります:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const doc = _mongo.valToDoc(
+                    _val.map().set("name", "ノートPC")
+                )
+
+                const values = _mongo.docToVal(doc)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                doc = _mongo.valToDoc(
+                    _val.map().set("name", "ノートPC")
+                )
+
+                values = _mongo.docToVal(doc)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                doc = _mongo.valToDoc(
+                    _val.map().set("name", "ノートPC")
+                )
+
+                values = _mongo.docToVal(doc)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val doc = _mongo.valToDoc(
+                    _val.map().set("name", "ノートPC")
+                )
+
+                val values = _mongo.docToVal(doc)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def doc = _mongo.valToDoc(
+                    _val.map().set("name", "ノートPC")
+                )
+
+                def values = _mongo.docToVal(doc)
+            `
+        }
+    ]}
+/>
+
+## オプション付き操作
+
+`_mongo` リソースの `*Options()` ファクトリは、MongoDB ドライバーの標準オプションオブジェクトを返し、そのメソッドを直接チェーンできます。たとえば、`upsert(true)` はフィルタに一致する既存ドキュメントがない場合にドキュメントを挿入します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "モニター"),
+                    _mongo.updates().set("quantity", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "モニター"),
+                    _mongo.updates().set("quantity", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "モニター"),
+                    _mongo.updates().set("quantity", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "モニター"),
+                    _mongo.updates().set("quantity", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def old = collection.findOneAndUpdate(
+                    _mongo.filters().eq("name", "モニター"),
+                    _mongo.updates().set("quantity", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        }
+    ]}
+/>
+
+ドキュメントが挿入された場合、`findOneAndUpdate()` は `null` を返します。
+
+利用可能なオプションファクトリは次のとおりです: `insertOneOptions()`、`insertManyOptions()`、`updateOptions()`、`findOneAndUpdateOptions()`、`replaceOptions()`、`findOneAndReplaceOptions()`、`deleteOptions()`、`findOneAndDeleteOptions()`、`countOptions()`、`estimatedDocumentCountOptions()`、`dropCollectionOptions()`、`textSearchOptions()`。
+
+## 接続の終了
+
+終了時には、MongoDB との接続を閉じることが推奨されます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _mongo.close()
+            `
+        }
+    ]}
+/>
+
+## まとめ
+
+`_mongo` リソースにより、Netuno は MongoDB 公式 Java クライアントに対するローコードで多言語対応の抽象化を提供し、JavaScript、Python、Ruby、Kotlin、Groovy でドキュメント、フィルタ、並べ替え、射影、更新、インデックス、集計を扱えるようにします。
+
+利用可能なすべてのメソッドの詳細については、[_mongo](/docs/library/resources/mongo) リソースおよび [MongoCollection](/docs/library/objects/MongoCollection) クラスのドキュメントを参照してください。
+
+良い開発を！

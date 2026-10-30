@@ -1,0 +1,254 @@
+---
+sidebar_position: 6
+id: service
+title: サービス
+description: NetunoでWebサービスとREST APIを作成し、システム間でデータを統合し、フロントエンドに非同期で動的データを提供する方法を学びます。
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Netunoでは、**_Webサービス_** を作成し、システム間のデータ統合のために、あらゆる種類の複雑な **<a href="https://pt.wikipedia.org/wiki/REST" target="_blank">REST</a> API** を構築できます。
+
+:::info Webサービスとは？
+Webサービスを使用すると、システム同士が標準化された方法でオンライン上で情報を交換できます。Netunoでは、`server/services/` 内の各ファイルが自動的にHTTP経由でアクセス可能なエンドポイントになります。
+:::
+
+## Webサービスを使う理由
+
+非同期サービスを利用すると、ユーザー体験に明確なメリットがあります:
+
+- **高速な読み込み:** サーバーはすべてのデータ処理を待たずに、ページの視覚的構造をすぐに配信します。
+- **必要に応じた動的データ:** フロントエンドは必要なときに必要なデータだけを要求します。
+- **システム間の統合:** Netunoで作成したサービスは、任意の外部アプリケーション（モバイル、別のWebシステムなど）から利用できます。
+- **より良いユーザー体験:** ユーザーは画面に何かが表示される前に、ページの完全な処理を待つ必要がありません。
+
+## 前提条件
+
+開始する前に、次のことを確認してください:
+
+- Netunoがインストールされ、ローカルで実行されていること。
+- [アプリケーションの作成](../app-create) の説明に従って、アプリケーション `demo` が作成されていること。
+- **タスク**にデータが登録され、**記録**と関連付けられていること（戻り値が空にならないために必要です）。
+
+## コードエディタの設定
+
+Netunoでサービスを作成・編集するには、お好みのコードエディタを使用してください。**[Visual Studio Code](https://code.visualstudio.com/download)** は無料で軽量、非常に直感的なのでおすすめです。ただし、JavaScript/Python/Groovyに対応したエディタであればどれでも通常どおり動作します。
+
+## デモアプリケーションを開く {#abrir-a-aplicacao-demo}
+
+1. **Visual Studio Code** を開きます。
+2. 左側のパネルで **ファイル** アイコンをクリックします。
+3. **フォルダーを開く**（File > Open Folder）を選択します。
+4. Netunoのインストールフォルダーに移動します。
+5. 次のディレクトリを選択します: **`apps/demo`**
+6. **開く**をクリックします。
+
+`demo` アプリケーションのフォルダー構造が左側のパネルに読み込まれます。
+
+## サービスの作成
+
+サービスは**サーバー**側で処理されます。新しいサービスを作成するには:
+
+1. ファイルパネルで、`server/services/` フォルダーが見つかるまで構造を展開します。
+2. `services` フォルダーを**右クリック**します。
+3. **新しいファイル** `New File` を選択します。
+4. 使用する言語に応じてファイルに名前を付けます:
+
+<PolyglotPath files={[
+    'server/services/workers'
+]} />
+
+
+<PolyglotCode
+    file="server/services/workers"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                /**
+                *** クエリのデータをJSON出力に変換します。
+                */
+                const dbRecords = _db.query(\`
+                    SELECT DISTINCT
+                        worker.name, SUM(DATEDIFF(HOUR, record.start_time, record.end_time)) AS total
+                    FROM worker INNER JOIN record
+                        ON worker.id = record.worker_id
+                    WHERE worker.active = true AND record.active = true
+                    GROUP BY worker.name
+                    ORDER BY total ASC
+                \`);
+
+                const resultList = _val.list();
+
+                for (const dbRecord of dbRecords) {
+                    resultList.add(
+                        _val.map()
+                            .set("name", dbRecord.getString("name"))
+                            .set("total", dbRecord.getInt("total"))
+                    );
+                }
+
+                _out.json(resultList);
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                #
+                # クエリのデータをJSON出力に変換します。
+                #
+                dbRecords = _db.query(
+                    """SELECT DISTINCT
+                        worker.name, SUM(DATEDIFF(HOUR, record.start_time, record.end_time)) AS total
+                    FROM worker INNER JOIN record
+                        ON worker.id = record.worker_id
+                    WHERE worker.active = true AND record.active = true
+                    GROUP BY worker.name
+                    ORDER BY total ASC"""
+                )
+
+                resultList = _val.list()
+
+                for dbRecord in dbRecords:
+                    resultList.add(
+                        _val.map()
+                            .set("name", dbRecord.getString("name"))
+                            .set("total", dbRecord.getInt("total"))
+                    )
+
+                _out.json(resultList)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                #
+                # クエリのデータをJSON出力に変換します。
+                #
+                dbRecords = _db.query(%{
+                    SELECT DISTINCT
+                        worker.name, SUM(DATEDIFF(HOUR, record.start_time, record.end_time)) AS total
+                    FROM worker INNER JOIN record
+                        ON worker.id = record.worker_id
+                    WHERE worker.active = true AND record.active = true
+                    GROUP BY worker.name
+                    ORDER BY total ASC
+                })
+
+                resultList = _val.list()
+
+                dbRecords.each do |dbRecord|
+                    resultList.add(
+                        _val.map()
+                            .set("name", dbRecord.getString("name"))
+                            .set("total", dbRecord.getInt("total"))
+                    )
+                end
+
+                _out.json(resultList)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                /**
+                *** クエリのデータをJSON出力に変換します。
+                */
+                val dbRecords = _db.query(
+                    """SELECT DISTINCT
+                        worker.name, SUM(DATEDIFF(HOUR, record.start_time, record.end_time)) AS total
+                    FROM worker INNER JOIN record
+                        ON worker.id = record.worker_id
+                    WHERE worker.active = true AND record.active = true
+                    GROUP BY worker.name
+                    ORDER BY total ASC"""
+                );
+
+                val resultList = _val.list();
+
+                dbRecords.forEach {
+                    resultList.add(
+                        _val.map()
+                            .set("name", it.getString("name"))
+                            .set("total", it.getInt("total"))
+                    );
+                }
+
+                _out.json(resultList);
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                /**
+                *** クエリのデータをJSON出力に変換します。
+                */
+                def dbRecords = _db.query("""\\
+                    SELECT DISTINCT
+                        worker.name, SUM(DATEDIFF(HOUR, record.start_time, record.end_time)) AS total
+                    FROM worker INNER JOIN record
+                        ON worker.id = record.worker_id
+                    WHERE worker.active = true AND record.active = true
+                    GROUP BY worker.name
+                    ORDER BY total ASC
+                """);
+
+                def resultList = _val.list();
+
+                for (dbRecord in dbRecords) {
+                    resultList.add(
+                        _val.map()
+                            .set("name", dbRecord.getString("name"))
+                            .set("total", dbRecord.getInt("total"))
+                    );
+                }
+
+                _out.json(resultList);
+            `
+        },
+    ]}
+/>
+
+作成したファイルに以下のコードを追加してサービスを実装します。このサービスはデータベースを照会し、登録された合計時間を含む作業者一覧を**JSON**形式で返します。
+
+### コードの理解
+
+| オブジェクト/メソッド | 説明 |
+|---|---|
+| `_db.query()` | SQLクエリを実行し、キーと値（列 → データ）の形式でオブジェクトのリストを返します。 |
+| `_val.list()` | 結果を蓄積するための可変リストを作成します。 |
+| `_val.map()` | 結果の各行に対してマッピング（キーと値）オブジェクトを作成します。 |
+| `_out.json()` | オブジェクトをJSONにシリアライズし、HTTPリクエストへのレスポンスとして送信します。 |
+
+:::warning 必要なデータ
+**タスク**にデータが登録され、**記録**に関連付けられていることを確認してください。そうでない場合、エンドポイントは空のリスト `[]` を返します。
+:::
+
+## サービスの実行とテスト
+
+Netunoを実行した状態で、ブラウザからエンドポイントにアクセスします:
+
+:::tip JSONを表示するためのヒント
+ブラウザで直接エンドポイントをテストするには **[Firefox](https://www.mozilla.org/)** をおすすめします。FirefoxはJSONレスポンスを構文強調付きで読みやすく整形して表示します。代わりに、Chromeの**JSON Viewer**などの拡張機能や、より高度なテストには **[Postman](https://www.postman.com/)** などのツールを使用してください。
+:::
+
+期待される戻り値は次のようなJSONです:
+
+```json
+[
+  { "name": "佐藤 花子", "total": 12 },
+  { "name": "鈴木 一郎", "total": 28 },
+  { "name": "田中 太郎", "total": 45 }
+]
+```
+
+## 次のステップ
+
+サービスが動作するようになったので、次に進めます:
+
+- 📄 **[インターフェースとデザイン](./ui)** — このサービスをアプリケーションのフロントエンドに統合します。
+- 📚 **[サービスライブラリ](../../library/overview)** — `_db`、`_val`、`_out` など、Netunoで利用できるオブジェクトを確認します。
+- 🔗 サービスに**認証**と**アクセス制御**を追加します。
+
+___

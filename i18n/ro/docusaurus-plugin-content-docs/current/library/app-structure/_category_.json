@@ -1,0 +1,9 @@
+{
+  "label": "Folderele aplicației",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/category/app-structure",
+    "description": "Folderele și fișierele aplicației în detaliu."
+  }
+}

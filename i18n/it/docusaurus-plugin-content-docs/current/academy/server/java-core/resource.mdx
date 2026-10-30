@@ -1,0 +1,186 @@
+---
+id: resource 
+title: Risorsa Poliglotta Low-Code 
+sidebar_label: Risorsa 
+sidebar_position: 5
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+In questo tutorial creeremo una risorsa nativa per Netuno. Questo significa che creeremo una classe in Java che rimarrà nella directory base di Netuno e che potrà essere utilizzata da qualsiasi applicazione all'interno della cartella `apps` usando la sintassi `_foo.methodName(ars)`.
+
+L'esempio che creeremo, seguendo i tutorial precedenti, è la risorsa `_calc`, una risorsa di esempio per eseguire semplici operazioni aritmetiche.
+
+Per iniziare, occorre prima creare la struttura di cartelle del progetto. In questo esempio considereremo che il progetto sarà creato dentro una cartella chiamata `Calc`. Quindi è necessario creare la struttura di cartelle che rispecchia il nome del package (nel nostro esempio, `org.netuno.addon.calc`). La nostra struttura di cartelle sarà quindi:
+
+- `Calc/src/main/java/org/netuno/addon/calc/resource/`
+
+All'interno di questa struttura creeremo una classe Java chiamata `CalcResource`, che definirà la nostra risorsa nativa personalizzata.
+
+- ` Calc/src/main/java/org/netuno/addon/calc/resource/CalcResource.java`
+
+Il package definito all'interno della classe sarà quindi:
+
+```java
+package org.netuno.addon.calc.resource;
+```
+
+Perché la classe definisca una risorsa nativa personalizzata, deve essere annotata con l'annotation `org.netuno.tritao.ResourceBase`. Il parametro `name` sarà il nome della risorsa a cui si può accedere con un underscore (`_`) prima del nome (nel nostro caso, `_calc`). Il modo più semplice per creare la risorsa è estendere la classe `org.netuno.tritao.resource.ResourceBase`:
+
+```java
+package org.netuno.addon.calc.resource;
+
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "calc")
+public class CalcResource extends ResourceBase {
+    // ...
+}
+```
+
+Estendere la classe `ResourceBase` ci risparmia di dover inizializzare la risorsa, basta chiamare `super` con gli argomenti corretti:
+
+```java
+package org.netuno.addon.calc.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "calc")
+public class CalcResource extends ResourceBase {
+    // ...
+    public CalcResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+}
+```
+
+La funzione `init` è obbligatoria, e al suo interno inizializzeremo la risorsa chiamando il costruttore della nostra classe con i getter della classe padre:
+
+```java
+package org.netuno.addon.calc.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "calc")
+public class CalcResource extends ResourceBase {
+    // ...
+    public CalcResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public CalcResource init() {
+        return new CalcResource(getProteu(), getHili());
+    }
+}
+```
+
+Dopo di ciò definiremo i nostri campi e le nostre funzioni:
+
+```java
+package org.netuno.addon.calc.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "calc")
+public class CalcResource extends ResourceBase {
+    public double value = 0;
+
+    public CalcResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public CalcResource init() {
+        return new CalcResource(getProteu(), getHili());
+    }
+
+    public CalcResource set(double v) {
+        value = v;
+        return this;
+    }
+
+    public CalcResource plus(double v) {
+        value += v;
+        return this;
+    }
+
+    public CalcResource minus(double v) {
+        value -= v;
+        return this;
+    }
+
+    public double get() {
+        return value;
+    }
+}
+```
+
+Ora basta compilare la classe, assicurandosi che il file `CalcResource.class` sia nella cartella:
+
+- `netuno/core/web/WEB-INF/classes/org/netuno/addon/calc/resource/`
+
+Oppure produrre un file JAR, assicurandosi che sia nella cartella:
+
+- `netuno/lib/`
+
+Creiamo un'applicazione di test per usare questa risorsa:
+
+```bash
+./netuno app name=calc
+```
+
+Creeremo anche un servizio in questa applicazione per usare la risorsa.
+Nell'esempio creeremo il file `netuno/apps/calc/server/services/calc-test.js`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _calc.set(10);
+
+                _calc.plus(120);
+
+                _out.println(_calc.get());
+            `
+        },
+    ]}
+/>
+
+Avviamo la nostra applicazione:
+
+```bash
+./netuno server app=calc
+```
+
+E ora, quando effettueremo una chiamata a questo servizio:
+
+- `http://localhost:9000/services/calc-test`
+
+Esso restituirà il valore `130`.
+
+Per usare una risorsa nel codice Java, alcune classi come `org.netuno.tritao.Web`
+e `org.netuno.tritao.event.EventBase` forniscono la funzione `resource`, che inizializza questa risorsa.
+Nella classe in cui vuoi che venga usata la risorsa `calc`, fai:
+
+```java
+import org.netuno.addon.calc.resource.CalcResource;
+
+// ...
+    CalcResource calc = resource(CalcResource.class);
+    calc.set(10);
+    calc.plus(120);
+    System.out.println(calc.get());
+// ...
+```
+
+Puoi vedere i file completi del progetto in questo [link](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/resource).

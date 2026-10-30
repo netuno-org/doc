@@ -1,0 +1,248 @@
+---
+sidebar_position: 2
+id: advanced
+title: 高级安装
+sidebar_label: 高级安装
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# 高级安装
+
+如果通过脚本快速安装时遇到任何问题，或者希望更深入地了解 Netuno 的安装工作原理，亦或出于任何其他原因，都可以进行手动安装。
+
+选择所需的版本。此处所做的选择将应用于本页所有命令块。
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="稳定版本" default>
+
+**稳定版本**是 Netuno 的认证版本。它经过了严格的测试，完全可以在生产环境中使用。
+
+</TabItem>
+  <TabItem value="testing" label="测试版本">
+
+:::danger 请勿在生产环境中使用
+**测试版本**包含最新的功能和仍在开发中的实现。由于其具有实验性质，可能会出现不稳定的情况。我们建议仅将其用于了解新功能、进行测试或为平台生态做出贡献。
+:::
+
+  </TabItem>
+</Tabs>
+
+## 前置要求
+
+在开始之前，请检查你的计算机上需要安装哪些内容：
+
+- **Java** *(仅用于安装器)*
+
+必须预先在操作系统中安装 **Java**。它将**仅**用于运行 Netuno 的初始安装脚本。
+
+- **GraalVM** *(自动安装)*
+
+在安装过程中，**GraalVM** 引擎会被自动下载并配置到 Netuno 自身的文件夹中。从这时起，将使用隔离的 GraalVM 中的 Java 来运行平台，从而在不干扰你机器全局配置的情况下确保稳定性和高性能。
+
+如需进一步了解该技术，请访问：[GraalVM](https://www.graalvm.org/)。
+
+:::info 前端要求是可选的
+前端工具（如 Node.js、NPM 或 Yarn）的安装完全是可选的。只有当你的目标是开发全栈模式下的高级界面时，才需要配置它们。
+:::
+
+### 后端 - Java
+
+此步骤确保环境已准备好运行平台安装器。需要安装 **Java 11 或更高版本**。
+
+在终端中执行以下命令，检查是否已安装 Java：
+
+```bash
+java -version
+```
+
+如果尚未安装，我们建议安装 **开源 Java**：
+
+- Windows 和 macOS：[Java OpenJDK Eclipse Temurin](https://adoptium.net/pt-BR)
+
+- Linux（Ubuntu / Debian）：
+
+```bash
+apt install default-jdk-headless
+```
+
+### 前端 - Bun
+
+要开发用户界面（UI / 前端），我们建议使用 **Bun**，这是 Netuno 生态中用于前端编译的官方标准工具。
+
+#### 为什么使用 Bun？
+
+**Bun** 是 Node.js 的现代且高度优化的替代方案。它在 Netuno 环境中表现突出，因为它提供：
+
+- **高性能：** 依赖的执行和安装明显更快。
+- **生产力：** 在日常界面开发流程中表现更佳。
+- **原生集成：** Netuno 的所有示例项目和模板都已预配置为与 Bun 配合使用。
+
+请访问指南：[Bun 安装](/docs/academy/website/bun)
+
+Netuno 不会限制你的技术选择。如果你愿意，**也可以使用 Node.js 搭配 NPM、PNPM、Yarn** 或任何其他包管理器。前端技术栈的选择完全由你决定。
+
+:::tip 请保持工具为最新版本
+无论选择哪种技术，请始终使用最新版本，以确保兼容性、安全性和性能。
+:::
+
+## Linux 或 macOS
+
+大多数 Linux 发行版和 macOS 默认已包含 **cURL** 或 **Wget**。请检查可用的那个：
+
+```bash
+curl --version
+```
+```bash
+wget --version
+```
+
+请按照以下步骤操作：
+
+**1. 创建文件夹并进入该文件夹：**
+
+```bash
+mkdir -p netuno && cd netuno
+```
+
+**2. 下载安装器**（只需选择一种方式）：
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="稳定版本" default>
+
+**使用 cURL：**
+```bash
+curl -L https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -o netuno-setup.jar
+```
+
+**使用 Wget：**
+```bash
+wget https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar -O netuno-setup.jar
+```
+
+  </TabItem>
+  <TabItem value="testing" label="测试版本">
+
+**使用 cURL：**
+```bash
+curl -L https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -o netuno-setup.jar
+```
+
+**使用 Wget：**
+```bash
+wget https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar -O netuno-setup.jar
+```
+
+  </TabItem>
+</Tabs>
+
+**3. 执行安装：**
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="稳定版本" default>
+
+```bash
+java -jar netuno-setup.jar install
+```
+
+  </TabItem>
+  <TabItem value="testing" label="测试版本">
+
+```bash
+java -jar netuno-setup.jar install version=testing
+```
+
+  </TabItem>
+</Tabs>
+
+:::caution 注意
+macOS 具有原生安全机制（Gatekeeper），可能会阻止通过终端下载的应用程序。
+:::
+
+在 **macOS** 上，为确保 Netuno 运行时没有权限错误，请在步骤 3 之后立即执行以下命令，且仍在 `netuno` 文件夹内。
+
+```bash
+sudo xattr -r -d com.apple.quarantine .
+```
+
+系统将要求你输入 Mac 的管理员密码以确认。
+
+## Windows
+
+我们将使用 **PowerShell** 来下载并安装。在开始菜单中输入 `powershell` 打开 PowerShell。
+
+**1. 创建文件夹、进入该文件夹并下载安装器**。复制完整代码块并按 Enter：
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="稳定版本" default>
+
+```powershell
+md netuno; cd netuno
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/stable/netuno-setup.jar" -OutFile "netuno-setup.jar"
+```
+
+  </TabItem>
+  <TabItem value="testing" label="测试版本">
+
+```powershell
+md netuno; cd netuno
+Invoke-WebRequest -Uri "https://github.com/netuno-org/platform/releases/download/testing/netuno-setup.jar" -OutFile "netuno-setup.jar"
+```
+
+  </TabItem>
+</Tabs>
+
+**2. 执行安装：**
+
+<Tabs groupId="versao">
+  <TabItem value="stable" label="稳定版本" default>
+
+```powershell
+java -jar netuno-setup.jar install
+```
+
+  </TabItem>
+  <TabItem value="testing" label="测试版本">
+
+```powershell
+java -jar netuno-setup.jar install version=testing
+```
+
+  </TabItem>
+</Tabs>
+
+:::caution 注意
+标准安装通常不需要提升权限。但是，如果收到“拒绝访问”的提示，请关闭 PowerShell，以**管理员**身份重新打开并再次执行命令。
+:::
+
+## 从零开始
+
+要清理环境并从零开始：
+
+**1. 在终端中返回上一级目录：**
+
+```bash
+cd ..
+```
+
+**2. 删除出错的文件夹：**
+
+<Tabs groupId="os">
+  <TabItem value="linux-mac" label="Linux 或 macOS" default>
+
+```bash
+rm -rf netuno
+```
+
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+
+```powershell
+rmdir /s /q netuno
+```
+
+  </TabItem>
+</Tabs>
+
+**3. 重新开始安装**。

@@ -1,0 +1,8 @@
+{
+  "label": "Библиотека",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Все ресурсы и объекты."
+  }
+}

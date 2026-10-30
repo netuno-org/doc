@@ -1,0 +1,675 @@
+---
+id: websocket
+title: WebSocket
+sidebar_label: WebSocket
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+Natychmiastowe wiadomości między serwerem a klientem.
+
+## Wprowadzenie
+
+Dzięki WebSocket można ustanowić stałe połączenie między serwerem a przeglądarką klienta.
+
+Oznacza to, że w dowolnym momencie przeglądarka może wykorzystać połączenie ustanowione przez WebSocket do wysyłania
+danych do serwera, bez obowiązku otrzymania odpowiedzi. To samo dotyczy serwera, który może kontaktować się
+z przeglądarką klienta, wysyłając dane natychmiast.
+
+> Komunikacja odbywa się natychmiast i w dowolnym momencie można przesyłać dane z jednej strony na drugą
+w sposób niezależny i natychmiastowy.
+
+Jest to bardzo przydatne do wykonywania operacji w czasie rzeczywistym z natychmiastową komunikacją; działa to jak czat,
+rozmowa między przeglądarką a serwerem — w dowolnym momencie każda ze stron może wysłać wiadomość, a druga ją odbiera.
+
+Na przykład jest to szeroko stosowane od ogólnych rozwiązań czatowych po gry; używamy tego również do prezentowania zmian
+danych na żywo, czyli gdy istnieje potrzeba komunikacji możliwie jak najbardziej natychmiastowej.
+
+W uproszczeniu różnica między klasyczną komunikacją HTTP a WebSocket przedstawia się następująco:
+
+![klasyczny-http-vs-websocket](/docs/assets/academy/server/services/websocket/comparison-pt.png)
+
+Po stronie serwera tworzony jest `endpoint`, czyli adres umożliwiający ustanawianie połączeń WebSocket.
+
+Serwer potrafi wysyłać dane tylko do konkretnego połączenia, czyli można wysłać nowe
+wiadomości do konkretnego uczestnika czatu.
+
+Serwer może również wykonywać `broadcast`, czyli wysyłanie danych do wszystkich aktywnych połączeń na określonym
+adresie, czyli gdy wiadomość jest wysyłana do wszystkich uczestników czatu znajdujących się w pokoju lub w
+grupie.
+
+## Aktywacja i konfiguracja
+
+Aby aktywować i skonfigurować WebSocket w aplikacji Netuno, należy edytować plik konfiguracyjny
+aplikacji dotyczący używanego środowiska, taki jak:
+
+- `📂 config/_development.json`
+- `📂 config/_production.json`
+
+Wprowadź i dostosuj następujące parametry:
+
+```json
+    ...
+    "ws": {
+        "hosts": [...], "<-- OPCJONALNE": "więcej w dokumentacji poniżej.",
+        "endpoints": [
+            {
+                "name": "pula",
+                "enabled": true,
+                "sendTimeout": 10000,
+                "idleTimeout": 0,
+                "maxText": 15000,
+                "public": "/ws/pula",
+                "path": "/",
+                "service": "/services/ws/pula"
+            },
+            {
+                "name": "pokoj",
+                "enabled": true,
+                "sendTimeout": 10000,
+                "idleTimeout": 0,
+                "maxText": 15000,
+                "public": "/ws/pokoj",
+                "path": "/{uid}",
+                "service": "/services/ws/pokoj"
+            }
+        ]
+    },
+    ...
+```
+
+#### endpoints
+
+Jest to tablica, która pozwala zdefiniować, że serwer będzie obsługiwał WebSocket przez wiele określonych
+publicznych adresów (_endpoints_); każdy endpoint jest publicznym adresem obsługującym odbieranie połączeń
+WebSocket z przeglądarek.
+
+#### name
+
+Nazwa identyfikacyjna endpointu.
+
+#### enabled
+
+Pozwala włączyć i wyłączyć endpoint; domyślnie jest `true` (aktywny).
+
+#### sendTimeout
+
+Maksymalny limit czasu na wysłanie wiadomości do klientów; domyślnie jest to `60000` milisekund, czyli
+odpowiednik 1 minuty.
+
+#### idleTimeout
+
+Maksymalny limit czasu bezczynności połączenia; domyślnie jest to `300000` milisekund, czyli odpowiednik 5 minut.
+
+#### maxText
+
+Limit w bajtach dla maksymalnej długości wiadomości; domyślnie jest to `1048576`, co odpowiada 1 megabajtowi.
+
+#### public
+
+Określa bazę publicznego adresu, który umożliwi odbieranie połączeń WebSocket przychodzących z przeglądarek.
+
+Ostateczny adres składa się z wartości konfiguracji `public`, po której następuje to, co zdefiniowano w `path`.
+
+#### path
+
+Określa końcową część ścieżki publicznego adresu; może być dynamiczna, co pozwala na przykład tworzyć wiele
+oddzielnych kanałów — jest to przydatne na przykład do tworzenia wielu pokoi.
+
+> Uwaga: `path` powinien zawsze zaczynać się od `/`, a w konfiguracji połączenia we front-endzie bardzo ważne jest
+zachowanie ukośnika dokładnie tak, jak zdefiniowano w `path`.
+
+We front-endzie ostateczny adres będzie równy `public` + `path`; zobacz przykład:
+
+```json
+    ...
+    "public": "/ws/pula",
+    "path": "/",
+    ...
+```
+
+Wtedy ostateczny adres we front-endzie będzie wynosić `/ws/pula/`, z ukośnikiem na końcu.
+
+##### service
+
+Adres bazy usługi back-endowej aplikacji, która przetwarza połączenia i komunikację przez WebSocket.
+
+#### hosts
+
+Opcjonalnie możemy zdefiniować hosty, na których dostępne są nasze endpointy; przy połączeniu przychodzi
+adres Host w nagłówku HTTP — brany jest pod uwagę tylko host z informacją o domenie lub IP, a wskazanie portu jest
+odrzucane; jest to wykorzystywane do skojarzenia i znalezienia odpowiedniego endpointu.
+
+> Dlatego endpoint, aby działać poprawnie, musi łączyć `host` oraz `public` + `path` w następujący sposób:
+>
+> `ws://[host]:9000[public][path]`
+>
+> W środowisku produkcyjnym z NGINX, odwrotnym proxy i SSL powinno to wyglądać tak:
+>
+> `wss://[host][public][path]`
+
+Netuno definiuje niektóre domeny lokalne z prefiksem nazwy aplikacji, który automatycznie przypisuje jako wartość
+domyślną do hostów endpointów; dodatkowo w aplikacji w trybie deweloperskim dodaje także `localhost` i
+`127.0.0.1` do hostów domyślnych. Dlatego definiowanie hostów jest opcjonalne, ponieważ istnieje ta automatyczna
+konfiguracja.
+
+Następujące hosty są automatycznie definiowane dla endpointów, jeśli nazwa aplikacji to `mojaaplikacja`:
+
+- Ten kieruje bezpośrednio na lokalny adres IP 127.0.0.1:
+  - `mojaaplikacja.local.netu.no`
+- Aby te działały, należy zarejestrować je w pliku hosts systemu operacyjnego:
+  - `mojaaplikacja.localhost`
+  - `mojaaplikacja.local`
+
+Jeśli nazwa aplikacji to `moja_aplikacja`, wówczas automatycznymi hostami stają się:
+
+- Ten kieruje bezpośrednio na lokalny adres IP 127.0.0.1:
+  - `moja-aplikacja.local.netu.no`
+- Aby te działały, należy zarejestrować je w pliku hosts systemu operacyjnego:
+  - `moja-aplikacja.localhost`
+  - `moja-aplikacja.local`
+
+> W domenie nie jest dozwolony znak `_` (podkreślenie), a w nazwach aplikacji nie jest dozwolony znak `-` (myślnik);
+> dlatego zewnętrznie używamy `-` (myślnika) w adresie, ale Netuno automatycznie zamienia `-` (myślnik) na
+> `_` (podkreślenie), aby znaleźć właściwą aplikację.
+
+Aplikacja domyślna lub aplikacja określona podczas uruchamiania serwera Netuno ma dodatkowo następujące
+hosty:
+
+- `localhost`
+- `127.0.0.1`
+
+Aby zdefiniować niestandardowe hosty, używamy następujących konfiguracji:
+
+```json
+    ...
+    "ws": {
+        "endpoints": [
+            {
+                "hosts": ["moja-domena1.com", "www.moja-domena1.com"],
+                ...
+            },
+            {
+                "hosts": ["moja-domena2.com", "www.moja-domena2.com"],
+                ...
+            }
+        ]
+    },
+    ...
+```
+
+Jeśli wszystkie endpointy działają na tych samych hostach, możemy zdefiniować je globalnie w następujący sposób:
+
+```json
+    ...
+    "ws": {
+        "hosts": ["moja-domena.com", "www.moja-domena1.com"],
+        "endpoints": [
+            ...
+        ]
+    },
+    ...
+```
+
+Upewnij się, że w ostatecznym adresie WebSocket zawsze używasz domeny lub IP, które jest prawidłowym hostem;
+w przeciwnym razie nie będzie działać, ponieważ endpoint nie będzie mógł zostać znaleziony wewnętrznie.
+
+## Usługa dla endpointów
+
+### POST = nowe połączenie
+
+Skonfigurowana usługa z metodą `POST` jest wykonywana, gdy nawiązywane jest nowe połączenie, na przykład:
+
+<PolyglotCode
+    file="server/services/ws/pokoj/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const uidPokoj = _ws.path().getString("uid")
+                const dbPokoj = _db.get("pokoj", uidPokoj)
+
+                if (dbPokoj == null) {
+                    _log.warn(\`Nieprawidłowy pokój \${uidPokoj}.\`)
+                    _ws.close()
+                } else {
+                    _log.info(\`Nowa sesja WebSocket: \${_ws.sessionId()}\`)
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                uidPokoj = _ws.path().getString("uid")
+                dbPokoj = _db.get("pokoj", uidPokoj)
+
+                if dbPokoj == null:
+                    _log.warn(f"Nieprawidłowy pokój {uidPokoj}.")
+                    _ws.close()
+                else:
+                    _log.info(f"Nowa sesja WebSocket: {_ws.sessionId()}")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                uidPokoj = _ws.path().getString("uid")
+                dbPokoj = _db.get("pokoj", uidPokoj)
+
+                if dbPokoj == null
+                    _log.warn("Nieprawidłowy pokój #{uidPokoj}.")
+                    _ws.close()
+                else
+                    _log.info("Nowa sesja WebSocket: #{_ws.sessionId()}")
+                end
+`
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val uidPokoj = _ws.path().getString("uid")
+                val dbPokoj = _db.get("pokoj", uidPokoj)
+
+                if (dbPokoj == null) {
+                    _log.warn("Nieprawidłowy pokój \${uidPokoj}.")
+                    _ws.close()
+                } else {
+                    _log.info("Nowa sesja WebSocket: \${_ws.sessionId()}")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def uidPokoj = _ws.path().getString("uid")
+                def dbPokoj = _db.get("pokoj", uidPokoj)
+
+                if (dbPokoj == null) {
+                    _log.warn("Nieprawidłowy pokój \${uidPokoj}.")
+                    _ws.close()
+                } else {
+                    _log.info("Nowa sesja WebSocket: \${_ws.sessionId()}")
+                }
+            `
+        },
+    ]}
+/>
+
+> Zwykle `_ws.sessionId()` jest zapisywane w bazie danych, aby użyć go w przyszłych komunikacjach.
+
+### PUT = nowa wiadomość
+
+Jeśli odebrana wiadomość nie jest w formacie JSON lub jest JSON-em, który nie ma formatu obsługiwanego do wykonania
+konkretnej usługi (`service`), wówczas zostanie wykonana ta ogólna usługa:
+
+<PolyglotCode
+    file="server/services/ws/pokoj/put"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(\`Sesja \${_ws.sessionId()} wysłała tę wiadomość: \${_ws.message()}\`)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _log.info(f"Sesja {_ws.sessionId()} wysłała tę wiadomość: {_ws.message()}")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _log.info("Sesja #{_ws.sessionId()} wysłała tę wiadomość: #{_ws.message()}")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _log.info("Sesja \${_ws.sessionId()} wysłała tę wiadomość: \${_ws.message()}")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _log.info("Sesja \${_ws.sessionId()} wysłała tę wiadomość: \${_ws.message()}")
+            `
+        },
+    ]}
+/>
+
+### DELETE = zamknięto połączenie
+
+Jest wykonywane, gdy nastąpi rozłączenie przeglądarki klienta.
+
+<PolyglotCode
+    file="server/services/ws/pokoj/delete"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(\`Sesja \${_ws.sessionId()} została rozłączona.\`)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _log.info(f"Sesja {_ws.sessionId()} została rozłączona.")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _log.info("Sesja #{_ws.sessionId()} została rozłączona.")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _log.info("Sesja \${_ws.sessionId()} została rozłączona.")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _log.info("Sesja \${_ws.sessionId()} została rozłączona.")
+            `
+        },
+    ]}
+/>
+
+
+### GET = ciągły strumień wiadomości
+
+Uruchamia się, gdy nawiązywane jest nowe połączenie przeglądarki klienta, a wykonanie trwa do zakończenia
+połączenia.
+
+Innymi słowy, usługa dla metody HTTP `GET` stale odbiera wiadomości przychodzące od klienta w trybie `stream`,
+czyli jest to otwarty i ciągły strumień wiadomości, który może zarówno odbierać, jak i wysyłać.
+
+<PolyglotCode
+    file="server/services/ws/pokoj/get"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                if (_ws.isStream()) {
+                    while (_ws.awaitStream()) {
+                        if (_ws.isBinaryStreamed()) {
+                            _log.info("Odebrano nową wiadomość binarną: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        } else if (_ws.isTextStreamed()) {
+                            _log.info("Odebrano nową wiadomość tekstową: "+ _ws.textStreamed())
+                        }
+                        _ws.sendText("OK! Wiadomość została pomyślnie odebrana.")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                if _ws.isStream():
+                    while _ws.awaitStream():
+                        if _ws.isBinaryStreamed():
+                            _log.info("Odebrano nową wiadomość binarną: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        elif _ws.isTextStreamed():
+                            _log.info("Odebrano nową wiadomość tekstową: "+ _ws.textStreamed())
+                        _ws.sendText("OK! Wiadomość została pomyślnie odebrana.")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                if _ws.isStream()
+                    while _ws.awaitStream()
+                        if _ws.isBinaryStreamed()
+                            _log.info("Odebrano nową wiadomość binarną: "+ _convert.textFromBytes(_ws.binaryStreamed()))
+                        elsif _ws.isTextStreamed()
+                            _log.info("Odebrano nową wiadomość tekstową: "+ _ws.textStreamed())
+                        end
+                        _ws.sendText("OK! Wiadomość została pomyślnie odebrana.")
+                    end
+                end
+            `
+        },
+    ]}
+/>
+
+`if` z `_ws.isStream()` sprawia, że weryfikowane jest, czy rzeczywiście jest to wewnętrzne żądanie obsługiwane przez WebSocket do
+realizacji streamu.
+
+W `while` z `_ws.awaitStream()` następuje oczekiwanie na nadejście nowego strumienia wiadomości, czyli oczekiwanie na
+nadejście nowej wiadomości. Gdy tylko pojawi się nowa wiadomość, wykonywany jest wewnętrzny kod `while`.
+
+> `_ws.awaitStream()` działa jak nieskończona pętla oczekująca na nową wiadomość.
+
+Następnie w wewnętrznych `if`-ach `while` sprawdzany jest typ wiadomości — czy jest binarna, czy tekstowa; w obu
+przypadkach zawartość tych wiadomości jest prezentowana w logach. Zauważ, że można użyć dowolnego formatu wiadomości
+i można je przetwarzać w dowolny wygodny sposób.
+
+Na koniec w `_ws.sendText` wysyłana jest wiadomość odpowiedzi do klienta, potwierdzająca odbiór.
+
+> Każde wykonanie usługi `GET` będzie aktywnym połączeniem.
+
+Gdy połączenie z endpointem WebSocket zostanie zakończone, wykonywanie tej usługi kończy się
+wewnętrznie.
+
+## Komunikacja
+
+### sendService
+
+Wykonuje usługę i wysyła wygenerowane wyjście do konkretnego klienta połączonego przez WebSocket; używa identyfikatora
+połączenia klienta (`sessionId`).
+
+#### Przykład wywołania usługi
+
+Poniższy kod można wykorzystać w usłudze metody PUT endpointu (`service`). Zauważ, że używane jest
+`_ws.sessionId()`, które pobiera ID sesji połączenia klienta; jeśli identyfikator sesji
+jest zapisany w bazie danych, `sendService` można wykonać w dowolnej innej usłudze w dowolnym
+momencie.
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const uid = _ws.path().getString("uid")
+                _ws.sendService(
+                    _ws.sessionId(), // Identyfikacja bieżącego połączenia WebSocket.
+                    _val.map() // Parametryzacja usługi, która zostanie wykonana.
+                        .set("method", "POST")
+                        .set("service", "/services/pokoj/uczestnik/nowy")
+                        .set(
+                            "data", // Parametry przekazywane do usługi i odbierane przez _req.
+                            _val.map()
+                                .set("uid", uid)
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+Innymi słowy, w konfiguracji `path` ustawiony w `endpoint` ma wartość `/{uid}`, co pozwala klientowi
+połączyć się przez publiczny adres:
+
+- `/ws/pokoj/d641f095-30eb-4025-a39c-b2e3e497eab7`
+
+Wtedy wartością `uid` będzie `d641f095-30eb-4025-a39c-b2e3e497eab7`.
+
+Następnie zostanie wykonana usługa dostępna pod URL `/services/pokoj/uczestnik/nowy`, a wartość `uid` jest przekazywana.
+
+Wartość `uid` można uzyskać w kodzie wykonywanej usługi jako parametr żądania HTTP; zobacz przykład:
+
+<PolyglotCode
+    file="/server/services/pokoj/uczestnik/nowy"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Wysłany UID jest pobierany bezpośrednio z żądania.
+                const uid = _req.getString('uid')
+            `
+        },
+    ]}
+/>
+
+### broadcastService
+
+Aby wykonać broadcast, potrzebna jest nazwa endpointu WebSocket, zdefiniowanie ścieżki (`path`), jeśli ma zastosowanie, oraz
+usługa, która zostanie wykonana.
+
+> Wyjście usługi zostanie wysłane do wszystkich aktywnych połączeń w określonym `endpoint`.
+
+#### Przykład broadcastu
+
+<PolyglotCode
+    file="/server/services/pokoj/uczestnik/nowy"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _ws.broadcastService(
+                    "admin", // Nazwa endpointu WebSocket.
+                    "/", // Ścieżka skonfigurowana w endpointcie (path).
+                    _val.map() // Parametryzacja usługi, która zostanie wykonana.
+                        .set("service", "/services/pokoj/uczestnik/lista")
+                )
+            `
+        },
+    ]}
+/>
+
+W tym przykładzie zawartość wyjściowa wygenerowana przez usługę `pokoj/uczestnik/lista` zostanie wysłana do wszystkich połączonych
+z endpointem `admin`.
+
+## Klient WS - NPM
+
+Aby ułatwić integrację z frontendem, udostępniany jest moduł NPM:
+
+- https://www.npmjs.com/package/@netuno/ws-client
+
+Polecenie instalacji:
+
+- `bun install @netuno/ws-client`
+
+```js
+import _ws from '@netuno/ws-client';
+
+_ws.config({
+    url: 'ws://localhost:9000/ws/przyklad/',
+    servicesPrefix: '/services',
+    autoReconnect: true,
+    connect: (zdarzenie) => {
+        console.info('WebSocket połączony', zdarzenie);
+    },
+    close: (zdarzenie) => {
+        console.warn('WebSocket zamknięty', zdarzenie);
+    },
+    error: (blad) => {
+        console.error('Błąd WebSocket', blad);
+    },
+    message: (dane, zdarzenie) => {
+        console.debug('Wiadomość WebSocket', dane);
+    }
+});
+```
+
+> Upewnij się, że URL poprawnie łączy wartości skonfigurowane w endpointcie dla `host` oraz `public` + `path`,
+> w następujący sposób:
+>
+> `ws://[host]:9000[public][path]`
+>
+> Natomiast produkcyjny URL z integracją NGINX, odwrotnego proxy i SSL prawdopodobnie będzie wyglądać tak:
+>
+> `wss://[host][public][path]`
+
+Następnie możesz rozpocząć połączenie:
+
+```js
+_ws.connect();
+```
+
+### Wykonywanie usługi przez WebSocket
+
+Możemy wykonywać usługi API REST przez połączenie WebSocket. Oznacza to, że nie będzie wykonywane żadne
+żądanie HTTP; dane żądania są wysyłane jako wiadomość, a odpowiedź usługi jest odbierana jako
+wiadomość zwrotna.
+
+Przed rozpoczęciem musimy utworzyć obserwator odpowiedzi usługi, na przykład:
+
+```js
+const refNasluchu = _ws.addListener({
+    method: 'GET', // Opcjonalne; pomiń, aby nasłuchiwać wszystkich metod.
+    service: 'sciezka/do/mojej/uslugi/tutaj',
+    success: (dane) => {
+        console.log('Odpowiedź usługi wykonanej przez WebSocket:', dane);
+    },
+    fail: (blad)=> {
+        console.log('Usługa wykonana przez WebSocket nie powiodła się:', blad);
+    }
+});
+```
+
+Teraz możemy wysłać żądanie wykonania usługi; odpowiedź usługi zostanie odebrana przez utworzony powyżej obserwator.
+Usługę wykonujemy w następujący sposób:
+
+```js
+_ws.sendService({
+    method: 'GET', // Opcjonalne; po pominięciu żądania używają GET.
+    service: 'sciezka/do/mojej/uslugi/tutaj',
+    data: {
+        wiadomosc: 'Cześć...'
+    }
+});
+```
+
+Aby usunąć dodany obserwator, użyj:
+
+```js
+_ws.removeListener(refNasluchu);
+```
+
+A aby zamknąć połączenie WebSocket:
+
+```js
+_ws.close();
+```
+
+## Odwrotne proxy NGINX
+
+W NGINX odwrotne proxy można skonfigurować w następujący sposób:
+
+```
+    location /ws {
+        proxy_pass http://localhost:9000;
+        proxy_set_header Host moja-aplikacja.local.netu.no;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_http_version 1.1;
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+        add_header X-Frame-Options "";
+    }
+```
+
+> W linii 3, gdzie definiowany jest `Host`, należy dostosować część `moja-aplikacja` do odpowiedniej nazwy
+> aplikacji Netuno. Jeśli w nazwie aplikacji występuje `_`, to w adresie `Host` zostanie on zastąpiony przez `-`;
+> na przykład aplikacja `moja_aplikacja` będzie miała wartość `Host` taką jak `moja-aplikacja.local.netu.no`.
+
+Uruchom ponownie NGINX, aby konfiguracja zaczęła obowiązywać.
+
+Domeny skonfigurowane w NGINX, czyli parametryzacja `server_name`, nie muszą znajdować się w hostach
+endpointu w aplikacji Netuno, ponieważ w powyższej konfiguracji proxy Host w nagłówku HTTP jest zmieniany
+na adres domyślny, który Netuno zawsze automatycznie konfiguruje, pod warunkiem że prefiks z nazwą
+aplikacji jest poprawny.
+
+Jeśli serwer NGINX używa portu 80, ostateczny URL będzie następujący:
+
+- `ws://[host][public][path]`
+
+A z SSL/HTTPS, jeśli serwer NGINX używa portu 443, ostateczny URL będzie następujący:
+
+- `wss://[host][public][path]`

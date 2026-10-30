@@ -1,0 +1,217 @@
+---
+id: setup
+title: Daten-Setup
+sidebar_label: Daten-Setup
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+## Einführung
+
+Bei Netuno beginnt die Entwicklung von Anwendungen zunächst mit dem Aufbau der Datenbank, durch die Erstellung der Formulare und Felder.
+
+Wenn im Team gearbeitet wird oder die Entwicklung der Anwendung in eine andere Umgebung übertragen werden muss, ist es notwendig, ein Backup der Datenbank zusammen mit dem Code zu erstellen.
+
+Am Ziel muss die Datenbank dann neu konfiguriert werden, und die Anwendung kann so ausgeführt werden, wie sie an ihrem Ursprung entwickelt wurde.
+
+Das Problem bei diesem Prozess ist der Aufwand, immer daran denken zu müssen, jedes Mal ein neues Backup zu erstellen, wenn sich etwas an der Datenbank ändert. Und je mehr Personen an der Entwicklung beteiligt sind und/oder je mehr Umgebungen es zum Veröffentlichen der Anwendung gibt, desto komplizierter wird dieser Prozess.
+
+Um dieses Problem zu lösen, bringt Netuno ein *Setup*-System für Anwendungen mit, das automatisch die Struktur der Datenbank (*Schema*) generiert und zusätzlich ermöglicht, das Laden der Anfangsdaten über zusätzliche *Skripte* manuell zu programmieren.
+
+Es ermöglicht außerdem, den Typ des Datenbankservers zu ändern, wobei gewährleistet wird, dass das *Setup* normal ausgeführt wird und die Anwendung ohne jegliche Probleme läuft. Das bedeutet, dass die Anwendung in H2DataBase entwickelt werden kann und mit den automatisch generierten Schemata die Datenbankverbindung der Anwendung auf PostgreSQL oder MariaDB geändert werden kann. Bei der ersten Ausführung der Anwendung auf der neuen Datenbank wird alles neu aufgebaut, unabhängig von der Änderung des Datenbankservertyps.
+
+So kann die Datenbank vollständig geändert werden, ohne Auswirkungen auf die bereits durchgeführte Entwicklung zu haben.
+
+Die Programmierdateien des _Setup_ befinden sich im Anwendungsordner unter:
+
+- `server/setup`
+
+## Setup-Konfiguration
+
+In den Umgebungskonfigurationen der Anwendungen, die sich hier befinden:
+
+- `/apps/MEINE_APP/config/_development.json`
+- `/apps/MEINE_APP/config/_production.json`
+
+können Sie das Verhalten des 'Setup' über die folgenden Konfigurationen steuern:
+
+```json
+    ...
+    "setup": {
+        "enabled": true,
+        "schema": {
+            "auto_create": true,
+            "execution": true
+        },
+        "scripts": {
+            "execution": true
+        }
+    },
+    ...
+```
+
+##### `enabled`: boolean > _standardmäßig true_
+
+Definiert, ob das Setup aktiv ist oder nicht, und aktiviert bzw. deaktiviert damit bei der ersten Ausführung der Anwendung die Ausführung der Daten-Setup-Operationen.
+
+##### `schema.auto_create`: boolean > _standardmäßig true_
+
+Legt fest, ob Netuno die Datenbank-Schema-Dateien generieren soll, wann immer ein Formular oder Feld erstellt oder geändert wird.
+
+##### `schema.execution`: boolean > _standardmäßig true_
+
+Steuert, ob das Schema während der Setup-Operationen ausgeführt werden soll, die bei der ersten Ausführung der Anwendung durchgeführt werden.
+
+##### `scripts.execution`: boolean > _standardmäßig true_
+
+Aktiviert oder deaktiviert die Ausführung der zusätzlichen Skripte während der Setup-Operationen, die bei der ersten Ausführung der Anwendung durchgeführt werden.
+
+## Schema
+
+Während der Erstellung oder Änderung von Formularen und Feldern in der Netuno-Weboberfläche werden die Schema-Dateien im Setup-Ordner wie folgt generiert:
+
+<PolyglotPath files={[
+    "server/setup/_schema-FORMULARNAME"
+]} />
+
+Dabei gibt es eine Datei `_schema-***` für jedes in der Anwendung vorhandene Formular.
+
+Diese Dateien sollten nicht manuell geändert werden, da sie automatisch von Netuno generiert werden.
+
+Wenn Sie den Inhalt dieser Dateien ändern, werden sie bei der nächsten Schema-Generierung automatisch ersetzt, und die direkt in den Dateien vorgenommenen Änderungen gehen verloren.
+
+Damit die automatische Generierung des Datenbank-Schemas ausgeführt wird, muss sichergestellt sein, dass die Konfiguration __schema.auto_create__ aktiv ist und der Ordner __setup__ innerhalb des Ordners __server__ existiert.
+
+## Skripte
+
+Benutzerdefinierte Skripte sind Dateien im Ordner __setup__, die nicht mit `_` beginnen.
+
+Das Hauptziel dieser Skripte ist es, die Daten zu laden und sicherzustellen, dass die Datenbank die für den korrekten Betrieb der Anwendung erforderlichen Mindestinformationen enthält.
+
+Wenn die Anwendung in einer anderen Umgebung neu konfiguriert wird, wird sie automatisch mit den Anfangsdaten geladen und ist bereit für die Nutzung.
+
+Für diese Datenladeoperationen sollten Sie die Funktionen der Ressource *_db* verwenden.
+
+Die __Skripte__ werden nach der Ausführung der __Schemata__ in alphanumerischer Reihenfolge der Dateinamen ausgeführt, die nicht mit `_` beginnen.
+
+> Den Dateinamen mit einer numerischen Sequenz zu beginnen, ist ideal, um die Ausführungsreihenfolge festzulegen; daher werden die benutzerdefinierten Skripte in der Reihenfolge der Dateinamen ausgeführt, die nicht mit `_` beginnen.
+
+### Benutzerdefinierte Daten einfügen
+
+Und um den Aufwand für Datenbankabfragen zu sparen, mit denen geprüft wird, ob ein __Insert__ von Daten durchgeführt werden kann oder nicht, stellt Netuno die Funktion `insertIfNotExists` bereit.
+
+Diese Funktion prüft, ob die Daten genau so, wie sie definiert sind, in der Datenbank vorhanden sind; wenn nicht, werden sie angelegt.
+
+Ein Beispiel für ihre Verwendung ist das Laden der Felder __Kürzel__ und __Bezeichnung__ des Formulars __Territoriumstyp__, wobei der Tabellenname __territoriumstyp__ lautet und die Spalten __kuerzel__ und __bezeichnung__ hat; dafür genügt es, die Datei mit folgendem Inhalt zu erstellen:
+
+<PolyglotCode
+    file="server/setup/001-territoriumstyp"
+    codes={[{
+        lang: 'javascript',
+        code: `
+            _db.insertIfNotExists("territoriumstyp", _val.map()
+                .set("kuerzel", "1001")
+                .set("bezeichnung", "Kontinental")
+            );
+            _db.insertIfNotExists("territoriumstyp", _val.map()
+                .set("kuerzel", "1002")
+                .set("bezeichnung", "Archipelagisch")
+            );
+            _db.insertIfNotExists("territoriumstyp", _val.map()
+                .set("kuerzel", "2003")
+                .set("bezeichnung", "Maritim")
+            );
+            _db.insertIfNotExists("territoriumstyp", _val.map()
+                .set("kuerzel", "3004")
+                .set("bezeichnung", "Luft")
+            );
+        `
+    }]}
+/>
+
+## Verarbeitungszyklus
+
+Wie bereits erläutert, wird das *Setup* nur bei der ersten Ausführung der Anwendung ausgeführt.
+
+Die Ausführungsreihenfolge ist:
+
+1. `_start` - führt die Initialisierungsdatei aus, die jede Art von benutzerdefinierter Programmierung enthalten kann:
+    <PolyglotPath files={["MEINE_APP/server/setup/_start"]} />
+2. `_cleanup` - führt die programmatische Entfernung von Formularen, Berichten und den jeweiligen Feldern aus:
+    <PolyglotPath files={["MEINE_APP/server/setup/_cleanup"]} />
+3. `_schema-*` - führt alle Skripte mit dem Präfix *_schema-* aus und enthält die Befehle zur Erstellung der Formulare, Berichte und der jeweiligen Felder:
+    <PolyglotPath files={[
+        "MEINE_APP/server/setup/_schema-autogenerierte_struktur",
+        "MEINE_APP/server/setup/_schema-kategorie",
+        "MEINE_APP/server/setup/_schema-produkt",
+        "MEINE_APP/server/setup/_schema-kunde",
+    ]} />
+4. `001-weitere_skripte` - führt die benutzerdefinierten *Skript*-Dateien aus; dies sind alle Dateien, die nicht mit `_` beginnen und die wahrscheinlich die erforderlichen __Inserts__ der Anfangsdaten oder andere benutzerdefinierte Entwicklungen enthalten, zum Beispiel:
+    <PolyglotPath files={[
+        "MEINE_APP/server/setup/001-benutzerdefinierte_daten_einfuegen",
+        "MEINE_APP/server/setup/002-kategorie",
+        "MEINE_APP/server/setup/003-produkt",
+        "MEINE_APP/server/setup/004-kunde",
+    ]} />
+5. *_end* - führt die Abschlussdatei aus, die jede Art von benutzerdefinierter Programmierung enthalten kann:
+    <PolyglotPath files={["MEINE_APP/server/setup/_end"]} />
+
+Das heißt, es ist erlaubt, benutzerdefinierten Code in den *Start*- und *End*-Skripten zu erstellen, um einige Operationen durchzuführen, die sinnvollerweise vor dem Setup oder auch nach dessen Abschluss ausgeführt werden.
+
+Es sei betont, dass dieser Verarbeitungszyklus immer dann ausgeführt wird, wenn die Anwendung zum ersten Mal ausgeführt wird; deshalb ist es notwendig, vor dem Anlegen der Daten deren Existenz zu prüfen.
+
+Stellen Sie sicher, dass die folgenden *Konfigurationen* der Umgebung aktiv sind, damit dieser Prozess in den Dateien `MEINE_APP/config/_development.json` oder `MEINE_APP/config/_production.json` je nach Umgebung ausgeführt werden kann:
+
+* Aktiviert oder deaktiviert vollständig die Ausführung jeglicher Setup-Operation:
+
+  `setup.enabled = true|false`
+
+* Aktiviert oder deaktiviert die Ausführung der *_schemas-*:
+
+  `setup.schema.execution = true|false`
+
+* Aktiviert oder deaktiviert die Ausführung der *Skripte*:
+
+  `setup.scripts.execution = true|false`
+
+## Bereinigung
+
+Um die Entfernung von Formularen und Feldern zu programmieren, sollten wir das Skript `_cleanup.js` verwenden; dies stellt sicher, dass in allen Umgebungen, die die Projektdateien synchronisieren, bei der Ausführung des Setups die Struktur entfernt wird, falls sie existiert.
+
+Beispiel für das Bereinigungsskript:
+
+<PolyglotCode file="server/setup/_cleanup"
+    codes={[{
+        lang: 'javascript',
+        code: `
+            // Entfernt das Formular zone:
+            _form.dropIfExists("zone");
+            // Entfernt das Feld unterbereich_id aus dem Formular bereich:
+            _form.dropFieldIfExists("bereich", "unterbereich_id");
+        `
+    }]}
+/>
+
+## DBML
+
+Immer wenn Netuno das Daten-Setup ausführt, wird die Datei generiert:
+
+- `server/setup/_db-schema.dbml`
+
+Dies ist die Datei mit der gesamten Datenstruktur, die mit Künstlicher Intelligenz verwendet werden kann.
+
+Anhand des Inhalts des DBML versteht die Künstliche Intelligenz die Datenstruktur und kann präzise SQL-Abfragen generieren.
+
+Versuchen Sie, diese Datei als Anhang im Prompt zu verwenden und darum zu bitten, komplexe SQL-Abfragen zu generieren; Sie werden gute Ergebnisse erzielen.
+
+## Fazit
+
+Der *Setup*-Prozess der Anwendungen in Netuno hat als Hauptfunktionen:
+
+* *_schema-*: generiert automatisch die gesamte Struktur der Formulare und Berichte mit ihren jeweiligen Feldern, die die Kohärenz der Datenbankstruktur der Anwendung gewährleisten, insbesondere wenn die Anwendung mit einer neuen leeren Datenbank ausgeführt wird.
+* *Skripte*: führen Datenbankoperationen aus, um sicherzustellen, dass die Anwendung die erforderlichen Daten bereits geladen enthält, wann immer sie zum ersten Mal ausgeführt wird.
+
+Auf diese Weise ermöglicht Netuno, dass Anwendungen in neuen Umgebungen funktionieren, selbst wenn der Datenbanktyp geändert wird, und gewährleistet den korrekten Betrieb der Anwendung, ohne dass __Backups__ und __Restores__ der Datenbanken durchgeführt werden müssen.
+
+Zusätzlich wird ermöglicht, dass der gesamte automatisch und manuell generierte Konfigurationscode beispielsweise mit GIT versioniert wird.

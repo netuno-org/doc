@@ -1,0 +1,209 @@
+---
+id: csv 
+title: CSV 
+sidebar_label: CSV 
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Benutzerdefinierte PDF-Dateien verarbeiten.
+
+## Einführung
+
+Netuno erzeugt CSV-Dateien über die [CSV](/docs/library/resources/csv)-Ressource, die eine Low-Code-Abstraktion von [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/) für die verschiedenen von Netuno unterstützten Programmiersprachen ermöglicht.
+
+Die mit Netuno gelieferte Anwendung **demo** (Demonstrationsanwendung) enthält zahlreiche Beispiele für mögliche Codeimplementierungen in verschiedenen Sprachen, einschließlich der Demonstration des Exports nach CSV über den Dienst `csv`, der sich unter folgendem Pfad befindet:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/csv`
+]} />
+
+## Eine CSV-Datei erstellen
+
+Um eine CSV-Datei zu erstellen, muss zunächst ein `CSVPrinter` von `Apache Commons CSV` initialisiert werden.
+Dazu müssen der Ordnername und der Dateiname sowie das CSV-Format übergeben werden.
+Im Beispiel erzeugen wir die Datei im `storage` der Anwendung:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const csvDrucker = _csv.printer(
+                  _storage.filesystem("server", "daten.csv"),
+                  _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                csv_drucker = _csv.printer(
+                    _storage.filesystem("server", "daten.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                csv_drucker = _csv.printer(
+                    _storage.filesystem("server", "daten.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val csvDrucker = _csv.printer(
+                    _storage.filesystem("server", "daten.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def csvDrucker = _csv.printer(
+                    _storage.filesystem("server", "daten.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        }
+    ]}
+/>
+
+Die unterstützten Formate sind [hier](https://doc.netuno.org/pt/docs/library/resources/csv/#format) beschrieben.
+
+### Schreiben
+
+Um Zeilen in die CSV-Datei zu schreiben:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvDrucker.printRecord("id", "benutzername", "vorname", "nachname", "geburtsdatum")
+                csvDrucker.printRecord(1, "max73", "Max", "Mustermann", 123)
+            `
+        }
+    ]}
+/>
+
+### Schließen
+
+Zum Schluss muss der `CSVPrinter` geschlossen werden:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvDrucker.close()
+            `
+        }
+    ]}
+/>
+
+
+## Eine CSV-Datei lesen
+
+Um eine CSV-Datei zu lesen, muss zunächst ein `CSVParser` von `Apache Commons CSV` initialisiert werden.
+Dazu müssen der Ordnername und der Dateiname übergeben werden.
+Im Beispiel lesen wir die Datei im `storage` der Anwendung:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const csvParser = _csv.parser(_storage.filesystem("server", "daten.csv"))
+            `
+        }
+    ]}
+/>
+
+### Zeilen 
+
+Jetzt ist es möglich, über die `CSVRecord` von `Apache Commons CSV` zu iterieren, die jede Zeile der CSV-Datei repräsentieren:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const datensatz of csvParser) {
+                    const spalteEins = datensatz.get(0)
+                    const spalteZwei = datensatz.get(1)
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for datensatz in csvParser:
+                    spalteEins = datensatz.get(0)
+                    spalteZwei = datensatz.get(1)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                csvParser.each do |datensatz|
+                    spalteEins = datensatz.get(0)
+                    spalteZwei = datensatz.get(1)
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                for (datensatz in csvParser) {
+                    val spalteEins = datensatz.get(0)
+                    val spalteZwei = datensatz.get(1)
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (datensatz in csvParser) {
+                    def spalteEins = datensatz.get(0)
+                    def spalteZwei = datensatz.get(1)
+                }
+            `
+        },
+    ]}
+/>
+
+Oder jede Zeile mit der Methode `getRecord` von `Apache Commons CSV` abrufen.
+In diesem Beispiel ruft das erste `get` die erste Zeile ab. Das zweite `get` ruft das erste Feld/den ersten Wert dieser Zeile ab:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvParser.getRecords().get(0).get(0)
+            `
+        }
+    ]}
+/>
+
+### Schließen
+
+Zum Schluss muss der `CSVParser` geschlossen werden:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csvParser.close()
+            `
+        }
+    ]}
+/>

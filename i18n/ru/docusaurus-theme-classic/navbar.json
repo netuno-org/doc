@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Netuno",
+    "description": "Заголовок в панели навигации"
+  },
+  "logo.alt": {
+    "message": "Документация Netuno",
+    "description": "Альтернативный текст логотипа в панели навигации"
+  },
+  "item.label.Get Started": {
+    "message": "Начало работы",
+    "description": "Элемент панели навигации с меткой «Начало работы»"
+  },
+  "item.label.Academy": {
+    "message": "Академия",
+    "description": "Элемент панели навигации с меткой «Академия»"
+  },
+  "item.label.Library": {
+    "message": "Библиотека",
+    "description": "Элемент панели навигации с меткой «Библиотека»"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Элемент панели навигации с меткой «GitHub»"
+  }
+}

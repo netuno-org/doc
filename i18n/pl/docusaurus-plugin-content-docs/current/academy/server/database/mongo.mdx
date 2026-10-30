@@ -1,0 +1,1965 @@
+---
+id: mongo
+title: MongoDB
+sidebar_label: MongoDB
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+## Wprowadzenie
+
+<a href="https://www.mongodb.com/" target="_blank">MongoDB</a> to dokumentowa baza danych NoSQL. Zamiast tabel i wierszy dane przechowywane są w dokumentach w formacie zbliżonym do JSON, co zapewnia dużą elastyczność modelu danych.
+
+Netuno udostępnia zasób [_mongo](/docs/library/resources/mongo) do integracji z MongoDB, z niskokodową abstrakcją nad oficjalnym klientem MongoDB dla Javy, dostępną dla różnych języków programowania obsługiwanych przez Netuno: **JavaScript, Python, Ruby, Kotlin i Groovy**.
+
+> Przed rozpoczęciem zaleca się zapoznanie z tworzeniem usług w Netuno — zobacz tutorial [REST - Usługi sieciowe](/docs/academy/server/services/rest).
+
+Przykład implementacji przedstawionych tutaj operacji znajduje się w usłudze przykładowej `mongo.js`, zlokalizowanej w:
+
+<PolyglotPath files={[
+    `apps/demo/server/services/samples/javascript/mongo`
+]} />
+
+## Instalacja MongoDB
+
+### Za pomocą Docker
+
+Zakładając, że masz zainstalowany Docker, wystarczy pobrać obraz MongoDB i uruchomić nowy kontener:
+
+```shell
+docker pull mongo
+docker run -d --name mongo -p 27017:27017 mongo
+```
+
+W ten sposób MongoDB jest dostępny pod adresem `localhost:27017` bez uwierzytelniania.
+
+Aby utworzyć użytkownika bazy danych zgodnie z konfiguracją aplikacji, wykonaj:
+
+```shell
+docker exec -it mongo mongosh produkty_db --eval 'db.createUser({ user: "produkty_uzytkownik", pwd: "12345678", roles: [{ role: "readWrite", db: "produkty_db" }] })'
+```
+
+### Za pomocą Ubuntu
+
+MongoDB nie jest dostępny w oficjalnych repozytoriach Ubuntu, dlatego przed instalacją trzeba dodać oficjalne repozytorium:
+
+```shell
+sudo apt-get install gnupg curl
+curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg --dearmor
+echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] http://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+```
+
+Po instalacji możesz uruchomić usługę za pomocą:
+
+```shell
+sudo systemctl start mongod
+```
+
+### Za pomocą Windows
+
+- <a href="https://www.mongodb.com/try/download/community" target="_blank">Pobierz MongoDB Community Server</a>.
+
+Uruchom pobrany instalator i w kroku **Service Configuration** włącz **Install MongoD as a Service**, aby MongoDB uruchamiał się automatycznie. MongoDB będzie dostępny pod adresem `localhost:27017` bez uwierzytelniania.
+
+> Zapoznaj się z [oficjalną dokumentacją MongoDB](https://www.mongodb.com/docs/manual/installation/), aby poznać inne dystrybucje i wersje.
+
+## Konfiguracja aplikacji
+
+Konfiguracja połączeń MongoDB odbywa się w pliku konfiguracyjnym aplikacji, w zależności od środowiska:
+
+- `config/_development.json`
+
+> Dowiedz się więcej o [plikach konfiguracyjnych](/docs/academy/explore/configuration) aplikacji.
+
+W pliku konfiguracyjnym dodaj blok `mongo`, w którym każdy klucz identyfikuje jedno połączenie:
+
+```javascript
+{
+    ...
+    "mongo": {
+        "sklep": "mongodb://sklep_uzytkownik:12345678@localhost/sklep_db",
+        "produkty": {
+            "username": "produkty_uzytkownik",
+            "password": "12345678",
+            "host": "127.0.0.1",
+            "port": "27017",
+            "database": "produkty_db"
+        }
+    },
+    ...
+}
+```
+
+Połączenie można zdefiniować na dwa sposoby:
+
+- **Jako URL połączenia** — wartość jest po prostu ciągiem znaków, na przykład `"mongodb://sklep_uzytkownik:12345678@localhost/sklep_db"`.
+- **Jako obiekt konfiguracji** — z polami:
+  - `url` — jeśli zdefiniowany, jest używany bezpośrednio jako URL połączenia, z pominięciem pozostałych pól.
+  - `protocol` — protokół połączenia, domyślnie `mongodb`.
+  - `username` i `password` — dane uwierzytelniające.
+  - `host` — adres serwera, domyślnie `localhost`.
+  - `port` — port połączenia, domyślnie `27017`.
+  - `database` — nazwa bazy danych, domyślnie nazwa klucza połączenia.
+  - `params` — dodatkowe parametry połączenia dołączane do URL, na przykład `{ "authSource": "admin" }`. Stosowane są wyłącznie wtedy, gdy URL jest budowany z pól obiektu.
+
+> Połączenie nie musi dotyczyć głównej bazy danych aplikacji. W przeciwieństwie do konfiguracji `db` blok `mongo` jest niezależny i pozwala na wiele równoczesnych połączeń.
+
+## Inicjalizacja połączenia
+
+Pierwszym krokiem jest zainicjalizowanie klienta MongoDB za pomocą zasobu `_mongo.init(...)`, przekazując nazwę klucza konfiguracji lub bezpośrednio URL połączenia:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mongo = _mongo.init("produkty")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                mongo = _mongo.init("produkty")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                mongo = _mongo.init("produkty")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val mongo = _mongo.init("produkty")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def mongo = _mongo.init("produkty")
+            `
+        }
+    ]}
+/>
+
+Możesz też zainicjalizować połączenie bezpośrednio za pomocą URL:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mongo = _mongo.init("mongodb://localhost:27017/produkty_db")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                mongo = _mongo.init("mongodb://localhost:27017/produkty_db")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                mongo = _mongo.init("mongodb://localhost:27017/produkty_db")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val mongo = _mongo.init("mongodb://localhost:27017/produkty_db")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def mongo = _mongo.init("mongodb://localhost:27017/produkty_db")
+            `
+        }
+    ]}
+/>
+
+> Przy wywołaniu `_mongo.init()` bez argumentów używany jest klucz konfiguracji `default`. Zaleca się, aby zawsze podawać nazwę klucza lub URL, dzięki czemu używane połączenie jest jednoznaczne.
+
+## Baza danych i kolekcje
+
+Po zainicjalizowaniu klienta pobierz instancję bazy danych za pomocą `database("nazwa")`. Następnie możesz tworzyć kolekcje i uzyskiwać dostęp do istniejącej kolekcji:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const baza = mongo.database("produkty_db")
+
+                baza.createCollection("produkt")
+
+                const kolekcja = baza.collection("produkt")
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                baza = mongo.database("produkty_db")
+
+                baza.createCollection("produkt")
+
+                kolekcja = baza.collection("produkt")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                baza = mongo.database("produkty_db")
+
+                baza.createCollection("produkt")
+
+                kolekcja = baza.collection("produkt")
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val baza = mongo.database("produkty_db")
+
+                baza.createCollection("produkt")
+
+                val kolekcja = baza.collection("produkt")
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def baza = mongo.database("produkty_db")
+
+                baza.createCollection("produkt")
+
+                def kolekcja = baza.collection("produkt")
+            `
+        }
+    ]}
+/>
+
+Możesz przetestować połączenie z bazą danych za pomocą `ping()` i wylistować wszystkie istniejące kolekcje za pomocą `collectionNames()`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                baza.ping()
+
+                const nazwy = baza.collectionNames()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                baza.ping()
+
+                nazwy = baza.collectionNames()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                baza.ping()
+
+                nazwy = baza.collectionNames()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                baza.ping()
+
+                val nazwy = baza.collectionNames()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                baza.ping()
+
+                def nazwy = baza.collectionNames()
+            `
+        }
+    ]}
+/>
+
+Możesz zmienić nazwę kolekcji za pomocą `renameCollection()`, przekazując pełną nazwę wraz z bazą danych albo osobno nazwę bazy danych i nową nazwę kolekcji:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                kolekcja.renameCollection("produkty_db.produkt_archiwum")
+
+                kolekcja.renameCollection("archiwum_db", "produkt_archiwum")
+            `
+        }
+    ]}
+/>
+
+Aby usunąć kolekcję i wszystkie jej dokumenty, użyj `drop()`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                kolekcja.drop()
+            `
+        }
+    ]}
+/>
+
+## Wstawianie dokumentów
+
+Dane są reprezentowane za pomocą zasobu `_val`, poprzez `_val.map()` dla dokumentów i `_val.list()` dla list wartości.
+
+### Wstawianie pojedynczego dokumentu
+
+Za pomocą `insertOne()` wstawiasz dokument i otrzymujesz wygenerowane ID:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const id = kolekcja.insertOne(
+                    _val.map()
+                        .set("nazwa", "Laptop")
+                        .set("ilosc", 22)
+                        .set("cena", 100)
+                        .set("kategoria", "komputery")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                id = kolekcja.insertOne(
+                    _val.map()
+                        .set("nazwa", "Laptop")
+                        .set("ilosc", 22)
+                        .set("cena", 100)
+                        .set("kategoria", "komputery")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                id = kolekcja.insertOne(
+                    _val.map()
+                        .set("nazwa", "Laptop")
+                        .set("ilosc", 22)
+                        .set("cena", 100)
+                        .set("kategoria", "komputery")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val id = kolekcja.insertOne(
+                    _val.map()
+                        .set("nazwa", "Laptop")
+                        .set("ilosc", 22)
+                        .set("cena", 100)
+                        .set("kategoria", "komputery")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def id = kolekcja.insertOne(
+                    _val.map()
+                        .set("nazwa", "Laptop")
+                        .set("ilosc", 22)
+                        .set("cena", 100)
+                        .set("kategoria", "komputery")
+                )
+            `
+        }
+    ]}
+/>
+
+Dokumenty mogą zawierać struktury zagnieżdżone, takie jak listy i inne dokumenty:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                kolekcja.insertOne(
+                    _val.map()
+                        .set("nazwa", "Tablet")
+                        .set("tagi",
+                            _val.list()
+                                .add("promocja")
+                                .add("nowy")
+                        )
+                        .set("szczegoly",
+                            _val.map()
+                                .set("kolor", "niebieski")
+                                .set("stan", 10)
+                        )
+                )
+            `
+        }
+    ]}
+/>
+
+### Wstawianie wielu dokumentów
+
+Za pomocą `insertMany()` wstawiasz kilka dokumentów naraz, otrzymując listę wygenerowanych ID:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ids = kolekcja.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("nazwa", "Smartfon")
+                                .set("ilosc", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("nazwa", "Monitor")
+                                .set("ilosc", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                ids = kolekcja.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("nazwa", "Smartfon")
+                                .set("ilosc", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("nazwa", "Monitor")
+                                .set("ilosc", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                ids = kolekcja.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("nazwa", "Smartfon")
+                                .set("ilosc", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("nazwa", "Monitor")
+                                .set("ilosc", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val ids = kolekcja.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("nazwa", "Smartfon")
+                                .set("ilosc", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("nazwa", "Monitor")
+                                .set("ilosc", 8)
+                        )
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def ids = kolekcja.insertMany(
+                    _val.list()
+                        .add(
+                            _val.map()
+                                .set("nazwa", "Smartfon")
+                                .set("ilosc", 18)
+                        )
+                        .add(
+                            _val.map()
+                                .set("nazwa", "Monitor")
+                                .set("ilosc", 8)
+                        )
+                )
+            `
+        }
+    ]}
+/>
+
+## Wyszukiwanie dokumentów
+
+Metoda `find()` zwraca [MongoFindIterable](/docs/library/objects/MongoFindIterable), z którego pobierasz dokumenty za pomocą `all()` (wszystkie) lub `first()` (pierwszy albo `null`, jeśli nie ma żadnego).
+
+Aby pobrać wszystkie dokumenty z kolekcji:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dokumenty = kolekcja.find().all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dokumenty = kolekcja.find().all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                dokumenty = kolekcja.find().all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val dokumenty = kolekcja.find().all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def dokumenty = kolekcja.find().all()
+            `
+        }
+    ]}
+/>
+
+Aby wyszukać z filtrem, użyj fabryki [_mongo.filters()](/docs/library/objects/MongoFilters):
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dokumenty = kolekcja.find(
+                    _mongo.filters().eq("nazwa", "Laptop")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dokumenty = kolekcja.find(
+                    _mongo.filters().eq("nazwa", "Laptop")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                dokumenty = kolekcja.find(
+                    _mongo.filters().eq("nazwa", "Laptop")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val dokumenty = kolekcja.find(
+                    _mongo.filters().eq("nazwa", "Laptop")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def dokumenty = kolekcja.find(
+                    _mongo.filters().eq("nazwa", "Laptop")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+### Filtry
+
+Fabryka `_mongo.filters()` udostępnia najważniejsze operatory zapytań MongoDB:
+
+| Operator | Opis |
+|---|---|
+| `eq("pole", wartosc)` | Równe wartości. |
+| `ne("pole", wartosc)` | Różne od wartości. |
+| `gt("pole", wartosc)` | Większe niż wartość. |
+| `gte("pole", wartosc)` | Większe lub równe wartości. |
+| `lt("pole", wartosc)` | Mniejsze niż wartość. |
+| `lte("pole", wartosc)` | Mniejsze lub równe wartości. |
+| `in("pole", wartosc1, wartosc2, ...)` | Równe którejkolwiek z wartości. |
+| `nin("pole", wartosc1, wartosc2, ...)` | Różne od wszystkich wartości. |
+| `and(filtr1, filtr2, ...)` | Odpowiada wszystkim filtrom. |
+| `or(filtr1, filtr2, ...)` | Odpowiada co najmniej jednemu z filtrów. |
+| `not(filtr)` | Nie odpowiada filtrowi. |
+| `regex("pole", "wzorzec")` | Odpowiada wyrażeniu regularnemu. |
+| `exists("pole")` | Pole istnieje w dokumencie. |
+| `text("wyszukiwanie")` | Wyszukiwanie tekstowe. |
+| `type("pole", "typ")` | Pole jest określonego typu. |
+| `mod("pole", dzielnik, reszta)` | Reszta z dzielenia wartości pola przez dzielnik jest równa podanej wartości. |
+| `where("wyrażenie")` | Odpowiada dokumentom spełniającym wyrażenie JavaScript, na przykład `"this.cena > 100"`. |
+| `size("pole", n)` | Pole tablicowe ma dokładnie `n` elementów. |
+
+Na przykład, aby pobrać produkty o cenie wyższej niż 50 i ilości mniejszej niż 30:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dokumenty = kolekcja.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("cena", 50),
+                        _mongo.filters().lt("ilosc", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dokumenty = kolekcja.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("cena", 50),
+                        _mongo.filters().lt("ilosc", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                dokumenty = kolekcja.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("cena", 50),
+                        _mongo.filters().lt("ilosc", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val dokumenty = kolekcja.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("cena", 50),
+                        _mongo.filters().lt("ilosc", 30)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def dokumenty = kolekcja.find(
+                    _mongo.filters().and(
+                        _mongo.filters().gt("cena", 50),
+                        _mongo.filters().lt("ilosc", 30)
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+Lub aby pobrać produkty, których nazwa odpowiada wyrażeniu regularnemu:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dokumenty = kolekcja.find(
+                    _mongo.filters().regex("nazwa", "^[LS]")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dokumenty = kolekcja.find(
+                    _mongo.filters().regex("nazwa", "^[LS]")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                dokumenty = kolekcja.find(
+                    _mongo.filters().regex("nazwa", "^[LS]")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val dokumenty = kolekcja.find(
+                    _mongo.filters().regex("nazwa", "^[LS]")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def dokumenty = kolekcja.find(
+                    _mongo.filters().regex("nazwa", "^[LS]")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+## Iterowanie po wynikach
+
+Dzięki wynikowi zapytania możesz iterować po wszystkich znalezionych dokumentach:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const dokument of kolekcja.find().all()) {
+                    _out.println(dokument.getString("nazwa"))
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for dokument in kolekcja.find().all():
+                    _out.println(dokument.getString("nazwa"))
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                kolekcja.find().all().each do |dokument|
+                    _out.println(dokument.getString("nazwa"))
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                for (dokument in kolekcja.find().all()) {
+                    _out.println(dokument.getString("nazwa"))
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (dokument in kolekcja.find().all()) {
+                    _out.println(dokument.getString("nazwa"))
+                }
+            `
+        }
+    ]}
+/>
+
+Możesz też iterować po wynikach za pomocą `forEach()`, przekazując funkcję:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                kolekcja.find().forEach((dokument) =>
+                    _out.println(dokument.getString("nazwa"))
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                kolekcja.find().forEach(
+                    lambda dokument: _out.println(dokument.getString("nazwa"))
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                kolekcja.find().forEach do |dokument|
+                    _out.println(dokument.getString("nazwa"))
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                kolekcja.find().forEach { dokument ->
+                    _out.println(dokument.getString("nazwa"))
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                kolekcja.find().forEach { dokument ->
+                    _out.println(dokument.getString("nazwa"))
+                }
+            `
+        }
+    ]}
+/>
+
+## Sortowanie
+
+Za pomocą fabryki `_mongo.sorts()` definiujesz kolejność wyników, rosnąco lub malejąco:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dokumenty = kolekcja.find().sort(
+                    _mongo.sorts().descending("cena")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dokumenty = kolekcja.find().sort(
+                    _mongo.sorts().descending("cena")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                dokumenty = kolekcja.find().sort(
+                    _mongo.sorts().descending("cena")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val dokumenty = kolekcja.find().sort(
+                    _mongo.sorts().descending("cena")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def dokumenty = kolekcja.find().sort(
+                    _mongo.sorts().descending("cena")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+Aby sortować według kilku pól, użyj `orderBy()`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dokumenty = kolekcja.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("cena"),
+                        _mongo.sorts().ascending("ilosc")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dokumenty = kolekcja.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("cena"),
+                        _mongo.sorts().ascending("ilosc")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                dokumenty = kolekcja.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("cena"),
+                        _mongo.sorts().ascending("ilosc")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val dokumenty = kolekcja.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("cena"),
+                        _mongo.sorts().ascending("ilosc")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def dokumenty = kolekcja.find().sort(
+                    _mongo.sorts().orderBy(
+                        _mongo.sorts().descending("cena"),
+                        _mongo.sorts().ascending("ilosc")
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+## Projekcja pól
+
+Za pomocą fabryki `_mongo.projections()` ograniczasz pola zwracane w dokumentach:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dokumenty = kolekcja.find().projection(
+                    _mongo.projections().include("nazwa", "ilosc")
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dokumenty = kolekcja.find().projection(
+                    _mongo.projections().include("nazwa", "ilosc")
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                dokumenty = kolekcja.find().projection(
+                    _mongo.projections().include("nazwa", "ilosc")
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val dokumenty = kolekcja.find().projection(
+                    _mongo.projections().include("nazwa", "ilosc")
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def dokumenty = kolekcja.find().projection(
+                    _mongo.projections().include("nazwa", "ilosc")
+                ).all()
+            `
+        }
+    ]}
+/>
+
+Aby połączyć kilka projekcji:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dokumenty = kolekcja.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("nazwa", "ilosc"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dokumenty = kolekcja.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("nazwa", "ilosc"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                dokumenty = kolekcja.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("nazwa", "ilosc"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val dokumenty = kolekcja.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("nazwa", "ilosc"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def dokumenty = kolekcja.find().projection(
+                    _mongo.projections().fields(
+                        _mongo.projections().include("nazwa", "ilosc"),
+                        _mongo.projections().excludeId()
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+Dostępne typy projekcji są następujące:
+
+| Projekcja | Opis |
+|---|---|
+| `include("pole", ...)` | Zawiera tylko określone pola. |
+| `exclude("pole", ...)` | Wyklucza określone pola. |
+| `excludeId()` | Wyklucza pole `_id`. |
+| `fields(projekcja1, ...)` | Łączy projekcje. |
+| `slice("pole", n)` | Zawiera tylko pierwsze `n` elementów pola tablicowego. |
+| `slice("pole", przesuniecie, n)` | Zawiera `n` elementów pola tablicowego, począwszy od elementów po pierwszych `przesuniecie` elementach. |
+| `elemMatch("pole")` | Zawiera tylko pierwszy element pola tablicowego. |
+| `elemMatch("pole", filtr)` | Zawiera tylko pierwszy element tablicy odpowiadający filtrowi. |
+| `computed("pole", wyrażenie)` | Dodaje pole obliczane na podstawie wyrażenia agregacji. |
+
+## Limity i pomijanie
+
+Za pomocą `limit()` i `skip()` kontrolujesz liczbę zwracanych wyników:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dokumenty = kolekcja.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dokumenty = kolekcja.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                dokumenty = kolekcja.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val dokumenty = kolekcja.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def dokumenty = kolekcja.find()
+                    .skip(1)
+                    .limit(2)
+                    .all()
+            `
+        }
+    ]}
+/>
+
+## Aktualizacja dokumentów
+
+Za pomocą fabryki `_mongo.updates()` definiujesz zmiany do zastosowania, a za pomocą `updateOne()` lub `updateMany()` stosujesz je w dokumentach odpowiadających filtrowi:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                kolekcja.updateOne(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    _mongo.updates().set("ilosc", 42)
+                )
+
+                kolekcja.updateMany(
+                    _mongo.filters().eq("kategoria", "komputery"),
+                    _mongo.updates().set("kategoria", "polecane")
+                )
+            `
+        }
+    ]}
+/>
+
+Fabryka `_mongo.updates()` udostępnia operatory aktualizacji:
+
+| Operator | Opis |
+|---|---|
+| `set("pole", wartosc)` | Ustawia wartość pola. |
+| `unset("pole")` | Usuwa pole z dokumentu. |
+| `rename("pole", "nowaNazwa")` | Zmienia nazwę pola. |
+| `push("pole", wartosc)` | Dodaje wartość do tablicy. |
+| `combine(aktualizacja1, aktualizacja2, ...)` | Łączy kilka aktualizacji w jedną. |
+
+Aby zastosować kilka zmian naraz, użyj `combine()`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const polaczone = _mongo.updates().combine(
+                    _mongo.updates().set("ilosc", 42),
+                    _mongo.updates().rename("inne", "wiecej")
+                )
+
+                kolekcja.updateOne(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    polaczone
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                polaczone = _mongo.updates().combine(
+                    _mongo.updates().set("ilosc", 42),
+                    _mongo.updates().rename("inne", "wiecej")
+                )
+
+                kolekcja.updateOne(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    polaczone
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                polaczone = _mongo.updates().combine(
+                    _mongo.updates().set("ilosc", 42),
+                    _mongo.updates().rename("inne", "wiecej")
+                )
+
+                kolekcja.updateOne(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    polaczone
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val polaczone = _mongo.updates().combine(
+                    _mongo.updates().set("ilosc", 42),
+                    _mongo.updates().rename("inne", "wiecej")
+                )
+
+                kolekcja.updateOne(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    polaczone
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def polaczone = _mongo.updates().combine(
+                    _mongo.updates().set("ilosc", 42),
+                    _mongo.updates().rename("inne", "wiecej")
+                )
+
+                kolekcja.updateOne(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    polaczone
+                )
+            `
+        }
+    ]}
+/>
+
+### Znajdowanie i aktualizacja
+
+Za pomocą `findOneAndUpdate()` znajdujesz i aktualizujesz dokument atomowo, zwracając oryginalny dokument (lub `null`, jeśli nie ma żadnego):
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stary = kolekcja.findOneAndUpdate(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    _mongo.updates().set("ilosc", 42)
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                stary = kolekcja.findOneAndUpdate(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    _mongo.updates().set("ilosc", 42)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                stary = kolekcja.findOneAndUpdate(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    _mongo.updates().set("ilosc", 42)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val stary = kolekcja.findOneAndUpdate(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    _mongo.updates().set("ilosc", 42)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def stary = kolekcja.findOneAndUpdate(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    _mongo.updates().set("ilosc", 42)
+                )
+            `
+        }
+    ]}
+/>
+
+## Zastępowanie dokumentów
+
+Za pomocą `replaceOne()` zastępujesz cały dokument (w przeciwieństwie do aktualizacji nie może zawierać operatorów aktualizacji):
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                kolekcja.replaceOne(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    _val.map()
+                        .set("nazwa", "Laptop")
+                        .set("ilosc", 50)
+                        .set("cena", 150)
+                        .set("kategoria", "polecane")
+                )
+            `
+        }
+    ]}
+/>
+
+Aby atomowo znaleźć i zastąpić dokument, zwracając stary dokument, użyj `findOneAndReplace()`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stary = kolekcja.findOneAndReplace(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    _val.map()
+                        .set("nazwa", "Laptop")
+                        .set("ilosc", 50)
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                stary = kolekcja.findOneAndReplace(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    _val.map()
+                        .set("nazwa", "Laptop")
+                        .set("ilosc", 50)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                stary = kolekcja.findOneAndReplace(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    _val.map()
+                        .set("nazwa", "Laptop")
+                        .set("ilosc", 50)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val stary = kolekcja.findOneAndReplace(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    _val.map()
+                        .set("nazwa", "Laptop")
+                        .set("ilosc", 50)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def stary = kolekcja.findOneAndReplace(
+                    _mongo.filters().eq("nazwa", "Laptop"),
+                    _val.map()
+                        .set("nazwa", "Laptop")
+                        .set("ilosc", 50)
+                )
+            `
+        }
+    ]}
+/>
+
+## Usuwanie dokumentów
+
+Za pomocą `deleteOne()` i `deleteMany()` usuwasz dokumenty odpowiadające filtrowi:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                kolekcja.deleteOne(
+                    _mongo.filters().eq("nazwa", "Laptop")
+                )
+
+                kolekcja.deleteMany(
+                    _mongo.filters().eq("kategoria", "nieaktywne")
+                )
+            `
+        }
+    ]}
+/>
+
+Aby atomowo znaleźć i usunąć dokument, zwracając usunięty dokument, użyj `findOneAndDelete()`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stary = kolekcja.findOneAndDelete(
+                    _mongo.filters().eq("nazwa", "Tablet")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                stary = kolekcja.findOneAndDelete(
+                    _mongo.filters().eq("nazwa", "Tablet")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                stary = kolekcja.findOneAndDelete(
+                    _mongo.filters().eq("nazwa", "Tablet")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val stary = kolekcja.findOneAndDelete(
+                    _mongo.filters().eq("nazwa", "Tablet")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def stary = kolekcja.findOneAndDelete(
+                    _mongo.filters().eq("nazwa", "Tablet")
+                )
+            `
+        }
+    ]}
+/>
+
+Aby usunąć wszystkie dokumenty z kolekcji, przekaż pusty filtr za pomocą `_mongo.valToDoc()`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                kolekcja.deleteMany(_mongo.valToDoc(_val.map()))
+            `
+        }
+    ]}
+/>
+
+## Liczenie dokumentów
+
+Za pomocą `countDocuments()` otrzymujesz liczbę dokumentów w kolekcji, opcjonalnie z filtrem. Z kolei `estimatedDocumentCount()` jest szybsze, ponieważ korzysta z metadanych kolekcji, ale bez filtra:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const suma = kolekcja.countDocuments()
+
+                const sumaGlowna = kolekcja.countDocuments(
+                    _mongo.filters().eq("kategoria", "komputery")
+                )
+
+                const szacowana = kolekcja.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                suma = kolekcja.countDocuments()
+
+                sumaGlowna = kolekcja.countDocuments(
+                    _mongo.filters().eq("kategoria", "komputery")
+                )
+
+                szacowana = kolekcja.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                suma = kolekcja.countDocuments()
+
+                sumaGlowna = kolekcja.countDocuments(
+                    _mongo.filters().eq("kategoria", "komputery")
+                )
+
+                szacowana = kolekcja.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val suma = kolekcja.countDocuments()
+
+                val sumaGlowna = kolekcja.countDocuments(
+                    _mongo.filters().eq("kategoria", "komputery")
+                )
+
+                val szacowana = kolekcja.estimatedDocumentCount()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def suma = kolekcja.countDocuments()
+
+                def sumaGlowna = kolekcja.countDocuments(
+                    _mongo.filters().eq("kategoria", "komputery")
+                )
+
+                def szacowana = kolekcja.estimatedDocumentCount()
+            `
+        }
+    ]}
+/>
+
+## Indeksy
+
+Za pomocą fabryki `_mongo.indexes()` tworzysz indeksy poprawiające wydajność zapytań. Aby utworzyć indeks, wystarczy przekazać specyfikacje do `createIndex()`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                kolekcja.createIndex(
+                    _mongo.indexes().ascending("ilosc")
+                )
+
+                kolekcja.createIndex(
+                    _mongo.indexes().compoundIndex(
+                        _mongo.indexes().descending("cena"),
+                        _mongo.indexes().ascending("ilosc")
+                    )
+                )
+            `
+        }
+    ]}
+/>
+
+Możesz wskazać MongoDB, którego indeksu ma użyć w zapytaniu, za pomocą `hint()`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dokumenty = kolekcja.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("ilosc", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dokumenty = kolekcja.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("ilosc", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                dokumenty = kolekcja.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("ilosc", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val dokumenty = kolekcja.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("ilosc", 1)
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def dokumenty = kolekcja.find().hint(
+                    _mongo.valToDoc(
+                        _val.map().set("ilosc", 1)
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+Za pomocą `min()` i `max()` ograniczasz zakres wartości indeksu przeglądanych przez zapytanie:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dokumenty = kolekcja.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("ilosc", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("ilosc", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dokumenty = kolekcja.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("ilosc", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("ilosc", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                dokumenty = kolekcja.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("ilosc", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("ilosc", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val dokumenty = kolekcja.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("ilosc", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("ilosc", 50)
+                        )
+                    )
+                    .all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def dokumenty = kolekcja.find()
+                    .min(
+                        _mongo.valToDoc(
+                            _val.map().set("ilosc", 10)
+                        )
+                    )
+                    .max(
+                        _mongo.valToDoc(
+                            _val.map().set("ilosc", 50)
+                        )
+                    )
+                    .all()
+            `
+        }
+    ]}
+/>
+
+## Agregacje
+
+Do bardziej zaawansowanych analiz służy `aggregate()`, który pozwala wykonać potok agregacji, gdzie każdy etap definiowany jest za pomocą fabryki `_mongo.aggregates()`, a akumulatory za pomocą `_mongo.accumulators()`.
+
+Na przykład, aby pogrupować produkty według kategorii i zsumować cenę w każdej grupie:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dokumenty = kolekcja.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("kategoria", "komputery")
+                    ),
+                    _mongo.aggregates().group(
+                        "$kategoria",
+                        _mongo.accumulators().sum("suma", "$cena")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("suma")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dokumenty = kolekcja.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("kategoria", "komputery")
+                    ),
+                    _mongo.aggregates().group(
+                        "$kategoria",
+                        _mongo.accumulators().sum("suma", "$cena")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("suma")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                dokumenty = kolekcja.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("kategoria", "komputery")
+                    ),
+                    _mongo.aggregates().group(
+                        "$kategoria",
+                        _mongo.accumulators().sum("suma", "$cena")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("suma")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val dokumenty = kolekcja.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("kategoria", "komputery")
+                    ),
+                    _mongo.aggregates().group(
+                        "$kategoria",
+                        _mongo.accumulators().sum("suma", "$cena")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("suma")
+                    )
+                ).all()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def dokumenty = kolekcja.aggregate(
+                    _mongo.aggregates().match(
+                        _mongo.filters().eq("kategoria", "komputery")
+                    ),
+                    _mongo.aggregates().group(
+                        "$kategoria",
+                        _mongo.accumulators().sum("suma", "$cena")
+                    ),
+                    _mongo.aggregates().sort(
+                        _mongo.sorts().descending("suma")
+                    )
+                ).all()
+            `
+        }
+    ]}
+/>
+
+Dostępne etapy agregacji są następujące:
+
+| Etap | Opis |
+|---|---|
+| `match(filtr)` | Wybiera tylko dokumenty odpowiadające filtrowi. |
+| `group("$pole", akumulatory)` | Grupuje dokumenty według pola i stosuje akumulatory. |
+| `project(projekcja)` | Dodaje, usuwa lub zmienia pola w dokumentach. |
+| `sort(sortowanie)` | Sortuje dokumenty. |
+| `limit(n)` | Ogranicza do pierwszych `n` dokumentów. |
+| `skip(n)` | Pomija pierwsze `n` dokumentów. |
+| `count()` | Zlicza liczbę dokumentów. |
+| `lookup("kolekcja", "poleLokalne", "poleObce", "jako")` | Wykonuje złączenie z inną kolekcją. |
+
+A najczęściej używane akumulatory:
+
+| Akumulator | Opis |
+|---|---|
+| `sum("pole", "$wyrażenie")` | Suma wartości. |
+| `avg("pole", "$wyrażenie")` | Średnia wartości. |
+| `min("pole", "$wyrażenie")` | Wartość minimalna. |
+| `max("pole", "$wyrażenie")` | Wartość maksymalna. |
+| `first("pole", "$wyrażenie")` | Wartość pierwszego dokumentu. |
+| `last("pole", "$wyrażenie")` | Wartość ostatniego dokumentu. |
+| `top("pole", sortowanie, "$wyrażenie")` | Wartość najwyższa według sortowania. |
+| `bottom("pole", sortowanie, "$wyrażenie")` | Wartość najniższa według sortowania. |
+
+> W akumulatorach wyrażenie z prefiksem `$` odnosi się do pola dokumentu wejściowego, na przykład `"$cena"`.
+
+## Konwersja między Values i BSON
+
+Czasami zachodzi potrzeba konwersji między obiektami `_val` Netuno a dokumentami BSON MongoDB:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const dokument = _mongo.valToDoc(
+                    _val.map().set("nazwa", "Laptop")
+                )
+
+                const wartosci = _mongo.docToVal(dokument)
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                dokument = _mongo.valToDoc(
+                    _val.map().set("nazwa", "Laptop")
+                )
+
+                wartosci = _mongo.docToVal(dokument)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                dokument = _mongo.valToDoc(
+                    _val.map().set("nazwa", "Laptop")
+                )
+
+                wartosci = _mongo.docToVal(dokument)
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val dokument = _mongo.valToDoc(
+                    _val.map().set("nazwa", "Laptop")
+                )
+
+                val wartosci = _mongo.docToVal(dokument)
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def dokument = _mongo.valToDoc(
+                    _val.map().set("nazwa", "Laptop")
+                )
+
+                def wartosci = _mongo.docToVal(dokument)
+            `
+        }
+    ]}
+/>
+
+## Operacje z opcjami
+
+Fabryki `*Options()` zasobu `_mongo` zwracają standardowe obiekty opcji sterownika MongoDB i można bezpośrednio łańcuchować ich metody. Na przykład `upsert(true)` wstawia dokument, gdy filtr nie odpowiada żadnemu istniejącemu dokumentowi:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stary = kolekcja.findOneAndUpdate(
+                    _mongo.filters().eq("nazwa", "Monitor"),
+                    _mongo.updates().set("ilosc", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                stary = kolekcja.findOneAndUpdate(
+                    _mongo.filters().eq("nazwa", "Monitor"),
+                    _mongo.updates().set("ilosc", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                stary = kolekcja.findOneAndUpdate(
+                    _mongo.filters().eq("nazwa", "Monitor"),
+                    _mongo.updates().set("ilosc", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val stary = kolekcja.findOneAndUpdate(
+                    _mongo.filters().eq("nazwa", "Monitor"),
+                    _mongo.updates().set("ilosc", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def stary = kolekcja.findOneAndUpdate(
+                    _mongo.filters().eq("nazwa", "Monitor"),
+                    _mongo.updates().set("ilosc", 8),
+                    _mongo.findOneAndUpdateOptions().upsert(true)
+                )
+            `
+        }
+    ]}
+/>
+
+Gdy dokument jest wstawiany, `findOneAndUpdate()` zwraca `null`.
+
+Dostępne fabryki opcji to: `insertOneOptions()`, `insertManyOptions()`, `updateOptions()`, `findOneAndUpdateOptions()`, `replaceOptions()`, `findOneAndReplaceOptions()`, `deleteOptions()`, `findOneAndDeleteOptions()`, `countOptions()`, `estimatedDocumentCountOptions()`, `dropCollectionOptions()` i `textSearchOptions()`.
+
+## Zamykanie połączenia
+
+Po zakończeniu dobrą praktyką jest zamknięcie połączenia z MongoDB:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _mongo.close()
+            `
+        }
+    ]}
+/>
+
+## Podsumowanie
+
+Dzięki zasobowi `_mongo` Netuno oferuje niskokodową i poliglotyczną abstrakcję nad oficjalnym klientem MongoDB dla Javy, umożliwiając pracę z dokumentami, filtrami, sortowaniem, projekcjami, aktualizacjami, indeksami i agregacjami w JavaScript, Python, Ruby, Kotlin i Groovy.
+
+Aby uzyskać więcej szczegółów na temat wszystkich dostępnych metod, zapoznaj się z dokumentacją zasobu [_mongo](/docs/library/resources/mongo) oraz klasy [MongoCollection](/docs/library/objects/MongoCollection).
+
+Udanej pracy!

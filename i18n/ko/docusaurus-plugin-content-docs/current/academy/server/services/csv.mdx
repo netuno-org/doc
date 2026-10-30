@@ -1,0 +1,209 @@
+---
+id: csv 
+title: CSV 
+sidebar_label: CSV 
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+사용자 정의 PDF 파일을 처리합니다.
+
+## 소개
+
+Netuno는 [CSV](/docs/library/resources/csv) 기능을 통해 CSV 파일을 생성하며, 이 기능은 Netuno가 지원하는 다양한 프로그래밍 언어에 대해 [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/)의 로우코드 추상화를 제공합니다.
+
+Netuno와 함께 제공되는 **demo**(데모 애플리케이션)에는 다양한 언어의 가능한 코드 구현 예제가 많이 포함되어 있으며, 다음 위치에 있는 `csv` 서비스를 통한 CSV 내보내기 데모도 포함되어 있습니다:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/csv`
+]} />
+
+## CSV 파일 생성
+
+CSV 파일을 생성하려면 먼저 `Apache Commons CSV`의 `CSVPrinter`를 초기화해야 합니다.
+이를 위해 폴더 이름과 파일 이름, 그리고 CSV 형식을 전달해야 합니다.
+예제에서는 애플리케이션의 `storage` 안에 파일을 생성합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const csv_프린터 = _csv.printer(
+                  _storage.filesystem("server", "데이터.csv"),
+                  _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                csv_프린터 = _csv.printer(
+                    _storage.filesystem("server", "데이터.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                csv_프린터 = _csv.printer(
+                    _storage.filesystem("server", "데이터.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                val csv_프린터 = _csv.printer(
+                    _storage.filesystem("server", "데이터.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                def csv_프린터 = _csv.printer(
+                    _storage.filesystem("server", "데이터.csv"),
+                    _csv.format("EXCEL")
+                )
+            `
+        }
+    ]}
+/>
+
+지원되는 형식은 [여기](https://doc.netuno.org/pt/docs/library/resources/csv/#format)에 설명되어 있습니다.
+
+### 쓰기
+
+CSV 파일에 행을 쓰려면:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csv_프린터.printRecord("아이디", "사용자명", "이름", "성", "생년월일")
+                csv_프린터.printRecord(1, "kim73", "민수", "김", 123)
+            `
+        }
+    ]}
+/>
+
+### 닫기
+
+마지막에는 `CSVPrinter`를 닫아야 합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csv_프린터.close()
+            `
+        }
+    ]}
+/>
+
+
+## CSV 파일 읽기
+
+CSV 파일을 읽으려면 먼저 `Apache Commons CSV`의 `CSVParser`를 초기화해야 합니다.
+이를 위해 폴더 이름과 파일 이름을 전달해야 합니다.
+예제에서는 애플리케이션의 `storage` 안에 있는 파일을 읽습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const csv_파서 = _csv.parser(_storage.filesystem("server", "데이터.csv"))
+            `
+        }
+    ]}
+/>
+
+### 행
+
+이제 CSV 파일의 각 행을 나타내는 `Apache Commons CSV`의 `CSVRecord`를 반복할 수 있습니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const csv_레코드 of csv_파서) {
+                    const csv_열_1 = csv_레코드.get(0)
+                    const csv_열_2 = csv_레코드.get(1)
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for csv_레코드 in csv_파서:
+                    csv_열_1 = csv_레코드.get(0)
+                    csv_열_2 = csv_레코드.get(1)
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                csv_파서.each do |csv_레코드|
+                    csv_열_1 = csv_레코드.get(0)
+                    csv_열_2 = csv_레코드.get(1)
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                for (csv_레코드 in csv_파서) {
+                    val csv_열_1 = csv_레코드.get(0)
+                    val csv_열_2 = csv_레코드.get(1)
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (csv_레코드 in csv_파서) {
+                    def csv_열_1 = csv_레코드.get(0)
+                    def csv_열_2 = csv_레코드.get(1)
+                }
+            `
+        },
+    ]}
+/>
+
+또는 `Apache Commons CSV`의 `getRecord` 메서드로 각 행을 가져올 수 있습니다.
+이 예제에서 첫 번째 `get`은 첫 번째 행을 가져옵니다. 두 번째 `get`은 해당 행의 첫 번째 필드/값을 가져옵니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csv_파서.getRecords().get(0).get(0)
+            `
+        }
+    ]}
+/>
+
+### 닫기
+
+마지막에는 `CSVParser`를 닫아야 합니다:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                csv_파서.close()
+            `
+        }
+    ]}
+/>

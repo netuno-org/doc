@@ -1,0 +1,662 @@
+---
+sidebar_position: 3
+id: app-create
+title: Creare aplicație
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+Acest ghid oferă o prezentare generală a configurării inițiale, abordând frontendul, baza de date și serviciul API.
+Vom crea o aplicație fullstack nouă rapid și practic.
+
+## Introducere
+
+Deși platforma este poliglotă și suportă diverse limbaje de programare, în acest tutorial ne vom concentra exclusiv pe utilizarea JavaScript. Drept urmare, vom crea o aplicație practică formată dintr-un formular afișat într-o fereastră modală (pop-up), cu funcționalitatea de exportare a datelor în PDF.
+
+#### Cerințe preliminare
+
+Înainte de a începe, asigurați-vă că aveți:
+
+- Platforma Netuno deja instalată pe mașina dvs. Dacă aveți nelămuriri la această etapă, consultați ghidul [Instalarea platformei](/docs/get-started/installation).
+
+- Acces la terminal sau la promptul de comandă al mediului de dezvoltare.
+
+## Crearea unei aplicații noi
+
+Urmați instrucțiunile de mai jos pentru a inițializa noua aplicație:
+
+Deschideți terminalul și navigați până la folderul rădăcină în care a fost instalat Netuno.
+
+Executați comanda de creare a aplicației:
+
+```shell
+./netuno app
+```
+
+### Creare cu parametru
+
+Este posibil să definiți numele aplicației direct la execuția comenzii, de exemplu:
+
+```shell
+./netuno app name=aplicatia_mea
+```
+
+:::info Bune practici de denumire
+Când definiți numele aplicației, evitați spațiile, diacriticele sau caracterele speciale. Preferați literele mici separate prin cratime sau underscore (de exemplu: **app-vanzari** sau **gestiune_rh**) pentru a menține compatibilitatea cu URL-urile și folderele sistemului.
+:::
+
+## Configurare inițială
+
+Asistentul de linie de comandă va pune câteva întrebări pentru a vă configura proiectul. Furnizați:
+
+- **Numele aplicației**: Identificatorul proiectului dvs.
+- **Tipul bazei de date**: Sistemul de gestionare a bazei de date care va fi utilizat.
+- **Limba**: Limba implicită a interfeței aplicației dvs.
+
+:::tip Sfaturi și bune practici
+
+**Recomandare de bază de date pentru începători**
+
+În timpul pașilor, când vi se solicită tipul bazei de date, recomandăm să alegeți opțiunea **H2 Database**.
+
+H2 Database este o bază de date încorporată deja integrată în serverul Netuno. Marele avantaj este că nu necesită instalarea sau configurarea unor servere externe (precum PostgreSQL sau MySQL), făcând dezvoltarea inițială și testele mult mai practice și mai rapide.
+:::
+
+### Comanda pentru pornirea serverului
+
+După ce ați creat noua aplicație, porniți serverul platformei Netuno. Astfel, proiectul dvs. va fi accesibil în browser și pregătit pentru dezvoltare continuă.
+
+Executați comanda de mai jos în terminal și așteptați inițializarea.
+
+```shell
+./netuno server app=aplicatia_mea
+```
+
+Prin transmiterea parametrului **app=aplicatia_mea**, serverul înțelege că aceasta va fi aplicația implicită executată în această instanță. Odată ce serverul rulează, puteți începe să editați proiectul.
+
+Toate fișierele și codurile sursă ale aplicației dvs. sunt stocate și organizate în folderul `📂 apps/aplicatiamea`.
+
+:::info Credențiale de acces (Backoffice)
+La prima accesare a interfeței de administrare **Backoffice** a aplicației dvs., sistemul va solicita autentificare. Pentru mediile locale de dezvoltare, utilizați următoarele credențiale implicite:
+
+**Utilizator:** dev
+
+**Parolă:** dev
+
+*Recomandăm schimbarea acestor credențiale atunci când mutați aplicația într-un mediu de producție.*
+:::
+
+
+### Editor de cod
+
+Pentru a garanta cea mai bună experiență de dezvoltare, sugerăm utilizarea unor editoare de cod moderne, ușoare și cu un ecosistem bun de extensii.
+
+Dacă nu aveți încă un editor preferat, recomandăm următoarele opțiuni gratuite și utilizate pe scară largă de comunitate:
+
+- VS Codium: <a href="https://vscodium.com/" target="_blank">vscodium.com</a>
+- VS Code: <a href="https://vscodium.com/" target="_blank">code.visualstudio.com</a>
+- WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">jetbrains.com/webstorm</a>
+
+> Notă: Dacă preferați instrumente mai robuste și nu vă deranjează să investiți în licențe, WebStorm de la JetBrains este o opțiune premium excelentă.
+
+Deschideți folderul aplicației în editorul dvs.:
+
+- `📂 apps/aplicatia_mea`
+
+Toate fișierele aplicației sunt stocate și organizate în acest folder. Întreaga dezvoltare, crearea rutelor, logica bazei de date și interfețele vizuale vor avea loc în acest folder.
+
+:::info Înțelegerea arhitecturii
+Pentru a ști exact unde să creați fiecare tip de fișier și cum organizează Netuno backendul și frontendul, recomandăm citirea documentației detaliate despre structura de foldere a aplicației:
+
+**Consultați ghidul: [Folderele aplicației](/docs/category/app-structure)**
+:::
+
+### Rezumatul etapelor
+
+Cu cunoștințele inițiale despre Netuno consolidate, vom aplica aceste concepte în practică, creând o funcționalitate completă, de la început până la sfârșit.
+
+Obiectivul practic este să adăugăm două componente interactive noi în interfață:
+
+* Un buton responsabil cu încărcarea și afișarea formularului de clienți într-o fereastră flotantă (Modal).
+* Un buton dedicat generării și exportării listei de clienți înregistrați într-un fișier PDF.
+
+Pentru a obține acest rezultat cu organizare și claritate, am împărțit dezvoltarea într-o secvență logică de etape. Vom urma acest scenariu:
+
+- **Maparea interfeței**: Analizați structura de foldere a aplicației pentru a localiza unde este definit HTML-ul principal al dashboardului.
+
+- **Integrare cu React**: Configurați și adăugați baza celor două butoane noi folosind frameworkul React în frontend.
+
+- **Logica modalului**: Construiți și programați comportamentul butonului pentru a deschide corect formularul de clienți.
+
+- **Interfața de export**: Construiți și poziționați butonul care va declanșa descărcarea fișierului PDF în interfață.
+
+- **Dezvoltarea serviciului (API)**: Programați backendul creând serviciul care va citi datele și va genera dinamic fișierul PDF conținând lista de clienți.
+
+Să începem!
+
+## Șablon de dashboard
+
+Navegați până la folderul `server/templates` și deschideți fișierul responsabil cu furnizarea HTML-ului ecranului de dashboard.
+
+```plaintext
+server/templates/dashboard.html
+```
+
+Explorând codul fișierului dashboard.html, derulați până la sfârșitul paginii. Veți găsi un element `<div>` izolat. Exact în acest punct platforma Netuno „injectează” și inițializează întreaga interfață interactivă construită în React.
+
+```html title="server/templates/dashboard.html"
+...
+<div id="app-dashboard"></div>
+```
+
+Deși scheletul HTML rămâne în folderul server/templates, dezvoltarea reală a interfeței și logica vizuală nu au loc acolo.
+
+Pentru a modifica comportamentul dashboardului sau a adăuga componente noi cu React, trebuie să accesați folderul dedicat dezvoltării frontendului.
+
+În acest folder `📂 ui/` veți găsi componentele dashboardului și veți putea dezvolta noile funcționalități vizuale ale aplicației dvs.
+
+
+## Crearea formularului
+
+În această etapă, vom crea structura de bază de date necesară pentru acest tutorial: un formular numit **Client** care conține un câmp text numit **Nume**.
+
+* În Backoffice, accesați zona de dezvoltare făcând clic pe butonul **Construire** (colțul din dreapta sus).
+* În meniul lateral, navigați la **Gestiune > Formulare** și creați noul formular cu **Titlu:** Client.
+* Faceți clic pe **Salvare**.
+
+Numele tabelului va fi completat automat cu **client** (păstrați literele mici, conform recomandării pentru bazele de date).
+
+:::info Consultați ghidul
+Dacă aveți nelămuriri despre configurațiile avansate ale acestui ecran, consultați documentația completă în **[Formulare](/docs/academy/ui/forms)**.
+:::
+
+## Crearea câmpului
+Cu formularul creat, acesta va apărea în meniul lateral stâng la categoria **Câmpuri**.
+
+* Faceți clic pe **Client** pentru a adăuga o nouă coloană:
+* Introduceți textul **„Nume”** în Titlul câmpului.
+* Selectați tipul de date **„text”** în câmpul **Tip**.
+* Bifați opțiunile **Permite filtrare** (pentru a activa căutarea) și **Afișează în rezultat** (pentru a apărea în tabel).
+* Faceți clic pe **Salvare**.
+
+
+:::info Consultați ghidul
+Pentru a înțelege toate tipurile de date disponibile și proprietățile lor, accesați documentația detaliată în **[Câmpuri](/docs/academy/ui/fields)**.
+:::
+
+#### Inserarea datelor de test
+Pentru a putea testa exportarea în PDF în etapele următoare, avem nevoie de date reale în sistem.
+
+* Faceți clic pe butonul **Vizualizare** (colțul din dreapta sus) pentru a reveni la Backoffice-ul de utilizare a aplicației.
+* Accesați meniul **Client** creat recent în lateral.
+* Folosiți butonul **+ Adăugare** pentru a înregistra câțiva clienți de test în sistem.
+* Faceți clic pe **Salvare**.
+
+
+## Consultarea bazei de date
+
+Netuno oferă un instrument integrat care permite executarea comenzilor SQL direct în baza de date a aplicației dvs. Devenind esențial pentru efectuarea de interogări rapide, validarea informațiilor sau manipularea datelor sistemului într-un mod agil.
+
+Pentru a accesa interfața de interogări și a executa comenzile, urmați pașii de mai jos:
+
+* În interfața principală, accesați zona de dezvoltare făcând clic pe butonul **Construire**.
+* În meniul lateral de navigare, localizați secțiunea **Gestiune**.
+* Faceți clic pe opțiunea **Query** pentru a deschide consola bazei de date.
+* În editorul de text care va apărea pe ecran, tastați comanda SQL pe care doriți să o executați.
+* Confirmați execuția comenzii.
+
+Executați comanda de mai jos pentru a interoga clienții înregistrați:
+
+```sql
+SELECT * FROM client
+```
+
+Când terminați interogările și doriți să reveniți la interfața de utilizator a sistemului (backoffice), este suficient să faceți clic pe butonul **Vizualizare**.
+
+## Adăugarea butoanelor cu React
+
+În această etapă, vom configura fișierul principal al panoului **dashboard** pentru a afișa două butoane noi.
+
+În arhitectura interfeței, folosim conceptul de **Containers** pentru a defini zone extinse ale sistemului, care cuprind funcționalități mai mari și grupează mai multe componente mai mici.
+
+- În editorul dvs. de cod, navigați la folderul de containere din `📂 ui/src/containers`.
+
+- Localizați și deschideți fișierul principal al dashboardului: `📂 ContainerPanou/index.jsx`.
+
+- Introduceți codul de import și randare a componentelor conform exemplului de mai jos.
+
+```javascript title="ui/src/containers/ContainerPanou/index.jsx"
+import { Space } from 'antd';
+
+import ButonClientModal from '../../components/ButonClientModal';
+import ButonPDF from '../../components/ButonPDF';
+
+import "./index.less";
+
+function ContainerPanou() {
+    return (
+        <div className="panoul-meu">
+            <Space>
+                <ButonClientModal />
+                <ButonPDF />
+            </Space>
+        </div>
+    );
+}
+
+export default ContainerPanou;
+```
+
+Observați că aceste fișiere de butoane nu există încă fizic în proiectul dvs. Deoarece sunt componente mai mici și reutilizabile, le vom crea în folderul de componente dedicate.
+
+:::tip Organizarea arhitecturii
+Păstrați întotdeauna separarea între **Containers** (zone cu scop larg, precum pagini întregi sau dashboarduri) și **Components** (elemente izolate de interfață, precum butoane și modale). Astfel, codul dvs. în Netuno devine mult mai curat, mai ușor de întreținut și scalabil.
+:::
+
+### Buton pentru formular
+
+Accesați folderul `ui/src/components/` și creați un folder nou numit `ButonClientModal`.
+
+În folderul **ButonClientModal**, creați fișierul principal al componentei numit `index.jsx`.
+
+`📂 ui/src/components/ButonClientModal/index.jsx`
+
+Deschideți fișierul și introduceți codul de mai jos:
+
+```javascript title="ui/src/components/ButonClientModal/index.jsx"
+import { Button } from 'antd';
+
+function ButonClientModal() {
+    const onClick = () => {
+        netuno.modal.create({
+            name: 'client',
+            callback: function (fereastra) {
+                let formular = fereastra.find('[netuno-form]');
+
+                formular.on('netuno:new', () => {
+                    console.log('Se creează un Client nou.');
+                });
+
+                formular.on('netuno:save', () => {
+                    netuno.modal.hide(fereastra)
+                    console.log('S-a salvat un Client.');
+                });
+
+                formular.on('netuno:delete', () => {
+                    netuno.modal.hide(fereastra)
+                    console.log('S-a eliminat un Client');
+                });
+
+                formular.on('netuno:back', () => {
+                    console.log('S-a făcut clic pe înapoi');
+                });
+
+                netuno.loadForm(formular);
+                netuno.modal.show(fereastra);
+            }
+        });
+    };
+    return (
+        <div>
+            <Button type="primary" onClick={ onClick }>
+                Deschide formularul Clientului
+            </Button>
+        </div>
+    );
+}
+
+export default ButonClientModal;
+```
+
+#### Înțelegerea codului
+Această componentă folosește instrumentele globale de interfață ale Netuno:
+
+- **netuno.modal.create()**: Această metodă este responsabilă cu instanțierea ferestrei modale pe ecran și cu asocierea formularului dorit acesteia (în acest caz, formularul numit client).
+
+- **Evenimente de formular (form.on)**: Blocul callback ne permite să „ascultăm” acțiunile utilizatorului. Putem declanșa acțiuni personalizate când utilizatorul creează o înregistrare (netuno:new), salvează (netuno:save), șterge (netuno:delete) sau face clic pe înapoi (netuno:back).
+
+- **netuno.modal.hide() / show()**: Metode folosite pentru a ascunde modalul după o acțiune reușită sau pentru a-l afișa imediat ce formularul este încărcat.
+
+:::info Integrare finalizată
+Acum că componenta **ButonClientModal** a fost creată cu succes, importul pe care l-am făcut anterior în **ContainerPanou** va funcționa fără erori, iar butonul ar trebui să fie deja randat pe ecran!
+:::
+
+### Buton pentru exportul în PDF
+
+În această etapă, vom crea al doilea buton al dashboardului: Butonul pentru exportul în PDF.
+
+Funcția principală a acestei componente în interfață este să acționeze ca un declanșator, adică, atunci când este apăsat, va face o cerere către un serviciu de backend, responsabil cu procesarea datelor sistemului și generarea fișierului PDF conținând lista de clienți înregistrați.
+
+- Accesați folderul `ui/src/components/` și creați un folder nou numit **ButonPDF**.
+
+- Creați un fișier numit **index.jsx** în folder.
+
+`ui/src/components/ButonPDF/index.jsx`
+
+Deschideți fișierul și introduceți codul de mai jos:
+
+```javascript title="ui/src/components/ButonPDF/index.jsx"
+import { Button } from 'antd';
+
+function ButonPDF() {
+    return (
+        <div>
+            <Button
+                type="primary"
+                href="/services/client/exporta-pdf"
+                target="blank">
+                Exportă PDF
+            </Button>
+        </div>
+    );
+}
+
+export default ButonPDF;
+```
+
+Odată cu crearea componentei ButonPDF, ambele butoane declarate în ContainerPanou sunt gata.
+
+:::tip Pașii următori
+Structura vizuală și componentele sunt finalizate. Compilați frontendul pentru a testa randarea interfeței.
+
+Construirea serviciului de backend care va genera efectiv PDF-ul va fi abordată în etapa următoare.
+:::
+
+## Compilarea frontendului
+
+Browserele de internet nu înțeleg nativ coduri scrise în React, fișiere `.jsx` sau `.tsx`, și preprocesoare CSS precum `.less`. Pentru ca interfața dvs. să funcționeze corect, este necesar un proces de compilare (build). Acest proces traduce, împachetează și optimizează tot codul dvs. în fișiere statice finale (JavaScript și CSS standard) pe care browserul le poate procesa cu eficiență maximă.
+
+#### Cerințe preliminare
+
+Înainte de a începe compilarea, asigurați-vă că:
+
+- Aveți terminalul sau promptul de comandă deschis în mediul dvs. de dezvoltare.
+
+- Managerul de pachete `Bun` este instalat corect în sistemul dvs.
+
+## Exemple de compilare
+
+Netuno pune la dispoziție comenzi diferite în funcție de etapa dezvoltării. Din folderul rădăcină al Netuno, navigați la folderul `ui` al aplicației dvs.
+
+Executați comenzile în folderul interfeței aplicației dvs.: `📂 apps/aplicatiamea/ui`
+
+### Compilare de producție
+
+Realizează compilarea completă și optimizată a fișierelor. Este comanda ideală pentru când finalizați dezvoltarea unui ecran sau a unei componente și doriți să generați fișierele finale, ușoare și cu performanță mai bună.
+
+```bash
+bun run build
+```
+
+### Compilare de dezvoltare
+
+Comanda **watch** realizează o compilare rapidă și rămâne să monitorizeze folderul. De fiecare dată când salvați un fișier în editor, terminalul execută compilarea automat.
+
+```bash
+bun run watch
+```
+Indiferent de comanda utilizată **build** sau **watch**, modificările nu apar instantaneu pe ecranul utilizatorului. Reîmprospătați pagina backoffice-ului în browser pentru a încărca noile fișiere generate.
+
+:::tip Monitorizarea erorilor și depanare
+În timpul dezvoltării, erorile pot apărea în două etape diferite. Aflați unde să le căutați:
+
+- **Erori de compilare**: Eșecurile de sintaxă în codul React sau variabilele nedeclarate vor fi afișate direct în terminalul dvs., unde rulează comanda **bun**.
+
+- **Erori de execuție**: Eșecurile care apar în timpul utilizării aplicației vor fi afișate în consola browserului. Nu uitați să inspectați întotdeauna pagina pentru a verifica dacă există vreun avertisment sau eroare.
+:::
+
+### Compilare integrată
+
+Funcția de compilare integrată permite executarea automată a comenzilor din terminal odată cu pornirea serverului. Aceasta optimizează fluxul de lucru, consolidând toate logurile și monitorizările într-un singur terminal central.
+
+Pentru a activa compilarea integrată, este necesar să modificați configurațiile de dezvoltare ale aplicației dvs.:
+
+- Accesați folderul rădăcină al aplicației dvs.
+
+- Deschideți fișierul de configurare de dezvoltare: `_development.json`.
+
+- Localizați blocul de cod referitor la „**commands**”.
+
+- Schimbați valoarea proprietății „enabled” din **false** în **true**.
+
+- Salvați fișierul.
+
+Fișierul dvs. `_development.json` ar trebui să aibă o structură similară cu aceasta:
+
+```json title="config/_development.json"
+  ...
+  "commands": [{
+    "command": "bun run watch",
+    "enabled": true,
+    "install": "bun install",
+    "path": "ui"
+  }],
+  ...
+```
+
+Pentru ca Netuno să citească fișierul actualizat și să aplice noua configurație, este necesar să reporniți serverul:
+
+- Mergeți la terminalul unde rulează serverul Netuno.
+
+- Încheiați procesul apăsând simultan tastele CTRL + C.
+
+- Porniți din nou serverul, indicând numele aplicației dvs.:
+
+```shell
+./netuno server app=aplicatiamea
+```
+
+:::tip Terminal unic
+După repornirea serverului, observați logurile din terminal. Veți observa că Netuno execută acum automat comenzile de compilare a frontendului **bun run watch** în fundal. De acum înainte, totul funcționează integrat în aceeași fereastră.
+:::
+
+## Serviciu API pentru generarea PDF
+
+În etapa anterioară, am configurat butonul **Exportă PDF** în frontend cu atributul „**href**” îndreptat către adresa `services/client/exporta-pdf`. Totuși, dacă faceți clic pe el acum, nu se va întâmpla nimic. Acest lucru se datorează faptului că serviciul API responsabil cu generarea fișierului nu există încă.
+
+Întreaga dezvoltare a API-ului are loc în folderul `📂 server`.
+În această secțiune, vom crea scriptul care preia înregistrările din baza de date și construiește vizual documentul PDF.
+
+#### Cerințe preliminare
+
+- Să fi creat componenta ButonPDF în frontend, îndreptată către URL-ul corect.
+- Să aveți serverul Netuno în execuție.
+
+
+Netuno rutează automat URL-urile API-ului dvs. pe baza structurii de foldere din **server/services/**. Pentru a crea serviciul, urmați pașii:
+
+- Navigați la folderul de servicii al backendului: `server/services/`. Creați un folder numit **client**.
+
+- În acest folder, creați un fișier numit `exporta-pdf.js`.
+
+> Netuno este poliglot. Vom folosi JavaScript în acest exemplu; utilizați extensia corespunzătoare limbajului preferat.
+
+Deschideți fișierul și introduceți codul de mai jos pentru a genera structura PDF-ului dvs.:
+
+<PolyglotPath files={[
+    'server/services/client/exporta-pdf'
+]} />
+
+<PolyglotCode
+    file="server/services/client/exporta-pdf"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _header.contentType("pdf")
+
+                const documentPdf = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                documentPdf.add(
+                    _pdf.paragraph("Lista clienților:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                const dbClienti = _db.form("client").all()
+
+                for (const dbClient of dbClienti) {
+                    documentPdf.add(
+                        _pdf.paragraph(dbClient.getString("nume"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                documentPdf.close()
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                _header.contentType("pdf")
+
+                documentPdf = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                documentPdf.add(
+                    _pdf.paragraph("Lista clienților:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                dbClienti = _db.form("client").all()
+
+                for dbClient in dbClienti:
+                    documentPdf.add(
+                        _pdf.paragraph(dbClient.getString("nume"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+
+                documentPdf.close()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                _header.contentType("pdf")
+
+                documentPdf = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                documentPdf.add(
+                    _pdf.paragraph("Lista clienților:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                dbClienti = _db.form("client").all()
+
+                dbClienti.each do |dbClient|
+                    documentPdf.add(
+                        _pdf.paragraph(dbClient.getString("nume"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                end
+
+                documentPdf.close()
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                _header.contentType("pdf")
+
+                val documentPdf = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                documentPdf.add(
+                    _pdf.paragraph("Lista clienților:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                val dbClienti = _db.form("client").all()
+
+                dbClienti.forEach {
+                    documentPdf.add(
+                        _pdf.paragraph(it.getString("nume"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                documentPdf.close()
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                _header.contentType("pdf")
+
+                def documentPdf = _pdf.newDocument(_pdf.pageSize("A5"))
+
+                documentPdf.add(
+                    _pdf.paragraph("Lista clienților:")
+                        .setFontSize(16)
+                        .setFontColor(_pdf.color("#1abc9c"))
+                )
+
+                def dbClienti = _db.form("client").all()
+
+                for (dbClient in dbClienti) {
+                    documentPdf.add(
+                        _pdf.paragraph(dbClient.getString("nume"))
+                            .setFontSize(12)
+                            .setFontColor(_pdf.color("#748dae"))
+                    )
+                }
+
+                documentPdf.close()
+            `
+        },
+    ]}
+/>
+
+
+#### Înțelegerea codului
+
+- **_header.contentType("pdf")**: Anunță browserul că răspunsul acestei cereri nu este un text sau JSON obișnuit, ci un fișier PDF.
+
+- **_pdf**: Este resursa nativă a Netuno pentru manipularea PDF-urilor. Cu ea, definim dimensiunea paginii (A5), creăm paragrafe, ajustăm dimensiunile fontului (setFontSize) și culorile (setFontColor).
+
+- **_db.form("client").all()**: Interoghează baza de date și returnează toate înregistrările salvate în formularul „client”. Bucla de repetiție (for) parcurge fiecare dintre acești clienți și extrage informația din câmpul „nume” pentru a o imprima în document.
+
+- **documentPdf.close()**: Finalizează construcția documentului și îl trimite ca răspuns.
+
+#### Validare și teste
+
+Nu este necesar să faceți clic pe butonul din dashboard de fiecare dată când doriți să testați serviciul. Deoarece este o cerere simplă (GET), puteți valida execuția accesând URL-ul API-ului direct din browser.
+
+Pentru acest exemplu, accesați următoarea adresă:
+http://localhost:9000/services/client/exporta-pdf
+
+Dacă fișierul PDF este generat și afișat pe ecran conținând lista de clienți, serviciul funcționează perfect! În consecință, butonul Exportă PDF din dashboardul dvs. va funcționa automat.
+
+:::tip Urmărirea erorilor în backend
+Dacă pagina rămâne goală sau returnează un mesaj de eroare la accesarea URL-ului, verificați imediat terminalul unde rulează serverul Netuno. Spre deosebire de frontend, ale cărui erori apar în consola browserului, orice eșec de execuție în scripturile din folderul server va fi afișat detaliat în terminalul serverului backend.
+:::
+
+## Concluzie
+
+În acest tutorial, ați parcurs o călătorie practică de dezvoltare fullstack folosind Netuno.
+
+Obiectivul principal a fost să demonstreze cum platforma integrează construcția interfețelor vizuale cu robustețea serverului, concentrându-se întotdeauna pe productivitate ridicată.
+
+Recapitulând etapele finalizate:
+
+- **Dezvoltarea frontendului**: ați personalizat dashboardul în React, creând componente de interfață și butoane interactive în mod modular.
+
+- **Gestiunea și structura datelor**: ați văzut cât de rapid este să creați formulare și câmpuri în panou pentru a înregistra și manipula informații fără a scrie rutine complexe de persistență.
+
+- **Interogări directe**: Ați utilizat funcția Query pentru a executa comenzi SQL rapid, testând baza de date.
+
+- **Crearea API-urilor în backend**: Ați dezvoltat un serviciu pentru generarea PDF și ați observat unul dintre marile avantaje ale Netuno: actualizarea la cald (hot-reload). Nu trebuie să reporniți serverul la fiecare modificare a codului backend, ceea ce accelerează enorm programarea.
+
+- **Mediu optimizat**: Ați configurat compilarea integrată, centralizând procesele frontendului și backendului într-un singur terminal pentru a vă menține focusul și a evita distragerile.
+
+Platforma a fost proiectată din esență pentru a optimiza și accelera dezvoltarea de software. Acum că înțelegeți fluxul de bază de integrare între low-code și cod personalizat, sunteți gata să construiți aplicații mult mai complexe și scalabile.
+
+Continuați să explorați următoarele secțiuni ale documentației pentru a stăpâni noi funcționalități.
+
+Dezvoltarea devine mult mai ușoară când faceți parte dintr-o comunitate activă. Accesați linkurile rețelelor sociale din subsolul acestei pagini.

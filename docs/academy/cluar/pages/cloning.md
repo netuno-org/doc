@@ -7,21 +7,21 @@ sidebar_label: Clone Page
 
 ## What it is
 
-Starting from an existing page, it's possible to create a new one through the **Clone** option. In the cloning form, you need to specify:
+Starting from an existing page, you can create a new one using the **Clone** option. In the clone form, you must specify:
 
-- **Title** and **Link** for the new page.
-- **Source version** — which version of the original page the content will be copied from.
+- The **Title** and **Link** of the new page.
+- **Source version** — from which version of the original page the content will be copied.
 - **Language** — optionally different from the original page's language.
-- Whether the new page should be **published** right away.
+- Whether the new page should be **published** immediately.
 
-Upon confirming, CLUAR duplicates the entire component structure (Banner, Content, Listing, Slider, Functionality, with their respective actions) from that version into the new page.
+When you confirm, CLUAR duplicates the entire component structure (Banner, Content, Listing, Slider, Feature, with their respective actions) from that version to the new page.
 
-## What it's for
+## Purpose
 
-This is, in practice, how a page's "translation" is created: instead of building a new page from scratch, you pick the page that already exists in another language, clone it to the new language, and then adjust the text. It's also useful for quickly creating similar pages within the same language (e.g., several campaign pages with the same structure).
+This is how, in practice, a page "translation" is created: instead of building a new page from scratch, you choose the existing page in another language, clone it to the new language, and then adjust the texts. It is also useful for quickly creating similar pages within the same language (e.g., multiple campaign pages with the same structure).
 
 :::info Content translation
-Cloning duplicates the page's **structure** (the same components, in the same order), but it **doesn't translate the text** — each component's fields (Banner, Content, Listing, Slider, Functionality) keep the original content, and you need to go into each one and translate it manually. Automatic content translation on clone is already planned, but hasn't been developed yet.
+Cloning duplicates the page's **structure** (the same components, in the same order), but it **does not translate the text** — each component's fields (Banner, Content, Listing, Slider, Feature) keep the original content, and you must open each one and translate it manually. Automatic content translation when cloning is already planned, but it has not yet been developed.
 :::
 
 ## Next step

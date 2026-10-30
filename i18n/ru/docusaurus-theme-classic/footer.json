@@ -1,0 +1,58 @@
+{
+  "link.title.Open Source": {
+    "message": "Открытый исходный код",
+    "description": "Заголовок колонки ссылок в подвале сайта с заголовком «Открытый исходный код»"
+  },
+  "link.title.Community": {
+    "message": "Сообщество",
+    "description": "Заголовок колонки ссылок в подвале сайта с заголовком «Сообщество»"
+  },
+  "link.title.More": {
+    "message": "Ещё",
+    "description": "Заголовок колонки ссылок в подвале сайта с заголовком «Ещё»"
+  },
+  "link.item.label.Installation": {
+    "message": "Установка",
+    "description": "Метка ссылки в подвале сайта с меткой «Установка», ведущей на /docs/get-started/installation"
+  },
+  "link.item.label.Releases": {
+    "message": "Релизы",
+    "description": "Метка ссылки в подвале сайта с меткой «Релизы», ведущей на https://github.com/netuno-org/platform/releases"
+  },
+  "link.item.label.Documentation": {
+    "message": "Документация",
+    "description": "Метка ссылки в подвале сайта с меткой «Документация», ведущей на https://github.com/netuno-org/doc"
+  },
+  "link.item.label.YouTube": {
+    "message": "YouTube",
+    "description": "Метка ссылки в подвале сайта с меткой «YouTube», ведущей на https://www.youtube.com/channel/UCYY1Nz6T2NJtP29vba2fqkg"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "Метка ссылки в подвале сайта с меткой «Discord», ведущей на https://discord.gg/4sfXG6YWFu"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "Метка ссылки в подвале сайта с меткой «LinkedIn», ведущей на https://www.linkedin.com/company/netuno-org/"
+  },
+  "link.item.label.Instagram": {
+    "message": "Instagram",
+    "description": "Метка ссылки в подвале сайта с меткой «Instagram», ведущей на https://www.instagram.com/netuno_org/"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Метка ссылки в подвале сайта с меткой «GitHub», ведущей на https://github.com/netuno-org/"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "Метка ссылки в подвале сайта с меткой «Twitter», ведущей на https://twitter.com/netuno_org"
+  },
+  "link.item.label.Facebook": {
+    "message": "Facebook",
+    "description": "Метка ссылки в подвале сайта с меткой «Facebook», ведущей на https://www.facebook.com/netuno.org/"
+  },
+  "copyright": {
+    "message": "Авторские права © 2025 <a target=\"_blank\" href=\"https://www.sitana.pt/pt\">Sitana</a>",
+    "description": "Уведомление об авторских правах в подвале сайта"
+  }
+}

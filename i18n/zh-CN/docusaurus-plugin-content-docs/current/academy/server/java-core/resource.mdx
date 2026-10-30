@@ -1,0 +1,185 @@
+---
+id: resource 
+title: 低代码多语言资源 
+sidebar_label: 资源 
+sidebar_position: 5
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+在本教程中，我们将为 Netuno 创建一个原生资源。这意味着我们将创建一个 Java 类，它位于 Netuno 的基础目录中，并且可以被 `apps` 文件夹中的任何应用通过 `_foo.methodName(ars)` 语法使用。
+
+按照前面的教程，我们要创建的示例是资源 `_jisuan`，它是一个用于执行简单算术运算的示例资源。
+
+首先，需要创建项目的文件夹结构。在本示例中，我们假设项目将创建在名为 `Jisuan` 的文件夹中。因此，需要创建与包名（在本示例中为 `org.netuno.addon.jisuan`）对应的文件夹结构。因此，我们的文件夹结构将是：
+
+- `Jisuan/src/main/java/org/netuno/addon/jisuan/resource/`
+
+在该结构中，我们将创建一个名为 `JisuanResource` 的 Java 类，用于定义我们的自定义原生资源。
+
+- ` Jisuan/src/main/java/org/netuno/addon/jisuan/resource/JisuanResource.java`
+
+那么类中定义的包将是：
+
+```java
+package org.netuno.addon.jisuan.resource;
+```
+
+为了让该类定义自定义原生资源，需要使用注解 `org.netuno.tritao.ResourceBase` 对该类进行标注。`name` 参数将是资源名称，访问时需要在名称前加下划线（`_`）（在我们的示例中为 `_jisuan`）。创建该资源最简单的方法是继承 `org.netuno.tritao.resource.ResourceBase` 类：
+
+```java
+package org.netuno.addon.jisuan.resource;
+
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "jisuan")
+public class JisuanResource extends ResourceBase {
+    // ...
+}
+```
+
+继承 `ResourceBase` 类可以让我们无需手动初始化资源，只需使用正确的参数调用 `super`：
+
+```java
+package org.netuno.addon.jisuan.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "jisuan")
+public class JisuanResource extends ResourceBase {
+    // ...
+    public JisuanResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+}
+```
+
+`init` 函数是必需的，在其中我们将通过父类的 getter 调用我们类的构造函数来初始化资源：
+
+```java
+package org.netuno.addon.jisuan.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "jisuan")
+public class JisuanResource extends ResourceBase {
+    // ...
+    public JisuanResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public JisuanResource init() {
+        return new JisuanResource(getProteu(), getHili());
+    }
+}
+```
+
+之后，我们将定义自己的字段和函数：
+
+```java
+package org.netuno.addon.jisuan.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "jisuan")
+public class JisuanResource extends ResourceBase {
+    public double value = 0;
+
+    public JisuanResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public JisuanResource init() {
+        return new JisuanResource(getProteu(), getHili());
+    }
+
+    public JisuanResource set(double v) {
+        value = v;
+        return this;
+    }
+
+    public JisuanResource plus(double v) {
+        value += v;
+        return this;
+    }
+
+    public JisuanResource minus(double v) {
+        value -= v;
+        return this;
+    }
+
+    public double get() {
+        return value;
+    }
+}
+```
+
+现在只需编译该类，并确保 `JisuanResource.class` 文件位于以下文件夹中：
+
+- `netuno/core/web/WEB-INF/classes/org/netuno/addon/jisuan/resource/`
+
+或者生成 JAR 文件，并确保它位于以下文件夹中：
+
+- `netuno/lib/`
+
+我们来创建一个测试应用来使用该资源：
+
+```bash
+./netuno app name=jisuan
+```
+
+我们还要在该应用中创建一个服务来使用该资源。
+在示例中，我们将创建文件 `netuno/apps/jisuan/server/services/jisuan-test.js`：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _jisuan.set(10);
+
+                _jisuan.plus(120);
+
+                _out.println(_jisuan.get());
+            `
+        },
+    ]}
+/>
+
+启动我们的应用：
+
+```bash
+./netuno server app=jisuan
+```
+
+现在，当我们调用该服务时：
+
+- `http://localhost:9000/services/jisuan-test`
+
+它将返回数值 `130`。
+
+要在 Java 代码中使用资源，一些类（例如 `org.netuno.tritao.Web` 和 `org.netuno.tritao.event.EventBase`）提供了 `resource` 函数，用于初始化该资源。
+在希望使用 `jisuan` 资源的类中，请这样做：
+
+```java
+import org.netuno.addon.jisuan.resource.JisuanResource;
+
+// ...
+    JisuanResource jisuan = resource(JisuanResource.class);
+    jisuan.set(10);
+    jisuan.plus(120);
+    System.out.println(jisuan.get());
+// ...
+```
+
+你可以通过此[链接](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/resource)查看项目的完整文件。

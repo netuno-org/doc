@@ -1,0 +1,477 @@
+---
+id: ssh
+title: SSH 客户端
+sidebar_label: SSH 客户端
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+在服务器上执行命令并传输文件。
+
+## 简介
+
+Netuno 在其低代码框架中内置了 SSH 客户端，可用于连接服务器、执行命令、发送和接收文件、修改文件夹以及执行其他远程操作。
+
+它支持多个并发连接，并且还支持 SCP 和 SFTP。
+
+这得益于开源 Java 实现
+<a target="_blank" href="https://github.com/hierynomus/sshj/tree/master">SSHJ</a>，它使 Netuno
+能够通过 `_ssh` 资源向所有脚本语言提供这些功能。
+
+> 详细了解 Netuno 的 [SSH](/docs/library/resources/ssh) 资源。
+
+## 配置
+
+第一步是配置 Netuno 建立连接所用的 SSH 访问信息。
+
+在您正在开发的应用中，找到环境配置文件。在本示例中，
+我们将使用位于以下位置的开发配置文件：
+
+- `config/_development.json`
+
+检查其中是否已有 SSH 配置；如果没有，请在配置文件（JSON 格式）末尾
+添加 SSH 配置参数，例如：
+
+```json
+{
+  ...
+  "ssh": {
+    "default": {
+      "enabled": true,
+      "host": "my.server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+保存修改后，只需重启 Netuno 即可让配置修改生效。正如配置键名 `default` 所示，
+这些配置就是连接的默认配置。
+
+您可以在 JSON 中使用其他键添加更多 SSH 连接配置。
+
+要添加更多 SSH 连接配置，只需重复默认配置块，并把键
+`default` 换成您选择的另一个名称，例如：
+
+```json
+{
+  ...
+  "ssh": {
+    "default": {
+      "enabled": true,
+      "host": "my.server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    },
+    "other": {
+      "enabled": true,
+      "host": "my.other-server.net",
+      "port": 22,
+      "username": "root",
+      "password": "$eCr37"
+    }
+  },
+  ...
+}
+```
+
+上面的配置允许在使用以下代码时采用 `default` 账户：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const ssh = _ssh.init()
+            `
+        },
+    ]}
+/>
+
+要使用 `other` 配置，只需将该配置的键作为 `_ssh.init()` 函数的参数传入，
+如下所示：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshOther = _ssh.init("other")
+            `
+        },
+    ]}
+/>
+
+> 如果没有将配置名称作为参数传入，则会使用 `default` 账户的配置。
+
+## 连接
+
+在执行任何操作之前，必须先建立 SSH 连接：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                ssh.connect()
+            `
+        },
+    ]}
+/>
+
+## 命令
+
+要执行命令，必须先开启一个命令会话：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSession = ssh.initSession()
+            `
+        },
+    ]}
+/>
+
+执行命令时会返回一个对象，其中包含执行状态以及相应的数据输出
+（output），例如：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshCommandResult = sshSession.exec("ls -rato")
+                if (sshCommandResult.ok) {
+                    _out.println("执行成功：")
+                    _out.println(sshCommandResult.output())
+                } else {
+                    _out.println("命令执行失败：")
+                    _out.println(sshCommandResult.error())
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                sshCommandResult = sshSession.exec("ls -rato")
+                if sshCommandResult.ok:
+                    _out.println("执行成功：")
+                    _out.println(sshCommandResult.output())
+                else:
+                    _out.println("命令执行失败：")
+                    _out.println(sshCommandResult.error())
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                sshCommandResult = sshSession.exec("ls -rato")
+                if sshCommandResult.ok
+                    _out.println("执行成功：")
+                    _out.println(sshCommandResult.output())
+                else
+                    _out.println("命令执行失败：")
+                    _out.println(sshCommandResult.error())
+                end
+            `
+        },
+    ]}
+/>
+
+> 命令返回的对象是 [SSHExecResult](/docs/library/objects/SSHExecResult)。
+
+请记得始终关闭会话：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sshSession.close()
+            `
+        },
+    ]}
+/>
+
+## SCP
+
+通过 SCP 我们可以发送和接收文件。
+
+要从字符串创建文本文件并下载所创建文件的内容，请参见示例：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // 创建文本文件。
+                sshSCP.uploadText("hello.txt", "你好！这是我的内容……")
+                // 下载并打印文件内容。
+                _out.println(sshSCP.downloadText("hello.txt"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+要上传（upload）应用中已有的文件：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // 发送位于 storage/filesystem 中的文件。
+                sshSCP.upload("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // 发送位于应用根目录中的文件。
+                sshSCP.upload("document.pdf", _app.file("document.pdf"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+要从服务器下载（download）文件到应用：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sshSCP = ssh.initSCP()
+                // 将文件下载到 storage/filesystem。
+                sshSCP.download("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // 将文件下载到应用根目录。
+                sshSCP.download("document.pdf", _app.file("document.pdf"))
+                sshSCP.close()
+            `
+        },
+    ]}
+/>
+
+## SFTP
+
+SFTP 是一种传输和操作文件与文件夹的方式，它支持与 FTP 相同的功能，
+但通过 SSH 实现。
+
+要开启一个新的 SFTP 会话：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sftp = ssh.initSFTP()
+            `
+        },
+    ]}
+/>
+
+> 它会初始化 [SSHSFTP](/docs/library/objects/SSHSFTP) 对象，该对象即会话的客户端。
+
+远程创建新文件夹：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.createDirectory("path/new-folder")
+            `
+        },
+    ]}
+/>
+
+使用传入的文本内容创建或替换远程文件：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.uploadText("folder/file.txt", "我的内容！")
+            `
+        },
+    ]}
+/>
+
+获取远程文件的文本内容：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const remoteFileContent = sftp.downloadText("folder/file.txt"))
+                _out.println(remoteFileContent)
+            `
+        },
+    ]}
+/>
+
+永久删除远程文件：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.deleteFile("folder/file.txt")
+            `
+        },
+    ]}
+/>
+
+永久删除远程文件夹：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.deleteDirectory("folder")
+            `
+        },
+    ]}
+/>
+
+列出文件夹中的全部内容：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const i of sftp.list("path/folder")) {
+                    if (i.directory) {
+                        _out.print("文件夹：")
+                    } else if (i.regularFile) {
+                        _out.print("文件：")
+                    } else {
+                        _out.print("其他：")
+                    }
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for i in sftp.list("path/folder":
+                    if i.directory:
+                        _out.print("文件夹：")
+                    elif i.regularFile:
+                        _out.print("文件：")
+                    else:
+                        _out.print("其他：")
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                sftp.list("path/folder").each do |i|
+                    if i.directory
+                        _out.print("文件夹：")
+                    elsif i.regularFile
+                        _out.print("文件：")
+                    else
+                        _out.print("其他：")
+                    end
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                sftp.list("path/folder").forEach {
+                    if (it.directory) {
+                        _out.print("文件夹：")
+                    } else if (it.regularFile) {
+                        _out.print("文件：")
+                    } else {
+                        _out.print("其他：")
+                    }
+                    _out.println(it.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (i in sftp.list("path/folder")) {
+                    if (i.directory) {
+                        _out.print("文件夹：")
+                    } else if (i.regularFile) {
+                        _out.print("文件：")
+                    } else {
+                        _out.print("其他：")
+                    }
+                    _out.println(i.name)
+                    _out.println("<br/>")
+                }
+            `
+        },
+    ]}
+/>
+
+> 返回一个 [SSHFile](/docs/library/objects/SSHFile) 类型的对象列表。
+
+要上传（upload）应用中已有的文件：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 发送位于 storage/filesystem 中的文件。
+                sftp.upload("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // 发送位于应用根目录中的文件。
+                sftp.upload("document.pdf", _app.file("document.pdf"))
+            `
+        },
+    ]}
+/>
+
+要从服务器下载（download）文件到应用：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 将文件下载到 storage/filesystem。
+                sftp.download("spreadsheet.xlsx", _storage.filesystem("server", "spreadsheet.xlsx").file())
+                // 将文件下载到应用根目录。
+                sftp.download("document.pdf", _app.file("document.pdf"))
+            `
+        },
+    ]}
+/>
+
+请记得始终关闭 SFTP 会话：
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                sftp.close()
+            `
+        },
+    ]}
+/>

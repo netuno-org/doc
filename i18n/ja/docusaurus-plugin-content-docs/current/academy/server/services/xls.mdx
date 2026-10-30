@@ -1,0 +1,1002 @@
+---
+id: xls
+title: XLS - Excel
+sidebar_label: XLS - Excel
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+カスタム Excel ファイルを処理します。
+
+## はじめに
+
+Netuno は、LibreOffice、OpenOffice、Microsoft Office、Google Drive などと互換性のある EXCEL ファイルを、[XLS](/docs/library/resources/xls) 機能を通じて生成します。この機能により、Netuno がサポートするさまざまなプログラミング言語向けに [Apache POI](https://poi.apache.org/) を低コードで抽象化できます。
+
+XLSX、XLS、ODS のいずれのファイルも生成できます。
+
+Netuno に付属する **demo** アプリケーション（デモアプリケーション）には、さまざまな言語での実装例が多数含まれています。その中には、次の場所にある `export-excel` サービスを通じたスプレッドシートのエクスポート例もあります:
+
+<PolyglotPath files={[
+    `netuno/apps/demo/server/services/samples/%lang%/export-excel`
+]} />
+
+## 初期化
+
+XLS 機能を開始するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.create()
+            `
+        },
+    ]}
+/>
+
+空のワークシートを持つ、これから構築する新しいファイルのコンテキストを含むオブジェクトを作成します。
+
+## 書式設定
+
+表示形式のスタイル（日付、時刻、金額などの書式）の定義は、セルの値を定義する前に行う必要があります。セルの値を定義するときに、その書式スタイルを一緒に関連付けられるからです。
+
+そのため、`demo` アプリケーションに含まれる例で示されているように、書式設定はコードの冒頭で定義します。
+
+日付を書式設定するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleDate = excel.cellStyleFormat("dd/mm/yy")
+            `
+        },
+    ]}
+/>
+
+時刻を書式設定するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleTime = excel.cellStyleFormat("hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+日付と時刻を書式設定するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleDateTime = excel.cellStyleFormat("dd/mm/yyyy hh:mm:ss")
+            `
+        },
+    ]}
+/>
+
+金額を**ユーロ**で書式設定するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleMoneyEuro = excel.cellStyleFormat("€#,##0.00;\\-€#,##0.00")
+            `
+        },
+    ]}
+/>
+
+金額を**レアル**で書式設定するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleMoneyReal = excel.cellStyleFormat("R$#,##0.00;\\-R$#,##0.00")
+            `
+        },
+    ]}
+/>
+
+値を**パーセント**で書式設定するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const stylePercentage = excel.cellStyleFormat("0.00%")
+            `
+        },
+    ]}
+/>
+
+## 外観
+
+外観スタイル（色、フォント、罫線、配置などのセルの見た目）の定義は、セルの値を定義する前に行う必要があります。セルの値を定義するときに、その外観スタイルを一緒に関連付けられるからです。
+
+そのため、`demo` アプリケーションに含まれる例で示されているように、外観はコードの冒頭で定義します。
+
+色と配置を定義する例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleHeader = excel.cellStyle()
+                styleHeader.setFillPattern(_xls.fillPattern("solid-foreground"))
+                styleHeader.setFillBackgroundColor(excel.color("black"))
+                styleHeader.setAlignment(_xls.horizontalAlignment("center"))
+            `
+        },
+    ]}
+/>
+
+> <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Apache POI のスタイル</a> オブジェクトのすべてのメソッドに関するドキュメント。
+
+罫線スタイルの定義:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const styleData = excel.cellStyle()
+                styleData.setBorderBottom(_xls.borderStyle("thin"))
+                styleData.setBorderTop(_xls.borderStyle("thin"))
+                styleData.setBorderLeft(_xls.borderStyle("thin"))
+                styleData.setBorderRight(_xls.borderStyle("thin"))
+            `
+        },
+    ]}
+/>
+
+> <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCellStyle.html" target="_blank">Apache POI のスタイル</a> オブジェクトのすべてのメソッドに関するドキュメント。
+
+テキストの新しいフォントスタイルを作成し、既存のセルスタイルにフォント定義を関連付けます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fontTitle = excel.font()
+                fontTitle.setBold(true)
+                fontTitle.setFontHeightInPoints(14)
+                fontTitle.setColor(excel.color("yellow"))
+                // styleHeader のフォントを設定します
+                styleHeader.setFont(fontTitle)
+            `
+        },
+    ]}
+/>
+
+> <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFFont.html" target="_blank">Apache POI のフォント</a> オブジェクトのすべてのメソッドに関するドキュメント。
+
+## 画像
+
+アプリケーション内の `storage/samples/export-excel/logo.png` にある画像をシートに挿入するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _storage.filesystem("server", "samples/export-excel", "logo.png"),
+                    1, // 列番号
+                    1  // 行番号
+                ).resize(2.3)
+            `
+        },
+    ]}
+/>
+
+アプリケーション内の `public/images/logo.png` にある画像を挿入するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    _app.file("public/images/logo.png"),
+                    10, // 列番号
+                    1  // 行番号
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+> <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/ss/usermodel/Picture.html" target="_blank">Apache POI の画像</a> オブジェクトのすべてのメソッドに関するドキュメント。
+
+## セルの結合
+
+領域内のセルを結合するには、`mergedRegion` メソッドを使用します。
+
+パラメータの順序は次のとおりです:
+
+1. 開始行
+2. 開始列
+3. 終了行
+4. 終了列
+
+> 位置の数値参照は常に **0** から始まります。
+
+次の例では、行 3 の列 10 から列 15 までのすべてのセルを結合します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.mergedRegion(2, 9, 2, 14)
+            `
+        },
+    ]}
+/>
+
+## セル
+
+セルを表すオブジェクトを取得するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 列 B、行 2 のセルを取得します:
+                const セル = excel.cell(1, 1)
+            `
+        },
+    ]}
+/>
+
+> 位置の数値参照は常に **0** から始まります。
+
+セルの数式をログに出力する例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 行 2、列 B の数式をログに出力します。
+                _log.info(
+                    "セル B2 の数式: "+ excel.cell(1, 1).getCellFormula()
+                )
+            `
+        },
+    ]}
+/>
+
+セルのテキスト値を取得する例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 行 2、列 B のセルのテキスト値をログに出力します。
+                _log.info(
+                    "セル B2 の値: "+ excel.cell(1, 1).getStringCellValue()
+                )
+            `
+        },
+    ]}
+/>
+
+> <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFCell.html" target="_blank">Apache POI のセル</a> オブジェクトのすべてのメソッドに関するドキュメント。
+
+## 行
+
+行を表すオブジェクトを取得するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 行 2 を表すオブジェクトを取得します。
+                const 行 = excel.row(1)
+            `
+        },
+    ]}
+/>
+
+> 位置の数値参照は常に **0** から始まります。
+
+上記の例で行が存在しない場合、新しい行が自動的に作成されます。
+
+> <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFRow.html" target="_blank">Apache POI の行</a> オブジェクトのすべてのメソッドに関するドキュメント。
+
+## 表形式データの挿入
+
+`addDataTable` メソッドを使用して、表形式のデータを挿入できます。
+
+最初の 2 つのパラメータは、データテーブルを挿入する位置を定義する行番号と列番号です。
+
+> コード上の行と列の位置は常に **0** から始まることに注意してください。
+>
+> つまり、行 1 は位置 `0`、列 A も位置 `0` です。
+
+次に、行のリストを渡します。各行には列の別のリストが含まれ、その中にセルの値を持つマップを追加します。
+
+完全な例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list() // 行
+                        .add(
+                            _val.list() // 列
+                                .add(
+                                    _val.map() // セル
+                                        .set("value", "名前")
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "年齢")
+                                )
+                        )
+                        .add( // 別の行
+                            _val.list()
+                                .add( // 最初の列
+                                    _val.map()
+                                        .set("value", "マリア")
+                                )
+                                .add( // 2 番目の列
+                                    _val.map()
+                                        .set("value", 26)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### 外観
+
+セルのマップでは、先ほど見た外観と書式設定のセクションで定義したスタイルなど、既に作成したスタイルを関連付けられます。
+
+セルにスタイルを関連付ける例を次に示します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map()
+                                        .set("value", "名前")
+                                        .set("style", styleHeader)
+                                )
+                                .add(
+                                    _val.map()
+                                        .set("value", "年齢")
+                                        .set("style", styleHeader)
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### 数式
+
+数式を挿入するには、セル定義マップの `formula` キーを使用します。
+
+次の例では、最後のセルで他のすべてのセルの値を合計します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "合計")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+列番号から列の文字を取得するには `columnReference` メソッドを使用できます。これは数式の定義に役立ちます。同じメソッドを使って、参照文字から列番号を取得することもできます。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    6, _xls.columnReference('B'),
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "合計")
+                                )
+                                .add(
+                                    _val.map().set(
+                                        "formula",
+                                        "SUM("+ _xls.columnReference(1) +"7:"+ _xls.columnReference(2) +"8)"
+                                )
+                            )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+## シート
+
+ドキュメント内に新しいワークシート（_sheet_）を作成するには、次の例を参照してください:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const 新規シート = excel.createSheet("新しいシート")
+            `
+        },
+    ]}
+/>
+
+> セル、画像、データを操作するメソッドでは、最初のパラメータにシートオブジェクトの参照を追加できます。
+>
+> アクティブなシートに応じて、[activeSheet](/docs/library/resources/xls#activesheet) メソッドでアクティブなシートを変更できます。
+
+新しいシートに画像を挿入する例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.insertPicture(
+                    新規シート,
+                    _app.file("public/images/logo.png"),
+                    10, // 列番号
+                    1  // 行番号
+                ).resize(1.5)
+            `
+        },
+    ]}
+/>
+
+新しいシートにデータテーブルを挿入する例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.addDataTable(
+                    新規シート,
+                    6, 1,
+                    _val.list()
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 45))
+                                .add(_val.map().set("value", 26))
+                        )
+                        .add(
+                            _val.list()
+                                .add(_val.map().set("value", 51))
+                                .add(_val.map().set("value", 30))
+                        )
+                        .add(
+                            _val.list()
+                                .add(
+                                    _val.map().set("value", "合計")
+                                )
+                                .add(
+                                    _val.map().set("formula", "SUM(B7:C8)")
+                                )
+                        )
+                )
+            `
+        },
+    ]}
+/>
+
+### アクティブ化
+
+このように、上記の例のようにメソッドで処理対象のシートを毎回指定しなくて済むように、代わりにアクティブなシートを指定できます。
+
+> セル、画像、データを操作するすべてのメソッドは、特定のシートが指定されて**いない**場合、アクティブなシートを使用します。
+
+特定のシートをアクティブ化する 2 つの方法を見てみましょう。まずオブジェクト参照を使用する方法、次にシートのインデックスを使用する方法です:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.activeSheet(マイシート) // シートの参照オブジェクト。
+                excel.activeSheet(1) // アクティブ化するシートのインデックス。
+            `
+        },
+    ]}
+/>
+
+### 便利な機能
+
+シート操作に役立つその他のメソッドの例です。
+
+名前でシートを取得する:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 名前からシートを取得します。
+                const マイシート = excel.getSheet("シート名")
+            `
+        },
+    ]}
+/>
+
+インデックスでシートを取得する:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // 番号からシートを取得します。
+                const マイシート = excel.getSheet(1)
+            `
+        },
+    ]}
+/>
+
+シートの総数を取得するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // シートの総数。
+                const 合計シート数 = excel.getNumberOfSheets()
+            `
+        },
+    ]}
+/>
+
+ドキュメント内に存在するすべてのシートを一覧表示するには。
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // すべてのシートを一覧表示します。
+                const すべてのシート = excel.getAllSheets()
+                for (const シート of すべてのシート) {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                # すべてのシートを一覧表示します。
+                すべてのシート = excel.getAllSheets()
+                for シート in すべてのシート:
+                    ...
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                # すべてのシートを一覧表示します。
+                すべてのシート = excel.getAllSheets()
+                すべてのシート.each do |シート|
+                    ...
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                // すべてのシートを一覧表示します。
+                val すべてのシート = excel.getAllSheets()
+                すべてのシート.forEach {
+                    ...
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                // すべてのシートを一覧表示します。
+                def すべてのシート = excel.getAllSheets()
+                for (シート in すべてのシート) {
+                    ...
+                }
+            `
+        },
+    ]}
+/>
+
+> <a href="https://poi.apache.org/apidocs/dev/org/apache/poi/hssf/usermodel/HSSFSheet.html" target="_blank">Apache POI のシート</a> オブジェクトのすべてのメソッドに関するドキュメント。
+
+## ファイルの生成
+
+`save` と `output` メソッドでは、最終ファイルのバイナリが生成されます。
+
+生成されたファイルをサービスのデータ出力（`output`）として送信します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.output("file.xlsx")
+            `
+        },
+    ]}
+/>
+
+生成されたファイルをアプリケーションの `storage/filesystem` フォルダに保存するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_storage.filesystem("server", "file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+生成されたファイルを HD のファイルシステム上の `/tmp` フォルダに保存するには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                excel.save(_os.file("/tmp/file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+## ファイルの編集
+
+ファイルを開いて必要な変更を加え、その後で編集済みの新しいファイルを保存することで、ファイルを編集できます。
+
+ファイルを開く方法の例を次に示します。
+
+アプリケーションのルートにあるファイルを開く:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_app.file("file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+アプリケーションの `storage/filesystem` フォルダに生成されたファイルを開くには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_storage.filesystem("server", "file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+さらに、HD のファイルシステム上の `/tmp` フォルダにあるファイルを開くには:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const excel = _xls.open(_os.file("/tmp/file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+上記の例では、定数 `excel` に各ファイルのコンテキストを持つ編集オブジェクトが格納されるため、あらゆる種類の操作を行えます。
+
+変更が完了したら、新しいファイルを生成します。
+
+> 開いている同じファイルを直接変更することはできません。別のパスで新しいファイルを生成する必要があります。
+
+同じファイルを直接変更するには、`inputStream` を使用して行えます。
+
+セルの値を変更する例を次に示します:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const fileInput = _app.file("file.xlsx").inputStream()
+                const excel = _xls.open(fileInput)
+
+                excel.setCellData(
+                    10, 1,
+                    _val.map()
+                        .set(
+                            "value",
+                            excel.getCellData(10, 1).getInt("value") + 10
+                        )
+                )
+
+                fileInput.close() // 開いているファイルを閉じます。
+                excel.save(_app.file("file.xlsx")) // 新しいバージョンを保存します。
+                `
+        },
+    ]}
+/>
+
+## ファイルの読み取り
+
+Excel ファイルからのデータ抽出は `read` メソッドで行います。
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const データ = _xls.read(_app.file("file.xlsx"))
+            `
+        },
+    ]}
+/>
+
+データは Values 型のオブジェクト構造で取得されます。シート、行、列にはリストが含まれ、セルにはマップ（キーと値）が含まれます。
+
+すべてのデータを表示するには、サービスのデータ出力として設定できます:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _out.json(データ)
+            `
+        },
+    ]}
+/>
+
+反復処理を行うには、データ構造が次の順序で編成されていることを意識する必要があります:
+
+1. `sheets` - シート
+2. `rows` - 行
+3. `columns` - 列
+
+完全な反復処理の例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                for (const シート of データ.getValues("sheets")) {
+                    _out.println(\`<h4>シート: \${シート.getInt("index")} - \${シート.getString("name")}</h4>\`)
+                    for (const 行 of シート.getValues("rows")) {
+                        _out.println(\`<h4>行: \${行.getInt("row")}</h4>\`)
+                        _out.println("<p>")
+                        for (const 列 of 行.getValues("columns")) {
+                            _out.print(\`\${列.getInt("row")}:\${列.getInt("column")}\`)
+                            _out.print(\` # \${列.getString("address")}\`)
+                            _out.print(\` # \${列.getString("type")}\`)
+                            _out.print(\` # \${列.getString("value")}\`)
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+                for シート in データ.getValues("sheets"):
+                    _out.println(f"<h4>シート: {シート.getInt('index')} - {シート.getString('name')}</h4>")
+                    for 行 in シート.getValues("rows"):
+                        _out.println(f"<h4>行: {行.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for 列 in 行.getValues("columns"):
+                            _out.print(f"{列.getInt('row')}:{列.getInt('column')}")
+                            _out.print(f" # {列.getString('address')}")
+                            _out.print(f" # {列.getString('type')}")
+                            _out.print(f" # {列.getString('value')}")
+                            _out.println("<br>")
+                        _out.println("</p>")
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                データ.getValues("sheets").each do |シート|
+                    _out.println("<h4>シート: #{シート.getInt("index")} - #{シート.getString("name")}</h4>")
+                    シート.getValues("rows").each do |行|
+                        _out.println("<h4>行: #{行.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        行.getValues("columns").each do |列|
+                            _out.print("#{列.getInt("row")}:#{列.getInt("column")}")
+                            _out.print(" # #{列.getString("address")}")
+                            _out.print(" # #{列.getString("type")}")
+                            _out.print(" # #{列.getString("value")}")
+                            _out.println("<br>")
+                        end
+                        _out.println("</p>")
+                    end
+                end
+            `
+        },
+        {
+            lang: 'kotlin',
+            code: `
+                データ.getValues("sheets").forEach {
+                    val シート = it
+                    _out.println("<h4>シート: \${シート.getInt("index")} - \${シート.getString("name")}</h4>")
+                    シート.getValues("rows").forEach {
+                        val 行 = it
+                        _out.println("<h4>行: \${行.getInt("row")}</h4>")
+                        _out.println("<p>")
+                        行.getValues("columns").forEach {
+                            val 列 = it
+                            _out.print("\${列.getInt("row")}:\${列.getInt("column")}")
+                            _out.print(" # \${列.getString("address")}")
+                            _out.print(" # \${列.getString("type")}")
+                            _out.print(" # \${列.getString("value")}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+        {
+            lang: 'groovy',
+            code: `
+                for (シート in データ.getValues("sheets")) {
+                    _out.println("<h4>シート: \${シート.getInt('index')} - \${シート.getString('name')}</h4>")
+                    for (行 in シート.getValues("rows")) {
+                        _out.println("<h4>行: \${行.getInt('row')}</h4>")
+                        _out.println("<p>")
+                        for (列 in 行.getValues("columns")) {
+                            _out.print("\${列.getInt('row')}:\${列.getInt('column')}")
+                            _out.print(" # \${列.getString('address')}")
+                            _out.print(" # \${列.getString('type')}")
+                            _out.print(" # \${列.getString('value')}")
+                            _out.println("<br>")
+                        }
+                        _out.println("</p>")
+                    }
+                }
+            `
+        },
+    ]}
+/>
+
+セルの種類は次のコードで取得します:
+
+- `列.getString("type")`
+
+サポートされる種類は次のとおりです:
+
+- `string` - テキスト内容。
+- `numeric` - 数値、または日付や時刻の内容。
+- `boolean` - 真または偽。
+- `blank` - 空のセル。
+- `formula` - 数式を含むセル。
+- `error` - セルの処理エラー。
+
+### 追加パラメータ
+
+セルの種類ごとに、いくつかの追加パラメータがあります。
+
+`string` - テキスト内容を持つセルの種類。
+
+- `value` - セルのテキスト。
+- `richValue` - セルの書式設定。
+
+`numeric` - 数値、または日付や時刻の内容を持つセルの種類。
+
+- `value` - セルの数値内容の値。
+  
+日付と時刻の場合は、さらに次の追加パラメータがあります:
+
+- `localDateTime` - セルの日付と時刻の値を表す Java Time の LocalDateTime オブジェクト。
+- `localDate` - セルの日付の値を表す Java Time の LocalDate オブジェクト。
+- `localTime` - セルの時刻の値を表す Java Time の LocalTime オブジェクト。
+- `instant` - セルの日付や時刻の値を表す Java Time の Instant オブジェクト。
+- `date` - セルの日付や時刻の値を表す Java の Date オブジェクト。
+
+`boolean` - ブール値、つまり真または偽の内容を持つセルの種類。
+
+- `value` - _boolean_ 型の値、`true` または `false`。
+
+`blank` - 内容のないセルの種類であるため、追加パラメータはありません。
+
+`formula` - 計算式を含むセルの種類。
+
+- `value` - 計算の最終結果値。
+- `formula` - 計算に使用された数式の式を含みます。
+
+`error` - エラーを含むセルの種類。
+
+- `value` - 発生したエラーのバイト値。
+- `code` - 数式の計算でエラーが発生した場合、発生したエラーのコードをここで提供します。
+
+## 動画
+
+Excel/XLSX ファイルをプログラムで生成する方法の例を示す動画を次に示します:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/nTnoqEpLghQ?si=8engICqRqNFUPi_i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

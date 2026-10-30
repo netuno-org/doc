@@ -3,14 +3,15 @@ id: sending-emails
 title: Sending Emails
 sidebar_label: Sending Emails
 ---
-## Before we begin
-Before proceeding make sure you have the basics in _**JavaScript**_ and that you already have the Netuno basics with the step-by-step available at [Academy](/docs/academy/overview).
+## Before You Begin
 
-## Sending emails with Netuno
+Before proceeding, make sure you have basic knowledge of _**JavaScript**_ and that you already know the Netuno basics through the step-by-step guide available in the [Academy](/docs/academy/overview).
 
-With Netuno it is quite simple to send emails, either with attachments or images embedded in the content itself (useful in the case of signatures).
+## Email Sending Demonstration
 
-The application that comes with Netuno denominated **demo** (demonstration application) contains many examples of possible code implementations in various languages, including the demonstration of sending e-mails through the service `mail-send` that is located in:
+With Netuno, sending emails is very simple, whether with attachments or images embedded in the content itself (useful for signatures).
+
+The application that comes with Netuno called **demo** (demonstration application) contains several examples of possible code implementations in various languages, including a demonstration of sending emails through the `mail-send` service located at:
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Groovy-->
@@ -36,13 +37,13 @@ The application that comes with Netuno denominated **demo** (demonstration appli
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Configuration
-The first step will be to configure the SMTP account that Netuno will use for sending emails.
+The first step is to configure the SMTP account that Netuno will use to send emails.
 
-To do so, navigate within the application you are developing to the environment configuration file. In this example we will use the development environment file located at:
+To do so, navigate within the application you are developing to the environment configuration file. In this example, we will use the development environment file located at:
 
 * `config/_development.json`
 
-At the end of the configuration file (in JSON format) add the SMTP configuration parameters:
+Check whether SMTP settings do not already exist; if they do not exist yet, then at the end of the configuration file (in JSON format) add the SMTP configuration parameters:
 
 ```json
 {
@@ -61,9 +62,9 @@ At the end of the configuration file (in JSON format) add the SMTP configuration
 }
 ```
 
-If you're setting up for Gmail, just replace the asterisks with your credentials and enable the SMTP connection in your Gmail account settings. Otherwise, replace all parameters with your SMTP account settings.
+If you are configuring for Gmail, replace only the asterisks with your credentials and enable the SMTP connection in your Gmail account settings. Otherwise, replace all parameters with those of your SMTP account.
 
-After saving the changes, simply restart Netuno to assume the configuration changes. These are the default settings for sending emails as indicated by the name `default`.
+After saving the changes, simply restart Netuno to apply the configuration changes. These are the default settings for sending emails, as indicated by the name `default`.
 
 ```json
 ...
@@ -73,9 +74,9 @@ After saving the changes, simply restart Netuno to assume the configuration chan
 ...
 ```
 
-You can add more SMTP accounts, but only one can be set as default.
+You can add more SMTP accounts, but only one can be defined as the default.
 
-To add more SMTP accounts just repeat the default SMTP configuration block and change the `default` name to another name of your choice, for example:
+To add more SMTP accounts, simply repeat the default SMTP configuration block and replace the name `default` with another name of your choice, for example:
 
 ```json
 {
@@ -101,92 +102,92 @@ To add more SMTP accounts just repeat the default SMTP configuration block and c
 }
 ```
 
-A configuration similar to the example above will allow you to use the `default` account when it is called in the code as follows:
+A configuration similar to the example above will allow you to use the `default` account when it is called as follows in the code:
 
 ```javascript
-var smtp = _smtp.init()
+const smtp = _smtp.init()
 ```
 
-And to use the `test` configuration just add the name of the configuration as a parameter to the `_smtp.init()` function as follows:
+And to use the `test` configuration, simply add the configuration name as a parameter to the `_smtp.init()` function as follows:
 
 ```javascript
-var smtp = _smtp.init("test")
+const smtp = _smtp.init("test")
 ```
 
-> If you do not add a configuration name as parameter, the default account will always be used.
+> If you do not add a configuration name as a parameter, the default account will always be used.
 
 ## Detailed Code
-Let's now take a closer look at the example code provided by Netuno. In this case it is in JavaScript and is structured as follows:
+Let's now carefully analyze the example code provided by Netuno. In this case, it is in JavaScript and is structured as follows:
 
-SMTP Initialization:
+SMTP initialization:
 
 ```javascript
-var smtp = _smtp.init()
+const smtp = _smtp.init()
 ```
 
-> Remember you can start with another configuration, for example: `_smtp.init("test")`
+> Remember that you can initialize with another configuration, for example: `_smtp.init("test")`
 
-By adding `.to` to the smtp variable the email recipient's address is set, in case of multiple recipients just separate by `;` or `,`:
+By adding `.to` to the smtp variable, you define the email recipient's address; for multiple recipients, simply separate them with ';' or ',':
 
 ```javascript
 smtp.to = '*****@gmail.com'
 ```
 
-By adding `.from` you set the email's sender address:
+By adding `.from`, you define the email sender's address:
 
 ```javascript
 smtp.from = '*****@gmail.com'
 ```
 
-By adding `.cc` you set the address of recipients in copy of the email, in case of multiple recipients in copy just separate them with `;` or `,`:
+By adding `.cc`, you define the addresses of email copy recipients; for multiple copy recipients, simply separate them with ';' or ',':
 
 ```javascript
 smtp.cc = '*****@gmail.com'
 ```
 
-The same is valid for `.bcc` where you define the recipients in copy but in a hidden way:
+The same applies to `.bcc`, where you define recipients in blind copy:
 
 ```javascript
 smtp.bcc = '*****@gmail.com'
 ```
 
-By adding `.subject` defines the subject of the email:
+By adding `.subject`, you define the email subject:
 
 ```javascript
-smtp.subject = 'Test from Netuno'
+smtp.subject = 'Netuno Test'
 ```
 
-Adding `.text` defines the content in plain text:
+By adding `.text`, you define the content as plain text:
 
 ```javascript
 smtp.text = 'Did you receive this email?'
 ```
 
-By adding `.html` you define the email's HTML content:
+By adding `.html`, you define the email content in HTML:
 
 ```javascript
-smtp.html = '<div>'
-smtp.html += '<img src="cid:logo" width="200" />'
-smtp.html += '<p>Did you receive this email?</p>'
-smtp.html += '</div>'
+smtp.html = `<div>
+<img src="cid:logo" width="200" />
+Did you receive this email?</p>
+</div>`
 ```
 
-To add an image as an attachment you add (as exemplified above), in the HTML you set on the images (`img`) in the `src` attribute the `cid:` (**C**ontent **ID**) as a prefix and then the `cid` which is set when adding attachments with the `attachment` function (as exemplified below).
+To add an image as an attachment, add it (as shown above); in the HTML, the `cid:` (**C**ontent **ID**) prefix is set in the `src` attribute of images (`img`), followed by the `cid` defined when adding attachments with the `attachment` function (as shown below).
 
-To add the attached image to the email add `.attachment` to the smtp variable as shown below:
+To add the image attached to the email, add `.attachment` to the smtp variable as follows:
 
 ```javascript
 smtp.attachment(
     "logo.png", // File
     "image/png", // File format
     _storage.filesystem("server", "samples/mail", "logo.png").file(), // File location
-    "logo" // Variable name defined in .cid:
+    "logo" // Name of the variable defined in "cid:logo"
 )   
 ```
 
-> Note that `cid` (**C**ontent **ID**) is only necessary for embedding images in the HTML content of the email.
+> Note that the `cid` (**C**ontent **ID**) is only necessary to embed images that are attached in the HTML content of the email.
 
-To add an attachment without being embedded in the HTML (in the case of documents), proceed as below:
+To add an attachment without embedding it in the HTML (as in the case of documents), proceed as follows:
 
 ```javascript
 smtp.attachment(
@@ -196,21 +197,21 @@ smtp.attachment(
 )   
 ```
 
-To submit the email just enter the following code:
+Finally, to submit the email sending, simply insert the following code:
 
 ```javascript
 smtp.send()
 ```
 
-Finally, if everything has been set up correctly, you will receive an email similar to the following:
+Finally, if everything is configured correctly, you will receive an email similar to the following:
 
-![envio-emails1.png](/docs/assets/envio-emails1.png)
+![email-sending1.png](/docs/assets/envio-emails1.png)
 
-> Note that depending on your email client it may differ from the image above.
+> Note that depending on your email client, it may differ from the image above.
 
-## Full Example with Template
+## Complete Example with Template
 
-Putting HTML content in the middle of code is not very elegant, as exemplified above:
+Putting HTML content in the middle of the code is not very elegant, as shown above:
 
 ```javascript
 smtp.html = `<div>
@@ -219,11 +220,11 @@ Did you receive this email?</p>
 </div>`
 ```
 
-To avoid this and keep the code cleaner and more elegant, the HTML content should be imported as a template, in the following way:
+To avoid this and keep the code cleaner and more elegant, the HTML content should be imported as a template, as follows:
 
 `smtp.html = _template.getOutput('email/contact', data)`
 
-In this example the SMTP configuration in the application configuration, would look like this:
+In this example, the SMTP configuration in the application configuration would be as follows:
 
 ```
 ...
@@ -233,7 +234,7 @@ In this example the SMTP configuration in the application configuration, would l
             "host": "MY.SERVER.com",
             "port": 465,
             "ssl": true,
-            "subjectPrefix": "Contact Website - ",
+            "subjectPrefix": "Website Contact - ",
             "from": "noreply@MY.DOMAIN.com",
             "to": "info@MY.DOMAIN.com",
             "username": "noreply@MY.DOMAIN.com",
@@ -243,7 +244,7 @@ In this example the SMTP configuration in the application configuration, would l
 ...
 ```
 
-Notice below how it can be used in this example of a full service code, which may be in the file `server/services/contact.js`:
+Notice below how it can be used in this complete service code example, which could be placed in the file `server/services/contact.js`:
 
 ```
 const name = _req.getString("name")
@@ -255,7 +256,7 @@ const smtp = _smtp.init("contact")
 
 smtp.subject = subject
 
-smtp.text = "Content in HTML."
+smtp.text = "HTML content."
 
 const data = _val.map()
       .set("name", name)
@@ -280,15 +281,15 @@ _out.json(
 )
 ```
 
-> In the relative path to the template it is not necessary to put the `.html` extension, and note that you can optionally pass information into the template.
+> In the template's relative path, it is not necessary to include the `.html` extension, and note that you can optionally pass information into the template.
 
-The HTML content of the template should be defined within a separate file which should be in the `server/templates/` folder, this path is found from the application root folder.
+The template's HTML content must be defined in a separate file that must be inside the `server/templates/` folder; this path is found from the application's root folder.
 
-Following the example shown above, then the example template file will be here:
+Following the example shown above, the example template file will be here:
 
 - `server/templates/email/contact.html`
 
-The example content of the file could be:
+The example content of this file could be:
 
 ```
 <div style="padding: 40px; background: #ffffff;">
@@ -296,7 +297,7 @@ The example content of the file could be:
   <div style="padding: 20px;"></div>
   <div style="padding: 40px; background: #ffffff; font-size: 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; border: 5px solid #666;">
     <h1 style="color: #666; font-weight: bold; margin-bottom: 15px;">
-      Contact Website
+      Website Contact
     </h1>
     <p>Name: _{&data=name}</p>
     <p>Email: _{data=email}</p>
@@ -307,13 +308,13 @@ The example content of the file could be:
 
 ```
 
-When data is injected into the template with `_{data=...}` the `&` is added when the special HTML character encoding is to be performed, becoming `_{&data=...}`, and following the `=` in place of the `...` is the key of the content that will be injected.
+When data is injected into the template with `_{data=...}`, the `&` is added when special-character HTML encoding should be performed, resulting in `_{&data=...}`, and after the `=` in place of `...` is the key of the content to be injected.
 
-## Advanced Configurations
+## Advanced Settings
 
-The `config/_*.json` environment settings allow for many more advanced configurations.
+The environment configurations `config/_*.json` allow many more advanced settings.
 
-The `smtp` properties used in code such as `.from`, `.to`, `.cc`, `.bcc`, `.subject`, `.text`, and `.html` can be predefined by default as follows:
+The `smtp` properties used in code such as `.from`, `.to`, `.cc`, `.bcc`, `.subject`, `.text`, and `.html` can be defined in the configuration to be predefined by default as follows:
 
 ```json
 ...
@@ -323,7 +324,7 @@ The `smtp` properties used in code such as `.from`, `.to`, `.cc`, `.bcc`, `.subj
         "to": "*****@gmail.com",
         "cc": "*****@gmail.com",
         "bcc": "*****@gmail.com",
-        "subject": "Default Title...",
+        "subject": "Default subject...",
         "text": "Default content... ok!",
         "html": "<p>Default content... <b>ok!</b></p>"
         ...
@@ -331,36 +332,36 @@ The `smtp` properties used in code such as `.from`, `.to`, `.cc`, `.bcc`, `.subj
 ...
 ```
 
-> Pre-defining .from is very useful since emails are usually sent from the same address.
+> Predefining `.from` is quite useful, since emails are normally always sent from the same address.
 
-Other settings are also available. A complete list of these is given below:
+Other configurations are also possible. Below is a complete list of them:
 
-| PARAMETER    | TYPE   | STANDARD      | DESCRIPTION    |
+| PARAMETER    | TYPE   | DEFAULT      | DESCRIPTION    |
 | ------- |:------:|:-----------:|--------------|
-| `enabled`     | boolean | true | Activates and deactivates the sending of emails. |
-| `debug` | boolean | false | Enables debug mode, which will display messages detailing the communication with the server. |
-| `protocol` | string |  | Defines the type of protocol, smtp or smtps. |
-| `host` | string |  | Name or IP of the SMTP server. |
+| `enabled`     | boolean | true | Enables and disables email sending. |
+| `debug` | boolean | false | Enables debug mode, which displays messages detailing communication with the server. |
+| `protocol` | string |  | Defines the protocol type, smtp or smtps. |
+| `host` | string |  | SMTP server name or IP. |
 | `port` | integer | 465 | SMTP server port number. |
 | `ssl` | boolean | true | Enables SSL. |
-| `tls` | boolean | false | Enables TLS |
-| `socketFactoryFallback` | boolean | true | If the Socket generation fails then the native java.net.Socket socket will be used. |
-| `socketFactoryClass` | string |  | Defines a class that implements the javax.net.SocketFactory interface that will be used to generate the socket for the SMTP. |
-| `socketFactoryPort` | integer |  | Defines the port to be used by the sockets. |
-| `quitWait` | boolean | false | If activated, it waits for the server's response after the QUIT command, and if deactivated, it immediately disconnects the connection to the server after the QUIT command. |
-| `authMechanisms` | string |  | Authentication mechanism list, by default is "LOGIN PLAIN DIGEST-MD5 NTLM", so it supports all mechanisms. |
+| `tls` | boolean | false | Enables TLS. |
+| `socketFactoryFallback` | boolean | true | If Socket generation fails, the native java.net.Socket will be used. |
+| `socketFactoryClass` | string |  | Defines a class that implements the javax.net.SocketFactory interface that will be used to generate sockets for SMTP. |
+| `socketFactoryPort` | integer |  | Defines the port that should be used by the sockets. |
+| `quitWait` | boolean | false | If enabled, waits for the server response after the QUIT command; if disabled, disconnects from the server immediately after the QUIT command. |
+| `authMechanisms` | string |  | List of authentication mechanisms; by default it is “LOGIN PLAIN DIGEST-MD5 NTLM”, thus supporting all mechanisms. |
 | `authNTLMDomain` | string |  | NTLM authentication domain. |
-| `username` | string |  | Defines the user in the server authentication. |
-| `html` | string |  | Email's HTML content.|
-| `password` | string |  | Sets the password in the server authentication. |
-| `from` | string |  | Sender's email address. |
-| `to` | string |  | E-mail address of who should receive, more mails can be added separated by ";" or ",". |
-| `cc` | strinf |  | E-mail address from whom you should receive a copy, more mails can be added separated by ";" or ",". |
-| `bcc` | string |  | E-mail address of those who should receive a hidden copy, more mails may be added separated by ";" or ",". |
-| `subjectPrefix` |  | string | Sets a prefix to the title of the email, thus ensuring that all emails sent have the prefix. |
-| `subject` | string |  | E-mail subject. |
-| `text` | string |  | E-mail text content in plain text. |
+| `username` | string |  | Defines the user for authentication with the server. |
+| `html` | string |  | HTML content of the email. |
+| `password` | string |  | Defines the password for authentication with the server. |
+| `from` | string |  | Email address of the sender. |
+| `to` | string |  | Email address of the recipient; more emails can be added, separated by “;” or “,”. |
+| `cc` | string |  | Email address of the recipient who should receive a copy; more emails can be added, separated by “;” or “,”. |
+| `bcc` | string |  | Email address of the recipient who should receive a blind copy; more emails can be added, separated by “;” or “,”. |
+| `subjectPrefix` | string |  | Defines a prefix for the email subject, thus ensuring that all sent emails have the prefix. |
+| `subject` | string |  | Email subject. |
+| `text` | string |  | Plain-text content of the email. |
 
-If you have any questions, please do not hesitate to contact us through the means presented at the bottom of the page.
+If you have any questions, do not hesitate to contact us through the means presented at the end of the page.
 
-Good development!
+Happy development!

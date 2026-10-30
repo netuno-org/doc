@@ -1,0 +1,186 @@
+---
+id: resource 
+title: Zasób Poliglotyczny Low-Code 
+sidebar_label: Zasób 
+sidebar_position: 5
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+W tym samouczku utworzymy natywny zasób dla Netuno. Oznacza to, że utworzymy klasę w Javie, która będzie znajdować się w katalogu bazowym Netuno i będzie mogła być używana przez dowolną aplikację w folderze `apps` przy użyciu składni `_foo.nazwaMetody(argumenty)`.
+
+Przykładem, który utworzymy zgodnie z poprzednimi samouczkami, jest zasób `_kalkulator`, czyli przykładowy zasób do wykonywania prostych operacji arytmetycznych.
+
+Na początek najpierw trzeba utworzyć strukturę folderów projektu. W tym przykładzie zakładamy, że projekt zostanie utworzony w folderze o nazwie `Kalkulator`. Następnie trzeba utworzyć strukturę folderów odpowiadającą nazwie pakietu (w naszym przykładzie `org.netuno.addon.kalkulator`). Nasza struktura folderów będzie więc następująca:
+
+- `Kalkulator/src/main/java/org/netuno/addon/kalkulator/resource/`
+
+W tej strukturze utworzymy klasę Java o nazwie `KalkulatorResource`, która zdefiniuje nasz niestandardowy zasób natywny.
+
+- `Kalkulator/src/main/java/org/netuno/addon/kalkulator/resource/KalkulatorResource.java`
+
+Zatem pakiet zdefiniowany w klasie będzie następujący:
+
+```java
+package org.netuno.addon.kalkulator.resource;
+```
+
+Aby klasa definiowała niestandardowy zasób natywny, musi być oznaczona adnotacją `org.netuno.tritao.ResourceBase`. Parametr `name` będzie nazwą zasobu, do którego można uzyskać dostęp za pomocą podkreślenia (`_`) przed nazwą (w naszym przypadku `_kalkulator`). Najłatwiejszym sposobem utworzenia zasobu jest rozszerzenie klasy `org.netuno.tritao.resource.ResourceBase`:
+
+```java
+package org.netuno.addon.kalkulator.resource;
+
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "kalkulator")
+public class KalkulatorResource extends ResourceBase {
+    // ...
+}
+```
+
+Rozszerzenie klasy `ResourceBase` oszczędza nam konieczności inicjalizacji zasobu — wystarczy wywołać `super` z poprawnymi argumentami:
+
+```java
+package org.netuno.addon.kalkulator.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "kalkulator")
+public class KalkulatorResource extends ResourceBase {
+    // ...
+    public KalkulatorResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+}
+```
+
+Funkcja `init` jest obowiązkowa, a wewnątrz niej zainicjalizujemy zasób, wywołując konstruktor naszej klasy z getterami klasy nadrzędnej:
+
+```java
+package org.netuno.addon.kalkulator.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "kalkulator")
+public class KalkulatorResource extends ResourceBase {
+    // ...
+    public KalkulatorResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public KalkulatorResource init() {
+        return new KalkulatorResource(getProteu(), getHili());
+    }
+}
+```
+
+Następnie zdefiniujemy własne pola i funkcje:
+
+```java
+package org.netuno.addon.kalkulator.resource;
+
+import org.netuno.proteu.Proteu;
+import org.netuno.tritao.hili.Hili;
+import org.netuno.tritao.resource.Resource;
+import org.netuno.tritao.resource.ResourceBase;
+
+@Resource(name = "kalkulator")
+public class KalkulatorResource extends ResourceBase {
+    public double wartosc = 0;
+
+    public KalkulatorResource(Proteu proteu, Hili hili) {
+        super(proteu, hili);
+    }
+
+    public KalkulatorResource init() {
+        return new KalkulatorResource(getProteu(), getHili());
+    }
+
+    public KalkulatorResource ustaw(double liczba) {
+        wartosc = liczba;
+        return this;
+    }
+
+    public KalkulatorResource dodaj(double liczba) {
+        wartosc += liczba;
+        return this;
+    }
+
+    public KalkulatorResource odejmij(double liczba) {
+        wartosc -= liczba;
+        return this;
+    }
+
+    public double pobierz() {
+        return wartosc;
+    }
+}
+```
+
+Teraz wystarczy skompilować klasę, upewniając się, że plik `KalkulatorResource.class` znajduje się w folderze:
+
+- `netuno/core/web/WEB-INF/classes/org/netuno/addon/kalkulator/resource/`
+
+Można też utworzyć plik JAR, upewniając się, że znajduje się w folderze:
+
+- `netuno/lib/`
+
+Utwórzmy aplikację testową, aby użyć tego zasobu:
+
+```bash
+./netuno app name=kalkulator
+```
+
+Utwórzmy również usługę w tej aplikacji, aby użyć zasobu.
+W przykładzie utworzymy plik `netuno/apps/kalkulator/server/services/kalkulator-test.js`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _kalkulator.ustaw(10);
+
+                _kalkulator.dodaj(120);
+
+                _out.println(_kalkulator.pobierz());
+            `
+        },
+    ]}
+/>
+
+Uruchommy naszą aplikację:
+
+```bash
+./netuno server app=kalkulator
+```
+
+A teraz, gdy wywołamy tę usługę:
+
+- `http://localhost:9000/services/kalkulator-test`
+
+Zwróci ona wartość `130`.
+
+Aby użyć zasobu w kodzie Java, niektóre klasy, takie jak `org.netuno.tritao.Web`
+i `org.netuno.tritao.event.EventBase`, udostępniają funkcję `resource`, która inicjalizuje ten zasób.
+W klasie, w której chcesz użyć zasobu `kalkulator`, wykonaj:
+
+```java
+import org.netuno.addon.kalkulator.resource.KalkulatorResource;
+
+// ...
+    KalkulatorResource kalkulator = resource(KalkulatorResource.class);
+    kalkulator.ustaw(10);
+    kalkulator.dodaj(120);
+    System.out.println(kalkulator.pobierz());
+// ...
+```
+
+Kompletne pliki projektu możesz zobaczyć pod tym [linkiem](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/resource).

@@ -1,0 +1,8 @@
+{
+  "label": "지금 시작하기",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "설치 가이드."
+  }
+}

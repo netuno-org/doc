@@ -1,0 +1,324 @@
+---
+id: altcha
+title: Altcha
+sidebar_label: Altcha
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+reCaptcha に相当するオープンソースの代替手段です。
+
+## はじめに
+
+CAPTCHA を用いたセキュリティ機構の実装は非常に重要です。以下に関連する理由を挙げます:
+
+- ボットによる API アドレスへの自動アクセスを防ぐため。
+- アクセスが実在の人物によって行われていることを保証するため。
+- また、アクセスがブラウザ経由で行われたことも保証します。
+
+長い間、CAPTCHA 機構はユーザーが解くチャレンジを提供していました。
+
+今日ではこれは不要です。暗号化されたキーと、ブラウザ内のインタラクションを利用するアルゴリズムで解く必要があるチャレンジを組み合わせた仕組みが使われ、人間による操作かボットによる操作かを検出します。
+
+> この方法は巧妙で信頼性が高く、1 回のクリックだけで人間かボットかを検出できます。
+
+[Altcha](https://altcha.org/) はこのセキュリティプロセスを実装するオープンソースプロジェクトで、React とも統合できるフロントエンドウィジェットと、Netuno が提供するバックエンド機能を備えています。
+
+## 制限事項
+
+[Altcha](https://altcha.org/) は [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API) を使用するため、SSL 証明書付きの安全な HTTPS アドレス、またはローカルでのみ動作します。
+
+> フロントエンドでは、ドメインが `localhost` でない場合、URL は SSL 証明書付きの安全な HTTPS である必要があります。
+
+フロントエンドがローカルでアクセスされる場合、ブラウザは [Web Crypto API](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Crypto_API) をローカルアドレス、必ず `localhost` でのみ使用できるようにしています。したがって、それ以外の場合は SSL 証明書付きの安全な HTTPS が必要です。
+
+## バックオフィス
+
+Netuno アプリケーションのバックオフィスで [Altcha](https://altcha.org/) による認証を有効にするには、アプリケーションで次の設定を使用します:
+
+```json title="config/_[環境].json"
+{
+  ...
+  "auth": {
+    "altcha": {
+      "admin": {
+        "enabled": true
+      }
+    }
+  },
+  ...
+}
+```
+
+これで、バックオフィスのログイン画面にアクセスするだけで、[Altcha](https://altcha.org/) の _チェックボックス_ が正常に動作していることを確認できます。
+
+### 動作の仕組み
+
+Netuno は REST API で、[Altcha](https://altcha.org/) のパラメータをフロントエンドに提供する標準サービスを提供します。通常、このサービスのアドレスは次のとおりです:
+
+- `http://localhost:9000/services/_altcha`
+
+パラメータを受け取ると、フロントエンドの [Altcha](https://altcha.org/) ウィジェットがデジタル署名されたチャレンジ結果を生成し、それがフォームの隠しフィールド `altcha` としてバックエンドに送信されます。
+
+バックエンドでは、結果とデジタル署名が実際に正しいかどうかが検証されます。
+
+### HTMLでのウィジェット
+
+バックオフィスのログイン HTML にウィジェットを統合する例:
+
+```html title="login.html"
+<script type="text/javascript" src="/scripts/plugins/altcha/altcha.i18n.umd.min.cjs"></script>
+<form ...>
+  <input id="inputAltcha" type="hidden" name="altcha" value="">
+  <altcha-widget id="widgetAltcha"
+    challenge="/services/_altcha" language="ja"
+    hideLogo hideFooter></altcha-widget>
+  <script>
+    document.getElementById("widgetAltcha").addEventListener("statechange", function (e) {
+      if (e.detail.state === "verified") {
+        document.getElementById("inputAltcha").value = e.detail.payload;
+      }
+    }, false);
+  </script>
+  ...
+</form>
+```
+
+ウィジェットの `challenge` 属性で使用される URL は、Netuno がチャレンジのパラメータ設定とともに自動生成するサービスであることに注意してください。
+
+## 外部認証
+
+通常実装される JWT を用いた安全な認証では、認証用の REST API 標準サービスを使用します。そのサービスは通常次のとおりです:
+
+- `http://localhost:9000/services/_auth`
+
+この Netuno が自動生成するサービスにより、ネイティブ JWT を用いた外部認証の安全性を確保できますが、CAPTCHA ウィジェットのチャレンジ結果の検証も行います。
+
+認証で [Altcha](https://altcha.org/) を有効にするには、次の設定を追加します:
+
+```json title="config/_[環境].json"
+{
+  ...
+  "auth": {
+    "altcha": {
+      "enabled": true
+    }
+  },
+  ...
+}
+```
+
+これにより、認証リクエスト、つまり [Altcha](https://altcha.org/) が生成したチャレンジ結果のキーを送信し、それが有効なログインのみが認証に成功できます。それ以外のログインは拒否されます。
+
+> フロントエンドに [Altcha](https://altcha.org/) ウィジェットを統合し、チャレンジ結果のキーを `altcha` フィールドで送信する必要があります。
+
+### Reactでのウィジェット
+
+以下で、React にウィジェットを統合する方法を説明します:
+
+[Altcha](https://altcha.org/) の依存関係を追加します:
+
+- `bun add altcha`
+
+コードで [Altcha](https://altcha.org/) をインポートします:
+
+```jsx title="website/src/pages/Login/index.jsx"
+import "altcha/i18n";
+```
+
+チャレンジ結果のキーを保存するための状態を作成します:
+
+```jsx title="website/src/pages/Login/index.jsx"
+const [altchaPayload, setAltchaPayload] = useState(null);
+```
+
+React コンポーネント内にウィジェット用の内部参照を作成します:
+
+```jsx title="website/src/pages/Login/index.jsx"
+const altcha = useRef(null);
+```
+
+ウィジェットの参照を使用するコンポーネントの読み込みエフェクトを追加し、ウィジェットのチェックボックスがクリックされたときにチャレンジ結果のキーを状態に読み込むイベントを監視します:
+
+```jsx title="website/src/pages/Login/index.jsx"
+useEffect(() => {
+  if (altcha && altcha.current) {
+    function altchaVerified(ev) {
+      if (ev.detail.state === "verified") {
+        setAltchaPayload(ev.detail.payload);
+      }
+    }
+    altcha.current.addEventListener("statechange", altchaVerified, false);
+    return () => {
+      if (altcha.current != null) {
+        altcha.current.removeEventListener("statechange", altchaVerified, false);
+      }
+    }
+  }
+}, [altcha]);
+```
+
+React コンポーネントの「HTML」でのウィジェット例:
+
+```jsx title="website/src/pages/Login/index.jsx"
+<altcha-widget
+    ref={altcha}
+    challenge={_service.url('/_altcha')}
+    language="ja"
+    delay={1}
+    hideLogo={true}
+    hideFooter={true}
+></altcha-widget>
+```
+
+### Auth Client
+
+[Auth Client](https://www.npmjs.com/package/@netuno/auth-client) に [Altcha](https://altcha.org/) を統合する方法を説明します。
+
+ログインフォームのデータをバックエンドに送信するイベント、たとえば `onSubmit`、`onClick`、または Ant.Design フォームの `onFinish` で、以下のコードを使用します:
+
+```jsx title="website/src/pages/Login/index.jsx"
+_auth.login({
+  username,
+  password,
+  data: (data) => {
+    data.altcha = altchaPayload;
+    return data;
+  },
+  success: ({json}) => {
+    ...
+  },
+  fail: (data) => {
+    ...
+  }
+});
+```
+
+`altchaPayload` は CAPTCHA のチャレンジ結果のキーを保持する状態であることに注意してください。
+
+ReAuthKit のログインページの完全な例:
+
+- [ReAuthKit のログインページのソースコード。](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Login/index.jsx)
+
+## サービスへの統合
+
+上で見た認証以外にも、他のあらゆる種類のサービスに [Altcha](https://altcha.org/) による CAPTCHA 機構を統合できます。
+
+攻撃対象になり得るあらゆる公開サービス、たとえばボットによる大量データ登録のための網羅的な自動化などに、CAPTCHA を統合することを推奨します。
+
+フロントエンドでは、REST API サービスを統合する画面に [Altcha](https://altcha.org/) のセキュリティウィジェットも実装する必要があります。つまり、サービスを呼び出す箇所でウィジェットを使用します。
+
+### Service Client
+
+次に、[Service Client](https://www.npmjs.com/package/@netuno/service-client) に [Altcha](https://altcha.org/) を統合する方法を説明します。
+
+フロントエンドへのウィジェットの統合は、上ですでに説明した以下と同様です:
+
+- [HTMLでのウィジェット](#htmlでのウィジェット)
+- [Reactでのウィジェット](#reactでのウィジェット)
+
+上ですでに例示したのとまったく同じように、ウィジェットのペイロードを取得する必要があります。ログイン認証と同じプロセスです。
+
+ペイロードは、URL パラメータ、フォームのフィールド、または JSON のプロパティとしてバックエンドに送信されます。HTTP メソッドとサービスの実装方法によって異なります。
+
+登録サービス、つまり新しいユーザーアカウントの登録にペイロードを送信する例:
+
+```jsx title="pages/Register/index.jsx"
+_service({
+  method: 'POST',
+  url: 'register',
+  data: {
+    name,
+    email,
+    password,
+    altcha: altchaPayload
+  },
+  success: (response) => {
+    ...
+  },
+  fail: (e) => {
+    ...
+  }
+});
+```
+
+`altchaPayload` は CAPTCHA のチャレンジ結果のキーを保持する状態であることに注意してください。
+
+ReAuthKit の登録ページの完全な例:
+
+- [ReAuthKit の登録ページのソースコード。](https://github.com/netuno-org/reauthkit/blob/main/website/src/pages/Register/index.jsx)
+
+### バックエンド
+
+ペイロードが REST API サービスに送信されたら、サービスのコード、バックエンド側でそれを検証する必要があります。方法は次のとおりです:
+
+<PolyglotCode
+    file="server/services/register/post"
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+            const altchaPayload = _req.getString("altcha");
+
+            if (_auth.altchaEnabled() && !_altcha.verifySolution(altchaPayload)) {
+              _header.status(409);
+              _out.json(
+                _val.map()
+                  .set("error", "invalid-altcha-payload")
+              );
+              _exec.stop();
+            }
+            `
+        },
+        {
+            lang: 'python',
+            code: `
+            altchaPayload = _req.getString("altcha")
+
+            if _auth.altchaEnabled() and _altcha.verifySolution(altchaPayload) == False:
+                _header.status(409)
+                _out.json(
+                    _val.map()
+                        .set("error", "invalid-altcha-payload")
+                )
+                _exec.stop()
+            `
+        },
+        {
+            lang: 'ruby',
+            code: `
+                altchaPayload = _req.getString("altcha")
+
+                if _auth.altchaEnabled() and _altcha.verifySolution(altchaPayload) == false
+                    _header.status(409)
+                    _out.json(
+                        _val.map()
+                            .set("error", "invalid-altcha-payload")
+                    )
+                    _exec.stop()
+                end
+            `
+        },
+    ]}
+/>
+
+ReAuthKit の登録サービスの完全な例:
+
+- [ReAuthKit の登録サービスのソースコード。](https://github.com/netuno-org/reauthkit/blob/main/server/services/profile/post.js)
+
+ローコードおよびポリグロットプログラミング機能の詳細はこちら:
+
+- [Altcha](/docs/library/resources/altcha)
+- [Auth](/docs/library/resources/auth)
+
+## まとめ
+
+非常にシンプルな方法で、API サービスにセキュリティ機構を作成し、ボットを防ぎ、ブラウザ上での人間による操作を保証できます。
+
+> 登録サービスや認証サービスなど、特に機密性の高い公開サービスでは、[Altcha](https://altcha.org/) による CAPTCHA 機構を使用することを推奨します。
+
+Netuno が提供するネイティブ実装により、任意の REST API サービスでこの機構を有効化して使用するのは非常に簡単になります。
+
+> 本番環境では、Netuno が自動生成するバックオフィスで常に [Altcha](https://altcha.org/) による認証を有効にし、HTTPS と SSL 証明書を使用することを推奨します。
+
+可能な限り [Altcha](https://altcha.org/) を使用して、API の公開サービスの安全性と堅牢性を確保してください。

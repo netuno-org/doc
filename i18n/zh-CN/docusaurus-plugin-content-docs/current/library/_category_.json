@@ -1,0 +1,8 @@
+{
+  "label": "库",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "所有资源和对象。"
+  }
+}

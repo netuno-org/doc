@@ -1,52 +1,50 @@
 ---
 sidebar_position: 1
 id: initialization
-title: initialization
+title: Initialization
 ---
 
 
 # Initialization
 
-Demo application initialization
+Initialization of the Demo application
 
-To begin this tutorial, the first step is to start the **Demo** application server and prepare the development environment.
+To start this tutorial, the first step is to start the **Demo** application's server and prepare the development environment.
+
 
 ### Start the server
 
-Open your operating system terminal and navigate to the root folder where the Netuno platform is installed (for example, `📁 /netuno`).
+Open your operating system's terminal and navigate to the root folder where the Netuno platform is installed (for example, `📁 /netuno`).
 
 Run the command below to start the server:
 
-```shell
+```bash
 ./netuno server
 ```
 
-:::info Alternative startup method
-If the main command does not work or the Demo application is not loaded by default, force startup by specifying the application parameter:
+:::info Alternative startup
+If the main command doesn't work or the Demo application isn't loaded by default, force the startup by specifying the application parameter:
 :::
 
-```shell
+```bash
 ./netuno server app=demo
 ```
 
-### Choose your Code Editor
+### Choose the Code Editor
+You can use the code editor of your preference to develop both the backend and the frontend of your application.
 
-You can use your preferred code editor to develop both the backend and frontend of your application.
+If you don't have one yet, we recommend the following free and open-source options:
 
-
-If you don't already have one, we recommend the following free and open-source options:
-
-- VS Codium: <a href="https://vscodium.com/" target="_blank">vscodium.com</a>
 - VS Code: <a href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a>
+- VS Codium: <a href="https://vscodium.com/" target="_blank">vscodium.com</a>
 - WebStorm: <a href="https://www.jetbrains.com/webstorm/" target="_blank">jetbrains.com/webstorm</a>
 
-### Open the project folder
 
-With the code editor open, locate and open the Demo application directory: `📁 apps/demo`.
+#### Open the project folder
+With the code editor open, locate and open the Demo application's directory: `📁 apps/demo`.
 
-This folder contains all the files and settings of the new application. All development will be done exclusively within this director.
+This folder contains all the files and configurations of the new application. All development will be done exclusively inside this directory.
 
-#### Next steps
+### Next steps
 
-With the server running and the files open in the code editor, the environment is ready. Proceed to the next step of the tutorial to begin exploring and modifying the application.
-
+With the server running and the files open in the code editor, the environment is ready. Move on to the next step of the tutorial to start exploring and modifying the application.

@@ -1,72 +1,74 @@
 ---
 id: maven-setup
-title: Project Setup with Apache Maven 
-sidebar_label: Setup with Maven 
+title: Project Configuration with Apache Maven
+sidebar_label: Configuration with Maven
 sidebar_position: 3
 ---
 
 ## Prerequisites
 
-In this example, we are going to use <a href="https://maven.apache.org/install.html" target="_blank">Apache Maven</a>. Please click the previous link to get information on how to install it.
+In this example we will use <a href="https://maven.apache.org/install.html" target="_blank">Apache Maven</a>, so click the previous link to get information on how to install it.
 
 You will also need to have Java installed.
 
-Install the Netuno platform. The Java project will be integrated with the pre-installed Netuno platform. 
+Install the Netuno platform. The Java project will be integrated with the pre-installed Netuno platform.
 
 ## Code Package
 
-As is standard in Java, your code must always define a `package`.
+As is standard in Java, the code must always have a `package`.
 
-Your `package` must be registered in Netuno's global configuration file:
+Your `package` must be registered in the Netuno global configuration file:
 
 - `netuno/config.js`
 
-Add the following code to the end of the file:
+Add the following code at the end:
 
 ```javascript
-config.packagesScan.add("my.project.java")
+config.packagesScan.add("my.java.project")
 ```
 
-If your package is not added to the configuration in this manner, your project will never be loaded, as Netuno only scans for resources and services within packages that have been previously added.
+If your package is not added to the configuration this way, your project will never be loaded,
+since Netuno only looks for resources and services in previously added packages.
 
-An alternative to avoid registering the package in the configuration is to use Java packages that begin with `org.netuno`.
+An alternative to avoid registering the package in the configuration is to use Java packages starting with `org.netuno`.
 
-Netuno automatically searches for resources and services residing in packages that start with `org.netuno`.
+Netuno automatically looks for resources and services in packages that start with `org.netuno`.
 
 > It is recommended to use the prefix: `org.netuno.addon`
 
-For example, you can use: `org.netuno.addon.calc`
+For example, we can use: `org.netuno.addon.calc`
 
-The `org.netuno.addon` package prefix explicitly distinguishes that it is an externally added feature rather than a built-in part of Netuno itself.
+The package prefix `org.netuno.addon` distinguishes that it is an externally added feature and is not
+part of Netuno itself.
 
-Consequently, all your Java code that integrates with Netuno should be defined and structured under:
+Therefore, all your Java code that integrates with Netuno must be defined and built in:
 
 - `org.netuno.addon.my.project`
 
-Append your specific project identifier after the `org.netuno.addon` prefix.
+After `org.netuno.addon`, add your project's identifier.
 
 ## POM Configuration
 
-Netuno relies on many dependencies in JAR format, so it is necessary to define these dependencies inside the POM. Since the POM does not support including an entire directory directly, and writing out each dependency manually would be laborious and tedious, we will create a JavaScript script to generate the `pom.xml` file dynamically.
+Netuno has many dependencies in JAR format, so it is necessary to define these dependencies inside the POM. Since the POM does not support including an entire folder and writing each dependency would be laborious and tedious, we will create a JavaScript script to generate the POM.
 
 ### Preliminaries
 
-Create your project folder, where the Java classes will be written. For our example, we will use `Calc`:
+Create your project folder, where the Java classes will be written. For our example we will use `Calc`:
 
 ```bash
 mkdir Calc
 ```
 
-Create a file named `generate-pom.js`. Inside this file, we will start by defining a few variables that will be used throughout the script. `NETUNO_DIR` must point to the root folder where you have Netuno installed. `PROJECT_DIR` is the directory where you will write your global resource and service classes. And `PACKAGE` must match the package name defined in the previous steps. Also, select the Java version using `JAVA_VERSION`. Note that the directory paths must be absolute paths:
+Create the `generate-pom.js` file. Inside this file, we will start by defining some variables that will be used throughout the script. `NETUNO_DIR` must be the root folder where you have Netuno installed. `PROJECT_DIR` is the directory where you will write your global resource and service classes. And `PACKAGE` must be the same as the package name as defined in the previous steps. Also select the Java version with `JAVA_VERSION`. The paths must be absolute paths:
 
 ```js
-const NETUNO_DIR = '/netuno/root/dir';
+const NETUNO_DIR = '/path/root/of/netuno';
 const PROJECT_DIR = '/Projects/Netuno/Calc';
 const PACKAGE = 'org.netuno.addon.calc';
 const JAVA_VERSION = 25;
 ```
 
-Now let's initialize the base structure of the `pom.xml`:
+Now let's initialize the base structure of `pom.xml`:
 
 ```js
 const packageArray = PACKAGE.split(".");
@@ -75,9 +77,9 @@ const GROUP_ID = packageArray.slice(0, packageArray.length - 1).join(".");
 
 let pomContent = `
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="[http://maven.apache.org/POM/4.0.0](http://maven.apache.org/POM/4.0.0)"
-         xmlns:xsi="[http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)"
-         xsi:schemaLocation="[http://maven.apache.org/POM/4.0.0](http://maven.apache.org/POM/4.0.0) [http://maven.apache.org/xsd/maven-4.0.0.xsd](http://maven.apache.org/xsd/maven-4.0.0.xsd)">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>${GROUP_ID}</groupId>
@@ -94,7 +96,7 @@ let pomContent = `
 
 ### Dependencies
 
-Next, we will create the function that scans the directories and generates a `<dependency>` tag for each Netuno dependency JAR file:
+Next, let's create the function that scans the directories and generates a `<dependency>` tag for each Netuno dependency JAR file:
 
 ```js
 function mapDirectory(folder, groupSuffix) {
@@ -120,15 +122,16 @@ function mapDirectory(folder, groupSuffix) {
     }
     return dependenciesXml;
 }
+```
 
-We will use this function to map both dependency directories:
+Let's use this function to map the two dependency directories:
 
 ```js
 const coreDependencies = mapDirectory(join(NETUNO_DIR, 'core', 'lib'), 'core');
 const webDependencies = mapDirectory(join(NETUNO_DIR, 'core', 'web', 'WEB-INF', 'lib'), 'web');
 ```
 
-And then inject the dependencies into the POM, along with the root `netuno.jar`:
+And inject the dependencies into the POM, along with `netuno.jar`:
 
 ```js
 pomContent += `
@@ -146,9 +149,9 @@ pomContent += `
   `;
 ```
 
-### JAR File 
+### JAR File
 
-We need to set the destination directory for JAR files. This step is required so that we have the option to build our project into a JAR file:
+We need to define the destination directory for the JAR files. This step is necessary so that we have the option to compile our project into a JAR file:
 
 ```js
 pomContent += `
@@ -165,7 +168,7 @@ pomContent += `
   `;
 ```
 
-### Clean
+### Cleanup
 
 Now we need to configure Maven so that the `mvn clean` command deletes the correct files when invoked:
 
@@ -202,7 +205,8 @@ pomContent += `
 
 ### Profile
 
-To allow choosing between compiling the project to generate `.class` files or packaging it into `.jar` files, we need to create a dedicated profile and configure the compiler plugin with the correct output directory path. With this, we finalize the POM content:
+So that we can choose between compiling the project by generating `.class` files or generating `.jar` files,
+we need to create a different profile and configure the compiler with the correct path. And thus we finish the POM content:
 
 ```js
 pomContent += `
@@ -228,7 +232,7 @@ pomContent += `
 
 ### Finalizing
 
-Finally, let's write the result out to the `pom.xml` file:
+Finally, let's write the result to the `pom.xml` file:
 
 ```js
 try {
@@ -239,45 +243,45 @@ try {
 }
 ```
 
-To generate the `pom.xml` file, run this command in your project's root folder:
+To generate the POM, run this command in your project's root folder:
 
 ```bash
 bun generate-pom.js
 ```
 
-You can see the whole script for generating the POM in this [link](https://github.com/netuno-org/maven/blob/main/Calc/generate-pom.js).
+You can see the complete POM generation script at this [link](https://github.com/netuno-org/maven/blob/main/Calc/generate-pom.js).
 
-## Compiling
+## Compilation
 
-Now you can compile your project using:
+Now you can compile your project with:
 
 ```bash
 mvn clean compile -Pdev
 ```
 
-Or package it into JAR files, which facilitates code distribution to other Netuno instances running on different computers, using:
+Or generate JAR files, which makes it easier to distribute the code to other Netuno instances that are on other computers, with:
 
 ```bash
 mvn clean package
 ```
 
-To clean up the files generated by the `compile` and `package` commands, run:
+To clean the files generated by the `compile` and `package` commands:
 
 ```bash
 mvn clean
 ```
 
-### Publish the JAR File
+### Publishing the JAR File
 
-The created JAR file can be distributed and deployed to any other Netuno platform instance.
+The created JAR file can be distributed and placed on any other Netuno platform.
 
-On any installed Netuno platform, this JAR must be placed in the `lib` folder at the Netuno root directory:
+On any installed Netuno platform, this JAR must be placed in the `lib` folder at the Netuno root:
 
 - `netuno/lib`
 
 Note that this folder does not exist by default, so it may be necessary to create it.
 
-All JARs located in this folder are automatically loaded by the Netuno platform.
+All JARs found in this folder are automatically loaded into the Netuno platform.
 
 ## Execution
 
@@ -287,17 +291,19 @@ To run the project, start Netuno normally:
 ./netuno server app=calc
 ```
 
-The app must be created beforehand using the command: `./netuno app`.
+The app must first be created with the command: `./netuno app`.
 
 ## Conclusion
 
-We have seen how to create a new Java project to add new behaviors to the core of Netuno.
+We have seen how to create a new Java project to add new behaviors to the Netuno core.
 
-We also covered the best practices for generating the JAR file and distributing it within the `netuno/lib` folder.
+We also saw the best practices for generating the JAR file and how to distribute it in the `netuno/lib` folder.
 
-All Java programming techniques and libraries can be utilized to create any type of functionality within Netuno.
+All Java programming techniques and libraries can be used to create any type of functionality
+in Netuno.
 
-This is particularly useful for creating low-code programming resources that become available to all supported scripting languages, such as:
+Especially creating a low-code programming resource that is available to all supported scripting languages,
+such as:
 
 - JavaScript
 - Python
@@ -305,6 +311,7 @@ This is particularly useful for creating low-code programming resources that bec
 - Kotlin
 - Groovy
 
-In the following tutorials, learn how to create your first low-code programming resource.
+In the following tutorials, see how to create your first low-code programming resource.
 
-You will also learn how to create your first multi-application web service, available across all applications configured in Netuno.
+And also how to create your first multi-application web service, available in all applications that are
+configured in Netuno.

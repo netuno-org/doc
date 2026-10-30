@@ -1,0 +1,580 @@
+---
+id: files-manipulation
+title: Manipulatie van bestanden en mappen
+sidebar_label: Manipulatie van bestanden en mappen
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+## Inleiding
+
+In de polyglotte backendcode van het Netuno-platform kunnen we elk bestand of elke map bewerken.
+
+Manipulatie bestaat uit het kunnen maken, hernoemen en verwijderen van bestanden en mappen, het wijzigen van de inhoud van bestanden en het weergeven van de inhoud van mappen. Over het algemeen zijn dit de bewerkingen die we normaal gesproken programmatisch moeten uitvoeren.
+
+Op het Netuno-platform zijn er low-code programmeerresources waarmee je de interne mappen en bestanden van de applicatie kunt bewerken, maar ook alle bestanden en mappen van het systeem in het algemeen, dus buiten de applicatie.
+
+Het is nuttig wanneer we een proces moeten automatiseren dat een of ander bestand moet aanpassen; laten we kijken hoe dat werkt.
+
+De polyglotte low-code programmeerresources waarmee je bestanden kunt bewerken, zijn:
+
+- `_app` - [Applicatie](/docs/library/resources/app)
+- `_storage` - [Storage](/docs/library/resources/storage)
+- `_os` - [Besturingssysteem](/docs/library/resources/os)
+
+Via deze resources hebben we methoden voor:
+
+- `.file` - Bestaand bestand.
+- `.folder` - Bestaande map.
+- `.path` - Algemeen pad, dat zowel een bestand als een map kan zijn, dat bestaat of niet bestaat.
+
+Met deze methoden krijgen we een object van het type [File](/docs/library/objects/File), dat alle middelen biedt voor het bewerken van bestanden, mappen en paden in het algemeen, waarmee je bewerkingen kunt uitvoeren zoals:
+
+- Bestanden en mappen maken.
+- Bestanden en mappen verwijderen.
+- De inhoud van mappen weergeven.
+- Bestanden en mappen hernoemen.
+- Gegevens in bestanden lezen en schrijven.
+- Mappen en hun submappen en bestanden recursief verwijderen.
+
+## Applicatie
+
+Voor de belangrijkste bewerkingen voor het manipuleren van bestanden en mappen binnen de structuur van de applicatie gebruiken we de resource `_app`:
+
+#### Mappen in de applicatie
+
+Zorgt ervoor dat een bestaande map wordt opgehaald, bijvoorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mijnMap = _app.folder("mijn/map")
+            `
+        },
+    ]}
+/>
+
+#### Bestanden in de applicatie
+
+Zorgt ervoor dat een bestaand bestand wordt opgehaald, bijvoorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mijnBestand = _app.file("mijn/map/bestand.txt")
+            `
+        },
+    ]}
+/>
+
+#### Paden in de applicatie
+
+Haalt een pad naar een bestand of map op, ongeacht of het bestaat, bijvoorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nieuwBestand = _app.path("mijn/map/nieuw-bestand.txt")
+            `
+        },
+    ]}
+/>
+
+## Storage
+
+Voor de belangrijkste bewerkingen voor het manipuleren van bestanden en mappen binnen de map `📁 storage` van de applicatie gebruiken we de resource `_storage`:
+
+#### Mappen in Storage
+
+Zorgt ervoor dat een bestaande map wordt opgehaald, bijvoorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Het werkelijke pad van de map is:
+                // storage/filesystem/server/mijn/map
+                const opslagMijnMap = _storage.filesystem("server", "mijn/map")
+                const mijnMap = opslagMijnMap.folder()
+            `
+        },
+    ]}
+/>
+
+#### Bestanden in Storage
+
+Zorgt ervoor dat een bestaand bestand wordt opgehaald, bijvoorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Het werkelijke pad van het bestand is:
+                // storage/filesystem/server/mijn/map/bestand.txt
+                const opslagBestand = _storage.filesystem("server", "mijn/map", "bestand.txt")
+                const bestand = opslagBestand.file()
+            `
+        },
+    ]}
+/>
+
+#### Paden in Storage
+
+Haalt een pad naar een bestand of map op, ongeacht of het bestaat, bijvoorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Het werkelijke pad van de nieuwe map is:
+                // storage/filesystem/server/mijn/nieuwe-map
+                const opslagMap = _storage.filesystem("server", "mijn/nieuwe-map")
+                const map = opslagMap.path()
+
+                // Het werkelijke pad van het nieuwe bestand is:
+                // storage/filesystem/server/mijn/map/nieuw-bestand.txt
+                const opslagBestand = _storage.filesystem("server", "mijn/map", "nieuw-bestand.txt")
+                const bestand = opslagBestand.path()
+            `
+        },
+    ]}
+/>
+
+## Besturingssysteem
+
+Voor de belangrijkste bewerkingen voor het manipuleren van bestanden en mappen op elke locatie in het besturingssysteem gebruiken we de resource `_os`:
+
+#### Mappen in het besturingssysteem
+
+Zorgt ervoor dat een bestaande map wordt opgehaald, bijvoorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mijnMap = _os.folder("/tmp/mijn/map")
+            `
+        },
+    ]}
+/>
+
+#### Bestanden in het besturingssysteem
+
+Zorgt ervoor dat een bestaand bestand wordt opgehaald, bijvoorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mijnBestand = _os.file("/tmp/mijn/map/bestand.txt")
+            `
+        },
+    ]}
+/>
+
+#### Paden in het besturingssysteem
+
+Haalt een pad naar een bestand of map op, ongeacht of het bestaat, bijvoorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nieuwBestand = _os.path("/tmp/mijn/map/nieuw-bestand.txt")
+            `
+        },
+    ]}
+/>
+
+## Mappen maken
+
+De methode `mkdir` maakt een map.
+
+In het volgende voorbeeld wordt de opgegeven map in de hoofdmap van de applicatie gemaakt:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const map = _app.path("tijdelijk")
+                map.mkdir()
+            `
+        },
+    ]}
+/>
+
+Om een submap in een bestaande map te maken, geef je het volledige pad op en scheid je de mappenhiërarchie met `/`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const submap = _app.path("tijdelijk/andere")
+                submap.mkdir()
+            `
+        },
+    ]}
+/>
+
+Met `mkdirs` worden de bovenliggende mappen en/of submappen aangemaakt als ze niet bestaan; zo kun je een mappenstructuur in de applicatie maken, bijvoorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mappenPad = _app.path("tijdelijk/a/b/c")
+                mappenPad.mkdirs()
+            `
+        },
+    ]}
+/>
+
+De resource `_storage` heeft de methode [ensurePath](/docs/library/resources/storage#ensurepath) die controleert of het pad bestaat en het aanmaakt als dat niet zo is:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const bestand = _storage.filesystem(
+                    "public",
+                    "tijdelijk/submap",
+                    "bestand.txt"
+                )
+                // Maakt de mappenstructuur aan als deze niet bestaat:
+                bestand.ensurePath()
+            `
+        },
+    ]}
+/>
+
+Zo zorgt `ensurePath` ervoor dat de mappenstructuur bestaat.
+
+## Bestanden en mappen verwijderen
+
+Met de methode `delete` kunnen we zowel mappen als bestanden verwijderen, waarbij mappen leeg moeten zijn; bekijk het voorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Verwijdert een lege map:
+                const legeMap = _app.folder("map/leeg")
+                legeMap.delete()
+
+                // Verwijdert een bestand:
+                const bestand = _app.file("map/bestand.txt")
+                bestand.delete()
+
+                // Verwijdert een pad, lege map of bestand:
+                const pad = _app.path("map1/bestand-of-lege-map")
+                pad.delete()
+            `
+        },
+    ]}
+/>
+
+Met `deleteAll` kun je alles verwijderen, dat wil zeggen alle bestanden, mappen en submappen recursief:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Verwijdert de map en alle inhoud recursief:
+                const legeMap = _app.folder("map/voorbeeld")
+                legeMap.deleteAll()
+
+                // Verwijdert het pad van een map en alle interne inhoud,
+                // inclusief submappen en bestanden:
+                const pad = _app.path("pad/map")
+                pad.deleteAll()
+            `
+        },
+    ]}
+/>
+
+Om alleen de bestanden in de map te verwijderen en niets in submappen te verwijderen, hebben we `deleteFiles`, dat een extensie kan ontvangen als je alleen bestanden met een specifieke extensie wilt verwijderen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Verwijdert alleen de bestanden in de map:
+                const map = _app.folder("map/voorbeeld")
+                map.deleteFiles()
+
+                // Verwijdert alleen de bestanden met de extensie JPG in de map:
+                const pad = _app.path("pad/map")
+                pad.deleteFiles("jpg")
+`
+        },
+    ]}
+/>
+
+Om alleen bestanden recursief te verwijderen en de mappenstructuur te behouden, hebben we `deleteAllFiles`, dat ook een extensie kan ontvangen als je alleen een specifiek bestandstype wilt verwijderen; bekijk deze twee voorbeelden:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Verwijdert alle bestanden in de map en submappen:
+                const map = _app.folder("map/voorbeeld")
+                map.deleteAllFiles()
+
+                // Verwijdert alle bestanden met de extensie JPG in de map en submappen:
+                const pad = _app.path("pad/map")
+                pad.deleteAllFiles("jpg")
+            `
+        },
+    ]}
+/>
+
+## Hernoemen of verplaatsen
+
+Een map verplaatsen is hetzelfde als deze hernoemen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const map = _app.folder("tijdelijk")
+                map.renameTo("test")
+            `
+        },
+    ]}
+/>
+
+Een map hernoemen en naar een ander niveau in de mappenhiërarchie verplaatsen is hetzelfde als de map verplaatsen:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const map = _app.folder("tijdelijk/a/b")
+                map.renameTo("test/z")
+            `
+        },
+    ]}
+/>
+
+En om een submap te verplaatsen zonder de naam te wijzigen, geef je gewoon het nieuwe pad op in de methode `renameTo`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const map = _app.folder("test/andere")
+                map.renameTo("andere")
+            `
+        },
+    ]}
+/>
+
+## Inhoud in bestanden opslaan
+
+Het genereren van inhoud in bestanden gebeurt via de methode `output`, die een object van het type [OutputStream](/docs/library/objects/OutputStream) oplevert.
+
+Om de gegevens naar `output` te schrijven gebruiken we de methode [printAndClose](/docs/library/objects/OutputStream#printandclose), die de inhoud naar het bestand schrijft en het bestand sluit waarbij de inhoud wordt opgeslagen.
+
+#### Tekstbestand schrijven
+
+Bekijk het voorbeeld van hoe je een bestand met tekstinhoud maakt:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _app.path("tijdelijk").mkdir()
+                const schrijver = _app.path("tijdelijk/bestand.txt").output()
+                schrijver.printAndClose("Mijn tekst hier...")
+            `
+        },
+    ]}
+/>
+
+> Telkens wanneer we `output` gebruiken, wordt een nieuw bestand aangemaakt; als je de code opnieuw uitvoert, wordt het bestand dus opnieuw aangemaakt.
+
+#### JSON-bestand schrijven
+
+Bekijk hoe we JSON-gegevens in bestanden kunnen opslaan:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _app.path("tijdelijk").mkdir()
+                const schrijver = _app.path("tijdelijk/klant.json").output()
+                schrijver.printAndClose(
+                    _val.map()
+                        .set("naam", "Maria Jansen")
+                        .set(
+                            "registraties",
+                            _val.list()
+                                .add(1).add(2).add(3)
+                        )
+                        .toJSON()
+                )
+            `
+        },
+    ]}
+/>
+
+Om de JSON ingesprongen te genereren, dus opgemaakt over meerdere regels en met inspringing, kunnen we het aantal spaties voor de inspringing doorgeven, bijvoorbeeld `.toJSON(4)`.
+
+> Meer details over de methode [toJSON in Values](/docs/library/objects/Values#tojsonindentfactor-int--string).
+
+## Inhoud uit bestanden lezen
+
+Het ophalen van inhoud uit bestanden gebeurt via de methode `input`, die een object van het type [InputStream](/docs/library/objects/InputStream) oplevert.
+
+Om de gegevens uit `input` te lezen gebruiken we de methode [readAllAndClose](/docs/library/objects/InputStream#readallandclose), die de inhoud van het bestand leest en het bestand sluit.
+
+#### Tekstbestand lezen
+
+Bekijk het voorbeeld van hoe je een bestand leest en de tekstinhoud ophaalt:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const bestand = _app.file("tijdelijk/bestand.txt")
+                const lezer = bestand.input()
+                _log.info(lezer.readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### JSON-bestand lezen
+
+Bekijk hoe we JSON-gegevens uit bestanden kunnen verwerken:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const bestand = _app.file("tijdelijk/bestand.txt")
+                const lezer = bestand.input()
+                const gegevens = _val.fromJSON(lezer.readAllAndClose())
+                _log.info("Gegevens van het bestand:", gegevens)
+            `
+        },
+    ]}
+/>
+
+> Meer details over de methode [fromJSON van de resource Val](/docs/library/resources/val#fromjson).
+
+## Bijzonderheden van Storage
+
+De Storage-resource heeft enkele methoden voor direct gebruik.
+
+We kunnen bijvoorbeeld via Storage toegang krijgen tot:
+
+- [Storage Output](/docs/library/resources/storage#output)
+- [Storage Input](/docs/library/resources/storage#input)
+
+Dit betekent dat we geen `file` of `path` hoeven op te halen om met `input` of `output` te werken.
+
+#### Tekstbestand in Storage schrijven
+
+Wanneer we een storage voor een bestand initialiseren, kunnen we schrijven met de methode [output](/docs/library/resources/storage#output), die een instantie van het object [OutputStream](/docs/library/objects/OutputStream) oplevert waarmee je de gegevens kunt verwerken en schrijven.
+
+Met `OutputStream` schrijft de methode [printAndClose](/docs/library/objects/OutputStream#printandclose) tekst (`string`) naar het bestand en sluit het.
+
+Bekijk dit voorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const tekst = _storage.filesystem("server", "tijdelijk", "bestand.txt")
+                tekst.ensurePath()
+                tekst.output().printAndClose("Mijn tekst hier...")
+            `
+        },
+    ]}
+/>
+
+#### Tekstbestand in Storage lezen
+
+Wanneer we een storage voor een bestand initialiseren, kunnen we lezen met de methode [input](/docs/library/resources/storage#input), die een instantie van het object [InputStream](/docs/library/objects/InputStream) oplevert waarmee je de gegevens kunt verwerken en lezen.
+
+Met `InputStream` leest de methode [readAllAndClose](/docs/library/objects/InputStream#readallandclose) het hele bestand en sluit het, waarbij de gegevens als tekst (`string`) worden geretourneerd.
+
+Bekijk dit voorbeeld:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const tekst = _storage.filesystem("server", "tijdelijk", "bestand.txt")
+                _log.info(tekst.input().readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### Willekeurig bestand in Storage maken
+
+De resource `_storage` maakt het mogelijk willekeurige bestandsnamen te genereren met de methode [newRandomFile](/docs/library/resources/storage#newrandomfile).
+
+Je moet een storage initialiseren voor het pad van een map; bij het uitvoeren van de methode `newRandomFile` geef je de extensie van het gewenste bestand door.
+
+De methode retourneert een nieuwe storage-instantie voor het automatisch gegenereerde willekeurige bestand, bedoeld voor gebruik in de oorspronkelijke map.
+
+Bekijk hoe je een bestand met extensie `TXT` en een willekeurige naam genereert:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const map = _storage.filesystem("server", "tijdelijk")
+                const bestand = map.newRandomFile("txt")
+                bestand.output().printAndClose("Mijn tekst hier...")
+            `
+        },
+    ]}
+/>
+
+## Conclusie
+
+Met het polyglotte low-code framework van Netuno kunnen we alle belangrijke bewerkingen op mappen en bestanden rechtstreeks uitvoeren.
+
+Door de specifieke resources te gebruiken voor het bewerken van bestanden en mappen in:
+
+- `_app` - Applicatie
+- `_storage` - Storage van de applicatie
+- `_os` - Besturingssysteem
+
+> Vanwege best practices en organisatie moeten we prioriteit geven aan het gebruik van **storage**; uitzonderingen moeten alleen incidentele en strikt noodzakelijke gevallen zijn.
+
+Netuno zorgt aan het einde van de serviceverwerking voor het automatisch sluiten van inputs en outputs, maar volgens best practices moeten we proberen ze altijd te sluiten.

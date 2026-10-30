@@ -2,71 +2,72 @@
 sidebar_position: 2
 id: apps
 title: Apps
-sidebar_label: Apps
 ---
 
-_Netuno_ is a multi application server that spread this access to all applications through domains and subdomains.
+Netuno is a multi-application server that distributes access to applications through domains and subdomains.
 
-Multiple web applications that can be both public and private, as _Netuno_ builds backoffices so by default the applications always have a private access however, the public interface will be optional.
+Multiple web applications can be either public or private, as Netuno builds back offices. So, as a rule, applications always have private access, but the public interface is optional.
 
-When developing multiple applications on _Netuno_, they can either be disconnected or even linked at the database level.
+When developing multiple applications in Netuno, they can be either decoupled or even coupled at the database level.
 
-Meaning that we can share the same database for multiple applications or have separate databases for each application.
+This means that we can share the same database across multiple applications or have separate databases for each application.
 
-## Decoupled Applications in Multiple Databases
+## Decoupled Applications Across Multiple Databases
 
-Does not make sense to share the same database, when refering to completely different applications, with distinc scopes.
+When dealing with applications with completely distinct scopes, it makes no sense for them to share the same database.
 
-Imagine that you have an application to send a Newsletter, another to manage Books and another to manage Deliveries, none of each need information stored in another application, beacuse they are completely distinc.
+Imagine you have an application for sending newsletters, another for managing books, and another for managing deliveries, and none of them needs information stored in another application; they are completely independent.
 
-So there is no reason to share the same database, although each one has its own database:
+So there is no reason for them to share the same database; instead, each should have its own database:
 
-![Decoupled applications.](/docs/assets/business/apps-db-en-decoupled.svg "Decoupled applications.")
+![Decoupled applications.](/docs/assets/business/apps-db-pt-desacopladas.svg "Decoupled applications.")
 
-To summarize, none of the applications knows the data stored in the other applications, although its entire function is independent of the other existing applications.
+In this way, no application knows the information stored in the other applications, and all its operation is independent of the other existing applications.
 
-## Linked applications in the same Database
+## Coupled Applications on the Same Database
 
-While working with applications that need to share information and that have a large amount of data, database sharing is the most viable solution in terms of performance, however not the best solution relating to security and data integrity.
+When working with applications that need to share information and there may be a large volume of data, sharing the database is the most viable solution in terms of performance, but it is not the best solution in terms of data security and integrity.
 
-Therefore, for security and integrity reasons, large web applications are usually created where everything is centralized in a complex application and that uses its exclusive database, if the application needs external data then it can integrate with other databases and web services if it is required.
+Thus, for security and integrity reasons, large web applications are usually created where everything is centralized in a complex application that uses its exclusive database; if the application needs external data, it can integrate with other databases and web services if necessary.
 
-_Netuno_ already provides all the tools for development of this kind of applications and also offers a good solution for shared database.
+In this case, Netuno already provides all the means for developing this type of application, but it also offers a good solution for applications with a shared database.
 
-Security and Data Integrity always was a big issue, However with _Netuno_ when several applications share the same database they are automatically limited to their tables that are related to their forms.
+Since the main problem is data security and integrity, with Netuno when several applications use the same database they are automatically limited to their tables that are related to their forms.
 
-Also allows sharing the form, additionally its table by the other applications that are linked to the database.
+It allows sharing the form and consequently its table with the other applications that are coupled in the database.
 
-Imagine the scenario in which one of you have an application for customer management, second for supplier management and a third for invoicing, because you will have invoices from suppliers to be paid as well as from customers to receive.
+Imagine the scenario in which you have an application for customer management, another for supplier management, and another for invoicing, because you will have both supplier invoices to pay and customer invoices to receive.
 
->The client app should not share data with the supplier app, because they are different apps.
+The customer application should not share data with the supplier application; they are distinct applications.
 
-Therefore, the billing application needs to be integrated with both applications to obtain data from customers and suppliers in order to be able to relate invoices and manage collections and payments in different situations.
+But the invoicing application needs to integrate with both applications to obtain data from the customer and supplier applications so it can relate invoices and manage collections and payments in the different situations.
 
-![Coupled applications.](/docs/assets/business/apps-db-en-coupled.svg "Coupled applications.")
+![Coupled applications.](/docs/assets/business/apps-db-pt-acopladas.svg "Coupled applications.")
 
-To ensure that the applications do not interfere with each other's sensitive data, it is also recommended to use different database accesses for each application, and you can even control your access to the tables via the database to ensure that there is no unwanted interference.
+To ensure that applications do not interfere with each other's sensitive data, it is also recommended to use distinct database accesses for each application, and you can also control their table access via the database to ensure there is no unwanted interference.
 
->Moreover, _Netuno_ performs the control to separate what is from each app and also what is shared between them.
+Beyond that, Netuno performs the control to separate what belongs to one application or another and also what is shared between them.
 
-## Address of each App
+## Address of Each Application
 
-_Netuno_ automatically deliver access to applications across domain and subdomain.
+Netuno automatically distributes access to applications through the domain and subdomain.
 
-When a request arrives at _Netuno_ the domain is processed as follows
+When a request arrives at Netuno, the domain is processed as follows:
 
-> http://my-app-subdomain.my-domain.org/
+![Example image of the application address with subdomain.](/docs/assets/business/apps-subdomain.svg "Applications with subdomain.")
 
-_Netuno_ looks a first point if there is an application with this name. If there is then this will be the application receiving the request.
+Netuno checks up to the first dot whether an application with this name exists.
 
-If there is not, then the order will be delivered to the standard application (_default_).
+If an application with this name exists, then this will be the application that receives the request.
 
-This domain resolution also works when there is a sub-subdomain, as example:
+If no application with this name exists, then the request will be delivered to the default application (_default_).
 
-> http://my-app-sub-subdomain.subdomain.my-domain.org/
+This domain resolution also works when it is a sub-subdomain, for example:
 
-And here we go, it defines which application will receive the request to be processed.
+![Example image of the application address with sub-subdomain.](/docs/assets/business/apps-sub-subdomain.svg "Applications with sub-subdomain.")
 
-_Netuno_ also allows you to define an exact address with a domain for the application, just define what will be the exact address that the application will work with.
+That is, up to the first dot, it is defined which application will receive the request to be processed.
 
-> Using the automatic way to process domains allows applications to function in the vast majority of cases, if there are still situations that require a completely different and specific address for the application to work, then it is necessary to define it in your configuration.
+And Netuno also allows defining an exact address with a domain for the application; you only need to define the exact address at which the application will operate.
+
+> Using the automatic way to process domains allows applications to work in the vast majority of cases; if even so there are situations that require a completely different and specific address for the application to work, then it is necessary to define it in its configuration.

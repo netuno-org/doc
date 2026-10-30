@@ -1,0 +1,217 @@
+---
+id: setup
+title: 数据初始化设置
+sidebar_label: 数据初始化设置
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+import PolyglotPath from "@site/src/components/PolyglotPath";
+
+## 简介
+
+使用 Netuno 开发应用时，首先要通过构建表单和字段来构建数据库。
+
+当团队协作开发，或需要将应用开发迁移到另一个环境时，必须创建包含代码的数据库备份。
+
+这样在目标环境中就需要重新配置数据库，应用才能像在源环境中开发时一样运行。
+
+这个流程的问题在于，每次数据库发生变更时都必须记得创建新的备份。参与开发的人越多，和/或需要发布应用的环境越多，这个过程就越复杂。
+
+因此，Netuno 为解决这个问题提供了应用*初始化*系统，它会自动生成数据库结构（*schema*），此外还允许通过额外的*脚本*手动编程加载初始数据。
+
+它还允许更改数据库服务器类型，确保*初始化*能正常执行，应用也不会出现任何问题。这意味着应用可以在 H2DataBase 中开发，而借助自动生成的 schema，可以将应用的数据库连接更改为 PostgreSQL 或 MariaDB。应用在新数据库上首次执行时，一切都会被重新构建，无论数据库服务器类型如何更改。
+
+因此，可以完全更改数据库，而不会影响已经完成的开发。
+
+初始化编程文件位于应用文件夹中的：
+
+- `server/setup`
+
+## 初始化配置
+
+在应用的环境配置中，这些文件位于：
+
+- `/apps/我的应用/config/_development.json`
+- `/apps/我的应用/config/_production.json`
+
+可以通过以下配置控制 `setup` 的行为：
+
+```json
+    ...
+    "setup": {
+        "enabled": true,
+        "schema": {
+            "auto_create": true,
+            "execution": true
+        },
+        "scripts": {
+            "execution": true
+        }
+    },
+    ...
+```
+
+##### `enabled`：布尔值 > _默认 true_
+
+定义 setup 是否启用，并在应用首次执行时启用或停用数据初始化操作的执行。
+
+##### `schema.auto_create`：布尔值 > _默认 true_
+
+允许 Netuno 决定在创建或修改任何表单或字段时，是否生成数据库 schema 文件。
+
+##### `schema.execution`：布尔值 > _默认 true_
+
+控制在应用首次执行时进行初始化操作期间是否执行 schema。
+
+##### `scripts.execution`：布尔值 > _默认 true_
+
+在应用首次执行时进行初始化操作期间，启用或停用额外脚本的执行。
+
+## Schema
+
+在 Netuno Web 界面中创建或修改表单和字段时，会在 setup 文件夹内生成 schema 文件，形式如下：
+
+<PolyglotPath files={[
+    "server/setup/_schema-表单名称"
+]} />
+
+其中，应用中每个表单都会有一个 `_schema-***` 文件。
+
+不应手动修改这些文件，因为它们由 Netuno 自动生成。
+
+因此，如果更改了这些文件的内容，下次生成 schema 时它们会被自动替换，直接对这些文件所做的更改将会丢失。
+
+要执行数据库 schema 的自动生成，必须确保配置 __schema.auto_create__ 已启用，并且 __server__ 文件夹内存在 __setup__ 文件夹。
+
+## 脚本
+
+自定义编程代码脚本是位于 __setup__ 文件夹中、且不以 `_` 开头的文件。
+
+这些脚本的主要目标是加载数据，确保数据库包含应用正常运行所需的最低限度信息。
+
+这样，当应用在另一个环境中重新配置时，会自动加载初始数据，从而可以立即开始使用。
+
+要执行这些数据加载操作，应使用 *_db* 资源的功能。
+
+__scripts__ 在 __schemas__ 执行之后，按照不以 `_` 开头的文件名的字母数字顺序执行。
+
+> 最好让文件名以数字序列开头，以便定义执行顺序，因此自定义脚本按照不以 `_` 开头的文件名顺序执行。
+
+### 插入自定义数据
+
+为了省去在数据库中执行查询以验证是否可以执行数据 __insert__ 的工作，Netuno 提供了 `insertIfNotExists` 函数。
+
+该函数会检查数据库中是否存在与定义完全相同的数据，如果不存在，则执行创建。
+
+其使用示例之一是加载表单 __领土类型__ 的 __代码__ 和 __名称__ 字段，其中表名为 __领土类型__，包含 __代码__ 和 __名称__ 列。为此，只需创建包含以下内容的文件：
+
+<PolyglotCode
+    file="server/setup/001-领土类型"
+    codes={[{
+        lang: 'javascript',
+        code: `
+            _db.insertIfNotExists("领土类型", _val.map()
+                .set("代码", "1001")
+                .set("名称", "大陆型")
+            );
+            _db.insertIfNotExists("领土类型", _val.map()
+                .set("代码", "1002")
+                .set("名称", "群岛型")
+            );
+            _db.insertIfNotExists("领土类型", _val.map()
+                .set("代码", "2003")
+                .set("名称", "海洋型")
+            );
+            _db.insertIfNotExists("领土类型", _val.map()
+                .set("代码", "3004")
+                .set("名称", "空域型")
+            );
+        `
+    }]}
+/>
+
+## 处理流程
+
+如前所述，*初始化*只会在应用首次执行时运行。
+
+执行顺序如下：
+
+1. `_start` - 执行初始化文件，该文件可以包含任何类型的自定义编程：
+    <PolyglotPath files={["我的应用/server/setup/_start"]} />
+2. `_cleanup` - 以编程方式执行表单、报表及其相应字段的移除：
+    <PolyglotPath files={["我的应用/server/setup/_cleanup"]} />
+3. `_schema-*` - 执行所有以 *_schema-* 为前缀的脚本，其中包含创建表单、报表及其相应字段的命令：
+    <PolyglotPath files={[
+        "我的应用/server/setup/_schema-自动生成结构",
+        "我的应用/server/setup/_schema-类别",
+        "我的应用/server/setup/_schema-产品",
+        "我的应用/server/setup/_schema-客户",
+    ]} />
+4. `001-outros_scripts` - 执行自定义编程的 *scripts* 文件，即所有不以 `_` 开头的文件，这些文件通常会包含必要的初始数据 __inserts__ 或其他自定义开发内容，例如：
+    <PolyglotPath files={[
+        "我的应用/server/setup/001-插入自定义数据",
+        "我的应用/server/setup/002-类别",
+        "我的应用/server/setup/003-产品",
+        "我的应用/server/setup/004-客户",
+    ]} />
+5. *_end* - 执行收尾文件，该文件可以包含任何类型的自定义编程：
+    <PolyglotPath files={["我的应用/server/setup/_end"]} />
+
+也就是说，允许在 *start* 和 *end* 脚本中创建自定义代码，以执行某些适合在初始化之前或初始化完成时运行的操作。
+
+需要强调的是，这个处理流程会在应用首次执行时运行，因此必须确保在创建数据之前检查数据是否存在。
+
+请确保以下环境*配置*已启用，以便根据环境在 `我的应用/config/_development.json` 或 `我的应用/config/_production.json` 文件中执行此流程：
+
+* 完全启用或停用任何初始化操作的执行：
+
+  `setup.enabled = true|false`
+
+* 启用或停用 *_schemas-* 的执行：
+
+  `setup.schema.execution = true|false`
+
+* 启用或停用 *脚本* 的执行：
+
+  `setup.scripts.execution = true|false`
+
+## 清理
+
+要以编程方式移除表单和字段，应使用 `_cleanup.js` 脚本，这可以确保所有同步项目文件的环境在执行初始化时，如果结构存在，就会被移除。
+
+清理脚本示例：
+
+<PolyglotCode file="server/setup/_cleanup"
+    codes={[{
+        lang: 'javascript',
+        code: `
+            // 删除表单 区域：
+            _form.dropIfExists("区域");
+            // 删除表单 地区 中的字段 子区域_id：
+            _form.dropFieldIfExists("地区", "子区域_id");
+        `
+    }]}
+/>
+
+## DBML
+
+每当 Netuno 执行数据初始化时，都会生成以下文件：
+
+- `server/setup/_db-schema.dbml`
+
+该文件包含完整的数据结构，可用于人工智能。
+
+基于 DBML 的内容，人工智能可以理解数据结构，并生成精确的 SQL 查询。
+
+试着将此文件作为附件添加到提示词中，并要求生成复杂的 SQL 查询，你会获得不错的结果。
+
+## 结论
+
+Netuno 中应用*初始化*流程的主要功能如下：
+
+* *_schema-*：自动生成所有表单和报表及其相应字段的完整结构，确保应用数据库结构的整体一致性，尤其是当应用在全新的空数据库上执行时。
+* *脚本*：执行数据库操作，确保应用在首次执行时始终包含预先加载的必需数据。
+
+通过这种方式，Netuno 允许应用在新环境中运行，即使更改数据库类型，也能确保应用正常运行，而无需对数据库执行 __备份__ 和 __恢复__。
+
+此外，还允许将自动和手动生成的所有配置代码使用 GIT 等工具进行版本控制。

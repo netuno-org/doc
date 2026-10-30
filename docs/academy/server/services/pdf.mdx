@@ -7,13 +7,13 @@ sidebar_label: PDF
 import PolyglotCode from "@site/src/components/PolyglotCode";
 import PolyglotPath from "@site/src/components/PolyglotPath";
 
-Process customized PDF files.
+Process custom PDF files.
 
 ## Introduction
 
-Netuno generates PDF files with support for images, tables, fonts, and more, through the [PDF](/docs/library/resources/pdf) resource that allows a low-code abstraction of [iTextPDF](https://itextpdf.com/) for all the programming languages supported by Netuno.
+Netuno generates PDF files with support for images, tables, fonts, and much more, through the [PDF](/docs/library/resources/pdf) feature, which provides a low-code abstraction of [iTextPDF](https://itextpdf.com/) for the various programming languages supported by Netuno.
 
-The application that comes with Netuno called **demo** (demonstration application) contains many examples of possible code implementations in various languages, including a demonstration of exporting to PDF through the `export-pdf` service located at:
+The application that comes with Netuno called **demo** (demonstration application) contains many examples of possible code implementations in various languages, including the demonstration of PDF export through the `export-pdf` service located at:
 
 <PolyglotPath files={[
     `netuno/apps/demo/server/services/samples/%lang%/export-pdf`
@@ -21,7 +21,7 @@ The application that comes with Netuno called **demo** (demonstration applicatio
 
 ## Initialization
 
-Firstly, you need to create the object that will contain the context of the new document that is being created, by default the page size is A4.
+First, you need to create the object that will contain the context of the new document being created; by default, the page size is A4.
 
 When creating the document, you define where it will be generated.
 
@@ -62,6 +62,7 @@ If nothing is defined, it will be generated in the service's data output, for ex
     ]}
 />
 
+
 To generate a PDF file inside the application's `docs` folder, you can do it like this:
 
 <PolyglotCode
@@ -99,8 +100,7 @@ To generate a PDF file inside the application's `docs` folder, you can do it lik
     ]}
 />
 
-
-If you are going to generate the document in a new file outside of the Application, for example:
+If you want to generate the document in a new file outside the application, for example:
 
 <PolyglotCode
     codes={[
@@ -137,7 +137,7 @@ If you are going to generate the document in a new file outside of the Applicati
     ]}
 />
 
-Or even in the application `storage`:
+Or even in the application's `storage`:
 
 <PolyglotCode
     codes={[
@@ -174,13 +174,13 @@ Or even in the application `storage`:
     ]}
 />
 
-> By default, the document is created in **A4** page format.
+> By default, the document is created with the **A4** page format.
 
 ### Page Format
 
-To customize the page format, simply indicate it when creating the document.
+To customize the page format, simply specify it when creating the document.
 
-Creates a new document to output data from the service with pages in **letter** format:
+Creates a new document for the service's data output with pages in **letter** format:
 
 <PolyglotCode
     codes={[
@@ -217,7 +217,7 @@ Creates a new document to output data from the service with pages in **letter** 
     ]}
 />
 
-Creates a new document for a file in the application root with the **B3** page format:
+Creates a new document for a file at the root of the application with **B3** page format:
 
 <PolyglotCode
     codes={[
@@ -254,7 +254,7 @@ Creates a new document for a file in the application root with the **B3** page f
     ]}
 />
 
-Creates a new document in the application's `storage` with the **legal** page format:
+Creates a new document in the application's `storage` with **legal** page format:
 
 <PolyglotCode
     codes={[
@@ -291,9 +291,9 @@ Creates a new document in the application's `storage` with the **legal** page fo
     ]}
 />
 
-> See the documentation on [setting page sizes](/docs/library/resources/pdf/#pagesize).
+> See the documentation about [page size definitions](/docs/library/resources/pdf/#pagesize).
 
-PDF documents can be created with a custom page size definition. To do this, use `pageSize` by passing the value of the page width and height, for example:
+PDF documents can be created with a custom page size definition; to do this, use `pageSize` by passing the page width and height values, for example:
 
 <PolyglotCode
     codes={[
@@ -308,9 +308,9 @@ PDF documents can be created with a custom page size definition. To do this, use
 
 ## HTTP Header
 
-To create a service in the REST API that returns a PDF file as data output, you need to add the `Content-Type` parameter of the HTTP protocol to the header.
+To create a service in the REST API that returns a PDF file as data output, you need to add the HTTP protocol's `Content-Type` parameter to the header.
 
-Example of how to set content as PDF:
+Example of how to set the content as PDF:
 
 <PolyglotCode
     codes={[
@@ -323,7 +323,7 @@ Example of how to set content as PDF:
     ]}
 />
 
-The `pdf` code is an abbreviation for:
+The `pdf` code is shorthand for:
 
 <PolyglotCode
     codes={[
@@ -355,7 +355,7 @@ To create a new page, `areaBreak` is used:
 
 ## Paragraph
 
-Add a new paragraph in the document:
+Adds a new paragraph to the document:
 
 <PolyglotCode
     codes={[
@@ -392,13 +392,13 @@ To add a paragraph at a fixed position:
 
 In the code above, in the `setFixedPosition` method, the first parameter is the X position (`100`), the second parameter is the Y position (`500`), and the third parameter is the width (`200`).
 
-**Attention**: if Y is set to `0`, this means that it is at the bottom of the page, so to go up you need to increase the Y value, the higher the Y value, the more it will appear at the top, but if it is too high, beyond of the page length so it will not be visible.
+**Attention:** if Y is set to the value `0`, it means it stays at the bottom of the page, so to move it up you need to increase the Y value; the higher the Y value, the closer to the top it will appear, but if it is too high beyond the page length, it will not be visible.
 
-> Documentation with all [iText Paragraph](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Paragraph.html) object methods.
+> Documentation with all methods of the [iText Paragraph](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Paragraph.html) object.
 
 ## Font
 
-To define a native font we can do it as follows:
+To define a native font, we can do it as follows:
 
 <PolyglotCode
     codes={[
@@ -450,8 +450,7 @@ To define a native font we can do it as follows:
     ]}
 />
 
-To define a customized font, we can use `storage`:
-
+To define a custom made font, we can use `storage`:
 
 <PolyglotCode
     codes={[
@@ -488,7 +487,7 @@ To define a customized font, we can use `storage`:
     ]}
 />
 
-We can also use a file inside the application, as this example shows that the font is inside the `fonts` folder in the application root:
+We can also use a file inside the application, as this example shows, where the font is inside the `fonts` folder at the root of the application:
 
 <PolyglotCode
     codes={[
@@ -525,8 +524,7 @@ We can also use a file inside the application, as this example shows that the fo
     ]}
 />
 
-
-Or use a file in any path on the system, so in this example the font is inside the `fonts` folder which is inside the system's temporary files folder:
+Or even use a file at any path on the system, so in this example the font is inside the `fonts` folder, which is inside the system's temporary files folder:
 
 <PolyglotCode
     codes={[
@@ -563,9 +561,9 @@ Or use a file in any path on the system, so in this example the font is inside t
     ]}
 />
 
-> Documentation with all [iText Font](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/kernel/font/PdfFont.html) object methods.
+> Documentation with all methods of the [iText Font](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/kernel/font/PdfFont.html) object.
 
-To use the font in texts, the font constant must be passed to the paragraph, like this:
+To use the font in the texts, you must pass the font constant to the paragraph, like this:
 
 <PolyglotCode
     codes={[
@@ -573,7 +571,7 @@ To use the font in texts, the font constant must be passed to the paragraph, lik
             lang: 'javascript',
             code: `
                 pdfDocument.add(
-                    _pdf.paragraph("Using bold font.")
+                    _pdf.paragraph("Using the bold font.")
                         .setFont(helveticaBold)
                         .setFontSize(15)
                 )
@@ -584,7 +582,7 @@ To use the font in texts, the font constant must be passed to the paragraph, lik
 
 ## Image
 
-Inserting images into the programmatically generated PDF document is done in this way:
+Inserting images into a PDF document generated programmatically is done like this:
 
 <PolyglotCode
     codes={[
@@ -602,7 +600,7 @@ Inserting images into the programmatically generated PDF document is done in thi
 
 Note that the `scaleAbsolute` method is very useful for resizing and adjusting the image size.
 
-Alternatively, we can use a file within the application, as in this example:
+Alternatively, we can use a file inside the application, as in this example:
 
 <PolyglotCode
     codes={[
@@ -639,7 +637,7 @@ Alternatively, we can use a file within the application, as in this example:
     ]}
 />
 
-Or use a file in any path on the system, as in this example:
+Or even use a file at any path on the system, as in this example:
 
 <PolyglotCode
     codes={[
@@ -676,7 +674,7 @@ Or use a file in any path on the system, as in this example:
     ]}
 />
 
-To add an image in a fixed position:
+To add an image at a fixed position:
 
 <PolyglotCode
     codes={[
@@ -693,23 +691,23 @@ To add an image in a fixed position:
     ]}
 />
 
-Since above, in the `setFixedPosition` method, the first parameter is the X position (`100`), the second parameter is the Y position (`500`).
+In the above, in the `setFixedPosition` method, the first parameter is the X position (`100`), and the second parameter is the Y position (`500`).
 
-**Attention**: if Y is set to 0, this means that it is at the bottom of the page, so to go up you need to increase the Y value, the higher the Y value, the more it will appear at the top, but if it is too high, beyond of the page length so it will not be visible.
+**Attention:** if Y is set to the value `0`, it means it stays at the bottom of the page, so to move it up you need to increase the Y value; the higher the Y value, the closer to the top it will appear, but if it is too high beyond the page length, it will not be visible.
 
-> Documentation with all [iText Image](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Image.html) object methods.
+> Documentation with all methods of the [iText Image](https://api.itextpdf.com/iText/java/8.0.3/com/itextpdf/layout/element/Image.html) object.
 
 ## Table
 
-It is possible to create tables, which allows you to present a set of data in a more readable way.
+It is possible to create tables, which allows presenting a data set in a more readable way.
 
-The number of columns in the table is defined with the parameter: `_pdf.table(numberOfColumns)`
+The number of table columns is defined with the parameter: `_pdf.table(numberColumns)`
 
-In the example below, the `numberOfColumns` is the number `1`, that is, one column.
+In the example below, `numberColumns` is the number `1`, that is, one column.
 
-As we have added two cells in the table, so the second cell goes to the next row.
+Since we add two cells to the table, the second cell goes to the next row.
 
-Repair:
+Note:
 
 <PolyglotCode
     codes={[
@@ -743,13 +741,13 @@ Repair:
     ]}
 />
 
-With the `addCell` method you can insert the definition of cells with their respective content.
+The `addCell` method allows inserting the cell definitions with their respective content.
 
-> Documentation with all [iText Cell](https://api.itextpdf.com/iText/java//8.0.3/com/itextpdf/layout/element/Cell.html) object methods.
+> Documentation with all methods of the [iText Cell](https://api.itextpdf.com/iText/java//8.0.3/com/itextpdf/layout/element/Cell.html) object.
 
-## Close and Save the Document
+## Closing and Saving the Document
 
-The document is only fully saved or generated, only when the `close` method is called, as follows:
+The document is only fully saved or generated when the `close` method is called, as follows:
 
 <PolyglotCode
     codes={[
@@ -762,11 +760,11 @@ The document is only fully saved or generated, only when the `close` method is c
     ]}
 />
 
-Where the document is generated is defined at initialization, so it is at document initialization that we define where the final document will be generated, whether it will be in the service's data output (`output`) or in a file.
+Where the document is generated is defined at initialization, so it is when initializing the document that we define where the final document will be generated, whether in the service's data output (`output`) or in a file.
 
-## Edit File
+## Editing a File
 
-You can edit an existing PDF document, for example:
+It is possible to edit an existing PDF document, for example:
 
 <PolyglotCode
     codes={[
@@ -803,11 +801,11 @@ You can edit an existing PDF document, for example:
     ]}
 />
 
-The final generated document will be sent in the service's data output.
+The generated final document will be sent to the service's data output.
 
-> It is very useful to use a PDF as a base, as if it were a template.
+> It is very useful for using a PDF as a base, as if it were a template.
 
-Example for editing a document in the application `storage`:
+Example of editing a document in the application's `storage`:
 
 <PolyglotCode
     codes={[
@@ -844,7 +842,7 @@ Example for editing a document in the application `storage`:
     ]}
 />
 
-Uses a document as a base but saves changes to a new PDF file:
+Uses a document as a base but saves the changes to a new PDF file:
 
 <PolyglotCode
     codes={[
@@ -852,8 +850,8 @@ Uses a document as a base but saves changes to a new PDF file:
             lang: 'javascript',
             code: `
                 const pdfDocument = _pdf.openDocument(
-                    _app.file("document-base.pdf"),
-                    _app.file("document-final.pdf")
+                    _app.file("base-document.pdf"),
+                    _app.file("final-document.pdf")
                 )
             `
         },
@@ -861,8 +859,8 @@ Uses a document as a base but saves changes to a new PDF file:
             lang: 'python',
             code: `
                 pdfDocument = _pdf.openDocument(
-                    _app.file("document-base.pdf"),
-                    _app.file("document-final.pdf")
+                    _app.file("base-document.pdf"),
+                    _app.file("final-document.pdf")
                 )
             `
         },
@@ -870,8 +868,8 @@ Uses a document as a base but saves changes to a new PDF file:
             lang: 'ruby',
             code: `
                 pdfDocument = _pdf.openDocument(
-                    _app.file("document-base.pdf"),
-                    _app.file("document-final.pdf")
+                    _app.file("base-document.pdf"),
+                    _app.file("final-document.pdf")
                 )
             `
         },
@@ -879,8 +877,8 @@ Uses a document as a base but saves changes to a new PDF file:
             lang: 'kotlin',
             code: `
                 val pdfDocument = _pdf.openDocument(
-                    _app.file("document-base.pdf"),
-                    _app.file("document-final.pdf")
+                    _app.file("base-document.pdf"),
+                    _app.file("final-document.pdf")
                 )
             `
         },
@@ -888,15 +886,15 @@ Uses a document as a base but saves changes to a new PDF file:
             lang: 'groovy',
             code: `
                 def pdfDocument = _pdf.openDocument(
-                    _app.file("document-base.pdf"),
-                    _app.file("document-final.pdf")
+                    _app.file("base-document.pdf"),
+                    _app.file("final-document.pdf")
                 )
             `
         },
     ]}
 />
 
-Example using a document in `storage` as a base but saving it in another:
+Example using a document in `storage` as a base but saving it to another one:
 
 <PolyglotCode
     codes={[
@@ -904,8 +902,8 @@ Example using a document in `storage` as a base but saving it in another:
             lang: 'javascript',
             code: `
                 const pdfDocument = _pdf.openDocument(
-                    _storage.filesystem("server", "agreement-base.pdf"),
-                    _storage.filesystem("server", "agreement-final.pdf")
+                    _storage.filesystem("server", "base-contract.pdf"),
+                    _storage.filesystem("server", "final-contract.pdf")
                 )
             `
         },
@@ -913,8 +911,8 @@ Example using a document in `storage` as a base but saving it in another:
             lang: 'python',
             code: `
                 pdfDocument = _pdf.openDocument(
-                    _storage.filesystem("server", "agreement-base.pdf"),
-                    _storage.filesystem("server", "agreement-final.pdf")
+                    _storage.filesystem("server", "base-contract.pdf"),
+                    _storage.filesystem("server", "final-contract.pdf")
                 )
             `
         },
@@ -922,8 +920,8 @@ Example using a document in `storage` as a base but saving it in another:
             lang: 'ruby',
             code: `
                 pdfDocument = _pdf.openDocument(
-                    _storage.filesystem("server", "agreement-base.pdf"),
-                    _storage.filesystem("server", "agreement-final.pdf")
+                    _storage.filesystem("server", "base-contract.pdf"),
+                    _storage.filesystem("server", "final-contract.pdf")
                 )
             `
         },
@@ -931,8 +929,8 @@ Example using a document in `storage` as a base but saving it in another:
             lang: 'kotlin',
             code: `
                 val pdfDocument = _pdf.openDocument(
-                    _storage.filesystem("server", "agreement-base.pdf"),
-                    _storage.filesystem("server", "agreement-final.pdf")
+                    _storage.filesystem("server", "base-contract.pdf"),
+                    _storage.filesystem("server", "final-contract.pdf")
                 )
             `
         },
@@ -940,17 +938,17 @@ Example using a document in `storage` as a base but saving it in another:
             lang: 'groovy',
             code: `
                 def pdfDocument = _pdf.openDocument(
-                    _storage.filesystem("server", "agreement-base.pdf"),
-                    _storage.filesystem("server", "agreement-final.pdf")
+                    _storage.filesystem("server", "base-contract.pdf"),
+                    _storage.filesystem("server", "final-contract.pdf")
                 )
             `
         },
     ]}
 />
 
-With the document loaded, we can add content, and when closing with the `close` method at the end, the final document is generated with the new content added programmatically.
+With the document loaded, we can add content, and when closing it with the `close` method at the end, the final document is then generated with the new content added programmatically.
 
-Example of a service that uses an existing PDF as a template to generate a PDF file output with dynamic content added:
+Example of a service that uses an existing PDF as a template to generate a PDF file output with dynamically added content:
 
 <PolyglotCode
     codes={[
@@ -1037,12 +1035,11 @@ Example of a service that uses an existing PDF as a template to generate a PDF f
     ]}
 />
 
-
-## Read File
+## Reading a File
 
 To read a PDF document, extracting the text information.
 
-We use the `extract` method, which obtains all the data from the PDF file in a JSON object.
+We use the `extract` method, which gets all the PDF file data into a JSON object.
 
 <PolyglotCode
     codes={[
@@ -1089,13 +1086,13 @@ We use the `extract` method, which obtains all the data from the PDF file in a J
     ]}
 />
 
-The returned JSON has the key `content` with all the text content of the PDF file, and has the key `metadata` with the various properties of the PDF file.
+The returned JSON has the `content` key with all the text content of the PDF file, and has the `metadata` key with the various properties of the PDF file.
 
 Here is an example of the JSON returned by `extract`:
 
 ```json
 {
-  "content": "All text content of the PDF file goes here...",
+  "content": "All the text content of the PDF file goes here...",
   "metadata":{
     "Content-Type":"application/pdf",
     "dc:format":"application/pdf; version=1.4",
@@ -1113,15 +1110,15 @@ Here is an example of the JSON returned by `extract`:
 }
 ```
 
-There are many other data that are obtained in the `metadata` but that were omitted in the `...` so the example does not become too long.
+There are many other data items obtained in `metadata` but omitted in `...` so the example does not become too long.
 
-## Conversion
+## Converting
 
-It is possible to programmatically convert PDF to text or even HTML.
+It is possible to programmatically convert the PDF to text or even to HTML.
 
 ### PDF to Text
 
-We can extract the entire content of the PDF file in plain text using the method:
+We can extract all the PDF file content as plain text using the method:
 
 <PolyglotCode
     codes={[
@@ -1134,7 +1131,7 @@ We can extract the entire content of the PDF file in plain text using the method
     ]}
 />
 
-Example of how to use it to read a file in the application root:
+Example of how to use it to read a file at the root of the application:
 
 <PolyglotCode
     codes={[
@@ -1147,7 +1144,7 @@ Example of how to use it to read a file in the application root:
     ]}
 />
 
-Or using a file in the application's `storage`:
+Or even using a file in the application's `storage`:
 
 <PolyglotCode
     codes={[
@@ -1160,9 +1157,11 @@ Or using a file in the application's `storage`:
     ]}
 />
 
+
 ### PDF to HTML
 
-We can extract the entire content of the PDF file into HTML using the method:
+
+We can extract all the PDF file content as HTML using the method:
 
 <PolyglotCode
     codes={[
@@ -1175,7 +1174,7 @@ We can extract the entire content of the PDF file into HTML using the method:
     ]}
 />
 
-Example of how to use it to read a file in the application root:
+Example of how to use it to read a file at the root of the application:
 
 <PolyglotCode
     codes={[
@@ -1188,7 +1187,7 @@ Example of how to use it to read a file in the application root:
     ]}
 />
 
-Or using a file in the application's `storage`:
+Or even using a file in the application's `storage`:
 
 <PolyglotCode
     codes={[
@@ -1201,9 +1200,10 @@ Or using a file in the application's `storage`:
     ]}
 />
 
-### HTML para PDF
+### HTML to PDF
 
-It is possible to generate PDF files from HTML code using the following method:
+
+It is possible to generate PDF files from HTML code using the method:
 
 <PolyglotCode
     codes={[
@@ -1216,7 +1216,7 @@ It is possible to generate PDF files from HTML code using the following method:
     ]}
 />
 
-Example of how to use it to generate a download file in the service:
+Example of how to use it to generate a downloadable file in the service:
 
 <PolyglotCode
     codes={[
@@ -1294,7 +1294,7 @@ Example of how to use it to generate a download file in the service:
                                     <img width="50" src="\${icon.uri()}">
                                 </div>
                                 <p>
-                                    This is an example HTML code for generating a PDF file.
+                                    This is an example HTML for generating a PDF file.
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                                     tellus arcu, pharetra quis condimentum eget, dapibus convallis metus.
                                 </p>
@@ -1307,11 +1307,11 @@ Example of how to use it to generate a download file in the service:
                                     </thread>
                                     <tbody>
                                         <tr>
-                                            <td>Amelia Raine</td>
+                                            <td>Maria Luísa</td>
                                             <td>23</td>
                                         </tr>
                                         <tr>
-                                            <td>Jack Butler</td>
+                                            <td>José Matos</td>
                                             <td>38</td>
                                         </tr>
                                     </tbody>
@@ -1331,3 +1331,9 @@ Example of how to use it to generate a download file in the service:
         },
     ]}
 />
+
+## Videos
+
+Below are some example videos on how to generate PDF files programmatically:
+
+<iframe width="100%" height="420" src="https://www.youtube.com/embed/OyUzHr9hi0c?si=eTecDP0i0P_9rhG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

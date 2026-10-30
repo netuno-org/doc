@@ -1,0 +1,606 @@
+---
+id: files-manipulation
+title: Manipolazione di File e Cartelle
+sidebar_label: Manipolazione di File e Cartelle
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+## Introduzione
+
+Nel codice backend poliglotta della piattaforma Netuno, possiamo manipolare qualsiasi file o cartella.
+
+La manipolazione consiste nel poter creare, rinominare ed eliminare file e cartelle, modificare il contenuto dei file
+ed elencare il contenuto delle cartelle. In generale, sono queste le operazioni che normalmente dobbiamo fare a livello programmatico.
+
+Nella piattaforma Netuno ci sono risorse di programmazione low-code che permettono di manipolare le cartelle e i file
+interni all'applicazione, ma anche qualsiasi file e cartella del sistema in generale, cioè all'esterno dell'applicazione.
+
+È utile quando dobbiamo automatizzare qualche processo che deve intervenire su un file qualsiasi; vediamo come.
+
+Le risorse di programmazione poliglotta low-code che permettono di manipolare i file sono:
+
+- `_app` - [Applicazione](/docs/library/resources/app)
+- `_storage` - [Storage](/docs/library/resources/storage)
+- `_os` - [Sistema Operativo](/docs/library/resources/os)
+
+Attraverso queste risorse abbiamo i metodi per:
+
+- `.file` - File esistente.
+- `.folder` - Cartella esistente.
+- `.path` - Percorso generico, che può essere un file o una cartella, esistente o non esistente.
+
+Con questi metodi otteniamo un oggetto di tipo [File](/docs/library/objects/File), che fornisce tutti i mezzi per
+la manipolazione di file, cartelle e percorsi in generale, il che permette di eseguire operazioni come:
+
+- Creare file e cartelle.
+- Eliminare file e cartelle.
+- Elencare il contenuto delle cartelle.
+- Rinominare file e cartelle.
+- Leggere e scrivere dati nei file.
+- Eliminare cartelle e le rispettive sottocartelle e file in modo ricorsivo.
+
+## Applicazione
+
+Per eseguire le operazioni principali di manipolazione di file e cartelle all'interno della struttura dell'applicazione,
+utilizziamo la risorsa `_app`:
+
+#### Cartelle nell'Applicazione
+
+Garantisce che venga ottenuta una cartella esistente, ad esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const miaCartella = _app.folder("mia/cartella")
+            `
+        },
+    ]}
+/>
+
+#### File nell'Applicazione
+
+Garantisce che venga ottenuto un file esistente, ad esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mioFile = _app.file("mia/cartella/file.txt")
+            `
+        },
+    ]}
+/>
+
+#### Percorsi nell'Applicazione
+
+Ottiene un percorso di file o cartella, indipendentemente dal fatto che esista o meno, ad esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nuovoFile = _app.path("mia/cartella/nuovo-file.txt")
+            `
+        },
+    ]}
+/>
+
+## Storage
+
+Per eseguire le operazioni principali di manipolazione di file e cartelle all'interno della cartella `📁 storage` dell'applicazione,
+utilizziamo la risorsa `_storage`:
+
+#### Cartelle nello Storage
+
+Garantisce che venga ottenuta una cartella esistente, ad esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Il percorso reale della cartella sarà:
+                // storage/filesystem/server/mia/cartella
+                const storageMiaCartella = _storage.filesystem("server", "mia/cartella")
+                const miaCartella = storageMiaCartella.folder()
+            `
+        },
+    ]}
+/>
+
+#### File nello Storage
+
+Garantisce che venga ottenuto un file esistente, ad esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Il percorso reale del file sarà:
+                // storage/filesystem/server/mia/cartella/file.txt
+                const storageFile = _storage.filesystem("server", "mia/cartella", "file.txt")
+                const file = storageFile.file()
+            `
+        },
+    ]}
+/>
+
+#### Percorsi nello Storage
+
+Ottiene un percorso di file o cartella, indipendentemente dal fatto che esista o meno, ad esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Il percorso reale della nuova cartella sarà:
+                // storage/filesystem/server/mia/nuova-cartella
+                const storageCartella = _storage.filesystem("server", "mia/nuova-cartella")
+                const cartella = storageCartella.path()
+
+                // Il percorso reale del nuovo file sarà:
+                // storage/filesystem/server/mia/cartella/nuovo-file.txt
+                const storageFile = _storage.filesystem("server", "mia/cartella", "nuovo-file.txt")
+                const file = storageFile.path()
+            `
+        },
+    ]}
+/>
+
+## Sistema Operativo
+
+Per eseguire le operazioni principali di manipolazione di file e cartelle in qualsiasi punto del sistema operativo,
+utilizziamo la risorsa `_os`:
+
+#### Cartelle nel Sistema Operativo
+
+Garantisce che venga ottenuta una cartella esistente, ad esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const miaCartella = _os.folder("/tmp/mia/cartella")
+            `
+        },
+    ]}
+/>
+
+#### File nel Sistema Operativo
+
+Garantisce che venga ottenuto un file esistente, ad esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const mioFile = _os.file("/tmp/mia/cartella/file.txt")
+            `
+        },
+    ]}
+/>
+
+#### Percorsi nel Sistema Operativo
+
+Ottiene un percorso di file o cartella, indipendentemente dal fatto che esista o meno, ad esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const nuovoFile = _os.path("/tmp/mia/cartella/nuovo-file.txt")
+            `
+        },
+    ]}
+/>
+
+## Creare Cartelle
+
+Il metodo `mkdir` crea una cartella.
+
+Nell'esempio seguente viene creata la cartella specifica nella radice dell'applicazione:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const cartella = _app.path("temp")
+                cartella.mkdir()
+            `
+        },
+    ]}
+/>
+
+Per creare una sottocartella all'interno della cartella esistente, indicare il percorso completo separando la gerarchia di
+cartelle con `/`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const sottocartella = _app.path("temp/altra")
+                sottocartella.mkdir()
+            `
+        },
+    ]}
+/>
+
+Il metodo `mkdirs`, invece, crea le cartelle precedenti e/o le sottocartelle se non esistono, quindi permette di creare una struttura
+di cartelle nell'applicazione, ad esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const percorsoCartelle = _app.path("temp/a/b/c")
+                percorsoCartelle.mkdirs()
+            `
+        },
+    ]}
+/>
+
+La risorsa `_storage` ha il metodo [ensurePath](/docs/library/resources/storage#ensurepath) che verifica se il
+percorso esiste e, se non esiste, lo crea:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const file = _storage.filesystem(
+                    "public",
+                    "temp/sottocartella",
+                    "file.txt"
+                )
+                // Crea la struttura di cartelle se non esiste:
+                file.ensurePath()
+            `
+        },
+    ]}
+/>
+
+Pertanto `ensurePath` garantisce che la struttura di cartelle esista.
+
+## Eliminare File e Cartelle
+
+Con il metodo `delete` possiamo rimuovere sia cartelle che file, tenendo presente che le cartelle devono essere vuote;
+vedere l'esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Rimuove una cartella vuota:
+                const cartellaVuota = _app.folder("cartella/vuota")
+                cartellaVuota.delete()
+
+                // Rimuove un file:
+                const file = _app.file("cartella/file.txt")
+                file.delete()
+
+                // Rimuove un percorso, una cartella vuota o un file:
+                const percorso = _app.path("cartella1/file-o-cartella-vuota")
+                percorso.delete()
+            `
+        },
+    ]}
+/>
+
+Con `deleteAll` è possibile eliminare tutto, cioè tutti i file, le cartelle e le sottocartelle in modo ricorsivo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Rimuove la cartella e tutto il contenuto in modo ricorsivo:
+                const cartellaVuota = _app.folder("cartella/esempio")
+                cartellaVuota.deleteAll()
+
+                // Rimuove il percorso di una cartella e tutto il suo contenuto interno,
+                // incluse sottocartelle e file:
+                const percorso = _app.path("percorso/cartella")
+                percorso.deleteAll()
+            `
+        },
+    ]}
+/>
+
+Per eliminare solo i file all'interno della cartella e non cancellare nulla nelle sottocartelle, abbiamo `deleteFiles`, che permette
+di ricevere un'estensione nel caso si voglia rimuovere solo file con un'estensione specifica:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Rimuove i file solo all'interno della cartella:
+                const cartella = _app.folder("cartella/esempio")
+                cartella.deleteFiles()
+
+                // Rimuove i file con estensione JPG solo all'interno della cartella:
+                const percorso = _app.path("percorso/cartella")
+                percorso.deleteFiles("jpg")
+`
+        },
+    ]}
+/>
+
+Per eliminare solo i file in modo ricorsivo e mantenere la struttura di cartelle, abbiamo `deleteAllFiles`, che
+permette anche di ricevere un'estensione nel caso si voglia rimuovere solo un tipo di file specifico; vedere questi due
+esempi:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                // Rimuove tutti i file all'interno della cartella e delle sottocartelle:
+                const cartella = _app.folder("cartella/esempio")
+                cartella.deleteAllFiles()
+
+                // Rimuove tutti i file con estensione JPG all'interno della cartella e delle sottocartelle:
+                const percorso = _app.path("percorso/cartella")
+                percorso.deleteAllFiles("jpg")
+            `
+        },
+    ]}
+/>
+
+## Rinominare o Spostare
+
+Per spostare una cartella, è lo stesso che rinominarla:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const cartella = _app.folder("temp")
+                cartella.renameTo("test")
+            `
+        },
+    ]}
+/>
+
+Per rinominare una cartella e cambiarne il livello nella gerarchia delle cartelle, è lo stesso che spostare la cartella:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const cartella = _app.folder("temp/a/b")
+                cartella.renameTo("test/z")
+            `
+        },
+    ]}
+/>
+
+E per spostare una sottocartella senza cambiarne il nome, basta indicare il nuovo percorso nel metodo `renameTo`:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const cartella = _app.folder("test/altra")
+                cartella.renameTo("nuova")
+            `
+        },
+    ]}
+/>
+
+## Salvare Contenuti nei File
+
+La generazione di contenuti nei file avviene tramite il metodo `output`, che fornisce un oggetto di tipo
+[OutputStream](/docs/library/objects/OutputStream).
+
+Per scrivere i dati nell'`output` utilizziamo il metodo [printAndClose](/docs/library/objects/OutputStream#printandclose),
+che scrive il contenuto nel file e chiude il file salvando il contenuto.
+
+#### Scrivere un File di Testo
+
+Vedere l'esempio su come creare un file con contenuto di testo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _app.path("temp").mkdir()
+                const scrittura = _app.path("temp/file.txt").output()
+                scrittura.printAndClose("Il mio testo qui...")
+            `
+        },
+    ]}
+/>
+
+> Ogni volta che utilizziamo `output` viene generato un nuovo file, quindi se si esegue nuovamente il codice il file
+> verrà ricreato.
+
+#### Scrivere un file JSON
+
+Vediamo come possiamo salvare dati JSON nei file:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _app.path("temp").mkdir()
+                const scrittura = _app.path("temp/cliente.json").output()
+                scrittura.printAndClose(
+                    _val.map()
+                        .set("nome", "Maria Joaquina")
+                        .set(
+                            "registri",
+                            _val.list()
+                                .add(1).add(2).add(3)
+                        )
+                        .toJSON()
+                )
+            `
+        },
+    ]}
+/>
+
+Per generare il JSON indentato, cioè formattato su più righe e tabulato, possiamo passare il numero di spazi
+con cui verrà eseguita la tabulazione, ad esempio `.toJSON(4)`.
+
+> Maggiori dettagli sul metodo [toJSON in Values](/docs/library/objects/Values#tojsonindentfactor-int--string).
+
+## Leggere Contenuti nei File
+
+L'ottenimento di contenuti nei file avviene tramite il metodo `input`, che fornisce un oggetto di tipo
+[InputStream](/docs/library/objects/InputStream).
+
+Per leggere i dati nell'`input` utilizziamo il metodo [readAllAndClose](/docs/library/objects/InputStream#readallandclose),
+che elabora la lettura del contenuto nel file e chiude il file.
+
+#### Leggere un File di Testo
+
+Vedere l'esempio su come leggere un file e ottenere il contenuto di testo:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const file = _app.file("temp/file.txt")
+                const lettura = file.input()
+                _log.info(lettura.readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### Leggere un file JSON
+
+Vediamo come possiamo elaborare dati JSON ottenuti nei file:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const file = _app.file("temp/file.txt")
+                const lettura = file.input()
+                const dati = _val.fromJSON(lettura.readAllAndClose())
+                _log.info("Dati del file:", dati)
+            `
+        },
+    ]}
+/>
+
+> Maggiori dettagli sul metodo [fromJSON della risorsa Val](/docs/library/resources/val#fromjson).
+
+## Particolarità dello Storage
+
+La risorsa storage ha alcuni metodi per l'utilizzo diretto.
+
+Ad esempio, possiamo accedere tramite lo storage:
+
+- [Storage Output](/docs/library/resources/storage#output)
+- [Storage Input](/docs/library/resources/storage#input)
+
+Ciò significa che non dobbiamo ottenere il `file` o `path` per lavorare con l'`input` o l'`output`.
+
+#### Scrivere un File di Testo nello Storage
+
+Avviando uno storage per un file possiamo eseguire la scrittura utilizzando il metodo [output](/docs/library/resources/storage#output), che ottiene
+un'istanza dell'oggetto [OutputStream](/docs/library/objects/OutputStream) che permette di elaborare e leggere i dati.
+
+Quindi con `OutputStream` il metodo [printAndClose](/docs/library/objects/OutputStream#printandclose) scrive testo (`string`) nel file e lo chiude.
+
+Vedere questo esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const txt = _storage.filesystem("server", "temp", "file.txt")
+                txt.ensurePath()
+                txt.output().printAndClose("Il mio testo qui...")
+            `
+        },
+    ]}
+/>
+
+#### Leggere un File di Testo nello Storage
+
+Avviando uno storage per un file possiamo eseguire la lettura utilizzando il metodo [input](/docs/library/resources/storage#input), che ottiene
+un'istanza dell'oggetto [InputStream](/docs/library/objects/InputStream) che permette di elaborare e leggere i dati.
+
+Quindi con `InputStream` il metodo [readAllAndClose](/docs/library/objects/InputStream#readallandclose) legge l'intero file e lo chiude, restituendo i dati come testo (`string`).
+
+Vedere questo esempio:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const txt = _storage.filesystem("server", "temp", "file.txt")
+                _log.info(txt.input().readAllAndClose())
+            `
+        },
+    ]}
+/>
+
+#### Creare un file casuale nello Storage
+
+La risorsa `_storage` permette di generare nomi di file casuali, con il metodo [newRandomFile](/docs/library/resources/storage#newrandomfile).
+
+Si deve avviare uno storage per il percorso di una cartella e, eseguendo il metodo `newRandomFile`, viene passata l'estensione del
+file desiderato.
+
+Il metodo restituisce una nuova istanza dello storage per il file casuale generato automaticamente, da
+utilizzare nella cartella iniziale.
+
+Vedere come generare un file con estensione `TXT` con nome casuale:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                const cartella = _storage.filesystem("server", "temp")
+                const file = cartella.newRandomFile("txt")
+                file.output().printAndClose("Il mio testo qui...")
+            `
+        },
+    ]}
+/>
+
+## Conclusione
+
+Con il framework low-code poliglotta di Netuno possiamo eseguire tutte le principali operazioni su cartelle e file
+direttamente.
+
+Utilizzando le risorse specifiche per manipolare file e cartelle nella:
+
+- `_app` - Applicazione
+- `_storage` - Storage dell'Applicazione
+- `_os` - Sistema Operativo
+
+> Per questioni di buone pratiche e organizzazione dobbiamo dare priorità all'utilizzo dello **storage**; le eccezioni devono essere
+> solo casi puntuali e strettamente necessari.
+
+Netuno gestisce la chiusura automatica degli input e output al termine dell'elaborazione dei servizi, ma per buone
+pratiche dovremmo cercare di chiuderli sempre.

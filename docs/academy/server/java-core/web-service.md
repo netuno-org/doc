@@ -1,29 +1,29 @@
 ---
 id: web-service 
-title: Multi-Applicational Web Service
+title: Multi-Application Web Service 
 sidebar_label: Web Service
 sidebar_position: 4
 ---
 
-In this tutorial, we will create a multi-application web service for Netuno. This means we will create a Java web service that will be placed in Netuno's base directory and can be used by any application inside the `apps` folder.
+In this tutorial we will create a multi-application web service for Netuno. This means we will create a web service in Java that will be located in Netuno's base directory and that can be used by any application inside the `apps` folder.
 
-Following the previous tutorials, the example we will build is the `calc` service, a sample web service that performs simple arithmetic operations.
+The example we will create, following the previous tutorials, is the `calc` service, which is an example service that performs simple arithmetic operations.
 
-To begin, we first need to create the project's folder structure. In this example, we'll assume the project will be created inside a folder named `Calc`. We need to create the folder structure that mirrors the package name (in our example, `org.netuno.addon.calc`). Therefore, our folder structure will be:
+To start, you first need to create the project's folder structure. In this example we will assume that the project will be created inside a folder called `Calc`. So you need to create the folder structure that mirrors the package name (in our example, `org.netuno.addon.calc`). Our folder structure will therefore be:
 
 - `Calc/src/main/java/org/netuno/addon/calc/web/`
 
-Inside this structure, we'll create a Java class named `CalcWeb`, which will define our custom web service:
+Inside this structure we will create a Java class called `CalcWeb`, which will define our custom web service:
 
-- `Calc/src/main/java/org/netuno/addon/calc/web/CalcWeb.java`
+- ` Calc/src/main/java/org/netuno/addon/calc/web/CalcWeb.java`
 
-The package declaration inside the class will be:
+So the package defined inside the class will be:
 
 ```java
 package org.netuno.addon.calc.web;
 ```
 
-To define a custom multi-application web service, the class must extend `org.netuno.tritao.Web`:
+For the class to define a custom multi-application web service, this class must extend the `org.netuno.tritao.Web` class:
 
 ```java
 package org.netuno.addon.calc.web;
@@ -35,7 +35,7 @@ public class CalcWeb extends Web {
 }
 ```
 
-To define the service URL, use the `@Path` annotation:
+To define the service URL, do:
 
 ```java
 package org.netuno.addon.calc.web;
@@ -49,7 +49,7 @@ public class CalcWeb extends Web {
 }
 ```
 
-The method that must be overridden for the service to work is `run`:
+The method that must be overridden for the service to work is the `run` method:
 
 ```java
 package org.netuno.addon.calc.web;
@@ -69,9 +69,9 @@ public class CalcWeb extends Web {
 }
 ```
 
-Next, using some of Netuno's built-in resources, we'll implement the `run` method so that it receives the `op` parameter, which specifies the operation to perform: `plus` (addition) or `minus` (subtraction). It will also receive the `x` and `y` parameters, which represent the operands (the addends for addition, or the minuend and subtrahend for subtraction).
+Let's then, using some Netuno resources, define the `run` method so that it receives the `op` parameter, which will define which operation to use between `plus` (addition) and `minus` (subtraction), and the `x` and `y` parameters, which will be the operands (addends in the case of addition, minuend and subtrahend respectively in the case of subtraction).
 
-Based on the selected operation, the service will compute the result and return it to the client as JSON:
+Then, based on the chosen operation, our service will compute the result and return it to the user in JSON format:
 
 ```java
 package org.netuno.addon.calc.web;
@@ -110,11 +110,11 @@ public class CalcWeb extends Web {
 }
 ```
 
-Now simply compile the class, making sure that the `CalcWeb.class` file is located in:
+Now just compile the class, making sure that the `CalcWeb.class` file is in the folder:
 
 - `netuno/core/web/WEB-INF/classes/org/netuno/addon/calc/web/`
 
-Or build a JAR file, making sure it is located in:
+Or produce a JAR file, making sure that it is in the folder:
 
 - `netuno/lib/`
 
@@ -124,20 +124,20 @@ Start the Netuno server with any application:
 ./netuno server app=demo
 ```
 
-To access this service, append `.netuno` to the end of the service URL:
+To make calls to this service, you need to add `.netuno` at the end of the URL:
 
 - `http://localhost:9000/addon/calc/Calc.netuno`
 
-For example, if you make a request to:
+For example, if you make a call to:
 
 - `http://localhost:9000/addon/calc/Calc.netuno?op=minus&x=5&y=2`
 
-The service will return:
+You will receive back:
 
-```json
+```js
 {"result":3}
 ```
 
-You can view the complete project files in this [link](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/web).
+You can see the complete project files at this [link](https://github.com/netuno-org/maven/tree/main/Calc/src/main/java/org/netuno/addon/calc/web).
 
-In the next tutorial, we'll learn how to create a Netuno resource using Java.
+In the next tutorial we will learn how to create a Netuno resource using Java.

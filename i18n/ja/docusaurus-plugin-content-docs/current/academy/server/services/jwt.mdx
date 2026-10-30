@@ -1,0 +1,425 @@
+---
+id: jwt
+title: JWT（JSON Web Token）認証
+sidebar_label: JWT認証
+---
+
+import PolyglotCode from "@site/src/components/PolyglotCode";
+
+トークン認証の設定と使用方法。
+
+## はじめに
+
+JWT（JSON Web Token）は、フロントエンドがバックエンドから分離されたWebアプリケーションにおいて、認証の安全性とコンテキストを確保するための標準です。
+
+WebアプリケーションのフロントエンドがReactJS、AngularJS、VueJSなどで開発され、バックエンドがアプリケーションの動的データを提供・受信するためのREST APIを提供する場合によく使用されます。
+
+> トークン（JWT）は、ユーザーを識別する安全なコードです。
+
+JWT（JSON Web Token）により、バックエンドのREST APIはプライベートサービスが認証コンテキストを取得できるようにし、どのユーザーが認証されているかを判断できます。つまり、トークンからどのユーザーであるかを特定でき、ここでのトークンはJWT（JSON Web Token）です。
+
+![JWTの流れ](/docs/assets/academy/server/services/jwt/flow-pt.png)
+
+## CORS
+
+REST APIはWebサイトとは異なるサブドメインに配置されることがあり、その場合はサービスにアクセスできるようにするために[CORS（Cross-Origin Resource Sharing）](/docs/academy/server/services/cors)の設定が必要になります。
+
+したがって、REST APIがフロントエンドとは異なるドメイン/サブドメインにある場合、JWTを使用していてもCORSが正しく設定されている必要があります。
+
+> CORSは、異なるドメイン、サブドメイン、またはポート間でリソースを消費する際のセキュリティポリシーです。
+> あるアドレスが実際に別のアドレスと連携できることを保証するためのものです。
+
+これは、ブラウザが外部アドレス上のサービスやその他の種類のリソースの利用をブロックし、機密データの取得攻撃を防ぐためです。
+
+## 有効化と設定
+
+NetunoのアプリケーションでJWTを有効化して設定するには、使用している環境に対応するアプリケーション設定ファイルを編集する必要があります。例:
+
+- `config/_development.json`
+- `config/_production.json`
+
+> Netunoで設定されている環境によって異なります。`netuno/config.js` ファイルの `config.env` のパラメータ設定を確認してください。
+
+次のパラメータを挿入して調整します:
+
+```json
+    ...
+    "auth": {
+        "jwt": {
+            "enabled": true,
+            "secret": "複雑でランダムな32文字の秘密鍵!!!",
+            "expires": {
+                "access": 1440,
+                "refresh": 1440
+            }
+        }
+    },
+    ...
+```
+
+`secret` パラメータには、複雑でランダムな文字列を設定してください。これはJWT暗号化の安全性を保証する鍵です。
+
+`expires` のパラメータは分単位で定義します。例えば、`60` は1時間、`1440` は1日に相当します。
+
+### グループへのアクセス制限
+
+さらに、`groups` パラメータを指定できます。これはJWTで認証できるユーザーのグループコードを定義します。例:
+
+```json
+    ...
+    "auth": {
+        "jwt": {
+            ...
+            "groups": ["customer", "supplier"],
+            ...
+        }
+    },
+    ...
+```
+
+上記の例では、次のグループに属するユーザーのみが対象です:
+
+- 顧客。グループコードは `customer`。
+- サプライヤー。グループコードは `supplier`。
+
+これらのグループに属するユーザーのみがJWTで認証できます。
+
+## アクセストークンの取得方法
+
+JWTの_アクセストークン_を取得するために、Netunoは認証を検証する `_auth` サービスを提供します。認証が成功すると、_アクセストークン_と_リフレッシュトークン_を返します。
+
+_アクセストークン_は次のように取得します:
+
+<script dangerouslySetInnerHTML={{ __html: `window.addEventListener("message", function(e) {var i = e.data.split(":")[1];var h = e.data.split(":")[2];if (e.data.split(":")[0] == "swimlanes-io" && i && h) {document.getElementById("__sw-io-" + i).setAttribute("style","height:" + h + "px");}}, false);`}}></script>
+<div id="__sw-io-hVPQ">
+    <iframe style={{border:'none', width:'100%', height:'100%'}} scrolling="no" src="https://cdn.swimlanes.io/dist/embeded.html#hVPLjtNAELzPV7RyjrMIEAeLhwLLos0BhMgKaS9x42nwBHvGmUf2gfYD+IwVhxUHvsI/Ro8fiUkOzMGyZ7rKVdU9Z9Zon5CWkLyE9+SDNjCv6xTmwZP2KsfmofllYPF5CdL0FUIbTym8KbBCMODIblXzYEAS4L+wHSQVIjtpC3NyJysuK16tr/wLbwNlQrzVW8VUDiTK+CQILjT3Vhkg5tcFRoIsWzujxQ8BvCaB6TRWNElhImk7mXbbNTp3ZawctsVdBApxtnP6PEnGVns3zU+w5A1TytbuFHJTRUnefCfdakLW7qIifrf01ZIrjmVhHqtWLSpqoJtF8eVdrj6oxfnF7cVsNhuUMj6UnmtiCLu9lnYPX24eX56eP9XfPvrL5WKEbitW/qZuA3hNaMkOZ3RdK6ZZqUjx5NmjuI5zOOx45w7Z8qe+o7EffFgO/RwaH4OBzmgXDzS/oTbONX+2VAJdUx48WtgELDeB7GhEEHDP1/+/jdowgY3Qqi4PxqWikHQfhg2ckuP8mRZiq+lQCduJ02WsukWvjIaCUJKdHtJnWeF9Lebj2hS6HOG4af8boiEa5AhNL8XRGmHb3JdKske+F9Hy6L5waH1UPHLttO3HfneRpJn9BQ==#hVPQ"></iframe>
+</div>
+
+## Fetch - 素のJavaScript
+
+ブラウザのJavaScriptは、バックエンドのREST APIサービスと連携するための `fetch` を提供します。
+
+JWTでの認証とトークン更新の方法の例をいくつか示します。
+
+### 認証
+
+[fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API)で_アクセストークン_を取得する例:
+
+```javascript
+fetch("http://localhost:9000/services/_auth", {
+    method: 'post',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+        username: payload.username,
+        password: payload.password,
+        jwt: true
+    })
+}).then((response) => {
+	if (response.status != 200) {
+        if (response.status != 403) {
+            console.log('予期しないステータスで認証に失敗しました:', response.status);
+        }
+        alert('ログインが無効です。');
+        return null;
+    }
+    return response.json();
+}).then((res) => {
+    if (res && res.result === true) {
+        console.log(`私のアクセストークン: ${res.access_token}`);
+        console.log(`私のリフレッシュトークン: ${res.refresh_token}`);
+        console.log(`有効期限: ${res.expires_in} 分`);
+        sessionStorage.setItem('token', JSON.stringify(res));
+    }
+}).catch((error)=> {
+    console.log(error);
+    alert('技術的な問題が発生しました。後でもう一度お試しください。');
+});
+```
+
+`token` はセッションとして保存する必要があるため、安全性を高めるには [localStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) ではなく [sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) を使用することをお勧めします。
+
+`refresh_token` を使用すると、有効期限（`expires_in`、分単位）が切れる前に新しい `token` を生成できます。
+
+### 他のサービスで_アクセストークン_を使用する
+
+Netunoアプリケーションで事前認証を要求するカスタムプログラムサービスを実行するには、HTTPプロトコルのヘッダーで _Authorization_ キーの値として_アクセストークン_を渡す必要があります。例:
+
+`Authorization: Bearer eyJhbGciOiJIUzU...`
+
+フロントエンドから [fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API) を使用してカスタムプログラムサービスを実行し、`headers` で `Authorization` を渡す例:
+
+```javascript
+const token = JSON.parse(sessionStorage.getItem("token"));
+
+fetch("http://localhost:9000/services/my-service", {
+    method: 'post',
+    credentials: 'include',
+    headers: {
+        'Authorization': `${token.token_type} ${token.access_token}`,
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        myParameter1: '...',
+        myParameter2: '...'
+    })
+}).then((response) => {
+    if (response.status != 200) {
+    	console.log(`サービスがステータス ${response.status} で失敗しました。`);
+        if (response.status == 403) {
+            alert('認証されていません。');
+        } else {
+            alert('サービスで障害が発生しました。');
+        }
+        return null;
+    }
+    return response.json();
+}).then((res) => {
+    if (res) {
+        console.log(`私のサービスのレスポンスデータ:`, res);
+        alert('サービスが正常に実行されました。');
+    }
+}).catch((error)=> {
+    console.log(error);
+    alert('技術的な問題が発生しました。後でもう一度お試しください。');
+});
+```
+
+HTTPヘッダーの `Authorization` パラメータでは、認証時に事前に [sessionStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) に保存されたJWTオブジェクトから取得した `token_type` と `access_token` が使用されることに注意してください。
+
+### _リフレッシュトークン_で更新する
+
+トークンを更新して認証を延長するには、`_auth` サービスを再度呼び出す必要があります。`jwt: true` パラメータに加えて、以前の認証成功時に受け取った値を `refresh_token` パラメータとして渡す必要があります。
+
+トークンの更新は、有効期限（`expires_in`、分単位）が切れる前に行う必要があります。
+
+認証を延長してトークンを更新するには、次の例を参照してください:
+
+```javascript
+const token = JSON.parse(sessionStorage.getItem("token"));
+
+fetch("http://localhost:9000/services/_auth", {
+    method: 'post',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+        refresh_token: token.refresh_token,
+        jwt: true
+    })
+}).then((response) => {
+    if (response.status != 200) {
+        if (response.status != 403) {
+            console.log('予期しないステータスでトークンの更新に失敗しました:', response.status);
+        }
+        alert('無効なトークンによるアクセス更新です。');
+        return null;
+    }
+    return response.json();
+}).then((res) => {
+    if (res && res.result === true) {
+        console.log(`新しいアクセストークン: ${res.access_token}`);
+        console.log(`新しいリフレッシュトークン: ${res.refresh_token}`);
+        console.log(`有効期限: ${res.expires_in} 分`);
+        sessionStorage.setItem("token", JSON.stringify(res));
+    }
+}).catch((error)=> {
+    console.log(error);
+    alert('技術的な問題が発生しました。後でもう一度お試しください。');
+});
+```
+
+新しいトークンを取得したら、以降のサービス呼び出しでは以前の（古い）トークンではなく新しいトークンを使用する必要があります。
+
+このように、トークンを繰り返し更新することで認証が延長され、ユーザーが認証された状態を維持できます。
+
+## Auth Client - NPM
+
+フロントエンドとの連携を容易に行えるように、次のNPMモジュールが提供されています:
+
+- [@netuno/auth-client](https://www.npmjs.com/package/@netuno/auth-client)
+
+フロントエンドでは [Bun](https://bun.sh) を使用してインストールできます:
+
+- `bun install @netuno/auth-client`
+
+> PNPM、NPM、YARNなど、他のフロントエンド依存関係マネージャーを使用することもできます。
+
+### 設定
+
+このモジュールは [@netuno/service-client](https://www.npmjs.com/package/@netuno/service-client) に依存しており、サービスのアドレスを定義します。例:
+
+```javascript
+import _service from '@netuno/service-client';
+...
+_service.config({
+    prefix: 'http://localhost:9000/services/'
+});
+```
+
+`auth-client` は `service-client` のプレフィックスを使用して、内部で `_auth` サービスのアドレスを構築します。この場合、例に従うと次のようになります:
+
+- `http://localhost:9000/services/_auth`
+
+このアドレスは、NetunoアプリケーションのREST APIサービスのアドレスプレフィックスを使用して自動的に構築されます。
+
+`auth-client` の設定をカスタマイズする方法を見てみましょう:
+
+ESモジュール版では、`config()` は非同期です。設定済みのクライアントを使用する前に、完了を待ってください:
+
+```javascript
+import _auth from '@netuno/auth-client';
+
+await _auth.config({
+    storage: 'local', // session が既定値です。
+    onLogin: () => { alert("ログインしました！"); },
+    onLogout: () => { alert("ログアウトしました！"); }
+});
+```
+
+トークンを `localStorage` に保存する場合は、設定で `storage: 'local'` を定義する必要があります。既定では `storage: 'session'` であり、`sessionStorage` が使用されるためです。
+
+### 認証
+
+`_auth` を使用してログインするには:
+
+```javascript
+import _auth from '@netuno/auth-client';
+...
+_auth.login({
+    username: "admin",
+    password: "secret",
+    success: ()=> {
+        alert("成功しました。");
+    },
+    fail: ()=> {
+        alert("失敗しました。");
+    }
+});
+```
+
+トークンは設定に応じて `session`（`sessionStorage`）または `local`（`localStorage`）に自動保存されます。既定は `session` です。
+
+### トークンを更新する
+
+トークンを更新する例:
+
+```javascript
+import _auth from '@netuno/auth-client';
+...
+_auth.refreshToken({
+    success: ()=> {
+        alert("成功しました。");
+    },
+    fail: ()=> {
+        alert("失敗しました。");
+    }
+});
+```
+
+トークンは設定に応じて `session`（`sessionStorage`）または `local`（`localStorage`）に自動保存されます。既定は `session` です。
+
+### トークンを削除する
+
+セッションを終了する、つまりログアウトしてトークンを削除するプロセスの例:
+
+```javascript
+import _auth from '@netuno/auth-client';
+...
+_auth.logout();
+```
+
+トークンは設定に応じて `sessionStorage` または `localStorage` から削除されます。既定は `sessionStorage` です。
+
+## バックエンド - REST APIサービス
+
+有効なトークンを付けて `Authorization` ヘッダーをサービス連携で渡すと、どのユーザーおよびグループであるかを識別できます。
+
+バックエンドでは `_user` および `_group` リソースを使用でき、それぞれどのユーザーとグループであるかを識別します。
+
+認証済みユーザーのデータを表示するには、[User](/docs/library/resources/user) リソースを使用します。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(
+                    "認証済みユーザー:",
+                    _val.map()
+                        .set("id", _user.id())
+                        .set("name", _user.name())
+                        .set("code", _user.code())
+                        .set("all", _user.data())
+                )
+            `
+        },
+    ]}
+/>
+
+認証済みユーザーのグループを表示するには、[Group](/docs/library/resources/group) リソースを使用します。例:
+
+<PolyglotCode
+    codes={[
+        {
+            lang: 'javascript',
+            code: `
+                _log.info(
+                    "認証済みグループ:",
+                    _val.map()
+                        .set("id", _group.id())
+                        .set("name", _group.name())
+                        .set("code", _group.code())
+                        .set("all", _group.data())
+                )
+            `
+        },
+    ]}
+/>
+
+### セキュリティ
+
+トークンが無効な場合、または `Authorization` が渡されない場合、Netunoはサービスが実行されないことを保証します。ただし、サービスがパブリックアクセスとして設定されている場合は除きます。既定ではサービスはプライベートです。
+
+> サービスをパブリックにするかプライベートにするかを管理するには、アプリケーションの `server/core/_service_config.js` で設定してください。
+
+開発環境では、利便性のためにNetunoがプライベートサービスを認証なしで直接実行できるようになっています。ほとんどのカスタムプログラムサービスは通常、認証コンテキストを必要としないため、開発とテストが全体的に簡単になります。
+
+開発環境でない場合、例えば本番環境では、当然ながらサービスは認証ありでのみ実行できます。
+
+### 認証リソース
+
+通常は `_user` と `_group` リソースで十分ですが、より高度な操作を行いたい状況があり、その場合は `_auth` リソースを使用します。
+
+`_auth` リソースは認証の主要リソースであり、設定を管理し、認証プロセスに関連するすべての操作を備えています。
+
+> 詳細については、[Auth](/docs/library/resources/auth) リソースのドキュメントを参照してください。
+
+## ReAuthKit
+
+Netunoは、オンライン認証を備えたプラットフォームを作成するためのベースプロジェクトを提供しています。アカウント作成、ログイン、プロフィール、アバター、パスワード回復などを備えています。
+
+GitHubで確認してください:
+
+- [ReAuthKit](https://github.com/netuno-org/reauthkit)
+
+> ReAuthKitは、フロントエンドをReact、Ant.Design、React Routerで構築し、データベースをPostgreSQLとしたNetunoアプリケーションです。
+
+ReAuthKitを使用すると、認証を必要とするあらゆるプロジェクトに必要なメカニズムがすでに揃っているため、認証付きの新規プロジェクトの作成を大幅に加速できます。
+
+## まとめ
+
+簡単に、アプリケーションでJWT（JSON Web Token）認証を設定して有効化できます。
+
+> REST APIで安全なサービスを開発するには、JWT認証を使用してください。
+
+フロントエンドでのJWT連携は、`fetch` を直接使用して行えます。
+
+実装を迅速化して標準化するために、NPMモジュール [@netuno/auth-client](https://www.npmjs.com/package/@netuno/auth-client) が提供されており、任意のフロントエンド技術で使用できます。
+
+REST APIサービスの実行時にユーザーを識別する必要がある場合は、常にJWT認証を使用してください。
+
+バックエンドでは、設定と認証済みユーザーの取得は非常に簡単です。
