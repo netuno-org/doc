@@ -12,6 +12,94 @@ Ao desenvolver múltiplas aplicações no Netuno tanto podem ser desacopladas ou
 
 Isto quer dizer que podemos partilhar a mesma base de dados por múltiplas aplicações ou ter as bases de dados separadas para cada aplicação.
 
+## Pasta das Aplicações
+
+As aplicações ficam dentro da pasta `apps` na raíz do Netuno.
+
+É onde todas as aplicações que o Netuno pode utilizar encontram-se.
+
+Quando criamos uma nova aplicação com o comando:
+
+- `./netuno app`
+
+Uma pasta com o nome da aplicação é criada dentro da pasta `apps` para conter toda a estrutura da aplicação.
+
+Quando é necessário utilizar uma aplicação já existente, como uma aplicação disponível no GIT, deve-se clonar
+dentro da pasta `apps`.
+
+## Aplicações Externas
+
+O Netuno permite ter aplicações fora da pasta `apps`.
+
+Para configurar uma aplicação externa deve-se criar o arquivo `nome-aplicacao.json` dentro da pasta `apps`.
+
+Neste arquivo JSON deve conter um objeto com a chave `home` e com o caminho da pasta onde a aplicação externa 
+encontra-se.
+
+> Tanto pode ser caminho absoluto, relativo, normalmente qualquer forma de definir o caminho funciona, des que o
+> caminho esteja correto.
+
+Exemplo com o caminho completo:
+
+```json title="apps/my_app.json"
+{
+  "home": "/home/user/projects/my_app"
+}
+```
+
+Exemplo com o caminho relativo a partir da pasta `apps`:
+
+```json title="apps/cluar.json"
+{
+  "home": "../../../Desenvolvimento/cluar"
+}
+```
+
+Exemplo com atalho especial no caminho, relativo a pasta raíz do usuário:
+
+```json title="apps/minha_app.json"
+{
+  "home": "~/Projetos/MinhaApp"
+}
+```
+
+No arquivo JSON é possível sobrescrever qualquer configuração da aplicação, adicione no objeto JSON a 
+configuração da aplicação que deseja alterar.
+
+## Endereço da Aplicação
+
+O Netuno de forma automática realiza a distribuição do acesso às aplicações através do domínio e subdomínio.
+
+Quando chega um pedido no Netuno, o domínio é processado da seguinte forma:
+
+- `http://`**minha-app-subdominio**`.meu-dominio.org/`
+
+O Netuno procura até ao primeiro ponto se existe uma aplicação com este nome.
+
+> Sendo que o carácter `-` (traço) no subdomínio é automaticamente substituído por `_` (subtraço) para o nome da aplicação.
+> 
+> Porque o `-` (traço) não é um carácter válido no nome da aplicação e o `_` (subtraço) não é um carácter válido no domínio.
+> 
+> Esta adaptação, portanto é feita automaticamente internamente no Netuno.
+
+Se existir uma aplicação com este nome então será esta a aplicação a receber o pedido.
+
+Caso não exista nenhuma aplicação com este nome então o pedido será entregue para a aplicação padrão (_default_).
+
+Esta resolução de domínios também funciona quando é um sub-subdomínio, por exemplo:
+
+- `http://`**minha-app-sub-subdominio**`.subdominio.meu-dominio.org/`
+
+Ou seja, até ao primeiro ponto é defina qual será a aplicação que receberá o pedido para ser processado.
+
+E o Netuno também permite definir um endereço exato com domínio para a aplicação, basta definir qual será o endereço exato na qual a aplicação funcionará.
+
+Com a configuração de `host` e de `url` nas aplicações é possível customizar os endereços, veja mais sobre em:
+
+- [Customizar URLs](/docs/academy/server/custom-urls)
+
+> Utilizando a forma automática para processar domínios permite o funcionamento das aplicações na grande maioria dos casos, caso mesmo assim haja situações que necessite do endereço completamente diferente e específico para o funcionamento da aplicação então é necesário defini-lo na sua configuração.
+
 ## Aplicações Desacopladas em múltiplas Bases de Dados
 
 Quando trata-se de aplicações com âmbitos completamente distintos então não fará sentido partilharem a mesma base de dados.
@@ -47,28 +135,3 @@ Mas a aplicação de faturação precisa integrar com ambas as aplicações para
 Para garantir que as aplicações não interferem em dados sensíveis uma das outras recomenda-se também a utilização do acessos à base de dados distintos para cada aplicação, e pode-se ainda controlar via base de dados os seus acesso às tabelas para garantir que não haja interferência indesejada.
 
 De resto o Netuno realiza o controlo para separar o que é de uma aplicação ou de outra e ainda o que é partilhado entre elas.
-
-## Endereço de cada Aplicação
-
-O Netuno de forma automática realiza a ditribuição do acesso às aplicações através do domínio e subdomínio.
-
-Quando chega um pedido no Netuno, o domínio é processado da seguinte forma:
-
-![Imagem de exemplo do endereço da aplicação com subdomínio.](/docs/assets/business/apps-subdomain.svg "Aplicações com subdomínio.")
-
-O Netuno procura até ao primeiro ponto se existe uma aplicação com este nome.
-
-Se existir uma aplicação com este nome então será esta a aplicação a receber o pedido.
-
-Caso não exista nenhuma aplicação com este nome então o pedido será entregue para a aplicação padrão (_default_).
-
-Esta resolução de domínios também funciona quando é um sub-subdomínio, por exemplo:
-
-
-![Imagem de exemplo do endereço da aplicação com sub-subdomínio.](/docs/assets/business/apps-sub-subdomain.svg "Aplicações com sub-subdomínio.")
-
-Ou seja, até ao primeiro ponto é defina qual será a aplicação que receberá o pedido para ser processado. 
-
-E o Netuno também permite definir um endereço exato com domínio para a aplicação, basta definir qual será o endereço exato na qual a aplicação funcionará.
-
-> Utilizando a forma automática para processar domínios permite o funcionamento das aplicações na grande maioria dos casos, caso mesmo assim haja situações que necessite do endereço completamente diferente e específico para o funcionamento da aplicação então é necesário defini-lo na sua configuração.
