@@ -40,7 +40,7 @@ Define o prefixo do endereço da URL da interface de administração, o padrão 
 
 #### public
 
-Define o prefixo do endereço da URL dos ficheiros estáticos que são públicos como imagens, estilo CSS e de código JavaScript, o padrão é `/public`.
+Define o prefixo do endereço da URL dos arquivos estáticos que são públicos como imagens, estilo CSS e de código JavaScript, o padrão é `/public`.
 
 #### services
 
@@ -97,7 +97,7 @@ Também pode definir hosts/domínios específicos para cada tipo de servidor de 
 }
 ```
 
-Caso seja apenas um domínio utilize o valor do tipo string, caso seja múltiplos hosts/domínios utilize um array com strings.
+Caso seja apenas um host/domínio utilize o valor do tipo string, caso seja múltiplos hosts/domínios utilize um array com strings, ambos são suportados.
 
 #### admin
 
@@ -114,5 +114,7 @@ Define o endereço de domínio ou host do endereço do endpoint do protocolo MCP
 ## Conclusão
 
 A customização das URLs é importante, tanto para torná-la mais intuitiva como poder torná-la mais complexa e aumentar a segurança.
+
+E a associação da aplicação com Hosts ou Domínios específicos, permite melhorar a gestão dos acessos e a disponibilização  
 
 Por exemplo, no endereço de administração pode ser colocado um prefixo com uma sequência de caracteres aleatórios, assim só quem souber decor acederá o endereço de acesso, isso dificulta o acesso e evita ataques.
