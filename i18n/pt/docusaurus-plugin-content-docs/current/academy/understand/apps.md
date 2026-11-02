@@ -8,7 +8,7 @@ O Netuno é um servidor de múltiplas aplicações e que distribui o acesso às 
 
 Múltiplas aplicações web que podem ser tanto públicas como privadas, como o Netuno realiza a construção de backoffices. Então por norma as aplicações têm sempre um acesso privado, mas a interface pública é opcional.
 
-Ao desenvolver múltiplas aplicações no Netuno tanto podem ser desacopladas ou mesmo acopladas a nível de base de dados.
+Ao desenvolver múltiplas aplicações no Netuno tanto podem ser desacopladas ou mesmo acopladas ao nível de base de dados.
 
 Isto quer dizer que podemos partilhar a mesma base de dados por múltiplas aplicações ou ter as bases de dados separadas para cada aplicação.
 
@@ -55,7 +55,7 @@ Exemplo com o caminho relativo a partir da pasta `apps`:
 }
 ```
 
-Exemplo com atalho especial no caminho, relativo a pasta raíz do usuário:
+Exemplo com atalho especial no caminho, relativo à pasta raíz do usuário:
 
 ```json title="apps/minha_app.json"
 {
