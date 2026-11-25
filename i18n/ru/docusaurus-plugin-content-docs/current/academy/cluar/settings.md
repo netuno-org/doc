@@ -52,4 +52,4 @@ sidebar_label: Настройки
 
 ## Следующий шаг
 
-Изучите [Словари](/docs/academy/cluar/dictionaries).
+Изучите [Словари](/docs/academy/cluar/translations).

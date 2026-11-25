@@ -52,4 +52,4 @@ Clasa `website/src/common/Cluar.js` pune la dispoziție funcții pentru citirea 
 
 ## Următorul pas
 
-Explorează [Dicționarele](/docs/academy/cluar/dictionaries).
+Explorează [Dicționarele](/docs/academy/cluar/translations).

@@ -52,4 +52,4 @@ De klasse `website/src/common/Cluar.js` biedt functies om configuraties te lezen
 
 ## Volgende stap
 
-Verken de [Woordenboeken](/docs/academy/cluar/dictionaries).
+Verken de [Woordenboeken](/docs/academy/cluar/translations).

@@ -52,4 +52,4 @@ sidebar_label: 配置
 
 ## 下一步
 
-探索 [字典](/docs/academy/cluar/dictionaries)。
+探索 [字典](/docs/academy/cluar/translations)。

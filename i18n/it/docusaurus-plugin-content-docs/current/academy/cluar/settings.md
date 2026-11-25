@@ -52,4 +52,4 @@ La classe `website/src/common/Cluar.js` mette a disposizione funzioni per legger
 
 ## Prossimo passo
 
-Esplora i [Dizionari](/docs/academy/cluar/dictionaries).
+Esplora i [Dizionari](/docs/academy/cluar/translations).

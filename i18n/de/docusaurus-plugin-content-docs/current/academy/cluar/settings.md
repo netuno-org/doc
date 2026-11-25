@@ -52,4 +52,4 @@ Die Klasse `website/src/common/Cluar.js` stellt Funktionen zum Lesen von Konfigu
 
 ## Nächster Schritt
 
-Entdecke die [Wörterbücher](/docs/academy/cluar/dictionaries).
+Entdecke die [Wörterbücher](/docs/academy/cluar/translations).

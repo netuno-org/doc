@@ -52,4 +52,4 @@ sidebar_label: 設定
 
 ## 次のステップ
 
-[辞書](/docs/academy/cluar/dictionaries)を参照してください。
+[辞書](/docs/academy/cluar/translations)を参照してください。

@@ -52,4 +52,4 @@ sidebar_label: 설정
 
 ## 다음 단계
 
-[사전](/docs/academy/cluar/dictionaries)을 살펴보세요.
+[사전](/docs/academy/cluar/translations)을 살펴보세요.

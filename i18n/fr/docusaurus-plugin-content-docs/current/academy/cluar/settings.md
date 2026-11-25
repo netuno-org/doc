@@ -52,4 +52,4 @@ La classe `website/src/common/Cluar.js` fournit des fonctions pour lire les conf
 
 ## Étape suivante
 
-Explorez les [Dictionnaires](/docs/academy/cluar/dictionaries).
+Explorez les [Dictionnaires](/docs/academy/cluar/translations).
