@@ -52,4 +52,4 @@ The `website/src/common/Cluar.js` class provides functions to read configuration
 
 ## Next step
 
-Explore the [Dictionaries](/docs/academy/cluar/translations).
+Explore the [Translations](/docs/academy/cluar/translations).

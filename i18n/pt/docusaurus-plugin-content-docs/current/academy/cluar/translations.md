@@ -1,8 +1,8 @@
 ---
 sidebar_position: 10
 id: translations
-title: Dicionários
-sidebar_label: Dicionários
+title: Traduções
+sidebar_label: Traduções
 ---
 
 Como traduzir os textos fixos da interface do website.
